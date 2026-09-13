@@ -7,6 +7,7 @@
 <meta name="description" content="{{ page.description }}">
 <link rel="canonical" href="{{ cfg.base_url }}{{ page.url }}">
 {% if page.robots %}<meta name="robots" content="{{ page.robots }}">{% endif %}
+{% if cfg.google_site_verification %}<meta name="google-site-verification" content="{{ cfg.google_site_verification }}">{% endif %}
 
 <meta property="og:type" content="{{ page.og_type | default('website') }}">
 <meta property="og:site_name" content="{{ cfg.brand }}">
