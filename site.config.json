@@ -77,12 +77,15 @@
     }
   ],
   "affiliate": {
-    "enabled": false,
-    "disclosure": "Some hosting links on this page are affiliate links. They never change the computed costs, the ranking, or which provider comes out cheapest. The sizing model and the price sources are published in full.",
+    "enabled": true,
+    "disclosure": "The DigitalOcean link above is a referral link: if you sign up through it and pay your first $25, we receive $25 of DigitalOcean account credit. That never changes the computed costs, which server is chosen, or the conclusion of this page. The sizing model and every price source are published in full.",
     "providers": {
       "digitalocean": {
-        "template": "https://www.digitalocean.com/?refcode={id}",
-        "id": ""
+        "template": "https://m.do.co/c/{id}",
+        "id": "3af2e8b05a20",
+        "program": "referral",
+        "reward": "USD 25 account credit after the referred user pays their first USD 25",
+        "activated_on": "2026-09-14"
       },
       "vultr": {
         "template": "https://www.vultr.com/?ref={id}",

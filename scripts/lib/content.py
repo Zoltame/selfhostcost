@@ -234,9 +234,10 @@ def _disclosure(ds: Dataset) -> tuple[str, str, str, str]:
     active = bool(aff.get("enabled")) and any(p.get("id") for p in aff.get("providers", {}).values())
 
     state = (
-        "<p><strong>Affiliate links are currently active on this site.</strong> When you follow a hosting "
-        "link from one of our pages and later become a customer, we may receive a commission from that "
-        "provider at no cost to you.</p>"
+        "<p><strong>Referral links are currently active on this site.</strong> The DigitalOcean links on "
+        "our pages are DigitalOcean's own referral links. If you sign up through one and pay your first $25, "
+        "DigitalOcean gives us $25 of account credit. It costs you nothing, and it is credit on a hosting "
+        "account, not cash. Links to every other provider are plain links with nothing attached.</p>"
         if active else
         "<p><strong>There are no affiliate links on this site at the moment.</strong> Every hosting link "
         "here is a plain link to the provider's own page. If that changes, this page changes with it and "

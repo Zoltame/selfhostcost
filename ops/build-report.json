@@ -6,7 +6,7 @@
   "pages": 293,
   "comparisons": 24,
   "tools_live": 30,
-  "affiliate_links_active": false,
+  "affiliate_links_active": true,
   "lead_capture_active": false,
   "priced_providers": [
     "digitalocean"
