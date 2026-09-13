@@ -1,0 +1,28 @@
+{
+  "categories": [
+    { "slug": "password-manager", "name": "Password managers", "intent": "Store team credentials without a per-seat vault subscription.", "wave": 1 },
+    { "slug": "analytics",        "name": "Web analytics",      "intent": "Measure traffic without handing visitor data to an ad network.", "wave": 1 },
+    { "slug": "automation",       "name": "Workflow automation", "intent": "Wire apps together without paying per task executed.", "wave": 1 },
+    { "slug": "docs-wiki",        "name": "Docs and wikis",     "intent": "Keep the team knowledge base on infrastructure you control.", "wave": 1 },
+    { "slug": "project-management","name": "Project management", "intent": "Track issues and sprints without per-seat escalation.", "wave": 1 },
+    { "slug": "helpdesk",         "name": "Helpdesk and support inbox", "intent": "Run customer support without per-agent pricing.", "wave": 1 },
+    { "slug": "auth",             "name": "Identity and SSO",   "intent": "Own the login layer instead of renting monthly active users.", "wave": 1 },
+    { "slug": "status-page",      "name": "Status and uptime monitoring", "intent": "Publish uptime and get alerts for the price of a small VPS.", "wave": 1 },
+    { "slug": "bi",               "name": "Business intelligence", "intent": "Query and chart your own data without seat licences.", "wave": 1 },
+    { "slug": "forms",            "name": "Forms and surveys",  "intent": "Collect responses without a per-response cap.", "wave": 1 },
+    { "slug": "file-storage",     "name": "File sync and storage", "intent": "Replace per-seat cloud drives with your own storage.", "wave": 2 },
+    { "slug": "team-chat",        "name": "Team chat",          "intent": "Keep message history without paying to unlock the archive.", "wave": 2 },
+    { "slug": "email-marketing",  "name": "Email marketing",    "intent": "Send campaigns paying only for delivery, not for list size.", "wave": 2 },
+    { "slug": "crm",              "name": "CRM",                "intent": "Track deals without per-seat CRM licensing.", "wave": 2 },
+    { "slug": "e-signature",      "name": "E-signature",        "intent": "Sign documents without a per-envelope charge.", "wave": 2 },
+    { "slug": "error-monitoring", "name": "Error monitoring",   "intent": "Capture exceptions without event-volume billing.", "wave": 2 },
+    { "slug": "scheduling",       "name": "Scheduling and booking", "intent": "Share availability without a per-seat booking tool.", "wave": 2 },
+    { "slug": "photos",           "name": "Photo libraries",    "intent": "Keep a family or team photo archive off metered cloud storage.", "wave": 2 },
+    { "slug": "internal-tools",   "name": "Internal tools builders", "intent": "Build admin panels without per-developer seats.", "wave": 3 },
+    { "slug": "baas",             "name": "Backend as a service", "intent": "Run the app backend without usage-based platform billing.", "wave": 3 },
+    { "slug": "search",           "name": "Search engines",     "intent": "Power site search without per-record indexing fees.", "wave": 3 },
+    { "slug": "paas",             "name": "Deployment platforms", "intent": "Deploy apps on your own server with a platform-like workflow.", "wave": 3 },
+    { "slug": "video-meetings",   "name": "Video meetings",     "intent": "Host calls without per-host licensing.", "wave": 3 },
+    { "slug": "headless-cms",     "name": "Headless CMS",       "intent": "Own the content API instead of renting records and locales.", "wave": 3 }
+  ]
+}

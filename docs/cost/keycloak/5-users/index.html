@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cost to self-host Keycloak for 5 users</title>
+<meta name="description" content="Keycloak for 5 users needs 2.5 GB of memory and 10.1 GB of disk, which is $24.00 a month of server. All in, with backups and maintenance time, $141 a month.">
+<link rel="canonical" href="https://zoltame.github.io/selfhostcost/cost/keycloak/5-users/">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="SelfHostCost">
+<meta property="og:title" content="Cost to self-host Keycloak for 5 users">
+<meta property="og:description" content="Keycloak for 5 users needs 2.5 GB of memory and 10.1 GB of disk, which is $24.00 a month of server. All in, with backups and maintenance time, $141 a month.">
+<meta property="og:url" content="https://zoltame.github.io/selfhostcost/cost/keycloak/5-users/">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="/selfhostcost/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/selfhostcost/assets/css/main.css">
+<link rel="prev" href="https://zoltame.github.io/selfhostcost/cost/keycloak/1-user/"><link rel="next" href="https://zoltame.github.io/selfhostcost/cost/keycloak/10-users/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://zoltame.github.io/selfhostcost/"}, {"@type": "ListItem", "position": 2, "name": "Keycloak", "item": "https://zoltame.github.io/selfhostcost/self-host/keycloak/"}, {"@type": "ListItem", "position": 3, "name": "5 users", "item": "https://zoltame.github.io/selfhostcost/cost/keycloak/5-users/"}]}, {"@type": "Article", "headline": "Cost to self-host Keycloak for 5 users", "description": "Keycloak for 5 users needs 2.5 GB of memory and 10.1 GB of disk, which is $24.00 a month of server. All in, with backups and maintenance time, $141 a month.", "url": "https://zoltame.github.io/selfhostcost/cost/keycloak/5-users/", "datePublished": "2026-09-14", "dateModified": "2026-09-14", "isAccessibleForFree": true, "author": {"@type": "Organization", "name": "SelfHostCost", "url": "https://zoltame.github.io/selfhostcost/"}, "publisher": {"@type": "Organization", "name": "SelfHostCost", "url": "https://zoltame.github.io/selfhostcost/"}}]}</script></head>
+<body>
+
+<header class="masthead">
+  <div class="shell">
+    <a class="wordmark" href="/selfhostcost/">Self<span>Host</span>Cost</a>
+    <nav>
+      <a href="/selfhostcost/compare/">Comparisons</a>
+      <a href="/selfhostcost/self-host/">Tools</a>
+      <a href="/selfhostcost/hosting/">Hosting</a>
+      <a href="/selfhostcost/methodology/">Methodology</a>
+    </nav>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/selfhostcost/">Home</a><span>/</span><a href="/selfhostcost/self-host/keycloak/">Keycloak</a><span>/</span>5 users</nav>
+</div>
+
+<main class="shell">
+
+<p class="kicker">Keycloak &middot; Identity and SSO</p>
+<h1>Self-hosting Keycloak for 5 people: the cost</h1>
+
+<p class="lead">
+  At 5 users, Keycloak needs
+  2.5 GB of memory and 10.1 GB of disk. That fits the
+  Basic 4 GiB at DigitalOcean for $24.00 a month.
+  Add backups and the time it takes to look after and the real figure is
+  <strong>$141 a month</strong>.
+</p>
+
+<ul class="sizes">
+  <li><a href="/selfhostcost/cost/keycloak/1-user/" >solo</a></li>
+  <li><a href="/selfhostcost/cost/keycloak/5-users/" aria-current="page">5 people</a></li>
+  <li><a href="/selfhostcost/cost/keycloak/10-users/" >10 people</a></li>
+  <li><a href="/selfhostcost/cost/keycloak/25-users/" >25 people</a></li>
+  <li><a href="/selfhostcost/cost/keycloak/50-users/" >50 people</a></li>
+  <li><a href="/selfhostcost/cost/keycloak/100-users/" >100 people</a></li>
+  <li><a href="/selfhostcost/cost/keycloak/250-users/" >250 people</a></li>
+</ul>
+
+<dl class="figures">
+  <div class="fig"><dt>Server</dt><dd>$24.00<small>Basic 4 GiB, 2 vCPU</small></dd></div>
+  <div class="fig"><dt>Backups</dt><dd>$4.80<small>provider snapshots</small></dd></div>
+  <div class="fig"><dt>Your time</dt><dd>$112<small>1.5 h a month at $75</small></dd></div>
+  <div class="fig"><dt>All in</dt><dd>$141<small>per month</small></dd></div>
+  <div class="fig"><dt>First-time setup</dt><dd>$450<small>about 6 hours, once</small></dd></div>
+</dl>
+
+<h2>How 2.5 GB was arrived at</h2>
+<p>
+  2 GB covers the stack at rest, every container the project ships included.
+  5 users at 2 MB each adds
+  0.0 GB, giving 2.0 GB. Adding
+  25% headroom so the machine is not run at its ceiling
+  gives <strong>2.5 GB</strong>, and the smallest plan at or above that is the
+  Basic 4 GiB with 4 GB.
+</p>
+<p>
+  Disk works the same way: 10 GB to begin with, plus
+  0.01 GB per user, so <strong>10.1 GB</strong> against the
+  80 GB the plan includes.
+</p>
+<p>JVM service with PostgreSQL. Memory is dominated by the heap rather than by user count, so cost per user falls steeply as the directory grows. This is the CNCF-backed incumbent.</p>
+
+<h2>Over three years</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Period</th><th class="num">Server and backups</th><th class="num">Your time</th><th class="num">Total</th></tr></thead>
+  <tbody>
+    <tr><th scope="row">Setup, once</th><td class="num">&mdash;</td><td class="num">$450</td><td class="num">$450</td></tr>
+    <tr><th scope="row">Per month</th><td class="num">$28.80</td><td class="num">$112</td><td class="num">$141</td></tr>
+    <tr><th scope="row">First year</th><td class="num">$346</td><td class="num">$1,800</td><td class="num">$2,146</td></tr>
+  </tbody>
+  <tfoot>
+    <tr><td>36 months</td><td class="num">$1,037</td><td class="num">$4,500</td><td class="num">$5,537</td></tr>
+  </tfoot>
+</table>
+</div>
+<p class="srcline">
+  If you do not price your own time, the 36-month figure is
+  $1,037 instead. Both numbers are real; which one
+  applies depends on whether the hours would otherwise have been billable.
+</p>
+
+<h2>What you would be paying instead at this size</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Commercial product</th><th>Tier</th><th class="num">Per month</th><th class="num">Difference</th><th></th></tr></thead>
+  <tbody>
+    <tr>
+      <th scope="row">Auth0</th>
+      <td>Essentials (B2B)</td>
+      <td class="num">$150</td>
+      <td class="num pos">
+        $8.70
+      </td>
+      <td><a href="/selfhostcost/vs/auth0-vs-keycloak/">breakdown</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p class="srcline">A positive difference means self-hosting is cheaper at this size, with your time already counted.</p>
+
+<div class="cta">
+  <h3>Where to put Keycloak</h3>
+  <p>
+    2.5 GB of memory and 10.1 GB of disk is what this needs at
+    5 people. The cheapest plan that fits, among the providers whose prices we have read
+    ourselves, is the <strong>Basic 4 GiB</strong> at DigitalOcean for
+    $24.00 a month.
+  </p>
+  <p>
+    <a class="btn" href="https://www.digitalocean.com/pricing/droplets" rel="nofollow noopener">
+      See DigitalOcean pricing
+    </a>
+    <a class="btn ghost" href="/selfhostcost/hosting/">Compare hosts</a>
+  </p>
+
+  <p style="font-size:.9rem;color:var(--ink-2);margin-bottom:0">
+    We are not claiming this is the cheapest server on the internet. It is the cheapest one we can
+    honestly quote. Hetzner Cloud, Vultr and PikaPods    publish prices we could not read programmatically,
+    and Hetzner in particular is usually cheaper per gigabyte of memory than anything quoted above.
+    Price them yourself before you commit.
+  </p>
+
+</div>
+
+<h2>Other sizes and related pages</h2>
+<ul class="linkgrid">
+<li><a href="/selfhostcost/cost/keycloak/1-user/">Keycloak for solo</a></li><li><a href="/selfhostcost/cost/keycloak/10-users/">Keycloak for 10 people</a></li>  <li><a href="/selfhostcost/self-host/keycloak/">Keycloak: all team sizes at once</a></li>
+  <li><a href="/selfhostcost/category/auth/">Identity and SSO compared</a></li>
+  <li><a href="/selfhostcost/methodology/">How these figures are calculated</a></li>
+</ul>
+
+</main>
+
+<footer class="sitefoot">
+  <div class="shell">
+    <div class="footgrid">
+      <div>
+        <h4>SelfHostCost</h4>
+        <p style="margin:0 0 .6em">What self-hosting actually costs, per tool, per team size.</p>
+        <p style="margin:0"><a href="/selfhostcost/methodology/">How every figure is calculated</a></p>
+      </div>
+      <div>
+        <h4>Browse</h4>
+        <ul>
+          <li><a href="/selfhostcost/compare/">All comparisons</a></li>
+          <li><a href="/selfhostcost/self-host/">All tools</a></li>
+          <li><a href="/selfhostcost/hosting/">Hosting providers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Categories</h4>
+        <ul>
+<li><a href="/selfhostcost/category/password-manager/">Password managers</a></li><li><a href="/selfhostcost/category/analytics/">Web analytics</a></li><li><a href="/selfhostcost/category/automation/">Workflow automation</a></li><li><a href="/selfhostcost/category/docs-wiki/">Docs and wikis</a></li><li><a href="/selfhostcost/category/project-management/">Project management</a></li><li><a href="/selfhostcost/category/helpdesk/">Helpdesk and support inbox</a></li>        </ul>
+      </div>
+      <div>
+        <h4>About</h4>
+        <ul>
+          <li><a href="/selfhostcost/methodology/">Methodology</a></li>
+          <li><a href="/selfhostcost/disclosure/">Affiliate disclosure</a></li>
+          <li><a href="/selfhostcost/privacy/">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin:30px 0 0">
+      Prices are read from vendor pricing pages on the dates shown on each page and are not
+      updated continuously. Check the vendor before you buy. Nothing here is financial advice.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

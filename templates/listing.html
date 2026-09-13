@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>{{ listing.heading }}</h1>
+<p class="lead">{{ listing.lead }}</p>
+
+{% if listing.groups %}
+  {% for g in listing.groups %}
+  <h2>{{ g.name }}</h2>
+  {% if g.note %}<p>{{ g.note }}</p>{% endif %}
+  <ul class="linkgrid">
+    {% for item in g.links %}
+    <li><a href="{{ base }}{{ item.url }}">{{ item.name }}</a>{% if item.badge %} <span class="badge {{ item.badge_class | default('') }}">{{ item.badge }}</span>{% endif %}</li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+{% endif %}
+
+{% if listing.note %}
+<div class="note">
+  <p>{{ listing.note }}</p>
+</div>
+{% endif %}
+
+{% endblock %}

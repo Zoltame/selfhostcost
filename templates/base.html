@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="{{ cfg.locale }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title }}</title>
+<meta name="description" content="{{ page.description }}">
+<link rel="canonical" href="{{ cfg.base_url }}{{ page.url }}">
+{% if page.robots %}<meta name="robots" content="{{ page.robots }}">{% endif %}
+
+<meta property="og:type" content="{{ page.og_type | default('website') }}">
+<meta property="og:site_name" content="{{ cfg.brand }}">
+<meta property="og:title" content="{{ page.og_title | default(page.title) }}">
+<meta property="og:description" content="{{ page.description }}">
+<meta property="og:url" content="{{ cfg.base_url }}{{ page.url }}">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="{{ base }}/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="{{ base }}/assets/css/main.css">
+{% if page.prev_url %}<link rel="prev" href="{{ cfg.base_url }}{{ page.prev_url }}">{% endif %}
+{% if page.next_url %}<link rel="next" href="{{ cfg.base_url }}{{ page.next_url }}">{% endif %}
+
+{% if page.jsonld %}<script type="application/ld+json">{{ page.jsonld }}</script>{% endif %}
+{% if cfg.analytics.provider != 'none' and cfg.analytics.script_url %}
+<script defer data-website-id="{{ cfg.analytics.site_id }}" src="{{ cfg.analytics.script_url }}"></script>
+{% endif %}
+</head>
+<body>
+
+<header class="masthead">
+  <div class="shell">
+    <a class="wordmark" href="{{ base }}/">Self<span>Host</span>Cost</a>
+    <nav>
+      <a href="{{ base }}/compare/">Comparisons</a>
+      <a href="{{ base }}/self-host/">Tools</a>
+      <a href="{{ base }}/hosting/">Hosting</a>
+      <a href="{{ base }}/methodology/">Methodology</a>
+    </nav>
+  </div>
+</header>
+
+{% if page.crumbs %}
+<div class="shell">
+  <nav class="crumbs" aria-label="Breadcrumb">
+    {%- for c in page.crumbs -%}
+      {%- if not loop.last %}<a href="{{ base }}{{ c.url }}">{{ c.name }}</a><span>/</span>
+      {%- else %}{{ c.name }}{% endif -%}
+    {%- endfor -%}
+  </nav>
+</div>
+{% endif %}
+
+<main class="shell">
+{% block content %}{% endblock %}
+</main>
+
+<footer class="sitefoot">
+  <div class="shell">
+    <div class="footgrid">
+      <div>
+        <h4>{{ cfg.brand }}</h4>
+        <p style="margin:0 0 .6em">{{ cfg.tagline }}</p>
+        <p style="margin:0"><a href="{{ base }}/methodology/">How every figure is calculated</a></p>
+      </div>
+      <div>
+        <h4>Browse</h4>
+        <ul>
+          <li><a href="{{ base }}/compare/">All comparisons</a></li>
+          <li><a href="{{ base }}/self-host/">All tools</a></li>
+          <li><a href="{{ base }}/hosting/">Hosting providers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Categories</h4>
+        <ul>
+          {% for c in nav_categories[:6] %}<li><a href="{{ base }}/category/{{ c.slug }}/">{{ c.name }}</a></li>{% endfor %}
+        </ul>
+      </div>
+      <div>
+        <h4>About</h4>
+        <ul>
+          <li><a href="{{ base }}/methodology/">Methodology</a></li>
+          <li><a href="{{ base }}/disclosure/">Affiliate disclosure</a></li>
+          <li><a href="{{ base }}/privacy/">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin:30px 0 0">
+      Prices are read from vendor pricing pages on the dates shown on each page and are not
+      updated continuously. Check the vendor before you buy. Nothing here is financial advice.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SelfHostCost - what self-hosting actually costs, per tool and team size</title>
+<meta name="description" content="Transparent cost comparisons between commercial SaaS and their self-hosted open-source alternatives. Every number is computed from a published sizing model and dated price sources.">
+<link rel="canonical" href="https://zoltame.github.io/selfhostcost/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SelfHostCost">
+<meta property="og:title" content="SelfHostCost - what self-hosting actually costs, per tool and team size">
+<meta property="og:description" content="Transparent cost comparisons between commercial SaaS and their self-hosted open-source alternatives. Every number is computed from a published sizing model and dated price sources.">
+<meta property="og:url" content="https://zoltame.github.io/selfhostcost/">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="/selfhostcost/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/selfhostcost/assets/css/main.css">
+
+</head>
+<body>
+
+<header class="masthead">
+  <div class="shell">
+    <a class="wordmark" href="/selfhostcost/">Self<span>Host</span>Cost</a>
+    <nav>
+      <a href="/selfhostcost/compare/">Comparisons</a>
+      <a href="/selfhostcost/self-host/">Tools</a>
+      <a href="/selfhostcost/hosting/">Hosting</a>
+      <a href="/selfhostcost/methodology/">Methodology</a>
+    </nav>
+  </div>
+</header>
+
+
+<main class="shell">
+
+<h1 style="margin-top:.6em">What self-hosting actually costs</h1>
+<p class="lead">
+  Every comparison here prices the server, the backups and the hours it takes to look after, then puts
+  that against the vendor's own published price. Sometimes self-hosting wins by an enormous margin.
+  Sometimes it loses. We publish both, because a comparison that always reaches the same conclusion is
+  not a comparison.
+</p>
+
+<dl class="figures">
+  <div class="fig"><dt>Comparisons</dt><dd>24<small>paid product against self-hosted tool</small></dd></div>
+  <div class="fig"><dt>Tools priced</dt><dd>30<small>with a published sizing model</small></dd></div>
+  <div class="fig"><dt>Prices read from vendors</dt><dd>8<small>on 2026-09-12</small></dd></div>
+  <div class="fig"><dt>Where self-hosting loses</dt><dd>14<small>of those comparisons, at 10 people</small></dd></div>
+</dl>
+
+<h2>Where the gap is widest</h2>
+<p>Largest 36-month saving at 10 people, your own time already deducted.</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Instead of</th><th>Run</th><th class="num">Their price</th><th class="num">Yours</th><th class="num">Saved over 36 months</th></tr></thead>
+  <tbody>
+    <tr>
+      <th scope="row">Zendesk</th>
+      <td><a href="/selfhostcost/vs/zendesk-vs-freescout/">FreeScout</a></td>
+      <td class="num">$638</td>
+      <td class="num">$51.90</td>
+      <td class="num pos">$20,934</td>
+    </tr>
+    <tr>
+      <th scope="row">Zendesk</th>
+      <td><a href="/selfhostcost/vs/zendesk-vs-chatwoot/">Chatwoot</a></td>
+      <td class="num">$638</td>
+      <td class="num">$283</td>
+      <td class="num pos">$11,579</td>
+    </tr>
+    <tr>
+      <th scope="row">Zendesk</th>
+      <td><a href="/selfhostcost/vs/zendesk-vs-zammad/">Zammad</a></td>
+      <td class="num">$638</td>
+      <td class="num">$283</td>
+      <td class="num pos">$11,579</td>
+    </tr>
+    <tr>
+      <th scope="row">Notion</th>
+      <td><a href="/selfhostcost/vs/notion-vs-bookstack/">BookStack</a></td>
+      <td class="num">$226</td>
+      <td class="num">$51.90</td>
+      <td class="num pos">$6,119</td>
+    </tr>
+    <tr>
+      <th scope="row">Notion</th>
+      <td><a href="/selfhostcost/vs/notion-vs-outline/">Outline</a></td>
+      <td class="num">$226</td>
+      <td class="num">$141</td>
+      <td class="num pos">$2,601</td>
+    </tr>
+    <tr>
+      <th scope="row">Notion</th>
+      <td><a href="/selfhostcost/vs/notion-vs-docmost/">Docmost</a></td>
+      <td class="num">$226</td>
+      <td class="num">$141</td>
+      <td class="num pos">$2,601</td>
+    </tr>
+    <tr>
+      <th scope="row">Notion</th>
+      <td><a href="/selfhostcost/vs/notion-vs-affine/">AFFiNE</a></td>
+      <td class="num">$226</td>
+      <td class="num">$141</td>
+      <td class="num pos">$2,601</td>
+    </tr>
+    <tr>
+      <th scope="row">Atlassian Statuspage</th>
+      <td><a href="/selfhostcost/vs/statuspage-vs-gatus/">Gatus</a></td>
+      <td class="num">$99.00</td>
+      <td class="num">$42.30</td>
+      <td class="num pos">$1,891</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h2>And where it does not pay off</h2>
+<p>
+  These are the comparisons where the paid product is cheaper once your hours are priced at
+  $75. Self-hosting them is a choice about control, not about money.
+</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Product</th><th>Self-hosted option</th><th class="num">Their price</th><th class="num">Yours</th><th></th></tr></thead>
+  <tbody>
+    <tr>
+      <th scope="row">Google Analytics 4</th>
+      <td>PostHog</td>
+      <td class="num">$0.00</td>
+      <td class="num neg">$340</td>
+      <td><a href="/selfhostcost/vs/google-analytics-vs-posthog/">why</a></td>
+    </tr>
+    <tr>
+      <th scope="row">Google Analytics 4</th>
+      <td>Plausible Analytics</td>
+      <td class="num">$0.00</td>
+      <td class="num neg">$141</td>
+      <td><a href="/selfhostcost/vs/google-analytics-vs-plausible/">why</a></td>
+    </tr>
+    <tr>
+      <th scope="row">Google Analytics 4</th>
+      <td>Matomo</td>
+      <td class="num">$0.00</td>
+      <td class="num neg">$141</td>
+      <td><a href="/selfhostcost/vs/google-analytics-vs-matomo/">why</a></td>
+    </tr>
+    <tr>
+      <th scope="row">Zapier</th>
+      <td>Activepieces</td>
+      <td class="num">$29.99</td>
+      <td class="num neg">$141</td>
+      <td><a href="/selfhostcost/vs/zapier-vs-activepieces/">why</a></td>
+    </tr>
+    <tr>
+      <th scope="row">Zapier</th>
+      <td>Windmill</td>
+      <td class="num">$29.99</td>
+      <td class="num neg">$141</td>
+      <td><a href="/selfhostcost/vs/zapier-vs-windmill/">why</a></td>
+    </tr>
+    <tr>
+      <th scope="row">Zapier</th>
+      <td>n8n</td>
+      <td class="num">$29.99</td>
+      <td class="num neg">$127</td>
+      <td><a href="/selfhostcost/vs/zapier-vs-n8n/">why</a></td>
+    </tr>
+    <tr>
+      <th scope="row">Typeform</th>
+      <td>Formbricks</td>
+      <td class="num">$56.00</td>
+      <td class="num neg">$141</td>
+      <td><a href="/selfhostcost/vs/typeform-vs-formbricks/">why</a></td>
+    </tr>
+    <tr>
+      <th scope="row">Google Analytics 4</th>
+      <td>Umami</td>
+      <td class="num">$0.00</td>
+      <td class="num neg">$51.90</td>
+      <td><a href="/selfhostcost/vs/google-analytics-vs-umami/">why</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h2>By category</h2>
+<ul class="cards">
+  <li class="card">
+    <h3><a href="/selfhostcost/category/password-manager/">Password managers</a></h3>
+    <p>Store team credentials without a per-seat vault subscription.</p>
+    <p class="meta">2 self-hosted tools &middot; 2 priced comparisons</p>
+  </li>
+  <li class="card">
+    <h3><a href="/selfhostcost/category/analytics/">Web analytics</a></h3>
+    <p>Measure traffic without handing visitor data to an ad network.</p>
+    <p class="meta">4 self-hosted tools &middot; 4 priced comparisons</p>
+  </li>
+  <li class="card">
+    <h3><a href="/selfhostcost/category/automation/">Workflow automation</a></h3>
+    <p>Wire apps together without paying per task executed.</p>
+    <p class="meta">3 self-hosted tools &middot; 3 priced comparisons</p>
+  </li>
+  <li class="card">
+    <h3><a href="/selfhostcost/category/docs-wiki/">Docs and wikis</a></h3>
+    <p>Keep the team knowledge base on infrastructure you control.</p>
+    <p class="meta">4 self-hosted tools &middot; 4 priced comparisons</p>
+  </li>
+  <li class="card">
+    <h3><a href="/selfhostcost/category/project-management/">Project management</a></h3>
+    <p>Track issues and sprints without per-seat escalation.</p>
+    <p class="meta">3 self-hosted tools</p>
+  </li>
+  <li class="card">
+    <h3><a href="/selfhostcost/category/helpdesk/">Helpdesk and support inbox</a></h3>
+    <p>Run customer support without per-agent pricing.</p>
+    <p class="meta">3 self-hosted tools &middot; 3 priced comparisons</p>
+  </li>
+  <li class="card">
+    <h3><a href="/selfhostcost/category/auth/">Identity and SSO</a></h3>
+    <p>Own the login layer instead of renting monthly active users.</p>
+    <p class="meta">3 self-hosted tools &middot; 3 priced comparisons</p>
+  </li>
+  <li class="card">
+    <h3><a href="/selfhostcost/category/status-page/">Status and uptime monitoring</a></h3>
+    <p>Publish uptime and get alerts for the price of a small VPS.</p>
+    <p class="meta">2 self-hosted tools &middot; 2 priced comparisons</p>
+  </li>
+  <li class="card">
+    <h3><a href="/selfhostcost/category/bi/">Business intelligence</a></h3>
+    <p>Query and chart your own data without seat licences.</p>
+    <p class="meta">3 self-hosted tools</p>
+  </li>
+  <li class="card">
+    <h3><a href="/selfhostcost/category/forms/">Forms and surveys</a></h3>
+    <p>Collect responses without a per-response cap.</p>
+    <p class="meta">3 self-hosted tools &middot; 3 priced comparisons</p>
+  </li>
+</ul>
+
+<h2>How this works</h2>
+<p>
+  A paid seat has no floor and a steep slope: ten people cost ten times one person. A server has a high
+  floor and almost no slope: the same machine serves ten people or a hundred. Every comparison on this
+  site is really just the point where those two lines cross, and that point moves depending on how heavy
+  the tool is and what your time is worth.
+</p>
+<p>
+  We size each tool from its own documented requirements where they exist, pick the smallest server plan
+  that actually fits, add backups, and add the hours. Prices carry the date they were read and a link to
+  the page they were read from. When we have not checked a price, we do not publish a figure that depends
+  on it. <a href="/selfhostcost/methodology/">The full method is here</a>, including everything the model
+  deliberately ignores.
+</p>
+
+</main>
+
+<footer class="sitefoot">
+  <div class="shell">
+    <div class="footgrid">
+      <div>
+        <h4>SelfHostCost</h4>
+        <p style="margin:0 0 .6em">What self-hosting actually costs, per tool, per team size.</p>
+        <p style="margin:0"><a href="/selfhostcost/methodology/">How every figure is calculated</a></p>
+      </div>
+      <div>
+        <h4>Browse</h4>
+        <ul>
+          <li><a href="/selfhostcost/compare/">All comparisons</a></li>
+          <li><a href="/selfhostcost/self-host/">All tools</a></li>
+          <li><a href="/selfhostcost/hosting/">Hosting providers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Categories</h4>
+        <ul>
+<li><a href="/selfhostcost/category/password-manager/">Password managers</a></li><li><a href="/selfhostcost/category/analytics/">Web analytics</a></li><li><a href="/selfhostcost/category/automation/">Workflow automation</a></li><li><a href="/selfhostcost/category/docs-wiki/">Docs and wikis</a></li><li><a href="/selfhostcost/category/project-management/">Project management</a></li><li><a href="/selfhostcost/category/helpdesk/">Helpdesk and support inbox</a></li>        </ul>
+      </div>
+      <div>
+        <h4>About</h4>
+        <ul>
+          <li><a href="/selfhostcost/methodology/">Methodology</a></li>
+          <li><a href="/selfhostcost/disclosure/">Affiliate disclosure</a></li>
+          <li><a href="/selfhostcost/privacy/">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin:30px 0 0">
+      Prices are read from vendor pricing pages on the dates shown on each page and are not
+      updated continuously. Check the vendor before you buy. Nothing here is financial advice.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

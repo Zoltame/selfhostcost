@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% block content %}
+
+<p class="kicker">{{ category.name }}</p>
+<h1>What it costs to self-host {{ tool.name }}</h1>
+
+<p class="lead">
+  {{ tool.description_gh | default(tool.sizing_note, true) }}
+  Below is the server it needs at each team size, what that costs, and how long
+  {% if replaced %}the {{ replaced | length }} commercial {{ 'product' if replaced | length == 1 else 'products' }} it replaces{% else %}a paid alternative{% endif %}
+  would take to cost more.
+</p>
+
+<div class="tablewrap">
+<table>
+  <caption>Sizing and monthly cost for {{ tool.name }} by team size. Memory includes {{ (headroom * 100) | round | int }}% headroom.</caption>
+  <thead>
+    <tr><th>Team size</th><th class="num">Memory</th><th class="num">Disk</th><th>Cheapest plan that fits</th><th class="num">Server</th><th class="num">With backups and your time</th></tr>
+  </thead>
+  <tbody>
+  {% for r in rows %}
+    <tr>
+      <th scope="row"><a href="{{ base }}/cost/{{ tool.slug }}/{{ r.slug }}/">{{ r.label }}</a></th>
+      <td class="num">{{ gb(r.ram) }}</td>
+      <td class="num">{{ gb(r.disk) }}</td>
+      <td>{{ r.plan_name }} &middot; {{ r.provider }}</td>
+      <td class="num">{{ money(r.server) }}</td>
+      <td class="num">{{ money(r.total) }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+
+<h2>The sizing model for {{ tool.name }}</h2>
+<p>{{ tool.sizing_note }}</p>
+<ul>
+  <li><strong>{{ gb(tool.base_ram_gb) }} of memory</strong> for the whole stack at rest, every container the project ships included.</li>
+  <li><strong>{{ tool.ram_per_user_mb }} MB more per active user</strong>, then {{ (headroom * 100) | round | int }}% on top so the box is not running at its ceiling.</li>
+  <li><strong>{{ gb(tool.base_disk_gb) }} of disk</strong> to begin with, growing {{ tool.disk_per_user_gb }} GB per user.</li>
+  <li><strong>{{ tool.base_vcpu }} vCPU.</strong> Carried through from the project's baseline and not scaled with team size, because for this workload memory is what runs out first.</li>
+</ul>
+<p>
+  {% if tool.sizing_basis == 'vendor_docs' %}
+  These base figures come from the project's own documented requirements.
+  {% else %}
+  <strong>The base figures are our estimate</strong>, derived from the services in the project's reference
+  Docker Compose file, because it does not publish a minimum specification we could cite.
+  {% endif %}
+  The per-user increments are ours in every case. They are deliberately generous rather than optimistic:
+  a comparison that undersizes the server flatters self-hosting.
+</p>
+
+<h2>Time, not just money</h2>
+<p>
+  {{ tool.name }} is rated <strong>{{ tool.difficulty }}</strong> to operate, which in this model means
+  about <strong>{{ setup_hours }} hours</strong> to get it running properly the first time and
+  <strong>{{ maint_hours }} hours a month</strong> after that. At
+  ${{ cfg.tco_model.engineer_hourly_usd }} an hour that is {{ money(setup_hours * cfg.tco_model.engineer_hourly_usd) }}
+  once and {{ money(maint_hours * cfg.tco_model.engineer_hourly_usd) }} a month, which is usually the
+  largest line in the whole calculation.
+  {% if tool.difficulty == 'hard' %}
+  This one is genuinely heavy: several stateful services, and an upgrade path where rushing can cost you data.
+  {% elif tool.difficulty == 'easy' %}
+  This one is about as light as self-hosting gets: a single container and little to do beyond keeping the image current.
+  {% endif %}
+</p>
+
+{% if replaced %}
+<h2>What it replaces</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Commercial product</th><th class="num">Its cost at {{ ref_label }}</th><th class="num">{{ tool.name }} at {{ ref_label }}</th><th class="num">Break-even</th><th></th></tr></thead>
+  <tbody>
+  {% for r in replaced %}
+    <tr>
+      <th scope="row">{{ r.saas.name }} <span class="badge">{{ r.tco.saas_tier.name }}</span></th>
+      <td class="num">{{ money(r.tco.saas_usd_month) }}</td>
+      <td class="num">{{ money(r.tco.selfhost_usd_month) }}</td>
+      <td class="num">{{ months(r.tco.breakeven_months) }}</td>
+      <td><a href="{{ base }}/vs/{{ r.saas.slug }}-vs-{{ tool.slug }}/">full breakdown</a></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endif %}
+
+{% include "partials/hosting_cta.html" %}
+
+<h2>Project facts</h2>
+<div class="tablewrap">
+<table>
+  <tbody>
+    <tr><th scope="row">Licence</th><td>{{ tool.license | default('see project', true) }}{% if tool.license_spdx == 'NOASSERTION' %} <span class="badge warn">not a standard open-source licence</span>{% endif %}</td></tr>
+    {% if tool.licence_caveat %}<tr><th scope="row">Licence caveat</th><td>{{ tool.licence_caveat }}</td></tr>{% endif %}
+    <tr><th scope="row">Written in</th><td>{{ tool.language }}</td></tr>
+    {% if tool.stars %}<tr><th scope="row">GitHub stars</th><td>{{ '{:,}'.format(tool.stars) }}</td></tr>{% endif %}
+    {% if tool.open_issues is not none %}<tr><th scope="row">Open issues</th><td>{{ '{:,}'.format(tool.open_issues) }}</td></tr>{% endif %}
+    {% if tool.latest_release %}<tr><th scope="row">Latest release</th><td>{{ tool.latest_release }}</td></tr>{% endif %}
+    {% if tool.last_push %}<tr><th scope="row">Last commit</th><td>{{ tool.last_push }}</td></tr>{% endif %}
+    {% if tool.github_checked_on %}<tr><th scope="row">Repository checked</th><td>{{ tool.github_checked_on }}</td></tr>{% endif %}
+    <tr><th scope="row">Project</th><td><a href="{{ tool.site }}" rel="nofollow noopener">{{ tool.site | replace('https://','') }}</a>{% if tool.repo %} &middot; <a href="https://github.com/{{ tool.repo }}" rel="nofollow noopener">{{ tool.repo }}</a>{% elif tool.repo_url %} &middot; <a href="{{ tool.repo_url }}" rel="nofollow noopener">source</a>{% endif %}</td></tr>
+    {% if tool.compatible_clients %}<tr><th scope="row">Clients</th><td>{{ tool.compatible_clients }}</td></tr>{% endif %}
+  </tbody>
+</table>
+</div>
+
+{% include "partials/lead_capture.html" %}
+
+<h2>Related</h2>
+<ul class="linkgrid">
+  {% for sib in siblings %}<li><a href="{{ base }}/self-host/{{ sib.slug }}/">Self-hosting {{ sib.name }}</a></li>{% endfor %}
+  <li><a href="{{ base }}/category/{{ category.slug }}/">{{ category.name }} compared</a></li>
+  <li><a href="{{ base }}/methodology/">How these figures are calculated</a></li>
+</ul>
+
+{% endblock %}

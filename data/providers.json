@@ -1,0 +1,89 @@
+{
+  "_schema": {
+    "price_status": "verified = the price was read directly from the provider's public pricing page on verified_on. unverified = specs are confirmed but the price could not be read (JS-rendered or region-gated) and must be filled in by a human before it is allowed into a published calculation.",
+    "policy": "Only plans with price_status = verified and a non-null price_usd_month are allowed to feed a published TCO figure. Everything else renders as a spec-only listing. scripts/check_staleness.py enforces the review window."
+  },
+
+  "providers": [
+    {
+      "slug": "digitalocean",
+      "name": "DigitalOcean",
+      "kind": "vps",
+      "site": "https://www.digitalocean.com",
+      "pricing_url": "https://www.digitalocean.com/pricing/droplets",
+      "hq": "United States",
+      "billing_note": "Per-second billing since 1 January 2026, with a minimum charge of 60 seconds or $0.01. Monthly caps still apply.",
+      "strengths": ["Large managed-service catalogue", "Strong documentation for self-hosters", "Predictable monthly caps"],
+      "weaknesses": ["Roughly 2-3x the price of European budget hosts for the same RAM", "Bandwidth allowances lower than Hetzner"],
+      "verified_on": "2026-09-12",
+      "price_status": "verified",
+      "plans": [
+        { "id": "s-1vcpu-512mb-10gb", "name": "Basic 512 MiB",  "vcpu": 1, "ram_gb": 0.5, "disk_gb": 10,  "transfer_gb": 500,  "price_usd_month": 4.0 },
+        { "id": "s-1vcpu-1gb",        "name": "Basic 1 GiB",     "vcpu": 1, "ram_gb": 1,   "disk_gb": 25,  "transfer_gb": 1000, "price_usd_month": 6.0 },
+        { "id": "s-1vcpu-2gb",        "name": "Basic 2 GiB",     "vcpu": 1, "ram_gb": 2,   "disk_gb": 50,  "transfer_gb": 2000, "price_usd_month": 12.0 },
+        { "id": "s-2vcpu-2gb",        "name": "Basic 2 GiB / 2 vCPU", "vcpu": 2, "ram_gb": 2, "disk_gb": 60, "transfer_gb": 3000, "price_usd_month": 18.0 },
+        { "id": "s-2vcpu-4gb",        "name": "Basic 4 GiB",     "vcpu": 2, "ram_gb": 4,   "disk_gb": 80,  "transfer_gb": 4000, "price_usd_month": 24.0 },
+        { "id": "s-4vcpu-8gb",        "name": "Basic 8 GiB",     "vcpu": 4, "ram_gb": 8,   "disk_gb": 160, "transfer_gb": 5000, "price_usd_month": 48.0 },
+        { "id": "s-8vcpu-16gb",       "name": "Basic 16 GiB",    "vcpu": 8, "ram_gb": 16,  "disk_gb": 320, "transfer_gb": 6000, "price_usd_month": 96.0 },
+        { "id": "m-4vcpu-32gb",       "name": "Memory-Optimized 32 GiB", "vcpu": 4, "ram_gb": 32, "disk_gb": 100, "transfer_gb": 6000, "price_usd_month": 168.0 },
+        { "id": "m-8vcpu-64gb",       "name": "Memory-Optimized 64 GiB", "vcpu": 8, "ram_gb": 64, "disk_gb": 200, "transfer_gb": 7000, "price_usd_month": 336.0 }
+      ]
+    },
+    {
+      "slug": "hetzner",
+      "name": "Hetzner Cloud",
+      "kind": "vps",
+      "site": "https://www.hetzner.com",
+      "pricing_url": "https://www.hetzner.com/cloud/regular-performance/",
+      "hq": "Germany",
+      "billing_note": "Priced in EUR. Hourly billing capped at a monthly maximum. IPv4 is charged separately on some plans.",
+      "strengths": ["Best price per GB of RAM among mainstream hosts", "20 TB of included traffic on EU plans", "Arm64 plans cut costs further"],
+      "weaknesses": ["EU, US and Singapore regions only", "EUR billing adds currency risk for USD budgets", "Popular plans go out of stock"],
+      "verified_on": "2026-09-12",
+      "price_status": "unverified",
+      "price_note": "Specs below were read from the Hetzner pricing pages on 2026-09-12. The prices are injected client-side per region and every plan was reported as temporarily unavailable at the time of reading, so no price could be captured. Fill price_usd_month in and flip price_status to verified before these plans are allowed into a published calculation.",
+      "plans": [
+        { "id": "cpx12", "name": "CPX12", "vcpu": 1,  "ram_gb": 2,  "disk_gb": 40,  "transfer_gb": 20000, "price_usd_month": null },
+        { "id": "cpx22", "name": "CPX22", "vcpu": 2,  "ram_gb": 4,  "disk_gb": 80,  "transfer_gb": 20000, "price_usd_month": null },
+        { "id": "cpx32", "name": "CPX32", "vcpu": 4,  "ram_gb": 8,  "disk_gb": 160, "transfer_gb": 20000, "price_usd_month": null },
+        { "id": "cpx42", "name": "CPX42", "vcpu": 8,  "ram_gb": 16, "disk_gb": 320, "transfer_gb": 20000, "price_usd_month": null },
+        { "id": "cpx52", "name": "CPX52", "vcpu": 12, "ram_gb": 24, "disk_gb": 480, "transfer_gb": 20000, "price_usd_month": null },
+        { "id": "cpx62", "name": "CPX62", "vcpu": 16, "ram_gb": 32, "disk_gb": 640, "transfer_gb": 20000, "price_usd_month": null },
+        { "id": "cax11", "name": "CAX11 (Arm64)", "vcpu": 2,  "ram_gb": 4,  "disk_gb": 40,  "transfer_gb": 20000, "price_usd_month": null },
+        { "id": "cax21", "name": "CAX21 (Arm64)", "vcpu": 4,  "ram_gb": 8,  "disk_gb": 80,  "transfer_gb": 20000, "price_usd_month": null },
+        { "id": "cax31", "name": "CAX31 (Arm64)", "vcpu": 8,  "ram_gb": 16, "disk_gb": 160, "transfer_gb": 20000, "price_usd_month": null },
+        { "id": "cax41", "name": "CAX41 (Arm64)", "vcpu": 16, "ram_gb": 32, "disk_gb": 320, "transfer_gb": 20000, "price_usd_month": null }
+      ]
+    },
+    {
+      "slug": "vultr",
+      "name": "Vultr",
+      "kind": "vps",
+      "site": "https://www.vultr.com",
+      "pricing_url": "https://www.vultr.com/pricing/",
+      "hq": "United States",
+      "billing_note": "Hourly billing with a monthly cap. 32 global regions.",
+      "strengths": ["Widest region coverage of the budget hosts", "Hourly billing suits short-lived trials"],
+      "weaknesses": ["Bandwidth overages billed separately", "Support is community-first on lower tiers"],
+      "verified_on": "2026-09-12",
+      "price_status": "unverified",
+      "price_note": "Pricing table sits behind a consent gate and lazy rendering; no plan could be read on 2026-09-12. Needs manual entry before publication.",
+      "plans": []
+    },
+    {
+      "slug": "pikapods",
+      "name": "PikaPods",
+      "kind": "managed_selfhost",
+      "site": "https://www.pikapods.com",
+      "pricing_url": "https://www.pikapods.com/pricing",
+      "hq": "Germany",
+      "billing_note": "Pay-per-resource managed hosting of open-source apps. No server administration.",
+      "strengths": ["No sysadmin work at all, which removes the labour line entirely", "Per-app pricing suits a single tool", "Cheapest honest option below roughly 10 users"],
+      "weaknesses": ["App catalogue is curated, not arbitrary", "Less control than a VPS", "Costs scale per app rather than per server"],
+      "verified_on": "2026-09-12",
+      "price_status": "unverified",
+      "price_note": "Resource-based pricing needs manual entry.",
+      "plans": []
+    }
+  ]
+}

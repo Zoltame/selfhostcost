@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block content %}
+
+<p class="kicker">Hosting</p>
+<h1>{{ provider.name }} for self-hosting: plans and what fits on them</h1>
+
+<p class="lead">
+  {{ provider.name }} is based in {{ provider.hq }}.
+  {% if provider.price_status == 'verified' %}
+  Plan prices below were read from <a href="{{ provider.pricing_url }}" rel="nofollow noopener">its own pricing page</a>
+  on {{ provider.verified_on }} and are what every calculation on this site uses.
+  {% else %}
+  <strong>We have not been able to read its prices programmatically</strong>, so no figure on this site
+  is based on {{ provider.name }}. The specifications below are confirmed; the prices are not.
+  {% endif %}
+</p>
+
+{% if provider.price_status != 'verified' %}
+<div class="note caution">
+  <h3>Prices not confirmed</h3>
+  <p>{{ provider.price_note }}</p>
+  <p>Until that is resolved, treat this page as a specification reference and check the vendor for pricing.</p>
+</div>
+{% endif %}
+
+{% if provider.plans %}
+<h2>Plans</h2>
+<div class="tablewrap">
+<table>
+  <thead>
+    <tr><th>Plan</th><th class="num">vCPU</th><th class="num">Memory</th><th class="num">Disk</th><th class="num">Transfer</th><th class="num">Per month</th>{% if provider.price_status == 'verified' %}<th>What fits on it</th>{% endif %}</tr>
+  </thead>
+  <tbody>
+  {% for row in plan_rows %}
+    <tr>
+      <th scope="row">{{ row.plan.name }}</th>
+      <td class="num">{{ row.plan.vcpu }}</td>
+      <td class="num">{{ gb(row.plan.ram_gb) }}</td>
+      <td class="num">{{ gb(row.plan.disk_gb) }}</td>
+      <td class="num">{{ gb(row.plan.transfer_gb) }}</td>
+      <td class="num">{% if row.plan.price_usd_month %}{{ money(row.plan.price_usd_month) }}{% else %}not read{% endif %}</td>
+      {% if provider.price_status == 'verified' %}
+      <td>{% if row.fits %}{% for f in row.fits %}<a href="{{ base }}/self-host/{{ f.slug }}/">{{ f.name }}</a>{{ ', ' if not loop.last }}{% endfor %}{% else %}&mdash;{% endif %}</td>
+      {% endif %}
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+<p class="srcline">The last column lists tools in our dataset that fit at a team of {{ ref_label }}, smallest plan first, so each tool appears once.</p>
+{% endif %}
+
+<h2>Where it helps and where it hurts</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Strengths</th><th>Weaknesses</th></tr></thead>
+  <tbody><tr>
+    <td><ul style="margin:0;padding-left:1.1em">{% for s in provider.strengths %}<li>{{ s }}</li>{% endfor %}</ul></td>
+    <td><ul style="margin:0;padding-left:1.1em">{% for w in provider.weaknesses %}<li>{{ w }}</li>{% endfor %}</ul></td>
+  </tr></tbody>
+</table>
+</div>
+<p>{{ provider.billing_note }}</p>
+
+<div class="cta">
+  <h3>Pricing straight from {{ provider.name }}</h3>
+  <p>Always confirm the current price on the vendor's page before you commit. Ours is a snapshot with a date on it, not a live feed.</p>
+  <p><a class="btn" href="{{ hosting_link(provider.slug) }}" rel="{{ 'sponsored nofollow noopener' if affiliate_on else 'nofollow noopener' }}">Open {{ provider.name }}</a></p>
+  {% if affiliate_on %}<p class="disclosure">{{ cfg.affiliate.disclosure }}</p>{% endif %}
+</div>
+
+<h2>Other providers</h2>
+<ul class="linkgrid">
+  {% for p in siblings %}<li><a href="{{ base }}/hosting/{{ p.slug }}/">{{ p.name }}</a>{% if p.price_status != 'verified' %} <span class="badge warn">prices unconfirmed</span>{% endif %}</li>{% endfor %}
+</ul>
+
+{% endblock %}

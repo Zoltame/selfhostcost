@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block content %}
+
+<p class="kicker">{{ category.name }}</p>
+<h1>Self-hosted alternatives to {{ saas.name }}, priced</h1>
+
+<p class="lead">
+  {{ alts | length }} open-source {{ 'tool' if alts | length == 1 else 'tools' }} that can replace
+  {{ saas.name }}, each shown with what it would actually cost to run for a team of
+  {{ ref_label }}. {{ saas.name }} on the {{ saas_tier.name }} tier costs
+  {{ money(saas_month) }} a month at that size.
+</p>
+
+{% if saas.free_tier_note %}
+<div class="note caution">
+  <h3>Start here</h3>
+  <p>{{ saas.free_tier_note }}</p>
+</div>
+{% endif %}
+
+<div class="tablewrap">
+<table>
+  <caption>Monthly cost at {{ ref_label }}. Self-hosted totals include the server, backups and {{ cfg.tco_model.engineer_hourly_usd }}-dollar-an-hour maintenance time.</caption>
+  <thead>
+    <tr>
+      <th>Tool</th>
+      <th class="num">Server only</th>
+      <th class="num">With your time</th>
+      <th class="num">vs {{ saas.name }}</th>
+      <th>Operational weight</th>
+      <th>Licence</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for a in alts %}
+    <tr>
+      <th scope="row"><a href="{{ base }}/vs/{{ saas.slug }}-vs-{{ a.tool.slug }}/">{{ a.tool.name }}</a></th>
+      <td class="num">{{ money(a.tco.selfhost_usd_month_no_labour) }}</td>
+      <td class="num">{{ money(a.tco.selfhost_usd_month) }}</td>
+      <td class="num {{ 'pos' if a.tco.savings_total > 0 else 'neg' }}">
+        {{ '+' if a.tco.savings_total > 0 else '' }}{{ money(a.tco.savings_total) }}
+      </td>
+      <td>{{ a.tool.difficulty }}</td>
+      <td>{{ a.tool.license_spdx if a.tool.license_spdx != 'NOASSERTION' else 'source-available' }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+<p class="srcline">The final column is the {{ cfg.tco_model.horizon_months }}-month difference: positive means self-hosting is cheaper.</p>
+
+<h2>Which one to pick</h2>
+{% for a in alts %}
+<h3>{{ a.tool.name }}{% if a.tool.stars %} <span class="badge">{{ '{:,}'.format(a.tool.stars) }} stars</span>{% endif %}</h3>
+<p>{{ a.tool.sizing_note }}</p>
+<p>
+  At {{ ref_label }} it needs {{ gb(a.tco.sizing.ram_gb) }} of memory and {{ gb(a.tco.sizing.disk_gb) }} of disk,
+  which fits the {{ a.tco.plan.plan.name }} at {{ a.tco.plan.provider_name }} for
+  {{ money(a.tco.plan.price_usd_month) }} a month. Setting it up is roughly {{ a.tco.setup_hours }} hours of work,
+  then {{ a.tco.maintenance_hours_month }} hours a month to keep it healthy.
+  {% if a.tool.licence_caveat %}<strong>Licence note:</strong> {{ a.tool.licence_caveat }}{% endif %}
+</p>
+<p><a href="{{ base }}/vs/{{ saas.slug }}-vs-{{ a.tool.slug }}/">Full {{ saas.name }} versus {{ a.tool.name }} breakdown</a>
+   &middot; <a href="{{ base }}/self-host/{{ a.tool.slug }}/">{{ a.tool.name }} at every team size</a></p>
+{% endfor %}
+
+<h2>How the pricing was established</h2>
+<p>
+  {{ saas.name }} pricing was read from <a href="{{ saas.pricing_url }}" rel="nofollow noopener">its own pricing page</a>
+  on {{ saas.verified_on }}{% if saas_fx %}, quoted in euros and converted at
+  {{ cfg.fx.rates_to_usd.EUR }} dollars to the euro, the {{ cfg.fx.source_name }} rate for {{ cfg.fx.on }}{% endif %}.
+  Server prices come from the providers listed on the <a href="{{ base }}/hosting/">hosting page</a>.
+  The sizing model and the cost of your time are set out in full on the
+  <a href="{{ base }}/methodology/">methodology page</a>.
+</p>
+
+<h2>Related</h2>
+<ul class="linkgrid">
+  <li><a href="{{ base }}/category/{{ category.slug }}/">All {{ category.name | lower }} compared</a></li>
+  {% for s in sibling_saas %}<li><a href="{{ base }}/alternatives/{{ s.slug }}/">Alternatives to {{ s.name }}</a></li>{% endfor %}
+  <li><a href="{{ base }}/hosting/">Where to host it</a></li>
+</ul>
+
+{% endblock %}

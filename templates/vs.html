@@ -1,0 +1,213 @@
+{% extends "base.html" %}
+{% block content %}
+
+<p class="kicker">{{ category.name }} &middot; cost comparison</p>
+<h1>{{ saas.name }} vs self-hosted {{ tool.name }}: what each actually costs</h1>
+
+<p class="lead">
+  {{ saas.name }} on the {{ ref.saas_tier.name }} tier against {{ tool.name }} running on the smallest
+  server that fits it. Every figure below is computed from the sizing model and the dated prices at the
+  foot of this page, and includes the part most comparisons leave out: your own time.
+</p>
+
+{% include "partials/verdict.html" %}
+
+<h2>The same comparison at every team size</h2>
+<p>
+  Self-hosting has a floor and almost no slope, while per-seat software has no floor and a steep slope.
+  That is the whole story, and it is why the answer flips somewhere in this table rather than being
+  the same for everyone.
+</p>
+
+<div class="tablewrap">
+<table>
+  <caption>{{ saas.name }} {{ ref.saas_tier.name }} against {{ tool.name }} self-hosted, per month, over {{ cfg.tco_model.horizon_months }} months. Self-hosted includes server, backups and maintenance time at ${{ cfg.tco_model.engineer_hourly_usd }} an hour.</caption>
+  <thead>
+    <tr>
+      <th>Team size</th>
+      <th class="num">{{ saas.name }}</th>
+      <th class="num">Self-hosted</th>
+      <th class="num">Without valuing your time</th>
+      <th>Server needed</th>
+      <th class="num">{{ cfg.tco_model.horizon_months }}-month difference</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for row in rows %}
+    <tr>
+      <th scope="row">{% if row.users == ref.users %}<strong>{{ row.label }}</strong>{% else %}<a href="{{ base }}/cost/{{ tool.slug }}/{{ row.slug }}/">{{ row.label }}</a>{% endif %}</th>
+      <td class="num">{{ row.saas }}</td>
+      <td class="num">{{ row.sh }}</td>
+      <td class="num">{{ row.sh_nl }}</td>
+      <td>{{ row.plan }}</td>
+      <td class="num {{ 'pos' if row.delta_pos else 'neg' }}">{{ row.delta }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+
+<p class="srcline">
+  {% if flip_at %}The balance tips in favour of self-hosting at around <strong>{{ flip_at }}</strong>.
+  {% elif never_flips %}Self-hosting never comes out ahead at any team size on this page, once your time is priced in.
+  {% else %}Self-hosting is ahead at every team size shown.{% endif %}
+</p>
+
+<h2>Where the self-hosted money actually goes at {{ ref.label }}</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Line item</th><th class="num">Per month</th><th>What it is</th></tr></thead>
+  <tbody>
+    <tr>
+      <th scope="row">Server</th>
+      <td class="num">{{ money(ref.server_usd_month) }}</td>
+      <td>{{ ref.plan.plan.name }} at {{ ref.plan.provider_name }}: {{ ref.plan.plan.vcpu }} vCPU, {{ gb(ref.plan.plan.ram_gb) }} RAM, {{ gb(ref.plan.plan.disk_gb) }} disk</td>
+    </tr>
+    <tr>
+      <th scope="row">Backups</th>
+      <td class="num">{{ money(ref.backup_usd_month) }}</td>
+      <td>Provider snapshots at {{ (cfg.tco_model.backup_cost_ratio * 100) | round | int }}% of the server price. Skipping this is not a saving, it is a bet.</td>
+    </tr>
+    <tr>
+      <th scope="row">Your time</th>
+      <td class="num">{{ money(ref.labour_usd_month) }}</td>
+      <td>{{ ref.maintenance_hours_month }} hours a month of updates, upgrades and the occasional broken thing, at ${{ cfg.tco_model.engineer_hourly_usd }} an hour</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr><td>Total</td><td class="num">{{ money(ref.selfhost_usd_month) }}</td><td>Plus {{ money(ref.setup_usd_once) }} once, for roughly {{ ref.setup_hours }} hours of first-time setup</td></tr>
+  </tfoot>
+</table>
+</div>
+
+<p>
+  {{ saas.name }} at this size costs <strong>{{ money(ref.saas_usd_month) }}</strong> a month. {{ ref.saas_explain }}
+</p>
+
+{% if saas.free_tier_note %}
+<div class="note caution">
+  <h3>Read this before you price anything</h3>
+  <p>{{ saas.free_tier_note }}</p>
+</div>
+{% endif %}
+
+<h2>What {{ tool.name }} needs to run at {{ ref.label }}</h2>
+<p>
+  {{ tool.sizing_note }}
+</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Resource</th><th class="num">Required</th><th>How it is derived</th></tr></thead>
+  <tbody>
+    <tr><th scope="row">Memory</th><td class="num">{{ gb(ref.sizing.ram_gb) }}</td>
+      <td>{{ gb(tool.base_ram_gb) }} for the stack at rest, plus {{ tool.ram_per_user_mb }} MB per active user, plus {{ (ref.sizing.headroom_ratio * 100) | round | int }}% headroom</td></tr>
+    <tr><th scope="row">Disk</th><td class="num">{{ gb(ref.sizing.disk_gb) }}</td>
+      <td>{{ gb(tool.base_disk_gb) }} base, plus {{ tool.disk_per_user_gb }} GB per user</td></tr>
+    <tr><th scope="row">vCPU</th><td class="num">{{ ref.sizing.vcpu }}</td>
+      <td>The project's own baseline. For this workload memory runs out before the processor does.</td></tr>
+  </tbody>
+</table>
+</div>
+
+{% if tool.sizing_basis == 'estimate' %}
+<div class="note">
+  <p><strong>These base figures are an estimate.</strong> {{ tool.name }} does not publish a minimum
+  specification we could cite, so the base memory and disk are derived from the services in its own
+  reference Docker Compose file. Treat them as a starting point and watch the first week of metrics.</p>
+</div>
+{% endif %}
+
+<h2>What you give up, stated plainly</h2>
+<ul>
+  <li><strong>Uptime is now yours.</strong> {{ saas.name }} has an operations team on call. Self-hosted, a failed upgrade at 18:00 on a Friday is your evening.</li>
+  <li><strong>Backups only exist if you test restoring them.</strong> The {{ money(ref.backup_usd_month) }} line above buys snapshots, not a rehearsed recovery.</li>
+  <li><strong>{{ tool.name }} is {% if tool.difficulty == 'easy' %}a light lift: one container and no scheduled work beyond image updates{% elif tool.difficulty == 'medium' %}a multi-container stack with a database you have to back up yourself{% else %}operationally heavy: several stateful services and an upgrade path that can lose data if you rush it{% endif %}.</strong> That is why the maintenance line is {{ ref.maintenance_hours_month }} hours a month rather than zero.</li>
+  {% if tool.licence_caveat %}<li><strong>Licensing:</strong> {{ tool.licence_caveat }}</li>{% endif %}
+  <li><strong>Feature parity is never exact.</strong> {{ tool.name }} covers the core of what teams use {{ saas.name }} for; the long tail of integrations and enterprise controls is where the gap shows.</li>
+</ul>
+
+{% if ref.verdict == 'saas_cheaper' or ref.verdict == 'selfhost_cheaper_only_without_labour' %}
+<div class="note caution">
+  <h3>We are not going to tell you to self-host this</h3>
+  <p>
+    At {{ ref.label }}, {{ saas.name }} wins on cost once your time is priced at
+    ${{ cfg.tco_model.engineer_hourly_usd }} an hour. Self-hosting {{ tool.name }} here only makes sense
+    for reasons that are not on the invoice: data residency, avoiding a vendor, or wanting to run the
+    thing yourself. Those are real reasons. Saving money is not one of them at this size.
+  </p>
+</div>
+{% endif %}
+
+{% include "partials/hosting_cta.html" %}
+
+<h2>{{ tool.name }} at a glance</h2>
+<div class="tablewrap">
+<table>
+  <tbody>
+    <tr><th scope="row">Licence</th><td>{{ tool.license | default('see project', true) }}{% if tool.license_spdx == 'NOASSERTION' %} <span class="badge warn">not a standard open-source licence</span>{% endif %}</td></tr>
+    <tr><th scope="row">Written in</th><td>{{ tool.language }}</td></tr>
+    {% if tool.stars %}<tr><th scope="row">GitHub stars</th><td>{{ '{:,}'.format(tool.stars) }}, checked {{ tool.github_checked_on }}</td></tr>{% endif %}
+    {% if tool.latest_release %}<tr><th scope="row">Latest release</th><td>{{ tool.latest_release }}</td></tr>{% endif %}
+    {% if tool.last_push %}<tr><th scope="row">Last commit</th><td>{{ tool.last_push }}</td></tr>{% endif %}
+    <tr><th scope="row">Ships Docker images</th><td>{{ 'Yes' if tool.docker else 'No' }}</td></tr>
+    <tr><th scope="row">Project</th><td><a href="{{ tool.site }}" rel="nofollow noopener">{{ tool.site | replace('https://','') }}</a>{% if tool.repo %} &middot; <a href="https://github.com/{{ tool.repo }}" rel="nofollow noopener">{{ tool.repo }}</a>{% elif tool.repo_url %} &middot; <a href="{{ tool.repo_url }}" rel="nofollow noopener">source</a>{% endif %}</td></tr>
+  </tbody>
+</table>
+</div>
+
+{% include "partials/lead_capture.html" %}
+
+<h2>Every figure on this page, and where it came from</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Input</th><th>Value used</th><th>Source</th><th>Read on</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>{{ saas.name }} {{ ref.saas_tier.name }}</td>
+      <td>{{ saas_price_label }}</td>
+      <td><a href="{{ saas.pricing_url }}" rel="nofollow noopener">vendor pricing page</a></td>
+      <td>{{ saas.verified_on }}</td>
+    </tr>
+    <tr>
+      <td>{{ ref.plan.provider_name }} {{ ref.plan.plan.name }}</td>
+      <td>{{ money(ref.server_usd_month) }} per month</td>
+      <td><a href="{{ providers[ref.plan.provider_slug].pricing_url }}" rel="nofollow noopener">provider pricing page</a></td>
+      <td>{{ providers[ref.plan.provider_slug].verified_on }}</td>
+    </tr>
+    {% if fx_used %}
+    <tr>
+      <td>Exchange rate</td>
+      <td>1 EUR = {{ cfg.fx.rates_to_usd.EUR }} USD</td>
+      <td><a href="{{ cfg.fx.source_url }}" rel="nofollow noopener">{{ cfg.fx.source_name }}</a></td>
+      <td>{{ cfg.fx.on }}</td>
+    </tr>
+    {% endif %}
+    <tr>
+      <td>Engineer time</td>
+      <td>${{ cfg.tco_model.engineer_hourly_usd }} per hour</td>
+      <td><a href="{{ base }}/methodology/">our published assumption</a></td>
+      <td>&mdash;</td>
+    </tr>
+    <tr>
+      <td>{{ tool.name }} sizing</td>
+      <td>{{ gb(tool.base_ram_gb) }} base, {{ tool.ram_per_user_mb }} MB per user</td>
+      <td>{% if tool.sizing_basis == 'vendor_docs' %}project documentation{% else %}derived from its reference Compose stack{% endif %}</td>
+      <td>&mdash;</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p class="srcline">
+  Prices move. If the vendor has changed theirs since {{ saas.verified_on }}, the figures above are stale
+  and the source links are the authority, not us. <a href="{{ base }}/methodology/">How we handle that</a>.
+</p>
+
+<h2>Related</h2>
+<ul class="linkgrid">
+  <li><a href="{{ base }}/self-host/{{ tool.slug }}/">Self-hosting {{ tool.name }}: every team size</a></li>
+  <li><a href="{{ base }}/alternatives/{{ saas.slug }}/">All self-hosted {{ saas.name }} alternatives</a></li>
+  {% for sib in siblings %}<li><a href="{{ base }}{{ sib.url }}">{{ sib.name }}</a></li>{% endfor %}
+  <li><a href="{{ base }}/category/{{ category.slug }}/">{{ category.name }} compared</a></li>
+</ul>
+
+{% endblock %}

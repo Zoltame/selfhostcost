@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zoltame.github.io/selfhostcost/sitemap.xml

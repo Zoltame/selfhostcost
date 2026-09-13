@@ -1,0 +1,27 @@
+{# Lead capture. Renders nothing at all until a form ID is configured, so an
+   unconfigured build never ships a dead form. #}
+{% if cfg.lead_capture.enabled and cfg.lead_capture.form_id %}
+<div class="cta">
+  <h3>{{ cfg.lead_capture.headline }}</h3>
+  <p>{{ cfg.lead_capture.subhead }}</p>
+  {% if cfg.lead_capture.provider == 'tally' %}
+  <iframe
+    data-tally-src="https://tally.so/embed/{{ cfg.lead_capture.form_id }}?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&tool={{ tool.slug if tool else '' }}&page={{ page.url | urlencode }}"
+    loading="lazy" width="100%" height="240" frameborder="0" marginheight="0" marginwidth="0"
+    title="{{ cfg.lead_capture.headline }}"></iframe>
+  <script>
+    (function(){
+      var d=document,s="https://tally.so/widgets/embed.js",
+      load=function(){ if(typeof Tally!=="undefined"){Tally.loadEmbeds();return;}
+        d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e){e.src=e.dataset.tallySrc;}); };
+      if(typeof Tally!=="undefined"){load();return;}
+      if(d.querySelector('script[src="'+s+'"]')==null){
+        var j=d.createElement("script"); j.src=s; j.onload=load; j.onerror=load; d.body.appendChild(j);
+      }
+    })();
+  </script>
+  {% else %}
+  <p><a class="btn" href="{{ cfg.lead_capture.form_id }}" rel="noopener">{{ cfg.lead_capture.cta }}</a></p>
+  {% endif %}
+</div>
+{% endif %}

@@ -1,0 +1,51 @@
+{# The headline block. Tone is set by the computed verdict, never hand-written. #}
+<div class="verdict {% if ref.verdict == 'saas_cheaper' %}is-saas{% elif ref.verdict != 'selfhost_cheaper' %}is-wash{% endif %}">
+  <p class="lede">
+  {%- if ref.is_free_saas %}
+    <b>There is no bill to beat here.</b> {{ saas.name }} costs nothing at its standard tier, so running
+    {{ tool.name }} yourself costs you <b>{{ money(ref.selfhost_usd_month) }} a month</b> more, not less.
+    The reason to do it is who holds the data, not what it costs.
+  {%- elif ref.verdict == 'selfhost_cheaper' %}
+    At {{ ref.label }}, self-hosting {{ tool.name }} costs <b>{{ money(ref.selfhost_usd_month) }} a month</b>
+    against <b>{{ money(ref.saas_usd_month) }}</b> for {{ saas.name }}. You are ahead after
+    <b>{{ months(ref.breakeven_months) }}</b> and {{ money(ref.savings_total) }} better off over
+    {{ cfg.tco_model.horizon_months }} months, with your own time already priced in.
+  {%- elif ref.verdict == 'selfhost_cheaper_only_without_labour' %}
+    At {{ ref.label }} this one is close enough to go either way. The server costs
+    <b>{{ money(ref.selfhost_usd_month_no_labour) }} a month</b> against {{ money(ref.saas_usd_month) }}
+    for {{ saas.name }}, but add {{ ref.maintenance_hours_month }} hours a month of your attention and
+    self-hosting lands at <b>{{ money(ref.selfhost_usd_month) }}</b> and loses.
+    It only wins if your time is genuinely free.
+  {%- else %}
+    At {{ ref.label }}, {{ saas.name }} is the cheaper option: <b>{{ money(ref.saas_usd_month) }} a month</b>
+    against <b>{{ money(ref.selfhost_usd_month) }}</b> to run {{ tool.name }} yourself. Self-hosting this
+    at this size buys you control, not savings.
+  {%- endif %}
+  </p>
+
+  <dl class="figures">
+    <div class="fig">
+      <dt>{{ saas.name }}</dt>
+      <dd>{{ money(ref.saas_usd_month) }}<small>per month, {{ ref.saas_tier.name }}</small></dd>
+    </div>
+    <div class="fig">
+      <dt>Self-hosted</dt>
+      <dd>{{ money(ref.selfhost_usd_month) }}<small>server, backups and your time</small></dd>
+    </div>
+    <div class="fig">
+      <dt>Server and backups</dt>
+      <dd>{{ money(ref.selfhost_usd_month_no_labour) }}<small>{{ ref.plan.plan.name }}, {{ gb(ref.plan.plan.ram_gb) }} RAM</small></dd>
+    </div>
+    <div class="fig">
+      <dt>{{ cfg.tco_model.horizon_months }}-month difference</dt>
+      <dd class="{{ 'pos' if ref.savings_total > 0 else 'neg' }}">
+        {{ money(ref.savings_total | abs) }}
+        <small>{{ 'saved by self-hosting' if ref.savings_total > 0 else 'extra to self-host' }}</small>
+      </dd>
+    </div>
+    <div class="fig">
+      <dt>Break-even</dt>
+      <dd>{{ months(ref.breakeven_months) }}<small>after {{ money(ref.setup_usd_once) }} of setup time</small></dd>
+    </div>
+  </dl>
+</div>

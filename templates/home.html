@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1 style="margin-top:.6em">What self-hosting actually costs</h1>
+<p class="lead">
+  Every comparison here prices the server, the backups and the hours it takes to look after, then puts
+  that against the vendor's own published price. Sometimes self-hosting wins by an enormous margin.
+  Sometimes it loses. We publish both, because a comparison that always reaches the same conclusion is
+  not a comparison.
+</p>
+
+<dl class="figures">
+  <div class="fig"><dt>Comparisons</dt><dd>{{ stats.comparisons }}<small>paid product against self-hosted tool</small></dd></div>
+  <div class="fig"><dt>Tools priced</dt><dd>{{ stats.tools }}<small>with a published sizing model</small></dd></div>
+  <div class="fig"><dt>Prices read from vendors</dt><dd>{{ stats.verified_saas }}<small>on {{ stats.verified_on }}</small></dd></div>
+  <div class="fig"><dt>Where self-hosting loses</dt><dd>{{ stats.saas_wins }}<small>of those comparisons, at {{ ref_label }}</small></dd></div>
+</dl>
+
+{% if biggest %}
+<h2>Where the gap is widest</h2>
+<p>Largest {{ cfg.tco_model.horizon_months }}-month saving at {{ ref_label }}, your own time already deducted.</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Instead of</th><th>Run</th><th class="num">Their price</th><th class="num">Yours</th><th class="num">Saved over {{ cfg.tco_model.horizon_months }} months</th></tr></thead>
+  <tbody>
+  {% for b in biggest %}
+    <tr>
+      <th scope="row">{{ b.saas.name }}</th>
+      <td><a href="{{ base }}/vs/{{ b.saas.slug }}-vs-{{ b.tool.slug }}/">{{ b.tool.name }}</a></td>
+      <td class="num">{{ money(b.tco.saas_usd_month) }}</td>
+      <td class="num">{{ money(b.tco.selfhost_usd_month) }}</td>
+      <td class="num pos">{{ money(b.tco.savings_total) }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endif %}
+
+{% if honest %}
+<h2>And where it does not pay off</h2>
+<p>
+  These are the comparisons where the paid product is cheaper once your hours are priced at
+  ${{ cfg.tco_model.engineer_hourly_usd }}. Self-hosting them is a choice about control, not about money.
+</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Product</th><th>Self-hosted option</th><th class="num">Their price</th><th class="num">Yours</th><th></th></tr></thead>
+  <tbody>
+  {% for h in honest %}
+    <tr>
+      <th scope="row">{{ h.saas.name }}</th>
+      <td>{{ h.tool.name }}</td>
+      <td class="num">{{ money(h.tco.saas_usd_month) }}</td>
+      <td class="num neg">{{ money(h.tco.selfhost_usd_month) }}</td>
+      <td><a href="{{ base }}/vs/{{ h.saas.slug }}-vs-{{ h.tool.slug }}/">why</a></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endif %}
+
+<h2>By category</h2>
+<ul class="cards">
+  {% for c in categories %}
+  <li class="card">
+    <h3><a href="{{ base }}/category/{{ c.cat.slug }}/">{{ c.cat.name }}</a></h3>
+    <p>{{ c.cat.intent }}</p>
+    <p class="meta">{{ c.tool_count }} self-hosted {{ 'tool' if c.tool_count == 1 else 'tools' }}{% if c.comparison_count %} &middot; {{ c.comparison_count }} priced {{ 'comparison' if c.comparison_count == 1 else 'comparisons' }}{% endif %}</p>
+  </li>
+  {% endfor %}
+</ul>
+
+<h2>How this works</h2>
+<p>
+  A paid seat has no floor and a steep slope: ten people cost ten times one person. A server has a high
+  floor and almost no slope: the same machine serves ten people or a hundred. Every comparison on this
+  site is really just the point where those two lines cross, and that point moves depending on how heavy
+  the tool is and what your time is worth.
+</p>
+<p>
+  We size each tool from its own documented requirements where they exist, pick the smallest server plan
+  that actually fits, add backups, and add the hours. Prices carry the date they were read and a link to
+  the page they were read from. When we have not checked a price, we do not publish a figure that depends
+  on it. <a href="{{ base }}/methodology/">The full method is here</a>, including everything the model
+  deliberately ignores.
+</p>
+
+{% endblock %}

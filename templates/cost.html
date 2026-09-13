@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% block content %}
+
+<p class="kicker">{{ tool.name }} &middot; {{ category.name }}</p>
+<h1>Self-hosting {{ tool.name }} for {{ size.users }} {{ 'person' if size.users == 1 else 'people' }}: the cost</h1>
+
+<p class="lead">
+  At {{ size.users }} {{ 'user' if size.users == 1 else 'users' }}, {{ tool.name }} needs
+  {{ gb(sizing.ram_gb) }} of memory and {{ gb(sizing.disk_gb) }} of disk. That fits the
+  {{ plan.plan.name }} at {{ plan.provider_name }} for {{ money(plan.price_usd_month) }} a month.
+  Add backups and the time it takes to look after and the real figure is
+  <strong>{{ money(total_month) }} a month</strong>.
+</p>
+
+<ul class="sizes">
+  {% for s in all_sizes %}
+  <li><a href="{{ base }}/cost/{{ tool.slug }}/{{ s.slug }}/" {% if s.slug == size.slug %}aria-current="page"{% endif %}>{{ s.label }}</a></li>
+  {% endfor %}
+</ul>
+
+<dl class="figures">
+  <div class="fig"><dt>Server</dt><dd>{{ money(plan.price_usd_month) }}<small>{{ plan.plan.name }}, {{ plan.plan.vcpu }} vCPU</small></dd></div>
+  <div class="fig"><dt>Backups</dt><dd>{{ money(backup_month) }}<small>provider snapshots</small></dd></div>
+  <div class="fig"><dt>Your time</dt><dd>{{ money(labour_month) }}<small>{{ maint_hours }} h a month at ${{ cfg.tco_model.engineer_hourly_usd }}</small></dd></div>
+  <div class="fig"><dt>All in</dt><dd>{{ money(total_month) }}<small>per month</small></dd></div>
+  <div class="fig"><dt>First-time setup</dt><dd>{{ money(setup_once) }}<small>about {{ setup_hours }} hours, once</small></dd></div>
+</dl>
+
+<h2>How {{ gb(sizing.ram_gb) }} was arrived at</h2>
+<p>
+  {{ gb(tool.base_ram_gb) }} covers the stack at rest, every container the project ships included.
+  {{ size.users }} {{ 'user' if size.users == 1 else 'users' }} at {{ tool.ram_per_user_mb }} MB each adds
+  {{ gb(per_user_ram_gb) }}, giving {{ gb(sizing.raw_ram_gb) }}. Adding
+  {{ (sizing.headroom_ratio * 100) | round | int }}% headroom so the machine is not run at its ceiling
+  gives <strong>{{ gb(sizing.ram_gb) }}</strong>, and the smallest plan at or above that is the
+  {{ plan.plan.name }} with {{ gb(plan.plan.ram_gb) }}.
+</p>
+<p>
+  Disk works the same way: {{ gb(tool.base_disk_gb) }} to begin with, plus
+  {{ tool.disk_per_user_gb }} GB per user, so <strong>{{ gb(sizing.disk_gb) }}</strong> against the
+  {{ gb(plan.plan.disk_gb) }} the plan includes.
+  {% if tool.disk_per_user_gb >= 5 %}
+  This tool is storage-hungry per user, so disk rather than memory is what will force your next upgrade.
+  {% endif %}
+</p>
+<p>{{ tool.sizing_note }}</p>
+
+<h2>Over three years</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Period</th><th class="num">Server and backups</th><th class="num">Your time</th><th class="num">Total</th></tr></thead>
+  <tbody>
+    <tr><th scope="row">Setup, once</th><td class="num">&mdash;</td><td class="num">{{ money(setup_once) }}</td><td class="num">{{ money(setup_once) }}</td></tr>
+    <tr><th scope="row">Per month</th><td class="num">{{ money(no_labour_month) }}</td><td class="num">{{ money(labour_month) }}</td><td class="num">{{ money(total_month) }}</td></tr>
+    <tr><th scope="row">First year</th><td class="num">{{ money(no_labour_month * 12) }}</td><td class="num">{{ money(setup_once + labour_month * 12) }}</td><td class="num">{{ money(setup_once + total_month * 12) }}</td></tr>
+  </tbody>
+  <tfoot>
+    <tr><td>{{ cfg.tco_model.horizon_months }} months</td><td class="num">{{ money(no_labour_month * cfg.tco_model.horizon_months) }}</td><td class="num">{{ money(setup_once + labour_month * cfg.tco_model.horizon_months) }}</td><td class="num">{{ money(setup_once + total_month * cfg.tco_model.horizon_months) }}</td></tr>
+  </tfoot>
+</table>
+</div>
+<p class="srcline">
+  If you do not price your own time, the {{ cfg.tco_model.horizon_months }}-month figure is
+  {{ money(no_labour_month * cfg.tco_model.horizon_months) }} instead. Both numbers are real; which one
+  applies depends on whether the hours would otherwise have been billable.
+</p>
+
+{% if comparisons %}
+<h2>What you would be paying instead at this size</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Commercial product</th><th>Tier</th><th class="num">Per month</th><th class="num">Difference</th><th></th></tr></thead>
+  <tbody>
+  {% for c in comparisons %}
+    <tr>
+      <th scope="row">{{ c.saas.name }}</th>
+      <td>{{ c.tco.saas_tier.name }}</td>
+      <td class="num">{{ money(c.tco.saas_usd_month) }}</td>
+      <td class="num {{ 'pos' if c.tco.saas_usd_month > total_month else 'neg' }}">
+        {{ money(c.tco.saas_usd_month - total_month) }}
+      </td>
+      <td><a href="{{ base }}/vs/{{ c.saas.slug }}-vs-{{ tool.slug }}/">breakdown</a></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+<p class="srcline">A positive difference means self-hosting is cheaper at this size, with your time already counted.</p>
+{% endif %}
+
+{% include "partials/hosting_cta.html" %}
+
+{% include "partials/lead_capture.html" %}
+
+<h2>Other sizes and related pages</h2>
+<ul class="linkgrid">
+  {% if prev_size %}<li><a href="{{ base }}/cost/{{ tool.slug }}/{{ prev_size.slug }}/">{{ tool.name }} for {{ prev_size.label }}</a></li>{% endif %}
+  {% if next_size %}<li><a href="{{ base }}/cost/{{ tool.slug }}/{{ next_size.slug }}/">{{ tool.name }} for {{ next_size.label }}</a></li>{% endif %}
+  <li><a href="{{ base }}/self-host/{{ tool.slug }}/">{{ tool.name }}: all team sizes at once</a></li>
+  <li><a href="{{ base }}/category/{{ category.slug }}/">{{ category.name }} compared</a></li>
+  <li><a href="{{ base }}/methodology/">How these figures are calculated</a></li>
+</ul>
+
+{% endblock %}

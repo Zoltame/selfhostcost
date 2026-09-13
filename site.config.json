@@ -1,0 +1,122 @@
+{
+  "brand": "SelfHostCost",
+  "tagline": "What self-hosting actually costs, per tool, per team size.",
+  "description": "Transparent cost comparisons between commercial SaaS and their self-hosted open-source alternatives. Every number is computed from a published sizing model and dated price sources.",
+  "repo": "selfhostcost",
+  "github_owner": "Zoltame",
+  "base_url": "https://zoltame.github.io/selfhostcost",
+  "base_path": "/selfhostcost",
+  "locale": "en",
+  "author": "SelfHostCost",
+  "publish_wave": 1,
+  "reference_users": 10,
+  "strict_prices": true,
+  "currency": "USD",
+  "fx": {
+    "note": "Vendors that served a pricing page in euros are converted to US dollars at this single dated rate, which is published on the methodology page so any figure can be reproduced.",
+    "rates_to_usd": {
+      "USD": 1.0,
+      "EUR": 1.1592
+    },
+    "on": "2026-09-11",
+    "source_name": "Frankfurter, European Central Bank reference rates",
+    "source_url": "https://api.frankfurter.dev/v1/latest?from=EUR&to=USD"
+  },
+  "tco_model": {
+    "engineer_hourly_usd": 75,
+    "setup_hours_by_difficulty": {
+      "easy": 2,
+      "medium": 6,
+      "hard": 16
+    },
+    "maintenance_hours_per_month_by_difficulty": {
+      "easy": 0.5,
+      "medium": 1.5,
+      "hard": 3
+    },
+    "backup_cost_ratio": 0.2,
+    "horizon_months": 36,
+    "ram_headroom_ratio": 0.25,
+    "notes": "Labour is the dominant hidden cost of self-hosting and is included by default. Readers can zero it out on any page; the published figures always state whether labour is included."
+  },
+  "team_sizes": [
+    {
+      "slug": "1-user",
+      "users": 1,
+      "label": "solo"
+    },
+    {
+      "slug": "5-users",
+      "users": 5,
+      "label": "5 people"
+    },
+    {
+      "slug": "10-users",
+      "users": 10,
+      "label": "10 people"
+    },
+    {
+      "slug": "25-users",
+      "users": 25,
+      "label": "25 people"
+    },
+    {
+      "slug": "50-users",
+      "users": 50,
+      "label": "50 people"
+    },
+    {
+      "slug": "100-users",
+      "users": 100,
+      "label": "100 people"
+    },
+    {
+      "slug": "250-users",
+      "users": 250,
+      "label": "250 people"
+    }
+  ],
+  "affiliate": {
+    "enabled": false,
+    "disclosure": "Some hosting links on this page are affiliate links. They never change the computed costs, the ranking, or which provider comes out cheapest. The sizing model and the price sources are published in full.",
+    "providers": {
+      "digitalocean": {
+        "template": "https://www.digitalocean.com/?refcode={id}",
+        "id": ""
+      },
+      "vultr": {
+        "template": "https://www.vultr.com/?ref={id}",
+        "id": ""
+      },
+      "hetzner": {
+        "template": "https://hetzner.cloud/?ref={id}",
+        "id": ""
+      },
+      "kamatera": {
+        "template": "https://www.kamatera.com/?ref={id}",
+        "id": ""
+      },
+      "pikapods": {
+        "template": "https://www.pikapods.com/?ref={id}",
+        "id": ""
+      },
+      "hostinger": {
+        "template": "https://www.hostinger.com/vps-hosting?ref={id}",
+        "id": ""
+      }
+    }
+  },
+  "lead_capture": {
+    "enabled": false,
+    "provider": "tally",
+    "form_id": "",
+    "headline": "Get the migration checklist for this tool",
+    "subhead": "A one-page pre-flight list: data export path, sizing, backup plan, and the rollback step most people skip.",
+    "cta": "Send me the checklist"
+  },
+  "analytics": {
+    "provider": "none",
+    "site_id": "",
+    "script_url": ""
+  }
+}

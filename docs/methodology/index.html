@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methodology: how every cost figure here is calculated</title>
+<meta name="description" content="The sizing model, the labour assumptions, the exact price sources with dates, and everything this cost model deliberately leaves out.">
+<link rel="canonical" href="https://zoltame.github.io/selfhostcost/methodology/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SelfHostCost">
+<meta property="og:title" content="Methodology: how every cost figure here is calculated">
+<meta property="og:description" content="The sizing model, the labour assumptions, the exact price sources with dates, and everything this cost model deliberately leaves out.">
+<meta property="og:url" content="https://zoltame.github.io/selfhostcost/methodology/">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="/selfhostcost/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/selfhostcost/assets/css/main.css">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://zoltame.github.io/selfhostcost/"}, {"@type": "ListItem", "position": 2, "name": "Methodology", "item": "https://zoltame.github.io/selfhostcost/methodology/"}]}, {"@type": "Article", "headline": "Methodology: how every cost figure here is calculated", "description": "The sizing model, the labour assumptions, the exact price sources with dates, and everything this cost model deliberately leaves out.", "url": "https://zoltame.github.io/selfhostcost/methodology/", "datePublished": "2026-09-14", "dateModified": "2026-09-14", "isAccessibleForFree": true, "author": {"@type": "Organization", "name": "SelfHostCost", "url": "https://zoltame.github.io/selfhostcost/"}, "publisher": {"@type": "Organization", "name": "SelfHostCost", "url": "https://zoltame.github.io/selfhostcost/"}}]}</script></head>
+<body>
+
+<header class="masthead">
+  <div class="shell">
+    <a class="wordmark" href="/selfhostcost/">Self<span>Host</span>Cost</a>
+    <nav>
+      <a href="/selfhostcost/compare/">Comparisons</a>
+      <a href="/selfhostcost/self-host/">Tools</a>
+      <a href="/selfhostcost/hosting/">Hosting</a>
+      <a href="/selfhostcost/methodology/">Methodology</a>
+    </nav>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/selfhostcost/">Home</a><span>/</span>Methodology</nav>
+</div>
+
+<main class="shell">
+<div class="prose">
+
+<h1>Methodology: how every figure on this site is produced</h1>
+
+<p class="lead">
+  This page exists so you can check our arithmetic, disagree with our assumptions, and see exactly which
+  prices we have confirmed and which we have not. If a number on this site cannot be traced back to
+  something here, it is a bug.
+</p>
+
+<h2>The shape of the problem</h2>
+<p>
+  Per-seat software has no floor and a steep slope. A server has a high floor and almost no slope. Every
+  comparison here is the point where those two lines cross, which is why the honest answer is never
+  "self-hosting is cheaper" but "cheaper above roughly this many people, assuming your time is worth
+  roughly this much".
+</p>
+
+<h2>Sizing a self-hosted tool</h2>
+<p>For a tool and a team size, the required memory is:</p>
+<pre><code>memory = (base_ram + ram_per_user &times; users) &times; 1.25</code></pre>
+<p>and the required disk is:</p>
+<pre><code>disk = base_disk + disk_per_user &times; users</code></pre>
+<ul>
+  <li><strong>base_ram</strong> covers the entire stack at rest, including the database and every sidecar
+      container the project ships in its own reference Compose file. It is not the application process alone.</li>
+  <li><strong>The 25% headroom</strong> is deliberate. A box sized exactly to its
+      working set is a box that dies during an upgrade.</li>
+  <li><strong>vCPU</strong> is carried through from the project's baseline and is <em>not</em> scaled with team
+      size. For these workloads memory runs out first. This is a simplification and we would rather name it
+      than hide it.</li>
+</ul>
+<p>
+  Where a project publishes a minimum or recommended specification, the base figures come from that and the
+  page says so. Where it does not, the base figures are derived from the services in its reference Compose
+  stack and the page labels them an estimate. <strong>The per-user increments are always ours.</strong> They
+  are set generously rather than optimistically, because undersizing the server flatters self-hosting and
+  we would rather the bias ran the other way.
+</p>
+
+<h2>Picking the server</h2>
+<p>
+  We take the cheapest plan, among providers whose prices we have read ourselves, whose memory and disk both
+  meet or exceed the requirement. No partial fits, and no pretending a tool will squeeze onto a plan that is
+  a gigabyte short.
+</p>
+<p>
+  <strong>We only trust 1 provider today.</strong>
+  That is a real limitation. Several hosts render their prices client-side or gate them behind a region
+  selector, and we do not publish a price we could not read.
+  The most important consequence: Hetzner Cloud, Vultr, PikaPods are absent from every calculation, and Hetzner in particular is usually cheaper per gigabyte of memory than what we quote. Treat our server costs as an upper bound.
+</p>
+<div class="tablewrap"><table>
+<thead><tr><th>Provider</th><th>Plans priced</th><th>Source</th><th>Read on</th></tr></thead>
+<tbody>
+<tr><td>DigitalOcean</td><td>9 plans</td><td><a href="https://www.digitalocean.com/pricing/droplets" rel="nofollow noopener">vendor page</a></td><td>2026-09-12</td></tr>
+</tbody></table></div>
+
+<h2>The three costs of running it yourself</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Line</th><th>How it is set</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>Server</td><td>The plan chosen above, at list price</td><td>No committed-use or annual discounts are assumed.</td></tr>
+<tr><td>Backups</td><td>20% of the server price</td>
+    <td>Roughly what provider snapshots cost. Treating backups as optional would make every figure on this site meaningless.</td></tr>
+<tr><td>Your time</td>
+    <td>0.5 to 3 hours a month by difficulty, at $75 an hour</td>
+    <td>This is usually the largest line, and leaving it out is the single most common way these comparisons mislead.</td></tr>
+<tr><td>Setup, once</td>
+    <td>2 to 16 hours by difficulty, at $75 an hour</td>
+    <td>Amortised against the monthly saving to give the break-even point.</td></tr>
+</tbody></table></div>
+
+<h3>Difficulty, and what it implies</h3>
+<div class="tablewrap"><table>
+<thead><tr><th>Rating</th><th>Meaning</th><th>Setup</th><th>Per month</th></tr></thead>
+<tbody>
+<tr><td>easy</td><td>One container, no external dependencies, nothing to do beyond keeping the image current</td>
+    <td>2 h</td><td>0.5 h</td></tr>
+<tr><td>medium</td><td>Multi-container stack with a database you are responsible for backing up</td>
+    <td>6 h</td><td>1.5 h</td></tr>
+<tr><td>hard</td><td>Several stateful services, a non-trivial upgrade path, and a real risk of data loss if you rush it</td>
+    <td>16 h</td><td>3 h</td></tr>
+</tbody></table></div>
+
+<h3>If your time is free</h3>
+<p>
+  Every page also shows the figure without labour. Both numbers are real. Which one applies to you depends
+  on whether those hours would otherwise have been billable, or whether you would have spent the evening on
+  it for fun anyway. We lead with labour included because that is the number a business should plan against.
+</p>
+
+<h2>Pricing the commercial side</h2>
+<p>
+  We compare against <strong>the cheapest tier a team would realistically land on</strong>, not the cheapest
+  tier that exists. Quoting a vendor's entry plan, with its response caps and missing features, against a
+  full self-hosted deployment would be dishonest, and it is how most comparison pages arrive at their
+  conclusions. The tier used is named on every page.
+</p>
+<p>
+  Seat minimums are honoured. Where a vendor bills something other than seats, such as tasks executed,
+  monthly active users, or subscriber count, the page says so explicitly rather than pretending team size is
+  the right axis. Where a vendor's free tier already covers the team in question, the page says that too,
+  and makes no savings claim.
+</p>
+
+<h3>Prices we have confirmed</h3>
+<p>Read directly from the vendor's own pricing page on the date shown:</p>
+<div class="tablewrap"><table>
+<thead><tr><th>Product</th><th>Tier compared</th><th>Source</th><th>Read on</th></tr></thead>
+<tbody>
+<tr><td>1Password</td><td>Business</td><td><a href="https://1password.com/business-pricing" rel="nofollow noopener">vendor page</a></td><td>2026-09-12</td></tr>
+<tr><td>Atlassian Statuspage</td><td>Startup</td><td><a href="https://www.atlassian.com/software/statuspage/pricing" rel="nofollow noopener">vendor page</a></td><td>2026-09-12</td></tr>
+<tr><td>Auth0</td><td>Essentials (B2B)</td><td><a href="https://auth0.com/pricing" rel="nofollow noopener">vendor page</a></td><td>2026-09-12</td></tr>
+<tr><td>Google Analytics 4</td><td>Free</td><td><a href="https://marketingplatform.google.com/about/analytics/compare/" rel="nofollow noopener">vendor page</a></td><td>2026-09-12</td></tr>
+<tr><td>Notion</td><td>Business</td><td><a href="https://www.notion.com/pricing" rel="nofollow noopener">vendor page</a></td><td>2026-09-12</td></tr>
+<tr><td>Typeform</td><td>Plus</td><td><a href="https://www.typeform.com/pricing/" rel="nofollow noopener">vendor page</a></td><td>2026-09-12</td></tr>
+<tr><td>Zapier</td><td>Professional</td><td><a href="https://zapier.com/pricing" rel="nofollow noopener">vendor page</a></td><td>2026-09-12</td></tr>
+<tr><td>Zendesk</td><td>Suite Team</td><td><a href="https://www.zendesk.com/pricing/" rel="nofollow noopener">vendor page</a></td><td>2026-09-12</td></tr>
+</tbody></table></div>
+
+<h3>Prices we have not confirmed</h3>
+<p>
+  36 products in our dataset have no confirmed price.
+  Because strict mode is on, <strong>no page that would depend on one of them has been published</strong>.
+  They are: Amplitude, Asana, Better Stack Uptime, Bitwarden, Calendly, Clerk, Confluence, Datadog, DocuSign, Dropbox Business, Fathom Analytics, Freshdesk, Google One storage, Google Workspace, Help Scout, HubSpot Sales Hub, Intercom, Jira, LastPass, Linear, Looker Studio Pro, Mailchimp, Make, Mixpanel, Mode, monday.com, Okta Workforce Identity, Pingdom, Pipedrive, Retool, Salesforce Sales Cloud, Sentry, Slack, SurveyMonkey, Tableau, Trello.
+</p>
+
+<h3>Currency</h3>
+<p>
+  Some vendors served their pricing page in euros. Those figures are converted at a single dated rate,
+  <strong>1 EUR = 1.1592 USD</strong>, the
+  <a href="https://api.frankfurter.dev/v1/latest?from=EUR&to=USD" rel="nofollow noopener">Frankfurter, European Central Bank reference rates</a> rate for
+  2026-09-11. Any page using it says so and links here.
+</p>
+
+<h2>The horizon and the break-even</h2>
+<p>
+  Totals run over <strong>36 months</strong>. The break-even point is the setup cost divided by the
+  monthly saving:
+</p>
+<pre><code>break_even_months = setup_cost / (saas_monthly - selfhosted_monthly)</code></pre>
+<p>
+  When the monthly saving is zero or negative there is no break-even, and the page says "never" rather than
+  quietly omitting the row.
+</p>
+
+<h2>What this model deliberately ignores</h2>
+<ul>
+  <li><strong>Migration effort.</strong> Getting your existing data out of the incumbent and into the
+      replacement is real work and is not counted anywhere. For a large historical dataset it can dwarf the
+      setup figure.</li>
+  <li><strong>Feature parity.</strong> The tools are near-substitutes, not identical. Cost is one axis and
+      often not the deciding one.</li>
+  <li><strong>Risk.</strong> A bad upgrade, a lost database, or a weekend spent on an outage has an expected
+      cost that a spreadsheet cannot capture honestly.</li>
+  <li><strong>Bandwidth overages, managed databases and object storage</strong> beyond what the chosen plan
+      includes. A few tools genuinely need external object storage and their pages name it, but it is not
+      priced in.</li>
+  <li><strong>Annual and committed-use discounts</strong> on the hosting side. Both sides are quoted at the
+      basis the vendor's page displayed, and the page states which that was.</li>
+  <li><strong>Your existing infrastructure.</strong> If you already run a server with spare memory, the
+      marginal cost of one more container is close to zero and none of these figures apply to you.</li>
+</ul>
+
+<h2>How stale is this page</h2>
+<p>
+  Prices are a snapshot with a date attached, not a live feed. Every figure links to the page it came from,
+  and the vendor's page is the authority. A price older than about 45 days should be treated as indicative
+  and re-checked before anyone spends money on the strength of it.
+</p>
+<p>
+  Currently: 24 comparison pages published, wave 1, reference team size 10 people,
+  strict price checking on.
+</p>
+
+</div>
+</main>
+
+<footer class="sitefoot">
+  <div class="shell">
+    <div class="footgrid">
+      <div>
+        <h4>SelfHostCost</h4>
+        <p style="margin:0 0 .6em">What self-hosting actually costs, per tool, per team size.</p>
+        <p style="margin:0"><a href="/selfhostcost/methodology/">How every figure is calculated</a></p>
+      </div>
+      <div>
+        <h4>Browse</h4>
+        <ul>
+          <li><a href="/selfhostcost/compare/">All comparisons</a></li>
+          <li><a href="/selfhostcost/self-host/">All tools</a></li>
+          <li><a href="/selfhostcost/hosting/">Hosting providers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Categories</h4>
+        <ul>
+<li><a href="/selfhostcost/category/password-manager/">Password managers</a></li><li><a href="/selfhostcost/category/analytics/">Web analytics</a></li><li><a href="/selfhostcost/category/automation/">Workflow automation</a></li><li><a href="/selfhostcost/category/docs-wiki/">Docs and wikis</a></li><li><a href="/selfhostcost/category/project-management/">Project management</a></li><li><a href="/selfhostcost/category/helpdesk/">Helpdesk and support inbox</a></li>        </ul>
+      </div>
+      <div>
+        <h4>About</h4>
+        <ul>
+          <li><a href="/selfhostcost/methodology/">Methodology</a></li>
+          <li><a href="/selfhostcost/disclosure/">Affiliate disclosure</a></li>
+          <li><a href="/selfhostcost/privacy/">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin:30px 0 0">
+      Prices are read from vendor pricing pages on the dates shown on each page and are not
+      updated continuously. Check the vendor before you buy. Nothing here is financial advice.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
