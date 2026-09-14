@@ -3,11 +3,11 @@
   "wave": 1,
   "strict_prices": true,
   "reference_users": 10,
-  "pages": 294,
+  "pages": 295,
   "comparisons": 24,
   "tools_live": 30,
   "affiliate_links_active": true,
-  "lead_capture_active": false,
+  "lead_capture_active": true,
   "priced_providers": [
     "digitalocean"
   ],
@@ -530,6 +530,7 @@
     "/hosting/pikapods/",
     "/hosting/vultr/",
     "/methodology/",
+    "/migration-checklist/",
     "/privacy/",
     "/self-host/",
     "/self-host/activepieces/",

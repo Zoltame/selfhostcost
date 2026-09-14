@@ -110,9 +110,11 @@
     }
   },
   "lead_capture": {
-    "enabled": false,
+    "enabled": true,
     "provider": "tally",
-    "form_id": "",
+    "form_id": "68g9vJ",
+    "form_url": "https://tally.so/r/68g9vJ",
+    "activated_on": "2026-09-14",
     "headline": "Get the migration checklist for this tool",
     "subhead": "A one-page pre-flight list: data export path, sizing, backup plan, and the rollback step most people skip.",
     "cta": "Send me the checklist"

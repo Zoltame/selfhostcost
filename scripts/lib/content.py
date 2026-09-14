@@ -15,10 +15,124 @@ from .model import Dataset, money, priced_providers
 def static_pages(ds: Dataset, wave: int, strict: bool, built, pairs):
     return [
         _about(ds, built),
+        _checklist(ds),
         _methodology(ds, wave, strict, built),
         _disclosure(ds),
         _privacy(ds),
     ]
+
+
+def _checklist(ds: Dataset) -> tuple[str, str, str, str]:
+    cfg = ds.config
+    bp = cfg["base_path"]
+    m = cfg["tco_model"]
+    body = f"""
+<h1>Self-hosting migration checklist</h1>
+
+<p class="lead">
+  A one-page pre-flight list for moving a team off a paid tool and onto a self-hosted one. It covers the
+  steps that decide whether the move is boring or a disaster: the data export, the sizing, the backups, and
+  the rollback plan that most people skip.
+</p>
+
+<div class="note caution">
+  <p><strong>Do not cancel the subscription until the last section is done.</strong> Run both side by side
+  until you have restored a backup and your team has used the new tool for real work.</p>
+</div>
+
+<h2>1. Before you install anything</h2>
+<ul>
+  <li><strong>Export a real copy of your data from the current tool, today.</strong> Not a test account: your
+      actual workspace. Some exports are partial, rate-limited or only available on higher tiers. Find out now,
+      not on the day your contract ends.</li>
+  <li><strong>Open the export and check what is missing.</strong> Attachments, comments, history, user
+      mentions and permissions are the usual casualties.</li>
+  <li><strong>Confirm the replacement can import that format.</strong> If it cannot, budget the time to
+      convert it. This cost is not in any figure on this site.</li>
+  <li><strong>List the integrations you rely on.</strong> SSO, chat notifications, webhooks, calendar sync.
+      Check each one exists for the self-hosted tool.</li>
+  <li><strong>Check the licence.</strong> Several popular tools are source-available rather than open source,
+      with limits on commercial use. Each tool page on this site flags it.</li>
+  <li><strong>Name one owner.</strong> Self-hosted software without a named person responsible for updates is
+      the most common way these projects fail.</li>
+</ul>
+
+<h2>2. Sizing and setup</h2>
+<ul>
+  <li><strong>Size the server from the tool's cost page for your team size</strong>, and keep the
+      {int(m['ram_headroom_ratio'] * 100)}% memory headroom. A server sized exactly to its working set tends to
+      fall over during its first upgrade.</li>
+  <li><strong>Use the project's own Docker Compose file</strong> rather than a third-party one, and pin the
+      image version instead of using <code>latest</code>.</li>
+  <li><strong>Put it behind HTTPS on its own subdomain</strong> from day one. Changing the URL later breaks
+      links, OAuth callbacks and mobile clients.</li>
+  <li><strong>Configure outbound email</strong> through a transactional provider. Password resets and
+      notifications silently fail without it, and most tools will not warn you.</li>
+  <li><strong>Close every port except 80 and 443</strong>, and never expose the database directly.</li>
+  <li><strong>Turn on SSO or at least enforced two-factor authentication</strong> before inviting anyone.</li>
+</ul>
+
+<h2>3. Backups, tested</h2>
+<ul>
+  <li><strong>Back up both the database and the uploaded files.</strong> A database dump without the uploads
+      directory restores a tool full of broken attachments.</li>
+  <li><strong>Keep at least one copy off the server</strong>, with a provider or region different from the
+      server itself.</li>
+  <li><strong>Automate it, and alert when it fails.</strong> A backup job that stopped three weeks ago is the
+      normal way people discover they had no backup.</li>
+  <li><strong>Restore it onto a fresh server before go-live.</strong> Time how long it takes. That number is
+      your real recovery time, and until you have it you do not have backups, only files.</li>
+</ul>
+
+<h2>4. Cutover</h2>
+<ul>
+  <li><strong>Pick a quiet day and announce a content freeze</strong> on the old tool for the migration
+      window.</li>
+  <li><strong>Take a final export after the freeze</strong>, import it, and spot-check a sample of records,
+      attachments and permissions against the old tool.</li>
+  <li><strong>Move a small group first</strong> for a week of real work before moving everyone.</li>
+  <li><strong>Redirect or bookmark</strong> the new URL everywhere the old one was linked: docs, chat,
+      browser bookmarks, mobile apps.</li>
+</ul>
+
+<h2>5. The rollback plan most people skip</h2>
+<ul>
+  <li><strong>Write down, before cutover, what would make you go back.</strong> Data loss, a missing feature
+      the team cannot work without, or repeated outages. Decide the threshold while you are calm.</li>
+  <li><strong>Keep the old subscription for one more billing cycle</strong> after go-live, even though it
+      feels wasteful. It is the cheapest insurance you will buy.</li>
+  <li><strong>Know how to export back out of the new tool</strong> into something the old one can read.</li>
+  <li><strong>Only cancel the old subscription once</strong> a restore test has passed, the full team has
+      used the new tool for real work, and nobody has asked for the old one back.</li>
+</ul>
+
+<h2>6. After go-live</h2>
+<ul>
+  <li><strong>Put updates in the calendar.</strong> This site budgets
+      {m['maintenance_hours_per_month_by_difficulty']['easy']} to
+      {m['maintenance_hours_per_month_by_difficulty']['hard']} hours a month depending on the tool. If it is
+      not scheduled, it does not happen.</li>
+  <li><strong>Read release notes before upgrading</strong>, especially for major versions with database
+      migrations.</li>
+  <li><strong>Add uptime monitoring</strong> so you hear about an outage before your team does.</li>
+  <li><strong>Repeat the restore test</strong> every few months.</li>
+</ul>
+
+<h2>Before you start</h2>
+<p>
+  If you have not priced the move yet, check whether self-hosting actually saves money at your team size.
+  For some tools it does not, once the hours above are counted.
+  <a href="{bp}/compare/">See every comparison</a> or <a href="{bp}/methodology/">read how the costs are
+  calculated</a>.
+</p>
+"""
+    return (
+        "migration-checklist",
+        "Self-hosting migration checklist: before you cancel the subscription",
+        "A practical checklist for moving from a paid tool to a self-hosted one: data export, sizing, tested "
+        "backups, cutover and the rollback plan most teams skip.",
+        body,
+    )
 
 
 def _about(ds: Dataset, built) -> tuple[str, str, str, str]:
