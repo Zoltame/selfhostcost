@@ -3,7 +3,7 @@
   "wave": 1,
   "strict_prices": true,
   "reference_users": 10,
-  "pages": 293,
+  "pages": 294,
   "comparisons": 24,
   "tools_live": 30,
   "affiliate_links_active": true,
@@ -293,6 +293,7 @@
   ],
   "urls": [
     "/",
+    "/about/",
     "/alternatives/1password/",
     "/alternatives/auth0/",
     "/alternatives/google-analytics/",

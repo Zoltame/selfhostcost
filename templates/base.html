@@ -80,6 +80,8 @@
       <div>
         <h4>About</h4>
         <ul>
+          <li><a href="{{ base }}/about/">About and contact</a></li>
+          {% if cfg.contact_email %}<li><a href="mailto:{{ cfg.contact_email }}">{{ cfg.contact_email }}</a></li>{% endif %}
           <li><a href="{{ base }}/methodology/">Methodology</a></li>
           <li><a href="{{ base }}/disclosure/">Affiliate disclosure</a></li>
           <li><a href="{{ base }}/privacy/">Privacy</a></li>

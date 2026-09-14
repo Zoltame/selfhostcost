@@ -14,10 +14,93 @@ from .model import Dataset, money, priced_providers
 
 def static_pages(ds: Dataset, wave: int, strict: bool, built, pairs):
     return [
+        _about(ds, built),
         _methodology(ds, wave, strict, built),
         _disclosure(ds),
         _privacy(ds),
     ]
+
+
+def _about(ds: Dataset, built) -> tuple[str, str, str, str]:
+    cfg = ds.config
+    email = cfg.get("contact_email", "")
+    repo = f"https://github.com/{cfg['github_owner']}/{cfg['repo']}"
+    aff = cfg.get("affiliate", {})
+    referral_on = bool(aff.get("enabled")) and any(p.get("id") for p in aff.get("providers", {}).values())
+    verified = [s for s in ds.saas.values() if s.get("price_status") == "verified"]
+
+    money_line = (
+        "The only financial relationship this site has with anyone it mentions is DigitalOcean's standard "
+        "referral link, which earns hosting account credit when someone signs up through it and pays their "
+        f"first $25. It is marked on every page that carries it and described in full on the "
+        f"<a href=\"{cfg['base_path']}/disclosure/\">disclosure page</a>."
+        if referral_on else
+        "The site currently has no affiliate or referral links and earns nothing. If that changes, the "
+        f"<a href=\"{cfg['base_path']}/disclosure/\">disclosure page</a> changes the same day."
+    )
+
+    body = f"""
+<h1>About SelfHostCost</h1>
+
+<p class="lead">
+  SelfHostCost answers one question, tool by tool and team size by team size: is running an open-source
+  alternative yourself actually cheaper than paying for the software, once the server, the backups and
+  your own hours are counted?
+</p>
+
+<h2>Why it exists</h2>
+<p>
+  Most "self-hosted alternative" lists stop at the licence price, which makes self-hosting look free. Most
+  vendor comparison pages stop at features, which makes the subscription look inevitable. Neither prices the
+  thing that decides it: a server has a high floor and almost no slope, a seat has no floor and a steep one.
+  This site computes where those two lines cross, and publishes the answer even when it is "keep paying".
+</p>
+
+<h2>Who runs it</h2>
+<p>
+  SelfHostCost is an independent project, launched on {cfg.get('launched_on', '')}. It is not owned or funded
+  by any software vendor, hosting provider or open-source project that appears on it, and nobody pays to be
+  listed, ranked or described in a particular way.
+</p>
+<p>{money_line}</p>
+
+<h2>How it is built, in the open</h2>
+<p>
+  Every page is generated from a dataset and a cost model that are both public. You can read the code, the
+  sizing figures and the dated price records in the
+  <a href="{repo}" rel="noopener">source repository on GitHub</a>, and the reasoning behind every assumption
+  on the <a href="{cfg['base_path']}/methodology/">methodology page</a>.
+</p>
+<p>
+  Today that means {len(built)} published comparisons, built on {len(verified)} vendor prices read directly
+  from vendors' own pricing pages. Comparisons that would depend on a price we have not checked are
+  withheld rather than estimated.
+</p>
+
+<h2>Corrections</h2>
+<p>
+  Prices change and we will sometimes be behind. If a figure is wrong or stale, email the page address and a
+  link to the vendor page showing the current price. We re-read the vendor's page, update the record with the
+  new date, and rebuild. Corrections are never made on the strength of a claim alone, in either direction.
+</p>
+
+<h2>Contact</h2>
+<p>
+  For corrections, suggestions for tools to add, or anything else:
+  <a href="mailto:{email}">{email}</a>. Every message is read.
+</p>
+<p>
+  We do not accept paid placements, sponsored reviews or requests to change a conclusion, so there is no
+  need to ask.
+</p>
+"""
+    return (
+        "about",
+        "About SelfHostCost and how to contact us",
+        "Who runs SelfHostCost, how it is funded, how the data is kept honest, how to report a stale price, and "
+        "how to get in touch.",
+        body,
+    )
 
 
 def _methodology(ds: Dataset, wave: int, strict: bool, built) -> tuple[str, str, str, str]:
@@ -330,6 +413,14 @@ def _privacy(ds: Dataset) -> tuple[str, str, str, str]:
 
 <h2>Forms</h2>
 {lead}
+
+<h2>Email</h2>
+<p>
+  If you write to {cfg.get('contact_email', 'us')}, your address and message are used only to reply to you
+  and, where it is a correction, to check the figure you reported. They are not added to any list, sold, or
+  shared with any vendor or hosting provider. The mailbox is a standard Gmail account, so Google processes
+  those messages under its own terms.
+</p>
 
 <h2>Outbound links</h2>
 <p>
