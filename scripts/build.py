@@ -217,10 +217,23 @@ class Builder:
             per, flat, cur = tier_native(tier)
             if product["billing_model"] == "free":
                 price_label = "free at the standard tier"
+            elif tier.get("seat_bands"):
+                parts = []
+                for band in tier["seat_bands"]:
+                    b_per, _, b_cur = tier_native(band)
+                    cap = band.get("max_seats")
+                    parts.append(f"{b_cur} {b_per:,.2f} per seat" + (f" up to {cap} users" if cap else " above that"))
+                price_label = ", ".join(parts) + ", per month"
             elif per is not None:
                 price_label = f"{cur} {per:,.2f} per seat per month"
-            else:
+            elif flat is not None:
                 price_label = f"{cur} {flat:,.2f} per month"
+            else:
+                price_label = "see the vendor pricing page"
+            if tier.get("min_month") is not None:
+                price_label += f", with a minimum of {cur} {float(tier['min_month']):,.2f} per month"
+            if product.get("free_up_to_seats"):
+                price_label += f"; free for up to {product['free_up_to_seats']} users"
 
             page = {
                 "title": f"{product['name']} vs self-hosted {tool['name']}: real cost at {self.ref_size['label']} ({date.today().year})",
@@ -258,6 +271,10 @@ class Builder:
         for saas_slug, tools in by_saas.items():
             product = self.ds.saas[saas_slug]
             cat = self.ds.categories[product["category"]]
+            if cat["wave"] > self.wave:
+                # The product's own category is not published yet; file the page
+                # under the category of the tools that replace it instead.
+                cat = self.ds.categories[tools[0]["category"]]
             url = f"/alternatives/{saas_slug}/"
             alts = []
             for tool in tools:

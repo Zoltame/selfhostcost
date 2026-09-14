@@ -2,7 +2,7 @@
 <div class="verdict {% if ref.verdict == 'saas_cheaper' %}is-saas{% elif ref.verdict != 'selfhost_cheaper' %}is-wash{% endif %}">
   <p class="lede">
   {%- if ref.is_free_saas %}
-    <b>There is no bill to beat here.</b> {{ saas.name }} costs nothing at its standard tier, so running
+    <b>There is no bill to beat here.</b> {{ saas.name }} costs nothing at {{ ref.label }}, so running
     {{ tool.name }} yourself costs you <b>{{ money(ref.selfhost_usd_month) }} a month</b> more, not less.
     The reason to do it is who holds the data, not what it costs.
   {%- elif ref.verdict == 'selfhost_cheaper' %}

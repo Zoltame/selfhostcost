@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Self-hosted Mixpanel alternatives, with real costs (2026)</title>
+<meta name="description" content="3 open-source alternatives to Mixpanel, each priced at 10 people including the server, backups and maintenance time. Mixpanel costs $0.00 a month at that size.">
+<link rel="canonical" href="https://zoltame.github.io/selfhostcost/alternatives/mixpanel/">
+<meta name="google-site-verification" content="L_8gw5Ec2vvygFsccJR5tNjKHOaNPsnJUrGROVoP_Js">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="SelfHostCost">
+<meta property="og:title" content="Self-hosted Mixpanel alternatives, with real costs (2026)">
+<meta property="og:description" content="3 open-source alternatives to Mixpanel, each priced at 10 people including the server, backups and maintenance time. Mixpanel costs $0.00 a month at that size.">
+<meta property="og:url" content="https://zoltame.github.io/selfhostcost/alternatives/mixpanel/">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="/selfhostcost/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/selfhostcost/assets/css/main.css">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://zoltame.github.io/selfhostcost/"}, {"@type": "ListItem", "position": 2, "name": "Web analytics", "item": "https://zoltame.github.io/selfhostcost/category/analytics/"}, {"@type": "ListItem", "position": 3, "name": "Mixpanel alternatives", "item": "https://zoltame.github.io/selfhostcost/alternatives/mixpanel/"}]}, {"@type": "Article", "headline": "Self-hosted Mixpanel alternatives, with real costs (2026)", "description": "3 open-source alternatives to Mixpanel, each priced at 10 people including the server, backups and maintenance time. Mixpanel costs $0.00 a month at that size.", "url": "https://zoltame.github.io/selfhostcost/alternatives/mixpanel/", "datePublished": "2026-09-14", "dateModified": "2026-09-14", "isAccessibleForFree": true, "author": {"@type": "Organization", "name": "SelfHostCost", "url": "https://zoltame.github.io/selfhostcost/"}, "publisher": {"@type": "Organization", "name": "SelfHostCost", "url": "https://zoltame.github.io/selfhostcost/"}}]}</script></head>
+<body>
+
+<header class="masthead">
+  <div class="shell">
+    <a class="wordmark" href="/selfhostcost/">Self<span>Host</span>Cost</a>
+    <nav>
+      <a href="/selfhostcost/compare/">Comparisons</a>
+      <a href="/selfhostcost/self-host/">Tools</a>
+      <a href="/selfhostcost/hosting/">Hosting</a>
+      <a href="/selfhostcost/methodology/">Methodology</a>
+    </nav>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/selfhostcost/">Home</a><span>/</span><a href="/selfhostcost/category/analytics/">Web analytics</a><span>/</span>Mixpanel alternatives</nav>
+</div>
+
+<main class="shell">
+
+<p class="kicker">Web analytics</p>
+<h1>Self-hosted alternatives to Mixpanel, priced</h1>
+
+<p class="lead">
+  3 open-source tools that can replace
+  Mixpanel, each shown with what it would actually cost to run for a team of
+  10 people. Mixpanel on the Free tier costs
+  $0.00 a month at that size.
+</p>
+
+<div class="note caution">
+  <h3>Start here</h3>
+  <p>Mixpanel&#39;s free plan covers up to 1 million events a month, with no seat charge. Below that volume there is no licence cost to save, so this comparison is about who holds the data rather than what it costs.</p>
+</div>
+
+<div class="tablewrap">
+<table>
+  <caption>Monthly cost at 10 people. Self-hosted totals include the server, backups and 75-dollar-an-hour maintenance time.</caption>
+  <thead>
+    <tr>
+      <th>Tool</th>
+      <th class="num">Server only</th>
+      <th class="num">With your time</th>
+      <th class="num">vs Mixpanel</th>
+      <th>Operational weight</th>
+      <th>Licence</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/vs/mixpanel-vs-plausible/">Plausible Analytics</a></th>
+      <td class="num">$28.80</td>
+      <td class="num">$141</td>
+      <td class="num neg">
+        -$5,537
+      </td>
+      <td>medium</td>
+      <td>AGPL-3.0</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/vs/mixpanel-vs-matomo/">Matomo</a></th>
+      <td class="num">$28.80</td>
+      <td class="num">$141</td>
+      <td class="num neg">
+        -$5,537
+      </td>
+      <td>medium</td>
+      <td>GPL-3.0</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/vs/mixpanel-vs-posthog/">PostHog</a></th>
+      <td class="num">$115</td>
+      <td class="num">$340</td>
+      <td class="num neg">
+        -$13,447
+      </td>
+      <td>hard</td>
+      <td>source-available</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p class="srcline">The final column is the 36-month difference: positive means self-hosting is cheaper.</p>
+
+<h2>Which one to pick</h2>
+<h3>Plausible Analytics <span class="badge">29,036 stars</span></h3>
+<p>Ships as Elixir plus ClickHouse plus PostgreSQL. ClickHouse sets the memory floor, so this stack does not usefully shrink below 2 GB. Disk scales with pageviews rather than with seats.</p>
+<p>
+  At 10 people it needs 2.6 GB of memory and 21 GB of disk,
+  which fits the Basic 4 GiB at DigitalOcean for
+  $24.00 a month. Setting it up is roughly 6 hours of work,
+  then 1.5 hours a month to keep it healthy.
+</p>
+<p><a href="/selfhostcost/vs/mixpanel-vs-plausible/">Full Mixpanel versus Plausible Analytics breakdown</a>
+   &middot; <a href="/selfhostcost/self-host/plausible/">Plausible Analytics at every team size</a></p>
+<h3>Matomo <span class="badge">21,859 stars</span></h3>
+<p>The most feature-complete option and the heaviest. Report archiving is the expensive part and wants a cron job with real memory behind it.</p>
+<p>
+  At 10 people it needs 2.6 GB of memory and 26 GB of disk,
+  which fits the Basic 4 GiB at DigitalOcean for
+  $24.00 a month. Setting it up is roughly 6 hours of work,
+  then 1.5 hours a month to keep it healthy.
+</p>
+<p><a href="/selfhostcost/vs/mixpanel-vs-matomo/">Full Mixpanel versus Matomo breakdown</a>
+   &middot; <a href="/selfhostcost/self-host/matomo/">Matomo at every team size</a></p>
+<h3>PostHog <span class="badge">39,757 stars</span></h3>
+<p>Kafka, ClickHouse, PostgreSQL, Redis and several workers. PostHog itself now discourages self-hosting below a substantial scale, and the sizing here reflects that honestly.</p>
+<p>
+  At 10 people it needs 10.2 GB of memory and 62 GB of disk,
+  which fits the Basic 16 GiB at DigitalOcean for
+  $96.00 a month. Setting it up is roughly 16 hours of work,
+  then 3 hours a month to keep it healthy.
+</p>
+<p><a href="/selfhostcost/vs/mixpanel-vs-posthog/">Full Mixpanel versus PostHog breakdown</a>
+   &middot; <a href="/selfhostcost/self-host/posthog/">PostHog at every team size</a></p>
+
+<h2>How the pricing was established</h2>
+<p>
+  Mixpanel pricing was read from <a href="https://mixpanel.com/pricing/" rel="nofollow noopener">its own pricing page</a>
+  on 2026-09-14.
+  Server prices come from the providers listed on the <a href="/selfhostcost/hosting/">hosting page</a>.
+  The sizing model and the cost of your time are set out in full on the
+  <a href="/selfhostcost/methodology/">methodology page</a>.
+</p>
+
+<h2>Related</h2>
+<ul class="linkgrid">
+  <li><a href="/selfhostcost/category/analytics/">All web analytics compared</a></li>
+<li><a href="/selfhostcost/alternatives/amplitude/">Alternatives to Amplitude</a></li><li><a href="/selfhostcost/alternatives/fathom/">Alternatives to Fathom Analytics</a></li><li><a href="/selfhostcost/alternatives/google-analytics/">Alternatives to Google Analytics 4</a></li>  <li><a href="/selfhostcost/hosting/">Where to host it</a></li>
+</ul>
+
+</main>
+
+<footer class="sitefoot">
+  <div class="shell">
+    <div class="footgrid">
+      <div>
+        <h4>SelfHostCost</h4>
+        <p style="margin:0 0 .6em">What self-hosting actually costs, per tool, per team size.</p>
+        <p style="margin:0"><a href="/selfhostcost/methodology/">How every figure is calculated</a></p>
+      </div>
+      <div>
+        <h4>Browse</h4>
+        <ul>
+          <li><a href="/selfhostcost/compare/">All comparisons</a></li>
+          <li><a href="/selfhostcost/self-host/">All tools</a></li>
+          <li><a href="/selfhostcost/hosting/">Hosting providers</a></li>
+          <li><a href="/selfhostcost/migration-checklist/">Migration checklist</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Categories</h4>
+        <ul>
+<li><a href="/selfhostcost/category/password-manager/">Password managers</a></li><li><a href="/selfhostcost/category/analytics/">Web analytics</a></li><li><a href="/selfhostcost/category/automation/">Workflow automation</a></li><li><a href="/selfhostcost/category/docs-wiki/">Docs and wikis</a></li><li><a href="/selfhostcost/category/project-management/">Project management</a></li><li><a href="/selfhostcost/category/helpdesk/">Helpdesk and support inbox</a></li>        </ul>
+      </div>
+      <div>
+        <h4>About</h4>
+        <ul>
+          <li><a href="/selfhostcost/about/">About and contact</a></li>
+<li><a href="mailto:selfhostcost.contact@gmail.com">selfhostcost.contact@gmail.com</a></li>          <li><a href="/selfhostcost/methodology/">Methodology</a></li>
+          <li><a href="/selfhostcost/disclosure/">Affiliate disclosure</a></li>
+          <li><a href="/selfhostcost/privacy/">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin:30px 0 0">
+      Prices are read from vendor pricing pages on the dates shown on each page and are not
+      updated continuously. Check the vendor before you buy. Nothing here is financial advice.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

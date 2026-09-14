@@ -5,7 +5,7 @@
 <h1>{{ provider.name }} for self-hosting: plans and what fits on them</h1>
 
 <p class="lead">
-  {{ provider.name }} is based in {{ provider.hq }}.
+  {% if provider.hq %}{{ provider.name }} is based in {{ provider.hq }}.{% endif %}
   {% if provider.price_status == 'verified' %}
   Plan prices below were read from <a href="{{ provider.pricing_url }}" rel="nofollow noopener">its own pricing page</a>
   on {{ provider.verified_on }} and are what every calculation on this site uses.

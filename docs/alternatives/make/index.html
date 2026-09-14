@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Self-hosted Make alternatives, with real costs (2026)</title>
+<meta name="description" content="2 open-source alternatives to Make, each priced at 10 people including the server, backups and maintenance time. Make costs $10.00 a month at that size.">
+<link rel="canonical" href="https://zoltame.github.io/selfhostcost/alternatives/make/">
+<meta name="google-site-verification" content="L_8gw5Ec2vvygFsccJR5tNjKHOaNPsnJUrGROVoP_Js">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="SelfHostCost">
+<meta property="og:title" content="Self-hosted Make alternatives, with real costs (2026)">
+<meta property="og:description" content="2 open-source alternatives to Make, each priced at 10 people including the server, backups and maintenance time. Make costs $10.00 a month at that size.">
+<meta property="og:url" content="https://zoltame.github.io/selfhostcost/alternatives/make/">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="/selfhostcost/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/selfhostcost/assets/css/main.css">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://zoltame.github.io/selfhostcost/"}, {"@type": "ListItem", "position": 2, "name": "Workflow automation", "item": "https://zoltame.github.io/selfhostcost/category/automation/"}, {"@type": "ListItem", "position": 3, "name": "Make alternatives", "item": "https://zoltame.github.io/selfhostcost/alternatives/make/"}]}, {"@type": "Article", "headline": "Self-hosted Make alternatives, with real costs (2026)", "description": "2 open-source alternatives to Make, each priced at 10 people including the server, backups and maintenance time. Make costs $10.00 a month at that size.", "url": "https://zoltame.github.io/selfhostcost/alternatives/make/", "datePublished": "2026-09-14", "dateModified": "2026-09-14", "isAccessibleForFree": true, "author": {"@type": "Organization", "name": "SelfHostCost", "url": "https://zoltame.github.io/selfhostcost/"}, "publisher": {"@type": "Organization", "name": "SelfHostCost", "url": "https://zoltame.github.io/selfhostcost/"}}]}</script></head>
+<body>
+
+<header class="masthead">
+  <div class="shell">
+    <a class="wordmark" href="/selfhostcost/">Self<span>Host</span>Cost</a>
+    <nav>
+      <a href="/selfhostcost/compare/">Comparisons</a>
+      <a href="/selfhostcost/self-host/">Tools</a>
+      <a href="/selfhostcost/hosting/">Hosting</a>
+      <a href="/selfhostcost/methodology/">Methodology</a>
+    </nav>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/selfhostcost/">Home</a><span>/</span><a href="/selfhostcost/category/automation/">Workflow automation</a><span>/</span>Make alternatives</nav>
+</div>
+
+<main class="shell">
+
+<p class="kicker">Workflow automation</p>
+<h1>Self-hosted alternatives to Make, priced</h1>
+
+<p class="lead">
+  2 open-source tools that can replace
+  Make, each shown with what it would actually cost to run for a team of
+  10 people. Make on the Core tier costs
+  $10.00 a month at that size.
+</p>
+
+
+<div class="tablewrap">
+<table>
+  <caption>Monthly cost at 10 people. Self-hosted totals include the server, backups and 75-dollar-an-hour maintenance time.</caption>
+  <thead>
+    <tr>
+      <th>Tool</th>
+      <th class="num">Server only</th>
+      <th class="num">With your time</th>
+      <th class="num">vs Make</th>
+      <th>Operational weight</th>
+      <th>Licence</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/vs/make-vs-n8n/">n8n</a></th>
+      <td class="num">$14.40</td>
+      <td class="num">$127</td>
+      <td class="num neg">
+        -$4,658
+      </td>
+      <td>medium</td>
+      <td>source-available</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/vs/make-vs-activepieces/">Activepieces</a></th>
+      <td class="num">$28.80</td>
+      <td class="num">$141</td>
+      <td class="num neg">
+        -$5,177
+      </td>
+      <td>medium</td>
+      <td>source-available</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p class="srcline">The final column is the 36-month difference: positive means self-hosting is cheaper.</p>
+
+<h2>Which one to pick</h2>
+<h3>n8n <span class="badge">204,061 stars</span></h3>
+<p>The base figure covers a single main process with SQLite. Heavy workflow volume wants PostgreSQL and queue mode with separate workers, which roughly doubles the floor.</p>
+<p>
+  At 10 people it needs 1.5 GB of memory and 11 GB of disk,
+  which fits the Basic 2 GiB at DigitalOcean for
+  $12.00 a month. Setting it up is roughly 6 hours of work,
+  then 1.5 hours a month to keep it healthy.
+<strong>Licence note:</strong> Source-available under the Sustainable Use Licence, not a classic open-source licence. Internal business use is permitted; reselling n8n as a service is not.</p>
+<p><a href="/selfhostcost/vs/make-vs-n8n/">Full Make versus n8n breakdown</a>
+   &middot; <a href="/selfhostcost/self-host/n8n/">n8n at every team size</a></p>
+<h3>Activepieces <span class="badge">24,409 stars</span></h3>
+<p>Application, PostgreSQL and Redis. Isolated sandboxes for code steps are what push the memory floor above n8n&#39;s.</p>
+<p>
+  At 10 people it needs 2.7 GB of memory and 11 GB of disk,
+  which fits the Basic 4 GiB at DigitalOcean for
+  $24.00 a month. Setting it up is roughly 6 hours of work,
+  then 1.5 hours a month to keep it healthy.
+</p>
+<p><a href="/selfhostcost/vs/make-vs-activepieces/">Full Make versus Activepieces breakdown</a>
+   &middot; <a href="/selfhostcost/self-host/activepieces/">Activepieces at every team size</a></p>
+
+<h2>How the pricing was established</h2>
+<p>
+  Make pricing was read from <a href="https://www.make.com/en/pricing" rel="nofollow noopener">its own pricing page</a>
+  on 2026-09-14.
+  Server prices come from the providers listed on the <a href="/selfhostcost/hosting/">hosting page</a>.
+  The sizing model and the cost of your time are set out in full on the
+  <a href="/selfhostcost/methodology/">methodology page</a>.
+</p>
+
+<h2>Related</h2>
+<ul class="linkgrid">
+  <li><a href="/selfhostcost/category/automation/">All workflow automation compared</a></li>
+<li><a href="/selfhostcost/alternatives/zapier/">Alternatives to Zapier</a></li>  <li><a href="/selfhostcost/hosting/">Where to host it</a></li>
+</ul>
+
+</main>
+
+<footer class="sitefoot">
+  <div class="shell">
+    <div class="footgrid">
+      <div>
+        <h4>SelfHostCost</h4>
+        <p style="margin:0 0 .6em">What self-hosting actually costs, per tool, per team size.</p>
+        <p style="margin:0"><a href="/selfhostcost/methodology/">How every figure is calculated</a></p>
+      </div>
+      <div>
+        <h4>Browse</h4>
+        <ul>
+          <li><a href="/selfhostcost/compare/">All comparisons</a></li>
+          <li><a href="/selfhostcost/self-host/">All tools</a></li>
+          <li><a href="/selfhostcost/hosting/">Hosting providers</a></li>
+          <li><a href="/selfhostcost/migration-checklist/">Migration checklist</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Categories</h4>
+        <ul>
+<li><a href="/selfhostcost/category/password-manager/">Password managers</a></li><li><a href="/selfhostcost/category/analytics/">Web analytics</a></li><li><a href="/selfhostcost/category/automation/">Workflow automation</a></li><li><a href="/selfhostcost/category/docs-wiki/">Docs and wikis</a></li><li><a href="/selfhostcost/category/project-management/">Project management</a></li><li><a href="/selfhostcost/category/helpdesk/">Helpdesk and support inbox</a></li>        </ul>
+      </div>
+      <div>
+        <h4>About</h4>
+        <ul>
+          <li><a href="/selfhostcost/about/">About and contact</a></li>
+<li><a href="mailto:selfhostcost.contact@gmail.com">selfhostcost.contact@gmail.com</a></li>          <li><a href="/selfhostcost/methodology/">Methodology</a></li>
+          <li><a href="/selfhostcost/disclosure/">Affiliate disclosure</a></li>
+          <li><a href="/selfhostcost/privacy/">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin:30px 0 0">
+      Prices are read from vendor pricing pages on the dates shown on each page and are not
+      updated continuously. Check the vendor before you buy. Nothing here is financial advice.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

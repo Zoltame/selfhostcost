@@ -3,256 +3,67 @@
   "wave": 1,
   "strict_prices": true,
   "reference_users": 10,
-  "pages": 295,
-  "comparisons": 24,
+  "pages": 359,
+  "comparisons": 65,
   "tools_live": 30,
   "affiliate_links_active": true,
   "lead_capture_active": true,
   "priced_providers": [
-    "digitalocean"
+    "digitalocean",
+    "kamatera"
   ],
   "verified_saas": [
     "1password",
+    "amplitude",
+    "asana",
     "auth0",
+    "betteruptime",
+    "bitwarden",
+    "clerk",
+    "confluence",
+    "fathom",
+    "freshdesk",
     "google-analytics",
+    "helpscout",
+    "intercom",
+    "jira",
+    "lastpass",
+    "linear",
+    "make",
+    "mixpanel",
+    "monday",
     "notion",
+    "okta",
+    "pingdom",
+    "retool",
     "statuspage",
+    "surveymonkey",
+    "tableau",
+    "trello",
     "typeform",
     "zapier",
     "zendesk"
   ],
   "unverified_saas": [
-    "amplitude",
-    "asana",
-    "betteruptime",
-    "bitwarden",
     "calendly",
-    "clerk",
-    "confluence",
     "datadog",
     "docusign",
     "dropbox",
-    "fathom",
-    "freshdesk",
     "google-photos",
     "google-workspace",
-    "helpscout",
     "hubspot",
-    "intercom",
-    "jira",
-    "lastpass",
-    "linear",
     "looker",
     "mailchimp",
-    "make",
-    "mixpanel",
     "mode",
-    "monday",
-    "okta",
-    "pingdom",
     "pipedrive",
-    "retool",
     "salesforce",
     "sentry",
-    "slack",
-    "surveymonkey",
-    "tableau",
-    "trello"
+    "slack"
   ],
   "skipped": [
     {
       "kind": "comparison",
-      "id": "lastpass-vs-vaultwarden",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "bitwarden-vs-vaultwarden",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "lastpass-vs-passbolt",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "mixpanel-vs-plausible",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "fathom-vs-plausible",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "fathom-vs-umami",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "mixpanel-vs-matomo",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "mixpanel-vs-posthog",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "amplitude-vs-posthog",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "make-vs-n8n",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "make-vs-activepieces",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "retool-vs-windmill",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "confluence-vs-outline",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "confluence-vs-docmost",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "confluence-vs-bookstack",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "jira-vs-plane",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "linear-vs-plane",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "asana-vs-plane",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "monday-vs-plane",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "asana-vs-vikunja",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "trello-vs-vikunja",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "monday-vs-vikunja",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "jira-vs-openproject",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "monday-vs-openproject",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "intercom-vs-chatwoot",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "freshdesk-vs-chatwoot",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "helpscout-vs-freescout",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "freshdesk-vs-freescout",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "freshdesk-vs-zammad",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "okta-vs-keycloak",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "clerk-vs-keycloak",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "okta-vs-authentik",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "clerk-vs-authentik",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "clerk-vs-zitadel",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "pingdom-vs-uptime-kuma",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "betteruptime-vs-uptime-kuma",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "pingdom-vs-gatus",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
       "id": "looker-vs-metabase",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "tableau-vs-metabase",
       "reason": "price not read from vendor page"
     },
     {
@@ -267,11 +78,6 @@
     },
     {
       "kind": "comparison",
-      "id": "tableau-vs-superset",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
       "id": "looker-vs-lightdash",
       "reason": "price not read from vendor page"
     },
@@ -279,26 +85,38 @@
       "kind": "comparison",
       "id": "mode-vs-lightdash",
       "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "surveymonkey-vs-formbricks",
-      "reason": "price not read from vendor page"
-    },
-    {
-      "kind": "comparison",
-      "id": "surveymonkey-vs-limesurvey",
-      "reason": "price not read from vendor page"
     }
   ],
   "urls": [
     "/",
     "/about/",
     "/alternatives/1password/",
+    "/alternatives/amplitude/",
+    "/alternatives/asana/",
     "/alternatives/auth0/",
+    "/alternatives/betteruptime/",
+    "/alternatives/bitwarden/",
+    "/alternatives/clerk/",
+    "/alternatives/confluence/",
+    "/alternatives/fathom/",
+    "/alternatives/freshdesk/",
     "/alternatives/google-analytics/",
+    "/alternatives/helpscout/",
+    "/alternatives/intercom/",
+    "/alternatives/jira/",
+    "/alternatives/lastpass/",
+    "/alternatives/linear/",
+    "/alternatives/make/",
+    "/alternatives/mixpanel/",
+    "/alternatives/monday/",
     "/alternatives/notion/",
+    "/alternatives/okta/",
+    "/alternatives/pingdom/",
+    "/alternatives/retool/",
     "/alternatives/statuspage/",
+    "/alternatives/surveymonkey/",
+    "/alternatives/tableau/",
+    "/alternatives/trello/",
     "/alternatives/typeform/",
     "/alternatives/zapier/",
     "/alternatives/zendesk/",
@@ -527,6 +345,7 @@
     "/hosting/",
     "/hosting/digitalocean/",
     "/hosting/hetzner/",
+    "/hosting/kamatera/",
     "/hosting/pikapods/",
     "/hosting/vultr/",
     "/methodology/",
@@ -565,19 +384,60 @@
     "/self-host/zitadel/",
     "/vs/1password-vs-passbolt/",
     "/vs/1password-vs-vaultwarden/",
+    "/vs/amplitude-vs-posthog/",
+    "/vs/asana-vs-plane/",
+    "/vs/asana-vs-vikunja/",
     "/vs/auth0-vs-authentik/",
     "/vs/auth0-vs-keycloak/",
     "/vs/auth0-vs-zitadel/",
+    "/vs/betteruptime-vs-uptime-kuma/",
+    "/vs/bitwarden-vs-vaultwarden/",
+    "/vs/clerk-vs-authentik/",
+    "/vs/clerk-vs-keycloak/",
+    "/vs/clerk-vs-zitadel/",
+    "/vs/confluence-vs-bookstack/",
+    "/vs/confluence-vs-docmost/",
+    "/vs/confluence-vs-outline/",
+    "/vs/fathom-vs-plausible/",
+    "/vs/fathom-vs-umami/",
+    "/vs/freshdesk-vs-chatwoot/",
+    "/vs/freshdesk-vs-freescout/",
+    "/vs/freshdesk-vs-zammad/",
     "/vs/google-analytics-vs-matomo/",
     "/vs/google-analytics-vs-plausible/",
     "/vs/google-analytics-vs-posthog/",
     "/vs/google-analytics-vs-umami/",
+    "/vs/helpscout-vs-freescout/",
+    "/vs/intercom-vs-chatwoot/",
+    "/vs/jira-vs-openproject/",
+    "/vs/jira-vs-plane/",
+    "/vs/lastpass-vs-passbolt/",
+    "/vs/lastpass-vs-vaultwarden/",
+    "/vs/linear-vs-plane/",
+    "/vs/make-vs-activepieces/",
+    "/vs/make-vs-n8n/",
+    "/vs/mixpanel-vs-matomo/",
+    "/vs/mixpanel-vs-plausible/",
+    "/vs/mixpanel-vs-posthog/",
+    "/vs/monday-vs-openproject/",
+    "/vs/monday-vs-plane/",
+    "/vs/monday-vs-vikunja/",
     "/vs/notion-vs-affine/",
     "/vs/notion-vs-bookstack/",
     "/vs/notion-vs-docmost/",
     "/vs/notion-vs-outline/",
+    "/vs/okta-vs-authentik/",
+    "/vs/okta-vs-keycloak/",
+    "/vs/pingdom-vs-gatus/",
+    "/vs/pingdom-vs-uptime-kuma/",
+    "/vs/retool-vs-windmill/",
     "/vs/statuspage-vs-gatus/",
     "/vs/statuspage-vs-uptime-kuma/",
+    "/vs/surveymonkey-vs-formbricks/",
+    "/vs/surveymonkey-vs-limesurvey/",
+    "/vs/tableau-vs-metabase/",
+    "/vs/tableau-vs-superset/",
+    "/vs/trello-vs-vikunja/",
     "/vs/typeform-vs-formbricks/",
     "/vs/typeform-vs-limesurvey/",
     "/vs/typeform-vs-opnform/",

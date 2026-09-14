@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clerk vs self-hosted Zitadel: real cost at 10 people (2026)</title>
+<meta name="description" content="Clerk costs $25.00 a month at 10 people; self-hosting Zitadel costs $141 including the server, backups and maintenance time. Full breakdown at every team size.">
+<link rel="canonical" href="https://zoltame.github.io/selfhostcost/vs/clerk-vs-zitadel/">
+<meta name="google-site-verification" content="L_8gw5Ec2vvygFsccJR5tNjKHOaNPsnJUrGROVoP_Js">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="SelfHostCost">
+<meta property="og:title" content="Clerk vs self-hosted Zitadel: real cost at 10 people (2026)">
+<meta property="og:description" content="Clerk costs $25.00 a month at 10 people; self-hosting Zitadel costs $141 including the server, backups and maintenance time. Full breakdown at every team size.">
+<meta property="og:url" content="https://zoltame.github.io/selfhostcost/vs/clerk-vs-zitadel/">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="/selfhostcost/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/selfhostcost/assets/css/main.css">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://zoltame.github.io/selfhostcost/"}, {"@type": "ListItem", "position": 2, "name": "Identity and SSO", "item": "https://zoltame.github.io/selfhostcost/category/auth/"}, {"@type": "ListItem", "position": 3, "name": "Clerk vs Zitadel", "item": "https://zoltame.github.io/selfhostcost/vs/clerk-vs-zitadel/"}]}, {"@type": "Article", "headline": "Clerk vs self-hosted Zitadel: real cost at 10 people (2026)", "description": "Clerk costs $25.00 a month at 10 people; self-hosting Zitadel costs $141 including the server, backups and maintenance time. Full breakdown at every team size.", "url": "https://zoltame.github.io/selfhostcost/vs/clerk-vs-zitadel/", "datePublished": "2026-09-14", "dateModified": "2026-09-14", "isAccessibleForFree": true, "author": {"@type": "Organization", "name": "SelfHostCost", "url": "https://zoltame.github.io/selfhostcost/"}, "publisher": {"@type": "Organization", "name": "SelfHostCost", "url": "https://zoltame.github.io/selfhostcost/"}}]}</script></head>
+<body>
+
+<header class="masthead">
+  <div class="shell">
+    <a class="wordmark" href="/selfhostcost/">Self<span>Host</span>Cost</a>
+    <nav>
+      <a href="/selfhostcost/compare/">Comparisons</a>
+      <a href="/selfhostcost/self-host/">Tools</a>
+      <a href="/selfhostcost/hosting/">Hosting</a>
+      <a href="/selfhostcost/methodology/">Methodology</a>
+    </nav>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/selfhostcost/">Home</a><span>/</span><a href="/selfhostcost/category/auth/">Identity and SSO</a><span>/</span>Clerk vs Zitadel</nav>
+</div>
+
+<main class="shell">
+
+<p class="kicker">Identity and SSO &middot; cost comparison</p>
+<h1>Clerk vs self-hosted Zitadel: what each actually costs</h1>
+
+<p class="lead">
+  Clerk on the Pro tier against Zitadel running on the smallest
+  server that fits it. Every figure below is computed from the sizing model and the dated prices at the
+  foot of this page, and includes the part most comparisons leave out: your own time.
+</p>
+
+<div class="verdict is-saas">
+  <p class="lede">    At 10 people, Clerk is the cheaper option: <b>$25.00 a month</b>
+    against <b>$141</b> to run Zitadel yourself. Self-hosting this
+    at this size buys you control, not savings.  </p>
+
+  <dl class="figures">
+    <div class="fig">
+      <dt>Clerk</dt>
+      <dd>$25.00<small>per month, Pro</small></dd>
+    </div>
+    <div class="fig">
+      <dt>Self-hosted</dt>
+      <dd>$141<small>server, backups and your time</small></dd>
+    </div>
+    <div class="fig">
+      <dt>Server and backups</dt>
+      <dd>$28.80<small>Basic 4 GiB, 4 GB RAM</small></dd>
+    </div>
+    <div class="fig">
+      <dt>36-month difference</dt>
+      <dd class="neg">
+        $4,637
+        <small>extra to self-host</small>
+      </dd>
+    </div>
+    <div class="fig">
+      <dt>Break-even</dt>
+      <dd>never<small>after $450 of setup time</small></dd>
+    </div>
+  </dl>
+</div>
+<h2>The same comparison at every team size</h2>
+<p>
+  Self-hosting has a floor and almost no slope, while per-seat software has no floor and a steep slope.
+  That is the whole story, and it is why the answer flips somewhere in this table rather than being
+  the same for everyone.
+</p>
+
+<div class="tablewrap">
+<table>
+  <caption>Clerk Pro against Zitadel self-hosted, per month, over 36 months. Self-hosted includes server, backups and maintenance time at $75 an hour.</caption>
+  <thead>
+    <tr>
+      <th>Team size</th>
+      <th class="num">Clerk</th>
+      <th class="num">Self-hosted</th>
+      <th class="num">Without valuing your time</th>
+      <th>Server needed</th>
+      <th class="num">36-month difference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/cost/zitadel/1-user/">solo</a></th>
+      <td class="num">$25.00</td>
+      <td class="num">$141</td>
+      <td class="num">$28.80</td>
+      <td>Basic 4 GiB (4 GB)</td>
+      <td class="num neg">-$4,637</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/cost/zitadel/5-users/">5 people</a></th>
+      <td class="num">$25.00</td>
+      <td class="num">$141</td>
+      <td class="num">$28.80</td>
+      <td>Basic 4 GiB (4 GB)</td>
+      <td class="num neg">-$4,637</td>
+    </tr>
+    <tr>
+      <th scope="row"><strong>10 people</strong></th>
+      <td class="num">$25.00</td>
+      <td class="num">$141</td>
+      <td class="num">$28.80</td>
+      <td>Basic 4 GiB (4 GB)</td>
+      <td class="num neg">-$4,637</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/cost/zitadel/25-users/">25 people</a></th>
+      <td class="num">$25.00</td>
+      <td class="num">$141</td>
+      <td class="num">$28.80</td>
+      <td>Basic 4 GiB (4 GB)</td>
+      <td class="num neg">-$4,637</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/cost/zitadel/50-users/">50 people</a></th>
+      <td class="num">$25.00</td>
+      <td class="num">$141</td>
+      <td class="num">$28.80</td>
+      <td>Basic 4 GiB (4 GB)</td>
+      <td class="num neg">-$4,637</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/cost/zitadel/100-users/">100 people</a></th>
+      <td class="num">$25.00</td>
+      <td class="num">$141</td>
+      <td class="num">$28.80</td>
+      <td>Basic 4 GiB (4 GB)</td>
+      <td class="num neg">-$4,637</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/cost/zitadel/250-users/">250 people</a></th>
+      <td class="num">$25.00</td>
+      <td class="num">$141</td>
+      <td class="num">$28.80</td>
+      <td>Basic 4 GiB (4 GB)</td>
+      <td class="num neg">-$4,637</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p class="srcline">
+Self-hosting never comes out ahead at any team size on this page, once your time is priced in.
+</p>
+
+<h2>Where the self-hosted money actually goes at 10 people</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Line item</th><th class="num">Per month</th><th>What it is</th></tr></thead>
+  <tbody>
+    <tr>
+      <th scope="row">Server</th>
+      <td class="num">$24.00</td>
+      <td>Basic 4 GiB at DigitalOcean: 2 vCPU, 4 GB RAM, 80 GB disk</td>
+    </tr>
+    <tr>
+      <th scope="row">Backups</th>
+      <td class="num">$4.80</td>
+      <td>Provider snapshots at 20% of the server price. Skipping this is not a saving, it is a bet.</td>
+    </tr>
+    <tr>
+      <th scope="row">Your time</th>
+      <td class="num">$112</td>
+      <td>1.5 hours a month of updates, upgrades and the occasional broken thing, at $75 an hour</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr><td>Total</td><td class="num">$141</td><td>Plus $450 once, for roughly 6 hours of first-time setup</td></tr>
+  </tfoot>
+</table>
+</div>
+
+<p>
+  Clerk at this size costs <strong>$25.00</strong> a month. Clerk Pro is a flat $25.00 a month at this tier, independent of seat count.
+</p>
+
+<div class="note caution">
+  <h3>Read this before you price anything</h3>
+  <p>Clerk&#39;s Hobby plan is free for up to 50,000 monthly retained users. An internal team will almost never exceed that, so for most readers the honest licence cost is zero and the paid comparison below only applies if you need what Pro adds.</p>
+</div>
+
+<h2>What Zitadel needs to run at 10 people</h2>
+<p>
+  Go binary over PostgreSQL, with an event-sourced audit log. Lighter than the JVM option and closer to Auth0&#39;s developer ergonomics.
+</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Resource</th><th class="num">Required</th><th>How it is derived</th></tr></thead>
+  <tbody>
+    <tr><th scope="row">Memory</th><td class="num">2.5 GB</td>
+      <td>2 GB for the stack at rest, plus 2 MB per active user, plus 25% headroom</td></tr>
+    <tr><th scope="row">Disk</th><td class="num">10.1 GB</td>
+      <td>10 GB base, plus 0.01 GB per user</td></tr>
+    <tr><th scope="row">vCPU</th><td class="num">2</td>
+      <td>The project's own baseline. For this workload memory runs out before the processor does.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="note">
+  <p><strong>These base figures are an estimate.</strong> Zitadel does not publish a minimum
+  specification we could cite, so the base memory and disk are derived from the services in its own
+  reference Docker Compose file. Treat them as a starting point and watch the first week of metrics.</p>
+</div>
+
+<h2>What you give up, stated plainly</h2>
+<ul>
+  <li><strong>Uptime is now yours.</strong> Clerk has an operations team on call. Self-hosted, a failed upgrade at 18:00 on a Friday is your evening.</li>
+  <li><strong>Backups only exist if you test restoring them.</strong> The $4.80 line above buys snapshots, not a rehearsed recovery.</li>
+  <li><strong>Zitadel is a multi-container stack with a database you have to back up yourself.</strong> That is why the maintenance line is 1.5 hours a month rather than zero.</li>
+  <li><strong>Feature parity is never exact.</strong> Zitadel covers the core of what teams use Clerk for; the long tail of integrations and enterprise controls is where the gap shows.</li>
+</ul>
+
+<div class="note caution">
+  <h3>We are not going to tell you to self-host this</h3>
+  <p>
+    At 10 people, Clerk wins on cost once your time is priced at
+    $75 an hour. Self-hosting Zitadel here only makes sense
+    for reasons that are not on the invoice: data residency, avoiding a vendor, or wanting to run the
+    thing yourself. Those are real reasons. Saving money is not one of them at this size.
+  </p>
+</div>
+
+<div class="cta">
+  <h3>Where to put Zitadel</h3>
+  <p>
+    2.5 GB of memory and 10.1 GB of disk is what this needs at
+    10 people. The cheapest plan that fits, among the providers whose prices we have read
+    ourselves, is the <strong>Basic 4 GiB</strong> at DigitalOcean for
+    $24.00 a month.
+  </p>
+  <p>
+    <a class="btn" href="https://m.do.co/c/3af2e8b05a20" rel="sponsored nofollow noopener">
+      Go to DigitalOcean
+    </a>
+    <a class="btn ghost" href="/selfhostcost/hosting/">Compare hosts</a>
+  </p>
+
+  <p style="font-size:.9rem;color:var(--ink-2);margin-bottom:0">
+    We are not claiming this is the cheapest server on the internet. It is the cheapest one we can
+    honestly quote. Hetzner Cloud, Vultr and PikaPods    publish prices we could not read programmatically,
+    and Hetzner in particular is usually cheaper per gigabyte of memory than anything quoted above.
+    Price them yourself before you commit.
+  </p>
+
+<p class="disclosure">The DigitalOcean link above is a referral link: if you sign up through it and pay your first $25, we receive $25 of DigitalOcean account credit. That never changes the computed costs, which server is chosen, or the conclusion of this page. The sizing model and every price source are published in full.</p></div>
+<h2>Zitadel at a glance</h2>
+<div class="tablewrap">
+<table>
+  <tbody>
+    <tr><th scope="row">Licence</th><td>GNU Affero General Public License v3.0</td></tr>
+    <tr><th scope="row">Written in</th><td>Go</td></tr>
+<tr><th scope="row">GitHub stars</th><td>15,005, checked 2026-09-12</td></tr><tr><th scope="row">Latest release</th><td>v4.17.3</td></tr><tr><th scope="row">Last commit</th><td>2026-09-11</td></tr>    <tr><th scope="row">Ships Docker images</th><td>Yes</td></tr>
+    <tr><th scope="row">Project</th><td><a href="https://zitadel.com" rel="nofollow noopener">zitadel.com</a> &middot; <a href="https://github.com/zitadel/zitadel" rel="nofollow noopener">zitadel/zitadel</a></td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="cta">
+  <h3>Get the migration checklist for this tool</h3>
+  <p>A one-page pre-flight list: data export path, sizing, backup plan, and the rollback step most people skip.</p>
+  <iframe
+    data-tally-src="https://tally.so/embed/68g9vJ?alignLeft=1&hideTitle=1&dynamicHeight=1&tool=zitadel&page=/vs/clerk-vs-zitadel/"
+    loading="lazy" width="100%" height="240" frameborder="0" marginheight="0" marginwidth="0"
+    title="Get the migration checklist for this tool"></iframe>
+  <script>
+    (function(){
+      var d=document,s="https://tally.so/widgets/embed.js",
+      load=function(){ if(typeof Tally!=="undefined"){Tally.loadEmbeds();return;}
+        d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e){e.src=e.dataset.tallySrc;}); };
+      if(typeof Tally!=="undefined"){load();return;}
+      if(d.querySelector('script[src="'+s+'"]')==null){
+        var j=d.createElement("script"); j.src=s; j.onload=load; j.onerror=load; d.body.appendChild(j);
+      }
+    })();
+  </script>
+</div>
+
+<h2>Every figure on this page, and where it came from</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Input</th><th>Value used</th><th>Source</th><th>Read on</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Clerk Pro</td>
+      <td>USD 25.00 per month</td>
+      <td><a href="https://clerk.com/pricing" rel="nofollow noopener">vendor pricing page</a></td>
+      <td>2026-09-14</td>
+    </tr>
+    <tr>
+      <td>DigitalOcean Basic 4 GiB</td>
+      <td>$24.00 per month</td>
+      <td><a href="https://www.digitalocean.com/pricing/droplets" rel="nofollow noopener">provider pricing page</a></td>
+      <td>2026-09-12</td>
+    </tr>
+    <tr>
+      <td>Engineer time</td>
+      <td>$75 per hour</td>
+      <td><a href="/selfhostcost/methodology/">our published assumption</a></td>
+      <td>&mdash;</td>
+    </tr>
+    <tr>
+      <td>Zitadel sizing</td>
+      <td>2 GB base, 2 MB per user</td>
+      <td>derived from its reference Compose stack</td>
+      <td>&mdash;</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p class="srcline">
+  Prices move. If the vendor has changed theirs since 2026-09-14, the figures above are stale
+  and the source links are the authority, not us. <a href="/selfhostcost/methodology/">How we handle that</a>.
+</p>
+
+<h2>Related</h2>
+<ul class="linkgrid">
+  <li><a href="/selfhostcost/self-host/zitadel/">Self-hosting Zitadel: every team size</a></li>
+  <li><a href="/selfhostcost/alternatives/clerk/">All self-hosted Clerk alternatives</a></li>
+<li><a href="/selfhostcost/vs/auth0-vs-keycloak/">Auth0 vs Keycloak</a></li><li><a href="/selfhostcost/vs/okta-vs-keycloak/">Okta Workforce Identity vs Keycloak</a></li><li><a href="/selfhostcost/vs/clerk-vs-keycloak/">Clerk vs Keycloak</a></li><li><a href="/selfhostcost/vs/auth0-vs-authentik/">Auth0 vs authentik</a></li><li><a href="/selfhostcost/vs/okta-vs-authentik/">Okta Workforce Identity vs authentik</a></li><li><a href="/selfhostcost/vs/clerk-vs-authentik/">Clerk vs authentik</a></li>  <li><a href="/selfhostcost/category/auth/">Identity and SSO compared</a></li>
+</ul>
+
+</main>
+
+<footer class="sitefoot">
+  <div class="shell">
+    <div class="footgrid">
+      <div>
+        <h4>SelfHostCost</h4>
+        <p style="margin:0 0 .6em">What self-hosting actually costs, per tool, per team size.</p>
+        <p style="margin:0"><a href="/selfhostcost/methodology/">How every figure is calculated</a></p>
+      </div>
+      <div>
+        <h4>Browse</h4>
+        <ul>
+          <li><a href="/selfhostcost/compare/">All comparisons</a></li>
+          <li><a href="/selfhostcost/self-host/">All tools</a></li>
+          <li><a href="/selfhostcost/hosting/">Hosting providers</a></li>
+          <li><a href="/selfhostcost/migration-checklist/">Migration checklist</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Categories</h4>
+        <ul>
+<li><a href="/selfhostcost/category/password-manager/">Password managers</a></li><li><a href="/selfhostcost/category/analytics/">Web analytics</a></li><li><a href="/selfhostcost/category/automation/">Workflow automation</a></li><li><a href="/selfhostcost/category/docs-wiki/">Docs and wikis</a></li><li><a href="/selfhostcost/category/project-management/">Project management</a></li><li><a href="/selfhostcost/category/helpdesk/">Helpdesk and support inbox</a></li>        </ul>
+      </div>
+      <div>
+        <h4>About</h4>
+        <ul>
+          <li><a href="/selfhostcost/about/">About and contact</a></li>
+<li><a href="mailto:selfhostcost.contact@gmail.com">selfhostcost.contact@gmail.com</a></li>          <li><a href="/selfhostcost/methodology/">Methodology</a></li>
+          <li><a href="/selfhostcost/disclosure/">Affiliate disclosure</a></li>
+          <li><a href="/selfhostcost/privacy/">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin:30px 0 0">
+      Prices are read from vendor pricing pages on the dates shown on each page and are not
+      updated continuously. Check the vendor before you buy. Nothing here is financial advice.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

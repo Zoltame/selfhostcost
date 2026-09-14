@@ -68,6 +68,16 @@
   </thead>
   <tbody>
     <tr>
+      <th scope="row"><a href="/selfhostcost/vs/statuspage-vs-uptime-kuma/">Uptime Kuma</a></th>
+      <td class="num">$4.80</td>
+      <td class="num">$42.30</td>
+      <td class="num pos">
+        +$1,891
+      </td>
+      <td>easy</td>
+      <td>MIT</td>
+    </tr>
+    <tr>
       <th scope="row"><a href="/selfhostcost/vs/statuspage-vs-gatus/">Gatus</a></th>
       <td class="num">$4.80</td>
       <td class="num">$42.30</td>
@@ -77,22 +87,22 @@
       <td>easy</td>
       <td>Apache-2.0</td>
     </tr>
-    <tr>
-      <th scope="row"><a href="/selfhostcost/vs/statuspage-vs-uptime-kuma/">Uptime Kuma</a></th>
-      <td class="num">$7.20</td>
-      <td class="num">$44.70</td>
-      <td class="num pos">
-        +$1,805
-      </td>
-      <td>easy</td>
-      <td>MIT</td>
-    </tr>
   </tbody>
 </table>
 </div>
 <p class="srcline">The final column is the 36-month difference: positive means self-hosting is cheaper.</p>
 
 <h2>Which one to pick</h2>
+<h3>Uptime Kuma <span class="badge">91,286 stars</span></h3>
+<p>One container with SQLite. Cost scales with the number of monitors and their check interval, not with the number of people reading the dashboard.</p>
+<p>
+  At 10 people it needs 0.6 GB of memory and 5.1 GB of disk,
+  which fits the Basic at Kamatera for
+  $4.00 a month. Setting it up is roughly 2 hours of work,
+  then 0.5 hours a month to keep it healthy.
+</p>
+<p><a href="/selfhostcost/vs/statuspage-vs-uptime-kuma/">Full Atlassian Statuspage versus Uptime Kuma breakdown</a>
+   &middot; <a href="/selfhostcost/self-host/uptime-kuma/">Uptime Kuma at every team size</a></p>
 <h3>Gatus <span class="badge">12,056 stars</span></h3>
 <p>Configuration as YAML in version control, which suits teams that want their monitoring reviewed like code. The smallest footprint on this entire site.</p>
 <p>
@@ -103,16 +113,6 @@
 </p>
 <p><a href="/selfhostcost/vs/statuspage-vs-gatus/">Full Atlassian Statuspage versus Gatus breakdown</a>
    &middot; <a href="/selfhostcost/self-host/gatus/">Gatus at every team size</a></p>
-<h3>Uptime Kuma <span class="badge">91,286 stars</span></h3>
-<p>One container with SQLite. Cost scales with the number of monitors and their check interval, not with the number of people reading the dashboard.</p>
-<p>
-  At 10 people it needs 0.6 GB of memory and 5.1 GB of disk,
-  which fits the Basic 1 GiB at DigitalOcean for
-  $6.00 a month. Setting it up is roughly 2 hours of work,
-  then 0.5 hours a month to keep it healthy.
-</p>
-<p><a href="/selfhostcost/vs/statuspage-vs-uptime-kuma/">Full Atlassian Statuspage versus Uptime Kuma breakdown</a>
-   &middot; <a href="/selfhostcost/self-host/uptime-kuma/">Uptime Kuma at every team size</a></p>
 
 <h2>How the pricing was established</h2>
 <p>
@@ -126,7 +126,7 @@
 <h2>Related</h2>
 <ul class="linkgrid">
   <li><a href="/selfhostcost/category/status-page/">All status and uptime monitoring compared</a></li>
-  <li><a href="/selfhostcost/hosting/">Where to host it</a></li>
+<li><a href="/selfhostcost/alternatives/pingdom/">Alternatives to Pingdom</a></li><li><a href="/selfhostcost/alternatives/betteruptime/">Alternatives to Better Stack Uptime</a></li>  <li><a href="/selfhostcost/hosting/">Where to host it</a></li>
 </ul>
 
 </main>

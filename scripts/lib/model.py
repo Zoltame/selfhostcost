@@ -215,18 +215,51 @@ def to_usd(amount: float, currency: str, config: dict) -> float:
 
 
 def saas_monthly(product: dict, users: int, config: dict) -> tuple[float, dict, str]:
-    """Returns (monthly USD, tier used, human explanation)."""
+    """Returns (monthly USD, tier used, human explanation).
+
+    Handles, in order: products that are free outright, free plans capped at a
+    seat count, volume-banded per-seat prices read at each team size, flat
+    prices, per-seat prices with a seat minimum, and a minimum monthly spend
+    (for vendors that sell on an annual contract floor).
+    """
     tier = saas_tier(product)
     model = product["billing_model"]
 
     if model == "free":
         return 0.0, tier, "No licence cost at the standard tier."
 
-    per_native, flat_native, cur = tier_native(tier)
+    free_cap = product.get("free_up_to_seats")
+    if free_cap and users <= int(free_cap):
+        return 0.0, tier, (
+            f"{product['name']}'s own free plan covers teams of up to {free_cap} users, "
+            f"so a team of {users} pays nothing for the licence."
+        )
+
+    price_source = tier
+    band_note = ""
+    bands = tier.get("seat_bands")
+    if bands:
+        chosen = None
+        for band in bands:
+            cap = band.get("max_seats")
+            if cap is None or users <= int(cap):
+                chosen = band
+                break
+        if chosen is None:
+            chosen = bands[-1]
+        price_source = chosen
+        band_note = (
+            f" {product['name']} lowers the per-user price as teams grow; this is the rate its "
+            f"pricing page showed for a team of this size."
+        )
+
+    per_native, flat_native, cur = tier_native(price_source)
     basis = tier.get("billing_basis")
     basis_note = ""
     if basis == "annual":
         basis_note = " This is the annually-billed rate, which is what the vendor's page displayed; paying monthly costs more."
+    elif basis == "unstated":
+        basis_note = " The vendor's page did not say whether this figure is the monthly or the annual rate."
     fx_note = ""
     if cur != "USD":
         fx_note = f" The vendor quoted {cur}, converted at the dated rate on the methodology page."
@@ -249,7 +282,17 @@ def saas_monthly(product: dict, users: int, config: dict) -> tuple[float, dict, 
     note = f"{seats} seats at {money(per_usd)} each"
     if seats != users:
         note += f", because the {tier['name']} tier has a {tier['min_seats']}-seat minimum"
-    return total, tier, note + f".{basis_note}{fx_note}"
+
+    floor_native = tier.get("min_month")
+    if floor_native is not None:
+        floor_usd = to_usd(float(floor_native), cur, config)
+        if total < floor_usd:
+            total = floor_usd
+            note += (
+                f", raised to {money(floor_usd)} a month because {product['name']} requires a minimum "
+                f"contract of that value"
+            )
+    return total, tier, note + f".{band_note}{basis_note}{fx_note}"
 
 
 # --------------------------------------------------------------------------
@@ -309,7 +352,7 @@ def compute_tco(ds: Dataset, tool: dict, product: dict, users: int) -> Tco | Non
     setup_once = round(setup_hours * rate, 2)
 
     saas_month, tier, explain = saas_monthly(product, users, cfg)
-    is_free = product["billing_model"] == "free"
+    is_free = saas_month == 0
 
     saas_total = round(saas_month * horizon, 2)
     sh_total = round(setup_once + sh_month * horizon, 2)

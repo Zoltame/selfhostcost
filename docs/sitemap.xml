@@ -3,10 +3,32 @@
   <url><loc>https://zoltame.github.io/selfhostcost/</loc><lastmod>2026-09-14</lastmod><priority>1.0</priority></url>
   <url><loc>https://zoltame.github.io/selfhostcost/about/</loc><lastmod>2026-09-14</lastmod><priority>0.5</priority></url>
   <url><loc>https://zoltame.github.io/selfhostcost/alternatives/1password/</loc><lastmod>2026-09-14</lastmod><priority>0.8</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/alternatives/amplitude/</loc><lastmod>2026-09-14</lastmod><priority>0.8</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/alternatives/asana/</loc><lastmod>2026-09-14</lastmod><priority>0.8</priority></url>
   <url><loc>https://zoltame.github.io/selfhostcost/alternatives/auth0/</loc><lastmod>2026-09-14</lastmod><priority>0.8</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/alternatives/betteruptime/</loc><lastmod>2026-09-14</lastmod><priority>0.8</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/alternatives/bitwarden/</loc><lastmod>2026-09-14</lastmod><priority>0.8</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/alternatives/clerk/</loc><lastmod>2026-09-14</lastmod><priority>0.8</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/alternatives/confluence/</loc><lastmod>2026-09-14</lastmod><priority>0.8</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/alternatives/fathom/</loc><lastmod>2026-09-14</lastmod><priority>0.8</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/alternatives/freshdesk/</loc><lastmod>2026-09-14</lastmod><priority>0.8</priority></url>
   <url><loc>https://zoltame.github.io/selfhostcost/alternatives/google-analytics/</loc><lastmod>2026-09-14</lastmod><priority>0.8</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/alternatives/helpscout/</loc><lastmod>2026-09-14</lastmod><priority>0.8</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/alternatives/intercom/</loc><lastmod>2026-09-14</lastmod><priority>0.8</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/alternatives/jira/</loc><lastmod>2026-09-14</lastmod><priority>0.8</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/alternatives/lastpass/</loc><lastmod>2026-09-14</lastmod><priority>0.8</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/alternatives/linear/</loc><lastmod>2026-09-14</lastmod><priority>0.8</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/alternatives/make/</loc><lastmod>2026-09-14</lastmod><priority>0.8</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/alternatives/mixpanel/</loc><lastmod>2026-09-14</lastmod><priority>0.8</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/alternatives/monday/</loc><lastmod>2026-09-14</lastmod><priority>0.8</priority></url>
   <url><loc>https://zoltame.github.io/selfhostcost/alternatives/notion/</loc><lastmod>2026-09-14</lastmod><priority>0.8</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/alternatives/okta/</loc><lastmod>2026-09-14</lastmod><priority>0.8</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/alternatives/pingdom/</loc><lastmod>2026-09-14</lastmod><priority>0.8</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/alternatives/retool/</loc><lastmod>2026-09-14</lastmod><priority>0.8</priority></url>
   <url><loc>https://zoltame.github.io/selfhostcost/alternatives/statuspage/</loc><lastmod>2026-09-14</lastmod><priority>0.8</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/alternatives/surveymonkey/</loc><lastmod>2026-09-14</lastmod><priority>0.8</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/alternatives/tableau/</loc><lastmod>2026-09-14</lastmod><priority>0.8</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/alternatives/trello/</loc><lastmod>2026-09-14</lastmod><priority>0.8</priority></url>
   <url><loc>https://zoltame.github.io/selfhostcost/alternatives/typeform/</loc><lastmod>2026-09-14</lastmod><priority>0.8</priority></url>
   <url><loc>https://zoltame.github.io/selfhostcost/alternatives/zapier/</loc><lastmod>2026-09-14</lastmod><priority>0.8</priority></url>
   <url><loc>https://zoltame.github.io/selfhostcost/alternatives/zendesk/</loc><lastmod>2026-09-14</lastmod><priority>0.8</priority></url>
@@ -235,6 +257,7 @@
   <url><loc>https://zoltame.github.io/selfhostcost/hosting/</loc><lastmod>2026-09-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://zoltame.github.io/selfhostcost/hosting/digitalocean/</loc><lastmod>2026-09-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://zoltame.github.io/selfhostcost/hosting/hetzner/</loc><lastmod>2026-09-14</lastmod><priority>0.6</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/hosting/kamatera/</loc><lastmod>2026-09-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://zoltame.github.io/selfhostcost/hosting/pikapods/</loc><lastmod>2026-09-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://zoltame.github.io/selfhostcost/hosting/vultr/</loc><lastmod>2026-09-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://zoltame.github.io/selfhostcost/methodology/</loc><lastmod>2026-09-14</lastmod><priority>0.5</priority></url>
@@ -273,19 +296,60 @@
   <url><loc>https://zoltame.github.io/selfhostcost/self-host/zitadel/</loc><lastmod>2026-09-14</lastmod><priority>0.8</priority></url>
   <url><loc>https://zoltame.github.io/selfhostcost/vs/1password-vs-passbolt/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
   <url><loc>https://zoltame.github.io/selfhostcost/vs/1password-vs-vaultwarden/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/amplitude-vs-posthog/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/asana-vs-plane/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/asana-vs-vikunja/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
   <url><loc>https://zoltame.github.io/selfhostcost/vs/auth0-vs-authentik/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
   <url><loc>https://zoltame.github.io/selfhostcost/vs/auth0-vs-keycloak/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
   <url><loc>https://zoltame.github.io/selfhostcost/vs/auth0-vs-zitadel/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/betteruptime-vs-uptime-kuma/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/bitwarden-vs-vaultwarden/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/clerk-vs-authentik/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/clerk-vs-keycloak/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/clerk-vs-zitadel/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/confluence-vs-bookstack/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/confluence-vs-docmost/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/confluence-vs-outline/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/fathom-vs-plausible/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/fathom-vs-umami/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/freshdesk-vs-chatwoot/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/freshdesk-vs-freescout/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/freshdesk-vs-zammad/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
   <url><loc>https://zoltame.github.io/selfhostcost/vs/google-analytics-vs-matomo/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
   <url><loc>https://zoltame.github.io/selfhostcost/vs/google-analytics-vs-plausible/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
   <url><loc>https://zoltame.github.io/selfhostcost/vs/google-analytics-vs-posthog/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
   <url><loc>https://zoltame.github.io/selfhostcost/vs/google-analytics-vs-umami/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/helpscout-vs-freescout/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/intercom-vs-chatwoot/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/jira-vs-openproject/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/jira-vs-plane/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/lastpass-vs-passbolt/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/lastpass-vs-vaultwarden/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/linear-vs-plane/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/make-vs-activepieces/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/make-vs-n8n/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/mixpanel-vs-matomo/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/mixpanel-vs-plausible/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/mixpanel-vs-posthog/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/monday-vs-openproject/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/monday-vs-plane/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/monday-vs-vikunja/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
   <url><loc>https://zoltame.github.io/selfhostcost/vs/notion-vs-affine/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
   <url><loc>https://zoltame.github.io/selfhostcost/vs/notion-vs-bookstack/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
   <url><loc>https://zoltame.github.io/selfhostcost/vs/notion-vs-docmost/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
   <url><loc>https://zoltame.github.io/selfhostcost/vs/notion-vs-outline/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/okta-vs-authentik/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/okta-vs-keycloak/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/pingdom-vs-gatus/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/pingdom-vs-uptime-kuma/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/retool-vs-windmill/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
   <url><loc>https://zoltame.github.io/selfhostcost/vs/statuspage-vs-gatus/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
   <url><loc>https://zoltame.github.io/selfhostcost/vs/statuspage-vs-uptime-kuma/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/surveymonkey-vs-formbricks/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/surveymonkey-vs-limesurvey/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/tableau-vs-metabase/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/tableau-vs-superset/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoltame.github.io/selfhostcost/vs/trello-vs-vikunja/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
   <url><loc>https://zoltame.github.io/selfhostcost/vs/typeform-vs-formbricks/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
   <url><loc>https://zoltame.github.io/selfhostcost/vs/typeform-vs-limesurvey/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>
   <url><loc>https://zoltame.github.io/selfhostcost/vs/typeform-vs-opnform/</loc><lastmod>2026-09-14</lastmod><priority>0.9</priority></url>

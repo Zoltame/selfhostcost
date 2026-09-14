@@ -43,21 +43,35 @@
       "site": "https://www.lastpass.com",
       "pricing_url": "https://www.lastpass.com/pricing",
       "billing_model": "per_seat_month",
-      "compare_tier": "Business",
+      "compare_tier": "Teams / Business",
       "tiers": [
         {
-          "name": "Teams",
-          "usd_per_seat_month": 4.0,
-          "max_seats": 50
+          "name": "Teams / Business",
+          "currency": "EUR",
+          "billing_basis": "annual",
+          "seat_bands": [
+            {
+              "max_seats": 50,
+              "eur_per_seat_month": 4.42
+            },
+            {
+              "max_seats": null,
+              "eur_per_seat_month": 6.5
+            }
+          ],
+          "note": "Teams is EUR 4.42 per user per month and is limited to 50 users; larger teams need Business at EUR 6.50. Both billed annually."
         },
         {
-          "name": "Business",
-          "usd_per_seat_month": 7.0
+          "name": "Business Max",
+          "eur_per_seat_month": 10.0,
+          "currency": "EUR",
+          "billing_basis": "annual"
         }
       ],
-      "price_status": "seed",
-      "verified_on": null,
-      "wave": 1
+      "price_status": "verified",
+      "verified_on": "2026-09-14",
+      "wave": 1,
+      "note": "Read from the French storefront in euros."
     },
     {
       "slug": "bitwarden",
@@ -71,15 +85,19 @@
       "tiers": [
         {
           "name": "Teams",
-          "usd_per_seat_month": 4.0
+          "usd_per_seat_month": 4.0,
+          "currency": "USD",
+          "billing_basis": "annual"
         },
         {
           "name": "Enterprise",
-          "usd_per_seat_month": 6.0
+          "usd_per_seat_month": 6.0,
+          "currency": "USD",
+          "billing_basis": "annual"
         }
       ],
-      "price_status": "seed",
-      "verified_on": null,
+      "price_status": "verified",
+      "verified_on": "2026-09-14",
       "wave": 1,
       "note": "Bitwarden also publishes its own self-hostable server, so the comparison with Vaultwarden is about resource footprint as much as licence cost."
     },
@@ -123,16 +141,41 @@
       "tiers": [
         {
           "name": "Standard",
-          "usd_per_seat_month": 6.4
+          "currency": "USD",
+          "billing_basis": "monthly",
+          "seat_bands": [
+            {
+              "max_seats": 100,
+              "usd_per_seat_month": 6.7
+            },
+            {
+              "max_seats": null,
+              "usd_per_seat_month": 5.74
+            }
+          ],
+          "note": "Per-user rate read with the team-size field set to 1, 5, 10, 25, 50, 100 and 250 users on monthly billing: $6.70 up to 100 users, $5.74 at 250."
         },
         {
           "name": "Premium",
-          "usd_per_seat_month": 12.3
+          "currency": "USD",
+          "billing_basis": "monthly",
+          "seat_bands": [
+            {
+              "max_seats": 100,
+              "usd_per_seat_month": 13.2
+            },
+            {
+              "max_seats": null,
+              "usd_per_seat_month": 11.01
+            }
+          ]
         }
       ],
-      "price_status": "seed",
-      "verified_on": null,
-      "wave": 1
+      "price_status": "verified",
+      "verified_on": "2026-09-14",
+      "wave": 1,
+      "free_up_to_seats": 10,
+      "free_tier_note": "Confluence's Free plan covers teams of up to 10 users. Inside that limit there is no licence cost, so self-hosting a replacement saves nothing."
     },
     {
       "slug": "jira",
@@ -146,16 +189,41 @@
       "tiers": [
         {
           "name": "Standard",
-          "usd_per_seat_month": 8.6
+          "currency": "USD",
+          "billing_basis": "monthly",
+          "seat_bands": [
+            {
+              "max_seats": 100,
+              "usd_per_seat_month": 9.05
+            },
+            {
+              "max_seats": null,
+              "usd_per_seat_month": 8.21
+            }
+          ],
+          "note": "Per-user rate read with the team-size field set to 1, 5, 10, 25, 50, 100 and 250 users on monthly billing: $9.05 up to 100 users, $8.21 at 250."
         },
         {
           "name": "Premium",
-          "usd_per_seat_month": 17.0
+          "currency": "USD",
+          "billing_basis": "monthly",
+          "seat_bands": [
+            {
+              "max_seats": 100,
+              "usd_per_seat_month": 18.3
+            },
+            {
+              "max_seats": null,
+              "usd_per_seat_month": 15.54
+            }
+          ]
         }
       ],
-      "price_status": "seed",
-      "verified_on": null,
-      "wave": 1
+      "price_status": "verified",
+      "verified_on": "2026-09-14",
+      "wave": 1,
+      "free_up_to_seats": 10,
+      "free_tier_note": "Jira's Free plan covers teams of up to 10 users. Inside that limit there is no licence cost, so self-hosting a replacement saves nothing."
     },
     {
       "slug": "linear",
@@ -169,15 +237,19 @@
       "tiers": [
         {
           "name": "Basic",
-          "usd_per_seat_month": 10.0
+          "usd_per_seat_month": 10.0,
+          "currency": "USD",
+          "billing_basis": "annual"
         },
         {
           "name": "Business",
-          "usd_per_seat_month": 16.0
+          "usd_per_seat_month": 16.0,
+          "currency": "USD",
+          "billing_basis": "annual"
         }
       ],
-      "price_status": "seed",
-      "verified_on": null,
+      "price_status": "verified",
+      "verified_on": "2026-09-14",
       "wave": 1
     },
     {
@@ -192,16 +264,24 @@
       "tiers": [
         {
           "name": "Starter",
-          "usd_per_seat_month": 13.49
+          "usd_per_seat_month": 13.49,
+          "currency": "USD",
+          "billing_basis": "monthly",
+          "note": "$10.99 per user per month on annual billing."
         },
         {
           "name": "Advanced",
-          "usd_per_seat_month": 30.49
+          "usd_per_seat_month": 30.49,
+          "currency": "USD",
+          "billing_basis": "monthly",
+          "note": "$24.99 per user per month on annual billing."
         }
       ],
-      "price_status": "seed",
-      "verified_on": null,
-      "wave": 1
+      "price_status": "verified",
+      "verified_on": "2026-09-14",
+      "wave": 1,
+      "free_up_to_seats": 2,
+      "free_tier_note": "Asana's Personal plan is free for up to 2 seats. Beyond that, the Starter tier below applies."
     },
     {
       "slug": "monday",
@@ -215,18 +295,31 @@
       "tiers": [
         {
           "name": "Basic",
-          "usd_per_seat_month": 12.0,
+          "eur_per_seat_month": 9.0,
+          "currency": "EUR",
+          "billing_basis": "annual",
           "min_seats": 3
         },
         {
           "name": "Standard",
-          "usd_per_seat_month": 14.0,
+          "eur_per_seat_month": 12.0,
+          "currency": "EUR",
+          "billing_basis": "annual",
+          "min_seats": 3,
+          "note": "The page showed EUR 120 a month billed annually for 10 users, and states that plans start at 3 users."
+        },
+        {
+          "name": "Pro",
+          "eur_per_seat_month": 19.0,
+          "currency": "EUR",
+          "billing_basis": "annual",
           "min_seats": 3
         }
       ],
-      "price_status": "seed",
-      "verified_on": null,
-      "wave": 1
+      "price_status": "verified",
+      "verified_on": "2026-09-14",
+      "wave": 1,
+      "note": "Read from the French storefront in euros."
     },
     {
       "slug": "trello",
@@ -240,16 +333,24 @@
       "tiers": [
         {
           "name": "Standard",
-          "usd_per_seat_month": 6.0
+          "usd_per_seat_month": 6.0,
+          "currency": "USD",
+          "billing_basis": "monthly",
+          "note": "$5 per user per month on annual billing."
         },
         {
           "name": "Premium",
-          "usd_per_seat_month": 12.5
+          "usd_per_seat_month": 12.5,
+          "currency": "USD",
+          "billing_basis": "monthly",
+          "note": "$10 per user per month on annual billing."
         }
       ],
-      "price_status": "seed",
-      "verified_on": null,
-      "wave": 1
+      "price_status": "verified",
+      "verified_on": "2026-09-14",
+      "wave": 1,
+      "free_up_to_seats": 10,
+      "free_tier_note": "Trello's Free plan covers up to 10 collaborators per Workspace, with a limit of 10 boards. A team inside that limit pays nothing, so self-hosting a replacement saves nothing either."
     },
     {
       "slug": "zapier",
@@ -293,16 +394,30 @@
       "tiers": [
         {
           "name": "Core",
-          "usd_month": 10.59
+          "usd_month": 10.0,
+          "currency": "USD",
+          "billing_basis": "monthly",
+          "note": "10,000 credits a month. $9 a month on annual billing."
         },
         {
           "name": "Pro",
-          "usd_month": 18.82
+          "usd_month": 18.0,
+          "currency": "USD",
+          "billing_basis": "monthly",
+          "note": "$16 a month on annual billing."
+        },
+        {
+          "name": "Teams",
+          "usd_month": 34.0,
+          "currency": "USD",
+          "billing_basis": "monthly",
+          "note": "$29 a month on annual billing."
         }
       ],
-      "price_status": "seed",
-      "verified_on": null,
-      "wave": 1
+      "price_status": "verified",
+      "verified_on": "2026-09-14",
+      "wave": 1,
+      "note": "Make bills by credits consumed, not seats. The comparison holds the entry plan fixed and shows what the same spend buys as a server."
     },
     {
       "slug": "retool",
@@ -316,17 +431,23 @@
       "tiers": [
         {
           "name": "Team",
-          "usd_per_seat_month": 10.0,
-          "note": "Standard user seat; editor seats cost considerably more."
+          "eur_per_seat_month": 5.0,
+          "currency": "EUR",
+          "billing_basis": "unstated",
+          "note": "EUR 5 per internal user. Builders, the people who create apps, cost EUR 9 each."
         },
         {
           "name": "Business",
-          "usd_per_seat_month": 50.0
+          "eur_per_seat_month": 14.0,
+          "currency": "EUR",
+          "billing_basis": "unstated",
+          "note": "EUR 14 per internal user; builders cost EUR 46 each."
         }
       ],
-      "price_status": "seed",
-      "verified_on": null,
-      "wave": 1
+      "price_status": "verified",
+      "verified_on": "2026-09-14",
+      "wave": 1,
+      "note": "Every seat here is priced as an internal user at the lower rate. Builders cost more, so the real Retool bill is higher than shown, which means this comparison does not flatter self-hosting."
     },
     {
       "slug": "zendesk",
@@ -364,20 +485,31 @@
       "site": "https://www.intercom.com",
       "pricing_url": "https://www.intercom.com/pricing",
       "billing_model": "per_seat_month",
-      "compare_tier": "Advanced",
+      "compare_tier": "Essential",
       "tiers": [
         {
           "name": "Essential",
-          "usd_per_seat_month": 39.0
+          "usd_per_seat_month": 29.0,
+          "currency": "USD",
+          "billing_basis": "annual"
         },
         {
           "name": "Advanced",
-          "usd_per_seat_month": 99.0
+          "usd_per_seat_month": 85.0,
+          "currency": "USD",
+          "billing_basis": "annual"
+        },
+        {
+          "name": "Expert",
+          "usd_per_seat_month": 132.0,
+          "currency": "USD",
+          "billing_basis": "annual"
         }
       ],
-      "price_status": "seed",
-      "verified_on": null,
-      "wave": 1
+      "price_status": "verified",
+      "verified_on": "2026-09-14",
+      "wave": 1,
+      "note": "Fin AI Agent is charged separately at $0.99 per outcome on every plan and is not included here, so the real Intercom bill is usually higher."
     },
     {
       "slug": "freshdesk",
@@ -391,15 +523,25 @@
       "tiers": [
         {
           "name": "Growth",
-          "usd_per_seat_month": 18.0
+          "usd_per_seat_month": 19.0,
+          "currency": "USD",
+          "billing_basis": "annual"
         },
         {
           "name": "Pro",
-          "usd_per_seat_month": 59.0
+          "usd_per_seat_month": 55.0,
+          "currency": "USD",
+          "billing_basis": "annual"
+        },
+        {
+          "name": "Enterprise",
+          "usd_per_seat_month": 89.0,
+          "currency": "USD",
+          "billing_basis": "annual"
         }
       ],
-      "price_status": "seed",
-      "verified_on": null,
+      "price_status": "verified",
+      "verified_on": "2026-09-14",
       "wave": 1
     },
     {
@@ -414,13 +556,24 @@
       "tiers": [
         {
           "name": "Standard",
-          "usd_per_seat_month": 50.0,
-          "note": "Help Scout has moved between contact-based and seat-based pricing; confirm before quoting."
+          "usd_per_seat_month": 30.0,
+          "currency": "USD",
+          "billing_basis": "monthly",
+          "note": "$25 per user per month on annual billing."
+        },
+        {
+          "name": "Plus",
+          "usd_per_seat_month": 54.0,
+          "currency": "USD",
+          "billing_basis": "monthly",
+          "note": "$45 per user per month on annual billing."
         }
       ],
-      "price_status": "seed",
-      "verified_on": null,
-      "wave": 1
+      "price_status": "verified",
+      "verified_on": "2026-09-14",
+      "wave": 1,
+      "free_up_to_seats": 5,
+      "free_tier_note": "Help Scout's Free plan covers up to 5 users with one inbox and one Docs site. A small team that fits inside it pays nothing."
     },
     {
       "slug": "auth0",
@@ -467,21 +620,26 @@
       "site": "https://www.okta.com",
       "pricing_url": "https://www.okta.com/pricing/",
       "billing_model": "per_seat_month",
-      "compare_tier": "SSO + MFA",
+      "compare_tier": "Starter",
       "tiers": [
         {
-          "name": "Single Sign-On",
-          "usd_per_seat_month": 2.0,
-          "min_seats": 25
+          "name": "Starter",
+          "usd_per_seat_month": 6.0,
+          "currency": "USD",
+          "billing_basis": "annual",
+          "min_month": 125.0,
+          "note": "Billed annually with a $1,500 minimum annual contract, which is $125 a month."
         },
         {
-          "name": "SSO + MFA",
-          "usd_per_seat_month": 5.0,
-          "min_seats": 25
+          "name": "Essentials",
+          "usd_per_seat_month": 17.0,
+          "currency": "USD",
+          "billing_basis": "annual",
+          "min_month": 125.0
         }
       ],
-      "price_status": "seed",
-      "verified_on": null,
+      "price_status": "verified",
+      "verified_on": "2026-09-14",
       "wave": 1
     },
     {
@@ -497,12 +655,16 @@
         {
           "name": "Pro",
           "usd_month": 25.0,
-          "note": "Includes a free MAU allowance, then charges per additional active user."
+          "currency": "USD",
+          "billing_basis": "monthly",
+          "note": "Includes 50,000 monthly retained users, then $0.02 each. $20 a month on annual billing. The B2B organisations add-on is $100 a month more."
         }
       ],
-      "price_status": "seed",
-      "verified_on": null,
-      "wave": 1
+      "price_status": "verified",
+      "verified_on": "2026-09-14",
+      "wave": 1,
+      "note": "Clerk bills monthly retained users, not seats, so team size is a poor proxy and the page says so.",
+      "free_tier_note": "Clerk's Hobby plan is free for up to 50,000 monthly retained users. An internal team will almost never exceed that, so for most readers the honest licence cost is zero and the paid comparison below only applies if you need what Pro adds."
     },
     {
       "slug": "statuspage",
@@ -554,13 +716,16 @@
       "tiers": [
         {
           "name": "Synthetic Monitoring",
-          "usd_month": 15.0,
-          "note": "Entry price; scales with the number of checks."
+          "eur_month": 14.33,
+          "currency": "EUR",
+          "billing_basis": "annual",
+          "note": "Entry tier with 10 uptime checks, EUR 171.96 billed yearly."
         }
       ],
-      "price_status": "seed",
-      "verified_on": null,
-      "wave": 1
+      "price_status": "verified",
+      "verified_on": "2026-09-14",
+      "wave": 1,
+      "note": "Read from the European storefront in euros. Pingdom scales by number of checks, not seats."
     },
     {
       "slug": "betteruptime",
@@ -570,20 +735,20 @@
       "site": "https://betterstack.com/uptime",
       "pricing_url": "https://betterstack.com/pricing",
       "billing_model": "flat_month",
-      "compare_tier": "Freelancer",
+      "compare_tier": "Responder",
       "tiers": [
         {
-          "name": "Freelancer",
-          "usd_month": 29.0
-        },
-        {
-          "name": "Business",
-          "usd_month": 99.0
+          "name": "Responder",
+          "usd_month": 34.0,
+          "currency": "USD",
+          "billing_basis": "monthly",
+          "note": "$29 a month on yearly billing. Additional status pages are $15 a month each."
         }
       ],
-      "price_status": "seed",
-      "verified_on": null,
-      "wave": 1
+      "price_status": "verified",
+      "verified_on": "2026-09-14",
+      "wave": 1,
+      "free_tier_note": "Better Stack's free tier includes 10 monitors and heartbeats and 1 status page. If that covers you, there is nothing to save."
     },
     {
       "slug": "typeform",
@@ -633,13 +798,23 @@
       "tiers": [
         {
           "name": "Team Advantage",
-          "usd_per_seat_month": 25.0,
+          "eur_per_seat_month": 30.0,
+          "currency": "EUR",
+          "billing_basis": "annual",
+          "min_seats": 3
+        },
+        {
+          "name": "Team Premier",
+          "eur_per_seat_month": 75.0,
+          "currency": "EUR",
+          "billing_basis": "annual",
           "min_seats": 3
         }
       ],
-      "price_status": "seed",
-      "verified_on": null,
-      "wave": 1
+      "price_status": "verified",
+      "verified_on": "2026-09-14",
+      "wave": 1,
+      "note": "Read from the European storefront in euros. Responses beyond the plan allowance cost EUR 0.10 each and are not included."
     },
     {
       "slug": "mixpanel",
@@ -648,18 +823,20 @@
       "vendor": "Mixpanel",
       "site": "https://mixpanel.com",
       "pricing_url": "https://mixpanel.com/pricing/",
-      "billing_model": "flat_month",
-      "compare_tier": "Growth",
+      "billing_model": "free",
+      "compare_tier": "Free",
       "tiers": [
         {
-          "name": "Growth",
-          "usd_month": 24.0,
-          "note": "Scales with monthly tracked events rather than seats."
+          "name": "Free",
+          "usd_month": 0.0,
+          "currency": "USD"
         }
       ],
-      "price_status": "seed",
-      "verified_on": null,
-      "wave": 1
+      "price_status": "verified",
+      "verified_on": "2026-09-14",
+      "wave": 1,
+      "note": "Mixpanel is free up to 1 million events a month, and its Growth plan starts at $0 and scales with event volume without a published fixed price.",
+      "free_tier_note": "Mixpanel's free plan covers up to 1 million events a month, with no seat charge. Below that volume there is no licence cost to save, so this comparison is about who holds the data rather than what it costs."
     },
     {
       "slug": "amplitude",
@@ -668,17 +845,20 @@
       "vendor": "Amplitude",
       "site": "https://amplitude.com",
       "pricing_url": "https://amplitude.com/pricing",
-      "billing_model": "flat_month",
-      "compare_tier": "Plus",
+      "billing_model": "free",
+      "compare_tier": "Free",
       "tiers": [
         {
-          "name": "Plus",
-          "usd_month": 49.0
+          "name": "Free",
+          "usd_month": 0.0,
+          "currency": "USD"
         }
       ],
-      "price_status": "seed",
-      "verified_on": null,
-      "wave": 1
+      "price_status": "verified",
+      "verified_on": "2026-09-14",
+      "wave": 1,
+      "note": "Amplitude is free up to 2 million events a month with unlimited seats; its Plus plan starts at $0 and scales with event volume.",
+      "free_tier_note": "Amplitude's free plan covers up to 2 million events a month with unlimited seats. Below that volume there is no licence cost to save."
     },
     {
       "slug": "fathom",
@@ -693,12 +873,15 @@
         {
           "name": "Starter",
           "usd_month": 15.0,
-          "note": "Priced by monthly pageviews."
+          "currency": "USD",
+          "billing_basis": "monthly",
+          "note": "Up to 100,000 monthly page views. Annual billing includes two months free."
         }
       ],
-      "price_status": "seed",
-      "verified_on": null,
-      "wave": 1
+      "price_status": "verified",
+      "verified_on": "2026-09-14",
+      "wave": 1,
+      "note": "Fathom prices by monthly page views, not seats, so team size does not change its cost."
     },
     {
       "slug": "google-analytics",
@@ -735,9 +918,10 @@
           "usd_per_seat_month": 9.0
         }
       ],
-      "price_status": "seed",
+      "price_status": "not_published",
       "verified_on": null,
-      "wave": 1
+      "wave": 1,
+      "price_note": "Looker Studio has been renamed Data Studio, and no Data Studio Pro price was published on Google's pages on 2026-09-14. Its documentation says pricing depends on subscription length."
     },
     {
       "slug": "tableau",
@@ -747,24 +931,26 @@
       "site": "https://www.tableau.com",
       "pricing_url": "https://www.tableau.com/pricing/teams-orgs",
       "billing_model": "per_seat_month",
-      "compare_tier": "Viewer + Creator mix",
+      "compare_tier": "Tableau Standard",
       "tiers": [
         {
-          "name": "Viewer",
-          "usd_per_seat_month": 15.0
+          "name": "Tableau Standard",
+          "usd_per_seat_month": 15.0,
+          "currency": "USD",
+          "billing_basis": "annual",
+          "note": "Starting price per user. Roles that author content cost more, so a real Tableau bill with any creators is higher."
         },
         {
-          "name": "Explorer",
-          "usd_per_seat_month": 42.0
-        },
-        {
-          "name": "Creator",
-          "usd_per_seat_month": 75.0
+          "name": "Tableau Enterprise",
+          "usd_per_seat_month": 35.0,
+          "currency": "USD",
+          "billing_basis": "annual"
         }
       ],
-      "price_status": "seed",
-      "verified_on": null,
-      "wave": 1
+      "price_status": "verified",
+      "verified_on": "2026-09-14",
+      "wave": 1,
+      "note": "Every seat is priced at the starting rate, which understates Tableau's cost and so does not flatter self-hosting."
     },
     {
       "slug": "mode",
@@ -782,9 +968,10 @@
           "note": "Quote-based; confirm before quoting."
         }
       ],
-      "price_status": "seed",
+      "price_status": "quote_only",
       "verified_on": null,
-      "wave": 1
+      "wave": 1,
+      "price_note": "Mode publishes no prices; every plan is sold through a sales conversation. No comparison can be published without inventing a number."
     },
     {
       "slug": "slack",
