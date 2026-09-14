@@ -12,19 +12,31 @@ from datetime import date
 from .model import Dataset, money, priced_providers
 
 
-def static_pages(ds: Dataset, wave: int, strict: bool, built, pairs):
+def static_pages(ds: Dataset, wave: int, strict: bool, built, pairs, lang: str = "en", base: str | None = None):
+    """The written pages for one language.
+
+    English lives in this module. Every other language has its own module,
+    lib/content_<lang>.py, exposing the same static_pages(ds, wave, strict,
+    built, pairs, base) function, so each language is written natively rather
+    than machine-substituted into English sentences.
+    """
+    base = base if base is not None else ds.config["base_path"]
+    if lang != "en":
+        import importlib
+        module = importlib.import_module(f"lib.content_{lang}")
+        return module.static_pages(ds, wave, strict, built, pairs, base)
     return [
-        _about(ds, built),
-        _checklist(ds),
-        _methodology(ds, wave, strict, built),
-        _disclosure(ds),
-        _privacy(ds),
+        _about(ds, built, base),
+        _checklist(ds, base),
+        _methodology(ds, wave, strict, built, base),
+        _disclosure(ds, base),
+        _privacy(ds, base),
     ]
 
 
-def _checklist(ds: Dataset) -> tuple[str, str, str, str]:
+def _checklist(ds: Dataset, base: str) -> tuple[str, str, str, str]:
     cfg = ds.config
-    bp = cfg["base_path"]
+    bp = base
     m = cfg["tco_model"]
     body = f"""
 <h1>Self-hosting migration checklist</h1>
@@ -135,7 +147,7 @@ def _checklist(ds: Dataset) -> tuple[str, str, str, str]:
     )
 
 
-def _about(ds: Dataset, built) -> tuple[str, str, str, str]:
+def _about(ds: Dataset, built, base: str) -> tuple[str, str, str, str]:
     cfg = ds.config
     email = cfg.get("contact_email", "")
     repo = f"https://github.com/{cfg['github_owner']}/{cfg['repo']}"
@@ -147,10 +159,10 @@ def _about(ds: Dataset, built) -> tuple[str, str, str, str]:
         "The only financial relationship this site has with anyone it mentions is DigitalOcean's standard "
         "referral link, which earns hosting account credit when someone signs up through it and pays their "
         f"first $25. It is marked on every page that carries it and described in full on the "
-        f"<a href=\"{cfg['base_path']}/disclosure/\">disclosure page</a>."
+        f"<a href=\"{base}/disclosure/\">disclosure page</a>."
         if referral_on else
         "The site currently has no affiliate or referral links and earns nothing. If that changes, the "
-        f"<a href=\"{cfg['base_path']}/disclosure/\">disclosure page</a> changes the same day."
+        f"<a href=\"{base}/disclosure/\">disclosure page</a> changes the same day."
     )
 
     body = f"""
@@ -183,7 +195,7 @@ def _about(ds: Dataset, built) -> tuple[str, str, str, str]:
   Every page is generated from a dataset and a cost model that are both public. You can read the code, the
   sizing figures and the dated price records in the
   <a href="{repo}" rel="noopener">source repository on GitHub</a>, and the reasoning behind every assumption
-  on the <a href="{cfg['base_path']}/methodology/">methodology page</a>.
+  on the <a href="{base}/methodology/">methodology page</a>.
 </p>
 <p>
   Today that means {len(built)} published comparisons, built on {len(verified)} vendor prices read directly
@@ -217,7 +229,7 @@ def _about(ds: Dataset, built) -> tuple[str, str, str, str]:
     )
 
 
-def _methodology(ds: Dataset, wave: int, strict: bool, built) -> tuple[str, str, str, str]:
+def _methodology(ds: Dataset, wave: int, strict: bool, built, base: str) -> tuple[str, str, str, str]:
     cfg = ds.config
     m = cfg["tco_model"]
     rate = m["engineer_hourly_usd"]
@@ -425,7 +437,7 @@ def _methodology(ds: Dataset, wave: int, strict: bool, built) -> tuple[str, str,
     )
 
 
-def _disclosure(ds: Dataset) -> tuple[str, str, str, str]:
+def _disclosure(ds: Dataset, base: str) -> tuple[str, str, str, str]:
     cfg = ds.config
     aff = cfg.get("affiliate", {})
     active = bool(aff.get("enabled")) and any(p.get("id") for p in aff.get("providers", {}).values())
@@ -457,7 +469,7 @@ def _disclosure(ds: Dataset) -> tuple[str, str, str, str]:
       the cheapest plan, among providers whose prices we have read, that meets the computed memory and disk
       requirement. That rule is in the build script and it does not know what anyone pays us.</li>
   <li><strong>The numbers.</strong> Every figure is computed from
-      <a href="{cfg['base_path']}/methodology/">the published model</a> and dated price sources. You can
+      <a href="{base}/methodology/">the published model</a> and dated price sources. You can
       reproduce any of them by hand.</li>
   <li><strong>The conclusion.</strong> A good number of pages here conclude that the paid product is cheaper
       and that you should not self-host. Those pages earn nothing. They stay as they are because a
@@ -469,7 +481,7 @@ def _disclosure(ds: Dataset) -> tuple[str, str, str, str]:
   Which providers we prioritised verifying prices for is not perfectly independent of which ones have a
   referral programme. We currently price
   {', '.join(p['name'] for p in priced_providers(ds)) or 'no providers'}, and the
-  <a href="{cfg['base_path']}/hosting/">hosting page</a> names every provider we have not been able to
+  <a href="{base}/hosting/">hosting page</a> names every provider we have not been able to
   price, including ones we expect to be cheaper. That gap is disclosed rather than quietly left out.
 </p>
 
@@ -494,7 +506,7 @@ def _disclosure(ds: Dataset) -> tuple[str, str, str, str]:
     )
 
 
-def _privacy(ds: Dataset) -> tuple[str, str, str, str]:
+def _privacy(ds: Dataset, base: str) -> tuple[str, str, str, str]:
     cfg = ds.config
     an = cfg.get("analytics", {})
     tracking = (
@@ -541,7 +553,7 @@ def _privacy(ds: Dataset) -> tuple[str, str, str, str]:
   Links to hosting providers, vendors and open-source projects lead to sites we do not control and whose
   privacy practices are their own. Where a link is a commissioned one it is marked as such in the page
   markup and disclosed on the page; see the
-  <a href="{cfg['base_path']}/disclosure/">affiliate disclosure</a>.
+  <a href="{base}/disclosure/">affiliate disclosure</a>.
 </p>
 
 <h2>Hosting</h2>

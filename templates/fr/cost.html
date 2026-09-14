@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% block content %}
+
+<p class="kicker">{{ tool.name }} &middot; {{ category.name }}</p>
+<h1>Auto-héberger {{ tool.name }} pour {{ size.users }} {{ 'personne' if size.users == 1 else 'personnes' }} : le coût</h1>
+
+<p class="lead">
+  Pour {{ size.users }} {{ 'utilisateur' if size.users == 1 else 'utilisateurs' }}, {{ tool.name }} demande
+  {{ gb(sizing.ram_gb) }} de mémoire et {{ gb(sizing.disk_gb) }} de disque. Cela tient sur l'offre
+  {{ plan.plan.name }} chez {{ plan.provider_name }} pour {{ money(plan.price_usd_month) }} par mois.
+  Ajoutez les sauvegardes et le temps d'entretien, et le vrai chiffre est de
+  <strong>{{ money(total_month) }} par mois</strong>.
+</p>
+
+<ul class="sizes">
+  {% for s in all_sizes %}
+  <li><a href="{{ base }}/cost/{{ tool.slug }}/{{ s.slug }}/" {% if s.slug == size.slug %}aria-current="page"{% endif %}>{{ s.label }}</a></li>
+  {% endfor %}
+</ul>
+
+<dl class="figures">
+  <div class="fig"><dt>Serveur</dt><dd>{{ money(plan.price_usd_month) }}<small>{{ plan.plan.name }}, {{ plan.plan.vcpu }} vCPU</small></dd></div>
+  <div class="fig"><dt>Sauvegardes</dt><dd>{{ money(backup_month) }}<small>snapshots de l'hébergeur</small></dd></div>
+  <div class="fig"><dt>Votre temps</dt><dd>{{ money(labour_month) }}<small>{{ hours(maint_hours) }} h par mois à {{ money(cfg.tco_model.engineer_hourly_usd) }}</small></dd></div>
+  <div class="fig"><dt>Tout compris</dt><dd>{{ money(total_month) }}<small>par mois</small></dd></div>
+  <div class="fig"><dt>Mise en place</dt><dd>{{ money(setup_once) }}<small>environ {{ hours(setup_hours) }} {{ 'heure' if setup_hours < 2 else 'heures' }}, une fois</small></dd></div>
+</dl>
+<p class="srcline">Montants affichés en euros, convertis depuis le dollar au taux daté publié dans la <a href="{{ base }}/methodology/">méthodologie</a>.</p>
+
+<h2>Comment on arrive à {{ gb(sizing.ram_gb) }}</h2>
+<p>
+  {{ gb(tool.base_ram_gb) }} couvrent la pile au repos, avec chaque conteneur fourni par le projet.
+  {{ size.users }} {{ 'utilisateur' if size.users == 1 else 'utilisateurs' }} à {{ number(tool.ram_per_user_mb) }} Mo
+  chacun ajoutent {{ gb(per_user_ram_gb) }}, soit {{ gb(sizing.raw_ram_gb) }}. En ajoutant
+  {{ (sizing.headroom_ratio * 100) | round | int }} % de marge pour que la machine ne tourne pas à sa limite, on obtient
+  <strong>{{ gb(sizing.ram_gb) }}</strong>, et la plus petite offre qui atteint ce niveau est
+  {{ plan.plan.name }}, avec {{ gb(plan.plan.ram_gb) }}.
+</p>
+<p>
+  Le disque suit la même logique : {{ gb(tool.base_disk_gb) }} au départ, plus
+  {{ loc.compact(tool.disk_per_user_gb) }} Go par utilisateur, soit <strong>{{ gb(sizing.disk_gb) }}</strong> pour les
+  {{ gb(plan.plan.disk_gb) }} inclus dans l'offre.
+  {% if tool.disk_per_user_gb >= 5 %}
+  Cet outil consomme beaucoup de stockage par utilisateur : c'est le disque, plus que la mémoire, qui imposera votre prochaine montée en gamme.
+  {% endif %}
+</p>
+<p>{{ tool.sizing_note }}</p>
+
+<h2>Sur trois ans</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Période</th><th class="num">Serveur et sauvegardes</th><th class="num">Votre temps</th><th class="num">Total</th></tr></thead>
+  <tbody>
+    <tr><th scope="row">Mise en place, une fois</th><td class="num">&mdash;</td><td class="num">{{ money(setup_once) }}</td><td class="num">{{ money(setup_once) }}</td></tr>
+    <tr><th scope="row">Par mois</th><td class="num">{{ money(no_labour_month) }}</td><td class="num">{{ money(labour_month) }}</td><td class="num">{{ money(total_month) }}</td></tr>
+    <tr><th scope="row">Première année</th><td class="num">{{ money(no_labour_month * 12) }}</td><td class="num">{{ money(setup_once + labour_month * 12) }}</td><td class="num">{{ money(setup_once + total_month * 12) }}</td></tr>
+  </tbody>
+  <tfoot>
+    <tr><td>{{ cfg.tco_model.horizon_months }} mois</td><td class="num">{{ money(no_labour_month * cfg.tco_model.horizon_months) }}</td><td class="num">{{ money(setup_once + labour_month * cfg.tco_model.horizon_months) }}</td><td class="num">{{ money(setup_once + total_month * cfg.tco_model.horizon_months) }}</td></tr>
+  </tfoot>
+</table>
+</div>
+<p class="srcline">
+  Si vous ne comptez pas votre temps, le chiffre sur {{ cfg.tco_model.horizon_months }} mois est de
+  {{ money(no_labour_month * cfg.tco_model.horizon_months) }}. Les deux chiffres sont réels ; lequel s'applique dépend
+  de si ces heures auraient pu être facturées ailleurs.
+</p>
+
+{% if comparisons %}
+<h2>Ce que vous paieriez à la place pour cette taille</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Produit commercial</th><th>Offre</th><th class="num">Par mois</th><th class="num">Écart</th><th></th></tr></thead>
+  <tbody>
+  {% for c in comparisons %}
+    <tr>
+      <th scope="row">{{ c.saas.name }}</th>
+      <td>{{ c.tco.saas_tier.name }}</td>
+      <td class="num">{{ money(c.tco.saas_usd_month) }}</td>
+      <td class="num {{ 'pos' if c.tco.saas_usd_month > total_month else 'neg' }}">
+        {{ money(c.tco.saas_usd_month - total_month) }}
+      </td>
+      <td><a href="{{ base }}/vs/{{ c.saas.slug }}-vs-{{ tool.slug }}/">détail</a></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+<p class="srcline">Un écart positif signifie que l'auto-hébergement est moins cher pour cette taille, votre temps déjà compté.</p>
+{% endif %}
+
+{% include "partials/hosting_cta.html" %}
+
+{% include "partials/lead_capture.html" %}
+
+<h2>Autres tailles et pages liées</h2>
+<ul class="linkgrid">
+  {% if prev_size %}<li><a href="{{ base }}/cost/{{ tool.slug }}/{{ prev_size.slug }}/">{{ tool.name }} pour {{ prev_size.label }}</a></li>{% endif %}
+  {% if next_size %}<li><a href="{{ base }}/cost/{{ tool.slug }}/{{ next_size.slug }}/">{{ tool.name }} pour {{ next_size.label }}</a></li>{% endif %}
+  <li><a href="{{ base }}/self-host/{{ tool.slug }}/">{{ tool.name }} : toutes les tailles d'équipe</a></li>
+  <li><a href="{{ base }}/category/{{ category.slug }}/">{{ category.name }} : comparatif</a></li>
+  <li><a href="{{ base }}/methodology/">Comment ces chiffres sont calculés</a></li>
+</ul>
+
+{% endblock %}

@@ -1,0 +1,52 @@
+{# Bloc de verdict. Le ton suit le verdict calculé, jamais un texte écrit à la main. #}
+<div class="verdict {% if ref.verdict == 'saas_cheaper' %}is-saas{% elif ref.verdict != 'selfhost_cheaper' %}is-wash{% endif %}">
+  <p class="lede">
+  {%- if ref.is_free_saas %}
+    <b>Il n'y a pas de facture à battre ici.</b> {{ saas.name }} ne coûte rien pour {{ ref.label }} : faire tourner
+    {{ tool.name }} vous-même vous coûte donc <b>{{ money(ref.selfhost_usd_month) }} par mois</b> de plus, pas de moins.
+    La raison de le faire, c'est la maîtrise des données, pas le prix.
+  {%- elif ref.verdict == 'selfhost_cheaper' %}
+    Pour {{ ref.label }}, auto-héberger {{ tool.name }} coûte <b>{{ money(ref.selfhost_usd_month) }} par mois</b>
+    contre <b>{{ money(ref.saas_usd_month) }}</b> pour {{ saas.name }}. Vous êtes gagnant au bout de
+    <b>{{ months(ref.breakeven_months) }}</b> et économisez {{ money(ref.savings_total) }} sur
+    {{ cfg.tco_model.horizon_months }} mois, votre temps déjà compté.
+  {%- elif ref.verdict == 'selfhost_cheaper_only_without_labour' %}
+    Pour {{ ref.label }}, les deux options se valent presque. Le serveur coûte
+    <b>{{ money(ref.selfhost_usd_month_no_labour) }} par mois</b> contre {{ money(ref.saas_usd_month) }}
+    pour {{ saas.name }}, mais ajoutez {{ hours(ref.maintenance_hours_month) }} {{ 'heure' if ref.maintenance_hours_month < 2 else 'heures' }} d'attention par mois et
+    l'auto-hébergement atteint <b>{{ money(ref.selfhost_usd_month) }}</b> : il perd.
+    Il ne gagne que si votre temps est vraiment gratuit.
+  {%- else %}
+    Pour {{ ref.label }}, {{ saas.name }} est l'option la moins chère : <b>{{ money(ref.saas_usd_month) }} par mois</b>
+    contre <b>{{ money(ref.selfhost_usd_month) }}</b> pour faire tourner {{ tool.name }} vous-même. À cette taille,
+    l'auto-hébergement vous achète du contrôle, pas des économies.
+  {%- endif %}
+  </p>
+
+  <dl class="figures">
+    <div class="fig">
+      <dt>{{ saas.name }}</dt>
+      <dd>{{ money(ref.saas_usd_month) }}<small>par mois, {{ ref.saas_tier.name }}</small></dd>
+    </div>
+    <div class="fig">
+      <dt>Auto-hébergé</dt>
+      <dd>{{ money(ref.selfhost_usd_month) }}<small>serveur, sauvegardes et votre temps</small></dd>
+    </div>
+    <div class="fig">
+      <dt>Serveur et sauvegardes</dt>
+      <dd>{{ money(ref.selfhost_usd_month_no_labour) }}<small>{{ ref.plan.plan.name }}, {{ gb(ref.plan.plan.ram_gb) }} de RAM</small></dd>
+    </div>
+    <div class="fig">
+      <dt>Écart sur {{ cfg.tco_model.horizon_months }} mois</dt>
+      <dd class="{{ 'pos' if ref.savings_total > 0 else 'neg' }}">
+        {{ money(ref.savings_total | abs) }}
+        <small>{{ 'économisés en auto-hébergeant' if ref.savings_total > 0 else 'de surcoût en auto-hébergeant' }}</small>
+      </dd>
+    </div>
+    <div class="fig">
+      <dt>Seuil de rentabilité</dt>
+      <dd>{{ months(ref.breakeven_months) }}<small>après {{ money(ref.setup_usd_once) }} de mise en place</small></dd>
+    </div>
+  </dl>
+</div>
+<p class="srcline">Montants affichés en euros, convertis depuis le dollar au taux daté de la BCE publié dans la <a href="{{ base }}/methodology/">méthodologie</a>.</p>

@@ -1,0 +1,220 @@
+{% extends "base.html" %}
+{% block content %}
+
+<p class="kicker">{{ category.name }} &middot; comparatif de coûts</p>
+<h1>{{ saas.name }} ou {{ tool.name }} auto-hébergé : ce que coûte vraiment chaque option</h1>
+
+<p class="lead">
+  {{ saas.name }} à l'offre {{ ref.saas_tier.name }}, face à {{ tool.name }} installé sur le plus petit serveur
+  qui lui convient. Chaque chiffre ci-dessous est calculé à partir du modèle de dimensionnement et des prix datés
+  en bas de page, et inclut ce que la plupart des comparatifs oublient : votre propre temps.
+</p>
+
+{% include "partials/verdict.html" %}
+
+<h2>La même comparaison pour chaque taille d'équipe</h2>
+<p>
+  L'auto-hébergement a un coût plancher et presque pas de pente, alors qu'un logiciel facturé au siège n'a pas de
+  plancher mais une pente raide. Tout est là, et c'est pourquoi la réponse bascule quelque part dans ce tableau au
+  lieu d'être la même pour tout le monde.
+</p>
+
+<div class="tablewrap">
+<table>
+  <caption>{{ saas.name }} {{ ref.saas_tier.name }} face à {{ tool.name }} auto-hébergé, par mois, sur {{ cfg.tco_model.horizon_months }} mois. L'auto-hébergement inclut le serveur, les sauvegardes et le temps de maintenance à {{ money(cfg.tco_model.engineer_hourly_usd) }} de l'heure.</caption>
+  <thead>
+    <tr>
+      <th>Taille de l'équipe</th>
+      <th class="num">{{ saas.name }}</th>
+      <th class="num">Auto-hébergé</th>
+      <th class="num">Sans compter votre temps</th>
+      <th>Serveur nécessaire</th>
+      <th class="num">Écart sur {{ cfg.tco_model.horizon_months }} mois</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for row in rows %}
+    <tr>
+      <th scope="row">{% if row.users == ref.users %}<strong>{{ row.label }}</strong>{% else %}<a href="{{ base }}/cost/{{ tool.slug }}/{{ row.slug }}/">{{ row.label }}</a>{% endif %}</th>
+      <td class="num">{{ row.saas }}</td>
+      <td class="num">{{ row.sh }}</td>
+      <td class="num">{{ row.sh_nl }}</td>
+      <td>{{ row.plan }}</td>
+      <td class="num {{ 'pos' if row.delta_pos else 'neg' }}">{{ row.delta }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+
+<p class="srcline">
+  {% if flip_at %}L'auto-hébergement devient avantageux à partir d'environ <strong>{{ flip_at }}</strong>.
+  {% elif never_flips %}Une fois votre temps compté, l'auto-hébergement n'est jamais gagnant, quelle que soit la taille d'équipe de cette page.
+  {% else %}L'auto-hébergement est gagnant pour toutes les tailles d'équipe présentées.{% endif %}
+</p>
+
+<h2>Où part vraiment l'argent de l'auto-hébergement pour {{ ref.label }}</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Poste</th><th class="num">Par mois</th><th>De quoi il s'agit</th></tr></thead>
+  <tbody>
+    <tr>
+      <th scope="row">Serveur</th>
+      <td class="num">{{ money(ref.server_usd_month) }}</td>
+      <td>{{ ref.plan.plan.name }} chez {{ ref.plan.provider_name }} : {{ ref.plan.plan.vcpu }} vCPU, {{ gb(ref.plan.plan.ram_gb) }} de RAM, {{ gb(ref.plan.plan.disk_gb) }} de disque</td>
+    </tr>
+    <tr>
+      <th scope="row">Sauvegardes</th>
+      <td class="num">{{ money(ref.backup_usd_month) }}</td>
+      <td>Snapshots de l'hébergeur à {{ (cfg.tco_model.backup_cost_ratio * 100) | round | int }} % du prix du serveur. S'en passer n'est pas une économie, c'est un pari.</td>
+    </tr>
+    <tr>
+      <th scope="row">Votre temps</th>
+      <td class="num">{{ money(ref.labour_usd_month) }}</td>
+      <td>{{ hours(ref.maintenance_hours_month) }} {{ 'heure' if ref.maintenance_hours_month < 2 else 'heures' }} par mois de mises à jour, de montées de version et de pannes occasionnelles, à {{ money(cfg.tco_model.engineer_hourly_usd) }} de l'heure</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr><td>Total</td><td class="num">{{ money(ref.selfhost_usd_month) }}</td><td>Plus {{ money(ref.setup_usd_once) }} une seule fois, pour environ {{ hours(ref.setup_hours) }} {{ 'heure' if ref.setup_hours < 2 else 'heures' }} de mise en place</td></tr>
+  </tfoot>
+</table>
+</div>
+
+{% set f = ref.saas_facts %}
+<p>
+  Pour cette taille d'équipe, {{ saas.name }} coûte <strong>{{ money(ref.saas_usd_month) }}</strong> par mois.
+  {% if f.kind == 'free' %}Aucune licence à payer à l'offre standard.
+  {% elif f.kind == 'free_cap' %}L'offre gratuite de {{ saas.name }} couvre les équipes jusqu'à {{ f.free_cap }} utilisateurs : une équipe de {{ f.users }} ne paie donc rien pour la licence.
+  {% elif f.kind == 'flat' %}{{ saas.name }} {{ f.tier }} est un forfait de {{ money(f.usd) }} par mois à cette offre, quel que soit le nombre de sièges.
+  {% else %}{{ f.seats }} sièges à {{ money(f.per_usd) }} chacun{% if f.min_seats %}, car l'offre {{ f.tier }} impose un minimum de {{ f.min_seats }} sièges{% endif %}{% if f.floor_usd is not none %}, relevé à {{ money(f.floor_usd) }} par mois car {{ saas.name }} exige un contrat minimum de ce montant{% endif %}.{% if f.banded %} {{ saas.name }} baisse le prix par utilisateur quand l'équipe grandit ; c'est le tarif affiché pour une équipe de cette taille.{% endif %}
+  {% endif %}
+  {% if f.kind in ('flat', 'per_seat') %}{% if f.basis == 'annual' %}C'est le tarif en facturation annuelle, celui qu'affichait la page de l'éditeur ; payer au mois coûte plus cher.{% elif f.basis == 'unstated' %}La page de l'éditeur ne précisait pas s'il s'agit du tarif mensuel ou annuel.{% endif %}
+  {% if f.currency != 'USD' %}L'éditeur affichait ses prix en {{ f.currency }}, convertis au taux daté indiqué dans la méthodologie.{% endif %}{% endif %}
+</p>
+
+{% if saas.free_tier_note %}
+<div class="note caution">
+  <h3>À lire avant de chiffrer quoi que ce soit</h3>
+  <p>{{ saas.free_tier_note }}</p>
+</div>
+{% endif %}
+
+<h2>Ce dont {{ tool.name }} a besoin pour {{ ref.label }}</h2>
+<p>
+  {{ tool.sizing_note }}
+</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Ressource</th><th class="num">Nécessaire</th><th>Comment c'est calculé</th></tr></thead>
+  <tbody>
+    <tr><th scope="row">Mémoire</th><td class="num">{{ gb(ref.sizing.ram_gb) }}</td>
+      <td>{{ gb(tool.base_ram_gb) }} pour la pile au repos, plus {{ number(tool.ram_per_user_mb) }} Mo par utilisateur actif, plus {{ (ref.sizing.headroom_ratio * 100) | round | int }} % de marge</td></tr>
+    <tr><th scope="row">Disque</th><td class="num">{{ gb(ref.sizing.disk_gb) }}</td>
+      <td>{{ gb(tool.base_disk_gb) }} de base, plus {{ loc.compact(tool.disk_per_user_gb) }} Go par utilisateur</td></tr>
+    <tr><th scope="row">vCPU</th><td class="num">{{ ref.sizing.vcpu }}</td>
+      <td>La base recommandée par le projet. Pour cette charge, la mémoire s'épuise avant le processeur.</td></tr>
+  </tbody>
+</table>
+</div>
+
+{% if tool.sizing_basis == 'estimate' %}
+<div class="note">
+  <p><strong>Ces valeurs de base sont une estimation.</strong> {{ tool.name }} ne publie pas de configuration
+  minimale que nous pourrions citer : la mémoire et le disque de base sont donc déduits des services de son fichier
+  Docker Compose de référence. Prenez-les comme point de départ et surveillez les métriques de la première semaine.</p>
+</div>
+{% endif %}
+
+<h2>Ce que vous perdez, sans détour</h2>
+<ul>
+  <li><strong>La disponibilité devient votre affaire.</strong> {{ saas.name }} a une équipe d'astreinte. En auto-hébergement, une mise à jour ratée un vendredi à 18 h, c'est votre soirée.</li>
+  <li><strong>Une sauvegarde n'existe que si vous avez testé sa restauration.</strong> La ligne de {{ money(ref.backup_usd_month) }} ci-dessus achète des snapshots, pas une reprise répétée.</li>
+  <li><strong>{{ tool.name }} est {% if tool.difficulty == 'easy' %}léger : un seul conteneur, et rien à planifier au-delà des mises à jour d'image{% elif tool.difficulty == 'medium' %}une pile multi-conteneurs avec une base de données à sauvegarder vous-même{% else %}lourd à exploiter : plusieurs services avec état et une montée de version qui peut perdre des données si vous la bâclez{% endif %}.</strong> C'est pourquoi la ligne de maintenance est de {{ hours(ref.maintenance_hours_month) }} {{ 'heure' if ref.maintenance_hours_month < 2 else 'heures' }} par mois et non de zéro.</li>
+  {% if tool.licence_caveat %}<li><strong>Licence :</strong> {{ tool.licence_caveat }}</li>{% endif %}
+  <li><strong>La parité fonctionnelle n'est jamais parfaite.</strong> {{ tool.name }} couvre l'essentiel de l'usage de {{ saas.name }} ; c'est sur la longue traîne des intégrations et des contrôles d'entreprise que l'écart se voit.</li>
+</ul>
+
+{% if ref.verdict == 'saas_cheaper' or ref.verdict == 'selfhost_cheaper_only_without_labour' %}
+<div class="note caution">
+  <h3>Nous n'allons pas vous conseiller d'auto-héberger ceci</h3>
+  <p>
+    Pour {{ ref.label }}, {{ saas.name }} l'emporte sur le coût dès que votre temps est compté à
+    {{ money(cfg.tco_model.engineer_hourly_usd) }} de l'heure. Auto-héberger {{ tool.name }} ici ne se justifie
+    que pour des raisons absentes de la facture : la localisation des données, l'indépendance vis-à-vis d'un
+    éditeur, ou l'envie de le faire tourner vous-même. Ce sont de vraies raisons. Économiser de l'argent n'en fait
+    pas partie à cette taille.
+  </p>
+</div>
+{% endif %}
+
+{% include "partials/hosting_cta.html" %}
+
+<h2>{{ tool.name }} en bref</h2>
+<div class="tablewrap">
+<table>
+  <tbody>
+    <tr><th scope="row">Licence</th><td>{{ tool.license | default('voir le projet', true) }}{% if tool.license_spdx == 'NOASSERTION' %} <span class="badge warn">licence open source non standard</span>{% endif %}</td></tr>
+    <tr><th scope="row">Langage</th><td>{{ tool.language }}</td></tr>
+    {% if tool.stars %}<tr><th scope="row">Étoiles GitHub</th><td>{{ number(tool.stars) }}, vérifié le {{ tool.github_checked_on }}</td></tr>{% endif %}
+    {% if tool.latest_release %}<tr><th scope="row">Dernière version</th><td>{{ tool.latest_release }}</td></tr>{% endif %}
+    {% if tool.last_push %}<tr><th scope="row">Dernier commit</th><td>{{ tool.last_push }}</td></tr>{% endif %}
+    <tr><th scope="row">Images Docker officielles</th><td>{{ 'Oui' if tool.docker else 'Non' }}</td></tr>
+    <tr><th scope="row">Projet</th><td><a href="{{ tool.site }}" rel="nofollow noopener">{{ tool.site | replace('https://','') }}</a>{% if tool.repo %} &middot; <a href="https://github.com/{{ tool.repo }}" rel="nofollow noopener">{{ tool.repo }}</a>{% elif tool.repo_url %} &middot; <a href="{{ tool.repo_url }}" rel="nofollow noopener">code source</a>{% endif %}</td></tr>
+  </tbody>
+</table>
+</div>
+
+{% include "partials/lead_capture.html" %}
+
+<h2>Chaque chiffre de cette page, et sa source</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Donnée</th><th>Valeur utilisée</th><th>Source</th><th>Relevé le</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>{{ saas.name }} {{ ref.saas_tier.name }}</td>
+      <td>{{ saas_price_label }}</td>
+      <td><a href="{{ saas.pricing_url }}" rel="nofollow noopener">page tarifaire de l'éditeur</a></td>
+      <td>{{ saas.verified_on }}</td>
+    </tr>
+    <tr>
+      <td>{{ ref.plan.provider_name }} {{ ref.plan.plan.name }}</td>
+      <td>{{ money(ref.server_usd_month) }} par mois</td>
+      <td><a href="{{ providers[ref.plan.provider_slug].pricing_url }}" rel="nofollow noopener">page tarifaire de l'hébergeur</a></td>
+      <td>{{ providers[ref.plan.provider_slug].verified_on }}</td>
+    </tr>
+    <tr>
+      <td>Taux de change</td>
+      <td>1 EUR = {{ number(cfg.fx.rates_to_usd.EUR, 4) }} USD</td>
+      <td><a href="{{ cfg.fx.source_url }}" rel="nofollow noopener">{{ cfg.fx.source_name }}</a></td>
+      <td>{{ cfg.fx.on }}</td>
+    </tr>
+    <tr>
+      <td>Temps d'ingénieur</td>
+      <td>{{ money(cfg.tco_model.engineer_hourly_usd) }} de l'heure</td>
+      <td><a href="{{ base }}/methodology/">notre hypothèse publiée</a></td>
+      <td>&mdash;</td>
+    </tr>
+    <tr>
+      <td>Dimensionnement de {{ tool.name }}</td>
+      <td>{{ gb(tool.base_ram_gb) }} de base, {{ number(tool.ram_per_user_mb) }} Mo par utilisateur</td>
+      <td>{% if tool.sizing_basis == 'vendor_docs' %}documentation du projet{% else %}déduit de sa pile Compose de référence{% endif %}</td>
+      <td>&mdash;</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p class="srcline">
+  Les prix changent. Si l'éditeur a modifié les siens depuis le {{ saas.verified_on }}, les chiffres ci-dessus sont
+  périmés et les liens sources font foi, pas nous. <a href="{{ base }}/methodology/">Notre façon de gérer cela</a>.
+</p>
+
+<h2>À voir aussi</h2>
+<ul class="linkgrid">
+  <li><a href="{{ base }}/self-host/{{ tool.slug }}/">Auto-héberger {{ tool.name }} : toutes les tailles d'équipe</a></li>
+  <li><a href="{{ base }}/alternatives/{{ saas.slug }}/">Toutes les alternatives auto-hébergées à {{ saas.name }}</a></li>
+  {% for sib in siblings %}<li><a href="{{ base }}{{ sib.url }}">{{ sib.name }}</a></li>{% endfor %}
+  <li><a href="{{ base }}/category/{{ category.slug }}/">{{ category.name }} : comparatif</a></li>
+</ul>
+
+{% endblock %}

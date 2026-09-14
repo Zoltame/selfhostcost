@@ -8,6 +8,13 @@ Static site generator for SelfHostCost.
 Writes to docs/, which is what GitHub Pages serves. No build step beyond this
 script and no JavaScript is required for any page to work.
 
+Languages: every language listed in site.config.json "languages" is rendered
+from the same computed figures. English sits at the site root and every other
+language under /<lang>/, with identical slugs so hreflang alternates always
+point at a page that exists. Page prose lives in templates/<lang>/, shared
+structure in templates/shared/, short strings in i18n/ui/<lang>.json and
+translated dataset text in data/i18n/<lang>.json.
+
 Publication gates, in order:
   1. A tool must be in the current wave.
   2. A comparison page additionally requires the commercial product's price to
@@ -30,71 +37,91 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from markupsafe import Markup
 
+from lib.i18n import DEFAULT_LANG, LANGUAGES, Locale, localize_dataset
 from lib.model import (
-    Dataset, compute_tco, gb, load_dataset, money, months, price_trust,
-    priced_providers, saas_monthly, saas_tier, size_for, cheapest_plan, tier_native,
+    Dataset, cheapest_plan, compute_tco, load_dataset, price_trust, priced_providers,
+    saas_monthly, saas_tier, size_for, tier_native,
 )
 import lib.content as content
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "docs"
+TEMPLATES = ROOT / "templates"
 TODAY = date.today().isoformat()
+YEAR = date.today().year
 
 
 # --------------------------------------------------------------------------
 # helpers
 # --------------------------------------------------------------------------
 
-def jsonld_article(cfg: dict, page: dict, crumbs: list[dict]) -> str:
+def jsonld_article(cfg: dict, page: dict, crumbs: list[dict], loc: Locale, multilingual: bool) -> str:
     base_url = cfg["base_url"]
+    article = {
+        "@type": "Article",
+        "headline": page["title"][:110],
+        "description": page["description"],
+        "url": base_url + page["url"],
+        "datePublished": TODAY,
+        "dateModified": TODAY,
+        "isAccessibleForFree": True,
+        "author": {"@type": "Organization", "name": cfg["brand"], "url": base_url + "/"},
+        "publisher": {"@type": "Organization", "name": cfg["brand"], "url": base_url + "/"},
+    }
+    if multilingual:
+        article["inLanguage"] = loc.lang
     graph = [
         {
             "@type": "BreadcrumbList",
             "itemListElement": [
                 {"@type": "ListItem", "position": i + 1, "name": c["name"],
-                 "item": base_url + c["url"] if c.get("url") else base_url + page["url"]}
+                 "item": base_url + loc.path(c["url"]) if c.get("url") else base_url + page["url"]}
                 for i, c in enumerate(crumbs)
             ],
         },
-        {
-            "@type": "Article",
-            "headline": page["title"][:110],
-            "description": page["description"],
-            "url": base_url + page["url"],
-            "datePublished": TODAY,
-            "dateModified": TODAY,
-            "isAccessibleForFree": True,
-            "author": {"@type": "Organization", "name": cfg["brand"], "url": base_url + "/"},
-            "publisher": {"@type": "Organization", "name": cfg["brand"], "url": base_url + "/"},
-        },
+        article,
     ]
     return json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False)
 
 
 class Builder:
-    def __init__(self, ds: Dataset, strict: bool, wave: int):
-        self.ds = ds
+    """Renders every page of the site in one language."""
+
+    def __init__(self, ds: Dataset, strict: bool, wave: int, lang: str, languages: list[str]):
+        self.lang = lang
+        self.languages = languages
+        self.multilingual = len(languages) > 1
+        self.loc = Locale(lang, ds.config)
+        self.ds, missing = localize_dataset(ds, lang)
         self.cfg = ds.config
         self.strict = strict
         self.wave = wave
-        self.base = self.cfg["base_path"].rstrip("/")
+
+        prefix = self.loc.meta["prefix"]
+        self.root = self.cfg["base_path"].rstrip("/")
+        self.base = self.root + prefix
+        self.out = OUT / prefix.lstrip("/") if prefix else OUT
+
         self.ref_users = int(self.cfg.get("reference_users", 10))
-        self.sizes = self.cfg["team_sizes"]
+        self.sizes = [dict(s, label=self.loc.size_label(s["users"])) for s in self.cfg["team_sizes"]]
         self.ref_size = next(s for s in self.sizes if s["users"] == self.ref_users)
-        self.urls: list[tuple[str, str]] = []          # (url, priority)
+        self.urls: list[tuple[str, str]] = []          # (language-neutral url, priority)
         self.skipped: list[dict] = []
         self.affiliate_on = self._affiliate_on()
+        self.missing_data = [m for m in missing if self._is_live_field(m)]
 
         self.env = Environment(
-            loader=FileSystemLoader(str(ROOT / "templates")),
+            loader=FileSystemLoader([str(TEMPLATES / lang), str(TEMPLATES / "shared")]),
             autoescape=select_autoescape(["html"]),
             trim_blocks=True, lstrip_blocks=True,
         )
+        L = self.loc
         self.env.globals.update(
-            cfg=self.cfg, base=self.base, money=money, gb=gb, months=months,
+            cfg=self.cfg, base=self.base, root=self.root, lang=lang, loc=L, t=L.t,
+            money=L.money, gb=L.gb, months=L.months, hours=L.hours, number=L.number,
             nav_categories=[c for c in self.ds.categories.values() if c["wave"] <= self.wave],
             providers=self.ds.providers, hosting_link=self.hosting_link,
-            affiliate_on=self.affiliate_on,
+            affiliate_on=self.affiliate_on, lead_form_id=self._lead_form_id(),
         )
 
     # ---- config-driven links -------------------------------------------
@@ -104,6 +131,22 @@ class Builder:
         if not aff.get("enabled"):
             return False
         return any(p.get("id") for p in aff.get("providers", {}).values())
+
+    def _lead_form_id(self) -> str | None:
+        """The Tally form for this language, or None so no form is rendered.
+
+        A language without its own form gets no form at all, rather than an
+        English form that redirects to the English checklist.
+        """
+        lc = self.cfg.get("lead_capture", {})
+        if not lc.get("enabled"):
+            return None
+        ids = lc.get("form_ids") or {}
+        if ids.get(self.lang):
+            return ids[self.lang]
+        if self.lang == DEFAULT_LANG:
+            return lc.get("form_id") or None
+        return None
 
     def hosting_link(self, provider_slug: str) -> str:
         """Affiliate URL when an ID is configured, otherwise the plain vendor page.
@@ -123,21 +166,48 @@ class Builder:
     def unpriced_provider_names(self) -> list[str]:
         return [p["name"] for p in self.ds.providers.values() if p["price_status"] != "verified"]
 
+    def _is_live_field(self, path: str) -> bool:
+        section, slug = path.split(".")[:2]
+        if section == "categories":
+            return self.ds.categories[slug]["wave"] <= self.wave
+        if section == "tools":
+            return self.ds.tools[slug].get("wave", 1) <= self.wave
+        if section == "saas":
+            p = self.ds.saas[slug]
+            return p.get("wave", 1) <= self.wave and p.get("price_status") == "verified"
+        return True
+
     # ---- writing --------------------------------------------------------
 
     def write(self, url: str, template: str, ctx: dict, priority: str = "0.6") -> None:
         page = ctx["page"]
-        page.setdefault("url", url)
+        page["path"] = url
+        page["url"] = self.loc.path(url)
+        for key in ("prev_url", "next_url"):
+            if page.get(key):
+                page[key] = self.loc.path(page[key])
+        if self.multilingual:
+            base_url = self.cfg["base_url"]
+            page["alternates"] = [
+                {"lang": l, "name": LANGUAGES[l]["name"], "current": l == self.lang,
+                 "href": base_url + LANGUAGES[l]["prefix"] + url}
+                for l in self.languages
+            ]
+            page["x_default"] = base_url + LANGUAGES[DEFAULT_LANG]["prefix"] + url
+            page["og_locale"] = self.loc.meta["og_locale"]
         if page.get("crumbs"):
-            page["jsonld"] = Markup(jsonld_article(self.cfg, page, page["crumbs"]))
+            page["jsonld"] = Markup(jsonld_article(self.cfg, page, page["crumbs"], self.loc, self.multilingual))
         html = self.env.get_template(template).render(**ctx)
-        dest = OUT / (url.lstrip("/") or "") / "index.html" if url != "/" else OUT / "index.html"
+        dest = self.out / url.lstrip("/") / "index.html" if url != "/" else self.out / "index.html"
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(html, encoding="utf-8")
         self.urls.append((url, priority))
 
     def skip(self, kind: str, ident: str, reason: str) -> None:
         self.skipped.append({"kind": kind, "id": ident, "reason": reason})
+
+    def crumb_home(self) -> dict:
+        return {"name": self.loc.t("crumb.home"), "url": "/"}
 
     # ---- gating ---------------------------------------------------------
 
@@ -179,15 +249,41 @@ class Builder:
         _, _, cur = tier_native(saas_tier(product))
         return cur != "USD"
 
+    def price_label(self, product: dict, tier: dict) -> str:
+        L = self.loc
+        per, flat, cur = tier_native(tier)
+        if product["billing_model"] == "free":
+            label = L.t("price_label.free")
+        elif tier.get("seat_bands"):
+            parts = []
+            for band in tier["seat_bands"]:
+                b_per, _, b_cur = tier_native(band)
+                price = L.native(b_per, b_cur)
+                cap = band.get("max_seats")
+                parts.append(L.t("price_label.band", price=price, cap=cap) if cap else L.t("price_label.band_last", price=price))
+            label = L.t("price_label.bands", bands=L.join(parts))
+        elif per is not None:
+            label = L.t("price_label.per_seat", price=L.native(per, cur))
+        elif flat is not None:
+            label = L.t("price_label.flat", price=L.native(flat, cur))
+        else:
+            label = L.t("price_label.unknown")
+        if tier.get("min_month") is not None:
+            label += L.t("price_label.min", price=L.native(float(tier["min_month"]), cur))
+        if product.get("free_up_to_seats"):
+            label += L.t("price_label.free_cap", n=product["free_up_to_seats"])
+        return label
+
     # ---- page builders --------------------------------------------------
 
     def build_comparisons(self, pairs) -> list[dict]:
+        L = self.loc
         built = []
         by_cat: dict[str, list[dict]] = {}
         for tool, product in pairs:
             slug = f"{product['slug']}-vs-{tool['slug']}"
             by_cat.setdefault(tool["category"], []).append(
-                {"url": f"/vs/{slug}/", "name": f"{product['name']} vs {tool['name']}"}
+                {"url": f"/vs/{slug}/", "name": L.t("vs.crumb", saas=product["name"], tool=tool["name"])}
             )
 
         for tool, product in pairs:
@@ -206,47 +302,24 @@ class Builder:
                     flip_at = s["label"]
                 rows.append({
                     "users": s["users"], "slug": s["slug"], "label": s["label"],
-                    "saas": money(r.saas_usd_month), "sh": money(r.selfhost_usd_month),
-                    "sh_nl": money(r.selfhost_usd_month_no_labour),
-                    "plan": f"{r.plan.plan['name']} ({gb(r.plan.plan['ram_gb'])})",
-                    "delta": ("+" if r.savings_total > 0 else "") + money(r.savings_total),
+                    "saas": L.money(r.saas_usd_month), "sh": L.money(r.selfhost_usd_month),
+                    "sh_nl": L.money(r.selfhost_usd_month_no_labour),
+                    "plan": L.t("vs.plan_cell", plan=r.plan.plan["name"], ram=L.gb(r.plan.plan["ram_gb"])),
+                    "delta": ("+" if r.savings_total > 0 else "") + L.money(r.savings_total),
                     "delta_pos": r.savings_total > 0,
                 })
 
-            tier = ref.saas_tier
-            per, flat, cur = tier_native(tier)
-            if product["billing_model"] == "free":
-                price_label = "free at the standard tier"
-            elif tier.get("seat_bands"):
-                parts = []
-                for band in tier["seat_bands"]:
-                    b_per, _, b_cur = tier_native(band)
-                    cap = band.get("max_seats")
-                    parts.append(f"{b_cur} {b_per:,.2f} per seat" + (f" up to {cap} users" if cap else " above that"))
-                price_label = ", ".join(parts) + ", per month"
-            elif per is not None:
-                price_label = f"{cur} {per:,.2f} per seat per month"
-            elif flat is not None:
-                price_label = f"{cur} {flat:,.2f} per month"
-            else:
-                price_label = "see the vendor pricing page"
-            if tier.get("min_month") is not None:
-                price_label += f", with a minimum of {cur} {float(tier['min_month']):,.2f} per month"
-            if product.get("free_up_to_seats"):
-                price_label += f"; free for up to {product['free_up_to_seats']} users"
-
             page = {
-                "title": f"{product['name']} vs self-hosted {tool['name']}: real cost at {self.ref_size['label']} ({date.today().year})",
-                "description": (
-                    f"{product['name']} costs {money(ref.saas_usd_month)} a month at {self.ref_size['label']}; "
-                    f"self-hosting {tool['name']} costs {money(ref.selfhost_usd_month)} including the server, "
-                    f"backups and maintenance time. Full breakdown at every team size."
+                "title": L.t("vs.title", saas=product["name"], tool=tool["name"], size=self.ref_size["label"], year=YEAR),
+                "description": L.t(
+                    "vs.description", saas=product["name"], tool=tool["name"], size=self.ref_size["label"],
+                    saas_cost=L.money(ref.saas_usd_month), sh_cost=L.money(ref.selfhost_usd_month),
                 )[:300],
-                "url": url, "og_type": "article",
+                "og_type": "article",
                 "crumbs": [
-                    {"name": "Home", "url": "/"},
+                    self.crumb_home(),
                     {"name": cat["name"], "url": f"/category/{cat['slug']}/"},
-                    {"name": f"{product['name']} vs {tool['name']}", "url": url},
+                    {"name": L.t("vs.crumb", saas=product["name"], tool=tool["name"]), "url": url},
                 ],
             }
 
@@ -254,7 +327,7 @@ class Builder:
                 "page": page, "tool": tool, "saas": product, "category": cat,
                 "ref": ref, "rows": rows, "flip_at": flip_at,
                 "never_flips": flip_at is None,
-                "saas_price_label": price_label,
+                "saas_price_label": self.price_label(product, ref.saas_tier),
                 "fx_used": self.fx_used(product),
                 "siblings": [s for s in by_cat.get(tool["category"], []) if s["url"] != url][:6],
                 **self.hosting_ctx(tool, self.ref_users, self.ref_size["label"]),
@@ -264,6 +337,7 @@ class Builder:
         return built
 
     def build_alternatives(self, pairs) -> None:
+        L = self.loc
         by_saas: dict[str, list[dict]] = {}
         for tool, product in pairs:
             by_saas.setdefault(product["slug"], []).append(tool)
@@ -285,17 +359,16 @@ class Builder:
             saas_month, tier, _ = saas_monthly(product, self.ref_users, self.cfg)
 
             page = {
-                "title": f"Self-hosted {product['name']} alternatives, with real costs ({date.today().year})",
-                "description": (
-                    f"{len(alts)} open-source alternatives to {product['name']}, each priced at "
-                    f"{self.ref_size['label']} including the server, backups and maintenance time. "
-                    f"{product['name']} costs {money(saas_month)} a month at that size."
+                "title": L.t("alt.title", saas=product["name"], year=YEAR),
+                "description": L.t(
+                    "alt.description", n=len(alts), saas=product["name"], size=self.ref_size["label"],
+                    cost=L.money(saas_month),
                 )[:300],
-                "url": url, "og_type": "article",
+                "og_type": "article",
                 "crumbs": [
-                    {"name": "Home", "url": "/"},
+                    self.crumb_home(),
                     {"name": cat["name"], "url": f"/category/{cat['slug']}/"},
-                    {"name": f"{product['name']} alternatives", "url": url},
+                    {"name": L.t("alt.crumb", saas=product["name"]), "url": url},
                 ],
             }
             self.write(url, "alternatives.html", {
@@ -307,6 +380,7 @@ class Builder:
             }, "0.8")
 
     def build_tool_pages(self, pairs) -> None:
+        L = self.loc
         pairs_by_tool: dict[str, list[dict]] = {}
         for tool, product in pairs:
             pairs_by_tool.setdefault(tool["slug"], []).append(product)
@@ -341,14 +415,11 @@ class Builder:
             replaced.sort(key=lambda r: -r["tco"].saas_usd_month)
 
             page = {
-                "title": f"Self-hosting {tool['name']}: cost by team size ({date.today().year})",
-                "description": (
-                    f"What it costs to self-host {tool['name']} from one user to 250: memory and disk "
-                    f"needed, the cheapest server plan that fits, backups, and the hours it takes to run."
-                )[:300],
-                "url": url, "og_type": "article",
+                "title": L.t("sh.title", tool=tool["name"], year=YEAR),
+                "description": L.t("sh.description", tool=tool["name"])[:300],
+                "og_type": "article",
                 "crumbs": [
-                    {"name": "Home", "url": "/"},
+                    self.crumb_home(),
                     {"name": cat["name"], "url": f"/category/{cat['slug']}/"},
                     {"name": tool["name"], "url": url},
                 ],
@@ -367,6 +438,7 @@ class Builder:
             self.build_cost_pages(tool, cat, pairs_by_tool.get(tool["slug"], []))
 
     def build_cost_pages(self, tool: dict, cat: dict, products: list[dict]) -> None:
+        L = self.loc
         m = self.cfg["tco_model"]
         setup_hours = m["setup_hours_by_difficulty"][tool["difficulty"]]
         maint_hours = m["maintenance_hours_per_month_by_difficulty"][tool["difficulty"]]
@@ -391,20 +463,21 @@ class Builder:
             comparisons.sort(key=lambda c: -c["tco"].saas_usd_month)
 
             total = round(plan.price_usd_month + backup + labour, 2)
+            title_key = "cost.title.one" if s["users"] == 1 else "cost.title.many"
             page = {
-                "title": f"Cost to self-host {tool['name']} for {s['users']} {'user' if s['users'] == 1 else 'users'}",
-                "description": (
-                    f"{tool['name']} for {s['users']} users needs {gb(sizing.ram_gb)} of memory and "
-                    f"{gb(sizing.disk_gb)} of disk, which is {money(plan.price_usd_month)} a month of server. "
-                    f"All in, with backups and maintenance time, {money(total)} a month."
+                "title": L.t(title_key, tool=tool["name"], n=s["users"]),
+                "description": L.t(
+                    "cost.description", tool=tool["name"], n=s["users"],
+                    ram=L.gb(sizing.ram_gb), disk=L.gb(sizing.disk_gb),
+                    server=L.money(plan.price_usd_month), total=L.money(total),
                 )[:300],
-                "url": url, "og_type": "article",
+                "og_type": "article",
                 "prev_url": f"/cost/{tool['slug']}/{self.sizes[i-1]['slug']}/" if i else None,
                 "next_url": f"/cost/{tool['slug']}/{self.sizes[i+1]['slug']}/" if i + 1 < len(self.sizes) else None,
                 "crumbs": [
-                    {"name": "Home", "url": "/"},
+                    self.crumb_home(),
                     {"name": tool["name"], "url": f"/self-host/{tool['slug']}/"},
-                    {"name": f"{s['users']} users", "url": url},
+                    {"name": L.t("cost.crumb", n=s["users"]), "url": url},
                 ],
             }
             self.write(url, "cost.html", {
@@ -421,11 +494,12 @@ class Builder:
             }, "0.6")
 
     def build_categories(self, built_comparisons) -> None:
+        L = self.loc
         m = self.cfg["tco_model"]
         comps_by_cat: dict[str, list[dict]] = {}
         for c in built_comparisons:
             comps_by_cat.setdefault(c["tool"]["category"], []).append(
-                {"url": c["url"], "name": f"{c['saas']['name']} vs {c['tool']['name']}"}
+                {"url": c["url"], "name": L.t("vs.crumb", saas=c["saas"]["name"], tool=c["tool"]["name"])}
             )
 
         live_cats = [c for c in self.ds.categories.values() if c["wave"] <= self.wave]
@@ -459,10 +533,9 @@ class Builder:
             paid.sort(key=lambda p: -p["month"])
 
             page = {
-                "title": f"Self-hosted {cat['name'].lower()}: costs compared ({date.today().year})",
-                "description": f"{cat['intent']} {len(tools)} self-hosted options priced at {self.ref_size['label']}, against the commercial products they replace."[:300],
-                "url": url,
-                "crumbs": [{"name": "Home", "url": "/"}, {"name": cat["name"], "url": url}],
+                "title": L.t("cat.title", name=cat["name"], name_lower=cat["name"].lower(), year=YEAR),
+                "description": L.t("cat.description", intent=cat["intent"], n=len(tools), size=self.ref_size["label"])[:300],
+                "crumbs": [self.crumb_home(), {"name": cat["name"], "url": url}],
             }
             self.write(url, "category.html", {
                 "page": page, "category": cat, "tools": tools, "paid": paid,
@@ -472,6 +545,7 @@ class Builder:
             }, "0.7")
 
     def build_providers(self) -> None:
+        L = self.loc
         provs = list(self.ds.providers.values())
         for prov in provs:
             url = f"/hosting/{prov['slug']}/"
@@ -489,10 +563,13 @@ class Builder:
                 plan_rows.append({"plan": plan, "fits": sorted(fits, key=lambda f: f["name"])})
 
             page = {
-                "title": f"{prov['name']} for self-hosting: plans and pricing ({date.today().year})",
-                "description": f"{prov['name']} plans with vCPU, memory, disk and transfer, and which self-hosted tools fit on each at {self.ref_size['label']}."[:300],
-                "url": url,
-                "crumbs": [{"name": "Home", "url": "/"}, {"name": "Hosting", "url": "/hosting/"}, {"name": prov["name"], "url": url}],
+                "title": L.t("prov.title", name=prov["name"], year=YEAR),
+                "description": L.t("prov.description", name=prov["name"], size=self.ref_size["label"])[:300],
+                "crumbs": [
+                    self.crumb_home(),
+                    {"name": L.t("prov.crumb_hosting"), "url": "/hosting/"},
+                    {"name": prov["name"], "url": url},
+                ],
             }
             self.write(url, "provider.html", {
                 "page": page, "provider": prov, "plan_rows": plan_rows,
@@ -501,86 +578,88 @@ class Builder:
             }, "0.6")
 
     def build_indexes(self, built_comparisons) -> None:
-        # /compare/
+        L = self.loc
+        n = len(built_comparisons)
+
         groups: dict[str, list[dict]] = {}
         for c in sorted(built_comparisons, key=lambda x: x["saas"]["name"]):
             cat = self.ds.categories[c["tool"]["category"]]["name"]
             groups.setdefault(cat, []).append({
-                "url": c["url"], "name": f"{c['saas']['name']} vs {c['tool']['name']}",
-                "badge": None if c["tco"].savings_total > 0 else "paid wins",
+                "url": c["url"], "name": L.t("vs.crumb", saas=c["saas"]["name"], tool=c["tool"]["name"]),
+                "badge": None if c["tco"].savings_total > 0 else L.t("idx.compare.badge_paid_wins"),
                 "badge_class": "warn",
             })
         self.write("/compare/", "listing.html", {
             "page": {
-                "title": f"Every SaaS versus self-hosted cost comparison ({date.today().year})",
-                "description": f"{len(built_comparisons)} comparisons between commercial software and its self-hosted alternative, each priced from a published sizing model and dated vendor prices.",
-                "url": "/compare/",
-                "crumbs": [{"name": "Home", "url": "/"}, {"name": "Comparisons", "url": "/compare/"}],
+                "title": L.t("idx.compare.title", year=YEAR),
+                "description": L.t("idx.compare.description", n=n),
+                "crumbs": [self.crumb_home(), {"name": L.t("idx.compare.crumb"), "url": "/compare/"}],
             },
             "listing": {
-                "heading": "Every comparison",
-                "lead": f"{len(built_comparisons)} paid products priced against their self-hosted alternatives at {self.ref_size['label']}. Anything tagged as paid-wins is a case where self-hosting costs more once your time is counted.",
-                "groups": [{"name": k, "links":v} for k, v in sorted(groups.items())],
+                "heading": L.t("idx.compare.heading"),
+                "lead": L.t("idx.compare.lead", n=n, size=self.ref_size["label"]),
+                "groups": [{"name": k, "links": v} for k, v in sorted(groups.items())],
             },
         }, "0.8")
 
-        # /self-host/
         tgroups: dict[str, list[dict]] = {}
         for tool in sorted(self.live_tools(), key=lambda t: t["name"].lower()):
             cat = self.ds.categories[tool["category"]]["name"]
             tgroups.setdefault(cat, []).append({
                 "url": f"/self-host/{tool['slug']}/", "name": tool["name"],
-                "badge": tool["difficulty"], "badge_class": "warn" if tool["difficulty"] == "hard" else "",
+                "badge": L.t(f"difficulty.{tool['difficulty']}"),
+                "badge_class": "warn" if tool["difficulty"] == "hard" else "",
             })
         self.write("/self-host/", "listing.html", {
             "page": {
-                "title": f"Every self-hosted tool we price ({date.today().year})",
-                "description": "Self-hosted open-source tools with a published sizing model and a real monthly cost at every team size from one user to 250.",
-                "url": "/self-host/",
-                "crumbs": [{"name": "Home", "url": "/"}, {"name": "Tools", "url": "/self-host/"}],
+                "title": L.t("idx.tools.title", year=YEAR),
+                "description": L.t("idx.tools.description"),
+                "crumbs": [self.crumb_home(), {"name": L.t("idx.tools.crumb"), "url": "/self-host/"}],
             },
             "listing": {
-                "heading": "Every tool we price",
-                "lead": "Each tool has a sizing model, the cheapest server plan that fits it at each team size, and an honest estimate of the hours it takes to run. The badge is how heavy it is to operate.",
-                "groups": [{"name": k, "links":v} for k, v in sorted(tgroups.items())],
+                "heading": L.t("idx.tools.heading"),
+                "lead": L.t("idx.tools.lead"),
+                "groups": [{"name": k, "links": v} for k, v in sorted(tgroups.items())],
             },
         }, "0.8")
 
-        # /hosting/
         self.write("/hosting/", "listing.html", {
             "page": {
-                "title": "Hosting providers for self-hosting, and which prices we trust",
-                "description": "The hosting providers behind every cost figure on this site, which of their prices we have read ourselves, and which we have not.",
-                "url": "/hosting/",
-                "crumbs": [{"name": "Home", "url": "/"}, {"name": "Hosting", "url": "/hosting/"}],
+                "title": L.t("idx.hosting.title"),
+                "description": L.t("idx.hosting.description"),
+                "crumbs": [self.crumb_home(), {"name": L.t("idx.hosting.crumb"), "url": "/hosting/"}],
             },
             "listing": {
-                "heading": "Hosting providers",
-                "lead": "Every server cost on this site comes from a provider in this list. Only the ones marked as confirmed feed a published figure.",
+                "heading": L.t("idx.hosting.heading"),
+                "lead": L.t("idx.hosting.lead"),
                 "groups": [{
-                    "name": "Providers",
-                    "links":[{
+                    "name": L.t("idx.hosting.group"),
+                    "links": [{
                         "url": f"/hosting/{p['slug']}/", "name": p["name"],
-                        "badge": "prices confirmed" if p["price_status"] == "verified" else "prices unconfirmed",
+                        "badge": L.t("idx.hosting.badge_ok") if p["price_status"] == "verified" else L.t("idx.hosting.badge_warn"),
                         "badge_class": "ok" if p["price_status"] == "verified" else "warn",
                     } for p in self.ds.providers.values()],
                 }],
-                "note": "A provider marked as unconfirmed has specifications we trust and prices we could not read programmatically. Rather than estimate, we leave it out of the maths and say so on its page.",
+                "note": L.t("idx.hosting.note"),
             },
         }, "0.6")
 
     def build_static(self, built_comparisons, pairs) -> None:
-        for slug, title, desc, body in content.static_pages(self.ds, self.wave, self.strict, built_comparisons, pairs):
+        pages = content.static_pages(
+            self.ds, self.wave, self.strict, built_comparisons, pairs, lang=self.lang, base=self.base,
+        )
+        for slug, title, desc, body in pages:
             url = f"/{slug}/"
             self.write(url, "page.html", {
                 "page": {
-                    "title": title, "description": desc, "url": url,
-                    "crumbs": [{"name": "Home", "url": "/"}, {"name": title.split(":")[0], "url": url}],
+                    "title": title, "description": desc,
+                    "crumbs": [self.crumb_home(), {"name": title.split(":")[0], "url": url}],
                 },
                 "body": Markup(body),
             }, "0.5")
 
     def build_home(self, built_comparisons) -> None:
+        L = self.loc
         wins = sorted([c for c in built_comparisons if c["tco"].savings_total > 0],
                       key=lambda c: -c["tco"].savings_total)
         losses = sorted([c for c in built_comparisons if c["tco"].savings_total <= 0],
@@ -601,9 +680,8 @@ class Builder:
 
         self.write("/", "home.html", {
             "page": {
-                "title": f"{self.cfg['brand']} - what self-hosting actually costs, per tool and team size",
-                "description": self.cfg["description"],
-                "url": "/",
+                "title": L.t("home.title", brand=self.cfg["brand"]),
+                "description": L.t("site.description"),
             },
             "stats": {
                 "comparisons": len(built_comparisons),
@@ -616,64 +694,22 @@ class Builder:
             "ref_label": self.ref_size["label"],
         }, "1.0")
 
-    # ---- site plumbing --------------------------------------------------
-
-    def build_plumbing(self) -> None:
-        base_url = self.cfg["base_url"]
-        entries = "\n".join(
-            f"  <url><loc>{base_url}{u}</loc><lastmod>{TODAY}</lastmod><priority>{p}</priority></url>"
-            for u, p in sorted(set(self.urls))
-        )
-        (OUT / "sitemap.xml").write_text(
-            '<?xml version="1.0" encoding="UTF-8"?>\n'
-            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-            f"{entries}\n</urlset>\n", encoding="utf-8")
-
-        (OUT / "robots.txt").write_text(
-            f"User-agent: *\nAllow: /\n\nSitemap: {base_url}/sitemap.xml\n", encoding="utf-8")
-
-        (OUT / ".nojekyll").write_text("", encoding="utf-8")
-
-        (OUT / "favicon.svg").write_text(
-            '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">'
-            '<rect width="32" height="32" rx="7" fill="#16604a"/>'
-            '<path d="M8 21.5h4.2l1.6-5.2 2.1 7.2 2.3-11 1.7 6.4h4.4" fill="none" stroke="#fff" '
-            'stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>\n',
-            encoding="utf-8")
-
-        notfound = self.env.get_template("page.html").render(
-            page={"title": "Page not found", "description": "That page does not exist.",
+    def render_404(self) -> str:
+        L = self.loc
+        return self.env.get_template("page.html").render(
+            page={"title": L.t("404.title"), "description": L.t("404.description"),
                   "url": "/404.html", "robots": "noindex"},
             body=Markup(
-                "<h1>Page not found</h1><p>That URL does not exist on this site.</p>"
-                f'<p><a href="{self.base}/compare/">All comparisons</a> &middot; '
-                f'<a href="{self.base}/self-host/">All tools</a> &middot; '
-                f'<a href="{self.base}/">Home</a></p>'
+                f"<h1>{L.t('404.heading')}</h1><p>{L.t('404.body')}</p>"
+                f'<p><a href="{self.base}/compare/">{L.t("404.all_comparisons")}</a> &middot; '
+                f'<a href="{self.base}/self-host/">{L.t("404.all_tools")}</a> &middot; '
+                f'<a href="{self.base}/">{L.t("404.home")}</a></p>'
             ),
         )
-        (OUT / "404.html").write_text(notfound, encoding="utf-8")
-
-        dest = OUT / "assets"
-        if dest.exists():
-            shutil.rmtree(dest)
-        shutil.copytree(ROOT / "assets", dest)
 
     # ---- orchestration --------------------------------------------------
 
     def run(self) -> dict:
-        if OUT.exists():
-            keep = {}
-            for name in ("CNAME",):
-                f = OUT / name
-                if f.exists():
-                    keep[name] = f.read_text(encoding="utf-8")
-            shutil.rmtree(OUT)
-            OUT.mkdir(parents=True)
-            for name, text in keep.items():
-                (OUT / name).write_text(text, encoding="utf-8")
-        else:
-            OUT.mkdir(parents=True)
-
         pairs = self.publishable_pairs()
         built = self.build_comparisons(pairs)
         self.build_alternatives(pairs)
@@ -683,27 +719,88 @@ class Builder:
         self.build_indexes(built)
         self.build_static(built, pairs)
         self.build_home(built)
-        self.build_plumbing()
-
-        report = {
-            "built_on": TODAY,
-            "wave": self.wave,
-            "strict_prices": self.strict,
-            "reference_users": self.ref_users,
+        return {
+            "lang": self.lang,
             "pages": len(self.urls),
             "comparisons": len(built),
-            "tools_live": len(self.live_tools()),
-            "affiliate_links_active": self.affiliate_on,
-            "lead_capture_active": bool(self.cfg["lead_capture"]["enabled"] and self.cfg["lead_capture"]["form_id"]),
-            "priced_providers": [p["slug"] for p in priced_providers(self.ds)],
-            "verified_saas": sorted(s["slug"] for s in self.ds.saas.values() if s.get("price_status") == "verified"),
-            "unverified_saas": sorted(s["slug"] for s in self.ds.saas.values() if s.get("price_status") != "verified"),
-            "skipped": self.skipped,
-            "urls": [u for u, _ in sorted(set(self.urls))],
+            "missing_ui_keys": sorted(self.loc.missing),
+            "missing_data_fields": len(self.missing_data),
+            "missing_data_sample": self.missing_data[:25],
+            "lead_capture_active": bool(self._lead_form_id()),
         }
-        (ROOT / "ops" / "build-report.json").write_text(
-            json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-        return report
+
+
+# --------------------------------------------------------------------------
+# site-wide output
+# --------------------------------------------------------------------------
+
+def clean_out() -> None:
+    keep = {}
+    if OUT.exists():
+        for name in ("CNAME",):
+            f = OUT / name
+            if f.exists():
+                keep[name] = f.read_text(encoding="utf-8")
+        shutil.rmtree(OUT)
+    OUT.mkdir(parents=True)
+    for name, text in keep.items():
+        (OUT / name).write_text(text, encoding="utf-8")
+
+
+def write_plumbing(cfg: dict, builders: list[Builder]) -> None:
+    base_url = cfg["base_url"]
+    languages = [b.lang for b in builders]
+
+    if len(languages) == 1:
+        entries = "\n".join(
+            f"  <url><loc>{base_url}{u}</loc><lastmod>{TODAY}</lastmod><priority>{p}</priority></url>"
+            for u, p in sorted(set(builders[0].urls))
+        )
+        sitemap = (
+            '<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+            f"{entries}\n</urlset>\n"
+        )
+    else:
+        lines = []
+        for b in builders:
+            for u, p in sorted(set(b.urls)):
+                alts = "".join(
+                    f'<xhtml:link rel="alternate" hreflang="{l}" href="{base_url}{LANGUAGES[l]["prefix"]}{u}"/>'
+                    for l in languages
+                )
+                alts += f'<xhtml:link rel="alternate" hreflang="x-default" href="{base_url}{u}"/>'
+                lines.append(
+                    f"  <url><loc>{base_url}{b.loc.path(u)}</loc><lastmod>{TODAY}</lastmod>"
+                    f"<priority>{p}</priority>{alts}</url>"
+                )
+        sitemap = (
+            '<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+            'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
+            + "\n".join(lines) + "\n</urlset>\n"
+        )
+    (OUT / "sitemap.xml").write_text(sitemap, encoding="utf-8")
+
+    (OUT / "robots.txt").write_text(
+        f"User-agent: *\nAllow: /\n\nSitemap: {base_url}/sitemap.xml\n", encoding="utf-8")
+
+    (OUT / ".nojekyll").write_text("", encoding="utf-8")
+
+    (OUT / "favicon.svg").write_text(
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">'
+        '<rect width="32" height="32" rx="7" fill="#16604a"/>'
+        '<path d="M8 21.5h4.2l1.6-5.2 2.1 7.2 2.3-11 1.7 6.4h4.4" fill="none" stroke="#fff" '
+        'stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>\n',
+        encoding="utf-8")
+
+    default = next(b for b in builders if b.lang == DEFAULT_LANG)
+    (OUT / "404.html").write_text(default.render_404(), encoding="utf-8")
+
+    dest = OUT / "assets"
+    if dest.exists():
+        shutil.rmtree(dest)
+    shutil.copytree(ROOT / "assets", dest)
 
 
 def main() -> int:
@@ -718,19 +815,60 @@ def main() -> int:
         for w in ds.warnings:
             print(f"    - {w}")
 
-    wave = args.wave if args.wave is not None else int(ds.config["publish_wave"])
-    strict = not args.no_strict and bool(ds.config["strict_prices"])
+    cfg = ds.config
+    wave = args.wave if args.wave is not None else int(cfg["publish_wave"])
+    strict = not args.no_strict and bool(cfg["strict_prices"])
+    languages = [l for l in cfg.get("languages", [DEFAULT_LANG]) if l in LANGUAGES]
+    if DEFAULT_LANG not in languages:
+        languages.insert(0, DEFAULT_LANG)
 
-    report = Builder(ds, strict=strict, wave=wave).run()
+    clean_out()
+    builders, per_lang = [], []
+    for lang in languages:
+        b = Builder(ds, strict=strict, wave=wave, lang=lang, languages=languages)
+        per_lang.append(b.run())
+        builders.append(b)
+    write_plumbing(cfg, builders)
+
+    default = builders[0]
+    report = {
+        "built_on": TODAY,
+        "wave": wave,
+        "strict_prices": strict,
+        "reference_users": default.ref_users,
+        "languages": languages,
+        "pages": sum(r["pages"] for r in per_lang),
+        "comparisons": per_lang[0]["comparisons"],
+        "tools_live": len(default.live_tools()),
+        "affiliate_links_active": default.affiliate_on,
+        "lead_capture_active": per_lang[0]["lead_capture_active"],
+        "priced_providers": [p["slug"] for p in priced_providers(ds)],
+        "verified_saas": sorted(s["slug"] for s in ds.saas.values() if s.get("price_status") == "verified"),
+        "unverified_saas": sorted(s["slug"] for s in ds.saas.values() if s.get("price_status") != "verified"),
+        "per_language": per_lang,
+        "skipped": default.skipped,
+        "urls": sorted(b.loc.path(u) for b in builders for u, _ in set(b.urls)),
+    }
+    (ROOT / "ops" / "build-report.json").write_text(
+        json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
     print(f"\n  wave {report['wave']}  strict={report['strict_prices']}  reference={report['reference_users']} users")
-    print(f"  {report['pages']} pages written to docs/")
+    print(f"  {report['pages']} pages written to docs/ across {len(languages)} language(s)")
     print(f"  {report['comparisons']} comparison pages, {report['tools_live']} tools live")
     print(f"  hosting prices trusted: {', '.join(report['priced_providers']) or 'NONE'}")
     print(f"  vendor prices confirmed: {len(report['verified_saas'])} of "
           f"{len(report['verified_saas']) + len(report['unverified_saas'])}")
     print(f"  affiliate links: {'active' if report['affiliate_links_active'] else 'not configured'}"
           f"   lead capture: {'active' if report['lead_capture_active'] else 'not configured'}")
+    for r in per_lang:
+        flags = []
+        if r["missing_ui_keys"]:
+            flags.append(f"{len(r['missing_ui_keys'])} interface strings fall back to English")
+        if r["missing_data_fields"]:
+            flags.append(f"{r['missing_data_fields']} data fields fall back to English")
+        if not r["lead_capture_active"]:
+            flags.append("no lead form")
+        print(f"    [{r['lang']}] {r['pages']} pages" + (f"  ({'; '.join(flags)})" if flags else ""))
 
     if report["skipped"]:
         by_reason: dict[str, int] = {}

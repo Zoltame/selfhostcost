@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% block content %}
+
+<p class="kicker">{{ category.name }}</p>
+<h1>Selbst gehostete Alternativen zu {{ saas.name }}, mit Preisen</h1>
+
+<p class="lead">
+  {{ alts | length }} {{ 'Open-Source-Tool, das' if alts | length == 1 else 'Open-Source-Tools, die' }}
+  {{ saas.name }} ersetzen {{ 'kann' if alts | length == 1 else 'können' }}, jeweils mit den tatsächlichen Kosten
+  für {{ ref_label }}. Im Tarif {{ saas_tier.name }} kostet {{ saas.name }} bei dieser Teamgröße
+  {{ money(saas_month) }} pro Monat.
+</p>
+
+{% if saas.free_tier_note %}
+<div class="note caution">
+  <h3>Zuerst das</h3>
+  <p>{{ saas.free_tier_note }}</p>
+</div>
+{% endif %}
+
+<div class="tablewrap">
+<table>
+  <caption>Monatliche Kosten für {{ ref_label }}. Die Werte für Self-Hosting enthalten Server, Backups und Wartungszeit zu {{ money(cfg.tco_model.engineer_hourly_usd) }} pro Stunde.</caption>
+  <thead>
+    <tr>
+      <th>Tool</th>
+      <th class="num">Nur Server</th>
+      <th class="num">Mit Ihrer Zeit</th>
+      <th class="num">vs. {{ saas.name }}</th>
+      <th>Betriebsaufwand</th>
+      <th>Lizenz</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for a in alts %}
+    <tr>
+      <th scope="row"><a href="{{ base }}/vs/{{ saas.slug }}-vs-{{ a.tool.slug }}/">{{ a.tool.name }}</a></th>
+      <td class="num">{{ money(a.tco.selfhost_usd_month_no_labour) }}</td>
+      <td class="num">{{ money(a.tco.selfhost_usd_month) }}</td>
+      <td class="num {{ 'pos' if a.tco.savings_total > 0 else 'neg' }}">
+        {{ '+' if a.tco.savings_total > 0 else '' }}{{ money(a.tco.savings_total) }}
+      </td>
+      <td>{{ t('difficulty.' ~ a.tool.difficulty) }}</td>
+      <td>{{ a.tool.license_spdx if a.tool.license_spdx != 'NOASSERTION' else 'Source-available' }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+<p class="srcline">Die letzte Spalte zeigt die Differenz über {{ cfg.tco_model.horizon_months }} Monate: positiv heißt, Self-Hosting ist günstiger. Beträge in Euro, umgerechnet zum datierten Kurs aus der Methodik.</p>
+
+<h2>Welches Tool passt</h2>
+{% for a in alts %}
+<h3>{{ a.tool.name }}{% if a.tool.stars %} <span class="badge">{{ number(a.tool.stars) }} Sterne</span>{% endif %}</h3>
+<p>{{ a.tool.sizing_note }}</p>
+<p>
+  Für {{ ref_label }} braucht es {{ gb(a.tco.sizing.ram_gb) }} Arbeitsspeicher und {{ gb(a.tco.sizing.disk_gb) }}
+  Speicherplatz; das passt auf den Tarif {{ a.tco.plan.plan.name }} bei {{ a.tco.plan.provider_name }} für
+  {{ money(a.tco.plan.price_usd_month) }} pro Monat. Die Einrichtung dauert etwa {{ hours(a.tco.setup_hours) }} Stunden,
+  danach {{ hours(a.tco.maintenance_hours_month) }} Stunden pro Monat für den laufenden Betrieb.
+  {% if a.tool.licence_caveat %}<strong>Lizenzhinweis:</strong> {{ a.tool.licence_caveat }}{% endif %}
+</p>
+<p><a href="{{ base }}/vs/{{ saas.slug }}-vs-{{ a.tool.slug }}/">Vollständiger Vergleich {{ saas.name }} gegen {{ a.tool.name }}</a>
+   &middot; <a href="{{ base }}/self-host/{{ a.tool.slug }}/">{{ a.tool.name }} für jede Teamgröße</a></p>
+{% endfor %}
+
+<h2>Wie die Preise ermittelt wurden</h2>
+<p>
+  Die Preise von {{ saas.name }} wurden am {{ saas.verified_on }} von <a href="{{ saas.pricing_url }}" rel="nofollow noopener">der eigenen Preisseite</a>
+  abgelesen{% if saas_fx %}, dort in Euro angegeben und zum Kurs von {{ number(cfg.fx.rates_to_usd.EUR, 4) }} Dollar
+  pro Euro in Dollar umgerechnet, dem Kurs von {{ cfg.fx.source_name }} vom {{ cfg.fx.on }}{% endif %}.
+  Serverpreise stammen von den Anbietern auf der <a href="{{ base }}/hosting/">Hosting-Seite</a>. Das
+  Dimensionierungsmodell und die Bewertung Ihrer Zeit sind vollständig auf der
+  <a href="{{ base }}/methodology/">Methodik-Seite</a> beschrieben. Alle Beträge auf dieser Seite werden in Euro
+  angezeigt, umgerechnet aus Dollar zum selben datierten Kurs.
+</p>
+
+<h2>Siehe auch</h2>
+<ul class="linkgrid">
+  <li><a href="{{ base }}/category/{{ category.slug }}/">{{ category.name }}: alle Vergleiche</a></li>
+  {% for s in sibling_saas %}<li><a href="{{ base }}/alternatives/{{ s.slug }}/">Alternativen zu {{ s.name }}</a></li>{% endfor %}
+  <li><a href="{{ base }}/hosting/">Wo Sie es hosten</a></li>
+</ul>
+
+{% endblock %}

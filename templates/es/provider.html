@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block content %}
+
+<p class="kicker">Alojamiento</p>
+<h1>{{ provider.name }} para autoalojar: planes y qué cabe en ellos</h1>
+
+<p class="lead">
+  {% if provider.hq %}Sede: {{ provider.hq }}.{% endif %}
+  {% if provider.price_status == 'verified' %}
+  Los precios de los planes de abajo se leyeron en <a href="{{ provider.pricing_url }}" rel="nofollow noopener">su propia página de precios</a>
+  el {{ provider.verified_on }} y son los que usan todos los cálculos de este sitio.
+  {% else %}
+  <strong>No hemos podido leer sus precios de forma automática</strong>, así que ninguna cifra de este sitio se basa
+  en {{ provider.name }}. Las especificaciones de abajo están confirmadas; los precios, no.
+  {% endif %}
+</p>
+
+{% if provider.price_status != 'verified' %}
+<div class="note caution">
+  <h3>Precios sin confirmar</h3>
+  <p>{{ provider.price_note }}</p>
+  <p>Mientras tanto, usa esta página como referencia técnica y consulta los precios con el proveedor.</p>
+</div>
+{% endif %}
+
+{% if provider.plans %}
+<h2>Planes</h2>
+<div class="tablewrap">
+<table>
+  <thead>
+    <tr><th>Plan</th><th class="num">vCPU</th><th class="num">Memoria</th><th class="num">Disco</th><th class="num">Transferencia</th><th class="num">Al mes</th>{% if provider.price_status == 'verified' %}<th>Qué cabe</th>{% endif %}</tr>
+  </thead>
+  <tbody>
+  {% for row in plan_rows %}
+    <tr>
+      <th scope="row">{{ row.plan.name }}</th>
+      <td class="num">{{ row.plan.vcpu }}</td>
+      <td class="num">{{ gb(row.plan.ram_gb) }}</td>
+      <td class="num">{{ gb(row.plan.disk_gb) }}</td>
+      <td class="num">{{ gb(row.plan.transfer_gb) }}</td>
+      <td class="num">{% if row.plan.price_usd_month %}{{ money(row.plan.price_usd_month) }}{% else %}sin leer{% endif %}</td>
+      {% if provider.price_status == 'verified' %}
+      <td>{% if row.fits %}{% for f in row.fits %}<a href="{{ base }}/self-host/{{ f.slug }}/">{{ f.name }}</a>{{ ', ' if not loop.last }}{% endfor %}{% else %}&mdash;{% endif %}</td>
+      {% endif %}
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+<p class="srcline">La última columna enumera las herramientas de nuestro conjunto de datos que caben en el plan para {{ ref_label }}, empezando por el plan más pequeño, de modo que cada herramienta aparece una sola vez.</p>
+{% endif %}
+
+<h2>Puntos fuertes y débiles</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Puntos fuertes</th><th>Puntos débiles</th></tr></thead>
+  <tbody><tr>
+    <td><ul style="margin:0;padding-left:1.1em">{% for s in provider.strengths %}<li>{{ s }}</li>{% endfor %}</ul></td>
+    <td><ul style="margin:0;padding-left:1.1em">{% for w in provider.weaknesses %}<li>{{ w }}</li>{% endfor %}</ul></td>
+  </tr></tbody>
+</table>
+</div>
+<p>{{ provider.billing_note }}</p>
+
+<div class="cta">
+  <h3>Precios directamente en {{ provider.name }}</h3>
+  <p>Confirma siempre el precio actual en la página del proveedor antes de comprometerte. El nuestro es una instantánea con fecha, no un dato en tiempo real.</p>
+  <p><a class="btn" href="{{ hosting_link(provider.slug) }}" rel="{{ 'sponsored nofollow noopener' if affiliate_on else 'nofollow noopener' }}">Abrir {{ provider.name }}</a></p>
+  {% if affiliate_on %}<p class="disclosure">{{ t('affiliate.disclosure') }}</p>{% endif %}
+</div>
+
+<h2>Otros proveedores</h2>
+<ul class="linkgrid">
+  {% for p in siblings %}<li><a href="{{ base }}/hosting/{{ p.slug }}/">{{ p.name }}</a>{% if p.price_status != 'verified' %} <span class="badge warn">precios sin confirmar</span>{% endif %}</li>{% endfor %}
+</ul>
+
+{% endblock %}

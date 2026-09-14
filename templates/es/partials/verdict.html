@@ -1,0 +1,51 @@
+{# Bloque de veredicto. El tono lo marca el veredicto calculado, nunca un texto escrito a mano. #}
+<div class="verdict {% if ref.verdict == 'saas_cheaper' %}is-saas{% elif ref.verdict != 'selfhost_cheaper' %}is-wash{% endif %}">
+  <p class="lede">
+  {%- if ref.is_free_saas %}
+    <b>Aquí no hay factura que batir.</b> {{ saas.name }} no cuesta nada para {{ ref.label }}, así que ejecutar
+    {{ tool.name }} por tu cuenta te cuesta <b>{{ money(ref.selfhost_usd_month) }} al mes</b> más, no menos.
+    La razón para hacerlo es quién controla los datos, no el precio.
+  {%- elif ref.verdict == 'selfhost_cheaper' %}
+    Para {{ ref.label }}, autoalojar {{ tool.name }} cuesta <b>{{ money(ref.selfhost_usd_month) }} al mes</b>
+    frente a <b>{{ money(ref.saas_usd_month) }}</b> de {{ saas.name }}. Recuperas la inversión en
+    <b>{{ months(ref.breakeven_months) }}</b> y ahorras {{ money(ref.savings_total) }} en
+    {{ cfg.tco_model.horizon_months }} meses, con tu propio tiempo ya incluido.
+  {%- elif ref.verdict == 'selfhost_cheaper_only_without_labour' %}
+    Para {{ ref.label }}, la diferencia es mínima. El servidor cuesta
+    <b>{{ money(ref.selfhost_usd_month_no_labour) }} al mes</b> frente a {{ money(ref.saas_usd_month) }}
+    de {{ saas.name }}, pero si sumas {{ hours(ref.maintenance_hours_month) }} horas de atención al mes, el
+    autoalojamiento llega a <b>{{ money(ref.selfhost_usd_month) }}</b> y pierde.
+    Solo gana si tu tiempo de verdad no cuesta nada.
+  {%- else %}
+    Para {{ ref.label }}, {{ saas.name }} es la opción más barata: <b>{{ money(ref.saas_usd_month) }} al mes</b>
+    frente a <b>{{ money(ref.selfhost_usd_month) }}</b> por ejecutar {{ tool.name }} por tu cuenta. Con este tamaño,
+    autoalojar te da control, no ahorro.
+  {%- endif %}
+  </p>
+
+  <dl class="figures">
+    <div class="fig">
+      <dt>{{ saas.name }}</dt>
+      <dd>{{ money(ref.saas_usd_month) }}<small>al mes, {{ ref.saas_tier.name }}</small></dd>
+    </div>
+    <div class="fig">
+      <dt>Autoalojado</dt>
+      <dd>{{ money(ref.selfhost_usd_month) }}<small>servidor, copias de seguridad y tu tiempo</small></dd>
+    </div>
+    <div class="fig">
+      <dt>Servidor y copias</dt>
+      <dd>{{ money(ref.selfhost_usd_month_no_labour) }}<small>{{ ref.plan.plan.name }}, {{ gb(ref.plan.plan.ram_gb) }} de RAM</small></dd>
+    </div>
+    <div class="fig">
+      <dt>Diferencia en {{ cfg.tco_model.horizon_months }} meses</dt>
+      <dd class="{{ 'pos' if ref.savings_total > 0 else 'neg' }}">
+        {{ money(ref.savings_total | abs) }}
+        <small>{{ 'ahorrado al autoalojar' if ref.savings_total > 0 else 'de sobrecoste al autoalojar' }}</small>
+      </dd>
+    </div>
+    <div class="fig">
+      <dt>Punto de equilibrio</dt>
+      <dd>{{ months(ref.breakeven_months) }}<small>tras {{ money(ref.setup_usd_once) }} de puesta en marcha</small></dd>
+    </div>
+  </dl>
+</div>

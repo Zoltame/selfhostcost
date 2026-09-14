@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1 style="margin-top:.6em">Was Self-Hosting wirklich kostet</h1>
+<p class="lead">
+  Jeder Vergleich hier berechnet den Server, die Backups und die Stunden für die Betreuung und stellt das dem
+  veröffentlichten Preis des Anbieters gegenüber. Manchmal gewinnt Self-Hosting mit enormem Abstand. Manchmal verliert
+  es. Wir veröffentlichen beides, denn ein Vergleich, der immer zum selben Ergebnis kommt, ist kein Vergleich.
+</p>
+
+<dl class="figures">
+  <div class="fig"><dt>Vergleiche</dt><dd>{{ stats.comparisons }}<small>kostenpflichtiges Produkt gegen selbst gehostetes Tool</small></dd></div>
+  <div class="fig"><dt>Berechnete Tools</dt><dd>{{ stats.tools }}<small>mit veröffentlichtem Dimensionierungsmodell</small></dd></div>
+  <div class="fig"><dt>Beim Anbieter abgelesene Preise</dt><dd>{{ stats.verified_saas }}<small>Stand {{ stats.verified_on }}</small></dd></div>
+  <div class="fig"><dt>Wo Self-Hosting verliert</dt><dd>{{ stats.saas_wins }}<small>dieser Vergleiche, für {{ ref_label }}</small></dd></div>
+</dl>
+<p class="srcline">Beträge in Euro, umgerechnet aus US-Dollar zum datierten EZB-Kurs aus der <a href="{{ base }}/methodology/">Methodik</a>.</p>
+
+{% if biggest %}
+<h2>Wo der Abstand am größten ist</h2>
+<p>Größte Ersparnis über {{ cfg.tco_model.horizon_months }} Monate für {{ ref_label }}, Ihre eigene Zeit bereits abgezogen.</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Statt</th><th>Betreiben Sie</th><th class="num">Deren Preis</th><th class="num">Ihrer</th><th class="num">Gespart über {{ cfg.tco_model.horizon_months }} Monate</th></tr></thead>
+  <tbody>
+  {% for b in biggest %}
+    <tr>
+      <th scope="row">{{ b.saas.name }}</th>
+      <td><a href="{{ base }}/vs/{{ b.saas.slug }}-vs-{{ b.tool.slug }}/">{{ b.tool.name }}</a></td>
+      <td class="num">{{ money(b.tco.saas_usd_month) }}</td>
+      <td class="num">{{ money(b.tco.selfhost_usd_month) }}</td>
+      <td class="num pos">{{ money(b.tco.savings_total) }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endif %}
+
+{% if honest %}
+<h2>Und wo es sich nicht lohnt</h2>
+<p>
+  Das sind die Vergleiche, bei denen das kostenpflichtige Produkt günstiger ist, sobald Ihre Stunden mit
+  {{ money(cfg.tco_model.engineer_hourly_usd) }} bewertet werden. Diese Tools selbst zu hosten ist eine Entscheidung
+  für Kontrolle, nicht fürs Geld.
+</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Produkt</th><th>Selbst gehostete Option</th><th class="num">Deren Preis</th><th class="num">Ihrer</th><th></th></tr></thead>
+  <tbody>
+  {% for h in honest %}
+    <tr>
+      <th scope="row">{{ h.saas.name }}</th>
+      <td>{{ h.tool.name }}</td>
+      <td class="num">{{ money(h.tco.saas_usd_month) }}</td>
+      <td class="num neg">{{ money(h.tco.selfhost_usd_month) }}</td>
+      <td><a href="{{ base }}/vs/{{ h.saas.slug }}-vs-{{ h.tool.slug }}/">warum</a></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endif %}
+
+<h2>Nach Kategorie</h2>
+<ul class="cards">
+  {% for c in categories %}
+  <li class="card">
+    <h3><a href="{{ base }}/category/{{ c.cat.slug }}/">{{ c.cat.name }}</a></h3>
+    <p>{{ c.cat.intent }}</p>
+    <p class="meta">{{ c.tool_count }} {{ 'selbst gehostetes Tool' if c.tool_count == 1 else 'selbst gehostete Tools' }}{% if c.comparison_count %} &middot; {{ c.comparison_count }} {{ 'berechneter Vergleich' if c.comparison_count == 1 else 'berechnete Vergleiche' }}{% endif %}</p>
+  </li>
+  {% endfor %}
+</ul>
+
+<h2>So funktioniert es</h2>
+<p>
+  Ein kostenpflichtiger Platz hat keinen Sockel, aber eine steile Steigung: Zehn Personen kosten zehnmal so viel wie
+  eine. Ein Server hat einen hohen Sockel, aber kaum Steigung: Dieselbe Maschine bedient zehn oder hundert Personen.
+  Jeder Vergleich auf dieser Website ist nichts anderes als der Punkt, an dem sich diese beiden Linien kreuzen, und
+  dieser Punkt verschiebt sich je nachdem, wie aufwendig das Tool ist und was Ihre Zeit wert ist.
+</p>
+<p>
+  Wir dimensionieren jedes Tool nach seinen dokumentierten Anforderungen, soweit vorhanden, wählen den kleinsten
+  Servertarif, der wirklich passt, und rechnen Backups und Stunden hinzu. Preise tragen das Datum ihrer Ablesung und
+  einen Link zur Quelle. Wenn wir einen Preis nicht geprüft haben, veröffentlichen wir keine Zahl, die davon abhängt.
+  <a href="{{ base }}/methodology/">Die vollständige Methodik steht hier</a>, einschließlich allem, was das Modell
+  bewusst ignoriert.
+</p>
+
+{% endblock %}

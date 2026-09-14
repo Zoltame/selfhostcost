@@ -1,0 +1,28 @@
+{# Recommandation d'hébergement. Liens simples tant qu'aucun identifiant d'affiliation n'est configuré. #}
+<div class="cta">
+  <h3>Où installer {{ tool.name }}</h3>
+  <p>
+    Pour {{ cta_label }}, il faut {{ gb(sizing_ram) }} de mémoire et {{ gb(sizing_disk) }} de disque. Parmi les
+    hébergeurs dont nous avons relevé les prix nous-mêmes, l'offre la moins chère qui convient est
+    <strong>{{ cta_plan.plan.name }}</strong> chez {{ cta_plan.provider_name }}, à
+    {{ money(cta_plan.price_usd_month) }} par mois.
+  </p>
+  <p>
+    <a class="btn" href="{{ hosting_link(cta_plan.provider_slug) }}" rel="{{ 'sponsored nofollow noopener' if affiliate_on else 'nofollow noopener' }}">
+      Aller sur {{ cta_plan.provider_name }}
+    </a>
+    <a class="btn ghost" href="{{ base }}/hosting/">Comparer les hébergeurs</a>
+  </p>
+
+  {% if unpriced_providers %}
+  <p style="font-size:.9rem;color:var(--ink-2);margin-bottom:0">
+    Nous ne prétendons pas que c'est le serveur le moins cher d'internet, seulement le moins cher que nous
+    puissions citer honnêtement. {% if unpriced_providers | length > 1 %}{{ unpriced_providers[:-1] | join(', ') }} et {{ unpriced_providers[-1] }}{% else %}{{ unpriced_providers[0] }}{% endif %}
+    {{ 'publient des prix que nous n\'avons pas pu relever automatiquement' if unpriced_providers | length > 1 else 'publie des prix que nous n\'avons pas pu relever automatiquement' }},
+    et {% if 'Hetzner Cloud' in unpriced_providers %}Hetzner en particulier est généralement moins cher par gigaoctet de mémoire que tout ce qui est cité ici{% else %}pourrait bien être moins cher{% endif %}.
+    Comparez vous-même avant de vous engager.
+  </p>
+  {% endif %}
+
+  {% if affiliate_on %}<p class="disclosure">{{ t('affiliate.disclosure') }}</p>{% endif %}
+</div>

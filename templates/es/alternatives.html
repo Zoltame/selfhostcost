@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% block content %}
+
+<p class="kicker">{{ category.name }}</p>
+<h1>Alternativas autoalojadas a {{ saas.name }}, con precios</h1>
+
+<p class="lead">
+  {{ alts | length }} {{ 'herramienta de código abierto que puede' if alts | length == 1 else 'herramientas de código abierto que pueden' }}
+  sustituir a {{ saas.name }}, cada una con lo que costaría de verdad para {{ ref_label }}. En el plan
+  {{ saas_tier.name }}, {{ saas.name }} cuesta {{ money(saas_month) }} al mes con ese tamaño de equipo.
+</p>
+
+{% if saas.free_tier_note %}
+<div class="note caution">
+  <h3>Empieza por aquí</h3>
+  <p>{{ saas.free_tier_note }}</p>
+</div>
+{% endif %}
+
+<div class="tablewrap">
+<table>
+  <caption>Coste mensual para {{ ref_label }}. Los totales autoalojados incluyen servidor, copias de seguridad y tiempo de mantenimiento a {{ money(cfg.tco_model.engineer_hourly_usd) }} la hora.</caption>
+  <thead>
+    <tr>
+      <th>Herramienta</th>
+      <th class="num">Solo servidor</th>
+      <th class="num">Con tu tiempo</th>
+      <th class="num">vs. {{ saas.name }}</th>
+      <th>Exigencia operativa</th>
+      <th>Licencia</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for a in alts %}
+    <tr>
+      <th scope="row"><a href="{{ base }}/vs/{{ saas.slug }}-vs-{{ a.tool.slug }}/">{{ a.tool.name }}</a></th>
+      <td class="num">{{ money(a.tco.selfhost_usd_month_no_labour) }}</td>
+      <td class="num">{{ money(a.tco.selfhost_usd_month) }}</td>
+      <td class="num {{ 'pos' if a.tco.savings_total > 0 else 'neg' }}">
+        {{ '+' if a.tco.savings_total > 0 else '' }}{{ money(a.tco.savings_total) }}
+      </td>
+      <td>{{ t('difficulty.' ~ a.tool.difficulty) }}</td>
+      <td>{{ a.tool.license_spdx if a.tool.license_spdx != 'NOASSERTION' else 'código disponible' }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+<p class="srcline">La última columna es la diferencia en {{ cfg.tco_model.horizon_months }} meses: positiva significa que autoalojar sale más barato.</p>
+
+<h2>Cuál elegir</h2>
+{% for a in alts %}
+<h3>{{ a.tool.name }}{% if a.tool.stars %} <span class="badge">{{ number(a.tool.stars) }} estrellas</span>{% endif %}</h3>
+<p>{{ a.tool.sizing_note }}</p>
+<p>
+  Para {{ ref_label }} necesita {{ gb(a.tco.sizing.ram_gb) }} de memoria y {{ gb(a.tco.sizing.disk_gb) }} de disco,
+  lo que cabe en el plan {{ a.tco.plan.plan.name }} de {{ a.tco.plan.provider_name }} por
+  {{ money(a.tco.plan.price_usd_month) }} al mes. Ponerla en marcha lleva unas {{ hours(a.tco.setup_hours) }} horas,
+  y después {{ hours(a.tco.maintenance_hours_month) }} horas al mes de mantenimiento.
+  {% if a.tool.licence_caveat %}<strong>Nota sobre la licencia:</strong> {{ a.tool.licence_caveat }}{% endif %}
+</p>
+<p><a href="{{ base }}/vs/{{ saas.slug }}-vs-{{ a.tool.slug }}/">Comparativa completa de {{ saas.name }} frente a {{ a.tool.name }}</a>
+   &middot; <a href="{{ base }}/self-host/{{ a.tool.slug }}/">{{ a.tool.name }} para cada tamaño de equipo</a></p>
+{% endfor %}
+
+<h2>Cómo se establecieron los precios</h2>
+<p>
+  Los precios de {{ saas.name }} se leyeron en <a href="{{ saas.pricing_url }}" rel="nofollow noopener">su propia página de precios</a>
+  el {{ saas.verified_on }}{% if saas_fx %}, expresados en euros y convertidos a {{ number(cfg.fx.rates_to_usd.EUR, 4) }}
+  dólares por euro, el tipo de {{ cfg.fx.source_name }} del {{ cfg.fx.on }}{% endif %}.
+  Los precios de los servidores proceden de los proveedores de la <a href="{{ base }}/hosting/">página de alojamiento</a>.
+  El modelo de dimensionamiento y el coste de tu tiempo se explican en detalle en la
+  <a href="{{ base }}/methodology/">página de metodología</a>.
+</p>
+
+<h2>Ver también</h2>
+<ul class="linkgrid">
+  <li><a href="{{ base }}/category/{{ category.slug }}/">{{ category.name }}: todas las comparativas</a></li>
+  {% for s in sibling_saas %}<li><a href="{{ base }}/alternatives/{{ s.slug }}/">Alternativas a {{ s.name }}</a></li>{% endfor %}
+  <li><a href="{{ base }}/hosting/">Dónde alojarla</a></li>
+</ul>
+
+{% endblock %}

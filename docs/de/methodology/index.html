@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methodik: wie jede Kostenzahl auf dieser Website berechnet wird</title>
+<meta name="description" content="Das Dimensionierungsmodell, die Annahmen zur Arbeitszeit, die genauen Preisquellen mit Datum und alles, was dieses Kostenmodell bewusst weglässt.">
+<link rel="canonical" href="https://zoltame.github.io/selfhostcost/de/methodology/">
+<meta name="google-site-verification" content="L_8gw5Ec2vvygFsccJR5tNjKHOaNPsnJUrGROVoP_Js"><link rel="alternate" hreflang="en" href="https://zoltame.github.io/selfhostcost/methodology/">
+<link rel="alternate" hreflang="fr" href="https://zoltame.github.io/selfhostcost/fr/methodology/">
+<link rel="alternate" hreflang="de" href="https://zoltame.github.io/selfhostcost/de/methodology/">
+<link rel="alternate" hreflang="es" href="https://zoltame.github.io/selfhostcost/es/methodology/">
+<link rel="alternate" hreflang="x-default" href="https://zoltame.github.io/selfhostcost/methodology/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SelfHostCost">
+<meta property="og:locale" content="de_DE"><meta property="og:title" content="Methodik: wie jede Kostenzahl auf dieser Website berechnet wird">
+<meta property="og:description" content="Das Dimensionierungsmodell, die Annahmen zur Arbeitszeit, die genauen Preisquellen mit Datum und alles, was dieses Kostenmodell bewusst weglässt.">
+<meta property="og:url" content="https://zoltame.github.io/selfhostcost/de/methodology/">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="/selfhostcost/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/selfhostcost/assets/css/main.css">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://zoltame.github.io/selfhostcost/de/"}, {"@type": "ListItem", "position": 2, "name": "Methodik", "item": "https://zoltame.github.io/selfhostcost/de/methodology/"}]}, {"@type": "Article", "headline": "Methodik: wie jede Kostenzahl auf dieser Website berechnet wird", "description": "Das Dimensionierungsmodell, die Annahmen zur Arbeitszeit, die genauen Preisquellen mit Datum und alles, was dieses Kostenmodell bewusst weglässt.", "url": "https://zoltame.github.io/selfhostcost/de/methodology/", "datePublished": "2026-09-14", "dateModified": "2026-09-14", "isAccessibleForFree": true, "author": {"@type": "Organization", "name": "SelfHostCost", "url": "https://zoltame.github.io/selfhostcost/"}, "publisher": {"@type": "Organization", "name": "SelfHostCost", "url": "https://zoltame.github.io/selfhostcost/"}, "inLanguage": "de"}]}</script></head>
+<body>
+
+<header class="masthead">
+  <div class="shell">
+    <a class="wordmark" href="/selfhostcost/de/">Self<span>Host</span>Cost</a>
+    <nav>
+      <a href="/selfhostcost/de/compare/">Vergleiche</a>
+      <a href="/selfhostcost/de/self-host/">Tools</a>
+      <a href="/selfhostcost/de/hosting/">Hosting</a>
+      <a href="/selfhostcost/de/methodology/">Methodik</a>
+    </nav>
+    <nav class="langs" aria-label="Sprache">
+<a href="https://zoltame.github.io/selfhostcost/methodology/" hreflang="en" lang="en" title="English">EN</a><a href="https://zoltame.github.io/selfhostcost/fr/methodology/" hreflang="fr" lang="fr" title="Français">FR</a><a href="https://zoltame.github.io/selfhostcost/de/methodology/" hreflang="de" lang="de" title="Deutsch" aria-current="true">DE</a><a href="https://zoltame.github.io/selfhostcost/es/methodology/" hreflang="es" lang="es" title="Español">ES</a>    </nav>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="crumbs" aria-label="Brotkrumen-Navigation"><a href="/selfhostcost/de/">Startseite</a><span>/</span>Methodik</nav>
+</div>
+
+<main class="shell">
+<div class="prose">
+
+<h1>Methodik: wie jede Zahl auf dieser Website entsteht</h1>
+
+<p class="lead">
+  Diese Seite existiert, damit Sie unsere Rechnung prüfen, unseren Annahmen widersprechen und genau sehen können,
+  welche Preise wir bestätigt haben und welche nicht. Wenn sich eine Zahl auf dieser Website nicht auf etwas hier
+  zurückführen lässt, ist das ein Fehler.
+</p>
+
+<h2>Die Form des Problems</h2>
+<p>
+  Software mit Preis pro Platz hat keinen Sockel, aber eine steile Steigung. Ein Server hat einen hohen Sockel, aber
+  kaum Steigung. Jeder Vergleich hier ist der Punkt, an dem sich diese beiden Linien kreuzen. Deshalb lautet die
+  ehrliche Antwort nie „Self-Hosting ist günstiger“, sondern „günstiger ab ungefähr so vielen Personen, wenn Ihre
+  Zeit ungefähr so viel wert ist“.
+</p>
+
+<h2>Ein selbst gehostetes Tool dimensionieren</h2>
+<p>Für ein Tool und eine Teamgröße ergibt sich der benötigte Arbeitsspeicher aus:</p>
+<pre><code>arbeitsspeicher = (ram_basis + ram_pro_nutzer &times; nutzer) &times; 1,25</code></pre>
+<p>und der benötigte Speicherplatz aus:</p>
+<pre><code>speicher = speicher_basis + speicher_pro_nutzer &times; nutzer</code></pre>
+<ul>
+  <li><strong>ram_basis</strong> umfasst den gesamten Stack im Ruhezustand, einschließlich Datenbank und aller
+      Zusatzcontainer, die das Projekt in seiner Compose-Referenzdatei mitliefert. Es ist nicht nur der
+      Anwendungsprozess.</li>
+  <li><strong>Die 25 % Reserve</strong> sind Absicht. Eine Maschine, die genau auf
+      ihren Bedarf zugeschnitten ist, fällt beim Upgrade um.</li>
+  <li><strong>Die vCPU-Zahl</strong> wird aus der Vorgabe des Projekts übernommen und <em>nicht</em> mit der
+      Teamgröße skaliert. Bei diesen Lasten wird zuerst der Arbeitsspeicher knapp. Das ist eine Vereinfachung, und wir
+      nennen sie lieber, als sie zu verstecken.</li>
+</ul>
+<p>
+  Wenn ein Projekt Mindest- oder Empfehlungsanforderungen veröffentlicht, stammen die Grundwerte daraus, und die
+  Seite sagt das. Andernfalls werden sie aus den Diensten seines Compose-Referenz-Stacks abgeleitet und als Schätzung
+  gekennzeichnet. <strong>Die Zuschläge pro Nutzer stammen immer von uns.</strong> Sie sind großzügig statt
+  optimistisch angesetzt, denn ein zu klein angesetzter Server lässt Self-Hosting besser aussehen, und wir wollen,
+  dass die Verzerrung in die andere Richtung geht.
+</p>
+
+<h2>Den Server auswählen</h2>
+<p>
+  Wir nehmen den günstigsten Tarif unter den Anbietern, deren Preise wir selbst abgelesen haben, bei dem
+  Arbeitsspeicher und Speicherplatz den Bedarf beide erreichen oder übertreffen. Keine Teillösungen, und kein So-tun,
+  als passe ein Tool auf einen Tarif, dem ein Gigabyte fehlt.
+</p>
+<p>
+  <strong>Wir vertrauen heute nur 2 Anbietern.</strong> Das ist
+  eine echte Einschränkung. Mehrere Hoster zeigen ihre Preise erst im Browser oder hinter einer Regionsauswahl an,
+  und wir veröffentlichen keinen Preis, den wir nicht ablesen konnten. Die wichtigste Folge: Hetzner Cloud, Vultr, PikaPods fehlen in allen Berechnungen, und gerade Hetzner ist pro Gigabyte Arbeitsspeicher meist günstiger als das, was wir angeben. Betrachten Sie unsere Serverkosten als Obergrenze.
+</p>
+<div class="tablewrap"><table>
+<thead><tr><th>Anbieter</th><th>Berechnete Tarife</th><th>Quelle</th><th>Abgelesen am</th></tr></thead>
+<tbody>
+<tr><td>DigitalOcean</td><td>9 Tarife</td><td><a href="https://www.digitalocean.com/pricing/droplets" rel="nofollow noopener">Seite des Hosters</a></td><td>2026-09-12</td></tr>
+<tr><td>Kamatera</td><td>3 Tarife</td><td><a href="https://www.kamatera.com/pricing/" rel="nofollow noopener">Seite des Hosters</a></td><td>2026-09-14</td></tr>
+</tbody></table></div>
+
+<h2>Die drei Kosten des Selbstbetriebs</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Posten</th><th>Wie er festgelegt wird</th><th>Warum</th></tr></thead>
+<tbody>
+<tr><td>Server</td><td>Der oben gewählte Tarif zum Listenpreis</td><td>Es werden keine Rabatte für Laufzeit oder Jahreszahlung angenommen.</td></tr>
+<tr><td>Backups</td><td>20 % des Serverpreises</td>
+    <td>Ungefähr die Kosten von Anbieter-Snapshots. Backups als optional zu behandeln, würde jede Zahl auf dieser Website bedeutungslos machen.</td></tr>
+<tr><td>Ihre Zeit</td>
+    <td>0,5 bis 3 Stunden pro Monat je nach Aufwand, zu 64,70 € pro Stunde</td>
+    <td>Das ist meist der größte Posten, und ihn wegzulassen ist die häufigste Art, wie solche Vergleiche in die Irre führen.</td></tr>
+<tr><td>Einrichtung, einmalig</td>
+    <td>2 bis 16 Stunden je nach Aufwand, zu 64,70 € pro Stunde</td>
+    <td>Wird gegen die monatliche Ersparnis verrechnet und ergibt die Gewinnschwelle.</td></tr>
+</tbody></table></div>
+
+<h3>Der Aufwand und was er bedeutet</h3>
+<div class="tablewrap"><table>
+<thead><tr><th>Stufe</th><th>Bedeutung</th><th>Einrichtung</th><th>Pro Monat</th></tr></thead>
+<tbody>
+<tr><td>leicht</td><td>Ein Container, keine externen Abhängigkeiten, nichts zu tun außer Image-Updates</td>
+    <td>2 Std.</td><td>0,5 Std.</td></tr>
+<tr><td>mittel</td><td>Stack aus mehreren Containern mit einer Datenbank, deren Sicherung bei Ihnen liegt</td>
+    <td>6 Std.</td><td>1,5 Std.</td></tr>
+<tr><td>anspruchsvoll</td><td>Mehrere zustandsbehaftete Dienste, ein nicht trivialer Upgrade-Pfad und ein echtes Risiko von Datenverlust bei Eile</td>
+    <td>16 Std.</td><td>3 Std.</td></tr>
+</tbody></table></div>
+
+<h3>Wenn Ihre Zeit nichts kostet</h3>
+<p>
+  Jede Seite zeigt auch den Wert ohne Arbeitszeit. Beide Zahlen stimmen. Welche für Sie gilt, hängt davon ab, ob diese
+  Stunden sonst abrechenbar gewesen wären oder ob Sie den Abend ohnehin zum Vergnügen damit verbracht hätten. Wir
+  stellen den Wert mit Arbeitszeit voran, weil ein Unternehmen damit planen sollte.
+</p>
+
+<h2>Die kommerzielle Seite berechnen</h2>
+<p>
+  Wir vergleichen mit <strong>dem günstigsten Tarif, bei dem ein Team realistischerweise landen würde</strong>, nicht
+  mit dem günstigsten Tarif, den es gibt. Den Einstiegstarif eines Anbieters mit seinen Antwortgrenzen und fehlenden
+  Funktionen gegen ein vollständiges selbst gehostetes System zu stellen, wäre unehrlich, und genau so kommen die
+  meisten Vergleichsseiten zu ihren Ergebnissen. Der verwendete Tarif wird auf jeder Seite genannt.
+</p>
+<p>
+  Mindestanzahlen an Plätzen werden berücksichtigt. Wenn ein Anbieter nicht pro Platz abrechnet, sondern etwa nach
+  ausgeführten Aufgaben, monatlich aktiven Nutzern oder Abonnenten, sagt die Seite das ausdrücklich, statt so zu tun,
+  als sei die Teamgröße die richtige Achse. Wenn der kostenlose Tarif eines Anbieters das betreffende Team bereits
+  abdeckt, sagt die Seite auch das und behauptet keine Ersparnis. Wenn der Preis pro Nutzer mit der Teamgröße sinkt,
+  wird er für jede gezeigte Teamgröße abgelesen.
+</p>
+
+<h3>Preise, die wir bestätigt haben</h3>
+<p>Direkt von der Preisseite des Anbieters abgelesen, am angegebenen Datum:</p>
+<div class="tablewrap"><table>
+<thead><tr><th>Produkt</th><th>Verglichener Tarif</th><th>Quelle</th><th>Abgelesen am</th></tr></thead>
+<tbody>
+<tr><td>1Password</td><td>Business</td><td><a href="https://1password.com/business-pricing" rel="nofollow noopener">Anbieterseite</a></td><td>2026-09-12</td></tr>
+<tr><td>Amplitude</td><td>Free</td><td><a href="https://amplitude.com/pricing" rel="nofollow noopener">Anbieterseite</a></td><td>2026-09-14</td></tr>
+<tr><td>Asana</td><td>Starter</td><td><a href="https://asana.com/pricing" rel="nofollow noopener">Anbieterseite</a></td><td>2026-09-14</td></tr>
+<tr><td>Atlassian Statuspage</td><td>Startup</td><td><a href="https://www.atlassian.com/software/statuspage/pricing" rel="nofollow noopener">Anbieterseite</a></td><td>2026-09-12</td></tr>
+<tr><td>Auth0</td><td>Essentials (B2B)</td><td><a href="https://auth0.com/pricing" rel="nofollow noopener">Anbieterseite</a></td><td>2026-09-12</td></tr>
+<tr><td>Better Stack Uptime</td><td>Responder</td><td><a href="https://betterstack.com/pricing" rel="nofollow noopener">Anbieterseite</a></td><td>2026-09-14</td></tr>
+<tr><td>Bitwarden</td><td>Teams</td><td><a href="https://bitwarden.com/pricing/business/" rel="nofollow noopener">Anbieterseite</a></td><td>2026-09-14</td></tr>
+<tr><td>Clerk</td><td>Pro</td><td><a href="https://clerk.com/pricing" rel="nofollow noopener">Anbieterseite</a></td><td>2026-09-14</td></tr>
+<tr><td>Confluence</td><td>Standard</td><td><a href="https://www.atlassian.com/software/confluence/pricing" rel="nofollow noopener">Anbieterseite</a></td><td>2026-09-14</td></tr>
+<tr><td>Fathom Analytics</td><td>Starter</td><td><a href="https://usefathom.com/pricing" rel="nofollow noopener">Anbieterseite</a></td><td>2026-09-14</td></tr>
+<tr><td>Freshdesk</td><td>Growth</td><td><a href="https://www.freshworks.com/freshdesk/pricing/" rel="nofollow noopener">Anbieterseite</a></td><td>2026-09-14</td></tr>
+<tr><td>Google Analytics 4</td><td>Free</td><td><a href="https://marketingplatform.google.com/about/analytics/compare/" rel="nofollow noopener">Anbieterseite</a></td><td>2026-09-12</td></tr>
+<tr><td>Help Scout</td><td>Standard</td><td><a href="https://www.helpscout.com/pricing/" rel="nofollow noopener">Anbieterseite</a></td><td>2026-09-14</td></tr>
+<tr><td>Intercom</td><td>Essential</td><td><a href="https://www.intercom.com/pricing" rel="nofollow noopener">Anbieterseite</a></td><td>2026-09-14</td></tr>
+<tr><td>Jira</td><td>Standard</td><td><a href="https://www.atlassian.com/software/jira/pricing" rel="nofollow noopener">Anbieterseite</a></td><td>2026-09-14</td></tr>
+<tr><td>LastPass</td><td>Teams / Business</td><td><a href="https://www.lastpass.com/pricing" rel="nofollow noopener">Anbieterseite</a></td><td>2026-09-14</td></tr>
+<tr><td>Linear</td><td>Basic</td><td><a href="https://linear.app/pricing" rel="nofollow noopener">Anbieterseite</a></td><td>2026-09-14</td></tr>
+<tr><td>Make</td><td>Core</td><td><a href="https://www.make.com/en/pricing" rel="nofollow noopener">Anbieterseite</a></td><td>2026-09-14</td></tr>
+<tr><td>Mixpanel</td><td>Free</td><td><a href="https://mixpanel.com/pricing/" rel="nofollow noopener">Anbieterseite</a></td><td>2026-09-14</td></tr>
+<tr><td>monday.com</td><td>Standard</td><td><a href="https://monday.com/pricing" rel="nofollow noopener">Anbieterseite</a></td><td>2026-09-14</td></tr>
+<tr><td>Notion</td><td>Business</td><td><a href="https://www.notion.com/pricing" rel="nofollow noopener">Anbieterseite</a></td><td>2026-09-12</td></tr>
+<tr><td>Okta Workforce Identity</td><td>Starter</td><td><a href="https://www.okta.com/pricing/" rel="nofollow noopener">Anbieterseite</a></td><td>2026-09-14</td></tr>
+<tr><td>Pingdom</td><td>Synthetic Monitoring</td><td><a href="https://www.pingdom.com/pricing/" rel="nofollow noopener">Anbieterseite</a></td><td>2026-09-14</td></tr>
+<tr><td>Retool</td><td>Team</td><td><a href="https://retool.com/pricing" rel="nofollow noopener">Anbieterseite</a></td><td>2026-09-14</td></tr>
+<tr><td>SurveyMonkey</td><td>Team Advantage</td><td><a href="https://www.surveymonkey.com/pricing/" rel="nofollow noopener">Anbieterseite</a></td><td>2026-09-14</td></tr>
+<tr><td>Tableau</td><td>Tableau Standard</td><td><a href="https://www.tableau.com/pricing/teams-orgs" rel="nofollow noopener">Anbieterseite</a></td><td>2026-09-14</td></tr>
+<tr><td>Trello</td><td>Standard</td><td><a href="https://trello.com/pricing" rel="nofollow noopener">Anbieterseite</a></td><td>2026-09-14</td></tr>
+<tr><td>Typeform</td><td>Plus</td><td><a href="https://www.typeform.com/pricing/" rel="nofollow noopener">Anbieterseite</a></td><td>2026-09-12</td></tr>
+<tr><td>Zapier</td><td>Professional</td><td><a href="https://zapier.com/pricing" rel="nofollow noopener">Anbieterseite</a></td><td>2026-09-12</td></tr>
+<tr><td>Zendesk</td><td>Suite Team</td><td><a href="https://www.zendesk.com/pricing/" rel="nofollow noopener">Anbieterseite</a></td><td>2026-09-12</td></tr>
+</tbody></table></div>
+
+<h3>Preise, die wir nicht bestätigt haben</h3>
+<p>
+  14 Produkte in unserem Datensatz haben keinen bestätigten Preis.
+  Da der strenge Modus aktiv ist, <strong>wurde keine Seite veröffentlicht, die von einem davon abhängen würde</strong>.
+  Es handelt sich um: Calendly, Datadog, DocuSign, Dropbox Business, Google One storage, Google Workspace, HubSpot Sales Hub, Looker Studio Pro, Mailchimp, Mode, Pipedrive, Salesforce Sales Cloud, Sentry, Slack.
+</p>
+
+<h3>Währungen</h3>
+<p>
+  Alle Berechnungen erfolgen in US-Dollar. In dieser deutschen Version werden die Beträge anschließend in Euro
+  angezeigt, zu einem einzigen datierten Kurs von <strong>1 EUR = 1,1592 USD</strong>, dem Kurs von
+  <a href="https://api.frankfurter.dev/v1/latest?from=EUR&to=USD" rel="nofollow noopener">Frankfurter, European Central Bank reference rates</a> vom 2026-09-11. Manche Anbieter
+  zeigten ihre Preise bereits in Euro: Diese werden für die Berechnung zum selben Kurs in Dollar umgerechnet und für
+  die Anzeige zurückgerechnet. Die Quellentabellen nennen den Preis immer in der ursprünglichen Währung.
+</p>
+
+<h2>Der Zeitraum und die Gewinnschwelle</h2>
+<p>
+  Summen beziehen sich auf <strong>36 Monate</strong>. Die Gewinnschwelle sind die Einrichtungskosten geteilt
+  durch die monatliche Ersparnis:
+</p>
+<pre><code>gewinnschwelle_monate = einrichtungskosten / (saas_monatlich - selbst_gehostet_monatlich)</code></pre>
+<p>
+  Wenn die monatliche Ersparnis null oder negativ ist, gibt es keine Gewinnschwelle, und die Seite zeigt „nie“, statt
+  die Zeile stillschweigend wegzulassen.
+</p>
+
+<h2>Was dieses Modell bewusst ignoriert</h2>
+<ul>
+  <li><strong>Den Migrationsaufwand.</strong> Ihre bestehenden Daten aus dem bisherigen Tool heraus- und in den Ersatz
+      hineinzubekommen, ist echte Arbeit und wird nirgends gezählt. Bei großen historischen Datenmengen kann er die
+      Einrichtungskosten weit übersteigen.</li>
+  <li><strong>Funktionsgleichheit.</strong> Die Tools sind nahe Ersatzprodukte, keine Kopien. Kosten sind eine Achse
+      und oft nicht die entscheidende.</li>
+  <li><strong>Risiko.</strong> Ein missglücktes Upgrade, eine verlorene Datenbank oder ein Wochenende mit einem Ausfall
+      haben erwartbare Kosten, die eine Tabelle nicht ehrlich erfassen kann.</li>
+  <li><strong>Traffic-Überschreitungen, verwaltete Datenbanken und Objektspeicher</strong> über das hinaus, was der
+      gewählte Tarif enthält. Einige Tools brauchen tatsächlich externen Objektspeicher, und ihre Seiten nennen ihn,
+      aber er ist nicht eingerechnet.</li>
+  <li><strong>Rabatte für Jahreszahlung oder Laufzeit</strong> auf der Hosting-Seite. Beide Seiten werden auf der
+      Basis angegeben, die die Anbieterseite zeigte, und die Seite nennt diese Basis.</li>
+  <li><strong>Ihre vorhandene Infrastruktur.</strong> Wenn Sie bereits einen Server mit freiem Arbeitsspeicher
+      betreiben, liegen die Grenzkosten eines weiteren Containers nahe null, und keine dieser Zahlen trifft auf Sie zu.</li>
+</ul>
+
+<h2>Wie aktuell diese Seite ist</h2>
+<p>
+  Preise sind eine datierte Momentaufnahme, kein Live-Feed. Jede Zahl verlinkt auf ihre Quelle, und maßgeblich ist die
+  Seite des Anbieters. Ein Preis, der älter als etwa 45 Tage ist, sollte als Richtwert gelten und vor jeder Ausgabe
+  erneut geprüft werden.
+</p>
+<p>
+  Aktuell: 65 veröffentlichte Vergleiche, Welle 1, Referenz-Teamgröße 10 Personen, strenge
+  Preisprüfung aktiv.
+</p>
+
+</div>
+</main>
+
+<footer class="sitefoot">
+  <div class="shell">
+    <div class="footgrid">
+      <div>
+        <h4>SelfHostCost</h4>
+        <p style="margin:0 0 .6em">Was Self-Hosting wirklich kostet – pro Tool und pro Teamgröße.</p>
+        <p style="margin:0"><a href="/selfhostcost/de/methodology/">Wie jede Zahl berechnet wird</a></p>
+      </div>
+      <div>
+        <h4>Übersicht</h4>
+        <ul>
+          <li><a href="/selfhostcost/de/compare/">Alle Vergleiche</a></li>
+          <li><a href="/selfhostcost/de/self-host/">Alle Tools</a></li>
+          <li><a href="/selfhostcost/de/hosting/">Hosting-Anbieter</a></li>
+          <li><a href="/selfhostcost/de/migration-checklist/">Migrations-Checkliste</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kategorien</h4>
+        <ul>
+<li><a href="/selfhostcost/de/category/password-manager/">Passwortmanager</a></li><li><a href="/selfhostcost/de/category/analytics/">Webanalyse</a></li><li><a href="/selfhostcost/de/category/automation/">Workflow-Automatisierung</a></li><li><a href="/selfhostcost/de/category/docs-wiki/">Dokumentation und Wikis</a></li><li><a href="/selfhostcost/de/category/project-management/">Projektmanagement</a></li><li><a href="/selfhostcost/de/category/helpdesk/">Helpdesk und Support-Postfach</a></li>        </ul>
+      </div>
+      <div>
+        <h4>Über uns</h4>
+        <ul>
+          <li><a href="/selfhostcost/de/about/">Über uns und Kontakt</a></li>
+<li><a href="mailto:selfhostcost.contact@gmail.com">selfhostcost.contact@gmail.com</a></li>          <li><a href="/selfhostcost/de/methodology/">Methodik</a></li>
+          <li><a href="/selfhostcost/de/disclosure/">Hinweis zu Empfehlungslinks</a></li>
+          <li><a href="/selfhostcost/de/privacy/">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin:30px 0 0">
+      Preise werden an den auf jeder Seite genannten Tagen von den Preisseiten der Anbieter abgelesen und nicht laufend aktualisiert. Prüfen Sie den Preis beim Anbieter, bevor Sie kaufen. Nichts hier ist eine Finanzberatung.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

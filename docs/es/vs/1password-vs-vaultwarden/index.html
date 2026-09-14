@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1Password frente a Vaultwarden autoalojado: coste real para 10 personas (2026)</title>
+<meta name="description" content="1Password cuesta 89,90 US$ al mes para 10 personas; autoalojar Vaultwarden cuesta 42,30 US$, con servidor, copias de seguridad y tiempo de mantenimiento incluidos. Desglose completo para cada tamaño de equipo.">
+<link rel="canonical" href="https://zoltame.github.io/selfhostcost/es/vs/1password-vs-vaultwarden/">
+<meta name="google-site-verification" content="L_8gw5Ec2vvygFsccJR5tNjKHOaNPsnJUrGROVoP_Js"><link rel="alternate" hreflang="en" href="https://zoltame.github.io/selfhostcost/vs/1password-vs-vaultwarden/">
+<link rel="alternate" hreflang="fr" href="https://zoltame.github.io/selfhostcost/fr/vs/1password-vs-vaultwarden/">
+<link rel="alternate" hreflang="de" href="https://zoltame.github.io/selfhostcost/de/vs/1password-vs-vaultwarden/">
+<link rel="alternate" hreflang="es" href="https://zoltame.github.io/selfhostcost/es/vs/1password-vs-vaultwarden/">
+<link rel="alternate" hreflang="x-default" href="https://zoltame.github.io/selfhostcost/vs/1password-vs-vaultwarden/">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="SelfHostCost">
+<meta property="og:locale" content="es_ES"><meta property="og:title" content="1Password frente a Vaultwarden autoalojado: coste real para 10 personas (2026)">
+<meta property="og:description" content="1Password cuesta 89,90 US$ al mes para 10 personas; autoalojar Vaultwarden cuesta 42,30 US$, con servidor, copias de seguridad y tiempo de mantenimiento incluidos. Desglose completo para cada tamaño de equipo.">
+<meta property="og:url" content="https://zoltame.github.io/selfhostcost/es/vs/1password-vs-vaultwarden/">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="/selfhostcost/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/selfhostcost/assets/css/main.css">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://zoltame.github.io/selfhostcost/es/"}, {"@type": "ListItem", "position": 2, "name": "Gestores de contraseñas", "item": "https://zoltame.github.io/selfhostcost/es/category/password-manager/"}, {"@type": "ListItem", "position": 3, "name": "1Password vs. Vaultwarden", "item": "https://zoltame.github.io/selfhostcost/es/vs/1password-vs-vaultwarden/"}]}, {"@type": "Article", "headline": "1Password frente a Vaultwarden autoalojado: coste real para 10 personas (2026)", "description": "1Password cuesta 89,90 US$ al mes para 10 personas; autoalojar Vaultwarden cuesta 42,30 US$, con servidor, copias de seguridad y tiempo de mantenimiento incluidos. Desglose completo para cada tamaño de equipo.", "url": "https://zoltame.github.io/selfhostcost/es/vs/1password-vs-vaultwarden/", "datePublished": "2026-09-14", "dateModified": "2026-09-14", "isAccessibleForFree": true, "author": {"@type": "Organization", "name": "SelfHostCost", "url": "https://zoltame.github.io/selfhostcost/"}, "publisher": {"@type": "Organization", "name": "SelfHostCost", "url": "https://zoltame.github.io/selfhostcost/"}, "inLanguage": "es"}]}</script></head>
+<body>
+
+<header class="masthead">
+  <div class="shell">
+    <a class="wordmark" href="/selfhostcost/es/">Self<span>Host</span>Cost</a>
+    <nav>
+      <a href="/selfhostcost/es/compare/">Comparativas</a>
+      <a href="/selfhostcost/es/self-host/">Herramientas</a>
+      <a href="/selfhostcost/es/hosting/">Alojamiento</a>
+      <a href="/selfhostcost/es/methodology/">Metodología</a>
+    </nav>
+    <nav class="langs" aria-label="Idioma">
+<a href="https://zoltame.github.io/selfhostcost/vs/1password-vs-vaultwarden/" hreflang="en" lang="en" title="English">EN</a><a href="https://zoltame.github.io/selfhostcost/fr/vs/1password-vs-vaultwarden/" hreflang="fr" lang="fr" title="Français">FR</a><a href="https://zoltame.github.io/selfhostcost/de/vs/1password-vs-vaultwarden/" hreflang="de" lang="de" title="Deutsch">DE</a><a href="https://zoltame.github.io/selfhostcost/es/vs/1password-vs-vaultwarden/" hreflang="es" lang="es" title="Español" aria-current="true">ES</a>    </nav>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="crumbs" aria-label="Ruta de navegación"><a href="/selfhostcost/es/">Inicio</a><span>/</span><a href="/selfhostcost/es/category/password-manager/">Gestores de contraseñas</a><span>/</span>1Password vs. Vaultwarden</nav>
+</div>
+
+<main class="shell">
+
+<p class="kicker">Gestores de contraseñas &middot; comparativa de costes</p>
+<h1>1Password frente a Vaultwarden autoalojado: lo que cuesta de verdad cada opción</h1>
+
+<p class="lead">
+  1Password en el plan Business frente a Vaultwarden funcionando en el servidor más pequeño
+  que lo soporta. Cada cifra de abajo se calcula con el modelo de dimensionamiento y los precios con fecha que
+  aparecen al pie de esta página, e incluye lo que casi todas las comparativas omiten: tu propio tiempo.
+</p>
+
+<div class="verdict ">
+  <p class="lede">    Para 10 personas, autoalojar Vaultwarden cuesta <b>42,30 US$ al mes</b>
+    frente a <b>89,90 US$</b> de 1Password. Recuperas la inversión en
+    <b>3 meses</b> y ahorras 1.564 US$ en
+    36 meses, con tu propio tiempo ya incluido.  </p>
+
+  <dl class="figures">
+    <div class="fig">
+      <dt>1Password</dt>
+      <dd>89,90 US$<small>al mes, Business</small></dd>
+    </div>
+    <div class="fig">
+      <dt>Autoalojado</dt>
+      <dd>42,30 US$<small>servidor, copias de seguridad y tu tiempo</small></dd>
+    </div>
+    <div class="fig">
+      <dt>Servidor y copias</dt>
+      <dd>4,80 US$<small>Basic 512 MiB, 0,5 GB de RAM</small></dd>
+    </div>
+    <div class="fig">
+      <dt>Diferencia en 36 meses</dt>
+      <dd class="pos">
+        1.564 US$
+        <small>ahorrado al autoalojar</small>
+      </dd>
+    </div>
+    <div class="fig">
+      <dt>Punto de equilibrio</dt>
+      <dd>3 meses<small>tras 150 US$ de puesta en marcha</small></dd>
+    </div>
+  </dl>
+</div>
+<h2>La misma comparativa para cada tamaño de equipo</h2>
+<p>
+  El autoalojamiento tiene un coste mínimo alto y casi ninguna pendiente; el software por puesto no tiene mínimo pero
+  sí una pendiente pronunciada. Esa es toda la historia, y por eso la respuesta cambia en algún punto de esta tabla en
+  lugar de ser la misma para todos.
+</p>
+
+<div class="tablewrap">
+<table>
+  <caption>1Password Business frente a Vaultwarden autoalojado, al mes, durante 36 meses. El autoalojamiento incluye servidor, copias de seguridad y tiempo de mantenimiento a 75,00 US$ la hora.</caption>
+  <thead>
+    <tr>
+      <th>Tamaño del equipo</th>
+      <th class="num">1Password</th>
+      <th class="num">Autoalojado</th>
+      <th class="num">Sin contar tu tiempo</th>
+      <th>Servidor necesario</th>
+      <th class="num">Diferencia en 36 meses</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/es/cost/vaultwarden/1-user/">una persona</a></th>
+      <td class="num">8,99 US$</td>
+      <td class="num">42,30 US$</td>
+      <td class="num">4,80 US$</td>
+      <td>Basic 512 MiB (0,5 GB)</td>
+      <td class="num neg">-1.349 US$</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/es/cost/vaultwarden/5-users/">5 personas</a></th>
+      <td class="num">44,95 US$</td>
+      <td class="num">42,30 US$</td>
+      <td class="num">4,80 US$</td>
+      <td>Basic 512 MiB (0,5 GB)</td>
+      <td class="num neg">-54,60 US$</td>
+    </tr>
+    <tr>
+      <th scope="row"><strong>10 personas</strong></th>
+      <td class="num">89,90 US$</td>
+      <td class="num">42,30 US$</td>
+      <td class="num">4,80 US$</td>
+      <td>Basic 512 MiB (0,5 GB)</td>
+      <td class="num pos">+1.564 US$</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/es/cost/vaultwarden/25-users/">25 personas</a></th>
+      <td class="num">225 US$</td>
+      <td class="num">42,30 US$</td>
+      <td class="num">4,80 US$</td>
+      <td>Basic 512 MiB (0,5 GB)</td>
+      <td class="num pos">+6.418 US$</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/es/cost/vaultwarden/50-users/">50 personas</a></th>
+      <td class="num">450 US$</td>
+      <td class="num">42,30 US$</td>
+      <td class="num">4,80 US$</td>
+      <td>Basic 512 MiB (0,5 GB)</td>
+      <td class="num pos">+14.509 US$</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/es/cost/vaultwarden/100-users/">100 personas</a></th>
+      <td class="num">899 US$</td>
+      <td class="num">42,30 US$</td>
+      <td class="num">4,80 US$</td>
+      <td>Basic 512 MiB (0,5 GB)</td>
+      <td class="num pos">+30.691 US$</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/es/cost/vaultwarden/250-users/">250 personas</a></th>
+      <td class="num">2.248 US$</td>
+      <td class="num">42,30 US$</td>
+      <td class="num">4,80 US$</td>
+      <td>Basic (1 GB)</td>
+      <td class="num pos">+79.237 US$</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p class="srcline">
+El autoalojamiento empieza a compensar a partir de aproximadamente <strong>10 personas</strong>.
+</p>
+
+<h2>Adónde va realmente el dinero del autoalojamiento para 10 personas</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Concepto</th><th class="num">Al mes</th><th>Qué es</th></tr></thead>
+  <tbody>
+    <tr>
+      <th scope="row">Servidor</th>
+      <td class="num">4,00 US$</td>
+      <td>Basic 512 MiB en DigitalOcean: 1 vCPU, 0,5 GB de RAM, 10 GB de disco</td>
+    </tr>
+    <tr>
+      <th scope="row">Copias de seguridad</th>
+      <td class="num">0,80 US$</td>
+      <td>Snapshots del proveedor al 20 % del precio del servidor. Prescindir de ellas no es un ahorro, es una apuesta.</td>
+    </tr>
+    <tr>
+      <th scope="row">Tu tiempo</th>
+      <td class="num">37,50 US$</td>
+      <td>0,5 horas al mes de actualizaciones, cambios de versión y alguna avería ocasional, a 75,00 US$ la hora</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr><td>Total</td><td class="num">42,30 US$</td><td>Más 150 US$ una sola vez, por unas 2 horas de puesta en marcha</td></tr>
+  </tfoot>
+</table>
+</div>
+
+<p>
+  Con este tamaño de equipo, 1Password cuesta <strong>89,90 US$</strong> al mes.
+10 puestos a 8,99 US$ cada uno.Es la tarifa con facturación anual, la que mostraba la página del proveedor; pagar mes a mes cuesta más.</p>
+
+
+<h2>Lo que necesita Vaultwarden para 10 personas</h2>
+<p>
+  Una reimplementación en Rust del servidor de Bitwarden. Funciona sin problemas con una fracción de gigabyte, porque los datos de las bóvedas son pequeños y se cifran en el cliente.
+</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Recurso</th><th class="num">Necesario</th><th>Cómo se calcula</th></tr></thead>
+  <tbody>
+    <tr><th scope="row">Memoria</th><td class="num">0,3 GB</td>
+      <td>0,2 GB para el stack en reposo, más 1 MB por usuario activo, más un 25 % de margen</td></tr>
+    <tr><th scope="row">Disco</th><td class="num">2,2 GB</td>
+      <td>2 GB de base, más 0,02 GB por usuario</td></tr>
+    <tr><th scope="row">vCPU</th><td class="num">1</td>
+      <td>La base recomendada por el proyecto. Con esta carga, la memoria se agota antes que el procesador.</td></tr>
+  </tbody>
+</table>
+</div>
+
+
+<h2>A qué renuncias, sin rodeos</h2>
+<ul>
+  <li><strong>La disponibilidad pasa a ser cosa tuya.</strong> 1Password tiene un equipo de guardia. Si autoalojas, una actualización fallida un viernes a las 18:00 es tu tarde.</li>
+  <li><strong>Las copias de seguridad solo existen si has probado a restaurarlas.</strong> La línea de 0,80 US$ de arriba compra snapshots, no una recuperación ensayada.</li>
+  <li><strong>Vaultwarden es ligero: un solo contenedor y nada que programar aparte de actualizar la imagen.</strong> Por eso la línea de mantenimiento es de 0,5 horas al mes y no de cero.</li>
+  <li><strong>La paridad de funciones nunca es total.</strong> Vaultwarden cubre lo esencial de lo que los equipos usan en 1Password; la diferencia se nota en la larga lista de integraciones y controles empresariales.</li>
+</ul>
+
+
+<div class="cta">
+  <h3>Dónde alojar Vaultwarden</h3>
+  <p>
+    Para 10 personas hacen falta 0,3 GB de memoria y 2,2 GB de disco. Entre los
+    proveedores cuyos precios hemos leído nosotros mismos, el plan más barato que encaja es
+    <strong>Basic 512 MiB</strong> en DigitalOcean, por
+    4,00 US$ al mes.
+  </p>
+  <p>
+    <a class="btn" href="https://m.do.co/c/3af2e8b05a20" rel="sponsored nofollow noopener">
+      Ir a DigitalOcean
+    </a>
+    <a class="btn ghost" href="/selfhostcost/es/hosting/">Comparar proveedores</a>
+  </p>
+
+  <p style="font-size:.9rem;color:var(--ink-2);margin-bottom:0">
+    No decimos que sea el servidor más barato de internet, solo el más barato que podemos citar con honestidad.
+Hetzner Cloud, Vultr y PikaPods    publican precios que no pudimos leer de forma automática,
+    y Hetzner en particular suele ser más barato por gigabyte de memoria que cualquier opción citada aquí.
+    Compara por tu cuenta antes de comprometerte.
+  </p>
+
+<p class="disclosure">El enlace de DigitalOcean de arriba es un enlace de referido: si te registras a través de él y pagas tus primeros 25 $, recibimos 25 $ de crédito en nuestra cuenta de DigitalOcean. Eso nunca cambia los costes calculados, el servidor elegido ni la conclusión de esta página. El modelo de dimensionamiento y todas las fuentes de precios están publicados íntegramente.</p></div>
+<h2>Vaultwarden de un vistazo</h2>
+<div class="tablewrap">
+<table>
+  <tbody>
+    <tr><th scope="row">Licencia</th><td>GNU Affero General Public License v3.0</td></tr>
+    <tr><th scope="row">Lenguaje</th><td>Rust</td></tr>
+<tr><th scope="row">Estrellas en GitHub</th><td>67.195, comprobado el 2026-09-12</td></tr><tr><th scope="row">Última versión</th><td>1.37.2</td></tr><tr><th scope="row">Último commit</th><td>2026-09-09</td></tr>    <tr><th scope="row">Imágenes Docker oficiales</th><td>Sí</td></tr>
+    <tr><th scope="row">Proyecto</th><td><a href="https://github.com/dani-garcia/vaultwarden" rel="nofollow noopener">github.com/dani-garcia/vaultwarden</a> &middot; <a href="https://github.com/dani-garcia/vaultwarden" rel="nofollow noopener">dani-garcia/vaultwarden</a></td></tr>
+  </tbody>
+</table>
+</div>
+
+
+<h2>Cada cifra de esta página y su origen</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Dato</th><th>Valor usado</th><th>Fuente</th><th>Leído el</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>1Password Business</td>
+      <td>8,99 USD por puesto al mes</td>
+      <td><a href="https://1password.com/business-pricing" rel="nofollow noopener">página de precios del proveedor</a></td>
+      <td>2026-09-12</td>
+    </tr>
+    <tr>
+      <td>DigitalOcean Basic 512 MiB</td>
+      <td>4,00 US$ al mes</td>
+      <td><a href="https://www.digitalocean.com/pricing/droplets" rel="nofollow noopener">página de precios del alojamiento</a></td>
+      <td>2026-09-12</td>
+    </tr>
+    <tr>
+      <td>Tiempo de ingeniería</td>
+      <td>75,00 US$ la hora</td>
+      <td><a href="/selfhostcost/es/methodology/">nuestra hipótesis publicada</a></td>
+      <td>&mdash;</td>
+    </tr>
+    <tr>
+      <td>Dimensionamiento de Vaultwarden</td>
+      <td>0,2 GB de base, 1 MB por usuario</td>
+      <td>documentación del proyecto</td>
+      <td>&mdash;</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p class="srcline">
+  Los precios cambian. Si el proveedor ha modificado los suyos desde el 2026-09-12, las cifras de arriba
+  están desactualizadas y mandan los enlaces de origen, no nosotros. <a href="/selfhostcost/es/methodology/">Cómo lo gestionamos</a>.
+</p>
+
+<h2>Ver también</h2>
+<ul class="linkgrid">
+  <li><a href="/selfhostcost/es/self-host/vaultwarden/">Autoalojar Vaultwarden: todos los tamaños de equipo</a></li>
+  <li><a href="/selfhostcost/es/alternatives/1password/">Todas las alternativas autoalojadas a 1Password</a></li>
+<li><a href="/selfhostcost/es/vs/lastpass-vs-vaultwarden/">LastPass vs. Vaultwarden</a></li><li><a href="/selfhostcost/es/vs/bitwarden-vs-vaultwarden/">Bitwarden vs. Vaultwarden</a></li><li><a href="/selfhostcost/es/vs/1password-vs-passbolt/">1Password vs. Passbolt</a></li><li><a href="/selfhostcost/es/vs/lastpass-vs-passbolt/">LastPass vs. Passbolt</a></li>  <li><a href="/selfhostcost/es/category/password-manager/">Gestores de contraseñas: comparativa</a></li>
+</ul>
+
+</main>
+
+<footer class="sitefoot">
+  <div class="shell">
+    <div class="footgrid">
+      <div>
+        <h4>SelfHostCost</h4>
+        <p style="margin:0 0 .6em">Lo que cuesta de verdad el autoalojamiento, herramienta por herramienta y según el tamaño del equipo.</p>
+        <p style="margin:0"><a href="/selfhostcost/es/methodology/">Cómo se calcula cada cifra</a></p>
+      </div>
+      <div>
+        <h4>Explorar</h4>
+        <ul>
+          <li><a href="/selfhostcost/es/compare/">Todas las comparativas</a></li>
+          <li><a href="/selfhostcost/es/self-host/">Todas las herramientas</a></li>
+          <li><a href="/selfhostcost/es/hosting/">Proveedores de alojamiento</a></li>
+          <li><a href="/selfhostcost/es/migration-checklist/">Lista de verificación de migración</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Categorías</h4>
+        <ul>
+<li><a href="/selfhostcost/es/category/password-manager/">Gestores de contraseñas</a></li><li><a href="/selfhostcost/es/category/analytics/">Analítica web</a></li><li><a href="/selfhostcost/es/category/automation/">Automatización de flujos de trabajo</a></li><li><a href="/selfhostcost/es/category/docs-wiki/">Documentación y wikis</a></li><li><a href="/selfhostcost/es/category/project-management/">Gestión de proyectos</a></li><li><a href="/selfhostcost/es/category/helpdesk/">Soporte y bandeja compartida</a></li>        </ul>
+      </div>
+      <div>
+        <h4>Acerca de</h4>
+        <ul>
+          <li><a href="/selfhostcost/es/about/">Acerca de y contacto</a></li>
+<li><a href="mailto:selfhostcost.contact@gmail.com">selfhostcost.contact@gmail.com</a></li>          <li><a href="/selfhostcost/es/methodology/">Metodología</a></li>
+          <li><a href="/selfhostcost/es/disclosure/">Aviso sobre enlaces de referido</a></li>
+          <li><a href="/selfhostcost/es/privacy/">Privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin:30px 0 0">
+      Los precios se toman de las páginas de precios de cada proveedor en las fechas indicadas en cada página y no se actualizan de forma continua. Compruébalos con el proveedor antes de comprar. Nada de lo que aparece aquí es asesoramiento financiero.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

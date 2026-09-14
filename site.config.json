@@ -7,6 +7,12 @@
   "base_url": "https://zoltame.github.io/selfhostcost",
   "base_path": "/selfhostcost",
   "locale": "en",
+  "languages": [
+    "en",
+    "fr",
+    "de",
+    "es"
+  ],
   "author": "SelfHostCost",
   "publish_wave": 1,
   "reference_users": 10,
@@ -117,7 +123,10 @@
     "activated_on": "2026-09-14",
     "headline": "Get the migration checklist for this tool",
     "subhead": "A one-page pre-flight list: data export path, sizing, backup plan, and the rollback step most people skip.",
-    "cta": "Send me the checklist"
+    "cta": "Send me the checklist",
+    "form_ids": {
+      "en": "68g9vJ"
+    }
   },
   "contact_email": "selfhostcost.contact@gmail.com",
   "launched_on": "2026-09-14",

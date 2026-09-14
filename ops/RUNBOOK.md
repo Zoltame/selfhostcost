@@ -25,13 +25,34 @@ vendor price was read from the vendor's own page and recorded in
    `apply_verified_prices.py` with the date, then rebuild.
 3. **Wave 2** (`publish_wave: 2`): only after the day-30 gate says SCALE.
 
+## Languages
+
+The site is published in English (site root), French (`/fr/`), German (`/de/`) and Spanish (`/es/`),
+listed in `site.config.json > languages`. Every language renders the same computed figures; French
+and German display euros at the dated rate in `fx`, English and Spanish display dollars.
+
+| What | Where |
+|------|-------|
+| Page prose | `templates/<lang>/` (same variables in every language) |
+| Shared layout, header, footer, form | `templates/shared/` |
+| Short interface strings | `i18n/ui/<lang>.json` (same keys as `en.json`) |
+| Translated dataset text | `data/i18n/<lang>.json` |
+| Written pages (about, checklist, methodology, disclosure, privacy) | `scripts/lib/content_<lang>.py` |
+
+The build report lists, per language, any interface string or data field that fell back to English.
+Adding a tool or a price means translating its descriptive fields into each `data/i18n/<lang>.json`,
+otherwise the translated pages show the English text for that field.
+
 ## Monetisation switches (require your own accounts)
 
 - **Affiliates:** apply to DigitalOcean, then Hetzner, Vultr, Kamatera. Put each ID in
   `site.config.json > affiliate.providers.<slug>.id` and set `affiliate.enabled: true`.
   Links get `rel="sponsored"` and the disclosure appears automatically.
-- **Lead capture:** create a Tally form (email + tool name hidden field), put its ID in
-  `lead_capture.form_id`, set `enabled: true`. The form then appears on every tool and comparison page.
+- **Lead capture:** one Tally form per language, each with an email field, a consent checkbox,
+  hidden fields `tool` and `page`, and "Redirect on completion" set to that language's checklist
+  (`/migration-checklist/`, `/fr/migration-checklist/`, `/de/migration-checklist/`,
+  `/es/migration-checklist/`). Put each form ID in `lead_capture.form_ids.<lang>`. A language
+  without a form ID shows no form at all, rather than an English form.
 - **Analytics:** Umami Cloud or Plausible, cookie-free. Set `analytics.provider`, `site_id`, `script_url`.
 
 ## Tracking cadence

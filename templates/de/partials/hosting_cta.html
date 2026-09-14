@@ -1,0 +1,28 @@
+{# Hosting-Empfehlung. Einfache Links, solange keine Partner-ID konfiguriert ist. #}
+<div class="cta">
+  <h3>Wo Sie {{ tool.name }} betreiben</h3>
+  <p>
+    Für {{ cta_label }} braucht es {{ gb(sizing_ram) }} Arbeitsspeicher und {{ gb(sizing_disk) }} Speicherplatz.
+    Der günstigste passende Tarif unter den Anbietern, deren Preise wir selbst abgelesen haben, ist
+    <strong>{{ cta_plan.plan.name }}</strong> bei {{ cta_plan.provider_name }} für
+    {{ money(cta_plan.price_usd_month) }} pro Monat.
+  </p>
+  <p>
+    <a class="btn" href="{{ hosting_link(cta_plan.provider_slug) }}" rel="{{ 'sponsored nofollow noopener' if affiliate_on else 'nofollow noopener' }}">
+      Zu {{ cta_plan.provider_name }}
+    </a>
+    <a class="btn ghost" href="{{ base }}/hosting/">Anbieter vergleichen</a>
+  </p>
+
+  {% if unpriced_providers %}
+  <p style="font-size:.9rem;color:var(--ink-2);margin-bottom:0">
+    Wir behaupten nicht, dass dies der günstigste Server im Internet ist, sondern nur der günstigste, den wir
+    ehrlich angeben können. {% if unpriced_providers | length > 1 %}{{ unpriced_providers[:-1] | join(', ') }} und {{ unpriced_providers[-1] }}{% else %}{{ unpriced_providers[0] }}{% endif %}
+    {{ 'veröffentlichen Preise, die wir nicht automatisch ablesen konnten' if unpriced_providers | length > 1 else 'veröffentlicht Preise, die wir nicht automatisch ablesen konnten' }},
+    und {% if 'Hetzner Cloud' in unpriced_providers %}gerade Hetzner ist pro Gigabyte Arbeitsspeicher meist günstiger als alles oben Genannte{% else %}könnte durchaus günstiger sein{% endif %}.
+    Vergleichen Sie selbst, bevor Sie sich festlegen.
+  </p>
+  {% endif %}
+
+  {% if affiliate_on %}<p class="disclosure">{{ t('affiliate.disclosure') }}</p>{% endif %}
+</div>

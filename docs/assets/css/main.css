@@ -92,6 +92,9 @@ strong { font-weight: 640; }
 .masthead nav { display: flex; gap: 20px; margin-left: auto; flex-wrap: wrap; }
 .masthead nav a { color: var(--ink-2); text-decoration: none; font-size: .92rem; }
 .masthead nav a:hover { color: var(--accent); }
+.masthead nav.langs { margin-left: 6px; gap: 2px; padding-left: 14px; border-left: 1px solid var(--line); }
+.masthead nav.langs a { font-size: .76rem; font-weight: 650; letter-spacing: .04em; padding: 3px 6px; border-radius: 5px; color: var(--ink-3); }
+.masthead nav.langs a[aria-current="true"] { color: var(--accent); background: var(--accent-bg); }
 
 .sitefoot {
   margin-top: 84px; border-top: 1px solid var(--line);

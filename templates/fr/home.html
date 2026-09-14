@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1 style="margin-top:.6em">Ce que coûte vraiment l'auto-hébergement</h1>
+<p class="lead">
+  Chaque comparatif ici chiffre le serveur, les sauvegardes et les heures d'entretien, puis les met face au prix
+  publié par l'éditeur. Parfois l'auto-hébergement gagne avec une marge énorme. Parfois il perd. Nous publions les
+  deux, car un comparatif qui arrive toujours à la même conclusion n'est pas un comparatif.
+</p>
+
+<dl class="figures">
+  <div class="fig"><dt>Comparatifs</dt><dd>{{ stats.comparisons }}<small>produit payant face à un outil auto-hébergé</small></dd></div>
+  <div class="fig"><dt>Outils chiffrés</dt><dd>{{ stats.tools }}<small>avec un modèle de dimensionnement publié</small></dd></div>
+  <div class="fig"><dt>Prix relevés chez les éditeurs</dt><dd>{{ stats.verified_saas }}<small>au {{ stats.verified_on }}</small></dd></div>
+  <div class="fig"><dt>Là où l'auto-hébergement perd</dt><dd>{{ stats.saas_wins }}<small>de ces comparatifs, pour {{ ref_label }}</small></dd></div>
+</dl>
+<p class="srcline">Montants affichés en euros, convertis depuis le dollar au taux daté de la BCE publié dans la <a href="{{ base }}/methodology/">méthodologie</a>.</p>
+
+{% if biggest %}
+<h2>Là où l'écart est le plus grand</h2>
+<p>Plus grosses économies sur {{ cfg.tco_model.horizon_months }} mois pour {{ ref_label }}, votre temps déjà déduit.</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Au lieu de</th><th>Installez</th><th class="num">Leur prix</th><th class="num">Le vôtre</th><th class="num">Économisé sur {{ cfg.tco_model.horizon_months }} mois</th></tr></thead>
+  <tbody>
+  {% for b in biggest %}
+    <tr>
+      <th scope="row">{{ b.saas.name }}</th>
+      <td><a href="{{ base }}/vs/{{ b.saas.slug }}-vs-{{ b.tool.slug }}/">{{ b.tool.name }}</a></td>
+      <td class="num">{{ money(b.tco.saas_usd_month) }}</td>
+      <td class="num">{{ money(b.tco.selfhost_usd_month) }}</td>
+      <td class="num pos">{{ money(b.tco.savings_total) }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endif %}
+
+{% if honest %}
+<h2>Et là où ça ne vaut pas le coup</h2>
+<p>
+  Voici les comparatifs où le produit payant coûte moins cher une fois vos heures comptées à
+  {{ money(cfg.tco_model.engineer_hourly_usd) }}. Les auto-héberger est un choix de contrôle, pas d'argent.
+</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Produit</th><th>Option auto-hébergée</th><th class="num">Leur prix</th><th class="num">Le vôtre</th><th></th></tr></thead>
+  <tbody>
+  {% for h in honest %}
+    <tr>
+      <th scope="row">{{ h.saas.name }}</th>
+      <td>{{ h.tool.name }}</td>
+      <td class="num">{{ money(h.tco.saas_usd_month) }}</td>
+      <td class="num neg">{{ money(h.tco.selfhost_usd_month) }}</td>
+      <td><a href="{{ base }}/vs/{{ h.saas.slug }}-vs-{{ h.tool.slug }}/">pourquoi</a></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endif %}
+
+<h2>Par catégorie</h2>
+<ul class="cards">
+  {% for c in categories %}
+  <li class="card">
+    <h3><a href="{{ base }}/category/{{ c.cat.slug }}/">{{ c.cat.name }}</a></h3>
+    <p>{{ c.cat.intent }}</p>
+    <p class="meta">{{ c.tool_count }} {{ 'outil auto-hébergé' if c.tool_count == 1 else 'outils auto-hébergés' }}{% if c.comparison_count %} &middot; {{ c.comparison_count }} {{ 'comparatif chiffré' if c.comparison_count == 1 else 'comparatifs chiffrés' }}{% endif %}</p>
+  </li>
+  {% endfor %}
+</ul>
+
+<h2>Comment ça marche</h2>
+<p>
+  Un siège payant n'a pas de plancher mais une pente raide : dix personnes coûtent dix fois une personne. Un
+  serveur a un plancher élevé mais presque pas de pente : la même machine sert dix personnes ou cent. Chaque
+  comparatif de ce site n'est rien d'autre que le point où ces deux droites se croisent, et ce point se déplace
+  selon la lourdeur de l'outil et la valeur de votre temps.
+</p>
+<p>
+  Nous dimensionnons chaque outil à partir de ses prérequis documentés quand ils existent, choisissons la plus
+  petite offre de serveur qui convient vraiment, ajoutons les sauvegardes, puis les heures. Les prix portent la date
+  de leur relevé et un lien vers la page d'où ils viennent. Quand nous n'avons pas vérifié un prix, nous ne publions
+  aucun chiffre qui en dépend. <a href="{{ base }}/methodology/">La méthode complète est ici</a>, y compris tout ce
+  que le modèle ignore délibérément.
+</p>
+
+{% endblock %}

@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkliste für die Migration zum Self-Hosting: bevor Sie das Abo kündigen</title>
+<meta name="description" content="Eine praktische Checkliste für den Wechsel von einem kostenpflichtigen zu einem selbst gehosteten Tool: Datenexport, Dimensionierung, getestete Backups, Umstellung und Rückfallplan.">
+<link rel="canonical" href="https://zoltame.github.io/selfhostcost/de/migration-checklist/">
+<meta name="google-site-verification" content="L_8gw5Ec2vvygFsccJR5tNjKHOaNPsnJUrGROVoP_Js"><link rel="alternate" hreflang="en" href="https://zoltame.github.io/selfhostcost/migration-checklist/">
+<link rel="alternate" hreflang="fr" href="https://zoltame.github.io/selfhostcost/fr/migration-checklist/">
+<link rel="alternate" hreflang="de" href="https://zoltame.github.io/selfhostcost/de/migration-checklist/">
+<link rel="alternate" hreflang="es" href="https://zoltame.github.io/selfhostcost/es/migration-checklist/">
+<link rel="alternate" hreflang="x-default" href="https://zoltame.github.io/selfhostcost/migration-checklist/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SelfHostCost">
+<meta property="og:locale" content="de_DE"><meta property="og:title" content="Checkliste für die Migration zum Self-Hosting: bevor Sie das Abo kündigen">
+<meta property="og:description" content="Eine praktische Checkliste für den Wechsel von einem kostenpflichtigen zu einem selbst gehosteten Tool: Datenexport, Dimensionierung, getestete Backups, Umstellung und Rückfallplan.">
+<meta property="og:url" content="https://zoltame.github.io/selfhostcost/de/migration-checklist/">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="/selfhostcost/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/selfhostcost/assets/css/main.css">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://zoltame.github.io/selfhostcost/de/"}, {"@type": "ListItem", "position": 2, "name": "Checkliste für die Migration zum Self-Hosting", "item": "https://zoltame.github.io/selfhostcost/de/migration-checklist/"}]}, {"@type": "Article", "headline": "Checkliste für die Migration zum Self-Hosting: bevor Sie das Abo kündigen", "description": "Eine praktische Checkliste für den Wechsel von einem kostenpflichtigen zu einem selbst gehosteten Tool: Datenexport, Dimensionierung, getestete Backups, Umstellung und Rückfallplan.", "url": "https://zoltame.github.io/selfhostcost/de/migration-checklist/", "datePublished": "2026-09-14", "dateModified": "2026-09-14", "isAccessibleForFree": true, "author": {"@type": "Organization", "name": "SelfHostCost", "url": "https://zoltame.github.io/selfhostcost/"}, "publisher": {"@type": "Organization", "name": "SelfHostCost", "url": "https://zoltame.github.io/selfhostcost/"}, "inLanguage": "de"}]}</script></head>
+<body>
+
+<header class="masthead">
+  <div class="shell">
+    <a class="wordmark" href="/selfhostcost/de/">Self<span>Host</span>Cost</a>
+    <nav>
+      <a href="/selfhostcost/de/compare/">Vergleiche</a>
+      <a href="/selfhostcost/de/self-host/">Tools</a>
+      <a href="/selfhostcost/de/hosting/">Hosting</a>
+      <a href="/selfhostcost/de/methodology/">Methodik</a>
+    </nav>
+    <nav class="langs" aria-label="Sprache">
+<a href="https://zoltame.github.io/selfhostcost/migration-checklist/" hreflang="en" lang="en" title="English">EN</a><a href="https://zoltame.github.io/selfhostcost/fr/migration-checklist/" hreflang="fr" lang="fr" title="Français">FR</a><a href="https://zoltame.github.io/selfhostcost/de/migration-checklist/" hreflang="de" lang="de" title="Deutsch" aria-current="true">DE</a><a href="https://zoltame.github.io/selfhostcost/es/migration-checklist/" hreflang="es" lang="es" title="Español">ES</a>    </nav>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="crumbs" aria-label="Brotkrumen-Navigation"><a href="/selfhostcost/de/">Startseite</a><span>/</span>Checkliste für die Migration zum Self-Hosting</nav>
+</div>
+
+<main class="shell">
+<div class="prose">
+
+<h1>Checkliste für die Migration zum Self-Hosting</h1>
+
+<p class="lead">
+  Eine einseitige Vorabliste, um ein Team von einem kostenpflichtigen Tool auf ein selbst gehostetes umzustellen.
+  Sie deckt die Schritte ab, die entscheiden, ob die Umstellung unspektakulär oder ein Desaster wird: Datenexport,
+  Dimensionierung, Backups und den Rückfallplan, den die meisten vergessen.
+</p>
+
+<div class="note caution">
+  <p><strong>Kündigen Sie das Abo erst, wenn der letzte Abschnitt erledigt ist.</strong> Betreiben Sie beide
+  parallel, bis Sie ein Backup wiederhergestellt haben und Ihr Team das neue Tool für echte Arbeit genutzt hat.</p>
+</div>
+
+<h2>1. Bevor Sie etwas installieren</h2>
+<ul>
+  <li><strong>Exportieren Sie heute eine echte Kopie Ihrer Daten.</strong> Kein Testkonto, sondern Ihren echten
+      Workspace. Manche Exporte sind unvollständig, gedrosselt oder nur in höheren Tarifen verfügbar. Finden Sie das
+      jetzt heraus, nicht am Tag, an dem Ihr Vertrag endet.</li>
+  <li><strong>Öffnen Sie den Export und prüfen Sie, was fehlt.</strong> Anhänge, Kommentare, Verlauf,
+      Erwähnungen und Berechtigungen sind die üblichen Verluste.</li>
+  <li><strong>Prüfen Sie, ob der Ersatz dieses Format importieren kann.</strong> Falls nicht, planen Sie Zeit für
+      die Konvertierung ein. Diese Kosten stecken in keiner Zahl auf dieser Website.</li>
+  <li><strong>Listen Sie die Integrationen auf, auf die Sie angewiesen sind.</strong> SSO, Chat-Benachrichtigungen,
+      Webhooks, Kalendersynchronisation. Prüfen Sie für jede, ob es sie beim selbst gehosteten Tool gibt.</li>
+  <li><strong>Prüfen Sie die Lizenz.</strong> Mehrere beliebte Tools sind source-available statt Open Source, mit
+      Einschränkungen bei kommerzieller Nutzung. Jede Tool-Seite auf dieser Website weist darauf hin.</li>
+  <li><strong>Benennen Sie eine verantwortliche Person.</strong> Selbst gehostete Software ohne jemanden, der für
+      Updates zuständig ist, ist der häufigste Grund, warum solche Projekte scheitern.</li>
+</ul>
+
+<h2>2. Dimensionierung und Einrichtung</h2>
+<ul>
+  <li><strong>Dimensionieren Sie den Server anhand der Kostenseite des Tools für Ihre Teamgröße</strong> und behalten
+      Sie die 25 % Reserve beim Arbeitsspeicher bei. Ein Server, der genau auf den
+      Bedarf zugeschnitten ist, fällt gern beim ersten Upgrade um.</li>
+  <li><strong>Verwenden Sie die Docker-Compose-Datei des Projekts</strong> statt einer von Dritten, und legen Sie die
+      Image-Version fest, statt <code>latest</code> zu nutzen.</li>
+  <li><strong>Betreiben Sie es vom ersten Tag an hinter HTTPS auf einer eigenen Subdomain.</strong> Eine spätere
+      Adressänderung bricht Links, OAuth-Rückleitungen und mobile Apps.</li>
+  <li><strong>Richten Sie den E-Mail-Versand</strong> über einen Transaktions-Mailanbieter ein. Ohne ihn scheitern
+      Passwort-Resets und Benachrichtigungen stillschweigend, und die meisten Tools warnen Sie nicht.</li>
+  <li><strong>Schließen Sie alle Ports außer 80 und 443</strong> und stellen Sie die Datenbank nie direkt ins Netz.</li>
+  <li><strong>Aktivieren Sie SSO oder mindestens verpflichtende Zwei-Faktor-Authentifizierung</strong>, bevor Sie
+      jemanden einladen.</li>
+</ul>
+
+<h2>3. Getestete Backups</h2>
+<ul>
+  <li><strong>Sichern Sie sowohl die Datenbank als auch die hochgeladenen Dateien.</strong> Ein Datenbank-Dump ohne
+      Upload-Verzeichnis stellt ein Tool voller kaputter Anhänge wieder her.</li>
+  <li><strong>Bewahren Sie mindestens eine Kopie außerhalb des Servers auf</strong>, bei einem anderen Anbieter oder in
+      einer anderen Region als der Server selbst.</li>
+  <li><strong>Automatisieren Sie es und lassen Sie sich bei Fehlern alarmieren.</strong> Ein Backup-Job, der vor drei
+      Wochen stehen geblieben ist, ist der übliche Weg, zu entdecken, dass man kein Backup hatte.</li>
+  <li><strong>Stellen Sie es vor dem Start auf einem frischen Server wieder her.</strong> Messen Sie die Dauer. Diese
+      Zahl ist Ihre echte Wiederherstellungszeit; solange Sie sie nicht kennen, haben Sie keine Backups, nur Dateien.</li>
+</ul>
+
+<h2>4. Die Umstellung</h2>
+<ul>
+  <li><strong>Wählen Sie einen ruhigen Tag und kündigen Sie einen Inhaltsstopp</strong> im alten Tool für die Dauer
+      der Migration an.</li>
+  <li><strong>Machen Sie nach dem Stopp einen letzten Export</strong>, importieren Sie ihn und prüfen Sie Stichproben
+      von Datensätzen, Anhängen und Berechtigungen gegen das alte Tool.</li>
+  <li><strong>Stellen Sie zuerst eine kleine Gruppe um</strong>, für eine Woche echter Arbeit, bevor alle wechseln.</li>
+  <li><strong>Leiten Sie um oder aktualisieren Sie Lesezeichen</strong> überall, wo die alte Adresse verlinkt war:
+      Dokumentation, Chat, Browser, mobile Apps.</li>
+</ul>
+
+<h2>5. Der Rückfallplan, den die meisten vergessen</h2>
+<ul>
+  <li><strong>Schreiben Sie vor der Umstellung auf, was Sie zurückwechseln ließe.</strong> Datenverlust, eine
+      unverzichtbare fehlende Funktion oder wiederholte Ausfälle. Legen Sie die Schwelle fest, solange Sie ruhig sind.</li>
+  <li><strong>Behalten Sie das alte Abo nach dem Start noch einen Abrechnungszeitraum</strong>, auch wenn es sich nach
+      Verschwendung anfühlt. Es ist die günstigste Versicherung, die Sie kaufen werden.</li>
+  <li><strong>Wissen Sie, wie Sie aus dem neuen Tool wieder exportieren</strong>, in ein Format, das das alte lesen kann.</li>
+  <li><strong>Kündigen Sie das alte Abo erst</strong>, wenn ein Wiederherstellungstest bestanden ist, das ganze Team das
+      neue Tool für echte Arbeit genutzt hat und niemand das alte zurückverlangt hat.</li>
+</ul>
+
+<h2>6. Nach dem Start</h2>
+<ul>
+  <li><strong>Tragen Sie Updates in den Kalender ein.</strong> Diese Website rechnet je nach Tool mit
+      0,5 bis
+      3 Stunden pro Monat. Was nicht eingeplant ist,
+      passiert nicht.</li>
+  <li><strong>Lesen Sie die Release Notes vor jedem Upgrade</strong>, besonders bei Hauptversionen mit
+      Datenbankmigrationen.</li>
+  <li><strong>Richten Sie Uptime-Monitoring ein</strong>, damit Sie von einem Ausfall erfahren, bevor Ihr Team es tut.</li>
+  <li><strong>Wiederholen Sie den Wiederherstellungstest</strong> alle paar Monate.</li>
+</ul>
+
+<h2>Bevor Sie anfangen</h2>
+<p>
+  Wenn Sie die Umstellung noch nicht durchgerechnet haben, prüfen Sie, ob Self-Hosting bei Ihrer Teamgröße wirklich
+  Geld spart. Bei manchen Tools ist das nicht der Fall, sobald die Stunden oben eingerechnet sind.
+  <a href="/selfhostcost/de/compare/">Alle Vergleiche ansehen</a> oder
+  <a href="/selfhostcost/de/methodology/">nachlesen, wie die Kosten berechnet werden</a>.
+</p>
+
+</div>
+</main>
+
+<footer class="sitefoot">
+  <div class="shell">
+    <div class="footgrid">
+      <div>
+        <h4>SelfHostCost</h4>
+        <p style="margin:0 0 .6em">Was Self-Hosting wirklich kostet – pro Tool und pro Teamgröße.</p>
+        <p style="margin:0"><a href="/selfhostcost/de/methodology/">Wie jede Zahl berechnet wird</a></p>
+      </div>
+      <div>
+        <h4>Übersicht</h4>
+        <ul>
+          <li><a href="/selfhostcost/de/compare/">Alle Vergleiche</a></li>
+          <li><a href="/selfhostcost/de/self-host/">Alle Tools</a></li>
+          <li><a href="/selfhostcost/de/hosting/">Hosting-Anbieter</a></li>
+          <li><a href="/selfhostcost/de/migration-checklist/">Migrations-Checkliste</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kategorien</h4>
+        <ul>
+<li><a href="/selfhostcost/de/category/password-manager/">Passwortmanager</a></li><li><a href="/selfhostcost/de/category/analytics/">Webanalyse</a></li><li><a href="/selfhostcost/de/category/automation/">Workflow-Automatisierung</a></li><li><a href="/selfhostcost/de/category/docs-wiki/">Dokumentation und Wikis</a></li><li><a href="/selfhostcost/de/category/project-management/">Projektmanagement</a></li><li><a href="/selfhostcost/de/category/helpdesk/">Helpdesk und Support-Postfach</a></li>        </ul>
+      </div>
+      <div>
+        <h4>Über uns</h4>
+        <ul>
+          <li><a href="/selfhostcost/de/about/">Über uns und Kontakt</a></li>
+<li><a href="mailto:selfhostcost.contact@gmail.com">selfhostcost.contact@gmail.com</a></li>          <li><a href="/selfhostcost/de/methodology/">Methodik</a></li>
+          <li><a href="/selfhostcost/de/disclosure/">Hinweis zu Empfehlungslinks</a></li>
+          <li><a href="/selfhostcost/de/privacy/">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin:30px 0 0">
+      Preise werden an den auf jeder Seite genannten Tagen von den Preisseiten der Anbieter abgelesen und nicht laufend aktualisiert. Prüfen Sie den Preis beim Anbieter, bevor Sie kaufen. Nichts hier ist eine Finanzberatung.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

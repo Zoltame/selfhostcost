@@ -1,0 +1,29 @@
+{# Hosting recommendation. Renders plain vendor links until affiliate IDs are configured,
+   so the site is never broken by missing credentials and never fakes a tracked link. #}
+<div class="cta">
+  <h3>Where to put {{ tool.name }}</h3>
+  <p>
+    {{ gb(sizing_ram) }} of memory and {{ gb(sizing_disk) }} of disk is what this needs at
+    {{ cta_label }}. The cheapest plan that fits, among the providers whose prices we have read
+    ourselves, is the <strong>{{ cta_plan.plan.name }}</strong> at {{ cta_plan.provider_name }} for
+    {{ money(cta_plan.price_usd_month) }} a month.
+  </p>
+  <p>
+    <a class="btn" href="{{ hosting_link(cta_plan.provider_slug) }}" rel="{{ 'sponsored nofollow noopener' if affiliate_on else 'nofollow noopener' }}">
+      Go to {{ cta_plan.provider_name }}
+    </a>
+    <a class="btn ghost" href="{{ base }}/hosting/">Compare hosts</a>
+  </p>
+
+  {% if unpriced_providers %}
+  <p style="font-size:.9rem;color:var(--ink-2);margin-bottom:0">
+    We are not claiming this is the cheapest server on the internet. It is the cheapest one we can
+    honestly quote. {% if unpriced_providers | length > 1 %}{{ unpriced_providers[:-1] | join(', ') }} and {{ unpriced_providers[-1] }}{% else %}{{ unpriced_providers[0] }}{% endif %}
+    {{ 'publish prices we could not read programmatically' if unpriced_providers | length > 1 else 'publishes prices we could not read programmatically' }},
+    and {% if 'Hetzner Cloud' in unpriced_providers %}Hetzner in particular is usually cheaper per gigabyte of memory than anything quoted above{% else %}may well undercut it{% endif %}.
+    Price them yourself before you commit.
+  </p>
+  {% endif %}
+
+  {% if affiliate_on %}<p class="disclosure">{{ t('affiliate.disclosure') }}</p>{% endif %}
+</div>

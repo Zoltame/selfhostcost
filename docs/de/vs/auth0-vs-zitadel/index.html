@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Auth0 oder selbst gehostetes Zitadel: echte Kosten für 10 Personen (2026)</title>
+<meta name="description" content="Auth0 kostet 129 € pro Monat für 10 Personen; Zitadel selbst zu hosten kostet 122 € inklusive Server, Backups und Wartungszeit. Vollständige Aufschlüsselung für jede Teamgröße.">
+<link rel="canonical" href="https://zoltame.github.io/selfhostcost/de/vs/auth0-vs-zitadel/">
+<meta name="google-site-verification" content="L_8gw5Ec2vvygFsccJR5tNjKHOaNPsnJUrGROVoP_Js"><link rel="alternate" hreflang="en" href="https://zoltame.github.io/selfhostcost/vs/auth0-vs-zitadel/">
+<link rel="alternate" hreflang="fr" href="https://zoltame.github.io/selfhostcost/fr/vs/auth0-vs-zitadel/">
+<link rel="alternate" hreflang="de" href="https://zoltame.github.io/selfhostcost/de/vs/auth0-vs-zitadel/">
+<link rel="alternate" hreflang="es" href="https://zoltame.github.io/selfhostcost/es/vs/auth0-vs-zitadel/">
+<link rel="alternate" hreflang="x-default" href="https://zoltame.github.io/selfhostcost/vs/auth0-vs-zitadel/">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="SelfHostCost">
+<meta property="og:locale" content="de_DE"><meta property="og:title" content="Auth0 oder selbst gehostetes Zitadel: echte Kosten für 10 Personen (2026)">
+<meta property="og:description" content="Auth0 kostet 129 € pro Monat für 10 Personen; Zitadel selbst zu hosten kostet 122 € inklusive Server, Backups und Wartungszeit. Vollständige Aufschlüsselung für jede Teamgröße.">
+<meta property="og:url" content="https://zoltame.github.io/selfhostcost/de/vs/auth0-vs-zitadel/">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="/selfhostcost/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/selfhostcost/assets/css/main.css">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://zoltame.github.io/selfhostcost/de/"}, {"@type": "ListItem", "position": 2, "name": "Identität und SSO", "item": "https://zoltame.github.io/selfhostcost/de/category/auth/"}, {"@type": "ListItem", "position": 3, "name": "Auth0 vs. Zitadel", "item": "https://zoltame.github.io/selfhostcost/de/vs/auth0-vs-zitadel/"}]}, {"@type": "Article", "headline": "Auth0 oder selbst gehostetes Zitadel: echte Kosten für 10 Personen (2026)", "description": "Auth0 kostet 129 € pro Monat für 10 Personen; Zitadel selbst zu hosten kostet 122 € inklusive Server, Backups und Wartungszeit. Vollständige Aufschlüsselung für jede Teamgröße.", "url": "https://zoltame.github.io/selfhostcost/de/vs/auth0-vs-zitadel/", "datePublished": "2026-09-14", "dateModified": "2026-09-14", "isAccessibleForFree": true, "author": {"@type": "Organization", "name": "SelfHostCost", "url": "https://zoltame.github.io/selfhostcost/"}, "publisher": {"@type": "Organization", "name": "SelfHostCost", "url": "https://zoltame.github.io/selfhostcost/"}, "inLanguage": "de"}]}</script></head>
+<body>
+
+<header class="masthead">
+  <div class="shell">
+    <a class="wordmark" href="/selfhostcost/de/">Self<span>Host</span>Cost</a>
+    <nav>
+      <a href="/selfhostcost/de/compare/">Vergleiche</a>
+      <a href="/selfhostcost/de/self-host/">Tools</a>
+      <a href="/selfhostcost/de/hosting/">Hosting</a>
+      <a href="/selfhostcost/de/methodology/">Methodik</a>
+    </nav>
+    <nav class="langs" aria-label="Sprache">
+<a href="https://zoltame.github.io/selfhostcost/vs/auth0-vs-zitadel/" hreflang="en" lang="en" title="English">EN</a><a href="https://zoltame.github.io/selfhostcost/fr/vs/auth0-vs-zitadel/" hreflang="fr" lang="fr" title="Français">FR</a><a href="https://zoltame.github.io/selfhostcost/de/vs/auth0-vs-zitadel/" hreflang="de" lang="de" title="Deutsch" aria-current="true">DE</a><a href="https://zoltame.github.io/selfhostcost/es/vs/auth0-vs-zitadel/" hreflang="es" lang="es" title="Español">ES</a>    </nav>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="crumbs" aria-label="Brotkrumen-Navigation"><a href="/selfhostcost/de/">Startseite</a><span>/</span><a href="/selfhostcost/de/category/auth/">Identität und SSO</a><span>/</span>Auth0 vs. Zitadel</nav>
+</div>
+
+<main class="shell">
+
+<p class="kicker">Identität und SSO &middot; Kostenvergleich</p>
+<h1>Auth0 oder selbst gehostetes Zitadel: was beides wirklich kostet</h1>
+
+<p class="lead">
+  Auth0 im Tarif Essentials (B2B) gegenüber Zitadel auf dem kleinsten Server, der dafür
+  reicht. Jede Zahl unten wird aus dem Dimensionierungsmodell und den datierten Preisen am Ende dieser Seite
+  berechnet und enthält, was die meisten Vergleiche weglassen: Ihre eigene Zeit.
+</p>
+
+<div class="verdict is-wash">
+  <p class="lede">    Für 10 Personen ist das knapp. Der Server kostet <b>24,84 € pro Monat</b>
+    gegenüber 129 € für Auth0, aber rechnen Sie
+    1,5 Stunden Aufmerksamkeit pro Monat hinzu, und Self-Hosting landet bei
+    <b>122 €</b> und verliert. Es gewinnt nur, wenn Ihre Zeit wirklich nichts kostet.  </p>
+
+  <dl class="figures">
+    <div class="fig">
+      <dt>Auth0</dt>
+      <dd>129 €<small>pro Monat, Essentials (B2B)</small></dd>
+    </div>
+    <div class="fig">
+      <dt>Selbst gehostet</dt>
+      <dd>122 €<small>Server, Backups und Ihre Zeit</small></dd>
+    </div>
+    <div class="fig">
+      <dt>Server und Backups</dt>
+      <dd>24,84 €<small>Basic 4 GiB, 4 GB RAM</small></dd>
+    </div>
+    <div class="fig">
+      <dt>Differenz über 36 Monate</dt>
+      <dd class="neg">
+        118 €
+        <small>Mehrkosten durch Self-Hosting</small>
+      </dd>
+    </div>
+    <div class="fig">
+      <dt>Gewinnschwelle</dt>
+      <dd>nach 4,3 Jahren<small>nach 388 € Einrichtungsaufwand</small></dd>
+    </div>
+  </dl>
+</div>
+<p class="srcline">Beträge in Euro, umgerechnet aus US-Dollar zum datierten EZB-Kurs aus der <a href="/selfhostcost/de/methodology/">Methodik</a>.</p>
+<h2>Derselbe Vergleich für jede Teamgröße</h2>
+<p>
+  Self-Hosting hat einen hohen Sockel und kaum Steigung, Software mit Preis pro Platz hat keinen Sockel, aber eine
+  steile Steigung. Das ist die ganze Geschichte, und genau deshalb kippt die Antwort irgendwo in dieser Tabelle,
+  statt für alle gleich zu sein.
+</p>
+
+<div class="tablewrap">
+<table>
+  <caption>Auth0 Essentials (B2B) gegenüber selbst gehostetem Zitadel, pro Monat, über 36 Monate. Self-Hosting umfasst Server, Backups und Wartungszeit zu 64,70 € pro Stunde.</caption>
+  <thead>
+    <tr>
+      <th>Teamgröße</th>
+      <th class="num">Auth0</th>
+      <th class="num">Selbst gehostet</th>
+      <th class="num">Ohne Ihre Zeit</th>
+      <th>Benötigter Server</th>
+      <th class="num">Differenz über 36 Monate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/de/cost/zitadel/1-user/">eine Person</a></th>
+      <td class="num">129 €</td>
+      <td class="num">122 €</td>
+      <td class="num">24,84 €</td>
+      <td>Basic 4 GiB (4 GB)</td>
+      <td class="num neg">-118 €</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/de/cost/zitadel/5-users/">5 Personen</a></th>
+      <td class="num">129 €</td>
+      <td class="num">122 €</td>
+      <td class="num">24,84 €</td>
+      <td>Basic 4 GiB (4 GB)</td>
+      <td class="num neg">-118 €</td>
+    </tr>
+    <tr>
+      <th scope="row"><strong>10 Personen</strong></th>
+      <td class="num">129 €</td>
+      <td class="num">122 €</td>
+      <td class="num">24,84 €</td>
+      <td>Basic 4 GiB (4 GB)</td>
+      <td class="num neg">-118 €</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/de/cost/zitadel/25-users/">25 Personen</a></th>
+      <td class="num">129 €</td>
+      <td class="num">122 €</td>
+      <td class="num">24,84 €</td>
+      <td>Basic 4 GiB (4 GB)</td>
+      <td class="num neg">-118 €</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/de/cost/zitadel/50-users/">50 Personen</a></th>
+      <td class="num">129 €</td>
+      <td class="num">122 €</td>
+      <td class="num">24,84 €</td>
+      <td>Basic 4 GiB (4 GB)</td>
+      <td class="num neg">-118 €</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/de/cost/zitadel/100-users/">100 Personen</a></th>
+      <td class="num">129 €</td>
+      <td class="num">122 €</td>
+      <td class="num">24,84 €</td>
+      <td>Basic 4 GiB (4 GB)</td>
+      <td class="num neg">-118 €</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/de/cost/zitadel/250-users/">250 Personen</a></th>
+      <td class="num">129 €</td>
+      <td class="num">122 €</td>
+      <td class="num">24,84 €</td>
+      <td>Basic 4 GiB (4 GB)</td>
+      <td class="num neg">-118 €</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p class="srcline">
+Sobald Ihre Zeit eingerechnet ist, liegt Self-Hosting bei keiner Teamgröße auf dieser Seite vorn.
+</p>
+
+<h2>Wohin das Geld beim Self-Hosting für 10 Personen wirklich geht</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Posten</th><th class="num">Pro Monat</th><th>Was es ist</th></tr></thead>
+  <tbody>
+    <tr>
+      <th scope="row">Server</th>
+      <td class="num">20,70 €</td>
+      <td>Basic 4 GiB bei DigitalOcean: 2 vCPU, 4 GB RAM, 80 GB Speicher</td>
+    </tr>
+    <tr>
+      <th scope="row">Backups</th>
+      <td class="num">4,14 €</td>
+      <td>Snapshots des Anbieters zu 20 % des Serverpreises. Darauf zu verzichten ist keine Ersparnis, sondern eine Wette.</td>
+    </tr>
+    <tr>
+      <th scope="row">Ihre Zeit</th>
+      <td class="num">97,05 €</td>
+      <td>1,5 Stunden pro Monat für Updates, Upgrades und gelegentliche Störungen, zu 64,70 € pro Stunde</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr><td>Summe</td><td class="num">122 €</td><td>Dazu einmalig 388 € für etwa 6 Stunden Ersteinrichtung</td></tr>
+  </tfoot>
+</table>
+</div>
+
+<p>
+  Bei dieser Teamgröße kostet Auth0 <strong>129 €</strong> pro Monat.
+Auth0 Essentials (B2B) kostet in diesem Tarif pauschal 129 € pro Monat, unabhängig von der Zahl der Plätze.
+</p>
+
+<div class="note caution">
+  <h3>Bitte zuerst lesen</h3>
+  <p>Der kostenlose Tarif von Auth0 deckt bis zu 25.000 monatlich aktive Nutzer ab. Unterhalb dieser Grenze und ohne Bedarf an den kostenpflichtigen B2B-Funktionen spart ein selbst gehosteter Identitätsanbieter überhaupt nichts. Der kostenpflichtige Vergleich unten gilt erst, wenn Sie brauchen, was der Essentials-Tarif hinzufügt.</p>
+</div>
+
+<h2>Was Zitadel für 10 Personen braucht</h2>
+<p>
+  Go-Binärdatei mit PostgreSQL und ereignisbasiertem Audit-Log. Leichter als die JVM-Option und näher an der Entwicklerfreundlichkeit von Auth0.
+</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Ressource</th><th class="num">Benötigt</th><th>Wie es berechnet wird</th></tr></thead>
+  <tbody>
+    <tr><th scope="row">Arbeitsspeicher</th><td class="num">2,5 GB</td>
+      <td>2 GB für den Stack im Ruhezustand, plus 2 MB pro aktivem Nutzer, plus 25 % Reserve</td></tr>
+    <tr><th scope="row">Speicherplatz</th><td class="num">10,1 GB</td>
+      <td>10 GB Grundbedarf, plus 0,01 GB pro Nutzer</td></tr>
+    <tr><th scope="row">vCPU</th><td class="num">2</td>
+      <td>Die Vorgabe des Projekts. Bei dieser Last geht der Arbeitsspeicher vor dem Prozessor aus.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="note">
+  <p><strong>Diese Grundwerte sind eine Schätzung.</strong> Zitadel veröffentlicht keine
+  Mindestanforderungen, die wir zitieren könnten. Arbeitsspeicher und Speicherplatz sind deshalb aus den Diensten
+  seiner Docker-Compose-Referenzdatei abgeleitet. Nehmen Sie sie als Ausgangspunkt und beobachten Sie die Messwerte
+  der ersten Woche.</p>
+</div>
+
+<h2>Worauf Sie verzichten, offen gesagt</h2>
+<ul>
+  <li><strong>Die Verfügbarkeit liegt jetzt bei Ihnen.</strong> Auth0 hat ein Betriebsteam in Bereitschaft. Beim Self-Hosting ist ein fehlgeschlagenes Update am Freitag um 18 Uhr Ihr Feierabend.</li>
+  <li><strong>Backups existieren nur, wenn Sie die Wiederherstellung getestet haben.</strong> Der Posten von 4,14 € oben kauft Snapshots, keine geübte Wiederherstellung.</li>
+  <li><strong>Zitadel ist ein Stack aus mehreren Containern mit einer Datenbank, die Sie selbst sichern müssen.</strong> Deshalb steht der Wartungsposten bei 1,5 Stunden pro Monat und nicht bei null.</li>
+  <li><strong>Funktionsgleichheit gibt es nie ganz.</strong> Zitadel deckt den Kern dessen ab, wofür Teams Auth0 nutzen; bei der langen Reihe an Integrationen und Unternehmensfunktionen zeigt sich die Lücke.</li>
+</ul>
+
+<div class="note caution">
+  <h3>Wir raten Ihnen hier nicht zum Self-Hosting</h3>
+  <p>
+    Für 10 Personen gewinnt Auth0 bei den Kosten, sobald Ihre Zeit mit
+    64,70 € pro Stunde bewertet wird. Zitadel selbst zu hosten lohnt
+    sich hier nur aus Gründen, die nicht auf der Rechnung stehen: Datenstandort, Unabhängigkeit von einem Anbieter
+    oder der Wunsch, es selbst zu betreiben. Das sind echte Gründe. Geld zu sparen gehört bei dieser Größe nicht dazu.
+  </p>
+</div>
+
+<div class="cta">
+  <h3>Wo Sie Zitadel betreiben</h3>
+  <p>
+    Für 10 Personen braucht es 2,5 GB Arbeitsspeicher und 10,1 GB Speicherplatz.
+    Der günstigste passende Tarif unter den Anbietern, deren Preise wir selbst abgelesen haben, ist
+    <strong>Basic 4 GiB</strong> bei DigitalOcean für
+    20,70 € pro Monat.
+  </p>
+  <p>
+    <a class="btn" href="https://m.do.co/c/3af2e8b05a20" rel="sponsored nofollow noopener">
+      Zu DigitalOcean
+    </a>
+    <a class="btn ghost" href="/selfhostcost/de/hosting/">Anbieter vergleichen</a>
+  </p>
+
+  <p style="font-size:.9rem;color:var(--ink-2);margin-bottom:0">
+    Wir behaupten nicht, dass dies der günstigste Server im Internet ist, sondern nur der günstigste, den wir
+    ehrlich angeben können. Hetzner Cloud, Vultr und PikaPods    veröffentlichen Preise, die wir nicht automatisch ablesen konnten,
+    und gerade Hetzner ist pro Gigabyte Arbeitsspeicher meist günstiger als alles oben Genannte.
+    Vergleichen Sie selbst, bevor Sie sich festlegen.
+  </p>
+
+<p class="disclosure">Der DigitalOcean-Link oben ist ein Empfehlungslink: Wenn Sie sich darüber anmelden und Ihre ersten 25 $ bezahlen, erhalten wir 25 $ Guthaben auf unserem DigitalOcean-Konto. Das ändert nie die berechneten Kosten, den gewählten Server oder das Fazit dieser Seite. Das Dimensionierungsmodell und jede Preisquelle sind vollständig veröffentlicht.</p></div>
+<h2>Zitadel auf einen Blick</h2>
+<div class="tablewrap">
+<table>
+  <tbody>
+    <tr><th scope="row">Lizenz</th><td>GNU Affero General Public License v3.0</td></tr>
+    <tr><th scope="row">Programmiersprache</th><td>Go</td></tr>
+<tr><th scope="row">GitHub-Sterne</th><td>15.005, geprüft am 2026-09-12</td></tr><tr><th scope="row">Neueste Version</th><td>v4.17.3</td></tr><tr><th scope="row">Letzter Commit</th><td>2026-09-11</td></tr>    <tr><th scope="row">Offizielle Docker-Images</th><td>Ja</td></tr>
+    <tr><th scope="row">Projekt</th><td><a href="https://zitadel.com" rel="nofollow noopener">zitadel.com</a> &middot; <a href="https://github.com/zitadel/zitadel" rel="nofollow noopener">zitadel/zitadel</a></td></tr>
+  </tbody>
+</table>
+</div>
+
+
+<h2>Jede Zahl auf dieser Seite und ihre Quelle</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Eingabe</th><th>Verwendeter Wert</th><th>Quelle</th><th>Abgelesen am</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Auth0 Essentials (B2B)</td>
+      <td>150,00 USD pro Monat</td>
+      <td><a href="https://auth0.com/pricing" rel="nofollow noopener">Preisseite des Anbieters</a></td>
+      <td>2026-09-12</td>
+    </tr>
+    <tr>
+      <td>DigitalOcean Basic 4 GiB</td>
+      <td>20,70 € pro Monat</td>
+      <td><a href="https://www.digitalocean.com/pricing/droplets" rel="nofollow noopener">Preisseite des Hosters</a></td>
+      <td>2026-09-12</td>
+    </tr>
+    <tr>
+      <td>Wechselkurs</td>
+      <td>1 EUR = 1,1592 USD</td>
+      <td><a href="https://api.frankfurter.dev/v1/latest?from=EUR&amp;to=USD" rel="nofollow noopener">Frankfurter, European Central Bank reference rates</a></td>
+      <td>2026-09-11</td>
+    </tr>
+    <tr>
+      <td>Arbeitszeit</td>
+      <td>64,70 € pro Stunde</td>
+      <td><a href="/selfhostcost/de/methodology/">unsere veröffentlichte Annahme</a></td>
+      <td>&mdash;</td>
+    </tr>
+    <tr>
+      <td>Dimensionierung von Zitadel</td>
+      <td>2 GB Grundbedarf, 2 MB pro Nutzer</td>
+      <td>abgeleitet aus seinem Compose-Referenz-Stack</td>
+      <td>&mdash;</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p class="srcline">
+  Preise ändern sich. Hat der Anbieter seine Preise seit dem 2026-09-12 geändert, sind die Zahlen oben
+  veraltet, und maßgeblich sind die verlinkten Quellen, nicht wir. <a href="/selfhostcost/de/methodology/">Wie wir damit umgehen</a>.
+</p>
+
+<h2>Siehe auch</h2>
+<ul class="linkgrid">
+  <li><a href="/selfhostcost/de/self-host/zitadel/">Zitadel selbst hosten: alle Teamgrößen</a></li>
+  <li><a href="/selfhostcost/de/alternatives/auth0/">Alle selbst gehosteten Alternativen zu Auth0</a></li>
+<li><a href="/selfhostcost/de/vs/auth0-vs-keycloak/">Auth0 vs. Keycloak</a></li><li><a href="/selfhostcost/de/vs/okta-vs-keycloak/">Okta Workforce Identity vs. Keycloak</a></li><li><a href="/selfhostcost/de/vs/clerk-vs-keycloak/">Clerk vs. Keycloak</a></li><li><a href="/selfhostcost/de/vs/auth0-vs-authentik/">Auth0 vs. authentik</a></li><li><a href="/selfhostcost/de/vs/okta-vs-authentik/">Okta Workforce Identity vs. authentik</a></li><li><a href="/selfhostcost/de/vs/clerk-vs-authentik/">Clerk vs. authentik</a></li>  <li><a href="/selfhostcost/de/category/auth/">Identität und SSO im Vergleich</a></li>
+</ul>
+
+</main>
+
+<footer class="sitefoot">
+  <div class="shell">
+    <div class="footgrid">
+      <div>
+        <h4>SelfHostCost</h4>
+        <p style="margin:0 0 .6em">Was Self-Hosting wirklich kostet – pro Tool und pro Teamgröße.</p>
+        <p style="margin:0"><a href="/selfhostcost/de/methodology/">Wie jede Zahl berechnet wird</a></p>
+      </div>
+      <div>
+        <h4>Übersicht</h4>
+        <ul>
+          <li><a href="/selfhostcost/de/compare/">Alle Vergleiche</a></li>
+          <li><a href="/selfhostcost/de/self-host/">Alle Tools</a></li>
+          <li><a href="/selfhostcost/de/hosting/">Hosting-Anbieter</a></li>
+          <li><a href="/selfhostcost/de/migration-checklist/">Migrations-Checkliste</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kategorien</h4>
+        <ul>
+<li><a href="/selfhostcost/de/category/password-manager/">Passwortmanager</a></li><li><a href="/selfhostcost/de/category/analytics/">Webanalyse</a></li><li><a href="/selfhostcost/de/category/automation/">Workflow-Automatisierung</a></li><li><a href="/selfhostcost/de/category/docs-wiki/">Dokumentation und Wikis</a></li><li><a href="/selfhostcost/de/category/project-management/">Projektmanagement</a></li><li><a href="/selfhostcost/de/category/helpdesk/">Helpdesk und Support-Postfach</a></li>        </ul>
+      </div>
+      <div>
+        <h4>Über uns</h4>
+        <ul>
+          <li><a href="/selfhostcost/de/about/">Über uns und Kontakt</a></li>
+<li><a href="mailto:selfhostcost.contact@gmail.com">selfhostcost.contact@gmail.com</a></li>          <li><a href="/selfhostcost/de/methodology/">Methodik</a></li>
+          <li><a href="/selfhostcost/de/disclosure/">Hinweis zu Empfehlungslinks</a></li>
+          <li><a href="/selfhostcost/de/privacy/">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin:30px 0 0">
+      Preise werden an den auf jeder Seite genannten Tagen von den Preisseiten der Anbieter abgelesen und nicht laufend aktualisiert. Prüfen Sie den Preis beim Anbieter, bevor Sie kaufen. Nichts hier ist eine Finanzberatung.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1 style="margin-top:.6em">Lo que cuesta de verdad el autoalojamiento</h1>
+<p class="lead">
+  Cada comparativa de este sitio calcula el servidor, las copias de seguridad y las horas de mantenimiento, y lo
+  compara con el precio publicado por el proveedor. A veces el autoalojamiento gana por un margen enorme. A veces
+  pierde. Publicamos ambos casos, porque una comparativa que siempre llega a la misma conclusión no es una comparativa.
+</p>
+
+<dl class="figures">
+  <div class="fig"><dt>Comparativas</dt><dd>{{ stats.comparisons }}<small>producto de pago frente a herramienta autoalojada</small></dd></div>
+  <div class="fig"><dt>Herramientas calculadas</dt><dd>{{ stats.tools }}<small>con un modelo de dimensionamiento publicado</small></dd></div>
+  <div class="fig"><dt>Precios leídos en los proveedores</dt><dd>{{ stats.verified_saas }}<small>a {{ stats.verified_on }}</small></dd></div>
+  <div class="fig"><dt>Donde pierde el autoalojamiento</dt><dd>{{ stats.saas_wins }}<small>de esas comparativas, para {{ ref_label }}</small></dd></div>
+</dl>
+
+{% if biggest %}
+<h2>Donde la diferencia es mayor</h2>
+<p>Mayor ahorro a {{ cfg.tco_model.horizon_months }} meses para {{ ref_label }}, con tu tiempo ya descontado.</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>En lugar de</th><th>Usa</th><th class="num">Su precio</th><th class="num">El tuyo</th><th class="num">Ahorro en {{ cfg.tco_model.horizon_months }} meses</th></tr></thead>
+  <tbody>
+  {% for b in biggest %}
+    <tr>
+      <th scope="row">{{ b.saas.name }}</th>
+      <td><a href="{{ base }}/vs/{{ b.saas.slug }}-vs-{{ b.tool.slug }}/">{{ b.tool.name }}</a></td>
+      <td class="num">{{ money(b.tco.saas_usd_month) }}</td>
+      <td class="num">{{ money(b.tco.selfhost_usd_month) }}</td>
+      <td class="num pos">{{ money(b.tco.savings_total) }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endif %}
+
+{% if honest %}
+<h2>Y donde no compensa</h2>
+<p>
+  Estas son las comparativas en las que el producto de pago sale más barato una vez valoradas tus horas a
+  {{ money(cfg.tco_model.engineer_hourly_usd) }}. Autoalojarlas es una decisión de control, no de dinero.
+</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Producto</th><th>Opción autoalojada</th><th class="num">Su precio</th><th class="num">El tuyo</th><th></th></tr></thead>
+  <tbody>
+  {% for h in honest %}
+    <tr>
+      <th scope="row">{{ h.saas.name }}</th>
+      <td>{{ h.tool.name }}</td>
+      <td class="num">{{ money(h.tco.saas_usd_month) }}</td>
+      <td class="num neg">{{ money(h.tco.selfhost_usd_month) }}</td>
+      <td><a href="{{ base }}/vs/{{ h.saas.slug }}-vs-{{ h.tool.slug }}/">por qué</a></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endif %}
+
+<h2>Por categoría</h2>
+<ul class="cards">
+  {% for c in categories %}
+  <li class="card">
+    <h3><a href="{{ base }}/category/{{ c.cat.slug }}/">{{ c.cat.name }}</a></h3>
+    <p>{{ c.cat.intent }}</p>
+    <p class="meta">{{ c.tool_count }} {{ 'herramienta autoalojada' if c.tool_count == 1 else 'herramientas autoalojadas' }}{% if c.comparison_count %} &middot; {{ c.comparison_count }} {{ 'comparativa calculada' if c.comparison_count == 1 else 'comparativas calculadas' }}{% endif %}</p>
+  </li>
+  {% endfor %}
+</ul>
+
+<h2>Cómo funciona</h2>
+<p>
+  Un puesto de pago no tiene mínimo pero sí una pendiente pronunciada: diez personas cuestan diez veces lo que una.
+  Un servidor tiene un mínimo alto pero casi ninguna pendiente: la misma máquina sirve a diez personas o a cien. Cada
+  comparativa de este sitio no es más que el punto donde se cruzan esas dos líneas, y ese punto se desplaza según lo
+  exigente que sea la herramienta y lo que valga tu tiempo.
+</p>
+<p>
+  Dimensionamos cada herramienta a partir de sus requisitos documentados cuando existen, elegimos el plan de servidor
+  más pequeño que de verdad encaja, sumamos las copias de seguridad y, después, las horas. Los precios llevan la fecha
+  en que se leyeron y un enlace a la página de origen. Cuando no hemos comprobado un precio, no publicamos ninguna cifra
+  que dependa de él. <a href="{{ base }}/methodology/">El método completo está aquí</a>, incluido todo lo que el
+  modelo ignora a propósito.
+</p>
+
+{% endblock %}

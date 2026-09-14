@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Auto-héberger n8n : le coût selon la taille de l&#39;équipe (2026)</title>
+<meta name="description" content="Ce que coûte l&#39;auto-hébergement de n8n, d&#39;une à 250 personnes : mémoire et disque nécessaires, le serveur le moins cher qui convient, les sauvegardes et le temps de maintenance.">
+<link rel="canonical" href="https://zoltame.github.io/selfhostcost/fr/self-host/n8n/">
+<meta name="google-site-verification" content="L_8gw5Ec2vvygFsccJR5tNjKHOaNPsnJUrGROVoP_Js"><link rel="alternate" hreflang="en" href="https://zoltame.github.io/selfhostcost/self-host/n8n/">
+<link rel="alternate" hreflang="fr" href="https://zoltame.github.io/selfhostcost/fr/self-host/n8n/">
+<link rel="alternate" hreflang="de" href="https://zoltame.github.io/selfhostcost/de/self-host/n8n/">
+<link rel="alternate" hreflang="es" href="https://zoltame.github.io/selfhostcost/es/self-host/n8n/">
+<link rel="alternate" hreflang="x-default" href="https://zoltame.github.io/selfhostcost/self-host/n8n/">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="SelfHostCost">
+<meta property="og:locale" content="fr_FR"><meta property="og:title" content="Auto-héberger n8n : le coût selon la taille de l&#39;équipe (2026)">
+<meta property="og:description" content="Ce que coûte l&#39;auto-hébergement de n8n, d&#39;une à 250 personnes : mémoire et disque nécessaires, le serveur le moins cher qui convient, les sauvegardes et le temps de maintenance.">
+<meta property="og:url" content="https://zoltame.github.io/selfhostcost/fr/self-host/n8n/">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="/selfhostcost/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/selfhostcost/assets/css/main.css">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://zoltame.github.io/selfhostcost/fr/"}, {"@type": "ListItem", "position": 2, "name": "Automatisation de workflows", "item": "https://zoltame.github.io/selfhostcost/fr/category/automation/"}, {"@type": "ListItem", "position": 3, "name": "n8n", "item": "https://zoltame.github.io/selfhostcost/fr/self-host/n8n/"}]}, {"@type": "Article", "headline": "Auto-héberger n8n : le coût selon la taille de l'équipe (2026)", "description": "Ce que coûte l'auto-hébergement de n8n, d'une à 250 personnes : mémoire et disque nécessaires, le serveur le moins cher qui convient, les sauvegardes et le temps de maintenance.", "url": "https://zoltame.github.io/selfhostcost/fr/self-host/n8n/", "datePublished": "2026-09-14", "dateModified": "2026-09-14", "isAccessibleForFree": true, "author": {"@type": "Organization", "name": "SelfHostCost", "url": "https://zoltame.github.io/selfhostcost/"}, "publisher": {"@type": "Organization", "name": "SelfHostCost", "url": "https://zoltame.github.io/selfhostcost/"}, "inLanguage": "fr"}]}</script></head>
+<body>
+
+<header class="masthead">
+  <div class="shell">
+    <a class="wordmark" href="/selfhostcost/fr/">Self<span>Host</span>Cost</a>
+    <nav>
+      <a href="/selfhostcost/fr/compare/">Comparatifs</a>
+      <a href="/selfhostcost/fr/self-host/">Outils</a>
+      <a href="/selfhostcost/fr/hosting/">Hébergement</a>
+      <a href="/selfhostcost/fr/methodology/">Méthodologie</a>
+    </nav>
+    <nav class="langs" aria-label="Langue">
+<a href="https://zoltame.github.io/selfhostcost/self-host/n8n/" hreflang="en" lang="en" title="English">EN</a><a href="https://zoltame.github.io/selfhostcost/fr/self-host/n8n/" hreflang="fr" lang="fr" title="Français" aria-current="true">FR</a><a href="https://zoltame.github.io/selfhostcost/de/self-host/n8n/" hreflang="de" lang="de" title="Deutsch">DE</a><a href="https://zoltame.github.io/selfhostcost/es/self-host/n8n/" hreflang="es" lang="es" title="Español">ES</a>    </nav>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="crumbs" aria-label="Fil d&#39;Ariane"><a href="/selfhostcost/fr/">Accueil</a><span>/</span><a href="/selfhostcost/fr/category/automation/">Automatisation de workflows</a><span>/</span>n8n</nav>
+</div>
+
+<main class="shell">
+
+<p class="kicker">Automatisation de workflows</p>
+<h1>Ce que coûte l'auto-hébergement de n8n</h1>
+
+<p class="lead">
+  Plateforme d&#39;automatisation de workflows en fair-code, avec des capacités d&#39;IA natives : construction visuelle et code personnalisé, auto-hébergée ou dans le cloud, plus de 400 intégrations.
+  Voici le serveur nécessaire pour chaque taille d'équipe, ce qu'il coûte, et à partir de quand il devient plus
+  rentable que les 2 produits commerciaux qu'il remplace.
+</p>
+
+<div class="tablewrap">
+<table>
+  <caption>Dimensionnement et coût mensuel de n8n selon la taille de l'équipe. La mémoire inclut 25 % de marge. Montants en euros.</caption>
+  <thead>
+    <tr><th>Taille de l'équipe</th><th class="num">Mémoire</th><th class="num">Disque</th><th>Offre la moins chère qui convient</th><th class="num">Serveur</th><th class="num">Avec sauvegardes et votre temps</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/fr/cost/n8n/1-user/">une personne</a></th>
+      <td class="num">1,3 Go</td>
+      <td class="num">10,1 Go</td>
+      <td>Basic 2 GiB &middot; DigitalOcean</td>
+      <td class="num">10,35 €</td>
+      <td class="num">109 €</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/fr/cost/n8n/5-users/">5 personnes</a></th>
+      <td class="num">1,4 Go</td>
+      <td class="num">10,5 Go</td>
+      <td>Basic 2 GiB &middot; DigitalOcean</td>
+      <td class="num">10,35 €</td>
+      <td class="num">109 €</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/fr/cost/n8n/10-users/">10 personnes</a></th>
+      <td class="num">1,5 Go</td>
+      <td class="num">11 Go</td>
+      <td>Basic 2 GiB &middot; DigitalOcean</td>
+      <td class="num">10,35 €</td>
+      <td class="num">109 €</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/fr/cost/n8n/25-users/">25 personnes</a></th>
+      <td class="num">1,9 Go</td>
+      <td class="num">12,5 Go</td>
+      <td>Basic 2 GiB &middot; DigitalOcean</td>
+      <td class="num">10,35 €</td>
+      <td class="num">109 €</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/fr/cost/n8n/50-users/">50 personnes</a></th>
+      <td class="num">2,5 Go</td>
+      <td class="num">15 Go</td>
+      <td>Basic 4 GiB &middot; DigitalOcean</td>
+      <td class="num">20,70 €</td>
+      <td class="num">122 €</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/fr/cost/n8n/100-users/">100 personnes</a></th>
+      <td class="num">3,7 Go</td>
+      <td class="num">20 Go</td>
+      <td>Basic 4 GiB &middot; DigitalOcean</td>
+      <td class="num">20,70 €</td>
+      <td class="num">122 €</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/fr/cost/n8n/250-users/">250 personnes</a></th>
+      <td class="num">7,3 Go</td>
+      <td class="num">35 Go</td>
+      <td>Basic 8 GiB &middot; DigitalOcean</td>
+      <td class="num">41,41 €</td>
+      <td class="num">147 €</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h2>Le modèle de dimensionnement de n8n</h2>
+<p>La valeur de base couvre un seul processus principal avec SQLite. Un gros volume de workflows demande PostgreSQL et le mode file d&#39;attente avec des workers séparés, ce qui double à peu près le plancher.</p>
+<ul>
+  <li><strong>1 Go de mémoire</strong> pour toute la pile au repos, avec chaque conteneur fourni par le projet.</li>
+  <li><strong>20 Mo de plus par utilisateur actif</strong>, puis 25 % de marge pour que la machine ne tourne pas à sa limite.</li>
+  <li><strong>10 Go de disque</strong> au départ, plus 0,1 Go par utilisateur.</li>
+  <li><strong>1 vCPU.</strong> Repris de la base du projet et non augmenté avec la taille de l'équipe, car pour cette charge c'est la mémoire qui s'épuise en premier.</li>
+</ul>
+<p>
+  Ces valeurs de base viennent des prérequis documentés par le projet lui-même.
+  Les incréments par utilisateur sont les nôtres dans tous les cas. Ils sont volontairement généreux plutôt
+  qu'optimistes : un comparatif qui sous-dimensionne le serveur flatte l'auto-hébergement.
+</p>
+
+<h2>Du temps, pas seulement de l'argent</h2>
+<p>
+  n8n est classé <strong>moyen</strong> à exploiter, ce qui dans ce
+  modèle signifie environ <strong>6 heures</strong> pour le mettre correctement en service la
+  première fois, puis <strong>1,5 heure par mois</strong>. À
+  64,70 € de l'heure, cela représente 388 €
+  une fois et 97,05 € par mois, souvent la ligne la plus lourde
+  de tout le calcul.
+</p>
+
+<h2>Ce qu'il remplace</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Produit commercial</th><th class="num">Son coût pour 10 personnes</th><th class="num">n8n pour 10 personnes</th><th class="num">Seuil de rentabilité</th><th></th></tr></thead>
+  <tbody>
+    <tr>
+      <th scope="row">Zapier <span class="badge">Professional</span></th>
+      <td class="num">25,87 €</td>
+      <td class="num">109 €</td>
+      <td class="num">jamais</td>
+      <td><a href="/selfhostcost/fr/vs/zapier-vs-n8n/">détail complet</a></td>
+    </tr>
+    <tr>
+      <th scope="row">Make <span class="badge">Core</span></th>
+      <td class="num">8,63 €</td>
+      <td class="num">109 €</td>
+      <td class="num">jamais</td>
+      <td><a href="/selfhostcost/fr/vs/make-vs-n8n/">détail complet</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="cta">
+  <h3>Où installer n8n</h3>
+  <p>
+    Pour 10 personnes, il faut 1,5 Go de mémoire et 11 Go de disque. Parmi les
+    hébergeurs dont nous avons relevé les prix nous-mêmes, l'offre la moins chère qui convient est
+    <strong>Basic 2 GiB</strong> chez DigitalOcean, à
+    10,35 € par mois.
+  </p>
+  <p>
+    <a class="btn" href="https://m.do.co/c/3af2e8b05a20" rel="sponsored nofollow noopener">
+      Aller sur DigitalOcean
+    </a>
+    <a class="btn ghost" href="/selfhostcost/fr/hosting/">Comparer les hébergeurs</a>
+  </p>
+
+  <p style="font-size:.9rem;color:var(--ink-2);margin-bottom:0">
+    Nous ne prétendons pas que c'est le serveur le moins cher d'internet, seulement le moins cher que nous
+    puissions citer honnêtement. Hetzner Cloud, Vultr et PikaPods    publient des prix que nous n&#39;avons pas pu relever automatiquement,
+    et Hetzner en particulier est généralement moins cher par gigaoctet de mémoire que tout ce qui est cité ici.
+    Comparez vous-même avant de vous engager.
+  </p>
+
+<p class="disclosure">Le lien DigitalOcean ci-dessus est un lien de parrainage : si vous vous inscrivez par ce lien et payez vos premiers 25 $, nous recevons 25 $ de crédit sur notre compte DigitalOcean. Cela ne change jamais les coûts calculés, le serveur retenu ni la conclusion de cette page. Le modèle de dimensionnement et chaque source de prix sont publiés intégralement.</p></div>
+<h2>Fiche du projet</h2>
+<div class="tablewrap">
+<table>
+  <tbody>
+    <tr><th scope="row">Licence</th><td>Other <span class="badge warn">licence open source non standard</span></td></tr>
+<tr><th scope="row">Réserve sur la licence</th><td>Code source disponible sous la Sustainable Use License, et non une licence open source classique. L&#39;usage interne en entreprise est autorisé ; revendre n8n en tant que service ne l&#39;est pas.</td></tr>    <tr><th scope="row">Langage</th><td>TypeScript</td></tr>
+<tr><th scope="row">Étoiles GitHub</th><td>204 061</td></tr><tr><th scope="row">Tickets ouverts</th><td>1 139</td></tr><tr><th scope="row">Dernière version</th><td>n8n@2.38.7</td></tr><tr><th scope="row">Dernier commit</th><td>2026-09-12</td></tr><tr><th scope="row">Dépôt vérifié le</th><td>2026-09-12</td></tr>    <tr><th scope="row">Projet</th><td><a href="https://n8n.io" rel="nofollow noopener">n8n.io</a> &middot; <a href="https://github.com/n8n-io/n8n" rel="nofollow noopener">n8n-io/n8n</a></td></tr>
+  </tbody>
+</table>
+</div>
+
+
+<h2>À voir aussi</h2>
+<ul class="linkgrid">
+<li><a href="/selfhostcost/fr/self-host/activepieces/">Auto-héberger Activepieces</a></li><li><a href="/selfhostcost/fr/self-host/windmill/">Auto-héberger Windmill</a></li>  <li><a href="/selfhostcost/fr/category/automation/">Automatisation de workflows : comparatif</a></li>
+  <li><a href="/selfhostcost/fr/methodology/">Comment ces chiffres sont calculés</a></li>
+</ul>
+
+</main>
+
+<footer class="sitefoot">
+  <div class="shell">
+    <div class="footgrid">
+      <div>
+        <h4>SelfHostCost</h4>
+        <p style="margin:0 0 .6em">Ce que coûte vraiment l&#39;auto-hébergement, outil par outil, taille d&#39;équipe par taille d&#39;équipe.</p>
+        <p style="margin:0"><a href="/selfhostcost/fr/methodology/">Comment chaque chiffre est calculé</a></p>
+      </div>
+      <div>
+        <h4>Parcourir</h4>
+        <ul>
+          <li><a href="/selfhostcost/fr/compare/">Tous les comparatifs</a></li>
+          <li><a href="/selfhostcost/fr/self-host/">Tous les outils</a></li>
+          <li><a href="/selfhostcost/fr/hosting/">Hébergeurs</a></li>
+          <li><a href="/selfhostcost/fr/migration-checklist/">Checklist de migration</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Catégories</h4>
+        <ul>
+<li><a href="/selfhostcost/fr/category/password-manager/">Gestionnaires de mots de passe</a></li><li><a href="/selfhostcost/fr/category/analytics/">Analyse d&#39;audience web</a></li><li><a href="/selfhostcost/fr/category/automation/">Automatisation de workflows</a></li><li><a href="/selfhostcost/fr/category/docs-wiki/">Documentation et wikis</a></li><li><a href="/selfhostcost/fr/category/project-management/">Gestion de projet</a></li><li><a href="/selfhostcost/fr/category/helpdesk/">Support client et boîte partagée</a></li>        </ul>
+      </div>
+      <div>
+        <h4>À propos</h4>
+        <ul>
+          <li><a href="/selfhostcost/fr/about/">À propos et contact</a></li>
+<li><a href="mailto:selfhostcost.contact@gmail.com">selfhostcost.contact@gmail.com</a></li>          <li><a href="/selfhostcost/fr/methodology/">Méthodologie</a></li>
+          <li><a href="/selfhostcost/fr/disclosure/">Transparence sur l&#39;affiliation</a></li>
+          <li><a href="/selfhostcost/fr/privacy/">Confidentialité</a></li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin:30px 0 0">
+      Les prix sont relevés sur les pages tarifaires des éditeurs aux dates indiquées sur chaque page et ne sont pas mis à jour en continu. Vérifiez auprès de l&#39;éditeur avant d&#39;acheter. Rien ici ne constitue un conseil financier.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

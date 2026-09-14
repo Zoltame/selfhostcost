@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autoalojar Keycloak: coste según el tamaño del equipo (2026)</title>
+<meta name="description" content="Lo que cuesta autoalojar Keycloak para entre una y 250 personas: memoria y disco necesarios, el servidor más barato que encaja, copias de seguridad y las horas que exige mantenerlo.">
+<link rel="canonical" href="https://zoltame.github.io/selfhostcost/es/self-host/keycloak/">
+<meta name="google-site-verification" content="L_8gw5Ec2vvygFsccJR5tNjKHOaNPsnJUrGROVoP_Js"><link rel="alternate" hreflang="en" href="https://zoltame.github.io/selfhostcost/self-host/keycloak/">
+<link rel="alternate" hreflang="fr" href="https://zoltame.github.io/selfhostcost/fr/self-host/keycloak/">
+<link rel="alternate" hreflang="de" href="https://zoltame.github.io/selfhostcost/de/self-host/keycloak/">
+<link rel="alternate" hreflang="es" href="https://zoltame.github.io/selfhostcost/es/self-host/keycloak/">
+<link rel="alternate" hreflang="x-default" href="https://zoltame.github.io/selfhostcost/self-host/keycloak/">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="SelfHostCost">
+<meta property="og:locale" content="es_ES"><meta property="og:title" content="Autoalojar Keycloak: coste según el tamaño del equipo (2026)">
+<meta property="og:description" content="Lo que cuesta autoalojar Keycloak para entre una y 250 personas: memoria y disco necesarios, el servidor más barato que encaja, copias de seguridad y las horas que exige mantenerlo.">
+<meta property="og:url" content="https://zoltame.github.io/selfhostcost/es/self-host/keycloak/">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="/selfhostcost/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/selfhostcost/assets/css/main.css">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://zoltame.github.io/selfhostcost/es/"}, {"@type": "ListItem", "position": 2, "name": "Identidad y SSO", "item": "https://zoltame.github.io/selfhostcost/es/category/auth/"}, {"@type": "ListItem", "position": 3, "name": "Keycloak", "item": "https://zoltame.github.io/selfhostcost/es/self-host/keycloak/"}]}, {"@type": "Article", "headline": "Autoalojar Keycloak: coste según el tamaño del equipo (2026)", "description": "Lo que cuesta autoalojar Keycloak para entre una y 250 personas: memoria y disco necesarios, el servidor más barato que encaja, copias de seguridad y las horas que exige mantenerlo.", "url": "https://zoltame.github.io/selfhostcost/es/self-host/keycloak/", "datePublished": "2026-09-14", "dateModified": "2026-09-14", "isAccessibleForFree": true, "author": {"@type": "Organization", "name": "SelfHostCost", "url": "https://zoltame.github.io/selfhostcost/"}, "publisher": {"@type": "Organization", "name": "SelfHostCost", "url": "https://zoltame.github.io/selfhostcost/"}, "inLanguage": "es"}]}</script></head>
+<body>
+
+<header class="masthead">
+  <div class="shell">
+    <a class="wordmark" href="/selfhostcost/es/">Self<span>Host</span>Cost</a>
+    <nav>
+      <a href="/selfhostcost/es/compare/">Comparativas</a>
+      <a href="/selfhostcost/es/self-host/">Herramientas</a>
+      <a href="/selfhostcost/es/hosting/">Alojamiento</a>
+      <a href="/selfhostcost/es/methodology/">Metodología</a>
+    </nav>
+    <nav class="langs" aria-label="Idioma">
+<a href="https://zoltame.github.io/selfhostcost/self-host/keycloak/" hreflang="en" lang="en" title="English">EN</a><a href="https://zoltame.github.io/selfhostcost/fr/self-host/keycloak/" hreflang="fr" lang="fr" title="Français">FR</a><a href="https://zoltame.github.io/selfhostcost/de/self-host/keycloak/" hreflang="de" lang="de" title="Deutsch">DE</a><a href="https://zoltame.github.io/selfhostcost/es/self-host/keycloak/" hreflang="es" lang="es" title="Español" aria-current="true">ES</a>    </nav>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="crumbs" aria-label="Ruta de navegación"><a href="/selfhostcost/es/">Inicio</a><span>/</span><a href="/selfhostcost/es/category/auth/">Identidad y SSO</a><span>/</span>Keycloak</nav>
+</div>
+
+<main class="shell">
+
+<p class="kicker">Identidad y SSO</p>
+<h1>Lo que cuesta autoalojar Keycloak</h1>
+
+<p class="lead">
+  Gestión de identidades y accesos de código abierto para aplicaciones y servicios modernos.
+  A continuación verás el servidor que necesita para cada tamaño de equipo, lo que cuesta y a partir de cuándo
+los 3 productos comerciales a los que sustituye pasarían a costar más.
+</p>
+
+<div class="tablewrap">
+<table>
+  <caption>Dimensionamiento y coste mensual de Keycloak según el tamaño del equipo. La memoria incluye un 25 % de margen.</caption>
+  <thead>
+    <tr><th>Tamaño del equipo</th><th class="num">Memoria</th><th class="num">Disco</th><th>Plan más barato que encaja</th><th class="num">Servidor</th><th class="num">Con copias y tu tiempo</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/es/cost/keycloak/1-user/">una persona</a></th>
+      <td class="num">2,5 GB</td>
+      <td class="num">10 GB</td>
+      <td>Basic 4 GiB &middot; DigitalOcean</td>
+      <td class="num">24,00 US$</td>
+      <td class="num">141 US$</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/es/cost/keycloak/5-users/">5 personas</a></th>
+      <td class="num">2,5 GB</td>
+      <td class="num">10,1 GB</td>
+      <td>Basic 4 GiB &middot; DigitalOcean</td>
+      <td class="num">24,00 US$</td>
+      <td class="num">141 US$</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/es/cost/keycloak/10-users/">10 personas</a></th>
+      <td class="num">2,5 GB</td>
+      <td class="num">10,1 GB</td>
+      <td>Basic 4 GiB &middot; DigitalOcean</td>
+      <td class="num">24,00 US$</td>
+      <td class="num">141 US$</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/es/cost/keycloak/25-users/">25 personas</a></th>
+      <td class="num">2,6 GB</td>
+      <td class="num">10,2 GB</td>
+      <td>Basic 4 GiB &middot; DigitalOcean</td>
+      <td class="num">24,00 US$</td>
+      <td class="num">141 US$</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/es/cost/keycloak/50-users/">50 personas</a></th>
+      <td class="num">2,6 GB</td>
+      <td class="num">10,5 GB</td>
+      <td>Basic 4 GiB &middot; DigitalOcean</td>
+      <td class="num">24,00 US$</td>
+      <td class="num">141 US$</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/es/cost/keycloak/100-users/">100 personas</a></th>
+      <td class="num">2,7 GB</td>
+      <td class="num">11 GB</td>
+      <td>Basic 4 GiB &middot; DigitalOcean</td>
+      <td class="num">24,00 US$</td>
+      <td class="num">141 US$</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/es/cost/keycloak/250-users/">250 personas</a></th>
+      <td class="num">3,1 GB</td>
+      <td class="num">12,5 GB</td>
+      <td>Basic 4 GiB &middot; DigitalOcean</td>
+      <td class="num">24,00 US$</td>
+      <td class="num">141 US$</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h2>El modelo de dimensionamiento de Keycloak</h2>
+<p>Servicio JVM con PostgreSQL. La memoria depende sobre todo del heap y no del número de usuarios, así que el coste por usuario cae mucho a medida que crece el directorio. Es la opción veterana respaldada por la CNCF.</p>
+<ul>
+  <li><strong>2 GB de memoria</strong> para todo el stack en reposo, con todos los contenedores que incluye el proyecto.</li>
+  <li><strong>2 MB más por usuario activo</strong>, y después un 25 % extra para que la máquina no trabaje al límite.</li>
+  <li><strong>10 GB de disco</strong> para empezar, y 0,01 GB más por usuario.</li>
+  <li><strong>2 vCPU.</strong> Se toma de la base del proyecto y no se escala con el tamaño del equipo, porque con esta carga lo primero que se agota es la memoria.</li>
+</ul>
+<p>
+  Estos valores base proceden de los requisitos documentados por el propio proyecto.
+  Los incrementos por usuario son siempre nuestros. Son deliberadamente generosos, no optimistas: una comparativa que
+  infradimensiona el servidor favorece al autoalojamiento.
+</p>
+
+<h2>Tiempo, no solo dinero</h2>
+<p>
+  El nivel de exigencia operativa de Keycloak es <strong>media</strong>, lo que
+  en este modelo supone unas <strong>6 horas</strong> para dejarla bien configurada la primera vez
+  y <strong>1,5 horas al mes</strong> a partir de entonces. A
+  75,00 US$ la hora, son 450 US$
+  una vez y 112 US$ al mes, normalmente la línea más grande de
+  todo el cálculo.
+</p>
+
+<h2>Qué sustituye</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Producto comercial</th><th class="num">Su coste para 10 personas</th><th class="num">Keycloak para 10 personas</th><th class="num">Punto de equilibrio</th><th></th></tr></thead>
+  <tbody>
+    <tr>
+      <th scope="row">Auth0 <span class="badge">Essentials (B2B)</span></th>
+      <td class="num">150 US$</td>
+      <td class="num">141 US$</td>
+      <td class="num">4,3 años</td>
+      <td><a href="/selfhostcost/es/vs/auth0-vs-keycloak/">comparativa completa</a></td>
+    </tr>
+    <tr>
+      <th scope="row">Okta Workforce Identity <span class="badge">Starter</span></th>
+      <td class="num">125 US$</td>
+      <td class="num">141 US$</td>
+      <td class="num">nunca</td>
+      <td><a href="/selfhostcost/es/vs/okta-vs-keycloak/">comparativa completa</a></td>
+    </tr>
+    <tr>
+      <th scope="row">Clerk <span class="badge">Pro</span></th>
+      <td class="num">25,00 US$</td>
+      <td class="num">141 US$</td>
+      <td class="num">nunca</td>
+      <td><a href="/selfhostcost/es/vs/clerk-vs-keycloak/">comparativa completa</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="cta">
+  <h3>Dónde alojar Keycloak</h3>
+  <p>
+    Para 10 personas hacen falta 2,5 GB de memoria y 10,1 GB de disco. Entre los
+    proveedores cuyos precios hemos leído nosotros mismos, el plan más barato que encaja es
+    <strong>Basic 4 GiB</strong> en DigitalOcean, por
+    24,00 US$ al mes.
+  </p>
+  <p>
+    <a class="btn" href="https://m.do.co/c/3af2e8b05a20" rel="sponsored nofollow noopener">
+      Ir a DigitalOcean
+    </a>
+    <a class="btn ghost" href="/selfhostcost/es/hosting/">Comparar proveedores</a>
+  </p>
+
+  <p style="font-size:.9rem;color:var(--ink-2);margin-bottom:0">
+    No decimos que sea el servidor más barato de internet, solo el más barato que podemos citar con honestidad.
+Hetzner Cloud, Vultr y PikaPods    publican precios que no pudimos leer de forma automática,
+    y Hetzner en particular suele ser más barato por gigabyte de memoria que cualquier opción citada aquí.
+    Compara por tu cuenta antes de comprometerte.
+  </p>
+
+<p class="disclosure">El enlace de DigitalOcean de arriba es un enlace de referido: si te registras a través de él y pagas tus primeros 25 $, recibimos 25 $ de crédito en nuestra cuenta de DigitalOcean. Eso nunca cambia los costes calculados, el servidor elegido ni la conclusión de esta página. El modelo de dimensionamiento y todas las fuentes de precios están publicados íntegramente.</p></div>
+<h2>Datos del proyecto</h2>
+<div class="tablewrap">
+<table>
+  <tbody>
+    <tr><th scope="row">Licencia</th><td>Apache License 2.0</td></tr>
+    <tr><th scope="row">Lenguaje</th><td>Java</td></tr>
+<tr><th scope="row">Estrellas en GitHub</th><td>36.732</td></tr><tr><th scope="row">Incidencias abiertas</th><td>3.318</td></tr><tr><th scope="row">Última versión</th><td>26.7.3</td></tr><tr><th scope="row">Último commit</th><td>2026-09-12</td></tr><tr><th scope="row">Repositorio comprobado el</th><td>2026-09-12</td></tr>    <tr><th scope="row">Proyecto</th><td><a href="https://www.keycloak.org" rel="nofollow noopener">www.keycloak.org</a> &middot; <a href="https://github.com/keycloak/keycloak" rel="nofollow noopener">keycloak/keycloak</a></td></tr>
+  </tbody>
+</table>
+</div>
+
+
+<h2>Ver también</h2>
+<ul class="linkgrid">
+<li><a href="/selfhostcost/es/self-host/authentik/">Autoalojar authentik</a></li><li><a href="/selfhostcost/es/self-host/zitadel/">Autoalojar Zitadel</a></li>  <li><a href="/selfhostcost/es/category/auth/">Identidad y SSO: comparativa</a></li>
+  <li><a href="/selfhostcost/es/methodology/">Cómo se calculan estas cifras</a></li>
+</ul>
+
+</main>
+
+<footer class="sitefoot">
+  <div class="shell">
+    <div class="footgrid">
+      <div>
+        <h4>SelfHostCost</h4>
+        <p style="margin:0 0 .6em">Lo que cuesta de verdad el autoalojamiento, herramienta por herramienta y según el tamaño del equipo.</p>
+        <p style="margin:0"><a href="/selfhostcost/es/methodology/">Cómo se calcula cada cifra</a></p>
+      </div>
+      <div>
+        <h4>Explorar</h4>
+        <ul>
+          <li><a href="/selfhostcost/es/compare/">Todas las comparativas</a></li>
+          <li><a href="/selfhostcost/es/self-host/">Todas las herramientas</a></li>
+          <li><a href="/selfhostcost/es/hosting/">Proveedores de alojamiento</a></li>
+          <li><a href="/selfhostcost/es/migration-checklist/">Lista de verificación de migración</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Categorías</h4>
+        <ul>
+<li><a href="/selfhostcost/es/category/password-manager/">Gestores de contraseñas</a></li><li><a href="/selfhostcost/es/category/analytics/">Analítica web</a></li><li><a href="/selfhostcost/es/category/automation/">Automatización de flujos de trabajo</a></li><li><a href="/selfhostcost/es/category/docs-wiki/">Documentación y wikis</a></li><li><a href="/selfhostcost/es/category/project-management/">Gestión de proyectos</a></li><li><a href="/selfhostcost/es/category/helpdesk/">Soporte y bandeja compartida</a></li>        </ul>
+      </div>
+      <div>
+        <h4>Acerca de</h4>
+        <ul>
+          <li><a href="/selfhostcost/es/about/">Acerca de y contacto</a></li>
+<li><a href="mailto:selfhostcost.contact@gmail.com">selfhostcost.contact@gmail.com</a></li>          <li><a href="/selfhostcost/es/methodology/">Metodología</a></li>
+          <li><a href="/selfhostcost/es/disclosure/">Aviso sobre enlaces de referido</a></li>
+          <li><a href="/selfhostcost/es/privacy/">Privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin:30px 0 0">
+      Los precios se toman de las páginas de precios de cada proveedor en las fechas indicadas en cada página y no se actualizan de forma continua. Compruébalos con el proveedor antes de comprar. Nada de lo que aparece aquí es asesoramiento financiero.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

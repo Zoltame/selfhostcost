@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block content %}
+
+<p class="kicker">Hosting</p>
+<h1>{{ provider.name }} für Self-Hosting: Tarife und was darauf passt</h1>
+
+<p class="lead">
+  {% if provider.hq %}Sitz: {{ provider.hq }}.{% endif %}
+  {% if provider.price_status == 'verified' %}
+  Die Tarifpreise unten wurden am {{ provider.verified_on }} von <a href="{{ provider.pricing_url }}" rel="nofollow noopener">der eigenen Preisseite</a>
+  abgelesen und werden in allen Berechnungen dieser Website verwendet. Sie werden in Euro angezeigt, umgerechnet aus
+  Dollar zum datierten Kurs aus der Methodik.
+  {% else %}
+  <strong>Wir konnten die Preise nicht automatisch ablesen</strong>, daher beruht keine Zahl auf dieser Website auf
+  {{ provider.name }}. Die technischen Daten unten sind bestätigt, die Preise nicht.
+  {% endif %}
+</p>
+
+{% if provider.price_status != 'verified' %}
+<div class="note caution">
+  <h3>Preise nicht bestätigt</h3>
+  <p>{{ provider.price_note }}</p>
+  <p>Bis dahin dient diese Seite als technische Referenz; prüfen Sie die Preise beim Anbieter.</p>
+</div>
+{% endif %}
+
+{% if provider.plans %}
+<h2>Tarife</h2>
+<div class="tablewrap">
+<table>
+  <thead>
+    <tr><th>Tarif</th><th class="num">vCPU</th><th class="num">Arbeitsspeicher</th><th class="num">Speicherplatz</th><th class="num">Traffic</th><th class="num">Pro Monat</th>{% if provider.price_status == 'verified' %}<th>Was darauf passt</th>{% endif %}</tr>
+  </thead>
+  <tbody>
+  {% for row in plan_rows %}
+    <tr>
+      <th scope="row">{{ row.plan.name }}</th>
+      <td class="num">{{ row.plan.vcpu }}</td>
+      <td class="num">{{ gb(row.plan.ram_gb) }}</td>
+      <td class="num">{{ gb(row.plan.disk_gb) }}</td>
+      <td class="num">{{ gb(row.plan.transfer_gb) }}</td>
+      <td class="num">{% if row.plan.price_usd_month %}{{ money(row.plan.price_usd_month) }}{% else %}nicht abgelesen{% endif %}</td>
+      {% if provider.price_status == 'verified' %}
+      <td>{% if row.fits %}{% for f in row.fits %}<a href="{{ base }}/self-host/{{ f.slug }}/">{{ f.name }}</a>{{ ', ' if not loop.last }}{% endfor %}{% else %}&mdash;{% endif %}</td>
+      {% endif %}
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+<p class="srcline">Die letzte Spalte nennt die Tools unseres Datensatzes, die für {{ ref_label }} auf den Tarif passen, beginnend mit dem kleinsten Tarif, sodass jedes Tool nur einmal erscheint.</p>
+{% endif %}
+
+<h2>Stärken und Schwächen</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Stärken</th><th>Schwächen</th></tr></thead>
+  <tbody><tr>
+    <td><ul style="margin:0;padding-left:1.1em">{% for s in provider.strengths %}<li>{{ s }}</li>{% endfor %}</ul></td>
+    <td><ul style="margin:0;padding-left:1.1em">{% for w in provider.weaknesses %}<li>{{ w }}</li>{% endfor %}</ul></td>
+  </tr></tbody>
+</table>
+</div>
+<p>{{ provider.billing_note }}</p>
+
+<div class="cta">
+  <h3>Preise direkt bei {{ provider.name }}</h3>
+  <p>Prüfen Sie den aktuellen Preis immer auf der Anbieterseite, bevor Sie sich festlegen. Unserer ist eine datierte Momentaufnahme, kein Live-Feed.</p>
+  <p><a class="btn" href="{{ hosting_link(provider.slug) }}" rel="{{ 'sponsored nofollow noopener' if affiliate_on else 'nofollow noopener' }}">{{ provider.name }} öffnen</a></p>
+  {% if affiliate_on %}<p class="disclosure">{{ t('affiliate.disclosure') }}</p>{% endif %}
+</div>
+
+<h2>Weitere Anbieter</h2>
+<ul class="linkgrid">
+  {% for p in siblings %}<li><a href="{{ base }}/hosting/{{ p.slug }}/">{{ p.name }}</a>{% if p.price_status != 'verified' %} <span class="badge warn">Preise unbestätigt</span>{% endif %}</li>{% endfor %}
+</ul>
+
+{% endblock %}

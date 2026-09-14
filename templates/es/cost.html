@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% block content %}
+
+<p class="kicker">{{ tool.name }} &middot; {{ category.name }}</p>
+<h1>Autoalojar {{ tool.name }} para {{ size.users }} {{ 'persona' if size.users == 1 else 'personas' }}: el coste</h1>
+
+<p class="lead">
+  Para {{ size.users }} {{ 'usuario' if size.users == 1 else 'usuarios' }}, {{ tool.name }} necesita
+  {{ gb(sizing.ram_gb) }} de memoria y {{ gb(sizing.disk_gb) }} de disco. Eso cabe en el plan
+  {{ plan.plan.name }} de {{ plan.provider_name }} por {{ money(plan.price_usd_month) }} al mes.
+  Si sumas las copias de seguridad y el tiempo de mantenimiento, la cifra real es de
+  <strong>{{ money(total_month) }} al mes</strong>.
+</p>
+
+<ul class="sizes">
+  {% for s in all_sizes %}
+  <li><a href="{{ base }}/cost/{{ tool.slug }}/{{ s.slug }}/" {% if s.slug == size.slug %}aria-current="page"{% endif %}>{{ s.label }}</a></li>
+  {% endfor %}
+</ul>
+
+<dl class="figures">
+  <div class="fig"><dt>Servidor</dt><dd>{{ money(plan.price_usd_month) }}<small>{{ plan.plan.name }}, {{ plan.plan.vcpu }} vCPU</small></dd></div>
+  <div class="fig"><dt>Copias de seguridad</dt><dd>{{ money(backup_month) }}<small>snapshots del proveedor</small></dd></div>
+  <div class="fig"><dt>Tu tiempo</dt><dd>{{ money(labour_month) }}<small>{{ hours(maint_hours) }} h al mes a {{ money(cfg.tco_model.engineer_hourly_usd) }}</small></dd></div>
+  <div class="fig"><dt>Todo incluido</dt><dd>{{ money(total_month) }}<small>al mes</small></dd></div>
+  <div class="fig"><dt>Puesta en marcha</dt><dd>{{ money(setup_once) }}<small>unas {{ hours(setup_hours) }} horas, una vez</small></dd></div>
+</dl>
+
+<h2>Cómo se llega a {{ gb(sizing.ram_gb) }}</h2>
+<p>
+  {{ gb(tool.base_ram_gb) }} cubren el stack en reposo, con todos los contenedores del proyecto.
+  {{ size.users }} {{ 'usuario' if size.users == 1 else 'usuarios' }} a {{ number(tool.ram_per_user_mb) }} MB cada uno
+  añaden {{ gb(per_user_ram_gb) }}, lo que da {{ gb(sizing.raw_ram_gb) }}. Con un
+  {{ (sizing.headroom_ratio * 100) | round | int }} % de margen para que la máquina no trabaje al límite, salen
+  <strong>{{ gb(sizing.ram_gb) }}</strong>, y el plan más pequeño que llega a esa cifra es
+  {{ plan.plan.name }}, con {{ gb(plan.plan.ram_gb) }}.
+</p>
+<p>
+  El disco funciona igual: {{ gb(tool.base_disk_gb) }} para empezar, más
+  {{ loc.compact(tool.disk_per_user_gb) }} GB por usuario, es decir, <strong>{{ gb(sizing.disk_gb) }}</strong> frente a
+  los {{ gb(plan.plan.disk_gb) }} que incluye el plan.
+  {% if tool.disk_per_user_gb >= 5 %}
+  Esta herramienta consume mucho almacenamiento por usuario, así que será el disco, más que la memoria, lo que obligue a tu próxima ampliación.
+  {% endif %}
+</p>
+<p>{{ tool.sizing_note }}</p>
+
+<h2>A tres años</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Periodo</th><th class="num">Servidor y copias</th><th class="num">Tu tiempo</th><th class="num">Total</th></tr></thead>
+  <tbody>
+    <tr><th scope="row">Puesta en marcha, una vez</th><td class="num">&mdash;</td><td class="num">{{ money(setup_once) }}</td><td class="num">{{ money(setup_once) }}</td></tr>
+    <tr><th scope="row">Al mes</th><td class="num">{{ money(no_labour_month) }}</td><td class="num">{{ money(labour_month) }}</td><td class="num">{{ money(total_month) }}</td></tr>
+    <tr><th scope="row">Primer año</th><td class="num">{{ money(no_labour_month * 12) }}</td><td class="num">{{ money(setup_once + labour_month * 12) }}</td><td class="num">{{ money(setup_once + total_month * 12) }}</td></tr>
+  </tbody>
+  <tfoot>
+    <tr><td>{{ cfg.tco_model.horizon_months }} meses</td><td class="num">{{ money(no_labour_month * cfg.tco_model.horizon_months) }}</td><td class="num">{{ money(setup_once + labour_month * cfg.tco_model.horizon_months) }}</td><td class="num">{{ money(setup_once + total_month * cfg.tco_model.horizon_months) }}</td></tr>
+  </tfoot>
+</table>
+</div>
+<p class="srcline">
+  Si no valoras tu propio tiempo, la cifra a {{ cfg.tco_model.horizon_months }} meses es de
+  {{ money(no_labour_month * cfg.tco_model.horizon_months) }}. Ambas cifras son reales; cuál te aplica depende de si esas
+  horas se habrían podido facturar.
+</p>
+
+{% if comparisons %}
+<h2>Lo que pagarías en su lugar con este tamaño</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Producto comercial</th><th>Plan</th><th class="num">Al mes</th><th class="num">Diferencia</th><th></th></tr></thead>
+  <tbody>
+  {% for c in comparisons %}
+    <tr>
+      <th scope="row">{{ c.saas.name }}</th>
+      <td>{{ c.tco.saas_tier.name }}</td>
+      <td class="num">{{ money(c.tco.saas_usd_month) }}</td>
+      <td class="num {{ 'pos' if c.tco.saas_usd_month > total_month else 'neg' }}">
+        {{ money(c.tco.saas_usd_month - total_month) }}
+      </td>
+      <td><a href="{{ base }}/vs/{{ c.saas.slug }}-vs-{{ tool.slug }}/">detalle</a></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+<p class="srcline">Una diferencia positiva significa que autoalojar sale más barato con este tamaño, contando ya tu tiempo.</p>
+{% endif %}
+
+{% include "partials/hosting_cta.html" %}
+
+{% include "partials/lead_capture.html" %}
+
+<h2>Otros tamaños y páginas relacionadas</h2>
+<ul class="linkgrid">
+  {% if prev_size %}<li><a href="{{ base }}/cost/{{ tool.slug }}/{{ prev_size.slug }}/">{{ tool.name }} para {{ prev_size.label }}</a></li>{% endif %}
+  {% if next_size %}<li><a href="{{ base }}/cost/{{ tool.slug }}/{{ next_size.slug }}/">{{ tool.name }} para {{ next_size.label }}</a></li>{% endif %}
+  <li><a href="{{ base }}/self-host/{{ tool.slug }}/">{{ tool.name }}: todos los tamaños de equipo</a></li>
+  <li><a href="{{ base }}/category/{{ category.slug }}/">{{ category.name }}: comparativa</a></li>
+  <li><a href="{{ base }}/methodology/">Cómo se calculan estas cifras</a></li>
+</ul>
+
+{% endblock %}

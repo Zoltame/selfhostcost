@@ -1,0 +1,28 @@
+{# Recomendación de alojamiento. Enlaces normales mientras no haya un identificador de afiliado configurado. #}
+<div class="cta">
+  <h3>Dónde alojar {{ tool.name }}</h3>
+  <p>
+    Para {{ cta_label }} hacen falta {{ gb(sizing_ram) }} de memoria y {{ gb(sizing_disk) }} de disco. Entre los
+    proveedores cuyos precios hemos leído nosotros mismos, el plan más barato que encaja es
+    <strong>{{ cta_plan.plan.name }}</strong> en {{ cta_plan.provider_name }}, por
+    {{ money(cta_plan.price_usd_month) }} al mes.
+  </p>
+  <p>
+    <a class="btn" href="{{ hosting_link(cta_plan.provider_slug) }}" rel="{{ 'sponsored nofollow noopener' if affiliate_on else 'nofollow noopener' }}">
+      Ir a {{ cta_plan.provider_name }}
+    </a>
+    <a class="btn ghost" href="{{ base }}/hosting/">Comparar proveedores</a>
+  </p>
+
+  {% if unpriced_providers %}
+  <p style="font-size:.9rem;color:var(--ink-2);margin-bottom:0">
+    No decimos que sea el servidor más barato de internet, solo el más barato que podemos citar con honestidad.
+    {% if unpriced_providers | length > 1 %}{{ unpriced_providers[:-1] | join(', ') }} y {{ unpriced_providers[-1] }}{% else %}{{ unpriced_providers[0] }}{% endif %}
+    {{ 'publican precios que no pudimos leer de forma automática' if unpriced_providers | length > 1 else 'publica precios que no pudimos leer de forma automática' }},
+    y {% if 'Hetzner Cloud' in unpriced_providers %}Hetzner en particular suele ser más barato por gigabyte de memoria que cualquier opción citada aquí{% else %}podría ser más barato{% endif %}.
+    Compara por tu cuenta antes de comprometerte.
+  </p>
+  {% endif %}
+
+  {% if affiliate_on %}<p class="disclosure">{{ t('affiliate.disclosure') }}</p>{% endif %}
+</div>

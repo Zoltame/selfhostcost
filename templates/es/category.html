@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>{{ category.name }}: autoalojado frente a de pago, con precios</h1>
+<p class="lead">{{ category.intent }} Los costes de abajo son para {{ ref_label }} y se calculan con el modelo de
+   dimensionamiento y los precios con fecha de la <a href="{{ base }}/methodology/">página de metodología</a>.</p>
+
+{% if tools %}
+<h2>Las opciones autoalojadas</h2>
+<div class="tablewrap">
+<table>
+  <caption>Coste mensual para {{ ref_label }}, con servidor, copias de seguridad y tiempo de mantenimiento incluidos.</caption>
+  <thead><tr><th>Herramienta</th><th class="num">Memoria necesaria</th><th class="num">Servidor</th><th class="num">Con tu tiempo</th><th>Exigencia</th><th>Licencia</th></tr></thead>
+  <tbody>
+  {% for t_ in tools %}
+    <tr>
+      <th scope="row"><a href="{{ base }}/self-host/{{ t_.tool.slug }}/">{{ t_.tool.name }}</a></th>
+      <td class="num">{{ gb(t_.ram) }}</td>
+      <td class="num">{{ money(t_.server) }}</td>
+      <td class="num">{{ money(t_.total) }}</td>
+      <td>{{ t('difficulty.' ~ t_.tool.difficulty) }}</td>
+      <td>{{ t_.tool.license_spdx if t_.tool.license_spdx != 'NOASSERTION' else 'código disponible' }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endif %}
+
+{% if paid %}
+<h2>Lo que se está sustituyendo</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Producto</th><th>Plan comparado</th><th class="num">Para {{ ref_label }}</th><th></th></tr></thead>
+  <tbody>
+  {% for p in paid %}
+    <tr>
+      <th scope="row">{{ p.saas.name }}</th>
+      <td>{{ p.tier.name }}</td>
+      <td class="num">{{ money(p.month) }}</td>
+      <td><a href="{{ base }}/alternatives/{{ p.saas.slug }}/">alternativas autoalojadas</a></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% else %}
+<div class="note">
+  <p>
+    Ningún producto comercial de esta categoría tiene todavía su precio confirmado en la página del proveedor, así que
+    aquí no se publica ninguna comparativa de costes. Las herramientas de arriba están calculadas; los productos a los
+    que sustituyen, no. Preferimos mostrar un hueco antes que una cifra sin comprobar.
+  </p>
+</div>
+{% endif %}
+
+{% if comparisons %}
+<h2>Todas las comparativas de esta categoría</h2>
+<ul class="linkgrid">
+  {% for c in comparisons %}<li><a href="{{ base }}{{ c.url }}">{{ c.name }}</a></li>{% endfor %}
+</ul>
+{% endif %}
+
+<h2>Otras categorías</h2>
+<ul class="linkgrid">
+  {% for c in siblings %}<li><a href="{{ base }}/category/{{ c.slug }}/">{{ c.name }}</a></li>{% endfor %}
+</ul>
+
+{% endblock %}

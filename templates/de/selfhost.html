@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% macro when(v) %}{% if v is none %}{{ months(v) }}{% elif v < 1 %}in {{ months(v) }}{% else %}nach {{ months(v) }}{% endif %}{% endmacro %}
+{% block content %}
+
+<p class="kicker">{{ category.name }}</p>
+<h1>Was es kostet, {{ tool.name }} selbst zu hosten</h1>
+
+<p class="lead">
+  {{ tool.description_gh | default(tool.sizing_note, true) }}
+  Unten stehen der benötigte Server für jede Teamgröße, seine Kosten und ab wann sich das gegenüber
+  {% if replaced %}{{ 'dem kommerziellen Produkt, das' if replaced | length == 1 else 'den ' ~ (replaced | length) ~ ' kommerziellen Produkten, die' }} es ersetzt{% else %}einer kostenpflichtigen Alternative{% endif %},
+  rechnet.
+</p>
+
+<div class="tablewrap">
+<table>
+  <caption>Dimensionierung und monatliche Kosten von {{ tool.name }} nach Teamgröße. Der Arbeitsspeicher enthält {{ (headroom * 100) | round | int }} % Reserve. Beträge in Euro.</caption>
+  <thead>
+    <tr><th>Teamgröße</th><th class="num">Arbeitsspeicher</th><th class="num">Speicherplatz</th><th>Günstigster passender Tarif</th><th class="num">Server</th><th class="num">Mit Backups und Ihrer Zeit</th></tr>
+  </thead>
+  <tbody>
+  {% for r in rows %}
+    <tr>
+      <th scope="row"><a href="{{ base }}/cost/{{ tool.slug }}/{{ r.slug }}/">{{ r.label }}</a></th>
+      <td class="num">{{ gb(r.ram) }}</td>
+      <td class="num">{{ gb(r.disk) }}</td>
+      <td>{{ r.plan_name }} &middot; {{ r.provider }}</td>
+      <td class="num">{{ money(r.server) }}</td>
+      <td class="num">{{ money(r.total) }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+
+<h2>Das Dimensionierungsmodell für {{ tool.name }}</h2>
+<p>{{ tool.sizing_note }}</p>
+<ul>
+  <li><strong>{{ gb(tool.base_ram_gb) }} Arbeitsspeicher</strong> für den gesamten Stack im Ruhezustand, inklusive aller Container, die das Projekt mitliefert.</li>
+  <li><strong>{{ number(tool.ram_per_user_mb) }} MB mehr pro aktivem Nutzer</strong>, dann {{ (headroom * 100) | round | int }} % obendrauf, damit die Maschine nicht am Limit läuft.</li>
+  <li><strong>{{ gb(tool.base_disk_gb) }} Speicherplatz</strong> zu Beginn, wachsend um {{ loc.compact(tool.disk_per_user_gb) }} GB pro Nutzer.</li>
+  <li><strong>{{ tool.base_vcpu }} vCPU.</strong> Aus der Vorgabe des Projekts übernommen und nicht mit der Teamgröße skaliert, weil bei dieser Last zuerst der Arbeitsspeicher knapp wird.</li>
+</ul>
+<p>
+  {% if tool.sizing_basis == 'vendor_docs' %}
+  Diese Grundwerte stammen aus den dokumentierten Anforderungen des Projekts selbst.
+  {% else %}
+  <strong>Diese Grundwerte sind unsere Schätzung</strong>, abgeleitet aus den Diensten der Docker-Compose-Referenzdatei
+  des Projekts, da es keine zitierbaren Mindestanforderungen veröffentlicht.
+  {% endif %}
+  Die Zuschläge pro Nutzer stammen in jedem Fall von uns. Sie sind bewusst großzügig statt optimistisch gewählt:
+  Ein Vergleich, der den Server zu klein ansetzt, lässt Self-Hosting besser aussehen, als es ist.
+</p>
+
+<h2>Zeit, nicht nur Geld</h2>
+<p>
+  Der Betriebsaufwand von {{ tool.name }} ist als <strong>{{ t('difficulty.' ~ tool.difficulty) }}</strong>
+  eingestuft. In diesem Modell heißt das etwa <strong>{{ hours(setup_hours) }} Stunden</strong> für die erste saubere
+  Einrichtung und danach <strong>{{ hours(maint_hours) }} Stunden pro Monat</strong>. Zu
+  {{ money(cfg.tco_model.engineer_hourly_usd) }} pro Stunde sind das einmalig {{ money(setup_hours * cfg.tco_model.engineer_hourly_usd) }}
+  und {{ money(maint_hours * cfg.tco_model.engineer_hourly_usd) }} pro Monat, meist der größte Posten der gesamten
+  Rechnung.
+  {% if tool.difficulty == 'hard' %}
+  Dieses Tool ist wirklich aufwendig: mehrere zustandsbehaftete Dienste und ein Upgrade-Pfad, bei dem Eile Daten kosten kann.
+  {% elif tool.difficulty == 'easy' %}
+  Leichter wird Self-Hosting kaum: ein einzelner Container und kaum Arbeit außer dem Aktualisieren des Images.
+  {% endif %}
+</p>
+
+{% if replaced %}
+<h2>Was es ersetzt</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Kommerzielles Produkt</th><th class="num">Seine Kosten für {{ ref_label }}</th><th class="num">{{ tool.name }} für {{ ref_label }}</th><th class="num">Gewinnschwelle</th><th></th></tr></thead>
+  <tbody>
+  {% for r in replaced %}
+    <tr>
+      <th scope="row">{{ r.saas.name }} <span class="badge">{{ r.tco.saas_tier.name }}</span></th>
+      <td class="num">{{ money(r.tco.saas_usd_month) }}</td>
+      <td class="num">{{ money(r.tco.selfhost_usd_month) }}</td>
+      <td class="num">{{ when(r.tco.breakeven_months) }}</td>
+      <td><a href="{{ base }}/vs/{{ r.saas.slug }}-vs-{{ tool.slug }}/">vollständiger Vergleich</a></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endif %}
+
+{% include "partials/hosting_cta.html" %}
+
+<h2>Projektdaten</h2>
+<div class="tablewrap">
+<table>
+  <tbody>
+    <tr><th scope="row">Lizenz</th><td>{{ tool.license | default('siehe Projekt', true) }}{% if tool.license_spdx == 'NOASSERTION' %} <span class="badge warn">keine Standard-Open-Source-Lizenz</span>{% endif %}</td></tr>
+    {% if tool.licence_caveat %}<tr><th scope="row">Lizenzhinweis</th><td>{{ tool.licence_caveat }}</td></tr>{% endif %}
+    <tr><th scope="row">Programmiersprache</th><td>{{ tool.language }}</td></tr>
+    {% if tool.stars %}<tr><th scope="row">GitHub-Sterne</th><td>{{ number(tool.stars) }}</td></tr>{% endif %}
+    {% if tool.open_issues is not none %}<tr><th scope="row">Offene Issues</th><td>{{ number(tool.open_issues) }}</td></tr>{% endif %}
+    {% if tool.latest_release %}<tr><th scope="row">Neueste Version</th><td>{{ tool.latest_release }}</td></tr>{% endif %}
+    {% if tool.last_push %}<tr><th scope="row">Letzter Commit</th><td>{{ tool.last_push }}</td></tr>{% endif %}
+    {% if tool.github_checked_on %}<tr><th scope="row">Repository geprüft am</th><td>{{ tool.github_checked_on }}</td></tr>{% endif %}
+    <tr><th scope="row">Projekt</th><td><a href="{{ tool.site }}" rel="nofollow noopener">{{ tool.site | replace('https://','') }}</a>{% if tool.repo %} &middot; <a href="https://github.com/{{ tool.repo }}" rel="nofollow noopener">{{ tool.repo }}</a>{% elif tool.repo_url %} &middot; <a href="{{ tool.repo_url }}" rel="nofollow noopener">Quellcode</a>{% endif %}</td></tr>
+    {% if tool.compatible_clients %}<tr><th scope="row">Clients</th><td>{{ tool.compatible_clients }}</td></tr>{% endif %}
+  </tbody>
+</table>
+</div>
+
+{% include "partials/lead_capture.html" %}
+
+<h2>Siehe auch</h2>
+<ul class="linkgrid">
+  {% for sib in siblings %}<li><a href="{{ base }}/self-host/{{ sib.slug }}/">{{ sib.name }} selbst hosten</a></li>{% endfor %}
+  <li><a href="{{ base }}/category/{{ category.slug }}/">{{ category.name }} im Vergleich</a></li>
+  <li><a href="{{ base }}/methodology/">Wie diese Zahlen berechnet werden</a></li>
+</ul>
+
+{% endblock %}

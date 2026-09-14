@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lista de verificación para migrar al autoalojamiento: antes de cancelar la suscripción</title>
+<meta name="description" content="Una lista práctica para pasar de una herramienta de pago a una autoalojada: exportación de datos, dimensionamiento, copias de seguridad probadas, cambio y plan de vuelta atrás.">
+<link rel="canonical" href="https://zoltame.github.io/selfhostcost/es/migration-checklist/">
+<meta name="google-site-verification" content="L_8gw5Ec2vvygFsccJR5tNjKHOaNPsnJUrGROVoP_Js"><link rel="alternate" hreflang="en" href="https://zoltame.github.io/selfhostcost/migration-checklist/">
+<link rel="alternate" hreflang="fr" href="https://zoltame.github.io/selfhostcost/fr/migration-checklist/">
+<link rel="alternate" hreflang="de" href="https://zoltame.github.io/selfhostcost/de/migration-checklist/">
+<link rel="alternate" hreflang="es" href="https://zoltame.github.io/selfhostcost/es/migration-checklist/">
+<link rel="alternate" hreflang="x-default" href="https://zoltame.github.io/selfhostcost/migration-checklist/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SelfHostCost">
+<meta property="og:locale" content="es_ES"><meta property="og:title" content="Lista de verificación para migrar al autoalojamiento: antes de cancelar la suscripción">
+<meta property="og:description" content="Una lista práctica para pasar de una herramienta de pago a una autoalojada: exportación de datos, dimensionamiento, copias de seguridad probadas, cambio y plan de vuelta atrás.">
+<meta property="og:url" content="https://zoltame.github.io/selfhostcost/es/migration-checklist/">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="/selfhostcost/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/selfhostcost/assets/css/main.css">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://zoltame.github.io/selfhostcost/es/"}, {"@type": "ListItem", "position": 2, "name": "Lista de verificación para migrar al autoalojamiento", "item": "https://zoltame.github.io/selfhostcost/es/migration-checklist/"}]}, {"@type": "Article", "headline": "Lista de verificación para migrar al autoalojamiento: antes de cancelar la suscripción", "description": "Una lista práctica para pasar de una herramienta de pago a una autoalojada: exportación de datos, dimensionamiento, copias de seguridad probadas, cambio y plan de vuelta atrás.", "url": "https://zoltame.github.io/selfhostcost/es/migration-checklist/", "datePublished": "2026-09-14", "dateModified": "2026-09-14", "isAccessibleForFree": true, "author": {"@type": "Organization", "name": "SelfHostCost", "url": "https://zoltame.github.io/selfhostcost/"}, "publisher": {"@type": "Organization", "name": "SelfHostCost", "url": "https://zoltame.github.io/selfhostcost/"}, "inLanguage": "es"}]}</script></head>
+<body>
+
+<header class="masthead">
+  <div class="shell">
+    <a class="wordmark" href="/selfhostcost/es/">Self<span>Host</span>Cost</a>
+    <nav>
+      <a href="/selfhostcost/es/compare/">Comparativas</a>
+      <a href="/selfhostcost/es/self-host/">Herramientas</a>
+      <a href="/selfhostcost/es/hosting/">Alojamiento</a>
+      <a href="/selfhostcost/es/methodology/">Metodología</a>
+    </nav>
+    <nav class="langs" aria-label="Idioma">
+<a href="https://zoltame.github.io/selfhostcost/migration-checklist/" hreflang="en" lang="en" title="English">EN</a><a href="https://zoltame.github.io/selfhostcost/fr/migration-checklist/" hreflang="fr" lang="fr" title="Français">FR</a><a href="https://zoltame.github.io/selfhostcost/de/migration-checklist/" hreflang="de" lang="de" title="Deutsch">DE</a><a href="https://zoltame.github.io/selfhostcost/es/migration-checklist/" hreflang="es" lang="es" title="Español" aria-current="true">ES</a>    </nav>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="crumbs" aria-label="Ruta de navegación"><a href="/selfhostcost/es/">Inicio</a><span>/</span>Lista de verificación para migrar al autoalojamiento</nav>
+</div>
+
+<main class="shell">
+<div class="prose">
+
+<h1>Lista de verificación para migrar al autoalojamiento</h1>
+
+<p class="lead">
+  Una lista de una página para pasar a un equipo de una herramienta de pago a una autoalojada. Cubre los pasos que
+  deciden si la migración será aburrida o un desastre: la exportación de datos, el dimensionamiento, las copias de
+  seguridad y el plan de vuelta atrás que casi todo el mundo olvida.
+</p>
+
+<div class="note caution">
+  <p><strong>No canceles la suscripción hasta terminar la última sección.</strong> Mantén ambas herramientas en
+  paralelo hasta haber restaurado una copia de seguridad y hasta que tu equipo haya usado la nueva para trabajo real.</p>
+</div>
+
+<h2>1. Antes de instalar nada</h2>
+<ul>
+  <li><strong>Exporta hoy mismo una copia real de tus datos.</strong> No una cuenta de prueba: tu espacio de trabajo
+      real. Algunas exportaciones son parciales, están limitadas o solo existen en planes superiores. Mejor
+      descubrirlo ahora que el día en que vence el contrato.</li>
+  <li><strong>Abre la exportación y comprueba qué falta.</strong> Adjuntos, comentarios, historial, menciones y
+      permisos son las bajas habituales.</li>
+  <li><strong>Confirma que la herramienta nueva puede importar ese formato.</strong> Si no puede, reserva tiempo para
+      convertirlo. Ese coste no aparece en ninguna cifra de este sitio.</li>
+  <li><strong>Enumera las integraciones de las que dependes.</strong> SSO, notificaciones de chat, webhooks,
+      sincronización de calendario. Comprueba que cada una existe en la herramienta autoalojada.</li>
+  <li><strong>Revisa la licencia.</strong> Varias herramientas populares son de código disponible y no de código
+      abierto, con límites al uso comercial. Cada página de herramienta de este sitio lo indica.</li>
+  <li><strong>Nombra a un responsable.</strong> Un software autoalojado sin nadie encargado de las actualizaciones es
+      la forma más habitual en que fracasan estos proyectos.</li>
+</ul>
+
+<h2>2. Dimensionamiento e instalación</h2>
+<ul>
+  <li><strong>Dimensiona el servidor con la página de coste de la herramienta para tu tamaño de equipo</strong> y
+      conserva el 25 % de margen de memoria. Un servidor ajustado al milímetro suele
+      caerse en su primera actualización.</li>
+  <li><strong>Usa el archivo Docker Compose del propio proyecto</strong> en lugar de uno de terceros, y fija la
+      versión de la imagen en vez de usar <code>latest</code>.</li>
+  <li><strong>Ponlo detrás de HTTPS y en su propio subdominio</strong> desde el primer día. Cambiar la dirección más
+      tarde rompe enlaces, redirecciones de OAuth y aplicaciones móviles.</li>
+  <li><strong>Configura el correo saliente</strong> con un servicio de envío transaccional. Sin él, los
+      restablecimientos de contraseña y las notificaciones fallan en silencio, y la mayoría de las herramientas no avisan.</li>
+  <li><strong>Cierra todos los puertos excepto el 80 y el 443</strong>, y nunca expongas la base de datos directamente.</li>
+  <li><strong>Activa el SSO, o al menos la autenticación en dos pasos obligatoria</strong>, antes de invitar a nadie.</li>
+</ul>
+
+<h2>3. Copias de seguridad probadas</h2>
+<ul>
+  <li><strong>Respalda tanto la base de datos como los archivos subidos.</strong> Un volcado de la base de datos sin
+      la carpeta de archivos restaura una herramienta llena de adjuntos rotos.</li>
+  <li><strong>Guarda al menos una copia fuera del servidor</strong>, con otro proveedor o en otra región distinta a
+      la del propio servidor.</li>
+  <li><strong>Automatízalo y recibe una alerta si falla.</strong> Una tarea de copia que dejó de funcionar hace tres
+      semanas es la forma habitual de descubrir que no había copia.</li>
+  <li><strong>Restáurala en un servidor nuevo antes de la puesta en producción.</strong> Mide cuánto tarda. Esa cifra
+      es tu tiempo real de recuperación, y hasta que no la tengas no tienes copias de seguridad, solo archivos.</li>
+</ul>
+
+<h2>4. El cambio</h2>
+<ul>
+  <li><strong>Elige un día tranquilo y anuncia una congelación de contenidos</strong> en la herramienta antigua
+      durante la migración.</li>
+  <li><strong>Haz una última exportación tras la congelación</strong>, impórtala y revisa una muestra de registros,
+      adjuntos y permisos frente a la herramienta antigua.</li>
+  <li><strong>Pasa primero a un grupo pequeño</strong> durante una semana de trabajo real antes de mover a todo el mundo.</li>
+  <li><strong>Redirige o actualiza los marcadores</strong> allí donde estuviera enlazada la dirección antigua:
+      documentación, chat, navegadores y aplicaciones móviles.</li>
+</ul>
+
+<h2>5. El plan de vuelta atrás que casi todo el mundo olvida</h2>
+<ul>
+  <li><strong>Escribe antes del cambio qué te haría volver atrás.</strong> Pérdida de datos, una función
+      imprescindible que falta o caídas repetidas. Fija el umbral mientras estás tranquilo.</li>
+  <li><strong>Mantén la suscripción antigua un ciclo de facturación más</strong> tras la puesta en producción, aunque
+      parezca un derroche. Es el seguro más barato que vas a comprar.</li>
+  <li><strong>Averigua cómo exportar desde la herramienta nueva</strong> a un formato que la antigua pueda leer.</li>
+  <li><strong>Cancela la suscripción antigua solo cuando</strong> haya pasado una prueba de restauración, todo el
+      equipo haya usado la nueva herramienta para trabajo real y nadie haya pedido volver a la antigua.</li>
+</ul>
+
+<h2>6. Después de la puesta en producción</h2>
+<ul>
+  <li><strong>Pon las actualizaciones en el calendario.</strong> Este sitio calcula entre
+      0,5 y
+      3 horas al mes según la herramienta. Lo que no
+      se planifica no se hace.</li>
+  <li><strong>Lee las notas de la versión antes de actualizar</strong>, sobre todo en versiones mayores con
+      migraciones de base de datos.</li>
+  <li><strong>Añade monitorización de disponibilidad</strong> para enterarte de una caída antes que tu equipo.</li>
+  <li><strong>Repite la prueba de restauración</strong> cada pocos meses.</li>
+</ul>
+
+<h2>Antes de empezar</h2>
+<p>
+  Si todavía no has calculado el coste de la migración, comprueba si autoalojar ahorra dinero de verdad con tu tamaño
+  de equipo. Con algunas herramientas no es así una vez contadas las horas anteriores.
+  <a href="/selfhostcost/es/compare/">Ver todas las comparativas</a> o
+  <a href="/selfhostcost/es/methodology/">leer cómo se calculan los costes</a>.
+</p>
+
+</div>
+</main>
+
+<footer class="sitefoot">
+  <div class="shell">
+    <div class="footgrid">
+      <div>
+        <h4>SelfHostCost</h4>
+        <p style="margin:0 0 .6em">Lo que cuesta de verdad el autoalojamiento, herramienta por herramienta y según el tamaño del equipo.</p>
+        <p style="margin:0"><a href="/selfhostcost/es/methodology/">Cómo se calcula cada cifra</a></p>
+      </div>
+      <div>
+        <h4>Explorar</h4>
+        <ul>
+          <li><a href="/selfhostcost/es/compare/">Todas las comparativas</a></li>
+          <li><a href="/selfhostcost/es/self-host/">Todas las herramientas</a></li>
+          <li><a href="/selfhostcost/es/hosting/">Proveedores de alojamiento</a></li>
+          <li><a href="/selfhostcost/es/migration-checklist/">Lista de verificación de migración</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Categorías</h4>
+        <ul>
+<li><a href="/selfhostcost/es/category/password-manager/">Gestores de contraseñas</a></li><li><a href="/selfhostcost/es/category/analytics/">Analítica web</a></li><li><a href="/selfhostcost/es/category/automation/">Automatización de flujos de trabajo</a></li><li><a href="/selfhostcost/es/category/docs-wiki/">Documentación y wikis</a></li><li><a href="/selfhostcost/es/category/project-management/">Gestión de proyectos</a></li><li><a href="/selfhostcost/es/category/helpdesk/">Soporte y bandeja compartida</a></li>        </ul>
+      </div>
+      <div>
+        <h4>Acerca de</h4>
+        <ul>
+          <li><a href="/selfhostcost/es/about/">Acerca de y contacto</a></li>
+<li><a href="mailto:selfhostcost.contact@gmail.com">selfhostcost.contact@gmail.com</a></li>          <li><a href="/selfhostcost/es/methodology/">Metodología</a></li>
+          <li><a href="/selfhostcost/es/disclosure/">Aviso sobre enlaces de referido</a></li>
+          <li><a href="/selfhostcost/es/privacy/">Privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin:30px 0 0">
+      Los precios se toman de las páginas de precios de cada proveedor en las fechas indicadas en cada página y no se actualizan de forma continua. Compruébalos con el proveedor antes de comprar. Nada de lo que aparece aquí es asesoramiento financiero.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

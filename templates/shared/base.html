@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title }}</title>
+<meta name="description" content="{{ page.description }}">
+<link rel="canonical" href="{{ cfg.base_url }}{{ page.url }}">
+{% if page.robots %}<meta name="robots" content="{{ page.robots }}">{% endif %}
+{% if cfg.google_site_verification %}<meta name="google-site-verification" content="{{ cfg.google_site_verification }}">{% endif %}
+{% if page.alternates %}
+{% for alt in page.alternates %}
+<link rel="alternate" hreflang="{{ alt.lang }}" href="{{ alt.href }}">
+{% endfor %}
+<link rel="alternate" hreflang="x-default" href="{{ page.x_default }}">
+{% endif %}
+
+<meta property="og:type" content="{{ page.og_type | default('website') }}">
+<meta property="og:site_name" content="{{ cfg.brand }}">
+{% if page.og_locale %}<meta property="og:locale" content="{{ page.og_locale }}">{% endif %}
+<meta property="og:title" content="{{ page.og_title | default(page.title) }}">
+<meta property="og:description" content="{{ page.description }}">
+<meta property="og:url" content="{{ cfg.base_url }}{{ page.url }}">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="{{ root }}/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="{{ root }}/assets/css/main.css">
+{% if page.prev_url %}<link rel="prev" href="{{ cfg.base_url }}{{ page.prev_url }}">{% endif %}
+{% if page.next_url %}<link rel="next" href="{{ cfg.base_url }}{{ page.next_url }}">{% endif %}
+
+{% if page.jsonld %}<script type="application/ld+json">{{ page.jsonld }}</script>{% endif %}
+{% if cfg.analytics.provider != 'none' and cfg.analytics.script_url %}
+<script defer data-website-id="{{ cfg.analytics.site_id }}" src="{{ cfg.analytics.script_url }}"></script>
+{% endif %}
+</head>
+<body>
+
+<header class="masthead">
+  <div class="shell">
+    <a class="wordmark" href="{{ base }}/">Self<span>Host</span>Cost</a>
+    <nav>
+      <a href="{{ base }}/compare/">{{ t('nav.comparisons') }}</a>
+      <a href="{{ base }}/self-host/">{{ t('nav.tools') }}</a>
+      <a href="{{ base }}/hosting/">{{ t('nav.hosting') }}</a>
+      <a href="{{ base }}/methodology/">{{ t('nav.methodology') }}</a>
+    </nav>
+    {% if page.alternates %}
+    <nav class="langs" aria-label="{{ t('nav.language') }}">
+      {% for alt in page.alternates %}<a href="{{ alt.href }}" hreflang="{{ alt.lang }}" lang="{{ alt.lang }}" title="{{ alt.name }}"{% if alt.current %} aria-current="true"{% endif %}>{{ alt.lang | upper }}</a>{% endfor %}
+    </nav>
+    {% endif %}
+  </div>
+</header>
+
+{% if page.crumbs %}
+<div class="shell">
+  <nav class="crumbs" aria-label="{{ t('crumb.label') }}">
+    {%- for c in page.crumbs -%}
+      {%- if not loop.last %}<a href="{{ base }}{{ c.url }}">{{ c.name }}</a><span>/</span>
+      {%- else %}{{ c.name }}{% endif -%}
+    {%- endfor -%}
+  </nav>
+</div>
+{% endif %}
+
+<main class="shell">
+{% block content %}{% endblock %}
+</main>
+
+<footer class="sitefoot">
+  <div class="shell">
+    <div class="footgrid">
+      <div>
+        <h4>{{ cfg.brand }}</h4>
+        <p style="margin:0 0 .6em">{{ t('site.tagline') }}</p>
+        <p style="margin:0"><a href="{{ base }}/methodology/">{{ t('foot.how_calculated') }}</a></p>
+      </div>
+      <div>
+        <h4>{{ t('foot.browse') }}</h4>
+        <ul>
+          <li><a href="{{ base }}/compare/">{{ t('foot.all_comparisons') }}</a></li>
+          <li><a href="{{ base }}/self-host/">{{ t('foot.all_tools') }}</a></li>
+          <li><a href="{{ base }}/hosting/">{{ t('foot.hosting_providers') }}</a></li>
+          <li><a href="{{ base }}/migration-checklist/">{{ t('foot.migration_checklist') }}</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>{{ t('foot.categories') }}</h4>
+        <ul>
+          {% for c in nav_categories[:6] %}<li><a href="{{ base }}/category/{{ c.slug }}/">{{ c.name }}</a></li>{% endfor %}
+        </ul>
+      </div>
+      <div>
+        <h4>{{ t('foot.about') }}</h4>
+        <ul>
+          <li><a href="{{ base }}/about/">{{ t('foot.about_contact') }}</a></li>
+          {% if cfg.contact_email %}<li><a href="mailto:{{ cfg.contact_email }}">{{ cfg.contact_email }}</a></li>{% endif %}
+          <li><a href="{{ base }}/methodology/">{{ t('foot.methodology') }}</a></li>
+          <li><a href="{{ base }}/disclosure/">{{ t('foot.disclosure') }}</a></li>
+          <li><a href="{{ base }}/privacy/">{{ t('foot.privacy') }}</a></li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin:30px 0 0">
+      {{ t('foot.legal') }}
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

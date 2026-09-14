@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block content %}
+
+<p class="kicker">{{ category.name }}</p>
+<h1>Alternatives auto-hébergées à {{ saas.name }}, chiffrées</h1>
+
+<p class="lead">
+  {{ alts | length }} {{ 'outil open source capable' if alts | length == 1 else 'outils open source capables' }} de
+  remplacer {{ saas.name }}, chacun avec son coût réel pour {{ ref_label }}. À l'offre {{ saas_tier.name }},
+  {{ saas.name }} coûte {{ money(saas_month) }} par mois pour cette taille d'équipe.
+</p>
+
+{% if saas.free_tier_note %}
+<div class="note caution">
+  <h3>Commencez par ceci</h3>
+  <p>{{ saas.free_tier_note }}</p>
+</div>
+{% endif %}
+
+<div class="tablewrap">
+<table>
+  <caption>Coût mensuel pour {{ ref_label }}. Les totaux auto-hébergés incluent le serveur, les sauvegardes et le temps de maintenance à {{ money(cfg.tco_model.engineer_hourly_usd) }} de l'heure.</caption>
+  <thead>
+    <tr>
+      <th>Outil</th>
+      <th class="num">Serveur seul</th>
+      <th class="num">Avec votre temps</th>
+      <th class="num">vs {{ saas.name }}</th>
+      <th>Lourdeur d'exploitation</th>
+      <th>Licence</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for a in alts %}
+    <tr>
+      <th scope="row"><a href="{{ base }}/vs/{{ saas.slug }}-vs-{{ a.tool.slug }}/">{{ a.tool.name }}</a></th>
+      <td class="num">{{ money(a.tco.selfhost_usd_month_no_labour) }}</td>
+      <td class="num">{{ money(a.tco.selfhost_usd_month) }}</td>
+      <td class="num {{ 'pos' if a.tco.savings_total > 0 else 'neg' }}">
+        {{ '+' if a.tco.savings_total > 0 else '' }}{{ money(a.tco.savings_total) }}
+      </td>
+      <td>{{ t('difficulty.' ~ a.tool.difficulty) }}</td>
+      <td>{{ a.tool.license_spdx if a.tool.license_spdx != 'NOASSERTION' else 'source disponible' }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+<p class="srcline">La dernière colonne donne l'écart sur {{ cfg.tco_model.horizon_months }} mois : positif, l'auto-hébergement est moins cher. Montants en euros, convertis depuis le dollar au taux daté de la méthodologie.</p>
+
+<h2>Lequel choisir</h2>
+{% for a in alts %}
+<h3>{{ a.tool.name }}{% if a.tool.stars %} <span class="badge">{{ number(a.tool.stars) }} étoiles</span>{% endif %}</h3>
+<p>{{ a.tool.sizing_note }}</p>
+<p>
+  Pour {{ ref_label }}, il lui faut {{ gb(a.tco.sizing.ram_gb) }} de mémoire et {{ gb(a.tco.sizing.disk_gb) }} de
+  disque, ce qui tient sur l'offre {{ a.tco.plan.plan.name }} chez {{ a.tco.plan.provider_name }} pour
+  {{ money(a.tco.plan.price_usd_month) }} par mois. Sa mise en place demande environ {{ hours(a.tco.setup_hours) }} {{ 'heure' if a.tco.setup_hours < 2 else 'heures' }},
+  puis {{ hours(a.tco.maintenance_hours_month) }} {{ 'heure' if a.tco.maintenance_hours_month < 2 else 'heures' }} par mois d'entretien.
+  {% if a.tool.licence_caveat %}<strong>Licence :</strong> {{ a.tool.licence_caveat }}{% endif %}
+</p>
+<p><a href="{{ base }}/vs/{{ saas.slug }}-vs-{{ a.tool.slug }}/">Comparatif complet {{ saas.name }} contre {{ a.tool.name }}</a>
+   &middot; <a href="{{ base }}/self-host/{{ a.tool.slug }}/">{{ a.tool.name }} pour chaque taille d'équipe</a></p>
+{% endfor %}
+
+<h2>Comment les prix ont été établis</h2>
+<p>
+  Les prix de {{ saas.name }} ont été relevés sur <a href="{{ saas.pricing_url }}" rel="nofollow noopener">sa propre page tarifaire</a>
+  le {{ saas.verified_on }}{% if saas_fx %}, affichés en euros par l'éditeur et convertis en dollars au taux de
+  {{ number(cfg.fx.rates_to_usd.EUR, 4) }} dollar pour un euro, le taux {{ cfg.fx.source_name }} du {{ cfg.fx.on }}{% endif %}.
+  Les prix des serveurs viennent des hébergeurs listés sur la <a href="{{ base }}/hosting/">page hébergement</a>.
+  Le modèle de dimensionnement et le coût de votre temps sont détaillés sur la
+  <a href="{{ base }}/methodology/">page méthodologie</a>. Tous les montants de cette page sont affichés en euros,
+  convertis depuis le dollar au même taux daté.
+</p>
+
+<h2>À voir aussi</h2>
+<ul class="linkgrid">
+  <li><a href="{{ base }}/category/{{ category.slug }}/">{{ category.name }} : tous les comparatifs</a></li>
+  {% for s in sibling_saas %}<li><a href="{{ base }}/alternatives/{{ s.slug }}/">Alternatives à {{ s.name }}</a></li>{% endfor %}
+  <li><a href="{{ base }}/hosting/">Où l'héberger</a></li>
+</ul>
+
+{% endblock %}

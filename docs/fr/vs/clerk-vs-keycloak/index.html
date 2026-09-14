@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clerk ou Keycloak auto-hébergé : le coût réel pour 10 personnes (2026)</title>
+<meta name="description" content="Clerk coûte 21,57 € par mois pour 10 personnes ; auto-héberger Keycloak coûte 122 €, serveur, sauvegardes et temps de maintenance compris. Détail complet pour chaque taille d&#39;équipe.">
+<link rel="canonical" href="https://zoltame.github.io/selfhostcost/fr/vs/clerk-vs-keycloak/">
+<meta name="google-site-verification" content="L_8gw5Ec2vvygFsccJR5tNjKHOaNPsnJUrGROVoP_Js"><link rel="alternate" hreflang="en" href="https://zoltame.github.io/selfhostcost/vs/clerk-vs-keycloak/">
+<link rel="alternate" hreflang="fr" href="https://zoltame.github.io/selfhostcost/fr/vs/clerk-vs-keycloak/">
+<link rel="alternate" hreflang="de" href="https://zoltame.github.io/selfhostcost/de/vs/clerk-vs-keycloak/">
+<link rel="alternate" hreflang="es" href="https://zoltame.github.io/selfhostcost/es/vs/clerk-vs-keycloak/">
+<link rel="alternate" hreflang="x-default" href="https://zoltame.github.io/selfhostcost/vs/clerk-vs-keycloak/">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="SelfHostCost">
+<meta property="og:locale" content="fr_FR"><meta property="og:title" content="Clerk ou Keycloak auto-hébergé : le coût réel pour 10 personnes (2026)">
+<meta property="og:description" content="Clerk coûte 21,57 € par mois pour 10 personnes ; auto-héberger Keycloak coûte 122 €, serveur, sauvegardes et temps de maintenance compris. Détail complet pour chaque taille d&#39;équipe.">
+<meta property="og:url" content="https://zoltame.github.io/selfhostcost/fr/vs/clerk-vs-keycloak/">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="/selfhostcost/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/selfhostcost/assets/css/main.css">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://zoltame.github.io/selfhostcost/fr/"}, {"@type": "ListItem", "position": 2, "name": "Identité et SSO", "item": "https://zoltame.github.io/selfhostcost/fr/category/auth/"}, {"@type": "ListItem", "position": 3, "name": "Clerk vs Keycloak", "item": "https://zoltame.github.io/selfhostcost/fr/vs/clerk-vs-keycloak/"}]}, {"@type": "Article", "headline": "Clerk ou Keycloak auto-hébergé : le coût réel pour 10 personnes (2026)", "description": "Clerk coûte 21,57 € par mois pour 10 personnes ; auto-héberger Keycloak coûte 122 €, serveur, sauvegardes et temps de maintenance compris. Détail complet pour chaque taille d'équipe.", "url": "https://zoltame.github.io/selfhostcost/fr/vs/clerk-vs-keycloak/", "datePublished": "2026-09-14", "dateModified": "2026-09-14", "isAccessibleForFree": true, "author": {"@type": "Organization", "name": "SelfHostCost", "url": "https://zoltame.github.io/selfhostcost/"}, "publisher": {"@type": "Organization", "name": "SelfHostCost", "url": "https://zoltame.github.io/selfhostcost/"}, "inLanguage": "fr"}]}</script></head>
+<body>
+
+<header class="masthead">
+  <div class="shell">
+    <a class="wordmark" href="/selfhostcost/fr/">Self<span>Host</span>Cost</a>
+    <nav>
+      <a href="/selfhostcost/fr/compare/">Comparatifs</a>
+      <a href="/selfhostcost/fr/self-host/">Outils</a>
+      <a href="/selfhostcost/fr/hosting/">Hébergement</a>
+      <a href="/selfhostcost/fr/methodology/">Méthodologie</a>
+    </nav>
+    <nav class="langs" aria-label="Langue">
+<a href="https://zoltame.github.io/selfhostcost/vs/clerk-vs-keycloak/" hreflang="en" lang="en" title="English">EN</a><a href="https://zoltame.github.io/selfhostcost/fr/vs/clerk-vs-keycloak/" hreflang="fr" lang="fr" title="Français" aria-current="true">FR</a><a href="https://zoltame.github.io/selfhostcost/de/vs/clerk-vs-keycloak/" hreflang="de" lang="de" title="Deutsch">DE</a><a href="https://zoltame.github.io/selfhostcost/es/vs/clerk-vs-keycloak/" hreflang="es" lang="es" title="Español">ES</a>    </nav>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="crumbs" aria-label="Fil d&#39;Ariane"><a href="/selfhostcost/fr/">Accueil</a><span>/</span><a href="/selfhostcost/fr/category/auth/">Identité et SSO</a><span>/</span>Clerk vs Keycloak</nav>
+</div>
+
+<main class="shell">
+
+<p class="kicker">Identité et SSO &middot; comparatif de coûts</p>
+<h1>Clerk ou Keycloak auto-hébergé : ce que coûte vraiment chaque option</h1>
+
+<p class="lead">
+  Clerk à l'offre Pro, face à Keycloak installé sur le plus petit serveur
+  qui lui convient. Chaque chiffre ci-dessous est calculé à partir du modèle de dimensionnement et des prix datés
+  en bas de page, et inclut ce que la plupart des comparatifs oublient : votre propre temps.
+</p>
+
+<div class="verdict is-saas">
+  <p class="lede">    Pour 10 personnes, Clerk est l'option la moins chère : <b>21,57 € par mois</b>
+    contre <b>122 €</b> pour faire tourner Keycloak vous-même. À cette taille,
+    l'auto-hébergement vous achète du contrôle, pas des économies.  </p>
+
+  <dl class="figures">
+    <div class="fig">
+      <dt>Clerk</dt>
+      <dd>21,57 €<small>par mois, Pro</small></dd>
+    </div>
+    <div class="fig">
+      <dt>Auto-hébergé</dt>
+      <dd>122 €<small>serveur, sauvegardes et votre temps</small></dd>
+    </div>
+    <div class="fig">
+      <dt>Serveur et sauvegardes</dt>
+      <dd>24,84 €<small>Basic 4 GiB, 4 Go de RAM</small></dd>
+    </div>
+    <div class="fig">
+      <dt>Écart sur 36 mois</dt>
+      <dd class="neg">
+        4 000 €
+        <small>de surcoût en auto-hébergeant</small>
+      </dd>
+    </div>
+    <div class="fig">
+      <dt>Seuil de rentabilité</dt>
+      <dd>jamais<small>après 388 € de mise en place</small></dd>
+    </div>
+  </dl>
+</div>
+<p class="srcline">Montants affichés en euros, convertis depuis le dollar au taux daté de la BCE publié dans la <a href="/selfhostcost/fr/methodology/">méthodologie</a>.</p>
+<h2>La même comparaison pour chaque taille d'équipe</h2>
+<p>
+  L'auto-hébergement a un coût plancher et presque pas de pente, alors qu'un logiciel facturé au siège n'a pas de
+  plancher mais une pente raide. Tout est là, et c'est pourquoi la réponse bascule quelque part dans ce tableau au
+  lieu d'être la même pour tout le monde.
+</p>
+
+<div class="tablewrap">
+<table>
+  <caption>Clerk Pro face à Keycloak auto-hébergé, par mois, sur 36 mois. L'auto-hébergement inclut le serveur, les sauvegardes et le temps de maintenance à 64,70 € de l'heure.</caption>
+  <thead>
+    <tr>
+      <th>Taille de l'équipe</th>
+      <th class="num">Clerk</th>
+      <th class="num">Auto-hébergé</th>
+      <th class="num">Sans compter votre temps</th>
+      <th>Serveur nécessaire</th>
+      <th class="num">Écart sur 36 mois</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/fr/cost/keycloak/1-user/">une personne</a></th>
+      <td class="num">21,57 €</td>
+      <td class="num">122 €</td>
+      <td class="num">24,84 €</td>
+      <td>Basic 4 GiB (4 Go)</td>
+      <td class="num neg">-4 000 €</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/fr/cost/keycloak/5-users/">5 personnes</a></th>
+      <td class="num">21,57 €</td>
+      <td class="num">122 €</td>
+      <td class="num">24,84 €</td>
+      <td>Basic 4 GiB (4 Go)</td>
+      <td class="num neg">-4 000 €</td>
+    </tr>
+    <tr>
+      <th scope="row"><strong>10 personnes</strong></th>
+      <td class="num">21,57 €</td>
+      <td class="num">122 €</td>
+      <td class="num">24,84 €</td>
+      <td>Basic 4 GiB (4 Go)</td>
+      <td class="num neg">-4 000 €</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/fr/cost/keycloak/25-users/">25 personnes</a></th>
+      <td class="num">21,57 €</td>
+      <td class="num">122 €</td>
+      <td class="num">24,84 €</td>
+      <td>Basic 4 GiB (4 Go)</td>
+      <td class="num neg">-4 000 €</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/fr/cost/keycloak/50-users/">50 personnes</a></th>
+      <td class="num">21,57 €</td>
+      <td class="num">122 €</td>
+      <td class="num">24,84 €</td>
+      <td>Basic 4 GiB (4 Go)</td>
+      <td class="num neg">-4 000 €</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/fr/cost/keycloak/100-users/">100 personnes</a></th>
+      <td class="num">21,57 €</td>
+      <td class="num">122 €</td>
+      <td class="num">24,84 €</td>
+      <td>Basic 4 GiB (4 Go)</td>
+      <td class="num neg">-4 000 €</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/selfhostcost/fr/cost/keycloak/250-users/">250 personnes</a></th>
+      <td class="num">21,57 €</td>
+      <td class="num">122 €</td>
+      <td class="num">24,84 €</td>
+      <td>Basic 4 GiB (4 Go)</td>
+      <td class="num neg">-4 000 €</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p class="srcline">
+Une fois votre temps compté, l'auto-hébergement n'est jamais gagnant, quelle que soit la taille d'équipe de cette page.
+</p>
+
+<h2>Où part vraiment l'argent de l'auto-hébergement pour 10 personnes</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Poste</th><th class="num">Par mois</th><th>De quoi il s'agit</th></tr></thead>
+  <tbody>
+    <tr>
+      <th scope="row">Serveur</th>
+      <td class="num">20,70 €</td>
+      <td>Basic 4 GiB chez DigitalOcean : 2 vCPU, 4 Go de RAM, 80 Go de disque</td>
+    </tr>
+    <tr>
+      <th scope="row">Sauvegardes</th>
+      <td class="num">4,14 €</td>
+      <td>Snapshots de l'hébergeur à 20 % du prix du serveur. S'en passer n'est pas une économie, c'est un pari.</td>
+    </tr>
+    <tr>
+      <th scope="row">Votre temps</th>
+      <td class="num">97,05 €</td>
+      <td>1,5 heure par mois de mises à jour, de montées de version et de pannes occasionnelles, à 64,70 € de l'heure</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr><td>Total</td><td class="num">122 €</td><td>Plus 388 € une seule fois, pour environ 6 heures de mise en place</td></tr>
+  </tfoot>
+</table>
+</div>
+
+<p>
+  Pour cette taille d'équipe, Clerk coûte <strong>21,57 €</strong> par mois.
+Clerk Pro est un forfait de 21,57 € par mois à cette offre, quel que soit le nombre de sièges.
+</p>
+
+<div class="note caution">
+  <h3>À lire avant de chiffrer quoi que ce soit</h3>
+  <p>L&#39;offre Hobby de Clerk est gratuite jusqu&#39;à 50 000 utilisateurs fidélisés par mois. Une équipe interne ne dépassera presque jamais ce seuil : pour la plupart des lecteurs, le coût honnête de la licence est nul, et la comparaison payante ci-dessous ne s&#39;applique que si vous avez besoin de ce qu&#39;ajoute Pro.</p>
+</div>
+
+<h2>Ce dont Keycloak a besoin pour 10 personnes</h2>
+<p>
+  Service JVM avec PostgreSQL. La mémoire dépend surtout du tas plutôt que du nombre d&#39;utilisateurs : le coût par utilisateur chute fortement quand l&#39;annuaire grandit. C&#39;est la solution historique soutenue par la CNCF.
+</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Ressource</th><th class="num">Nécessaire</th><th>Comment c'est calculé</th></tr></thead>
+  <tbody>
+    <tr><th scope="row">Mémoire</th><td class="num">2,5 Go</td>
+      <td>2 Go pour la pile au repos, plus 2 Mo par utilisateur actif, plus 25 % de marge</td></tr>
+    <tr><th scope="row">Disque</th><td class="num">10,1 Go</td>
+      <td>10 Go de base, plus 0,01 Go par utilisateur</td></tr>
+    <tr><th scope="row">vCPU</th><td class="num">2</td>
+      <td>La base recommandée par le projet. Pour cette charge, la mémoire s'épuise avant le processeur.</td></tr>
+  </tbody>
+</table>
+</div>
+
+
+<h2>Ce que vous perdez, sans détour</h2>
+<ul>
+  <li><strong>La disponibilité devient votre affaire.</strong> Clerk a une équipe d'astreinte. En auto-hébergement, une mise à jour ratée un vendredi à 18 h, c'est votre soirée.</li>
+  <li><strong>Une sauvegarde n'existe que si vous avez testé sa restauration.</strong> La ligne de 4,14 € ci-dessus achète des snapshots, pas une reprise répétée.</li>
+  <li><strong>Keycloak est une pile multi-conteneurs avec une base de données à sauvegarder vous-même.</strong> C'est pourquoi la ligne de maintenance est de 1,5 heure par mois et non de zéro.</li>
+  <li><strong>La parité fonctionnelle n'est jamais parfaite.</strong> Keycloak couvre l'essentiel de l'usage de Clerk ; c'est sur la longue traîne des intégrations et des contrôles d'entreprise que l'écart se voit.</li>
+</ul>
+
+<div class="note caution">
+  <h3>Nous n'allons pas vous conseiller d'auto-héberger ceci</h3>
+  <p>
+    Pour 10 personnes, Clerk l'emporte sur le coût dès que votre temps est compté à
+    64,70 € de l'heure. Auto-héberger Keycloak ici ne se justifie
+    que pour des raisons absentes de la facture : la localisation des données, l'indépendance vis-à-vis d'un
+    éditeur, ou l'envie de le faire tourner vous-même. Ce sont de vraies raisons. Économiser de l'argent n'en fait
+    pas partie à cette taille.
+  </p>
+</div>
+
+<div class="cta">
+  <h3>Où installer Keycloak</h3>
+  <p>
+    Pour 10 personnes, il faut 2,5 Go de mémoire et 10,1 Go de disque. Parmi les
+    hébergeurs dont nous avons relevé les prix nous-mêmes, l'offre la moins chère qui convient est
+    <strong>Basic 4 GiB</strong> chez DigitalOcean, à
+    20,70 € par mois.
+  </p>
+  <p>
+    <a class="btn" href="https://m.do.co/c/3af2e8b05a20" rel="sponsored nofollow noopener">
+      Aller sur DigitalOcean
+    </a>
+    <a class="btn ghost" href="/selfhostcost/fr/hosting/">Comparer les hébergeurs</a>
+  </p>
+
+  <p style="font-size:.9rem;color:var(--ink-2);margin-bottom:0">
+    Nous ne prétendons pas que c'est le serveur le moins cher d'internet, seulement le moins cher que nous
+    puissions citer honnêtement. Hetzner Cloud, Vultr et PikaPods    publient des prix que nous n&#39;avons pas pu relever automatiquement,
+    et Hetzner en particulier est généralement moins cher par gigaoctet de mémoire que tout ce qui est cité ici.
+    Comparez vous-même avant de vous engager.
+  </p>
+
+<p class="disclosure">Le lien DigitalOcean ci-dessus est un lien de parrainage : si vous vous inscrivez par ce lien et payez vos premiers 25 $, nous recevons 25 $ de crédit sur notre compte DigitalOcean. Cela ne change jamais les coûts calculés, le serveur retenu ni la conclusion de cette page. Le modèle de dimensionnement et chaque source de prix sont publiés intégralement.</p></div>
+<h2>Keycloak en bref</h2>
+<div class="tablewrap">
+<table>
+  <tbody>
+    <tr><th scope="row">Licence</th><td>Apache License 2.0</td></tr>
+    <tr><th scope="row">Langage</th><td>Java</td></tr>
+<tr><th scope="row">Étoiles GitHub</th><td>36 732, vérifié le 2026-09-12</td></tr><tr><th scope="row">Dernière version</th><td>26.7.3</td></tr><tr><th scope="row">Dernier commit</th><td>2026-09-12</td></tr>    <tr><th scope="row">Images Docker officielles</th><td>Oui</td></tr>
+    <tr><th scope="row">Projet</th><td><a href="https://www.keycloak.org" rel="nofollow noopener">www.keycloak.org</a> &middot; <a href="https://github.com/keycloak/keycloak" rel="nofollow noopener">keycloak/keycloak</a></td></tr>
+  </tbody>
+</table>
+</div>
+
+
+<h2>Chaque chiffre de cette page, et sa source</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Donnée</th><th>Valeur utilisée</th><th>Source</th><th>Relevé le</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Clerk Pro</td>
+      <td>25,00 USD par mois</td>
+      <td><a href="https://clerk.com/pricing" rel="nofollow noopener">page tarifaire de l'éditeur</a></td>
+      <td>2026-09-14</td>
+    </tr>
+    <tr>
+      <td>DigitalOcean Basic 4 GiB</td>
+      <td>20,70 € par mois</td>
+      <td><a href="https://www.digitalocean.com/pricing/droplets" rel="nofollow noopener">page tarifaire de l'hébergeur</a></td>
+      <td>2026-09-12</td>
+    </tr>
+    <tr>
+      <td>Taux de change</td>
+      <td>1 EUR = 1,1592 USD</td>
+      <td><a href="https://api.frankfurter.dev/v1/latest?from=EUR&amp;to=USD" rel="nofollow noopener">Frankfurter, European Central Bank reference rates</a></td>
+      <td>2026-09-11</td>
+    </tr>
+    <tr>
+      <td>Temps d'ingénieur</td>
+      <td>64,70 € de l'heure</td>
+      <td><a href="/selfhostcost/fr/methodology/">notre hypothèse publiée</a></td>
+      <td>&mdash;</td>
+    </tr>
+    <tr>
+      <td>Dimensionnement de Keycloak</td>
+      <td>2 Go de base, 2 Mo par utilisateur</td>
+      <td>documentation du projet</td>
+      <td>&mdash;</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p class="srcline">
+  Les prix changent. Si l'éditeur a modifié les siens depuis le 2026-09-14, les chiffres ci-dessus sont
+  périmés et les liens sources font foi, pas nous. <a href="/selfhostcost/fr/methodology/">Notre façon de gérer cela</a>.
+</p>
+
+<h2>À voir aussi</h2>
+<ul class="linkgrid">
+  <li><a href="/selfhostcost/fr/self-host/keycloak/">Auto-héberger Keycloak : toutes les tailles d'équipe</a></li>
+  <li><a href="/selfhostcost/fr/alternatives/clerk/">Toutes les alternatives auto-hébergées à Clerk</a></li>
+<li><a href="/selfhostcost/fr/vs/auth0-vs-keycloak/">Auth0 vs Keycloak</a></li><li><a href="/selfhostcost/fr/vs/okta-vs-keycloak/">Okta Workforce Identity vs Keycloak</a></li><li><a href="/selfhostcost/fr/vs/auth0-vs-authentik/">Auth0 vs authentik</a></li><li><a href="/selfhostcost/fr/vs/okta-vs-authentik/">Okta Workforce Identity vs authentik</a></li><li><a href="/selfhostcost/fr/vs/clerk-vs-authentik/">Clerk vs authentik</a></li><li><a href="/selfhostcost/fr/vs/auth0-vs-zitadel/">Auth0 vs Zitadel</a></li>  <li><a href="/selfhostcost/fr/category/auth/">Identité et SSO : comparatif</a></li>
+</ul>
+
+</main>
+
+<footer class="sitefoot">
+  <div class="shell">
+    <div class="footgrid">
+      <div>
+        <h4>SelfHostCost</h4>
+        <p style="margin:0 0 .6em">Ce que coûte vraiment l&#39;auto-hébergement, outil par outil, taille d&#39;équipe par taille d&#39;équipe.</p>
+        <p style="margin:0"><a href="/selfhostcost/fr/methodology/">Comment chaque chiffre est calculé</a></p>
+      </div>
+      <div>
+        <h4>Parcourir</h4>
+        <ul>
+          <li><a href="/selfhostcost/fr/compare/">Tous les comparatifs</a></li>
+          <li><a href="/selfhostcost/fr/self-host/">Tous les outils</a></li>
+          <li><a href="/selfhostcost/fr/hosting/">Hébergeurs</a></li>
+          <li><a href="/selfhostcost/fr/migration-checklist/">Checklist de migration</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Catégories</h4>
+        <ul>
+<li><a href="/selfhostcost/fr/category/password-manager/">Gestionnaires de mots de passe</a></li><li><a href="/selfhostcost/fr/category/analytics/">Analyse d&#39;audience web</a></li><li><a href="/selfhostcost/fr/category/automation/">Automatisation de workflows</a></li><li><a href="/selfhostcost/fr/category/docs-wiki/">Documentation et wikis</a></li><li><a href="/selfhostcost/fr/category/project-management/">Gestion de projet</a></li><li><a href="/selfhostcost/fr/category/helpdesk/">Support client et boîte partagée</a></li>        </ul>
+      </div>
+      <div>
+        <h4>À propos</h4>
+        <ul>
+          <li><a href="/selfhostcost/fr/about/">À propos et contact</a></li>
+<li><a href="mailto:selfhostcost.contact@gmail.com">selfhostcost.contact@gmail.com</a></li>          <li><a href="/selfhostcost/fr/methodology/">Méthodologie</a></li>
+          <li><a href="/selfhostcost/fr/disclosure/">Transparence sur l&#39;affiliation</a></li>
+          <li><a href="/selfhostcost/fr/privacy/">Confidentialité</a></li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin:30px 0 0">
+      Les prix sont relevés sur les pages tarifaires des éditeurs aux dates indiquées sur chaque page et ne sont pas mis à jour en continu. Vérifiez auprès de l&#39;éditeur avant d&#39;acheter. Rien ici ne constitue un conseil financier.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

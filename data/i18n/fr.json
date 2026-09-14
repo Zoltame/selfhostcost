@@ -1,0 +1,205 @@
+{
+  "_comment": "Traduction française des champs descriptifs affichés. Les chiffres, identifiants et noms de produits ne sont jamais traduits.",
+
+  "categories": {
+    "password-manager": { "name": "Gestionnaires de mots de passe", "intent": "Stocker les identifiants de l'équipe sans abonnement facturé par siège." },
+    "analytics": { "name": "Analyse d'audience web", "intent": "Mesurer le trafic sans confier les données des visiteurs à une régie publicitaire." },
+    "automation": { "name": "Automatisation de workflows", "intent": "Connecter vos applications sans payer à chaque tâche exécutée." },
+    "docs-wiki": { "name": "Documentation et wikis", "intent": "Garder la base de connaissances de l'équipe sur une infrastructure que vous maîtrisez." },
+    "project-management": { "name": "Gestion de projet", "intent": "Suivre tickets et sprints sans que le coût grimpe à chaque siège." },
+    "helpdesk": { "name": "Support client et boîte partagée", "intent": "Faire tourner le support client sans tarification par agent." },
+    "auth": { "name": "Identité et SSO", "intent": "Posséder la couche de connexion au lieu de louer des utilisateurs actifs mensuels." },
+    "status-page": { "name": "Pages de statut et supervision", "intent": "Publier votre disponibilité et recevoir des alertes pour le prix d'un petit VPS." },
+    "bi": { "name": "Informatique décisionnelle", "intent": "Interroger et visualiser vos propres données sans licences par siège." },
+    "forms": { "name": "Formulaires et sondages", "intent": "Collecter des réponses sans plafond par réponse." },
+    "file-storage": { "name": "Synchronisation et stockage de fichiers", "intent": "Remplacer les espaces cloud facturés au siège par votre propre stockage." },
+    "team-chat": { "name": "Messagerie d'équipe", "intent": "Conserver l'historique des messages sans payer pour débloquer les archives." },
+    "email-marketing": { "name": "Emailing marketing", "intent": "Envoyer des campagnes en payant l'envoi, pas la taille de la liste." },
+    "crm": { "name": "CRM", "intent": "Suivre les ventes sans licence CRM par siège." },
+    "e-signature": { "name": "Signature électronique", "intent": "Signer des documents sans frais par enveloppe." },
+    "error-monitoring": { "name": "Suivi des erreurs", "intent": "Capturer les exceptions sans facturation au volume d'événements." },
+    "scheduling": { "name": "Prise de rendez-vous", "intent": "Partager vos disponibilités sans outil de réservation facturé au siège." },
+    "photos": { "name": "Photothèques", "intent": "Garder les photos de la famille ou de l'équipe hors d'un stockage cloud facturé à l'usage." },
+    "internal-tools": { "name": "Création d'outils internes", "intent": "Construire des interfaces d'administration sans sièges par développeur." },
+    "baas": { "name": "Backend as a service", "intent": "Faire tourner le backend de l'application sans facturation à l'usage." },
+    "search": { "name": "Moteurs de recherche", "intent": "Alimenter la recherche du site sans frais d'indexation par enregistrement." },
+    "paas": { "name": "Plateformes de déploiement", "intent": "Déployer des applications sur votre propre serveur avec un confort de plateforme." },
+    "video-meetings": { "name": "Visioconférence", "intent": "Organiser des appels sans licence par organisateur." },
+    "headless-cms": { "name": "CMS headless", "intent": "Posséder l'API de contenu au lieu de louer des enregistrements et des langues." }
+  },
+
+  "tools": {
+    "vaultwarden": {
+      "sizing_note": "Une réimplémentation en Rust du serveur Bitwarden. Elle tourne sans peine avec une fraction de gigaoctet, car les données des coffres sont légères et chiffrées côté client.",
+      "compatible_clients": "Les clients officiels Bitwarden pour mobile, ordinateur et navigateur s'y connectent sans modification.",
+      "description_gh": "Serveur compatible Bitwarden, non officiel, écrit en Rust et anciennement connu sous le nom de bitwarden_rs."
+    },
+    "passbolt": {
+      "sizing_note": "Application PHP avec MariaDB. La gestion des clés GPG rend l'intégration des utilisateurs plus lente qu'avec Vaultwarden, mais la traçabilité est meilleure.",
+      "description_gh": "L'API de Passbolt Community Edition, le gestionnaire de mots de passe open source pour les équipes."
+    },
+    "plausible": {
+      "sizing_note": "Livré avec Elixir, ClickHouse et PostgreSQL. ClickHouse fixe le plancher de mémoire : cette pile ne descend pas utilement sous 2 Go. Le disque grandit avec le nombre de pages vues plutôt qu'avec le nombre de sièges.",
+      "description_gh": "Analyse d'audience web open source et respectueuse de la vie privée. Une alternative légère à Google Analytics, sans cookies, auto-hébergée ou dans le cloud."
+    },
+    "umami": {
+      "sizing_note": "Application Next.js sur PostgreSQL ou MySQL. La pile d'analyse crédible la plus légère : deux conteneurs et aucune base orientée colonnes séparée.",
+      "description_gh": "Umami est une plateforme d'analyse respectueuse de la vie privée : trafic, campagnes, comportements, conversions et revenus au même endroit, sans cookies ni surveillance, auto-hébergée ou dans le cloud."
+    },
+    "matomo": {
+      "sizing_note": "L'option la plus complète et la plus lourde. L'archivage des rapports est la partie coûteuse et réclame une tâche planifiée avec une vraie mémoire derrière.",
+      "description_gh": "Matomo est la principale alternative open source à Google Analytics : maîtrise complète des données et respect de la vie privée intégré, pour collecter, visualiser et analyser les données de sites et d'applications."
+    },
+    "posthog": {
+      "sizing_note": "Kafka, ClickHouse, PostgreSQL, Redis et plusieurs workers. PostHog déconseille désormais lui-même l'auto-hébergement en dessous d'une échelle conséquente, et le dimensionnement retenu ici le reflète honnêtement.",
+      "description_gh": "PostHog est une plateforme d'outils pour développeurs : observabilité de l'IA, analyse produit, enregistrement de sessions, feature flags, expérimentations, suivi des erreurs et journaux."
+    },
+    "n8n": {
+      "sizing_note": "La valeur de base couvre un seul processus principal avec SQLite. Un gros volume de workflows demande PostgreSQL et le mode file d'attente avec des workers séparés, ce qui double à peu près le plancher.",
+      "licence_caveat": "Code source disponible sous la Sustainable Use License, et non une licence open source classique. L'usage interne en entreprise est autorisé ; revendre n8n en tant que service ne l'est pas.",
+      "description_gh": "Plateforme d'automatisation de workflows en fair-code, avec des capacités d'IA natives : construction visuelle et code personnalisé, auto-hébergée ou dans le cloud, plus de 400 intégrations."
+    },
+    "activepieces": {
+      "sizing_note": "Application, PostgreSQL et Redis. Ce sont les bacs à sable isolés pour les étapes de code qui poussent le plancher de mémoire au-dessus de celui de n8n.",
+      "description_gh": "Plateforme open source d'automatisation de workflows et d'agents d'IA, avec plusieurs centaines de serveurs MCP."
+    },
+    "windmill": {
+      "sizing_note": "Serveur Rust avec PostgreSQL et un ou plusieurs workers. Plus rapide par tâche que les options basées sur Node, ce qui compte si le nombre de workflows est élevé.",
+      "description_gh": "Plateforme open source pour développeurs qui transforme des scripts en webhooks, workflows et interfaces. Une alternative open source à Retool et Temporal."
+    },
+    "outline": {
+      "sizing_note": "Nécessite PostgreSQL, Redis et un stockage objet compatible S3 pour les pièces jointes. C'est ce stockage objet que l'on oublie en général au moment du budget.",
+      "description_gh": "La base de connaissances la plus rapide pour les équipes en croissance : élégante, collaborative en temps réel, riche en fonctions et compatible Markdown."
+    },
+    "docmost": {
+      "sizing_note": "PostgreSQL et Redis, avec le disque local pour les pièces jointes par défaut. De la génération actuelle, c'est le plus proche du modèle d'arborescence de pages de Confluence.",
+      "description_gh": "Docmost est un logiciel open source de wiki et de documentation collaborative, alternative open source à Confluence et Notion."
+    },
+    "bookstack": {
+      "sizing_note": "Laravel et MySQL. Le wiki le moins exigeant de cette liste et le plus simple à sauvegarder : une base de données et un dossier de fichiers envoyés.",
+      "description_gh": "BookStack est une plateforme open source de documentation et de wiki. Son développement se poursuit désormais sur Codeberg."
+    },
+    "affine": {
+      "sizing_note": "Ce qui se rapproche le plus de l'éditeur par blocs et du tableau blanc de Notion. L'auto-hébergement est pris en charge mais évolue plus vite que les autres options ici : fixez la version de votre image.",
+      "description_gh": "AFFiNE est une base de connaissances nouvelle génération qui réunit planification, organisation et création. Respect de la vie privée, open source, personnalisable et prête à l'emploi."
+    },
+    "plane": {
+      "sizing_note": "API Django, interfaces web et space, PostgreSQL, Redis, RabbitMQ et MinIO. Un vrai substitut à Jira, et gourmand comme lui en mémoire.",
+      "description_gh": "Alternative open source à Jira, Linear, Monday et ClickUp. Plane est une plateforme moderne de gestion de projet pour les tâches, les sprints, la documentation et le tri."
+    },
+    "vikunja": {
+      "sizing_note": "Un seul binaire Go avec SQLite, PostgreSQL ou MySQL. Vues kanban, liste et Gantt, sans le poids d'exploitation de Plane.",
+      "description_gh": "Le gestionnaire de tâches qui vous appartient vraiment."
+    },
+    "openproject": {
+      "sizing_note": "Monolithe Rails avec PostgreSQL et Memcached. Il couvre la gestion de projet classique, dont les références de planning et la valeur acquise, que les outils plus récents laissent de côté.",
+      "description_gh": "OpenProject est un logiciel open source de gestion de projet, de produit et de portefeuille : une alternative solide à Jira avec planification agile, suivi des tickets, feuilles de route, diagrammes de Gantt et suivi du temps, sur site ou dans le cloud."
+    },
+    "chatwoot": {
+      "sizing_note": "Processus web Rails plus un worker Sidekiq, PostgreSQL et Redis. Le worker n'est pas optionnel : s'en passer casse sans bruit les e-mails sortants et les webhooks.",
+      "description_gh": "Chat en direct, support par e-mail et centre d'assistance omnicanal open source. Une alternative à Intercom, Zendesk ou Salesforce Service Cloud."
+    },
+    "freescout": {
+      "sizing_note": "Laravel et MySQL. Une boîte mail partagée plutôt qu'une suite de support complète, soit exactement ce que la plupart des petites équipes paient trop cher chez Zendesk.",
+      "description_gh": "FreeScout est un helpdesk omnicanal gratuit et auto-hébergé, avec boîte mail partagée et assistance par IA."
+    },
+    "zammad": {
+      "sizing_note": "Rails avec PostgreSQL, Redis et Elasticsearch. C'est Elasticsearch qui en fait le helpdesk le plus lourd de cette liste, et il est quasiment indispensable pour une recherche utilisable.",
+      "description_gh": "Zammad est un système open source de helpdesk et de support client, accessible depuis le navigateur."
+    },
+    "keycloak": {
+      "sizing_note": "Service JVM avec PostgreSQL. La mémoire dépend surtout du tas plutôt que du nombre d'utilisateurs : le coût par utilisateur chute fortement quand l'annuaire grandit. C'est la solution historique soutenue par la CNCF.",
+      "description_gh": "Gestion open source des identités et des accès pour les applications et services modernes."
+    },
+    "authentik": {
+      "sizing_note": "Serveur plus worker, PostgreSQL et Redis. Plus accessible que Keycloak pour protéger, en mode proxy, des applications sans prise en charge native du SSO.",
+      "description_gh": "La colle d'authentification dont vous avez besoin."
+    },
+    "zitadel": {
+      "sizing_note": "Binaire Go sur PostgreSQL, avec un journal d'audit fondé sur les événements. Plus léger que l'option JVM et plus proche de l'ergonomie développeur d'Auth0.",
+      "description_gh": "ZITADEL, une infrastructure d'identité simplifiée pour vous."
+    },
+    "uptime-kuma": {
+      "sizing_note": "Un conteneur avec SQLite. Le coût dépend du nombre de sondes et de leur fréquence, pas du nombre de personnes qui consultent le tableau de bord.",
+      "description_gh": "Un outil de supervision auto-hébergé soigné."
+    },
+    "gatus": {
+      "sizing_note": "Configuration en YAML dans le gestionnaire de versions, ce qui convient aux équipes qui veulent relire leur supervision comme du code. La plus petite empreinte de tout le site.",
+      "description_gh": "Page de statut automatisée, pensée pour les développeurs, avec alertes et gestion des incidents."
+    },
+    "metabase": {
+      "sizing_note": "Application JVM avec sa propre base applicative. C'est la charge de requêtes simultanées, pas le nombre de sièges, qui impose une montée en gamme.",
+      "description_gh": "L'outil open source d'informatique décisionnelle et d'analyse embarquée, simple à utiliser, qui permet à chacun de travailler avec les données."
+    },
+    "superset": {
+      "sizing_note": "Processus web, workers Celery, planificateur beat, PostgreSQL et Redis. Plus puissant que Metabase et nettement plus lourd à exploiter.",
+      "description_gh": "Apache Superset est une plateforme de visualisation et d'exploration de données."
+    },
+    "lightdash": {
+      "sizing_note": "S'appuie sur les métriques dbt : il n'a donc de sens que si un projet dbt existe déjà. Dans ce cas, le travail de modélisation est déjà payé.",
+      "description_gh": "Informatique décisionnelle agentique : l'analyse de données à la vitesse du code."
+    },
+    "formbricks": {
+      "sizing_note": "Next.js avec PostgreSQL. Pensé pour les sondages dans le produit autant que pour les formulaires autonomes, là où la tarification par réponse de Typeform fait le plus mal.",
+      "description_gh": "Alternative open source à Qualtrics."
+    },
+    "opnform": {
+      "sizing_note": "Laravel et Vue sur PostgreSQL. Le substitut le plus direct à Typeform pour créer de simples formulaires.",
+      "description_gh": "Un créateur de formulaires open source élégant."
+    },
+    "limesurvey": {
+      "sizing_note": "Vingt ans de logique d'enquête, dont les quotas et les embranchements complexes que les outils récents ne tentent pas. L'interface accuse son âge.",
+      "description_gh": "LimeSurvey est une plateforme d'enquêtes open source puissante, alternative gratuite à SurveyMonkey, Typeform, Qualtrics et Google Forms, pour créer facilement des sondages et formulaires en ligne."
+    }
+  },
+
+  "saas": {
+    "confluence": { "free_tier_note": "L'offre gratuite de Confluence couvre les équipes jusqu'à 10 utilisateurs. Dans cette limite, il n'y a aucune licence à payer : auto-héberger un remplaçant ne fait donc rien économiser." },
+    "jira": { "free_tier_note": "L'offre gratuite de Jira couvre les équipes jusqu'à 10 utilisateurs. Dans cette limite, il n'y a aucune licence à payer : auto-héberger un remplaçant ne fait donc rien économiser." },
+    "asana": { "free_tier_note": "L'offre Personal d'Asana est gratuite jusqu'à 2 sièges. Au-delà, c'est l'offre Starter ci-dessous qui s'applique." },
+    "trello": { "free_tier_note": "L'offre gratuite de Trello couvre jusqu'à 10 collaborateurs par espace de travail, avec une limite de 10 tableaux. Une équipe dans cette limite ne paie rien : auto-héberger un remplaçant ne fait donc rien économiser non plus." },
+    "helpscout": { "free_tier_note": "L'offre gratuite de Help Scout couvre jusqu'à 5 utilisateurs avec une boîte de réception et un site de documentation. Une petite équipe qui y tient ne paie rien." },
+    "auth0": { "free_tier_note": "L'offre gratuite d'Auth0 couvre jusqu'à 25 000 utilisateurs actifs mensuels. Sous ce plafond, et sans besoin des fonctions B2B payantes, auto-héberger un fournisseur d'identité ne fait rien économiser du tout. La comparaison payante ci-dessous ne s'applique que si vous avez besoin de ce qu'ajoute l'offre Essentials." },
+    "clerk": { "free_tier_note": "L'offre Hobby de Clerk est gratuite jusqu'à 50 000 utilisateurs fidélisés par mois. Une équipe interne ne dépassera presque jamais ce seuil : pour la plupart des lecteurs, le coût honnête de la licence est nul, et la comparaison payante ci-dessous ne s'applique que si vous avez besoin de ce qu'ajoute Pro." },
+    "statuspage": { "free_tier_note": "Une offre gratuite couvre 100 abonnés, 25 composants et deux membres d'équipe. Sous ce plafond, il n'y a rien à économiser." },
+    "betteruptime": { "free_tier_note": "L'offre gratuite de Better Stack inclut 10 sondes et heartbeats et 1 page de statut. Si cela vous suffit, il n'y a rien à économiser." },
+    "mixpanel": { "free_tier_note": "L'offre gratuite de Mixpanel couvre jusqu'à 1 million d'événements par mois, sans frais par siège. Sous ce volume, il n'y a aucune licence à économiser : cette comparaison porte sur qui détient les données, pas sur ce qu'elles coûtent." },
+    "amplitude": { "free_tier_note": "L'offre gratuite d'Amplitude couvre jusqu'à 2 millions d'événements par mois avec des sièges illimités. Sous ce volume, il n'y a aucune licence à économiser." }
+  },
+
+  "providers": {
+    "digitalocean": {
+      "hq": "États-Unis",
+      "billing_note": "Facturation à la seconde depuis le 1er janvier 2026, avec un minimum de 60 secondes ou 0,01 $. Les plafonds mensuels s'appliquent toujours.",
+      "strengths": ["Large catalogue de services managés", "Documentation solide pour l'auto-hébergement", "Plafonds mensuels prévisibles"],
+      "weaknesses": ["Environ 2 à 3 fois le prix des hébergeurs européens économiques pour la même mémoire", "Trafic inclus inférieur à celui de Hetzner"]
+    },
+    "hetzner": {
+      "hq": "Allemagne",
+      "billing_note": "Tarifs en euros. Facturation à l'heure plafonnée au mois. L'IPv4 est facturée à part sur certaines offres.",
+      "price_note": "Les caractéristiques ci-dessous ont été relevées sur les pages tarifaires de Hetzner le 2026-09-12. Les prix y sont injectés par le navigateur selon la région, et toutes les offres étaient signalées comme temporairement indisponibles au moment du relevé : aucun prix n'a pu être capturé.",
+      "strengths": ["Meilleur prix par gigaoctet de mémoire parmi les grands hébergeurs", "20 To de trafic inclus sur les offres européennes", "Les offres Arm64 réduisent encore les coûts"],
+      "weaknesses": ["Régions limitées à l'Europe, aux États-Unis et à Singapour", "La facturation en euros ajoute un risque de change pour un budget en dollars", "Les offres populaires sont souvent en rupture"]
+    },
+    "kamatera": {
+      "billing_note": "Offres mensuelles fixes, facturées à la minute. La page tarifaire indique le trafic supplémentaire à 0,01 $ par Go et le stockage supplémentaire à 0,05 $ par Go par mois ; aucun des deux n'est inclus dans les chiffres de ce site.",
+      "price_note": "Relevé sur les trois offres fixes de la page tarifaire de Kamatera le 2026-09-14. Kamatera vend aussi des configurations sur mesure via un calculateur dont les prix par composant n'étaient pas affichés : seules les offres fixes sont utilisées ici.",
+      "strengths": ["Son offre à 1 Go est le serveur 1 Go le moins cher parmi les hébergeurs que nous avons chiffrés", "Les offres fixes utilisent des threads CPU dédiés, selon la page tarifaire", "Facturation à la minute, pratique pour des essais courts"],
+      "weaknesses": ["Chaque offre fixe n'inclut que 20 Go de disque : la plupart des outils multi-conteneurs demandent du stockage supplémentaire payant", "Au-delà de 1 Go de mémoire, les offres fixes coûtent plus cher que DigitalOcean pour la même RAM"]
+    },
+    "vultr": {
+      "hq": "États-Unis",
+      "billing_note": "Facturation à l'heure avec plafond mensuel. 32 régions dans le monde.",
+      "price_note": "Le tableau des prix est derrière une bannière de consentement et un chargement différé : aucune offre n'a pu être relevée le 2026-09-12.",
+      "strengths": ["La plus large couverture géographique des hébergeurs économiques", "La facturation à l'heure convient aux essais de courte durée"],
+      "weaknesses": ["Le dépassement de trafic est facturé à part", "Le support passe d'abord par la communauté sur les petites offres"]
+    },
+    "pikapods": {
+      "hq": "Allemagne",
+      "billing_note": "Hébergement managé d'applications open source, facturé à la ressource. Aucune administration de serveur.",
+      "price_note": "La tarification à la ressource n'a pas pu être relevée automatiquement.",
+      "strengths": ["Aucun travail d'administration, ce qui supprime entièrement la ligne de temps passé", "La tarification par application convient à un outil unique", "L'option honnête la moins chère sous une dizaine d'utilisateurs environ"],
+      "weaknesses": ["Catalogue d'applications sélectionné, pas arbitraire", "Moins de contrôle qu'un VPS", "Les coûts augmentent par application plutôt que par serveur"]
+    }
+  }
+}

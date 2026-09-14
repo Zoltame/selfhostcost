@@ -127,7 +127,7 @@
       ],
       "verified_on": "2026-09-12",
       "price_status": "unverified",
-      "price_note": "Specs below were read from the Hetzner pricing pages on 2026-09-12. The prices are injected client-side per region and every plan was reported as temporarily unavailable at the time of reading, so no price could be captured. Fill price_usd_month in and flip price_status to verified before these plans are allowed into a published calculation.",
+      "price_note": "Specs below were read from the Hetzner pricing pages on 2026-09-12. The prices are injected client-side per region and every plan was reported as temporarily unavailable at the time of reading, so no price could be captured.",
       "plans": [
         {
           "id": "cpx12",
@@ -289,7 +289,7 @@
       ],
       "verified_on": "2026-09-12",
       "price_status": "unverified",
-      "price_note": "Pricing table sits behind a consent gate and lazy rendering; no plan could be read on 2026-09-12. Needs manual entry before publication.",
+      "price_note": "The pricing table sits behind a consent gate and lazy rendering, so no plan could be read on 2026-09-12.",
       "plans": []
     },
     {
@@ -312,7 +312,7 @@
       ],
       "verified_on": "2026-09-12",
       "price_status": "unverified",
-      "price_note": "Resource-based pricing needs manual entry.",
+      "price_note": "Its resource-based pricing could not be read programmatically.",
       "plans": []
     }
   ]
