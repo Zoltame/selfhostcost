@@ -125,7 +125,10 @@
     "subhead": "A one-page pre-flight list: data export path, sizing, backup plan, and the rollback step most people skip.",
     "cta": "Send me the checklist",
     "form_ids": {
-      "en": "68g9vJ"
+      "en": "68g9vJ",
+      "fr": "44MbAY",
+      "de": "68gBWk",
+      "es": "Y51AJB"
     }
   },
   "contact_email": "selfhostcost.contact@gmail.com",
