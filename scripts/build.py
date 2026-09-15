@@ -43,6 +43,7 @@ from lib.model import (
     saas_monthly, saas_tier, size_for, tier_native,
 )
 import lib.content as content
+from lib.dates import MODIFIED, PUBLISHED, DateLedger
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "docs"
@@ -62,8 +63,8 @@ def jsonld_article(cfg: dict, page: dict, crumbs: list[dict], loc: Locale, multi
         "headline": page["title"][:110],
         "description": page["description"],
         "url": base_url + page["url"],
-        "datePublished": TODAY,
-        "dateModified": TODAY,
+        "datePublished": PUBLISHED,
+        "dateModified": MODIFIED,
         "isAccessibleForFree": True,
         "author": {"@type": "Organization", "name": cfg["brand"], "url": base_url + "/"},
         "publisher": {"@type": "Organization", "name": cfg["brand"], "url": base_url + "/"},
@@ -87,7 +88,9 @@ def jsonld_article(cfg: dict, page: dict, crumbs: list[dict], loc: Locale, multi
 class Builder:
     """Renders every page of the site in one language."""
 
-    def __init__(self, ds: Dataset, strict: bool, wave: int, lang: str, languages: list[str]):
+    def __init__(self, ds: Dataset, strict: bool, wave: int, lang: str, languages: list[str],
+                 ledger: DateLedger):
+        self.ledger = ledger
         self.lang = lang
         self.languages = languages
         self.multilingual = len(languages) > 1
@@ -197,7 +200,7 @@ class Builder:
             page["og_locale"] = self.loc.meta["og_locale"]
         if page.get("crumbs"):
             page["jsonld"] = Markup(jsonld_article(self.cfg, page, page["crumbs"], self.loc, self.multilingual))
-        html = self.env.get_template(template).render(**ctx)
+        html = self.ledger.stamp(page["url"], self.env.get_template(template).render(**ctx))
         dest = self.out / url.lstrip("/") / "index.html" if url != "/" else self.out / "index.html"
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(html, encoding="utf-8")
@@ -753,7 +756,8 @@ def write_plumbing(cfg: dict, builders: list[Builder]) -> None:
 
     if len(languages) == 1:
         entries = "\n".join(
-            f"  <url><loc>{base_url}{u}</loc><lastmod>{TODAY}</lastmod><priority>{p}</priority></url>"
+            f"  <url><loc>{base_url}{u}</loc><lastmod>{builders[0].ledger.modified(builders[0].loc.path(u))}</lastmod>"
+            f"<priority>{p}</priority></url>"
             for u, p in sorted(set(builders[0].urls))
         )
         sitemap = (
@@ -771,7 +775,7 @@ def write_plumbing(cfg: dict, builders: list[Builder]) -> None:
                 )
                 alts += f'<xhtml:link rel="alternate" hreflang="x-default" href="{base_url}{u}"/>'
                 lines.append(
-                    f"  <url><loc>{base_url}{b.loc.path(u)}</loc><lastmod>{TODAY}</lastmod>"
+                    f"  <url><loc>{base_url}{b.loc.path(u)}</loc><lastmod>{b.ledger.modified(b.loc.path(u))}</lastmod>"
                     f"<priority>{p}</priority>{alts}</url>"
                 )
         sitemap = (
@@ -823,12 +827,14 @@ def main() -> int:
         languages.insert(0, DEFAULT_LANG)
 
     clean_out()
+    ledger = DateLedger(ROOT / "ops" / "page-dates.json", TODAY, cfg.get("launched_on", TODAY))
     builders, per_lang = [], []
     for lang in languages:
-        b = Builder(ds, strict=strict, wave=wave, lang=lang, languages=languages)
+        b = Builder(ds, strict=strict, wave=wave, lang=lang, languages=languages, ledger=ledger)
         per_lang.append(b.run())
         builders.append(b)
     write_plumbing(cfg, builders)
+    ledger.save()
 
     default = builders[0]
     report = {

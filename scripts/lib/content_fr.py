@@ -6,7 +6,7 @@ taux daté publié dans la méthodologie.
 
 from __future__ import annotations
 
-from datetime import date
+from lib.dates import MODIFIED
 
 from .i18n import Locale
 from .model import Dataset, priced_providers
@@ -577,7 +577,7 @@ def _privacy(ds: Dataset, base: str) -> tuple[str, str, str, str]:
   page{' en dehors du prestataire de formulaires sur les pages qui en contiennent un' if form_id else ''}.
 </p>
 
-<p class="srcline">Dernière révision : {date.today().isoformat()}.</p>
+<p class="srcline">Dernière révision : {MODIFIED}.</p>
 """
     return (
         "privacy",

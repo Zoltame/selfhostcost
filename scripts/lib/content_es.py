@@ -5,7 +5,7 @@ solo cambia el texto. Los importes pasan por Locale y se muestran en dólares.
 
 from __future__ import annotations
 
-from datetime import date
+from lib.dates import MODIFIED
 
 from .i18n import Locale
 from .model import Dataset, priced_providers
@@ -568,7 +568,7 @@ def _privacy(ds: Dataset, base: str) -> tuple[str, str, str, str]:
   página{', salvo con el proveedor de formularios en las páginas que lo incluyen' if form_id else ''}.
 </p>
 
-<p class="srcline">Última revisión: {date.today().isoformat()}.</p>
+<p class="srcline">Última revisión: {MODIFIED}.</p>
 """
     return (
         "privacy",

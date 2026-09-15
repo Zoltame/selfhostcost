@@ -12,6 +12,10 @@ python scripts/build.py                # writes docs/, report in ops/build-repor
 git add -A && git commit -m "rebuild" && git push   # GitHub Pages serves docs/
 ```
 
+Page dates (`datePublished`, `dateModified`, sitemap `lastmod`) come from `ops/page-dates.json`,
+which stores a hash of each page. A rebuild only moves a page's modified date when its content
+changed. Commit this file with every rebuild and never delete it, or every page is re-dated.
+
 `strict_prices` must stay `true` in production. A comparison is only published when the
 vendor price was read from the vendor's own page and recorded in
 `scripts/apply_verified_prices.py`.

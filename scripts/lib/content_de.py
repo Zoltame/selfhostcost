@@ -6,7 +6,7 @@ datierten Kurs aus der Methodik angezeigt.
 
 from __future__ import annotations
 
-from datetime import date
+from lib.dates import MODIFIED
 
 from .i18n import Locale
 from .model import Dataset, priced_providers
@@ -572,7 +572,7 @@ def _privacy(ds: Dataset, base: str) -> tuple[str, str, str, str]:
   kontaktiert wird{', abgesehen vom Formularanbieter auf Seiten mit Formular' if form_id else ''}.
 </p>
 
-<p class="srcline">Zuletzt geprüft: {date.today().isoformat()}.</p>
+<p class="srcline">Zuletzt geprüft: {MODIFIED}.</p>
 """
     return (
         "privacy",

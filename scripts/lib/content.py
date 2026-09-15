@@ -7,7 +7,7 @@ someone last edited a paragraph.
 
 from __future__ import annotations
 
-from datetime import date
+from lib.dates import MODIFIED
 
 from .model import Dataset, money, priced_providers
 
@@ -569,7 +569,7 @@ def _privacy(ds: Dataset, base: str) -> tuple[str, str, str, str]:
   page{' apart from the form provider on pages carrying the form' if cfg['lead_capture'].get('form_id') else ''}.
 </p>
 
-<p class="srcline">Last reviewed {date.today().isoformat()}.</p>
+<p class="srcline">Last reviewed {MODIFIED}.</p>
 """
     return (
         "privacy",

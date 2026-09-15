@@ -1,0 +1,7182 @@
+{
+ "/": {
+  "hash": "530ee471e2fb6076",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/about/": {
+  "hash": "b2dcf7730f7772bf",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/alternatives/1password/": {
+  "hash": "5b57accca9895c71",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/alternatives/amplitude/": {
+  "hash": "1323c0d273261e79",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/alternatives/asana/": {
+  "hash": "cf74aff99c3c2daf",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/alternatives/auth0/": {
+  "hash": "7dafeaa0e8afa6c0",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/alternatives/betteruptime/": {
+  "hash": "3dcd102cb3cfcdaf",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/alternatives/bitwarden/": {
+  "hash": "779b88a7e1852d84",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/alternatives/clerk/": {
+  "hash": "e2f38a49d6e1db45",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/alternatives/confluence/": {
+  "hash": "d17ba1c222eb59f4",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/alternatives/fathom/": {
+  "hash": "31f623911fb70429",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/alternatives/freshdesk/": {
+  "hash": "51352d42a8df2f6a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/alternatives/google-analytics/": {
+  "hash": "acca08757e86e25e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/alternatives/helpscout/": {
+  "hash": "9bc7a4b906233126",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/alternatives/intercom/": {
+  "hash": "ae2c76ce9ed09cc6",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/alternatives/jira/": {
+  "hash": "ed714832bd2d2544",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/alternatives/lastpass/": {
+  "hash": "eec1dc5b0db05da3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/alternatives/linear/": {
+  "hash": "e7aebc451234beb1",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/alternatives/make/": {
+  "hash": "08b7a6c1f8e50fb2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/alternatives/mixpanel/": {
+  "hash": "9b16ea52579822d5",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/alternatives/monday/": {
+  "hash": "dec2384182208f86",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/alternatives/notion/": {
+  "hash": "8f42bfb65403db1f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/alternatives/okta/": {
+  "hash": "0545104d65bd4301",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/alternatives/pingdom/": {
+  "hash": "fa5774c5ffd02c44",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/alternatives/retool/": {
+  "hash": "92e27cb21f41bcbd",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/alternatives/statuspage/": {
+  "hash": "d6c1f7ed7d9f7aba",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/alternatives/surveymonkey/": {
+  "hash": "aad2ffd8470b7339",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/alternatives/tableau/": {
+  "hash": "e811b4ef830296e4",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/alternatives/trello/": {
+  "hash": "5e09c56066fe6aa1",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/alternatives/typeform/": {
+  "hash": "c7381fe4a3d06f71",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/alternatives/zapier/": {
+  "hash": "e33bbb09be7f2783",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/alternatives/zendesk/": {
+  "hash": "37e8ac878e2e13c4",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/category/analytics/": {
+  "hash": "505ef76366350dd6",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/category/auth/": {
+  "hash": "c3535f7131089e88",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/category/automation/": {
+  "hash": "a641264439b41a4b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/category/bi/": {
+  "hash": "0b9faed466df22bb",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/category/docs-wiki/": {
+  "hash": "cab79dd8ff11861d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/category/forms/": {
+  "hash": "751e4eb02b0d31ff",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/category/helpdesk/": {
+  "hash": "0fb7f52dd9723bb7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/category/password-manager/": {
+  "hash": "9ae2bbe877451dda",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/category/project-management/": {
+  "hash": "5ce47a964f692055",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/category/status-page/": {
+  "hash": "9f38260583764250",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/compare/": {
+  "hash": "11d801049df90c46",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/activepieces/1-user/": {
+  "hash": "19d22e57cb73c55f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/activepieces/10-users/": {
+  "hash": "099f68578cc4d42d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/activepieces/100-users/": {
+  "hash": "0e2e7ccc64bef5c1",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/activepieces/25-users/": {
+  "hash": "1c130cbb0a818628",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/activepieces/250-users/": {
+  "hash": "e46d4997197dd76a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/activepieces/5-users/": {
+  "hash": "01625f44f47d4224",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/activepieces/50-users/": {
+  "hash": "11bbd735ec2d4169",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/affine/1-user/": {
+  "hash": "7912524b6f63ce9e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/affine/10-users/": {
+  "hash": "1ee4f3ecf187845e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/affine/100-users/": {
+  "hash": "d2a682a56a604d7c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/affine/25-users/": {
+  "hash": "490a19b0293c3373",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/affine/250-users/": {
+  "hash": "bc26dae3f87f77b3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/affine/5-users/": {
+  "hash": "cdb1b3b87c6d0e6f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/affine/50-users/": {
+  "hash": "8c64a9bef5b20e59",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/authentik/1-user/": {
+  "hash": "a4a96962b887cba7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/authentik/10-users/": {
+  "hash": "1df3772548c30315",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/authentik/100-users/": {
+  "hash": "665fd4d10365616c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/authentik/25-users/": {
+  "hash": "b245d808ae2d2c01",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/authentik/250-users/": {
+  "hash": "679cbcaddab67889",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/authentik/5-users/": {
+  "hash": "8555f6c9767dfa93",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/authentik/50-users/": {
+  "hash": "5c409e7ec72e1f4c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/bookstack/1-user/": {
+  "hash": "c97b915f49f3217f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/bookstack/10-users/": {
+  "hash": "56d47317a1790cd7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/bookstack/100-users/": {
+  "hash": "1742859ca3fad8d6",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/bookstack/25-users/": {
+  "hash": "fbe17d435751b973",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/bookstack/250-users/": {
+  "hash": "354dbd4eb5061e4e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/bookstack/5-users/": {
+  "hash": "f081ad2c2e86a4d8",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/bookstack/50-users/": {
+  "hash": "819111c94c6cd880",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/chatwoot/1-user/": {
+  "hash": "449ba3e4cf48dca0",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/chatwoot/10-users/": {
+  "hash": "add710fae2b11b21",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/chatwoot/100-users/": {
+  "hash": "948d2df30e17aa28",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/chatwoot/25-users/": {
+  "hash": "81fcd0bd5c25fdf8",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/chatwoot/250-users/": {
+  "hash": "ba2ed1ca9ebdc089",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/chatwoot/5-users/": {
+  "hash": "9f5b8d2aff445f29",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/chatwoot/50-users/": {
+  "hash": "b91194f1e700d850",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/docmost/1-user/": {
+  "hash": "7c530eaf621e8aac",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/docmost/10-users/": {
+  "hash": "88cbda65659b774a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/docmost/100-users/": {
+  "hash": "1862b9bcc5ab1fee",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/docmost/25-users/": {
+  "hash": "0e5acb421d7557ac",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/docmost/250-users/": {
+  "hash": "707a73f6bde18be3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/docmost/5-users/": {
+  "hash": "389f9464d5bd54b6",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/docmost/50-users/": {
+  "hash": "aab234506330592c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/formbricks/1-user/": {
+  "hash": "843d3abf10a28937",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/formbricks/10-users/": {
+  "hash": "0d5b67869579a415",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/formbricks/100-users/": {
+  "hash": "c312fed02dc9b8fb",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/formbricks/25-users/": {
+  "hash": "92218f47b7a29e28",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/formbricks/250-users/": {
+  "hash": "e74e9749303cb0bf",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/formbricks/5-users/": {
+  "hash": "7291a300810c1214",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/formbricks/50-users/": {
+  "hash": "27c3217a68d7a88d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/freescout/1-user/": {
+  "hash": "f3e9a1960f490ab7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/freescout/10-users/": {
+  "hash": "b9e83d1d0e63b1cb",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/freescout/100-users/": {
+  "hash": "ecb8c8075041394c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/freescout/25-users/": {
+  "hash": "5652e7b29a9f406a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/freescout/250-users/": {
+  "hash": "b2989a832bde63d3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/freescout/5-users/": {
+  "hash": "40d825a08cebd7c5",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/freescout/50-users/": {
+  "hash": "139536f018a0c663",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/gatus/1-user/": {
+  "hash": "9422f4b5f63213a6",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/gatus/10-users/": {
+  "hash": "61ff43a930c1be3c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/gatus/100-users/": {
+  "hash": "97c54f681998ead0",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/gatus/25-users/": {
+  "hash": "c3e0785c622c0370",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/gatus/250-users/": {
+  "hash": "dce6eb594a47c001",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/gatus/5-users/": {
+  "hash": "66416a49cc1aedb0",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/gatus/50-users/": {
+  "hash": "f0db2403e80c3a2c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/keycloak/1-user/": {
+  "hash": "8e5af404b8096d6a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/keycloak/10-users/": {
+  "hash": "77fe90f937dc42b5",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/keycloak/100-users/": {
+  "hash": "565fe9d2ce41de10",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/keycloak/25-users/": {
+  "hash": "8709cb4fad6b9607",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/keycloak/250-users/": {
+  "hash": "c762bf2339505ba1",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/keycloak/5-users/": {
+  "hash": "a7895e78a56b0a81",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/keycloak/50-users/": {
+  "hash": "e22e0114261f44c0",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/lightdash/1-user/": {
+  "hash": "66847fa37a371171",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/lightdash/10-users/": {
+  "hash": "27c4a4e6c9ff84ef",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/lightdash/100-users/": {
+  "hash": "2e7f0cee46fa6be5",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/lightdash/25-users/": {
+  "hash": "43fa9b78af8bae5e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/lightdash/250-users/": {
+  "hash": "b39c1c5060e628fd",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/lightdash/5-users/": {
+  "hash": "d3c16c5f513969bc",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/lightdash/50-users/": {
+  "hash": "87e274a645d345d6",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/limesurvey/1-user/": {
+  "hash": "552eb6fc67fc5820",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/limesurvey/10-users/": {
+  "hash": "450e4e62ce81c574",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/limesurvey/100-users/": {
+  "hash": "484ea3d0da822479",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/limesurvey/25-users/": {
+  "hash": "34f79a61833dd0c3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/limesurvey/250-users/": {
+  "hash": "677040174aabdb71",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/limesurvey/5-users/": {
+  "hash": "a683aeb60f5de5fa",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/limesurvey/50-users/": {
+  "hash": "cdb84f8160cbb4a4",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/matomo/1-user/": {
+  "hash": "30a77c7830952fdb",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/matomo/10-users/": {
+  "hash": "72510de5a5ec8f68",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/matomo/100-users/": {
+  "hash": "f94c461737da3e47",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/matomo/25-users/": {
+  "hash": "b130d73353f401f2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/matomo/250-users/": {
+  "hash": "743f7c39909de44c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/matomo/5-users/": {
+  "hash": "752acad6f5f92efb",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/matomo/50-users/": {
+  "hash": "2899277df1fea8c9",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/metabase/1-user/": {
+  "hash": "4f4ad559c505b254",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/metabase/10-users/": {
+  "hash": "77e185b5c5be847a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/metabase/100-users/": {
+  "hash": "5ec74fb5f7c98f36",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/metabase/25-users/": {
+  "hash": "e4992fc36de69e83",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/metabase/250-users/": {
+  "hash": "a5443fe864ce5b8e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/metabase/5-users/": {
+  "hash": "7efd7d7f7fdab51d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/metabase/50-users/": {
+  "hash": "ff71fdeb4ddbeea1",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/n8n/1-user/": {
+  "hash": "3caf3223e9d4e9a0",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/n8n/10-users/": {
+  "hash": "f356246fe329a7de",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/n8n/100-users/": {
+  "hash": "f61793fed78506c5",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/n8n/25-users/": {
+  "hash": "1cb82b2b639d289f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/n8n/250-users/": {
+  "hash": "d008a9248fbdc2c3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/n8n/5-users/": {
+  "hash": "c0ca057ba293704d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/n8n/50-users/": {
+  "hash": "ca84a8bdc1a5b3c9",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/openproject/1-user/": {
+  "hash": "20705e1d01ab113e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/openproject/10-users/": {
+  "hash": "2cc40449b6c1f83b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/openproject/100-users/": {
+  "hash": "d8590fc40442bfbf",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/openproject/25-users/": {
+  "hash": "2ac0f9da1b204831",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/openproject/250-users/": {
+  "hash": "dcf39cb5ec89c270",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/openproject/5-users/": {
+  "hash": "2b65b735b26a509d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/openproject/50-users/": {
+  "hash": "69431355fe3db12a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/opnform/1-user/": {
+  "hash": "e5d6faba11aa52ed",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/opnform/10-users/": {
+  "hash": "58f89c1fddd20272",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/opnform/100-users/": {
+  "hash": "c860cfc2083c775b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/opnform/25-users/": {
+  "hash": "8ac83c8bbf486b70",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/opnform/250-users/": {
+  "hash": "eb46a3cc3149ab18",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/opnform/5-users/": {
+  "hash": "9e79e392d9455f56",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/opnform/50-users/": {
+  "hash": "e0a76c600a5ad208",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/outline/1-user/": {
+  "hash": "c49babd9dc8af0fa",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/outline/10-users/": {
+  "hash": "531c88c5c989de08",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/outline/100-users/": {
+  "hash": "6e0e0342445c1fbb",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/outline/25-users/": {
+  "hash": "6ce5af986a2d72d7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/outline/250-users/": {
+  "hash": "62c4d66fd35a7f15",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/outline/5-users/": {
+  "hash": "ce0493ec99a6481e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/outline/50-users/": {
+  "hash": "64b3c6d35df277fa",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/passbolt/1-user/": {
+  "hash": "015e431f12f7fd26",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/passbolt/10-users/": {
+  "hash": "50f5585f1759be44",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/passbolt/100-users/": {
+  "hash": "ea53d09c4193bc70",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/passbolt/25-users/": {
+  "hash": "a28d819eaca9d305",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/passbolt/250-users/": {
+  "hash": "366eec0c253f42c0",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/passbolt/5-users/": {
+  "hash": "a558306d73abcada",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/passbolt/50-users/": {
+  "hash": "74adb018ab8982f3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/plane/1-user/": {
+  "hash": "4ade50fbcb2e03f2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/plane/10-users/": {
+  "hash": "1a09bfe921fd6fe9",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/plane/100-users/": {
+  "hash": "1594b4d45edb9a7d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/plane/25-users/": {
+  "hash": "e52236df91badade",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/plane/250-users/": {
+  "hash": "5a6b2649d6990de7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/plane/5-users/": {
+  "hash": "e505675426ad20f0",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/plane/50-users/": {
+  "hash": "3628540b55d26ca9",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/plausible/1-user/": {
+  "hash": "24b6ee48b971f7ad",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/plausible/10-users/": {
+  "hash": "f65bae7c5c65e138",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/plausible/100-users/": {
+  "hash": "73b5543abdf48316",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/plausible/25-users/": {
+  "hash": "689200771e4c8f46",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/plausible/250-users/": {
+  "hash": "d96bcee778eddf00",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/plausible/5-users/": {
+  "hash": "816112e8a42809d9",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/plausible/50-users/": {
+  "hash": "ea3855d4ff1b0557",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/posthog/1-user/": {
+  "hash": "8375e441be9d8b2c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/posthog/10-users/": {
+  "hash": "bf5e1fbdda8a3adb",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/posthog/100-users/": {
+  "hash": "362e8f259765b072",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/posthog/25-users/": {
+  "hash": "106a14b071497191",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/posthog/250-users/": {
+  "hash": "d154bb8752fea6b4",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/posthog/5-users/": {
+  "hash": "04729ec4b6bd8454",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/posthog/50-users/": {
+  "hash": "9f6de00813cca103",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/superset/1-user/": {
+  "hash": "0eca8f225b5ef5fa",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/superset/10-users/": {
+  "hash": "d21bc2b962546e26",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/superset/100-users/": {
+  "hash": "dd6d6b83f89651a3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/superset/25-users/": {
+  "hash": "f3cd4f991a719b0f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/superset/250-users/": {
+  "hash": "aa9680384e95edbb",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/superset/5-users/": {
+  "hash": "fec5ecb47496cd4b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/superset/50-users/": {
+  "hash": "0bb09f4f7733a11b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/umami/1-user/": {
+  "hash": "9ea12a53460dd795",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/umami/10-users/": {
+  "hash": "dacdaaceb3dc3592",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/umami/100-users/": {
+  "hash": "1433429d318f85e8",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/umami/25-users/": {
+  "hash": "d02de1ef60547557",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/umami/250-users/": {
+  "hash": "1e014ae65023595c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/umami/5-users/": {
+  "hash": "5e15e6260c2317f3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/umami/50-users/": {
+  "hash": "9b28fe8d22baa64e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/uptime-kuma/1-user/": {
+  "hash": "ba5c9e0edc986f18",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/uptime-kuma/10-users/": {
+  "hash": "3054ca38b9561cde",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/uptime-kuma/100-users/": {
+  "hash": "8900fd4c7d7bb591",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/uptime-kuma/25-users/": {
+  "hash": "4e0b2001652a110c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/uptime-kuma/250-users/": {
+  "hash": "1ac0221b2395d529",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/uptime-kuma/5-users/": {
+  "hash": "e681401d05a02dea",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/uptime-kuma/50-users/": {
+  "hash": "9fbcdc20ebf71cd2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/vaultwarden/1-user/": {
+  "hash": "3ebd4042769122ce",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/vaultwarden/10-users/": {
+  "hash": "e82367dff28113e1",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/vaultwarden/100-users/": {
+  "hash": "50949eac63d7ed19",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/vaultwarden/25-users/": {
+  "hash": "76a91d72e55d749f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/vaultwarden/250-users/": {
+  "hash": "022269f804c0492e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/vaultwarden/5-users/": {
+  "hash": "64b0c6eb12f3cda7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/vaultwarden/50-users/": {
+  "hash": "705f3fad2c6fe5d8",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/vikunja/1-user/": {
+  "hash": "5ebd7d0c923b0947",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/vikunja/10-users/": {
+  "hash": "c93dec6f21a4a428",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/vikunja/100-users/": {
+  "hash": "883cfd553768114c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/vikunja/25-users/": {
+  "hash": "425ff8c7c2a4c68f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/vikunja/250-users/": {
+  "hash": "73f7939595440c8c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/vikunja/5-users/": {
+  "hash": "fab37b25972198b1",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/vikunja/50-users/": {
+  "hash": "29400f60f66d0995",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/windmill/1-user/": {
+  "hash": "0b83f803146acb27",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/windmill/10-users/": {
+  "hash": "ce538be5f499d995",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/windmill/100-users/": {
+  "hash": "ff76c21be2b7f537",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/windmill/25-users/": {
+  "hash": "847d0c2d68aec2e6",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/windmill/250-users/": {
+  "hash": "b871fefdf46d40e8",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/windmill/5-users/": {
+  "hash": "446b80ec95890758",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/windmill/50-users/": {
+  "hash": "320c88d6e9c3ceeb",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/zammad/1-user/": {
+  "hash": "16ded1eeeccf8c5a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/zammad/10-users/": {
+  "hash": "301ea199711002cf",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/zammad/100-users/": {
+  "hash": "c09e81144970b2d0",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/zammad/25-users/": {
+  "hash": "330510f69d7a94d5",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/zammad/250-users/": {
+  "hash": "aa83c6ebcbcc520c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/zammad/5-users/": {
+  "hash": "8f2c5801af10c71d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/zammad/50-users/": {
+  "hash": "71ce4cd3cbd7c905",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/zitadel/1-user/": {
+  "hash": "22ab63ce0441fda4",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/zitadel/10-users/": {
+  "hash": "a0794cde424429fd",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/zitadel/100-users/": {
+  "hash": "269b7b1f0b1310e7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/zitadel/25-users/": {
+  "hash": "80dc43313fb32f59",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/zitadel/250-users/": {
+  "hash": "d65c1024fa7bcb4c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/zitadel/5-users/": {
+  "hash": "a5d0aa12454efc9e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/cost/zitadel/50-users/": {
+  "hash": "3eef9c4edc827cfe",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/": {
+  "hash": "e5c3c01d9612a1ab",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/about/": {
+  "hash": "68b5ea198cec04e7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/alternatives/1password/": {
+  "hash": "9921200f28d38fbf",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/alternatives/amplitude/": {
+  "hash": "54e7c9dbca430b98",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/alternatives/asana/": {
+  "hash": "be550dbdf6d1620c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/alternatives/auth0/": {
+  "hash": "92f8aac6d36e80fe",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/alternatives/betteruptime/": {
+  "hash": "2bb008b4c9153a3c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/alternatives/bitwarden/": {
+  "hash": "44d6461f028719d2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/alternatives/clerk/": {
+  "hash": "7fb740cf53d9f1fd",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/alternatives/confluence/": {
+  "hash": "74b55231d3b18486",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/alternatives/fathom/": {
+  "hash": "d9aff075c7143fae",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/alternatives/freshdesk/": {
+  "hash": "b4084949f9f131cc",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/alternatives/google-analytics/": {
+  "hash": "6f4a1c1273b4298a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/alternatives/helpscout/": {
+  "hash": "e22b49c9949b4773",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/alternatives/intercom/": {
+  "hash": "e450511aa6fbe1bc",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/alternatives/jira/": {
+  "hash": "fb9fcffa51998ae6",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/alternatives/lastpass/": {
+  "hash": "d51c6fae07cb7416",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/alternatives/linear/": {
+  "hash": "59d3167580ec13dd",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/alternatives/make/": {
+  "hash": "4165a53d97cf879d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/alternatives/mixpanel/": {
+  "hash": "16ebd13976295456",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/alternatives/monday/": {
+  "hash": "b84160a132c2ede1",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/alternatives/notion/": {
+  "hash": "52b2a4ae73668015",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/alternatives/okta/": {
+  "hash": "a3bc27af3f7354d9",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/alternatives/pingdom/": {
+  "hash": "6568793881c9018f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/alternatives/retool/": {
+  "hash": "bbb97655c349f741",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/alternatives/statuspage/": {
+  "hash": "ff167452a4e50df3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/alternatives/surveymonkey/": {
+  "hash": "ec98fab79ddaf8d7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/alternatives/tableau/": {
+  "hash": "587a491f6ba99b84",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/alternatives/trello/": {
+  "hash": "4726ac98e432b20e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/alternatives/typeform/": {
+  "hash": "6344a5eb911b5fd3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/alternatives/zapier/": {
+  "hash": "4781dec3ab1c6721",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/alternatives/zendesk/": {
+  "hash": "07754f450649ff25",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/category/analytics/": {
+  "hash": "f50aeacdcbb8a694",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/category/auth/": {
+  "hash": "a6e6ddc45edc0add",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/category/automation/": {
+  "hash": "4013beb7212dc030",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/category/bi/": {
+  "hash": "c8fc7aa090fc06af",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/category/docs-wiki/": {
+  "hash": "07a3761ad29ab073",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/category/forms/": {
+  "hash": "f640c20678ea65e2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/category/helpdesk/": {
+  "hash": "7167561fc72de930",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/category/password-manager/": {
+  "hash": "90f86fff62a8f488",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/category/project-management/": {
+  "hash": "bad8f1469782a31c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/category/status-page/": {
+  "hash": "b4d7659497609726",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/compare/": {
+  "hash": "d9ddee526e922bb5",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/activepieces/1-user/": {
+  "hash": "d9a6c9ff22217915",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/activepieces/10-users/": {
+  "hash": "8d49427d615fafa7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/activepieces/100-users/": {
+  "hash": "4f36d97ccb96c6d7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/activepieces/25-users/": {
+  "hash": "39fc601a27ccac2c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/activepieces/250-users/": {
+  "hash": "1ac467eeca4c6b4d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/activepieces/5-users/": {
+  "hash": "78062ed996d31be1",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/activepieces/50-users/": {
+  "hash": "128fe86368d7bfc0",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/affine/1-user/": {
+  "hash": "772f90b582cc1a11",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/affine/10-users/": {
+  "hash": "5048c2fb11aa5024",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/affine/100-users/": {
+  "hash": "a4426f09683b87b3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/affine/25-users/": {
+  "hash": "970c91d303b4e395",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/affine/250-users/": {
+  "hash": "581a82a383ac4046",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/affine/5-users/": {
+  "hash": "1d425134dac69018",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/affine/50-users/": {
+  "hash": "2184458b68e727f5",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/authentik/1-user/": {
+  "hash": "4de6cbdea6fca91f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/authentik/10-users/": {
+  "hash": "6f06fb6e8c57358e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/authentik/100-users/": {
+  "hash": "2bbc45bb70e5b0f8",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/authentik/25-users/": {
+  "hash": "82935afb58a820ed",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/authentik/250-users/": {
+  "hash": "b949bcea7b988018",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/authentik/5-users/": {
+  "hash": "7bef08eef7c25733",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/authentik/50-users/": {
+  "hash": "9edc572aad877ce8",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/bookstack/1-user/": {
+  "hash": "566e9e634f36d1e4",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/bookstack/10-users/": {
+  "hash": "dd3654552fe1b72b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/bookstack/100-users/": {
+  "hash": "b32006560242b6b7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/bookstack/25-users/": {
+  "hash": "8baeab8eec8f7fcc",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/bookstack/250-users/": {
+  "hash": "04b29bce5caaeefd",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/bookstack/5-users/": {
+  "hash": "1982773b5f99ea02",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/bookstack/50-users/": {
+  "hash": "f71d7002c7ba0a9f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/chatwoot/1-user/": {
+  "hash": "404e1f4c4aad162e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/chatwoot/10-users/": {
+  "hash": "72022207a281ec60",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/chatwoot/100-users/": {
+  "hash": "69d590a0b1b78de9",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/chatwoot/25-users/": {
+  "hash": "3231c20847f651f4",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/chatwoot/250-users/": {
+  "hash": "46715e96479c424e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/chatwoot/5-users/": {
+  "hash": "878a605190359d37",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/chatwoot/50-users/": {
+  "hash": "38fbd73f93bbd502",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/docmost/1-user/": {
+  "hash": "befe5004a3fcf8c8",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/docmost/10-users/": {
+  "hash": "106ef6529af8847e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/docmost/100-users/": {
+  "hash": "b2a122e3cbee69da",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/docmost/25-users/": {
+  "hash": "9d2286baeeb8e40a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/docmost/250-users/": {
+  "hash": "deaddb231f9b7ff0",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/docmost/5-users/": {
+  "hash": "ce3659d63eb34a2b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/docmost/50-users/": {
+  "hash": "29558a06171e3fca",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/formbricks/1-user/": {
+  "hash": "ef15e666296cbbba",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/formbricks/10-users/": {
+  "hash": "7df390455f971199",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/formbricks/100-users/": {
+  "hash": "8d12681cbc168e08",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/formbricks/25-users/": {
+  "hash": "bbeb2a78b98c46fe",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/formbricks/250-users/": {
+  "hash": "d2ea431280fec221",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/formbricks/5-users/": {
+  "hash": "f2222bfc91c632b3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/formbricks/50-users/": {
+  "hash": "5033d90e1d91abdc",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/freescout/1-user/": {
+  "hash": "05e540ecd9c76592",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/freescout/10-users/": {
+  "hash": "4fbbb69faa870af2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/freescout/100-users/": {
+  "hash": "03f0a0d82f2f8d71",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/freescout/25-users/": {
+  "hash": "316ad4152d84ba84",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/freescout/250-users/": {
+  "hash": "76616dcf3e2dd2e0",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/freescout/5-users/": {
+  "hash": "0126261cb9d8e7db",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/freescout/50-users/": {
+  "hash": "5c3b4180e7010d1e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/gatus/1-user/": {
+  "hash": "8429a34c37f66dae",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/gatus/10-users/": {
+  "hash": "cfbf49a0b2604292",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/gatus/100-users/": {
+  "hash": "0dee28319fb5f485",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/gatus/25-users/": {
+  "hash": "51886d9da22c807f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/gatus/250-users/": {
+  "hash": "d6ef69fc8ca4c4c8",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/gatus/5-users/": {
+  "hash": "f4945adcac860ea1",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/gatus/50-users/": {
+  "hash": "ea1952ed2a27d9f0",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/keycloak/1-user/": {
+  "hash": "931dac8c738e00e1",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/keycloak/10-users/": {
+  "hash": "42ce4a9b46b9be76",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/keycloak/100-users/": {
+  "hash": "dad23bcbf5d73db6",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/keycloak/25-users/": {
+  "hash": "2a0317622f458406",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/keycloak/250-users/": {
+  "hash": "a1de2591cb4d187e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/keycloak/5-users/": {
+  "hash": "24db72eaacad47b9",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/keycloak/50-users/": {
+  "hash": "9292d1908da3da9e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/lightdash/1-user/": {
+  "hash": "ab07db921825997f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/lightdash/10-users/": {
+  "hash": "cb7491a93d026ece",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/lightdash/100-users/": {
+  "hash": "dc3727e6ef85a114",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/lightdash/25-users/": {
+  "hash": "e808b9511eeb1520",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/lightdash/250-users/": {
+  "hash": "0a8164d5c17ba705",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/lightdash/5-users/": {
+  "hash": "90fc96da29366797",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/lightdash/50-users/": {
+  "hash": "e9a50d64bba94711",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/limesurvey/1-user/": {
+  "hash": "dc467ebd8c1a0fde",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/limesurvey/10-users/": {
+  "hash": "a0f8f600696b210b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/limesurvey/100-users/": {
+  "hash": "9ad01117eed99f92",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/limesurvey/25-users/": {
+  "hash": "25a9883fe7b4ca3e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/limesurvey/250-users/": {
+  "hash": "76abef546c1ad5bc",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/limesurvey/5-users/": {
+  "hash": "b17c47a92d903424",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/limesurvey/50-users/": {
+  "hash": "75fd417e916f6ba5",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/matomo/1-user/": {
+  "hash": "6fd6a58b5a5f6ec4",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/matomo/10-users/": {
+  "hash": "f4a841bf84983781",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/matomo/100-users/": {
+  "hash": "1293617675e8fd83",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/matomo/25-users/": {
+  "hash": "823a676bdeed2917",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/matomo/250-users/": {
+  "hash": "df8dfceee5429e38",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/matomo/5-users/": {
+  "hash": "187de72600858123",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/matomo/50-users/": {
+  "hash": "a0881712464c3984",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/metabase/1-user/": {
+  "hash": "ba09d11bf8866ba5",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/metabase/10-users/": {
+  "hash": "53981898576f2e28",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/metabase/100-users/": {
+  "hash": "6696f403d6691346",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/metabase/25-users/": {
+  "hash": "4c70eb998c58de38",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/metabase/250-users/": {
+  "hash": "1db5d0aa72baddc5",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/metabase/5-users/": {
+  "hash": "9bdd5939571539fb",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/metabase/50-users/": {
+  "hash": "dd634f0a58170b84",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/n8n/1-user/": {
+  "hash": "2388212f63ce9734",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/n8n/10-users/": {
+  "hash": "258de3e8ad7898c4",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/n8n/100-users/": {
+  "hash": "c34c600c34ea7902",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/n8n/25-users/": {
+  "hash": "f95bc57a41741ef5",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/n8n/250-users/": {
+  "hash": "8fd89e3d62c39ad1",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/n8n/5-users/": {
+  "hash": "b2ec5463fda0da71",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/n8n/50-users/": {
+  "hash": "7fb82f113932c9a8",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/openproject/1-user/": {
+  "hash": "158f92600e77c94a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/openproject/10-users/": {
+  "hash": "2b20cd4be3dcea0f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/openproject/100-users/": {
+  "hash": "87c201245f20414d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/openproject/25-users/": {
+  "hash": "9c0bdec57db865b3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/openproject/250-users/": {
+  "hash": "522078bef2a45bbf",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/openproject/5-users/": {
+  "hash": "17e4b1e66816085b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/openproject/50-users/": {
+  "hash": "935fe42bcad7d366",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/opnform/1-user/": {
+  "hash": "7296f503af7adcdb",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/opnform/10-users/": {
+  "hash": "0a11f64f5f6c35f7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/opnform/100-users/": {
+  "hash": "7a812b5fc5e4ade9",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/opnform/25-users/": {
+  "hash": "f4e2e5610a6c7560",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/opnform/250-users/": {
+  "hash": "7402edab3da53295",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/opnform/5-users/": {
+  "hash": "99be3e72b464ba7c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/opnform/50-users/": {
+  "hash": "93c05f5dcae3c12a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/outline/1-user/": {
+  "hash": "ee8927a3e48f9813",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/outline/10-users/": {
+  "hash": "539d9867bbaaeb95",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/outline/100-users/": {
+  "hash": "1071d2d1e4d1ce45",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/outline/25-users/": {
+  "hash": "dcaed095e2127c2a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/outline/250-users/": {
+  "hash": "ebd84fc5225f0d80",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/outline/5-users/": {
+  "hash": "72d4a7cdd7db6198",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/outline/50-users/": {
+  "hash": "4d816ad7c0e9fe2e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/passbolt/1-user/": {
+  "hash": "9887714fd7e24dba",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/passbolt/10-users/": {
+  "hash": "4a098f7636fe57f6",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/passbolt/100-users/": {
+  "hash": "428a7ffd5f0ca890",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/passbolt/25-users/": {
+  "hash": "b8f4982d27965721",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/passbolt/250-users/": {
+  "hash": "c530de74b0bc528d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/passbolt/5-users/": {
+  "hash": "9351ddcafb3cc379",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/passbolt/50-users/": {
+  "hash": "a2ad92671b521cff",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/plane/1-user/": {
+  "hash": "6aa80e2134dac926",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/plane/10-users/": {
+  "hash": "fd4137fb3e7c971a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/plane/100-users/": {
+  "hash": "330af0b70fae38fe",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/plane/25-users/": {
+  "hash": "883d1d2f1581c6a2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/plane/250-users/": {
+  "hash": "577985dc33f5c213",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/plane/5-users/": {
+  "hash": "7ebcbc8ebafcaed1",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/plane/50-users/": {
+  "hash": "634de055efdf049e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/plausible/1-user/": {
+  "hash": "904498441f56329e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/plausible/10-users/": {
+  "hash": "2573093deed23980",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/plausible/100-users/": {
+  "hash": "87a48eab0e3ebb55",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/plausible/25-users/": {
+  "hash": "6e7bbba112231339",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/plausible/250-users/": {
+  "hash": "33b31cc49199f141",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/plausible/5-users/": {
+  "hash": "69c034317bcaae99",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/plausible/50-users/": {
+  "hash": "f28334ecf0b99fed",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/posthog/1-user/": {
+  "hash": "dd01b05bc83ea579",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/posthog/10-users/": {
+  "hash": "5e0965f4b3ef2622",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/posthog/100-users/": {
+  "hash": "a568c82364718e7f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/posthog/25-users/": {
+  "hash": "313185bc3757b4dd",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/posthog/250-users/": {
+  "hash": "c1cc6d4be4bd2061",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/posthog/5-users/": {
+  "hash": "212416dc6f31cf4e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/posthog/50-users/": {
+  "hash": "58839f521bb6caa0",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/superset/1-user/": {
+  "hash": "711a8fef5f75986b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/superset/10-users/": {
+  "hash": "9e11f985c691454b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/superset/100-users/": {
+  "hash": "aa2d40c8b4dbd7c8",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/superset/25-users/": {
+  "hash": "f7a09b28e87f61ea",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/superset/250-users/": {
+  "hash": "79769452f3360f11",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/superset/5-users/": {
+  "hash": "d115eef8049c14a9",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/superset/50-users/": {
+  "hash": "9659cfa2fb4dc661",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/umami/1-user/": {
+  "hash": "bd37467f34d71f9b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/umami/10-users/": {
+  "hash": "83c1c3d8e63d8fc3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/umami/100-users/": {
+  "hash": "d61a48de5def2a8c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/umami/25-users/": {
+  "hash": "eeb2e0066511bb39",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/umami/250-users/": {
+  "hash": "4c99040cab0be7cc",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/umami/5-users/": {
+  "hash": "32eb2c00b2ad9f28",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/umami/50-users/": {
+  "hash": "e2f24ab19e2d082c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/uptime-kuma/1-user/": {
+  "hash": "95fef0f12eb70253",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/uptime-kuma/10-users/": {
+  "hash": "854c30ecc0ca8d22",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/uptime-kuma/100-users/": {
+  "hash": "acb843b370f74816",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/uptime-kuma/25-users/": {
+  "hash": "f91faa7a1ba7da5c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/uptime-kuma/250-users/": {
+  "hash": "926a884296aeb3d0",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/uptime-kuma/5-users/": {
+  "hash": "27012c2764f57e1f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/uptime-kuma/50-users/": {
+  "hash": "6b85f4d43c41f657",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/vaultwarden/1-user/": {
+  "hash": "67d28286793d62c2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/vaultwarden/10-users/": {
+  "hash": "c466d204f21bed7d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/vaultwarden/100-users/": {
+  "hash": "c0f7e6533c6fddda",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/vaultwarden/25-users/": {
+  "hash": "59408dbfd16b5cb5",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/vaultwarden/250-users/": {
+  "hash": "e5d0c19e318cb789",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/vaultwarden/5-users/": {
+  "hash": "e5b06c50c62f1720",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/vaultwarden/50-users/": {
+  "hash": "3c7fc8d03b77aea2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/vikunja/1-user/": {
+  "hash": "3619829658b58cf9",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/vikunja/10-users/": {
+  "hash": "1eac0326ef17f0f1",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/vikunja/100-users/": {
+  "hash": "0d9752c28bf35189",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/vikunja/25-users/": {
+  "hash": "42342603bcd5229e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/vikunja/250-users/": {
+  "hash": "adac245698301b1b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/vikunja/5-users/": {
+  "hash": "44d1837433c29928",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/vikunja/50-users/": {
+  "hash": "72d3974ebdfa00f5",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/windmill/1-user/": {
+  "hash": "0571dfd281f025af",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/windmill/10-users/": {
+  "hash": "6751b188ea2b6695",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/windmill/100-users/": {
+  "hash": "0413efe62abded7c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/windmill/25-users/": {
+  "hash": "069516356ff204a7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/windmill/250-users/": {
+  "hash": "c70da70795665101",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/windmill/5-users/": {
+  "hash": "41df2f22cab6573e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/windmill/50-users/": {
+  "hash": "66fd155150f12983",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/zammad/1-user/": {
+  "hash": "7f4913411728582d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/zammad/10-users/": {
+  "hash": "1fcb3eaa1752303c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/zammad/100-users/": {
+  "hash": "4a55ab471fc3812d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/zammad/25-users/": {
+  "hash": "6ef637436ea5198b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/zammad/250-users/": {
+  "hash": "c29dcce636ae2730",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/zammad/5-users/": {
+  "hash": "61608d4163b590c2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/zammad/50-users/": {
+  "hash": "897f14cffeef89e2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/zitadel/1-user/": {
+  "hash": "48ee84b9f79e0850",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/zitadel/10-users/": {
+  "hash": "958ceb90c0f0fe9d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/zitadel/100-users/": {
+  "hash": "8e95759dcbbe7ed1",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/zitadel/25-users/": {
+  "hash": "1c548f09457d63a9",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/zitadel/250-users/": {
+  "hash": "ebf8e9636ac99046",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/zitadel/5-users/": {
+  "hash": "31f2e71624cf1a71",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/cost/zitadel/50-users/": {
+  "hash": "02d1c30fd2228890",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/disclosure/": {
+  "hash": "55e7be54a3393a74",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/hosting/": {
+  "hash": "ebc98c567dbd77c3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/hosting/digitalocean/": {
+  "hash": "d667ffd1a394db07",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/hosting/hetzner/": {
+  "hash": "b232fd1717dc01c1",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/hosting/kamatera/": {
+  "hash": "e9d16e33b47157a4",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/hosting/pikapods/": {
+  "hash": "5b01a376201a6b29",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/hosting/vultr/": {
+  "hash": "bd7eec801dedb2a3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/methodology/": {
+  "hash": "2cae526fe48baf10",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/migration-checklist/": {
+  "hash": "3ba7b483e4c441aa",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/privacy/": {
+  "hash": "a675394c47cf950b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/self-host/": {
+  "hash": "cbff28a679c82ace",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/self-host/activepieces/": {
+  "hash": "c519aa4aa57929e3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/self-host/affine/": {
+  "hash": "da3e308faa117627",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/self-host/authentik/": {
+  "hash": "a7df63cacacb2172",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/self-host/bookstack/": {
+  "hash": "8c642ac89e94b260",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/self-host/chatwoot/": {
+  "hash": "89ca002821901bff",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/self-host/docmost/": {
+  "hash": "76cce4951879a129",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/self-host/formbricks/": {
+  "hash": "6a314a12aa6a8a4c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/self-host/freescout/": {
+  "hash": "7ac6e8164c938bd6",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/self-host/gatus/": {
+  "hash": "fe7d7b7c7ddd7d63",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/self-host/keycloak/": {
+  "hash": "226e3d8a5cf893ae",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/self-host/lightdash/": {
+  "hash": "a14b75523fc55ddd",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/self-host/limesurvey/": {
+  "hash": "ec6f197569082d04",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/self-host/matomo/": {
+  "hash": "624a7f009256f987",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/self-host/metabase/": {
+  "hash": "8210561547518dde",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/self-host/n8n/": {
+  "hash": "ca0df6ee8278f2d2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/self-host/openproject/": {
+  "hash": "ef415f90429b6250",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/self-host/opnform/": {
+  "hash": "4e5a8215f90c8465",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/self-host/outline/": {
+  "hash": "85dc05c7efadacaa",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/self-host/passbolt/": {
+  "hash": "c7511064905b2a44",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/self-host/plane/": {
+  "hash": "178bba93fb5782cf",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/self-host/plausible/": {
+  "hash": "c13feb1a9cc7c623",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/self-host/posthog/": {
+  "hash": "c073d7ac4dfe495d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/self-host/superset/": {
+  "hash": "fe08830a2b497bc2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/self-host/umami/": {
+  "hash": "da577c2712ae9783",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/self-host/uptime-kuma/": {
+  "hash": "59ffe045171020d4",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/self-host/vaultwarden/": {
+  "hash": "caf9650d7da87ba9",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/self-host/vikunja/": {
+  "hash": "55f9480096cb3227",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/self-host/windmill/": {
+  "hash": "20afe7bfe5ab1f84",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/self-host/zammad/": {
+  "hash": "981c823768dd1a81",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/self-host/zitadel/": {
+  "hash": "6a271afa3980930f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/1password-vs-passbolt/": {
+  "hash": "dc545b153f211a9e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/1password-vs-vaultwarden/": {
+  "hash": "a417d9176c8b7583",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/amplitude-vs-posthog/": {
+  "hash": "5ecf1df6a1bfa8df",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/asana-vs-plane/": {
+  "hash": "4008a0267437b47b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/asana-vs-vikunja/": {
+  "hash": "23f5dbddd12563d6",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/auth0-vs-authentik/": {
+  "hash": "5dbca6b111fec3a2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/auth0-vs-keycloak/": {
+  "hash": "5ef7368d84f27043",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/auth0-vs-zitadel/": {
+  "hash": "62a8d0afea0284db",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/betteruptime-vs-uptime-kuma/": {
+  "hash": "dbb87d180714406a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/bitwarden-vs-vaultwarden/": {
+  "hash": "02d4811b10d545c6",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/clerk-vs-authentik/": {
+  "hash": "713de65f96eb9f6e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/clerk-vs-keycloak/": {
+  "hash": "6389daac65ba595d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/clerk-vs-zitadel/": {
+  "hash": "1768c495ae9c4df0",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/confluence-vs-bookstack/": {
+  "hash": "ce1f15bb1d4a683e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/confluence-vs-docmost/": {
+  "hash": "ecc77d639901ac9b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/confluence-vs-outline/": {
+  "hash": "5d8d7fe4faacb376",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/fathom-vs-plausible/": {
+  "hash": "428e47380dca88e1",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/fathom-vs-umami/": {
+  "hash": "ec4b4b9cab42838e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/freshdesk-vs-chatwoot/": {
+  "hash": "a163730ea1573683",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/freshdesk-vs-freescout/": {
+  "hash": "09203af04bb1eb2c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/freshdesk-vs-zammad/": {
+  "hash": "330e4e1ea0a13cd1",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/google-analytics-vs-matomo/": {
+  "hash": "6a9c04c60fff4b3f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/google-analytics-vs-plausible/": {
+  "hash": "ee09b325d5304196",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/google-analytics-vs-posthog/": {
+  "hash": "62e260eb81d92723",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/google-analytics-vs-umami/": {
+  "hash": "6a1e6e9834f9e07b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/helpscout-vs-freescout/": {
+  "hash": "2e5a2ba12e3a0ad3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/intercom-vs-chatwoot/": {
+  "hash": "80507c161333d48d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/jira-vs-openproject/": {
+  "hash": "54f55e62c5588083",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/jira-vs-plane/": {
+  "hash": "485de16ffce15a1b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/lastpass-vs-passbolt/": {
+  "hash": "dd5ee66b56f0491a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/lastpass-vs-vaultwarden/": {
+  "hash": "1c7bce35e938b341",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/linear-vs-plane/": {
+  "hash": "fda5921dd6efdba4",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/make-vs-activepieces/": {
+  "hash": "8aafc5fcf1421c9b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/make-vs-n8n/": {
+  "hash": "984268393370c75d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/mixpanel-vs-matomo/": {
+  "hash": "d274bf8472269dea",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/mixpanel-vs-plausible/": {
+  "hash": "8b22d679b87b1e9d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/mixpanel-vs-posthog/": {
+  "hash": "54d69f67010bb09e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/monday-vs-openproject/": {
+  "hash": "bfad7db7aa260ce7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/monday-vs-plane/": {
+  "hash": "6a6e22f0f4861fd0",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/monday-vs-vikunja/": {
+  "hash": "991a3e6342a3766b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/notion-vs-affine/": {
+  "hash": "f34fbda762a7c2d0",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/notion-vs-bookstack/": {
+  "hash": "8c1a2b930334e072",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/notion-vs-docmost/": {
+  "hash": "a50c54ee0e50e4ff",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/notion-vs-outline/": {
+  "hash": "a77ac859faf4f5bc",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/okta-vs-authentik/": {
+  "hash": "ddcab9303b63e9c3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/okta-vs-keycloak/": {
+  "hash": "b453bbf7aff6297f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/pingdom-vs-gatus/": {
+  "hash": "15353d72909b76a3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/pingdom-vs-uptime-kuma/": {
+  "hash": "98b86a968e80e3d9",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/retool-vs-windmill/": {
+  "hash": "7c98fe140b15f096",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/statuspage-vs-gatus/": {
+  "hash": "a06b7c7632b15beb",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/statuspage-vs-uptime-kuma/": {
+  "hash": "9074f9bf1adeb127",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/surveymonkey-vs-formbricks/": {
+  "hash": "bc77e430f94b73ce",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/surveymonkey-vs-limesurvey/": {
+  "hash": "dd404d770da0344c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/tableau-vs-metabase/": {
+  "hash": "41527b44ea1068d9",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/tableau-vs-superset/": {
+  "hash": "4a0904d6105c57da",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/trello-vs-vikunja/": {
+  "hash": "f74a78dd52d234fd",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/typeform-vs-formbricks/": {
+  "hash": "7a40fa1ff98d9fb5",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/typeform-vs-limesurvey/": {
+  "hash": "9cd26b053bcaef04",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/typeform-vs-opnform/": {
+  "hash": "ee66b39649c6e7a7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/zapier-vs-activepieces/": {
+  "hash": "667fd31da82deb21",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/zapier-vs-n8n/": {
+  "hash": "775c3c05d557e256",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/zapier-vs-windmill/": {
+  "hash": "a8b9c4d5521f9bda",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/zendesk-vs-chatwoot/": {
+  "hash": "812c2a183faeb7a9",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/zendesk-vs-freescout/": {
+  "hash": "e13fb33822aec0f8",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/de/vs/zendesk-vs-zammad/": {
+  "hash": "4251488ab093f069",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/disclosure/": {
+  "hash": "399f29e5afee6478",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/": {
+  "hash": "28f11b563d1ddd00",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/about/": {
+  "hash": "cad6f9cfc4c66c86",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/alternatives/1password/": {
+  "hash": "371d16ab457313a0",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/alternatives/amplitude/": {
+  "hash": "a9b1100ed5ab79d9",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/alternatives/asana/": {
+  "hash": "5adad369d9678cb9",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/alternatives/auth0/": {
+  "hash": "6a54d5b9c87d7233",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/alternatives/betteruptime/": {
+  "hash": "4e08865fdf78130e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/alternatives/bitwarden/": {
+  "hash": "f005fc4d16990f06",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/alternatives/clerk/": {
+  "hash": "e1cf821bbba48551",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/alternatives/confluence/": {
+  "hash": "a4275bc65559a714",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/alternatives/fathom/": {
+  "hash": "32748a0a02eef8f7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/alternatives/freshdesk/": {
+  "hash": "57927bdee512dc05",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/alternatives/google-analytics/": {
+  "hash": "95fb749f7f04081d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/alternatives/helpscout/": {
+  "hash": "a92982542a64a389",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/alternatives/intercom/": {
+  "hash": "201320657e477dd3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/alternatives/jira/": {
+  "hash": "a8e7a4d4b71d30ea",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/alternatives/lastpass/": {
+  "hash": "f05ec0fc27edb145",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/alternatives/linear/": {
+  "hash": "7294688e9a69e4e2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/alternatives/make/": {
+  "hash": "11c40f37f4803ace",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/alternatives/mixpanel/": {
+  "hash": "325ee197617ce3ed",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/alternatives/monday/": {
+  "hash": "c3d90f2a78b44486",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/alternatives/notion/": {
+  "hash": "1376f4fc61a79750",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/alternatives/okta/": {
+  "hash": "1f83e1edeee5b6bc",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/alternatives/pingdom/": {
+  "hash": "75632dc71c98f656",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/alternatives/retool/": {
+  "hash": "245ad1409290367f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/alternatives/statuspage/": {
+  "hash": "ef59c01d8aaf198b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/alternatives/surveymonkey/": {
+  "hash": "3f23ba2200083386",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/alternatives/tableau/": {
+  "hash": "db8a587b8835b8e5",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/alternatives/trello/": {
+  "hash": "392eb03d9fe29635",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/alternatives/typeform/": {
+  "hash": "461fbb7d0e93e89f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/alternatives/zapier/": {
+  "hash": "3a95a08b0d76689c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/alternatives/zendesk/": {
+  "hash": "473e168d20dc6a0c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/category/analytics/": {
+  "hash": "ad28c807197c1d7e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/category/auth/": {
+  "hash": "dcf7eb8ff1727db5",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/category/automation/": {
+  "hash": "fafccf55d9312e84",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/category/bi/": {
+  "hash": "96e170893b392793",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/category/docs-wiki/": {
+  "hash": "dc6fc31bcccd38f9",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/category/forms/": {
+  "hash": "c77dc76464115b0f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/category/helpdesk/": {
+  "hash": "47c64c912ec8fafb",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/category/password-manager/": {
+  "hash": "3f45ad22cc7927be",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/category/project-management/": {
+  "hash": "e433241dd2f1adec",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/category/status-page/": {
+  "hash": "1c4645786b5307d8",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/compare/": {
+  "hash": "55031f14a03b03f7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/activepieces/1-user/": {
+  "hash": "71e9d67229d4630d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/activepieces/10-users/": {
+  "hash": "dfe34abeaa2d290b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/activepieces/100-users/": {
+  "hash": "86c957a3187afe6f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/activepieces/25-users/": {
+  "hash": "c0895129e1c99d8f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/activepieces/250-users/": {
+  "hash": "7d4df0310f6cec61",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/activepieces/5-users/": {
+  "hash": "4ee1cca85867bd4c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/activepieces/50-users/": {
+  "hash": "3ad7310c548b80db",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/affine/1-user/": {
+  "hash": "45d285724d57c074",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/affine/10-users/": {
+  "hash": "7d11632f5ffd2c7f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/affine/100-users/": {
+  "hash": "bd3e20e49e379103",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/affine/25-users/": {
+  "hash": "ffe48c2ba25ede93",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/affine/250-users/": {
+  "hash": "e4cf76892637d96e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/affine/5-users/": {
+  "hash": "0f186f5c1450f4c7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/affine/50-users/": {
+  "hash": "33b186c6073caa8e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/authentik/1-user/": {
+  "hash": "9dd837f9d154777d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/authentik/10-users/": {
+  "hash": "37a460211ef2ab46",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/authentik/100-users/": {
+  "hash": "1bf77a5ab946c451",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/authentik/25-users/": {
+  "hash": "81d568be92a8d220",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/authentik/250-users/": {
+  "hash": "4229eaba9d63603b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/authentik/5-users/": {
+  "hash": "27d298d7833e82da",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/authentik/50-users/": {
+  "hash": "0e6049842f998313",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/bookstack/1-user/": {
+  "hash": "20608b16de4be2d7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/bookstack/10-users/": {
+  "hash": "c75715c3216c2be7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/bookstack/100-users/": {
+  "hash": "fa4ebdd15e7c6cff",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/bookstack/25-users/": {
+  "hash": "64852632ba9da6f2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/bookstack/250-users/": {
+  "hash": "6ac1e214d9d29250",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/bookstack/5-users/": {
+  "hash": "c7a3ccbbdc516e39",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/bookstack/50-users/": {
+  "hash": "3fd54aa769685e78",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/chatwoot/1-user/": {
+  "hash": "f4227e593b9f948a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/chatwoot/10-users/": {
+  "hash": "3714276e7a7a619f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/chatwoot/100-users/": {
+  "hash": "dd920a2db9fb25f4",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/chatwoot/25-users/": {
+  "hash": "d23d987e0f33412d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/chatwoot/250-users/": {
+  "hash": "88b1a97700732a96",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/chatwoot/5-users/": {
+  "hash": "418425e4aa705f0e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/chatwoot/50-users/": {
+  "hash": "d989b78b0bcef033",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/docmost/1-user/": {
+  "hash": "039e18872efaca2e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/docmost/10-users/": {
+  "hash": "3767af0dcc327896",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/docmost/100-users/": {
+  "hash": "df4419417f34a011",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/docmost/25-users/": {
+  "hash": "136d1e91d42c1efd",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/docmost/250-users/": {
+  "hash": "ade92dedd24ffccf",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/docmost/5-users/": {
+  "hash": "6b23d77ba2875efe",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/docmost/50-users/": {
+  "hash": "f639cb2a3fb2beb3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/formbricks/1-user/": {
+  "hash": "d23bcb7430aa121a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/formbricks/10-users/": {
+  "hash": "404ccbfc411542a7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/formbricks/100-users/": {
+  "hash": "4ebbb864a07554ee",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/formbricks/25-users/": {
+  "hash": "f2b942cf3b2154a6",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/formbricks/250-users/": {
+  "hash": "c859a686da748ca8",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/formbricks/5-users/": {
+  "hash": "eea0662bf3631590",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/formbricks/50-users/": {
+  "hash": "86da1adca701879d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/freescout/1-user/": {
+  "hash": "d8ce0cffb2e47144",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/freescout/10-users/": {
+  "hash": "8ccd63389fb4d163",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/freescout/100-users/": {
+  "hash": "18eaabdda7800f3c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/freescout/25-users/": {
+  "hash": "a6e253b50b989647",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/freescout/250-users/": {
+  "hash": "99a1dff81745f4b1",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/freescout/5-users/": {
+  "hash": "ffceac40e4cacc74",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/freescout/50-users/": {
+  "hash": "9cef072bceb37274",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/gatus/1-user/": {
+  "hash": "8c8316c4bbd81e5f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/gatus/10-users/": {
+  "hash": "2cdf31024b86bbc0",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/gatus/100-users/": {
+  "hash": "cdb89aa8ecefa4fa",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/gatus/25-users/": {
+  "hash": "c4721575242ef9f4",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/gatus/250-users/": {
+  "hash": "c2ed286690d06f68",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/gatus/5-users/": {
+  "hash": "e441b5fbc15fdeab",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/gatus/50-users/": {
+  "hash": "597292c907e368c9",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/keycloak/1-user/": {
+  "hash": "173c593cb86d9a9a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/keycloak/10-users/": {
+  "hash": "eb9ca1e2faa50ca3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/keycloak/100-users/": {
+  "hash": "7dba5db431b45345",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/keycloak/25-users/": {
+  "hash": "0f5bd12b37483f6a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/keycloak/250-users/": {
+  "hash": "964ec738dbd79a4f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/keycloak/5-users/": {
+  "hash": "e1f899ed269da4dc",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/keycloak/50-users/": {
+  "hash": "056828d86396990c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/lightdash/1-user/": {
+  "hash": "4c2ec3c2b20f2255",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/lightdash/10-users/": {
+  "hash": "be5d2c43f0fcd594",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/lightdash/100-users/": {
+  "hash": "07e070b64eb4a49a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/lightdash/25-users/": {
+  "hash": "0034d52c25265049",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/lightdash/250-users/": {
+  "hash": "4a3a22750214f74b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/lightdash/5-users/": {
+  "hash": "cba31adfb5f33440",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/lightdash/50-users/": {
+  "hash": "5066a764eabe14b0",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/limesurvey/1-user/": {
+  "hash": "f64a77af820368e8",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/limesurvey/10-users/": {
+  "hash": "ae14ec82da07d6fa",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/limesurvey/100-users/": {
+  "hash": "dedbbe55384e73ce",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/limesurvey/25-users/": {
+  "hash": "d4fd90adbf22a399",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/limesurvey/250-users/": {
+  "hash": "3455a3b8e5f3b597",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/limesurvey/5-users/": {
+  "hash": "530607bc6546f8cb",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/limesurvey/50-users/": {
+  "hash": "19493565207db1d4",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/matomo/1-user/": {
+  "hash": "1960f7c73183dd6c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/matomo/10-users/": {
+  "hash": "c625d871adc9a14e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/matomo/100-users/": {
+  "hash": "559012e13dd24a1a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/matomo/25-users/": {
+  "hash": "aeabd9a9057a3eac",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/matomo/250-users/": {
+  "hash": "9fb0ad1facbe524a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/matomo/5-users/": {
+  "hash": "ad1d574500181e71",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/matomo/50-users/": {
+  "hash": "d90095d4cd95ca24",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/metabase/1-user/": {
+  "hash": "d635b47533f64869",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/metabase/10-users/": {
+  "hash": "781402b4bcb7e683",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/metabase/100-users/": {
+  "hash": "d3fa869faaad6d22",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/metabase/25-users/": {
+  "hash": "b4acc331c5ebcbbb",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/metabase/250-users/": {
+  "hash": "8a6e77926e0479d2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/metabase/5-users/": {
+  "hash": "4adcd45e9bb45e31",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/metabase/50-users/": {
+  "hash": "0802a260b455dbd9",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/n8n/1-user/": {
+  "hash": "693d4d26e70d7c9a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/n8n/10-users/": {
+  "hash": "13b0c4fd0717b122",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/n8n/100-users/": {
+  "hash": "98775f2e89604c9b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/n8n/25-users/": {
+  "hash": "688192ab59da4edb",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/n8n/250-users/": {
+  "hash": "f16841b87c3dd7e2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/n8n/5-users/": {
+  "hash": "4891e22db4db209d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/n8n/50-users/": {
+  "hash": "0e65a36670c9ee2c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/openproject/1-user/": {
+  "hash": "21c3fc645f813ef7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/openproject/10-users/": {
+  "hash": "4f8269dc1ae097c6",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/openproject/100-users/": {
+  "hash": "f9caf1aaa6b8b842",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/openproject/25-users/": {
+  "hash": "6ff28c92f5a83345",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/openproject/250-users/": {
+  "hash": "b6c4654b61fbe6b8",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/openproject/5-users/": {
+  "hash": "65ee0fa1a2d78ecd",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/openproject/50-users/": {
+  "hash": "dd528cfeb01ecd7a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/opnform/1-user/": {
+  "hash": "8acc517d4c723bc3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/opnform/10-users/": {
+  "hash": "1ff6ef934f845dc1",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/opnform/100-users/": {
+  "hash": "eb3efe55a9685084",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/opnform/25-users/": {
+  "hash": "44cec18230340cd7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/opnform/250-users/": {
+  "hash": "bde8f0e84e25d7a5",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/opnform/5-users/": {
+  "hash": "4e1cb9605d05e70c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/opnform/50-users/": {
+  "hash": "0913aa0ddf4b5b2c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/outline/1-user/": {
+  "hash": "16779327632ee7e6",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/outline/10-users/": {
+  "hash": "07079686c64f9c88",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/outline/100-users/": {
+  "hash": "977949dc352d4a5c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/outline/25-users/": {
+  "hash": "cc05af32c8261f1e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/outline/250-users/": {
+  "hash": "f53390b8d22cefe6",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/outline/5-users/": {
+  "hash": "4fbb099814647c3d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/outline/50-users/": {
+  "hash": "c38bfa7808884e22",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/passbolt/1-user/": {
+  "hash": "99bb4c5734961973",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/passbolt/10-users/": {
+  "hash": "8c8a270bd230b989",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/passbolt/100-users/": {
+  "hash": "fb39c2a5011b12f1",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/passbolt/25-users/": {
+  "hash": "e140e5126d802749",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/passbolt/250-users/": {
+  "hash": "a5813609575ba3db",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/passbolt/5-users/": {
+  "hash": "ae65543cbe70618a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/passbolt/50-users/": {
+  "hash": "b5529222eeacbc96",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/plane/1-user/": {
+  "hash": "0f0b4a63fb97aecd",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/plane/10-users/": {
+  "hash": "d2e670533d16f643",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/plane/100-users/": {
+  "hash": "929f0b9e45b9a602",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/plane/25-users/": {
+  "hash": "f5ea20a20a248c33",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/plane/250-users/": {
+  "hash": "ca19ff44a2c55ca5",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/plane/5-users/": {
+  "hash": "2b512d717d6f2c31",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/plane/50-users/": {
+  "hash": "cb3829b917eb91f1",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/plausible/1-user/": {
+  "hash": "cf6f8c7d6a068d82",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/plausible/10-users/": {
+  "hash": "d4ff7ca285de9cd0",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/plausible/100-users/": {
+  "hash": "0304df32dbef1cf4",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/plausible/25-users/": {
+  "hash": "f7b021b73987e781",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/plausible/250-users/": {
+  "hash": "223b8299c52a1e92",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/plausible/5-users/": {
+  "hash": "081b803685c6914c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/plausible/50-users/": {
+  "hash": "49e35ca8a4b8d77a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/posthog/1-user/": {
+  "hash": "3341f65a4d42e8d3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/posthog/10-users/": {
+  "hash": "6b15a67e8f3037f1",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/posthog/100-users/": {
+  "hash": "1af7c1329e35cee3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/posthog/25-users/": {
+  "hash": "dd39414b0cbad658",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/posthog/250-users/": {
+  "hash": "2ccf6626a2eafd5b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/posthog/5-users/": {
+  "hash": "3907d336048a3a7e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/posthog/50-users/": {
+  "hash": "de042ca0a2a2c0ab",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/superset/1-user/": {
+  "hash": "0d7c8cd779534b7f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/superset/10-users/": {
+  "hash": "d4773149939e5e14",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/superset/100-users/": {
+  "hash": "23767159c1c184b1",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/superset/25-users/": {
+  "hash": "79116fa7491e1bab",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/superset/250-users/": {
+  "hash": "adf6b292e4de8619",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/superset/5-users/": {
+  "hash": "6d61d700210c6d42",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/superset/50-users/": {
+  "hash": "db8ea5ca8786f1c5",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/umami/1-user/": {
+  "hash": "156cfb20dbd937dc",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/umami/10-users/": {
+  "hash": "ab75f4ed09c04d5e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/umami/100-users/": {
+  "hash": "9d3701c7f250edd1",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/umami/25-users/": {
+  "hash": "342e8ca835dd565d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/umami/250-users/": {
+  "hash": "34990f3876bca611",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/umami/5-users/": {
+  "hash": "d5ed5b0fd3db1d6c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/umami/50-users/": {
+  "hash": "bfadc7c13a8dc617",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/uptime-kuma/1-user/": {
+  "hash": "40d79eac305759ec",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/uptime-kuma/10-users/": {
+  "hash": "755e8ab35188f48d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/uptime-kuma/100-users/": {
+  "hash": "4fc938ecf597bbea",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/uptime-kuma/25-users/": {
+  "hash": "dbe01e6e53c49d8f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/uptime-kuma/250-users/": {
+  "hash": "c0fe466da2f670d7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/uptime-kuma/5-users/": {
+  "hash": "0ddc5b3bc65798d6",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/uptime-kuma/50-users/": {
+  "hash": "f5ddf71c8d2992be",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/vaultwarden/1-user/": {
+  "hash": "7ffb670dee8baa64",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/vaultwarden/10-users/": {
+  "hash": "4135987e96f6011c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/vaultwarden/100-users/": {
+  "hash": "4bcbf54f70543657",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/vaultwarden/25-users/": {
+  "hash": "b2016684969d2f6d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/vaultwarden/250-users/": {
+  "hash": "3ca4b551bb54817b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/vaultwarden/5-users/": {
+  "hash": "86195c0d0c1be121",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/vaultwarden/50-users/": {
+  "hash": "1056730881046e8f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/vikunja/1-user/": {
+  "hash": "85a65decda5b99af",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/vikunja/10-users/": {
+  "hash": "92ad6bcb35a9e1cb",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/vikunja/100-users/": {
+  "hash": "c98acec4bd5c0ad7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/vikunja/25-users/": {
+  "hash": "6e4217e057c0d9ca",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/vikunja/250-users/": {
+  "hash": "2a709090c7e27372",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/vikunja/5-users/": {
+  "hash": "3af57014fd9f1e78",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/vikunja/50-users/": {
+  "hash": "9b109cd126ab27c1",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/windmill/1-user/": {
+  "hash": "17ff5d184593ac47",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/windmill/10-users/": {
+  "hash": "8374e33d53d2cc64",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/windmill/100-users/": {
+  "hash": "9c8ccb5381c6d953",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/windmill/25-users/": {
+  "hash": "d26630131d850d83",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/windmill/250-users/": {
+  "hash": "f88f61616b70c673",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/windmill/5-users/": {
+  "hash": "0d2c7a9e458c2dc2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/windmill/50-users/": {
+  "hash": "40c843156f51393c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/zammad/1-user/": {
+  "hash": "1ab2d4301c06d493",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/zammad/10-users/": {
+  "hash": "2b3a8e7a0f6ebb27",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/zammad/100-users/": {
+  "hash": "62e49a0affb2c836",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/zammad/25-users/": {
+  "hash": "066b5d6130db5e84",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/zammad/250-users/": {
+  "hash": "54fb5b8561349cda",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/zammad/5-users/": {
+  "hash": "4538209a093daca9",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/zammad/50-users/": {
+  "hash": "648928ff2953990a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/zitadel/1-user/": {
+  "hash": "8f7129f851727b51",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/zitadel/10-users/": {
+  "hash": "001a3545190080d4",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/zitadel/100-users/": {
+  "hash": "f3f516b749f238af",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/zitadel/25-users/": {
+  "hash": "f66d7c4fa9721bad",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/zitadel/250-users/": {
+  "hash": "117629d0170c61dd",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/zitadel/5-users/": {
+  "hash": "646323c996369f52",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/cost/zitadel/50-users/": {
+  "hash": "9335a0687dc4cbcc",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/disclosure/": {
+  "hash": "e2d301ad312d12ab",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/hosting/": {
+  "hash": "cf25065d24a3b8ca",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/hosting/digitalocean/": {
+  "hash": "acc8471e41f367e7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/hosting/hetzner/": {
+  "hash": "990acfd196439c2b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/hosting/kamatera/": {
+  "hash": "a1304f40fb894905",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/hosting/pikapods/": {
+  "hash": "2e690cec1294f81c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/hosting/vultr/": {
+  "hash": "a3a6dabbf27db6a7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/methodology/": {
+  "hash": "6cc44d9693d4d1c2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/migration-checklist/": {
+  "hash": "05cf019d9e3fe1a7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/privacy/": {
+  "hash": "2a5e976c5f243842",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/self-host/": {
+  "hash": "eedc3e82332c5d92",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/self-host/activepieces/": {
+  "hash": "a6c276b27eb49282",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/self-host/affine/": {
+  "hash": "ca0d798b852b71a3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/self-host/authentik/": {
+  "hash": "4a3e8dfbd5f87b6a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/self-host/bookstack/": {
+  "hash": "61e5614e04bb5d17",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/self-host/chatwoot/": {
+  "hash": "4437055c80405705",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/self-host/docmost/": {
+  "hash": "fa5a12f96aa30e02",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/self-host/formbricks/": {
+  "hash": "cd7c02e4fd2cb4fe",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/self-host/freescout/": {
+  "hash": "abcf238a801b3992",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/self-host/gatus/": {
+  "hash": "5d6697b8b4145ff6",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/self-host/keycloak/": {
+  "hash": "ca46c5a20839c010",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/self-host/lightdash/": {
+  "hash": "072a771cf1240f14",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/self-host/limesurvey/": {
+  "hash": "50573cf057ba5dbf",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/self-host/matomo/": {
+  "hash": "f3fcac2d96822211",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/self-host/metabase/": {
+  "hash": "387f0cbd69c7bbf7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/self-host/n8n/": {
+  "hash": "3e76f99ab183a98e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/self-host/openproject/": {
+  "hash": "efed879fd454b386",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/self-host/opnform/": {
+  "hash": "0cfd90162416c028",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/self-host/outline/": {
+  "hash": "b49a9c9c88ae8e13",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/self-host/passbolt/": {
+  "hash": "907045599f29ad5e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/self-host/plane/": {
+  "hash": "714073e03fae3d98",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/self-host/plausible/": {
+  "hash": "4471c016b34ad646",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/self-host/posthog/": {
+  "hash": "8197a694eb0a448c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/self-host/superset/": {
+  "hash": "632dd22b9a47b2ed",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/self-host/umami/": {
+  "hash": "a7deac99656bb42d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/self-host/uptime-kuma/": {
+  "hash": "0d4c9bc93b2df738",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/self-host/vaultwarden/": {
+  "hash": "e00f7fcb673d0143",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/self-host/vikunja/": {
+  "hash": "ffee60ce98feac53",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/self-host/windmill/": {
+  "hash": "b3f359cefd090ffd",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/self-host/zammad/": {
+  "hash": "dee64ac7617b0a92",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/self-host/zitadel/": {
+  "hash": "86c24ea49509a358",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/1password-vs-passbolt/": {
+  "hash": "d4def218f39a9ccd",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/1password-vs-vaultwarden/": {
+  "hash": "475003a1f1504f9e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/amplitude-vs-posthog/": {
+  "hash": "c32f6d7cddd4d3a4",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/asana-vs-plane/": {
+  "hash": "036ab37c1f952f5b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/asana-vs-vikunja/": {
+  "hash": "e9bdc6748f430ec0",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/auth0-vs-authentik/": {
+  "hash": "b9d1eef64a29cd70",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/auth0-vs-keycloak/": {
+  "hash": "db55af142a995126",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/auth0-vs-zitadel/": {
+  "hash": "e8b7ea07eab1e4f3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/betteruptime-vs-uptime-kuma/": {
+  "hash": "8e79358d481bce48",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/bitwarden-vs-vaultwarden/": {
+  "hash": "e961c273cf542720",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/clerk-vs-authentik/": {
+  "hash": "687f8dcd3ffcbbd4",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/clerk-vs-keycloak/": {
+  "hash": "4f2ae2ab7e000faf",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/clerk-vs-zitadel/": {
+  "hash": "2ec763811d99cb19",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/confluence-vs-bookstack/": {
+  "hash": "5500be9c9a289bd1",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/confluence-vs-docmost/": {
+  "hash": "e1177f66b46fcf27",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/confluence-vs-outline/": {
+  "hash": "ffeec19a3a392e8f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/fathom-vs-plausible/": {
+  "hash": "2748065550d32cf5",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/fathom-vs-umami/": {
+  "hash": "fabcd12d4e4d7d0a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/freshdesk-vs-chatwoot/": {
+  "hash": "a657cea75bf3e99f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/freshdesk-vs-freescout/": {
+  "hash": "5a995db480eae5c7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/freshdesk-vs-zammad/": {
+  "hash": "cb58a6fbde23fd72",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/google-analytics-vs-matomo/": {
+  "hash": "68096e52bcec83d6",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/google-analytics-vs-plausible/": {
+  "hash": "ee20b2c0c2e8c7b9",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/google-analytics-vs-posthog/": {
+  "hash": "c23b2b4055930ff6",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/google-analytics-vs-umami/": {
+  "hash": "25f4471320cb8788",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/helpscout-vs-freescout/": {
+  "hash": "3c775737784c0b54",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/intercom-vs-chatwoot/": {
+  "hash": "e7dd9fba303afb41",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/jira-vs-openproject/": {
+  "hash": "af26738b271c61b6",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/jira-vs-plane/": {
+  "hash": "fcea106e9e8668ec",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/lastpass-vs-passbolt/": {
+  "hash": "babdea75b67388c7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/lastpass-vs-vaultwarden/": {
+  "hash": "c2af96b7299f1fc2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/linear-vs-plane/": {
+  "hash": "02b952cfc0dc0fcc",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/make-vs-activepieces/": {
+  "hash": "a214261a141c33cf",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/make-vs-n8n/": {
+  "hash": "7641c91e151d3dde",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/mixpanel-vs-matomo/": {
+  "hash": "d9c88e43ad20def7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/mixpanel-vs-plausible/": {
+  "hash": "93298e325c6b832f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/mixpanel-vs-posthog/": {
+  "hash": "9f4db5e0f9358d40",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/monday-vs-openproject/": {
+  "hash": "869aa9722f18f734",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/monday-vs-plane/": {
+  "hash": "f6ec0ab8f44b9231",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/monday-vs-vikunja/": {
+  "hash": "ae63fa99a7c39def",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/notion-vs-affine/": {
+  "hash": "d2530bf0e1c5ffdc",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/notion-vs-bookstack/": {
+  "hash": "ffe25b337f16f903",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/notion-vs-docmost/": {
+  "hash": "0edb0f500e079cf2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/notion-vs-outline/": {
+  "hash": "bd049f8b0bbf7007",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/okta-vs-authentik/": {
+  "hash": "3b0d47e9a8693e66",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/okta-vs-keycloak/": {
+  "hash": "ebc8825b074eb614",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/pingdom-vs-gatus/": {
+  "hash": "b7b21920053b16ec",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/pingdom-vs-uptime-kuma/": {
+  "hash": "abef01d7b99865db",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/retool-vs-windmill/": {
+  "hash": "da5798f08bc23746",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/statuspage-vs-gatus/": {
+  "hash": "61a8922efdb7d625",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/statuspage-vs-uptime-kuma/": {
+  "hash": "17cd4a93f1c08f43",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/surveymonkey-vs-formbricks/": {
+  "hash": "5ebb9f908ce72aeb",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/surveymonkey-vs-limesurvey/": {
+  "hash": "017a98c29eaba749",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/tableau-vs-metabase/": {
+  "hash": "82a08cb79229c698",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/tableau-vs-superset/": {
+  "hash": "1b84e75d0572bac8",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/trello-vs-vikunja/": {
+  "hash": "cbec79e458d3de14",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/typeform-vs-formbricks/": {
+  "hash": "c2d13e606e3b1392",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/typeform-vs-limesurvey/": {
+  "hash": "7d98d464da9e0f23",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/typeform-vs-opnform/": {
+  "hash": "008870e26f0388f6",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/zapier-vs-activepieces/": {
+  "hash": "d2fa58bdfb715384",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/zapier-vs-n8n/": {
+  "hash": "b759ea589d580a91",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/zapier-vs-windmill/": {
+  "hash": "18c64678b2f3d6e7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/zendesk-vs-chatwoot/": {
+  "hash": "8cf3196b1520dc2d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/zendesk-vs-freescout/": {
+  "hash": "da2831b6be4722ec",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/es/vs/zendesk-vs-zammad/": {
+  "hash": "eb8e503782e34f5b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/": {
+  "hash": "8c387cd06904956e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/about/": {
+  "hash": "191dc0ebd4351560",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/alternatives/1password/": {
+  "hash": "24b46a2296961520",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/alternatives/amplitude/": {
+  "hash": "0cf9a92794f65897",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/alternatives/asana/": {
+  "hash": "dbf73d5c6dd6833e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/alternatives/auth0/": {
+  "hash": "e56b4aebbb5a486b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/alternatives/betteruptime/": {
+  "hash": "b707a31c7fc840cb",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/alternatives/bitwarden/": {
+  "hash": "d29fb0bf9dfa8457",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/alternatives/clerk/": {
+  "hash": "88b904195adc4e7a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/alternatives/confluence/": {
+  "hash": "f3862596386ac35c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/alternatives/fathom/": {
+  "hash": "cccde72b546dd5f8",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/alternatives/freshdesk/": {
+  "hash": "d0f146ed0fa3523b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/alternatives/google-analytics/": {
+  "hash": "c63319f6831f517f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/alternatives/helpscout/": {
+  "hash": "ce3452674ed0ba9e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/alternatives/intercom/": {
+  "hash": "849a576ec4760f39",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/alternatives/jira/": {
+  "hash": "29dd1ed94e819573",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/alternatives/lastpass/": {
+  "hash": "6022526ae0991124",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/alternatives/linear/": {
+  "hash": "154cd31a2490fd08",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/alternatives/make/": {
+  "hash": "4bfb868a4b48c569",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/alternatives/mixpanel/": {
+  "hash": "484062b7bbd9ae4c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/alternatives/monday/": {
+  "hash": "6b6a2a0a7a719857",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/alternatives/notion/": {
+  "hash": "1cbd27f96ccf62c1",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/alternatives/okta/": {
+  "hash": "bd840d006a22ce5c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/alternatives/pingdom/": {
+  "hash": "d3b8144f0257882d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/alternatives/retool/": {
+  "hash": "4ad3b48c26703ce5",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/alternatives/statuspage/": {
+  "hash": "80ad4a0318a5a10f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/alternatives/surveymonkey/": {
+  "hash": "5f4dd8ee8eed4c75",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/alternatives/tableau/": {
+  "hash": "333045b0bbb5ed3d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/alternatives/trello/": {
+  "hash": "eed793552341df68",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/alternatives/typeform/": {
+  "hash": "54043d1d865ed0bb",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/alternatives/zapier/": {
+  "hash": "9a53cbcbfd601ead",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/alternatives/zendesk/": {
+  "hash": "95e913eb2c2c87d4",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/category/analytics/": {
+  "hash": "4fa79dd6ae0ef421",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/category/auth/": {
+  "hash": "066a5f7a1a251908",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/category/automation/": {
+  "hash": "15932c6f7061139f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/category/bi/": {
+  "hash": "a2fce2e07bb74bfe",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/category/docs-wiki/": {
+  "hash": "319946d908fa0fdb",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/category/forms/": {
+  "hash": "5a5bb2483bea51c5",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/category/helpdesk/": {
+  "hash": "a805c3a91363fa03",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/category/password-manager/": {
+  "hash": "a4e84d4a1f199643",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/category/project-management/": {
+  "hash": "d0c7c9d4390849e6",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/category/status-page/": {
+  "hash": "7b1dc800eb6d63c8",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/compare/": {
+  "hash": "fbd24aaac021dc07",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/activepieces/1-user/": {
+  "hash": "76033d789d8e0839",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/activepieces/10-users/": {
+  "hash": "eb07c766ed8aee18",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/activepieces/100-users/": {
+  "hash": "2d0d8039c67bc1ee",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/activepieces/25-users/": {
+  "hash": "75c74cafa6c3099d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/activepieces/250-users/": {
+  "hash": "c8ccbf73e3c82ebc",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/activepieces/5-users/": {
+  "hash": "cc51a814d156d47e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/activepieces/50-users/": {
+  "hash": "2706b47648d3de8f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/affine/1-user/": {
+  "hash": "de6ec078bd457750",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/affine/10-users/": {
+  "hash": "14d2b5b145686c1c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/affine/100-users/": {
+  "hash": "fecd2554c05bb925",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/affine/25-users/": {
+  "hash": "298dec2168fce20f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/affine/250-users/": {
+  "hash": "b54129069a5efade",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/affine/5-users/": {
+  "hash": "2d088eed1e9777cc",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/affine/50-users/": {
+  "hash": "d79cd7c1f46011ce",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/authentik/1-user/": {
+  "hash": "a64edff873a5ef11",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/authentik/10-users/": {
+  "hash": "74a407f49225ef06",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/authentik/100-users/": {
+  "hash": "dbb78f8265fb0ed6",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/authentik/25-users/": {
+  "hash": "6e4610284b329b60",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/authentik/250-users/": {
+  "hash": "796912d646f02731",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/authentik/5-users/": {
+  "hash": "71eccc7b15031d7a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/authentik/50-users/": {
+  "hash": "1e9be8f03af72e0a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/bookstack/1-user/": {
+  "hash": "ffc185876526c3e9",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/bookstack/10-users/": {
+  "hash": "ed5567d9b9de9d48",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/bookstack/100-users/": {
+  "hash": "8e962fe346c3b7f6",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/bookstack/25-users/": {
+  "hash": "3b7eb3e2ddd98893",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/bookstack/250-users/": {
+  "hash": "4cf1a1046e246f3f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/bookstack/5-users/": {
+  "hash": "0fdcde431ad1fae2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/bookstack/50-users/": {
+  "hash": "cb38796768bc1012",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/chatwoot/1-user/": {
+  "hash": "293182ccf2f7e62b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/chatwoot/10-users/": {
+  "hash": "c45b646e59034dfc",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/chatwoot/100-users/": {
+  "hash": "1cb084fade436689",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/chatwoot/25-users/": {
+  "hash": "c07e360b4b55fd6d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/chatwoot/250-users/": {
+  "hash": "8829470cce7f6a70",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/chatwoot/5-users/": {
+  "hash": "c9b29b8f29dda071",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/chatwoot/50-users/": {
+  "hash": "402f68c302ad54b9",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/docmost/1-user/": {
+  "hash": "41d579cb41f6882f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/docmost/10-users/": {
+  "hash": "29d871ade4a9b317",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/docmost/100-users/": {
+  "hash": "1a4322e09d72d3c6",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/docmost/25-users/": {
+  "hash": "b5dc26bfa4c5dca7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/docmost/250-users/": {
+  "hash": "373aa02ce3c03508",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/docmost/5-users/": {
+  "hash": "932d10aa35c3f01e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/docmost/50-users/": {
+  "hash": "1683468b9348162f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/formbricks/1-user/": {
+  "hash": "bcd739e9c292e5a1",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/formbricks/10-users/": {
+  "hash": "dbec34be6923f4b4",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/formbricks/100-users/": {
+  "hash": "11afba875161f070",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/formbricks/25-users/": {
+  "hash": "7c3a59df1959698b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/formbricks/250-users/": {
+  "hash": "43c533ae14eb13c7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/formbricks/5-users/": {
+  "hash": "c454a52cf4cfc531",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/formbricks/50-users/": {
+  "hash": "0baad1e90de83f60",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/freescout/1-user/": {
+  "hash": "dde894888eba5a03",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/freescout/10-users/": {
+  "hash": "a4ab5fc8a397d0c0",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/freescout/100-users/": {
+  "hash": "8c76b9e1818bb494",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/freescout/25-users/": {
+  "hash": "1a29f0fbd4ee5e38",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/freescout/250-users/": {
+  "hash": "51e907410090a10a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/freescout/5-users/": {
+  "hash": "2d0159a0a47839d4",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/freescout/50-users/": {
+  "hash": "35a0a5b467544afd",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/gatus/1-user/": {
+  "hash": "bbd3eed4f9388b63",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/gatus/10-users/": {
+  "hash": "5588749fc4b2e36f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/gatus/100-users/": {
+  "hash": "3998199cf890dff2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/gatus/25-users/": {
+  "hash": "57098e6bd7268626",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/gatus/250-users/": {
+  "hash": "e4730978a85ffa2c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/gatus/5-users/": {
+  "hash": "4465954c3e72ced4",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/gatus/50-users/": {
+  "hash": "c040f45078d49f92",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/keycloak/1-user/": {
+  "hash": "8a56141412bf4bf3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/keycloak/10-users/": {
+  "hash": "3ab76593e5909861",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/keycloak/100-users/": {
+  "hash": "b5a36694ab862535",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/keycloak/25-users/": {
+  "hash": "ccf1de274c6ee9f5",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/keycloak/250-users/": {
+  "hash": "871beb32a58f77ec",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/keycloak/5-users/": {
+  "hash": "af6b48672d4cf3d5",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/keycloak/50-users/": {
+  "hash": "b6f6c26322438604",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/lightdash/1-user/": {
+  "hash": "479b668bf999ae75",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/lightdash/10-users/": {
+  "hash": "bda5970da4fdad39",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/lightdash/100-users/": {
+  "hash": "4acada8669d0c84c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/lightdash/25-users/": {
+  "hash": "a0c7549f4792d8fb",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/lightdash/250-users/": {
+  "hash": "fa4955ef5704f6f7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/lightdash/5-users/": {
+  "hash": "6de2eabb725d58b5",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/lightdash/50-users/": {
+  "hash": "ad3bda58a55e2c61",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/limesurvey/1-user/": {
+  "hash": "7d7649824682d6da",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/limesurvey/10-users/": {
+  "hash": "30cf02e258cc528a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/limesurvey/100-users/": {
+  "hash": "58dbdeef68e6c0ee",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/limesurvey/25-users/": {
+  "hash": "7b5b2f5ccbe7b381",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/limesurvey/250-users/": {
+  "hash": "96810e8777a41e72",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/limesurvey/5-users/": {
+  "hash": "9fbd82266be3819d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/limesurvey/50-users/": {
+  "hash": "c03ea23c2f97fbdb",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/matomo/1-user/": {
+  "hash": "5ed854120135610e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/matomo/10-users/": {
+  "hash": "cec8ca7f9d2054ec",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/matomo/100-users/": {
+  "hash": "24fc071629769fc1",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/matomo/25-users/": {
+  "hash": "a64a1b0bb147c8ae",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/matomo/250-users/": {
+  "hash": "5ae7b12af45be67a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/matomo/5-users/": {
+  "hash": "98d1ac64e3fe849f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/matomo/50-users/": {
+  "hash": "dd50b428cfd4cbb8",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/metabase/1-user/": {
+  "hash": "75c8112ab26b9b42",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/metabase/10-users/": {
+  "hash": "a9b7e06a68acd1f9",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/metabase/100-users/": {
+  "hash": "da92eec883396202",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/metabase/25-users/": {
+  "hash": "452eeae5f5f8590d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/metabase/250-users/": {
+  "hash": "1c4a0f52fbcfb9a3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/metabase/5-users/": {
+  "hash": "74b081cbd76a7c57",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/metabase/50-users/": {
+  "hash": "9ed5bae9ac4d5be7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/n8n/1-user/": {
+  "hash": "49eeed3943cb4662",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/n8n/10-users/": {
+  "hash": "40bb80f7dd699c44",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/n8n/100-users/": {
+  "hash": "4df7b7debbfbf4bf",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/n8n/25-users/": {
+  "hash": "c15bfef4b57e6611",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/n8n/250-users/": {
+  "hash": "14878d4a79e1078e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/n8n/5-users/": {
+  "hash": "e69971db782aada8",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/n8n/50-users/": {
+  "hash": "b901ff397f0559ca",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/openproject/1-user/": {
+  "hash": "fda6a80b387ca63a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/openproject/10-users/": {
+  "hash": "580171ef041576c2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/openproject/100-users/": {
+  "hash": "47aa2517202fbe64",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/openproject/25-users/": {
+  "hash": "c5686dc48e9dbd93",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/openproject/250-users/": {
+  "hash": "dc41dfae724c2000",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/openproject/5-users/": {
+  "hash": "45cf6997c757571a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/openproject/50-users/": {
+  "hash": "00d4983f73c8bde0",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/opnform/1-user/": {
+  "hash": "0de12b10a1d54064",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/opnform/10-users/": {
+  "hash": "ac5e28af5d3e86bb",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/opnform/100-users/": {
+  "hash": "6adae67a930eb984",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/opnform/25-users/": {
+  "hash": "b2498c142a76649b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/opnform/250-users/": {
+  "hash": "bbabc5280e2dd191",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/opnform/5-users/": {
+  "hash": "e44edc5c6ca11a65",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/opnform/50-users/": {
+  "hash": "aa5728e898ef4e2d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/outline/1-user/": {
+  "hash": "7d52e265dc6a0f7d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/outline/10-users/": {
+  "hash": "abbb2b538aa7d168",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/outline/100-users/": {
+  "hash": "e1c2104405deb616",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/outline/25-users/": {
+  "hash": "34f6b6b736436568",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/outline/250-users/": {
+  "hash": "1b889fef159055c7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/outline/5-users/": {
+  "hash": "3f00606a3dba3257",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/outline/50-users/": {
+  "hash": "1e0afc90330c03b4",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/passbolt/1-user/": {
+  "hash": "a7d81669f8aa0848",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/passbolt/10-users/": {
+  "hash": "ae2744799b37b55a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/passbolt/100-users/": {
+  "hash": "48dcb3e303675536",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/passbolt/25-users/": {
+  "hash": "84d49b7308137ade",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/passbolt/250-users/": {
+  "hash": "4e74bda1f00347ca",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/passbolt/5-users/": {
+  "hash": "535227a412790e39",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/passbolt/50-users/": {
+  "hash": "a3e5ce17498759fb",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/plane/1-user/": {
+  "hash": "84f55e81635a1933",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/plane/10-users/": {
+  "hash": "237eec164e2f4c30",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/plane/100-users/": {
+  "hash": "d8507b58d4354c0a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/plane/25-users/": {
+  "hash": "d8f447062c402bc1",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/plane/250-users/": {
+  "hash": "f3e32f74ed0684bf",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/plane/5-users/": {
+  "hash": "54a35b5fa0d20326",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/plane/50-users/": {
+  "hash": "84885da5e341b56f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/plausible/1-user/": {
+  "hash": "93aa3c14db56f0f2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/plausible/10-users/": {
+  "hash": "72a3a42a706300cd",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/plausible/100-users/": {
+  "hash": "fefeb62a6dcf4b4b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/plausible/25-users/": {
+  "hash": "4f21f7900d6c74ff",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/plausible/250-users/": {
+  "hash": "77a9cce103d7b1c7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/plausible/5-users/": {
+  "hash": "62fd4348de716690",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/plausible/50-users/": {
+  "hash": "3958e7b17ff4bea4",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/posthog/1-user/": {
+  "hash": "c8fc67e5427d1e2b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/posthog/10-users/": {
+  "hash": "44f02a0dc1d49e8d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/posthog/100-users/": {
+  "hash": "dd79abdf50438f51",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/posthog/25-users/": {
+  "hash": "cf5d2cb7ea9cf2f0",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/posthog/250-users/": {
+  "hash": "9fbddc044f1f780f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/posthog/5-users/": {
+  "hash": "ac9a3ece014cf890",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/posthog/50-users/": {
+  "hash": "7986495cec6371a0",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/superset/1-user/": {
+  "hash": "812ed6f7a8e4e777",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/superset/10-users/": {
+  "hash": "700ba607d09621d2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/superset/100-users/": {
+  "hash": "740ba4096d5071e3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/superset/25-users/": {
+  "hash": "d26e8cc275bba465",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/superset/250-users/": {
+  "hash": "a4119231fef16888",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/superset/5-users/": {
+  "hash": "31bdb5c0f03f3bec",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/superset/50-users/": {
+  "hash": "136352a80d92a7e3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/umami/1-user/": {
+  "hash": "2f6977f2860a6762",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/umami/10-users/": {
+  "hash": "b1b7511289b8485f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/umami/100-users/": {
+  "hash": "f32c7f68477acd81",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/umami/25-users/": {
+  "hash": "9c0bbf0365d19373",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/umami/250-users/": {
+  "hash": "373f41fdbef334ef",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/umami/5-users/": {
+  "hash": "05ca63304d484b23",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/umami/50-users/": {
+  "hash": "77e6eb73f7ad9347",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/uptime-kuma/1-user/": {
+  "hash": "6719913030c245b5",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/uptime-kuma/10-users/": {
+  "hash": "3c6d9d8a92e2d1aa",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/uptime-kuma/100-users/": {
+  "hash": "394da95720d29e75",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/uptime-kuma/25-users/": {
+  "hash": "5228c739cdf05fa0",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/uptime-kuma/250-users/": {
+  "hash": "74626d17f3397df9",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/uptime-kuma/5-users/": {
+  "hash": "80c8d27b20669e9c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/uptime-kuma/50-users/": {
+  "hash": "ec98c6e1e889a301",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/vaultwarden/1-user/": {
+  "hash": "5e54f172cd1c5820",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/vaultwarden/10-users/": {
+  "hash": "9bfa82da910a48b5",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/vaultwarden/100-users/": {
+  "hash": "35bb827a498d05cb",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/vaultwarden/25-users/": {
+  "hash": "ee424f6469938c5a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/vaultwarden/250-users/": {
+  "hash": "527b4245ed80f0ef",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/vaultwarden/5-users/": {
+  "hash": "2b35c1e6c418335f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/vaultwarden/50-users/": {
+  "hash": "d17fc0d2f3b9ed6b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/vikunja/1-user/": {
+  "hash": "17134dde807480ad",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/vikunja/10-users/": {
+  "hash": "9d5c9b42a0960eff",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/vikunja/100-users/": {
+  "hash": "ed4c68dfbef7dc22",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/vikunja/25-users/": {
+  "hash": "e4891d28cc68de7d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/vikunja/250-users/": {
+  "hash": "b05f7d8a4aaa99a2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/vikunja/5-users/": {
+  "hash": "8954ede362b75411",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/vikunja/50-users/": {
+  "hash": "cb772b9297a17cf5",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/windmill/1-user/": {
+  "hash": "08e582ef4034f1d7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/windmill/10-users/": {
+  "hash": "cc0170e9196db077",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/windmill/100-users/": {
+  "hash": "ca54efc9776d7a88",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/windmill/25-users/": {
+  "hash": "19dc016d6a49e610",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/windmill/250-users/": {
+  "hash": "1cb850b8c26a72e2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/windmill/5-users/": {
+  "hash": "25b1eb258c732032",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/windmill/50-users/": {
+  "hash": "825880c5d2b01583",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/zammad/1-user/": {
+  "hash": "598e9623923c7c30",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/zammad/10-users/": {
+  "hash": "fdb85a485d1fedb1",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/zammad/100-users/": {
+  "hash": "b4a438376d105c86",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/zammad/25-users/": {
+  "hash": "ac35196179244070",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/zammad/250-users/": {
+  "hash": "79b55627fb76879c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/zammad/5-users/": {
+  "hash": "e6c1a120141f825d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/zammad/50-users/": {
+  "hash": "428eccc86d0dd503",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/zitadel/1-user/": {
+  "hash": "0aa52b6028c4c3ed",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/zitadel/10-users/": {
+  "hash": "dcd0c6c2d2c29762",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/zitadel/100-users/": {
+  "hash": "9673176955802a14",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/zitadel/25-users/": {
+  "hash": "ec917a2d67fb2943",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/zitadel/250-users/": {
+  "hash": "f4b039edf771199d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/zitadel/5-users/": {
+  "hash": "317727e2100088dc",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/cost/zitadel/50-users/": {
+  "hash": "730fd8537c9625fc",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/disclosure/": {
+  "hash": "b8653b10d5698d8a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/hosting/": {
+  "hash": "0805b04ac06219e5",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/hosting/digitalocean/": {
+  "hash": "4eae5d0d1f6f8ec0",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/hosting/hetzner/": {
+  "hash": "631089dc2a7d3569",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/hosting/kamatera/": {
+  "hash": "2c290f4c586bda09",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/hosting/pikapods/": {
+  "hash": "151c1cdb09b83059",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/hosting/vultr/": {
+  "hash": "cd030012e97d69b2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/methodology/": {
+  "hash": "acad421d2fde988e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/migration-checklist/": {
+  "hash": "92ed58ef5a8f831b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/privacy/": {
+  "hash": "7e985631ea5712fd",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/self-host/": {
+  "hash": "531ecca9b11ca43b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/self-host/activepieces/": {
+  "hash": "18a077f43af0d501",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/self-host/affine/": {
+  "hash": "90229c36f3746898",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/self-host/authentik/": {
+  "hash": "838d3e10ac200aed",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/self-host/bookstack/": {
+  "hash": "8e80f592822ceec7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/self-host/chatwoot/": {
+  "hash": "f2517008387d2c3a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/self-host/docmost/": {
+  "hash": "065d3bcc86298c3a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/self-host/formbricks/": {
+  "hash": "f344c38755c439d2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/self-host/freescout/": {
+  "hash": "d11bbf3f98bb4d82",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/self-host/gatus/": {
+  "hash": "813f7e448bfa065f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/self-host/keycloak/": {
+  "hash": "8ecd564d27b08b69",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/self-host/lightdash/": {
+  "hash": "0818194e61f0f02a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/self-host/limesurvey/": {
+  "hash": "0766a798b01bece7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/self-host/matomo/": {
+  "hash": "1bafa89ce4394bcd",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/self-host/metabase/": {
+  "hash": "55cceb0035e4e226",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/self-host/n8n/": {
+  "hash": "b76d4676bcd26d90",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/self-host/openproject/": {
+  "hash": "04b886a1a7013867",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/self-host/opnform/": {
+  "hash": "53411d74d303f2eb",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/self-host/outline/": {
+  "hash": "888ce74bc89523a8",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/self-host/passbolt/": {
+  "hash": "4d98a7cac19e1c57",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/self-host/plane/": {
+  "hash": "464174aca4f7341b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/self-host/plausible/": {
+  "hash": "56e3279bb03a94e6",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/self-host/posthog/": {
+  "hash": "76f815de50632a2b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/self-host/superset/": {
+  "hash": "59a73f0fecc70d8d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/self-host/umami/": {
+  "hash": "5a8f2bde56643757",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/self-host/uptime-kuma/": {
+  "hash": "cfc620a1c00a45f9",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/self-host/vaultwarden/": {
+  "hash": "ce2d7cbcd4f2b574",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/self-host/vikunja/": {
+  "hash": "35925eca079cab0d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/self-host/windmill/": {
+  "hash": "5bb619caf09fa016",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/self-host/zammad/": {
+  "hash": "86a7c9c6dee7d887",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/self-host/zitadel/": {
+  "hash": "46c153daffe7d91c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/1password-vs-passbolt/": {
+  "hash": "eafef9d228a69ef3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/1password-vs-vaultwarden/": {
+  "hash": "a66879ced80526ba",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/amplitude-vs-posthog/": {
+  "hash": "818d075885091faa",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/asana-vs-plane/": {
+  "hash": "9fe23cded281ae38",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/asana-vs-vikunja/": {
+  "hash": "e39408f34f224295",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/auth0-vs-authentik/": {
+  "hash": "fce78addb62bf351",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/auth0-vs-keycloak/": {
+  "hash": "8c3bd6f5920a409b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/auth0-vs-zitadel/": {
+  "hash": "97b3f8596935c146",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/betteruptime-vs-uptime-kuma/": {
+  "hash": "aadb69121e7f0a8b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/bitwarden-vs-vaultwarden/": {
+  "hash": "b3943c4ceaed2519",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/clerk-vs-authentik/": {
+  "hash": "6127f2778eeb4be9",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/clerk-vs-keycloak/": {
+  "hash": "e47fdd94d0571872",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/clerk-vs-zitadel/": {
+  "hash": "7f025e71faf65f46",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/confluence-vs-bookstack/": {
+  "hash": "7f246a8b75608dda",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/confluence-vs-docmost/": {
+  "hash": "99687dbdd1f1fb01",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/confluence-vs-outline/": {
+  "hash": "03c243f3f2449d8c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/fathom-vs-plausible/": {
+  "hash": "ebf60792576b4610",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/fathom-vs-umami/": {
+  "hash": "e81f14dbf373f14d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/freshdesk-vs-chatwoot/": {
+  "hash": "379405048a9a4151",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/freshdesk-vs-freescout/": {
+  "hash": "587799ab351d23c5",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/freshdesk-vs-zammad/": {
+  "hash": "bf7daeef55fa8559",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/google-analytics-vs-matomo/": {
+  "hash": "5bf3e7e7fd473d8f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/google-analytics-vs-plausible/": {
+  "hash": "219fce5d6d3b2056",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/google-analytics-vs-posthog/": {
+  "hash": "2588cef91577d2b6",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/google-analytics-vs-umami/": {
+  "hash": "53ee2a0d274bf205",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/helpscout-vs-freescout/": {
+  "hash": "5f0de3274cd2f0ea",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/intercom-vs-chatwoot/": {
+  "hash": "bdbbeceda16a9259",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/jira-vs-openproject/": {
+  "hash": "3dca49169136b13e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/jira-vs-plane/": {
+  "hash": "2f14ec070fd61c22",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/lastpass-vs-passbolt/": {
+  "hash": "92aa58fbfefc03b6",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/lastpass-vs-vaultwarden/": {
+  "hash": "15f331073293a6bc",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/linear-vs-plane/": {
+  "hash": "889bcf0232e4dda2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/make-vs-activepieces/": {
+  "hash": "005e129f67021599",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/make-vs-n8n/": {
+  "hash": "8269baaaf380fa72",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/mixpanel-vs-matomo/": {
+  "hash": "d97c083dcadaf619",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/mixpanel-vs-plausible/": {
+  "hash": "57217bbfe81687e0",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/mixpanel-vs-posthog/": {
+  "hash": "2c165eac7616277e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/monday-vs-openproject/": {
+  "hash": "6f7572fb3111c00a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/monday-vs-plane/": {
+  "hash": "1f5329c2eba9c7f3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/monday-vs-vikunja/": {
+  "hash": "4cd6fe3f40b75bad",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/notion-vs-affine/": {
+  "hash": "514db2d461fd8b4e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/notion-vs-bookstack/": {
+  "hash": "8cf7e92de1b8ed2c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/notion-vs-docmost/": {
+  "hash": "c7ee262063e01304",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/notion-vs-outline/": {
+  "hash": "9305e07e03dd9a92",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/okta-vs-authentik/": {
+  "hash": "4a5199c8c3f0a4c4",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/okta-vs-keycloak/": {
+  "hash": "6213a6da34b7e7c8",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/pingdom-vs-gatus/": {
+  "hash": "91a708d6f5e61f3c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/pingdom-vs-uptime-kuma/": {
+  "hash": "42cb93ff2dcb40a6",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/retool-vs-windmill/": {
+  "hash": "f1dfd606c36bbadf",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/statuspage-vs-gatus/": {
+  "hash": "890d8b53d55ee667",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/statuspage-vs-uptime-kuma/": {
+  "hash": "f790a1eac3a56b26",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/surveymonkey-vs-formbricks/": {
+  "hash": "a00132d7b63f6542",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/surveymonkey-vs-limesurvey/": {
+  "hash": "0e89dab77b6a32bc",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/tableau-vs-metabase/": {
+  "hash": "862014aa2e4c4e3d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/tableau-vs-superset/": {
+  "hash": "bc17c25ab0e5cf5c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/trello-vs-vikunja/": {
+  "hash": "fdd091cd9aaf564a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/typeform-vs-formbricks/": {
+  "hash": "00790a4e023be870",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/typeform-vs-limesurvey/": {
+  "hash": "e5519cec7b03f88c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/typeform-vs-opnform/": {
+  "hash": "43efd37294f29c70",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/zapier-vs-activepieces/": {
+  "hash": "1cb580132e2b07c0",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/zapier-vs-n8n/": {
+  "hash": "10b1799affac0c07",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/zapier-vs-windmill/": {
+  "hash": "2a2f35e90a821c16",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/zendesk-vs-chatwoot/": {
+  "hash": "d9cb0751c1e4738c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/zendesk-vs-freescout/": {
+  "hash": "e3fdb1eb1696b6e2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/fr/vs/zendesk-vs-zammad/": {
+  "hash": "32ffac1f08b1ad04",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/hosting/": {
+  "hash": "d7b6bf135d9efcf9",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/hosting/digitalocean/": {
+  "hash": "bfb949147306632c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/hosting/hetzner/": {
+  "hash": "63b5287c1a7e212e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/hosting/kamatera/": {
+  "hash": "3e1911e6e9be903d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/hosting/pikapods/": {
+  "hash": "3fe7cf9378f49724",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/hosting/vultr/": {
+  "hash": "9d65739b4e30a2c0",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/methodology/": {
+  "hash": "85978f2eaca48738",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/migration-checklist/": {
+  "hash": "effda780f8e5bbcd",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/privacy/": {
+  "hash": "17abd5db471c81fa",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/self-host/": {
+  "hash": "a3ef5156148edace",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/self-host/activepieces/": {
+  "hash": "22fc9ec3668f80d5",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/self-host/affine/": {
+  "hash": "5de3d3c564d1a3b8",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/self-host/authentik/": {
+  "hash": "450d7da78072109b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/self-host/bookstack/": {
+  "hash": "b910cd164362910e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/self-host/chatwoot/": {
+  "hash": "fb22badfa9aef36c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/self-host/docmost/": {
+  "hash": "09285ec2b10f9298",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/self-host/formbricks/": {
+  "hash": "72fef6d7d4c40c05",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/self-host/freescout/": {
+  "hash": "1df1c6388c1ebdde",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/self-host/gatus/": {
+  "hash": "03abd45a61d6ce5b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/self-host/keycloak/": {
+  "hash": "336c5bc80a43b5cd",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/self-host/lightdash/": {
+  "hash": "71dc89be5c4af246",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/self-host/limesurvey/": {
+  "hash": "ac9fdfaec645e102",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/self-host/matomo/": {
+  "hash": "1942fe463d9be2e2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/self-host/metabase/": {
+  "hash": "6000a52f37eb936e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/self-host/n8n/": {
+  "hash": "c9857edf753e2f47",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/self-host/openproject/": {
+  "hash": "41d682ac2bb0318e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/self-host/opnform/": {
+  "hash": "eaee723c77548c5d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/self-host/outline/": {
+  "hash": "b12bc2251e7c414b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/self-host/passbolt/": {
+  "hash": "430971d5b8295dec",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/self-host/plane/": {
+  "hash": "77f5c441443dca27",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/self-host/plausible/": {
+  "hash": "05dd27a95700ce3c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/self-host/posthog/": {
+  "hash": "0bae3e935a4fe9e1",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/self-host/superset/": {
+  "hash": "f18669e2270f5a61",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/self-host/umami/": {
+  "hash": "3db37452ebd13d9a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/self-host/uptime-kuma/": {
+  "hash": "36503de1d4d2b15c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/self-host/vaultwarden/": {
+  "hash": "1bcdcd0945e7bb13",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/self-host/vikunja/": {
+  "hash": "6f4cf0f65fc28308",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/self-host/windmill/": {
+  "hash": "1633419592ee58ee",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/self-host/zammad/": {
+  "hash": "0cb251df451e3fda",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/self-host/zitadel/": {
+  "hash": "48962213f120c1b0",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/1password-vs-passbolt/": {
+  "hash": "24c4a8c6426da2df",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/1password-vs-vaultwarden/": {
+  "hash": "c2ff3b0f920443a8",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/amplitude-vs-posthog/": {
+  "hash": "6bfbcef887624df5",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/asana-vs-plane/": {
+  "hash": "bf038178dfc91675",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/asana-vs-vikunja/": {
+  "hash": "5a4b359f6d51da70",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/auth0-vs-authentik/": {
+  "hash": "915b058acf57e634",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/auth0-vs-keycloak/": {
+  "hash": "d591441299692a1f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/auth0-vs-zitadel/": {
+  "hash": "1aedd5932b04677a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/betteruptime-vs-uptime-kuma/": {
+  "hash": "c22a33e3de142221",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/bitwarden-vs-vaultwarden/": {
+  "hash": "1a161828a0b5b542",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/clerk-vs-authentik/": {
+  "hash": "08534e384fcc29cd",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/clerk-vs-keycloak/": {
+  "hash": "a6ed004abad241d6",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/clerk-vs-zitadel/": {
+  "hash": "3fd68b7a828d24bc",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/confluence-vs-bookstack/": {
+  "hash": "0285acfbecb5bc39",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/confluence-vs-docmost/": {
+  "hash": "f270161d657e5b49",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/confluence-vs-outline/": {
+  "hash": "b3aa7113555e749d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/fathom-vs-plausible/": {
+  "hash": "5afded2b2bb9505d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/fathom-vs-umami/": {
+  "hash": "85457884681eb5db",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/freshdesk-vs-chatwoot/": {
+  "hash": "79d96a5b73904057",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/freshdesk-vs-freescout/": {
+  "hash": "47ac250be1a2a3d8",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/freshdesk-vs-zammad/": {
+  "hash": "2169f23b4b7dcbda",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/google-analytics-vs-matomo/": {
+  "hash": "3479e97aa9e35643",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/google-analytics-vs-plausible/": {
+  "hash": "c36e280e88e07835",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/google-analytics-vs-posthog/": {
+  "hash": "e6da2155bc03a696",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/google-analytics-vs-umami/": {
+  "hash": "522b82b41b9ffc07",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/helpscout-vs-freescout/": {
+  "hash": "22cc16952622fc84",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/intercom-vs-chatwoot/": {
+  "hash": "95026835a92c6dd3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/jira-vs-openproject/": {
+  "hash": "f9542bfd16d7c3fb",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/jira-vs-plane/": {
+  "hash": "774573bbaca493ce",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/lastpass-vs-passbolt/": {
+  "hash": "7eed13a5198b0b1d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/lastpass-vs-vaultwarden/": {
+  "hash": "6f741b9ebc4b67ff",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/linear-vs-plane/": {
+  "hash": "47ed6494ecb0c285",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/make-vs-activepieces/": {
+  "hash": "3adc623cba8aeaf2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/make-vs-n8n/": {
+  "hash": "38f94bf32ec2c999",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/mixpanel-vs-matomo/": {
+  "hash": "544146233d98954b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/mixpanel-vs-plausible/": {
+  "hash": "e81a222c02e7c07d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/mixpanel-vs-posthog/": {
+  "hash": "ceb6914aa9553e7c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/monday-vs-openproject/": {
+  "hash": "959791cda5b61406",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/monday-vs-plane/": {
+  "hash": "0092f02c32a2c5af",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/monday-vs-vikunja/": {
+  "hash": "ffcb24363502068a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/notion-vs-affine/": {
+  "hash": "6c09cdb743d198da",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/notion-vs-bookstack/": {
+  "hash": "310d4f14c6843caa",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/notion-vs-docmost/": {
+  "hash": "6a49782ee702310b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/notion-vs-outline/": {
+  "hash": "37b4f4d3915b39e6",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/okta-vs-authentik/": {
+  "hash": "0dbb3994ba367c6d",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/okta-vs-keycloak/": {
+  "hash": "9562d3d596f9ba8a",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/pingdom-vs-gatus/": {
+  "hash": "dc622d4417cd96d4",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/pingdom-vs-uptime-kuma/": {
+  "hash": "ac9e7cdac39112b6",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/retool-vs-windmill/": {
+  "hash": "0879483936ebbbb4",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/statuspage-vs-gatus/": {
+  "hash": "07e5041c55d7d44b",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/statuspage-vs-uptime-kuma/": {
+  "hash": "d1bbd9fba29a09a2",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/surveymonkey-vs-formbricks/": {
+  "hash": "a6ba19344aab8856",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/surveymonkey-vs-limesurvey/": {
+  "hash": "83d188ea0b88bb20",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/tableau-vs-metabase/": {
+  "hash": "7e3ecadd35056a63",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/tableau-vs-superset/": {
+  "hash": "af032df62dc2fe5e",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/trello-vs-vikunja/": {
+  "hash": "5b56c608420ecbbf",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/typeform-vs-formbricks/": {
+  "hash": "86092dfd8b11f589",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/typeform-vs-limesurvey/": {
+  "hash": "c6eab616def507a9",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/typeform-vs-opnform/": {
+  "hash": "422a674216c0cef3",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/zapier-vs-activepieces/": {
+  "hash": "9624fbf617ca7b31",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/zapier-vs-n8n/": {
+  "hash": "289f9c7c1f41ff4f",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/zapier-vs-windmill/": {
+  "hash": "e8d02383c1dbfff7",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/zendesk-vs-chatwoot/": {
+  "hash": "6e9fdc04f12b8d24",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/zendesk-vs-freescout/": {
+  "hash": "4a9cedace4ada9f4",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ },
+ "/vs/zendesk-vs-zammad/": {
+  "hash": "071f2c845332752c",
+  "modified": "2026-09-14",
+  "published": "2026-09-14"
+ }
+}
