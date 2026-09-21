@@ -190,7 +190,7 @@
     "kamatera": {
       "billing_note": "Feste Monatstarife mit minutengenauer Abrechnung. Die Preisseite nennt zusätzlichen Traffic mit 0,01 $ pro GB und zusätzlichen Speicher mit 0,05 $ pro GB pro Monat; beides ist in den Zahlen dieser Website nicht enthalten.",
       "price_note": "Abgelesen von den drei festen Tarifen auf der Preisseite von Kamatera am 2026-09-14. Kamatera verkauft auch individuelle Konfigurationen über einen Rechner, dessen Preise pro Komponente nicht angezeigt wurden, daher werden hier nur die festen Tarife verwendet.",
-      "strengths": ["Sein 1-GB-Tarif ist der günstigste 1-GB-Server unter den von uns berechneten Anbietern", "Die festen Tarife nutzen laut Preisseite dedizierte CPU-Threads", "Minutengenaue Abrechnung, praktisch für kurze Tests"],
+      "strengths": ["Sein 1-GB-Tarif ist gleichauf mit VPSServer der günstigste 1-GB-Server unter den Anbietern, deren Preise wir erfasst haben", "Die festen Tarife nutzen laut Preisseite dedizierte CPU-Threads", "Minutengenaue Abrechnung, praktisch für kurze Tests"],
       "weaknesses": ["Jeder feste Tarif enthält nur 20 GB Speicherplatz, daher brauchen die meisten Multi-Container-Tools kostenpflichtigen Zusatzspeicher", "Oberhalb von 1 GB Arbeitsspeicher kosten die festen Tarife mehr als DigitalOcean für denselben RAM"]
     },
     "vultr": {
@@ -206,6 +206,7 @@
       "price_note": "Die ressourcenbasierten Preise konnten nicht automatisch abgelesen werden.",
       "strengths": ["Keinerlei Administrationsarbeit, wodurch der Posten für Arbeitszeit ganz entfällt", "Preise pro App passen zu einem einzelnen Tool", "Die ehrlich günstigste Option unterhalb von etwa 10 Nutzern"],
       "weaknesses": ["Kuratierter App-Katalog, keine freie Auswahl", "Weniger Kontrolle als ein VPS", "Die Kosten steigen pro App statt pro Server"]
-    }
+    },
+    "vpsserver": {"billing_note": "Konfigurierbare Server mit monatlicher Abrechnung oder minutengenauer Abrechnung bei Stundentarifen. Je nach Standort sind 1 bis 5 TB Traffic pro Monat enthalten, zusätzlicher Traffic kostet 0,01 $ pro GB. Preise ohne Mehrwertsteuer.", "price_note": "Am 2026-09-21 im Konfigurator auf der Preisseite von VPSServer abgelesen: Starter-Server (Type A) mit Ubuntu Server bei monatlicher Abrechnung. Der Konfigurator legt Arbeitsspeicher, Prozessoren und Speicherplatz getrennt fest; die hier aufgeführten Tarife sind die Kombinationen, deren Preise wir erfasst haben.", "strengths": ["Der niedrigste Preis pro Gigabyte Arbeitsspeicher unter den Anbietern, deren Preise wir erfasst haben, bei jeder Größe ab 2 GB", "Arbeitsspeicher, Prozessoren und Speicherplatz werden getrennt gewählt, ein speicherhungriges Tool erzwingt also keinen größeren Tarif", "Minutengenaue Abrechnung bei Stundentarifen, praktisch für kurze Tests"], "weaknesses": ["Die hier bepreisten Starter-Server (Type A) beschreibt VPSServer als gedacht für dauerhaft laufende Aufgaben statt für hohe Leistung; die Typen Standard und Enterprise kosten mehr", "Laut eigenen Bedingungen gehört VPSServer zur selben Unternehmensgruppe wie Kamatera, die beiden sind also keine unabhängigen Anbieter"]}
   }
 }

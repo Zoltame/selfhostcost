@@ -190,7 +190,7 @@
     "kamatera": {
       "billing_note": "Planes mensuales fijos, facturados por minuto. La página de precios indica la transferencia adicional a 0,01 $ por GB y el almacenamiento adicional a 0,05 $ por GB al mes; ninguno de los dos está incluido en las cifras de este sitio.",
       "price_note": "Leído de los tres planes fijos de la página de precios de Kamatera el 2026-09-14. Kamatera también vende configuraciones a medida mediante una calculadora cuyos precios por componente no se mostraban, así que aquí solo se usan los planes fijos.",
-      "strengths": ["Su plan de 1 GB es el servidor de 1 GB más barato entre los proveedores que hemos calculado", "Los planes fijos usan hilos de CPU dedicados, según su página de precios", "Facturación por minuto, práctica para pruebas cortas"],
+      "strengths": ["Su plan de 1 GB empata con VPSServer como el servidor de 1 GB más barato entre los proveedores cuyos precios hemos leído", "Los planes fijos usan hilos de CPU dedicados, según su página de precios", "Facturación por minuto, práctica para pruebas cortas"],
       "weaknesses": ["Cada plan fijo incluye solo 20 GB de disco, así que la mayoría de las herramientas con varios contenedores necesitan almacenamiento adicional de pago", "Por encima de 1 GB de memoria, los planes fijos cuestan más que DigitalOcean por la misma RAM"]
     },
     "vultr": {
@@ -206,6 +206,7 @@
       "price_note": "Los precios por recursos no se pudieron leer de forma automática.",
       "strengths": ["Ningún trabajo de administración, lo que elimina por completo la línea de tiempo dedicado", "El precio por aplicación encaja con una sola herramienta", "La opción honesta más barata por debajo de unos 10 usuarios"],
       "weaknesses": ["Catálogo de aplicaciones seleccionado, no libre", "Menos control que un VPS", "Los costes crecen por aplicación en lugar de por servidor"]
-    }
+    },
+    "vpsserver": {"billing_note": "Servidores configurables con facturación mensual, o por minuto en los planes por horas. Según la ubicación, se incluyen de 1 a 5 TB de tráfico al mes, y el tráfico adicional cuesta 0,01 $ por GB. Precios sin IVA.", "price_note": "Leído el 2026-09-21 en el configurador de la página de precios de VPSServer: servidores Starter (Type A) con Ubuntu Server y facturación mensual. El configurador fija por separado la memoria, los procesadores y el disco; los planes que aparecen aquí son las combinaciones cuyo precio hemos leído.", "strengths": ["El precio por gigabyte de memoria más bajo entre los proveedores cuyos precios hemos leído, en todos los tamaños a partir de 2 GB", "Memoria, procesadores y disco se eligen por separado, así que una herramienta que consume mucho disco no obliga a un plan mayor", "Facturación por minuto en los planes por horas, útil para pruebas cortas"], "weaknesses": ["VPSServer presenta los servidores Starter (Type A) que aquí se comparan como pensados para tareas siempre activas más que para alto rendimiento; sus tipos Standard y Enterprise cuestan más", "Según sus propias condiciones pertenece al mismo grupo empresarial que Kamatera, así que no son proveedores independientes"]}
   }
 }

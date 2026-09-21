@@ -190,7 +190,7 @@
     "kamatera": {
       "billing_note": "Offres mensuelles fixes, facturées à la minute. La page tarifaire indique le trafic supplémentaire à 0,01 $ par Go et le stockage supplémentaire à 0,05 $ par Go par mois ; aucun des deux n'est inclus dans les chiffres de ce site.",
       "price_note": "Relevé sur les trois offres fixes de la page tarifaire de Kamatera le 2026-09-14. Kamatera vend aussi des configurations sur mesure via un calculateur dont les prix par composant n'étaient pas affichés : seules les offres fixes sont utilisées ici.",
-      "strengths": ["Son offre à 1 Go est le serveur 1 Go le moins cher parmi les hébergeurs que nous avons chiffrés", "Les offres fixes utilisent des threads CPU dédiés, selon la page tarifaire", "Facturation à la minute, pratique pour des essais courts"],
+      "strengths": ["Son offre à 1 Go est, à égalité avec VPSServer, le serveur 1 Go le moins cher parmi les hébergeurs que nous avons chiffrés", "Les offres fixes utilisent des threads CPU dédiés, selon la page tarifaire", "Facturation à la minute, pratique pour des essais courts"],
       "weaknesses": ["Chaque offre fixe n'inclut que 20 Go de disque : la plupart des outils multi-conteneurs demandent du stockage supplémentaire payant", "Au-delà de 1 Go de mémoire, les offres fixes coûtent plus cher que DigitalOcean pour la même RAM"]
     },
     "vultr": {
@@ -206,6 +206,7 @@
       "price_note": "La tarification à la ressource n'a pas pu être relevée automatiquement.",
       "strengths": ["Aucun travail d'administration, ce qui supprime entièrement la ligne de temps passé", "La tarification par application convient à un outil unique", "L'option honnête la moins chère sous une dizaine d'utilisateurs environ"],
       "weaknesses": ["Catalogue d'applications sélectionné, pas arbitraire", "Moins de contrôle qu'un VPS", "Les coûts augmentent par application plutôt que par serveur"]
-    }
+    },
+    "vpsserver": {"billing_note": "Serveurs configurables facturés au mois, ou à la minute avec les offres horaires. Selon l'emplacement, 1 à 5 To de trafic par mois sont inclus, et le trafic supplémentaire coûte 0,01 $ par Go. Prix hors TVA.", "price_note": "Relevé le 2026-09-21 dans le configurateur de la page tarifaire de VPSServer : serveurs Starter (Type A) sous Ubuntu Server, en facturation mensuelle. Le configurateur règle séparément la mémoire, les processeurs et le disque ; les offres listées ici sont les combinaisons que nous avons chiffrées.", "strengths": ["Le prix au gigaoctet de mémoire le plus bas parmi les hébergeurs que nous avons chiffrés, à toutes les tailles à partir de 2 Go", "Mémoire, processeurs et disque se choisissent séparément : un outil gourmand en disque n'oblige pas à prendre une offre plus grosse", "Facturation à la minute avec les offres horaires, pratique pour des essais courts"], "weaknesses": ["Les serveurs Starter (Type A) chiffrés ici sont présentés par VPSServer comme destinés aux tâches toujours actives plutôt qu'à la haute performance ; ses types Standard et Enterprise coûtent plus cher", "Ses propres conditions le rattachent au même groupe que Kamatera : les deux ne sont pas des fournisseurs indépendants"]}
   }
 }

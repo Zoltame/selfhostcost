@@ -453,6 +453,12 @@ _REWARDS = {
         "Konto eröffnen, zahlt uns Kamatera eine einmalige Provision: 75 $ in den meisten Ländern, darunter "
         "Deutschland, und 10 $ in einigen anderen. Das kostet Sie nichts und ist nicht wiederkehrend."
     ),
+    "vpsserver": (
+        "Die VPSServer-Links auf unseren Seiten sind Affiliate-Links aus demselben Programm wie die von "
+        "Kamatera, und laut eigenen Bedingungen gehört VPSServer zur selben Gruppe wie Kamatera. Eine "
+        "Anmeldung darüber kann uns eine Provision einbringen, das Programm nennt für VPSServer aber keinen "
+        "Betrag. Das kostet Sie nichts."
+    ),
 }
 
 

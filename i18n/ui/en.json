@@ -33,6 +33,7 @@
   "lead.cta": "Send me the checklist",
   "affiliate.disclosure.digitalocean": "The DigitalOcean link above is a referral link: if you sign up through it and pay your first $25, we receive $25 of DigitalOcean account credit. That never changes the computed costs, which server is chosen, or the conclusion of this page. The sizing model and every price source are published in full.",
   "affiliate.disclosure.kamatera": "The Kamatera link above is an affiliate link: if you open a paying account through it, Kamatera pays us a one-time commission of $75 (in most countries). That never changes the computed costs, which server is chosen, or the conclusion of this page. The sizing model and every price source are published in full.",
+  "affiliate.disclosure.vpsserver": "The VPSServer link above is an affiliate link, run through the same programme as our Kamatera link; VPSServer and Kamatera belong to the same group. If you sign up through it we may earn a commission, but the programme does not state an amount for VPSServer. That never changes the computed costs, which server is chosen, or the conclusion of this page. The sizing model and every price source are published in full.",
   "affiliate.disclosure.other": "The {provider} link above is a tracked affiliate link: if you sign up through it, we may earn a commission. That never changes the computed costs, which server is chosen, or the conclusion of this page. The sizing model and every price source are published in full.",
 
   "list.sep": ", ",

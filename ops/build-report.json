@@ -9,14 +9,15 @@
     "de",
     "es"
   ],
-  "pages": 1436,
+  "pages": 1440,
   "comparisons": 65,
   "tools_live": 30,
   "affiliate_links_active": true,
   "lead_capture_active": true,
   "priced_providers": [
     "digitalocean",
-    "kamatera"
+    "kamatera",
+    "vpsserver"
   ],
   "verified_saas": [
     "1password",
@@ -70,7 +71,7 @@
   "per_language": [
     {
       "lang": "en",
-      "pages": 359,
+      "pages": 360,
       "comparisons": 65,
       "missing_ui_keys": [],
       "missing_data_fields": 0,
@@ -79,7 +80,7 @@
     },
     {
       "lang": "fr",
-      "pages": 359,
+      "pages": 360,
       "comparisons": 65,
       "missing_ui_keys": [],
       "missing_data_fields": 0,
@@ -88,7 +89,7 @@
     },
     {
       "lang": "de",
-      "pages": 359,
+      "pages": 360,
       "comparisons": 65,
       "missing_ui_keys": [],
       "missing_data_fields": 0,
@@ -97,7 +98,7 @@
     },
     {
       "lang": "es",
-      "pages": 359,
+      "pages": 360,
       "comparisons": 65,
       "missing_ui_keys": [],
       "missing_data_fields": 0,
@@ -645,6 +646,7 @@
     "/de/hosting/hetzner/",
     "/de/hosting/kamatera/",
     "/de/hosting/pikapods/",
+    "/de/hosting/vpsserver/",
     "/de/hosting/vultr/",
     "/de/methodology/",
     "/de/migration-checklist/",
@@ -1005,6 +1007,7 @@
     "/es/hosting/hetzner/",
     "/es/hosting/kamatera/",
     "/es/hosting/pikapods/",
+    "/es/hosting/vpsserver/",
     "/es/hosting/vultr/",
     "/es/methodology/",
     "/es/migration-checklist/",
@@ -1364,6 +1367,7 @@
     "/fr/hosting/hetzner/",
     "/fr/hosting/kamatera/",
     "/fr/hosting/pikapods/",
+    "/fr/hosting/vpsserver/",
     "/fr/hosting/vultr/",
     "/fr/methodology/",
     "/fr/migration-checklist/",
@@ -1469,6 +1473,7 @@
     "/hosting/hetzner/",
     "/hosting/kamatera/",
     "/hosting/pikapods/",
+    "/hosting/vpsserver/",
     "/hosting/vultr/",
     "/methodology/",
     "/migration-checklist/",

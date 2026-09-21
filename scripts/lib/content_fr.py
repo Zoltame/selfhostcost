@@ -457,6 +457,12 @@ _REWARDS = {
         "l'un d'eux, Kamatera nous verse une commission unique : 75 $ dans la plupart des pays, dont la France, "
         "et 10 $ dans quelques autres. Cela ne vous coûte rien et ce n'est pas récurrent."
     ),
+    "vpsserver": (
+        "Les liens VPSServer de nos pages sont des liens d'affiliation du même programme que ceux de Kamatera, "
+        "et les conditions de VPSServer le rattachent au même groupe que Kamatera. Une inscription par l'un "
+        "d'eux peut nous rapporter une commission, mais le programme n'en indique pas le montant pour VPSServer. "
+        "Cela ne vous coûte rien."
+    ),
 }
 
 

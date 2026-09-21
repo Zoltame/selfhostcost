@@ -116,6 +116,14 @@
       "hostinger": {
         "template": "https://www.hostinger.com/vps-hosting?ref={id}",
         "id": ""
+      },
+      "vpsserver": {
+        "template": "",
+        "id": "37598",
+        "url": "https://go.cloudwm.com/visit/?bta=37598&brand=vpsserver",
+        "program": "affiliate",
+        "reward": "not stated: the affiliate dashboard shows no commission plan for this brand",
+        "activated_on": "2026-09-21"
       }
     }
   },

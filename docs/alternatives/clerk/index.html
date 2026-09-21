@@ -22,7 +22,7 @@
 <link rel="icon" href="/selfhostcost/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/selfhostcost/assets/css/main.css">
 
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://zoltame.github.io/selfhostcost/"}, {"@type": "ListItem", "position": 2, "name": "Identity and SSO", "item": "https://zoltame.github.io/selfhostcost/category/auth/"}, {"@type": "ListItem", "position": 3, "name": "Clerk alternatives", "item": "https://zoltame.github.io/selfhostcost/alternatives/clerk/"}]}, {"@type": "Article", "headline": "Self-hosted Clerk alternatives, with real costs (2026)", "description": "3 open-source alternatives to Clerk, each priced at 10 people including the server, backups and maintenance time. Clerk costs $25.00 a month at that size.", "url": "https://zoltame.github.io/selfhostcost/alternatives/clerk/", "datePublished": "2026-09-14", "dateModified": "2026-09-14", "isAccessibleForFree": true, "author": {"@type": "Organization", "name": "SelfHostCost", "url": "https://zoltame.github.io/selfhostcost/"}, "publisher": {"@type": "Organization", "name": "SelfHostCost", "url": "https://zoltame.github.io/selfhostcost/"}, "inLanguage": "en"}]}</script></head>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://zoltame.github.io/selfhostcost/"}, {"@type": "ListItem", "position": 2, "name": "Identity and SSO", "item": "https://zoltame.github.io/selfhostcost/category/auth/"}, {"@type": "ListItem", "position": 3, "name": "Clerk alternatives", "item": "https://zoltame.github.io/selfhostcost/alternatives/clerk/"}]}, {"@type": "Article", "headline": "Self-hosted Clerk alternatives, with real costs (2026)", "description": "3 open-source alternatives to Clerk, each priced at 10 people including the server, backups and maintenance time. Clerk costs $25.00 a month at that size.", "url": "https://zoltame.github.io/selfhostcost/alternatives/clerk/", "datePublished": "2026-09-14", "dateModified": "2026-09-21", "isAccessibleForFree": true, "author": {"@type": "Organization", "name": "SelfHostCost", "url": "https://zoltame.github.io/selfhostcost/"}, "publisher": {"@type": "Organization", "name": "SelfHostCost", "url": "https://zoltame.github.io/selfhostcost/"}, "inLanguage": "en"}]}</script></head>
 <body>
 
 <header class="masthead">
@@ -76,30 +76,30 @@
   <tbody>
     <tr>
       <th scope="row"><a href="/selfhostcost/vs/clerk-vs-keycloak/">Keycloak</a></th>
-      <td class="num">$28.80</td>
-      <td class="num">$141</td>
+      <td class="num">$26.40</td>
+      <td class="num">$139</td>
       <td class="num neg">
-        -$4,637
+        -$4,550
       </td>
       <td>medium</td>
       <td>Apache-2.0</td>
     </tr>
     <tr>
       <th scope="row"><a href="/selfhostcost/vs/clerk-vs-authentik/">authentik</a></th>
-      <td class="num">$28.80</td>
-      <td class="num">$141</td>
+      <td class="num">$26.40</td>
+      <td class="num">$139</td>
       <td class="num neg">
-        -$4,637
+        -$4,550
       </td>
       <td>medium</td>
       <td>source-available</td>
     </tr>
     <tr>
       <th scope="row"><a href="/selfhostcost/vs/clerk-vs-zitadel/">Zitadel</a></th>
-      <td class="num">$28.80</td>
-      <td class="num">$141</td>
+      <td class="num">$26.40</td>
+      <td class="num">$139</td>
       <td class="num neg">
-        -$4,637
+        -$4,550
       </td>
       <td>medium</td>
       <td>AGPL-3.0</td>
@@ -114,8 +114,8 @@
 <p>JVM service with PostgreSQL. Memory is dominated by the heap rather than by user count, so cost per user falls steeply as the directory grows. This is the CNCF-backed incumbent.</p>
 <p>
   At 10 people it needs 2.5 GB of memory and 10.1 GB of disk,
-  which fits the Basic 4 GiB at DigitalOcean for
-  $24.00 a month. Setting it up is roughly 6 hours of work,
+  which fits the Starter 4 GB at VPSServer for
+  $22.00 a month. Setting it up is roughly 6 hours of work,
   then 1.5 hours a month to keep it healthy.
 </p>
 <p><a href="/selfhostcost/vs/clerk-vs-keycloak/">Full Clerk versus Keycloak breakdown</a>
@@ -124,8 +124,8 @@
 <p>Server plus worker, PostgreSQL and Redis. Friendlier than Keycloak for proxy-style protection of apps that have no native SSO support.</p>
 <p>
   At 10 people it needs 2.5 GB of memory and 10.1 GB of disk,
-  which fits the Basic 4 GiB at DigitalOcean for
-  $24.00 a month. Setting it up is roughly 6 hours of work,
+  which fits the Starter 4 GB at VPSServer for
+  $22.00 a month. Setting it up is roughly 6 hours of work,
   then 1.5 hours a month to keep it healthy.
 </p>
 <p><a href="/selfhostcost/vs/clerk-vs-authentik/">Full Clerk versus authentik breakdown</a>
@@ -134,8 +134,8 @@
 <p>Go binary over PostgreSQL, with an event-sourced audit log. Lighter than the JVM option and closer to Auth0&#39;s developer ergonomics.</p>
 <p>
   At 10 people it needs 2.5 GB of memory and 10.1 GB of disk,
-  which fits the Basic 4 GiB at DigitalOcean for
-  $24.00 a month. Setting it up is roughly 6 hours of work,
+  which fits the Starter 4 GB at VPSServer for
+  $22.00 a month. Setting it up is roughly 6 hours of work,
   then 1.5 hours a month to keep it healthy.
 </p>
 <p><a href="/selfhostcost/vs/clerk-vs-zitadel/">Full Clerk versus Zitadel breakdown</a>

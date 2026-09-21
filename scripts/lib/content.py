@@ -449,6 +449,11 @@ _REWARDS = {
         "Kamatera pays us a one-time commission: $75 in most countries, including the US and Europe, and $10 "
         "in a few others. It costs you nothing and it is not recurring."
     ),
+    "vpsserver": (
+        "The VPSServer links on our pages are affiliate links from the same programme as Kamatera's, and "
+        "VPSServer's own terms place it in the same group as Kamatera. A sign-up through one may earn us a "
+        "commission, but the programme does not state an amount for VPSServer. It costs you nothing."
+    ),
 }
 
 
