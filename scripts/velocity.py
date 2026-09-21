@@ -79,6 +79,11 @@ def append(args) -> None:
     })
     if args.gsc:
         row.update(parse_gsc(Path(args.gsc)))
+    # Totals read by hand, e.g. from the Indexing > Pages chart export, which has no per-page rows.
+    if args.impressions is not None:
+        row["impressions"] = args.impressions
+    if args.clicks is not None:
+        row["clicks"] = args.clicks
 
     new = not LOG.exists()
     with open(LOG, "a", newline="", encoding="utf-8") as fh:
@@ -134,6 +139,8 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--gsc")
     ap.add_argument("--indexed", type=int)
+    ap.add_argument("--impressions", type=int)
+    ap.add_argument("--clicks", type=int)
     ap.add_argument("--affiliate-clicks", type=int)
     ap.add_argument("--leads", type=int)
     ap.add_argument("--revenue", type=float)
