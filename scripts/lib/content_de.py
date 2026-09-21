@@ -441,21 +441,47 @@ def _methodology(ds: Dataset, wave: int, strict: bool, built, base: str, loc: Lo
     )
 
 
+_REWARDS = {
+    "digitalocean": (
+        "Die DigitalOcean-Links auf unseren Seiten sind die Empfehlungslinks von DigitalOcean selbst. Wenn Sie "
+        "sich über einen davon anmelden und Ihre ersten 25 $ bezahlen, schreibt uns DigitalOcean 25 $ Guthaben "
+        "gut. Das kostet Sie nichts, und es ist Guthaben auf einem Hosting-Konto, kein Bargeld."
+    ),
+    "kamatera": (
+        "Die Kamatera-Links auf unseren Seiten sind Affiliate-Links. Wenn Sie darüber ein kostenpflichtiges "
+        "Konto eröffnen, zahlt uns Kamatera eine einmalige Provision: 75 $ in den meisten Ländern, darunter "
+        "Deutschland, und 10 $ in einigen anderen. Das kostet Sie nichts und ist nicht wiederkehrend."
+    ),
+}
+
+
 def _disclosure(ds: Dataset, base: str) -> tuple[str, str, str, str]:
+    from .content import tracked_providers
     cfg = ds.config
     aff = cfg.get("affiliate", {})
-    active = bool(aff.get("enabled")) and any(p.get("id") for p in aff.get("providers", {}).values())
+    tracked = tracked_providers(cfg)
 
-    state = (
-        "<p><strong>Auf dieser Website sind derzeit Empfehlungslinks aktiv.</strong> Die DigitalOcean-Links auf unseren "
-        "Seiten sind die Empfehlungslinks von DigitalOcean selbst. Wenn Sie sich über einen davon anmelden und Ihre "
-        "ersten 25 $ bezahlen, schreibt uns DigitalOcean 25 $ Guthaben gut. Das kostet Sie nichts, und es ist Guthaben "
-        "auf einem Hosting-Konto, kein Bargeld. Links zu allen anderen Anbietern sind einfache Links ohne Zusatz.</p>"
-        if active else
-        "<p><strong>Auf dieser Website gibt es derzeit keine Affiliate-Links.</strong> Jeder Hosting-Link hier ist ein "
-        "einfacher Link zur Seite des Anbieters. Wenn sich das ändert, ändert sich diese Seite mit, und der Hinweis "
-        "erscheint auf jeder Seite mit einem solchen Link.</p>"
-    )
+    def reward_line(slug: str) -> str:
+        if slug in _REWARDS:
+            return _REWARDS[slug]
+        name = ds.providers.get(slug, {}).get("name", slug)
+        return (f"Die {name}-Links auf unseren Seiten sind nachverfolgte Affiliate-Links. Wenn Sie sich über "
+                f"einen davon anmelden, erhalten wir möglicherweise eine Provision. Das kostet Sie nichts.")
+
+    if tracked:
+        items = "".join(f"<li>{reward_line(s)}</li>" for s in tracked)
+        rest = ("<p>Links zu allen anderen Anbietern sind einfache Links ohne Zusatz.</p>"
+                if len(tracked) < len(aff.get("providers", {})) else "")
+        state = (
+            "<p><strong>Auf dieser Website sind derzeit Empfehlungslinks aktiv.</strong></p>"
+            f"<ul>{items}</ul>{rest}"
+        )
+    else:
+        state = (
+            "<p><strong>Auf dieser Website gibt es derzeit keine Affiliate-Links.</strong> Jeder Hosting-Link "
+            "hier ist ein einfacher Link zur Seite des Anbieters. Wenn sich das ändert, ändert sich diese Seite "
+            "mit, und der Hinweis erscheint auf jeder Seite mit einem solchen Link.</p>"
+        )
 
     body = f"""
 <h1>Hinweis zu Empfehlungs- und Affiliate-Links</h1>

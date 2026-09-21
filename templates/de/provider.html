@@ -66,8 +66,8 @@
 <div class="cta">
   <h3>Preise direkt bei {{ provider.name }}</h3>
   <p>Prüfen Sie den aktuellen Preis immer auf der Anbieterseite, bevor Sie sich festlegen. Unserer ist eine datierte Momentaufnahme, kein Live-Feed.</p>
-  <p><a class="btn" href="{{ hosting_link(provider.slug) }}" rel="{{ 'sponsored nofollow noopener' if affiliate_on else 'nofollow noopener' }}">{{ provider.name }} öffnen</a></p>
-  {% if affiliate_on %}<p class="disclosure">{{ t('affiliate.disclosure') }}</p>{% endif %}
+  <p><a class="btn" href="{{ hosting_link(provider.slug) }}" rel="{{ 'sponsored nofollow noopener' if tracked(provider.slug) else 'nofollow noopener' }}">{{ provider.name }} öffnen</a></p>
+  {% if tracked(provider.slug) %}<p class="disclosure">{{ disclosure_for(provider.slug) }}</p>{% endif %}
 </div>
 
 <h2>Weitere Anbieter</h2>

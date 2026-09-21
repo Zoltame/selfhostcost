@@ -1055,38 +1055,38 @@
   "published": "2026-09-14"
  },
  "/cost/uptime-kuma/1-user/": {
-  "hash": "ba5c9e0edc986f18",
-  "modified": "2026-09-14",
+  "hash": "901aaba55165679d",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/cost/uptime-kuma/10-users/": {
-  "hash": "3054ca38b9561cde",
-  "modified": "2026-09-14",
+  "hash": "b4cc29164fab2eb3",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/cost/uptime-kuma/100-users/": {
-  "hash": "8900fd4c7d7bb591",
-  "modified": "2026-09-14",
+  "hash": "d1c7314f9fa7d9f1",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/cost/uptime-kuma/25-users/": {
-  "hash": "4e0b2001652a110c",
-  "modified": "2026-09-14",
+  "hash": "07061c98b74e1d5d",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/cost/uptime-kuma/250-users/": {
-  "hash": "1ac0221b2395d529",
-  "modified": "2026-09-14",
+  "hash": "9129b82cb3b32500",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/cost/uptime-kuma/5-users/": {
-  "hash": "e681401d05a02dea",
-  "modified": "2026-09-14",
+  "hash": "0fd91ce7ff2f861e",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/cost/uptime-kuma/50-users/": {
-  "hash": "9fbcdc20ebf71cd2",
-  "modified": "2026-09-14",
+  "hash": "ba7493b5ce4d73e0",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/cost/vaultwarden/1-user/": {
@@ -1110,8 +1110,8 @@
   "published": "2026-09-14"
  },
  "/cost/vaultwarden/250-users/": {
-  "hash": "022269f804c0492e",
-  "modified": "2026-09-14",
+  "hash": "778b4e76b0ee435e",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/cost/vaultwarden/5-users/": {
@@ -1125,23 +1125,23 @@
   "published": "2026-09-14"
  },
  "/cost/vikunja/1-user/": {
-  "hash": "5ebd7d0c923b0947",
-  "modified": "2026-09-14",
+  "hash": "5db44a44d3018e9e",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/cost/vikunja/10-users/": {
-  "hash": "c93dec6f21a4a428",
-  "modified": "2026-09-14",
+  "hash": "3900c13b94904fb3",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/cost/vikunja/100-users/": {
-  "hash": "883cfd553768114c",
-  "modified": "2026-09-14",
+  "hash": "62ba763fde299b8d",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/cost/vikunja/25-users/": {
-  "hash": "425ff8c7c2a4c68f",
-  "modified": "2026-09-14",
+  "hash": "dd0cb16123f8b9f6",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/cost/vikunja/250-users/": {
@@ -1150,13 +1150,13 @@
   "published": "2026-09-14"
  },
  "/cost/vikunja/5-users/": {
-  "hash": "fab37b25972198b1",
-  "modified": "2026-09-14",
+  "hash": "3928bd3e87571142",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/cost/vikunja/50-users/": {
-  "hash": "29400f60f66d0995",
-  "modified": "2026-09-14",
+  "hash": "96b7647d4e02bf98",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/cost/windmill/1-user/": {
@@ -2320,38 +2320,38 @@
   "published": "2026-09-14"
  },
  "/de/cost/uptime-kuma/1-user/": {
-  "hash": "95fef0f12eb70253",
-  "modified": "2026-09-14",
+  "hash": "a71d077b1c207de2",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/de/cost/uptime-kuma/10-users/": {
-  "hash": "854c30ecc0ca8d22",
-  "modified": "2026-09-14",
+  "hash": "55a7db68dc4f2747",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/de/cost/uptime-kuma/100-users/": {
-  "hash": "acb843b370f74816",
-  "modified": "2026-09-14",
+  "hash": "7501717eb634d831",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/de/cost/uptime-kuma/25-users/": {
-  "hash": "f91faa7a1ba7da5c",
-  "modified": "2026-09-14",
+  "hash": "67eb5ce724633e24",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/de/cost/uptime-kuma/250-users/": {
-  "hash": "926a884296aeb3d0",
-  "modified": "2026-09-14",
+  "hash": "e198b30f61149e5f",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/de/cost/uptime-kuma/5-users/": {
-  "hash": "27012c2764f57e1f",
-  "modified": "2026-09-14",
+  "hash": "be5b0890168479a2",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/de/cost/uptime-kuma/50-users/": {
-  "hash": "6b85f4d43c41f657",
-  "modified": "2026-09-14",
+  "hash": "71ca72f4757436f5",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/de/cost/vaultwarden/1-user/": {
@@ -2375,8 +2375,8 @@
   "published": "2026-09-14"
  },
  "/de/cost/vaultwarden/250-users/": {
-  "hash": "e5d0c19e318cb789",
-  "modified": "2026-09-14",
+  "hash": "0e169fddd054dc25",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/de/cost/vaultwarden/5-users/": {
@@ -2390,23 +2390,23 @@
   "published": "2026-09-14"
  },
  "/de/cost/vikunja/1-user/": {
-  "hash": "3619829658b58cf9",
-  "modified": "2026-09-14",
+  "hash": "f7dbc1a79b7e751d",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/de/cost/vikunja/10-users/": {
-  "hash": "1eac0326ef17f0f1",
-  "modified": "2026-09-14",
+  "hash": "9556f7733ad2125d",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/de/cost/vikunja/100-users/": {
-  "hash": "0d9752c28bf35189",
-  "modified": "2026-09-14",
+  "hash": "46e37a8bc65ecca0",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/de/cost/vikunja/25-users/": {
-  "hash": "42342603bcd5229e",
-  "modified": "2026-09-14",
+  "hash": "afe14796f2ec7b89",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/de/cost/vikunja/250-users/": {
@@ -2415,13 +2415,13 @@
   "published": "2026-09-14"
  },
  "/de/cost/vikunja/5-users/": {
-  "hash": "44d1837433c29928",
-  "modified": "2026-09-14",
+  "hash": "7d545d04420ae7be",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/de/cost/vikunja/50-users/": {
-  "hash": "72d3974ebdfa00f5",
-  "modified": "2026-09-14",
+  "hash": "92e5626ef88916c2",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/de/cost/windmill/1-user/": {
@@ -2530,8 +2530,8 @@
   "published": "2026-09-14"
  },
  "/de/disclosure/": {
-  "hash": "55e7be54a3393a74",
-  "modified": "2026-09-14",
+  "hash": "463b2d93ed40bc1b",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/de/hosting/": {
@@ -2545,23 +2545,23 @@
   "published": "2026-09-14"
  },
  "/de/hosting/hetzner/": {
-  "hash": "b232fd1717dc01c1",
-  "modified": "2026-09-14",
+  "hash": "c8382bfe7de6a4e5",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/de/hosting/kamatera/": {
-  "hash": "e9d16e33b47157a4",
-  "modified": "2026-09-14",
+  "hash": "f32539ee1f206a94",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/de/hosting/pikapods/": {
-  "hash": "5b01a376201a6b29",
-  "modified": "2026-09-14",
+  "hash": "7f4460967d79a7de",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/de/hosting/vultr/": {
-  "hash": "bd7eec801dedb2a3",
-  "modified": "2026-09-14",
+  "hash": "e149f1b70463e7ce",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/de/methodology/": {
@@ -2705,8 +2705,8 @@
   "published": "2026-09-14"
  },
  "/de/self-host/uptime-kuma/": {
-  "hash": "59ffe045171020d4",
-  "modified": "2026-09-14",
+  "hash": "a9c628991409e33f",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/de/self-host/vaultwarden/": {
@@ -2715,8 +2715,8 @@
   "published": "2026-09-14"
  },
  "/de/self-host/vikunja/": {
-  "hash": "55f9480096cb3227",
-  "modified": "2026-09-14",
+  "hash": "49b09ba0d668c383",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/de/self-host/windmill/": {
@@ -2755,8 +2755,8 @@
   "published": "2026-09-14"
  },
  "/de/vs/asana-vs-vikunja/": {
-  "hash": "23f5dbddd12563d6",
-  "modified": "2026-09-14",
+  "hash": "5ab376b73e6b4bf3",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/de/vs/auth0-vs-authentik/": {
@@ -2775,8 +2775,8 @@
   "published": "2026-09-14"
  },
  "/de/vs/betteruptime-vs-uptime-kuma/": {
-  "hash": "dbb87d180714406a",
-  "modified": "2026-09-14",
+  "hash": "3daeec6961a5366a",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/de/vs/bitwarden-vs-vaultwarden/": {
@@ -2930,8 +2930,8 @@
   "published": "2026-09-14"
  },
  "/de/vs/monday-vs-vikunja/": {
-  "hash": "991a3e6342a3766b",
-  "modified": "2026-09-14",
+  "hash": "f45a48f0395901e3",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/de/vs/notion-vs-affine/": {
@@ -2970,8 +2970,8 @@
   "published": "2026-09-14"
  },
  "/de/vs/pingdom-vs-uptime-kuma/": {
-  "hash": "98b86a968e80e3d9",
-  "modified": "2026-09-14",
+  "hash": "71e8b0cf066ed3f6",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/de/vs/retool-vs-windmill/": {
@@ -2985,8 +2985,8 @@
   "published": "2026-09-14"
  },
  "/de/vs/statuspage-vs-uptime-kuma/": {
-  "hash": "9074f9bf1adeb127",
-  "modified": "2026-09-14",
+  "hash": "3a23dce7e105b63f",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/de/vs/surveymonkey-vs-formbricks/": {
@@ -3010,8 +3010,8 @@
   "published": "2026-09-14"
  },
  "/de/vs/trello-vs-vikunja/": {
-  "hash": "f74a78dd52d234fd",
-  "modified": "2026-09-14",
+  "hash": "c8e1b3034810c775",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/de/vs/typeform-vs-formbricks/": {
@@ -3060,8 +3060,8 @@
   "published": "2026-09-14"
  },
  "/disclosure/": {
-  "hash": "399f29e5afee6478",
-  "modified": "2026-09-14",
+  "hash": "1fc79986e8e23a67",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/es/": {
@@ -4120,38 +4120,38 @@
   "published": "2026-09-14"
  },
  "/es/cost/uptime-kuma/1-user/": {
-  "hash": "40d79eac305759ec",
-  "modified": "2026-09-14",
+  "hash": "253ea4f7d5b721f2",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/es/cost/uptime-kuma/10-users/": {
-  "hash": "755e8ab35188f48d",
-  "modified": "2026-09-14",
+  "hash": "5eb61645e137bb76",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/es/cost/uptime-kuma/100-users/": {
-  "hash": "4fc938ecf597bbea",
-  "modified": "2026-09-14",
+  "hash": "c264ebe061d51ffc",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/es/cost/uptime-kuma/25-users/": {
-  "hash": "dbe01e6e53c49d8f",
-  "modified": "2026-09-14",
+  "hash": "ad6554acd2324b6d",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/es/cost/uptime-kuma/250-users/": {
-  "hash": "c0fe466da2f670d7",
-  "modified": "2026-09-14",
+  "hash": "3d12eb7aab891a15",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/es/cost/uptime-kuma/5-users/": {
-  "hash": "0ddc5b3bc65798d6",
-  "modified": "2026-09-14",
+  "hash": "23bca4fb4a80c002",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/es/cost/uptime-kuma/50-users/": {
-  "hash": "f5ddf71c8d2992be",
-  "modified": "2026-09-14",
+  "hash": "af4c0bbeb19feaf0",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/es/cost/vaultwarden/1-user/": {
@@ -4175,8 +4175,8 @@
   "published": "2026-09-14"
  },
  "/es/cost/vaultwarden/250-users/": {
-  "hash": "3ca4b551bb54817b",
-  "modified": "2026-09-14",
+  "hash": "6f615de9897aaf35",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/es/cost/vaultwarden/5-users/": {
@@ -4190,23 +4190,23 @@
   "published": "2026-09-14"
  },
  "/es/cost/vikunja/1-user/": {
-  "hash": "85a65decda5b99af",
-  "modified": "2026-09-14",
+  "hash": "d19f3aec99fa76fb",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/es/cost/vikunja/10-users/": {
-  "hash": "92ad6bcb35a9e1cb",
-  "modified": "2026-09-14",
+  "hash": "725b67c40f0cd318",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/es/cost/vikunja/100-users/": {
-  "hash": "c98acec4bd5c0ad7",
-  "modified": "2026-09-14",
+  "hash": "7f1de71da1769661",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/es/cost/vikunja/25-users/": {
-  "hash": "6e4217e057c0d9ca",
-  "modified": "2026-09-14",
+  "hash": "db276312136209f4",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/es/cost/vikunja/250-users/": {
@@ -4215,13 +4215,13 @@
   "published": "2026-09-14"
  },
  "/es/cost/vikunja/5-users/": {
-  "hash": "3af57014fd9f1e78",
-  "modified": "2026-09-14",
+  "hash": "8cc1153a62b77037",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/es/cost/vikunja/50-users/": {
-  "hash": "9b109cd126ab27c1",
-  "modified": "2026-09-14",
+  "hash": "5b75d391c300e2b1",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/es/cost/windmill/1-user/": {
@@ -4330,8 +4330,8 @@
   "published": "2026-09-14"
  },
  "/es/disclosure/": {
-  "hash": "e2d301ad312d12ab",
-  "modified": "2026-09-14",
+  "hash": "ef1493285a39628c",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/es/hosting/": {
@@ -4345,23 +4345,23 @@
   "published": "2026-09-14"
  },
  "/es/hosting/hetzner/": {
-  "hash": "990acfd196439c2b",
-  "modified": "2026-09-14",
+  "hash": "5d72ea8c7673d76a",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/es/hosting/kamatera/": {
-  "hash": "a1304f40fb894905",
-  "modified": "2026-09-14",
+  "hash": "fe9a78cee9218e80",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/es/hosting/pikapods/": {
-  "hash": "2e690cec1294f81c",
-  "modified": "2026-09-14",
+  "hash": "1a8aa8ec872abf04",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/es/hosting/vultr/": {
-  "hash": "a3a6dabbf27db6a7",
-  "modified": "2026-09-14",
+  "hash": "b64a24e796e1bc65",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/es/methodology/": {
@@ -4505,8 +4505,8 @@
   "published": "2026-09-14"
  },
  "/es/self-host/uptime-kuma/": {
-  "hash": "0d4c9bc93b2df738",
-  "modified": "2026-09-14",
+  "hash": "6a16ac35b53aeafa",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/es/self-host/vaultwarden/": {
@@ -4515,8 +4515,8 @@
   "published": "2026-09-14"
  },
  "/es/self-host/vikunja/": {
-  "hash": "ffee60ce98feac53",
-  "modified": "2026-09-14",
+  "hash": "fe7bc486de2c93cd",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/es/self-host/windmill/": {
@@ -4555,8 +4555,8 @@
   "published": "2026-09-14"
  },
  "/es/vs/asana-vs-vikunja/": {
-  "hash": "e9bdc6748f430ec0",
-  "modified": "2026-09-14",
+  "hash": "6437fdb44d6d9dab",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/es/vs/auth0-vs-authentik/": {
@@ -4575,8 +4575,8 @@
   "published": "2026-09-14"
  },
  "/es/vs/betteruptime-vs-uptime-kuma/": {
-  "hash": "8e79358d481bce48",
-  "modified": "2026-09-14",
+  "hash": "0d8927ded5f553ea",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/es/vs/bitwarden-vs-vaultwarden/": {
@@ -4730,8 +4730,8 @@
   "published": "2026-09-14"
  },
  "/es/vs/monday-vs-vikunja/": {
-  "hash": "ae63fa99a7c39def",
-  "modified": "2026-09-14",
+  "hash": "98957236edc0d4a0",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/es/vs/notion-vs-affine/": {
@@ -4770,8 +4770,8 @@
   "published": "2026-09-14"
  },
  "/es/vs/pingdom-vs-uptime-kuma/": {
-  "hash": "abef01d7b99865db",
-  "modified": "2026-09-14",
+  "hash": "e105900401988f7a",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/es/vs/retool-vs-windmill/": {
@@ -4785,8 +4785,8 @@
   "published": "2026-09-14"
  },
  "/es/vs/statuspage-vs-uptime-kuma/": {
-  "hash": "17cd4a93f1c08f43",
-  "modified": "2026-09-14",
+  "hash": "238825fc63e5712c",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/es/vs/surveymonkey-vs-formbricks/": {
@@ -4810,8 +4810,8 @@
   "published": "2026-09-14"
  },
  "/es/vs/trello-vs-vikunja/": {
-  "hash": "cbec79e458d3de14",
-  "modified": "2026-09-14",
+  "hash": "16237f59a3470f0a",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/es/vs/typeform-vs-formbricks/": {
@@ -5915,38 +5915,38 @@
   "published": "2026-09-14"
  },
  "/fr/cost/uptime-kuma/1-user/": {
-  "hash": "6719913030c245b5",
-  "modified": "2026-09-14",
+  "hash": "b92f5e9722f56426",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/fr/cost/uptime-kuma/10-users/": {
-  "hash": "3c6d9d8a92e2d1aa",
-  "modified": "2026-09-14",
+  "hash": "3fdac116ab1af8c1",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/fr/cost/uptime-kuma/100-users/": {
-  "hash": "394da95720d29e75",
-  "modified": "2026-09-14",
+  "hash": "c0d68d0db4c0a76a",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/fr/cost/uptime-kuma/25-users/": {
-  "hash": "5228c739cdf05fa0",
-  "modified": "2026-09-14",
+  "hash": "ead4d79b708a2f86",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/fr/cost/uptime-kuma/250-users/": {
-  "hash": "74626d17f3397df9",
-  "modified": "2026-09-14",
+  "hash": "941b825c149e445e",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/fr/cost/uptime-kuma/5-users/": {
-  "hash": "80c8d27b20669e9c",
-  "modified": "2026-09-14",
+  "hash": "54a7372cff7b0cb1",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/fr/cost/uptime-kuma/50-users/": {
-  "hash": "ec98c6e1e889a301",
-  "modified": "2026-09-14",
+  "hash": "f785bbf50488a4f2",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/fr/cost/vaultwarden/1-user/": {
@@ -5970,8 +5970,8 @@
   "published": "2026-09-14"
  },
  "/fr/cost/vaultwarden/250-users/": {
-  "hash": "527b4245ed80f0ef",
-  "modified": "2026-09-14",
+  "hash": "8184a8d8ceb27ccd",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/fr/cost/vaultwarden/5-users/": {
@@ -5985,23 +5985,23 @@
   "published": "2026-09-14"
  },
  "/fr/cost/vikunja/1-user/": {
-  "hash": "17134dde807480ad",
-  "modified": "2026-09-14",
+  "hash": "9d75c3c09087ca0e",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/fr/cost/vikunja/10-users/": {
-  "hash": "9d5c9b42a0960eff",
-  "modified": "2026-09-14",
+  "hash": "6ce549d522fb3fca",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/fr/cost/vikunja/100-users/": {
-  "hash": "ed4c68dfbef7dc22",
-  "modified": "2026-09-14",
+  "hash": "31848171a7302c76",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/fr/cost/vikunja/25-users/": {
-  "hash": "e4891d28cc68de7d",
-  "modified": "2026-09-14",
+  "hash": "7a0e530b43ca5adb",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/fr/cost/vikunja/250-users/": {
@@ -6010,13 +6010,13 @@
   "published": "2026-09-14"
  },
  "/fr/cost/vikunja/5-users/": {
-  "hash": "8954ede362b75411",
-  "modified": "2026-09-14",
+  "hash": "772cb668b60152af",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/fr/cost/vikunja/50-users/": {
-  "hash": "cb772b9297a17cf5",
-  "modified": "2026-09-14",
+  "hash": "232ab4ef8f672e09",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/fr/cost/windmill/1-user/": {
@@ -6125,8 +6125,8 @@
   "published": "2026-09-14"
  },
  "/fr/disclosure/": {
-  "hash": "b8653b10d5698d8a",
-  "modified": "2026-09-14",
+  "hash": "969f42011a67b9dc",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/fr/hosting/": {
@@ -6140,23 +6140,23 @@
   "published": "2026-09-14"
  },
  "/fr/hosting/hetzner/": {
-  "hash": "631089dc2a7d3569",
-  "modified": "2026-09-14",
+  "hash": "3b01d7480d4efbec",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/fr/hosting/kamatera/": {
-  "hash": "2c290f4c586bda09",
-  "modified": "2026-09-14",
+  "hash": "7038d27645a7be75",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/fr/hosting/pikapods/": {
-  "hash": "151c1cdb09b83059",
-  "modified": "2026-09-14",
+  "hash": "fad2e4d08e0f9db0",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/fr/hosting/vultr/": {
-  "hash": "cd030012e97d69b2",
-  "modified": "2026-09-14",
+  "hash": "4e964f346c0ac4e2",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/fr/methodology/": {
@@ -6300,8 +6300,8 @@
   "published": "2026-09-14"
  },
  "/fr/self-host/uptime-kuma/": {
-  "hash": "cfc620a1c00a45f9",
-  "modified": "2026-09-14",
+  "hash": "cad2417aebaa1354",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/fr/self-host/vaultwarden/": {
@@ -6310,8 +6310,8 @@
   "published": "2026-09-14"
  },
  "/fr/self-host/vikunja/": {
-  "hash": "35925eca079cab0d",
-  "modified": "2026-09-14",
+  "hash": "2cc1fcdf75d652a2",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/fr/self-host/windmill/": {
@@ -6350,8 +6350,8 @@
   "published": "2026-09-14"
  },
  "/fr/vs/asana-vs-vikunja/": {
-  "hash": "e39408f34f224295",
-  "modified": "2026-09-14",
+  "hash": "1e40cc423c4e622c",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/fr/vs/auth0-vs-authentik/": {
@@ -6370,8 +6370,8 @@
   "published": "2026-09-14"
  },
  "/fr/vs/betteruptime-vs-uptime-kuma/": {
-  "hash": "aadb69121e7f0a8b",
-  "modified": "2026-09-14",
+  "hash": "dfb217e3a85ffd36",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/fr/vs/bitwarden-vs-vaultwarden/": {
@@ -6525,8 +6525,8 @@
   "published": "2026-09-14"
  },
  "/fr/vs/monday-vs-vikunja/": {
-  "hash": "4cd6fe3f40b75bad",
-  "modified": "2026-09-14",
+  "hash": "b24f48ba852b581e",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/fr/vs/notion-vs-affine/": {
@@ -6565,8 +6565,8 @@
   "published": "2026-09-14"
  },
  "/fr/vs/pingdom-vs-uptime-kuma/": {
-  "hash": "42cb93ff2dcb40a6",
-  "modified": "2026-09-14",
+  "hash": "f56caa755a38dbb5",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/fr/vs/retool-vs-windmill/": {
@@ -6580,8 +6580,8 @@
   "published": "2026-09-14"
  },
  "/fr/vs/statuspage-vs-uptime-kuma/": {
-  "hash": "f790a1eac3a56b26",
-  "modified": "2026-09-14",
+  "hash": "1fac208643d839a3",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/fr/vs/surveymonkey-vs-formbricks/": {
@@ -6605,8 +6605,8 @@
   "published": "2026-09-14"
  },
  "/fr/vs/trello-vs-vikunja/": {
-  "hash": "fdd091cd9aaf564a",
-  "modified": "2026-09-14",
+  "hash": "28308c5116a04364",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/fr/vs/typeform-vs-formbricks/": {
@@ -6665,23 +6665,23 @@
   "published": "2026-09-14"
  },
  "/hosting/hetzner/": {
-  "hash": "63b5287c1a7e212e",
-  "modified": "2026-09-14",
+  "hash": "abead8e5a658238c",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/hosting/kamatera/": {
-  "hash": "3e1911e6e9be903d",
-  "modified": "2026-09-14",
+  "hash": "38590c1bd422fd0b",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/hosting/pikapods/": {
-  "hash": "3fe7cf9378f49724",
-  "modified": "2026-09-14",
+  "hash": "c6a717f7a1ce6e4c",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/hosting/vultr/": {
-  "hash": "9d65739b4e30a2c0",
-  "modified": "2026-09-14",
+  "hash": "b02639e9ea3b0eee",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/methodology/": {
@@ -6825,8 +6825,8 @@
   "published": "2026-09-14"
  },
  "/self-host/uptime-kuma/": {
-  "hash": "36503de1d4d2b15c",
-  "modified": "2026-09-14",
+  "hash": "64c74522b0c37158",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/self-host/vaultwarden/": {
@@ -6835,8 +6835,8 @@
   "published": "2026-09-14"
  },
  "/self-host/vikunja/": {
-  "hash": "6f4cf0f65fc28308",
-  "modified": "2026-09-14",
+  "hash": "22dee034ddca7839",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/self-host/windmill/": {
@@ -6875,8 +6875,8 @@
   "published": "2026-09-14"
  },
  "/vs/asana-vs-vikunja/": {
-  "hash": "5a4b359f6d51da70",
-  "modified": "2026-09-14",
+  "hash": "b873516b4f004034",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/vs/auth0-vs-authentik/": {
@@ -6895,8 +6895,8 @@
   "published": "2026-09-14"
  },
  "/vs/betteruptime-vs-uptime-kuma/": {
-  "hash": "c22a33e3de142221",
-  "modified": "2026-09-14",
+  "hash": "e7b6606ca9d2fe61",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/vs/bitwarden-vs-vaultwarden/": {
@@ -7050,8 +7050,8 @@
   "published": "2026-09-14"
  },
  "/vs/monday-vs-vikunja/": {
-  "hash": "ffcb24363502068a",
-  "modified": "2026-09-14",
+  "hash": "1a49a09780e1b6b9",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/vs/notion-vs-affine/": {
@@ -7090,8 +7090,8 @@
   "published": "2026-09-14"
  },
  "/vs/pingdom-vs-uptime-kuma/": {
-  "hash": "ac9e7cdac39112b6",
-  "modified": "2026-09-14",
+  "hash": "b886e75d379b12af",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/vs/retool-vs-windmill/": {
@@ -7105,8 +7105,8 @@
   "published": "2026-09-14"
  },
  "/vs/statuspage-vs-uptime-kuma/": {
-  "hash": "d1bbd9fba29a09a2",
-  "modified": "2026-09-14",
+  "hash": "c6a468b73c18df68",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/vs/surveymonkey-vs-formbricks/": {
@@ -7130,8 +7130,8 @@
   "published": "2026-09-14"
  },
  "/vs/trello-vs-vikunja/": {
-  "hash": "5b56c608420ecbbf",
-  "modified": "2026-09-14",
+  "hash": "f1ddfee8bbd0efcc",
+  "modified": "2026-09-21",
   "published": "2026-09-14"
  },
  "/vs/typeform-vs-formbricks/": {

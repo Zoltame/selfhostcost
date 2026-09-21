@@ -437,21 +437,47 @@ def _methodology(ds: Dataset, wave: int, strict: bool, built, base: str, loc: Lo
     )
 
 
+_REWARDS = {
+    "digitalocean": (
+        "Los enlaces de DigitalOcean de nuestras páginas son los enlaces de referido de la propia DigitalOcean. Si "
+        "te registras a través de uno y pagas tus primeros 25 $, DigitalOcean nos da 25 $ de crédito en nuestra "
+        "cuenta. No te cuesta nada, y es crédito de alojamiento, no dinero."
+    ),
+    "kamatera": (
+        "Los enlaces de Kamatera de nuestras páginas son enlaces de afiliado. Si abres una cuenta de pago a través "
+        "de uno, Kamatera nos paga una comisión única: 75 $ en la mayoría de los países, incluida España, y 10 $ en "
+        "algunos otros. No te cuesta nada y no es recurrente."
+    ),
+}
+
+
 def _disclosure(ds: Dataset, base: str) -> tuple[str, str, str, str]:
+    from .content import tracked_providers
     cfg = ds.config
     aff = cfg.get("affiliate", {})
-    active = bool(aff.get("enabled")) and any(p.get("id") for p in aff.get("providers", {}).values())
+    tracked = tracked_providers(cfg)
 
-    state = (
-        "<p><strong>Ahora mismo hay enlaces de referido activos en este sitio.</strong> Los enlaces de DigitalOcean de "
-        "nuestras páginas son los enlaces de referido de la propia DigitalOcean. Si te registras a través de uno y pagas "
-        "tus primeros 25 $, DigitalOcean nos da 25 $ de crédito en nuestra cuenta. No te cuesta nada, y es crédito de "
-        "alojamiento, no dinero. Los enlaces a todos los demás proveedores son enlaces normales, sin nada añadido.</p>"
-        if active else
-        "<p><strong>Ahora mismo no hay enlaces de afiliado en este sitio.</strong> Cada enlace de alojamiento es un "
-        "enlace normal a la página del proveedor. Si eso cambia, esta página cambia con ello y el aviso aparece en cada "
-        "página que incluya un enlace así.</p>"
-    )
+    def reward_line(slug: str) -> str:
+        if slug in _REWARDS:
+            return _REWARDS[slug]
+        name = ds.providers.get(slug, {}).get("name", slug)
+        return (f"Los enlaces de {name} de nuestras páginas son enlaces de afiliado con seguimiento. Si te "
+                f"registras a través de uno, podemos recibir una comisión. No te cuesta nada.")
+
+    if tracked:
+        items = "".join(f"<li>{reward_line(s)}</li>" for s in tracked)
+        rest = ("<p>Los enlaces a todos los demás proveedores son enlaces normales, sin nada añadido.</p>"
+                if len(tracked) < len(aff.get("providers", {})) else "")
+        state = (
+            "<p><strong>Ahora mismo hay enlaces de referido activos en este sitio.</strong></p>"
+            f"<ul>{items}</ul>{rest}"
+        )
+    else:
+        state = (
+            "<p><strong>Ahora mismo no hay enlaces de afiliado en este sitio.</strong> Cada enlace de alojamiento "
+            "es un enlace normal a la página del proveedor. Si eso cambia, esta página cambia con ello y el aviso "
+            "aparece en cada página que incluya un enlace así.</p>"
+        )
 
     body = f"""
 <h1>Aviso sobre enlaces de referido y afiliación</h1>

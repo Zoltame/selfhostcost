@@ -31,7 +31,9 @@
   "lead.headline": "Recevez la checklist de migration pour cet outil",
   "lead.subhead": "Une liste de contrôle d'une page : export des données, dimensionnement, plan de sauvegarde, et l'étape de retour arrière que la plupart des gens oublient.",
   "lead.cta": "Envoyez-moi la checklist",
-  "affiliate.disclosure": "Le lien DigitalOcean ci-dessus est un lien de parrainage : si vous vous inscrivez par ce lien et payez vos premiers 25 $, nous recevons 25 $ de crédit sur notre compte DigitalOcean. Cela ne change jamais les coûts calculés, le serveur retenu ni la conclusion de cette page. Le modèle de dimensionnement et chaque source de prix sont publiés intégralement.",
+  "affiliate.disclosure.digitalocean": "Le lien DigitalOcean ci-dessus est un lien de parrainage : si vous vous inscrivez par ce lien et payez vos premiers 25 $, nous recevons 25 $ de crédit sur notre compte DigitalOcean. Cela ne change jamais les coûts calculés, le serveur retenu ni la conclusion de cette page. Le modèle de dimensionnement et chaque source de prix sont publiés intégralement.",
+  "affiliate.disclosure.kamatera": "Le lien Kamatera ci-dessus est un lien d'affiliation : si vous ouvrez un compte payant par ce lien, Kamatera nous verse une commission unique de 75 $ (dans la plupart des pays). Cela ne change jamais les coûts calculés, le serveur retenu ni la conclusion de cette page. Le modèle de dimensionnement et chaque source de prix sont publiés intégralement.",
+  "affiliate.disclosure.other": "Le lien {provider} ci-dessus est un lien d'affiliation tracé : si vous vous inscrivez par ce lien, nous pouvons percevoir une commission. Cela ne change jamais les coûts calculés, le serveur retenu ni la conclusion de cette page. Le modèle de dimensionnement et chaque source de prix sont publiés intégralement.",
 
   "list.sep": ", ",
   "size.1": "une personne",

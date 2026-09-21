@@ -9,7 +9,7 @@
     {{ money(cta_plan.price_usd_month) }} a month.
   </p>
   <p>
-    <a class="btn" href="{{ hosting_link(cta_plan.provider_slug) }}" rel="{{ 'sponsored nofollow noopener' if affiliate_on else 'nofollow noopener' }}">
+    <a class="btn" href="{{ hosting_link(cta_plan.provider_slug) }}" rel="{{ 'sponsored nofollow noopener' if tracked(cta_plan.provider_slug) else 'nofollow noopener' }}">
       Go to {{ cta_plan.provider_name }}
     </a>
     <a class="btn ghost" href="{{ base }}/hosting/">Compare hosts</a>
@@ -25,5 +25,5 @@
   </p>
   {% endif %}
 
-  {% if affiliate_on %}<p class="disclosure">{{ t('affiliate.disclosure') }}</p>{% endif %}
+  {% if tracked(cta_plan.provider_slug) %}<p class="disclosure">{{ disclosure_for(cta_plan.provider_slug) }}</p>{% endif %}
 </div>

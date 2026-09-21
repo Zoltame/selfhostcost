@@ -125,6 +125,7 @@ class Builder:
             nav_categories=[c for c in self.ds.categories.values() if c["wave"] <= self.wave],
             providers=self.ds.providers, hosting_link=self.hosting_link,
             affiliate_on=self.affiliate_on, lead_form_id=self._lead_form_id(),
+            tracked=self.tracked, disclosure_for=self.disclosure_for,
         )
 
     # ---- config-driven links -------------------------------------------
@@ -162,9 +163,31 @@ class Builder:
         if not aff.get("enabled"):
             return plain
         entry = aff.get("providers", {}).get(provider_slug) or {}
+        if entry.get("url"):
+            return entry["url"]
         if entry.get("id") and entry.get("template"):
             return entry["template"].replace("{id}", entry["id"])
         return plain
+
+    def tracked(self, provider_slug: str) -> bool:
+        """True only when the link rendered for this provider carries our tracking.
+
+        Pages that recommend an untracked provider get a plain link, no
+        `rel="sponsored"`, and no disclosure: there is nothing to disclose.
+        """
+        aff = self.cfg.get("affiliate", {})
+        if not aff.get("enabled"):
+            return False
+        entry = aff.get("providers", {}).get(provider_slug) or {}
+        return bool(entry.get("url") or (entry.get("id") and entry.get("template")))
+
+    def disclosure_for(self, provider_slug: str) -> str:
+        """The disclosure for the provider actually linked, never another one's terms."""
+        name = self.ds.providers.get(provider_slug, {}).get("name", provider_slug)
+        key = f"affiliate.disclosure.{provider_slug}"
+        if key not in self.loc.ui and key not in self.loc.fallback:
+            key = "affiliate.disclosure.other"
+        return self.loc.t(key, provider=name)
 
     def unpriced_provider_names(self) -> list[str]:
         return [p["name"] for p in self.ds.providers.values() if p["price_status"] != "verified"]

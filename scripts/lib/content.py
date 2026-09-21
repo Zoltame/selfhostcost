@@ -437,21 +437,55 @@ def _methodology(ds: Dataset, wave: int, strict: bool, built, base: str) -> tupl
     )
 
 
+_REWARDS = {
+    "digitalocean": (
+        "The DigitalOcean links on our pages are DigitalOcean's own referral links. If you sign up through "
+        "one and pay your first $25, DigitalOcean gives us $25 of account credit. It costs you nothing, and "
+        "it is credit on a hosting account, not cash."
+    ),
+    "kamatera": (
+        "The Kamatera links on our pages are affiliate links. If you open a paying account through one, "
+        "Kamatera pays us a one-time commission: $75 in most countries, including the US and Europe, and $10 "
+        "in a few others. It costs you nothing and it is not recurring."
+    ),
+}
+
+
+def tracked_providers(cfg: dict) -> list[str]:
+    """Providers whose links actually carry our tracking, in config order."""
+    aff = cfg.get("affiliate", {})
+    if not aff.get("enabled"):
+        return []
+    return [s for s, p in aff.get("providers", {}).items()
+            if p.get("url") or (p.get("id") and p.get("template"))]
+
+
 def _disclosure(ds: Dataset, base: str) -> tuple[str, str, str, str]:
     cfg = ds.config
     aff = cfg.get("affiliate", {})
-    active = bool(aff.get("enabled")) and any(p.get("id") for p in aff.get("providers", {}).values())
+    tracked = tracked_providers(cfg)
 
-    state = (
-        "<p><strong>Referral links are currently active on this site.</strong> The DigitalOcean links on "
-        "our pages are DigitalOcean's own referral links. If you sign up through one and pay your first $25, "
-        "DigitalOcean gives us $25 of account credit. It costs you nothing, and it is credit on a hosting "
-        "account, not cash. Links to every other provider are plain links with nothing attached.</p>"
-        if active else
-        "<p><strong>There are no affiliate links on this site at the moment.</strong> Every hosting link "
-        "here is a plain link to the provider's own page. If that changes, this page changes with it and "
-        "the disclosure appears on every page carrying such a link.</p>"
-    )
+    def reward_line(slug: str) -> str:
+        if slug in _REWARDS:
+            return _REWARDS[slug]
+        name = ds.providers.get(slug, {}).get("name", slug)
+        return (f"The {name} links on our pages are tracked affiliate links. If you sign up through one, "
+                f"we may earn a commission. It costs you nothing.")
+
+    if tracked:
+        items = "".join(f"<li>{reward_line(s)}</li>" for s in tracked)
+        rest = ("<p>Links to every other provider are plain links with nothing attached.</p>"
+                if len(tracked) < len(aff.get("providers", {})) else "")
+        state = (
+            "<p><strong>Referral links are currently active on this site.</strong></p>"
+            f"<ul>{items}</ul>{rest}"
+        )
+    else:
+        state = (
+            "<p><strong>There are no affiliate links on this site at the moment.</strong> Every hosting link "
+            "here is a plain link to the provider's own page. If that changes, this page changes with it and "
+            "the disclosure appears on every page carrying such a link.</p>"
+        )
 
     body = f"""
 <h1>Affiliate disclosure</h1>

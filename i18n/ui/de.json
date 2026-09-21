@@ -31,7 +31,9 @@
   "lead.headline": "Die Migrations-Checkliste für dieses Tool erhalten",
   "lead.subhead": "Eine einseitige Vorabliste: Datenexport, Dimensionierung, Backup-Plan und der Rückfallschritt, den die meisten vergessen.",
   "lead.cta": "Checkliste zusenden",
-  "affiliate.disclosure": "Der DigitalOcean-Link oben ist ein Empfehlungslink: Wenn Sie sich darüber anmelden und Ihre ersten 25 $ bezahlen, erhalten wir 25 $ Guthaben auf unserem DigitalOcean-Konto. Das ändert nie die berechneten Kosten, den gewählten Server oder das Fazit dieser Seite. Das Dimensionierungsmodell und jede Preisquelle sind vollständig veröffentlicht.",
+  "affiliate.disclosure.digitalocean": "Der DigitalOcean-Link oben ist ein Empfehlungslink: Wenn Sie sich darüber anmelden und Ihre ersten 25 $ bezahlen, erhalten wir 25 $ Guthaben auf unserem DigitalOcean-Konto. Das ändert nie die berechneten Kosten, den gewählten Server oder das Fazit dieser Seite. Das Dimensionierungsmodell und jede Preisquelle sind vollständig veröffentlicht.",
+  "affiliate.disclosure.kamatera": "Der Kamatera-Link oben ist ein Affiliate-Link: Wenn Sie darüber ein kostenpflichtiges Konto eröffnen, zahlt uns Kamatera eine einmalige Provision von 75 $ (in den meisten Ländern). Das ändert nie die berechneten Kosten, den gewählten Server oder das Fazit dieser Seite. Das Dimensionierungsmodell und jede Preisquelle sind vollständig veröffentlicht.",
+  "affiliate.disclosure.other": "Der {provider}-Link oben ist ein nachverfolgter Affiliate-Link: Wenn Sie sich darüber anmelden, erhalten wir möglicherweise eine Provision. Das ändert nie die berechneten Kosten, den gewählten Server oder das Fazit dieser Seite. Das Dimensionierungsmodell und jede Preisquelle sind vollständig veröffentlicht.",
 
   "list.sep": ", ",
   "size.1": "eine Person",

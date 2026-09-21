@@ -65,8 +65,8 @@
 <div class="cta">
   <h3>Pricing straight from {{ provider.name }}</h3>
   <p>Always confirm the current price on the vendor's page before you commit. Ours is a snapshot with a date on it, not a live feed.</p>
-  <p><a class="btn" href="{{ hosting_link(provider.slug) }}" rel="{{ 'sponsored nofollow noopener' if affiliate_on else 'nofollow noopener' }}">Open {{ provider.name }}</a></p>
-  {% if affiliate_on %}<p class="disclosure">{{ t('affiliate.disclosure') }}</p>{% endif %}
+  <p><a class="btn" href="{{ hosting_link(provider.slug) }}" rel="{{ 'sponsored nofollow noopener' if tracked(provider.slug) else 'nofollow noopener' }}">Open {{ provider.name }}</a></p>
+  {% if tracked(provider.slug) %}<p class="disclosure">{{ disclosure_for(provider.slug) }}</p>{% endif %}
 </div>
 
 <h2>Other providers</h2>

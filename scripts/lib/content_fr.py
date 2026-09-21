@@ -445,22 +445,47 @@ def _methodology(ds: Dataset, wave: int, strict: bool, built, base: str, loc: Lo
     )
 
 
+_REWARDS = {
+    "digitalocean": (
+        "Les liens DigitalOcean de nos pages sont les liens de parrainage de DigitalOcean. Si vous vous inscrivez "
+        "par l'un d'eux et payez vos premiers 25 $, DigitalOcean nous accorde 25 $ de crédit sur notre compte. "
+        "Cela ne vous coûte rien, et il s'agit de crédit d'hébergement, pas d'argent."
+    ),
+    "kamatera": (
+        "Les liens Kamatera de nos pages sont des liens d'affiliation. Si vous ouvrez un compte payant par "
+        "l'un d'eux, Kamatera nous verse une commission unique : 75 $ dans la plupart des pays, dont la France, "
+        "et 10 $ dans quelques autres. Cela ne vous coûte rien et ce n'est pas récurrent."
+    ),
+}
+
+
 def _disclosure(ds: Dataset, base: str) -> tuple[str, str, str, str]:
+    from .content import tracked_providers
     cfg = ds.config
     aff = cfg.get("affiliate", {})
-    active = bool(aff.get("enabled")) and any(p.get("id") for p in aff.get("providers", {}).values())
+    tracked = tracked_providers(cfg)
 
-    state = (
-        "<p><strong>Des liens de parrainage sont actuellement actifs sur ce site.</strong> Les liens DigitalOcean de "
-        "nos pages sont les liens de parrainage de DigitalOcean. Si vous vous inscrivez par l'un d'eux et payez vos "
-        "premiers 25 $, DigitalOcean nous accorde 25 $ de crédit sur notre compte. Cela ne vous coûte rien, et il "
-        "s'agit de crédit d'hébergement, pas d'argent. Les liens vers tous les autres hébergeurs sont de simples liens, "
-        "sans rien attaché.</p>"
-        if active else
-        "<p><strong>Il n'y a actuellement aucun lien d'affiliation sur ce site.</strong> Chaque lien d'hébergement ici "
-        "est un simple lien vers la page de l'hébergeur. Si cela change, cette page change avec, et la mention apparaît "
-        "sur chaque page qui contient un tel lien.</p>"
-    )
+    def reward_line(slug: str) -> str:
+        if slug in _REWARDS:
+            return _REWARDS[slug]
+        name = ds.providers.get(slug, {}).get("name", slug)
+        return (f"Les liens {name} de nos pages sont des liens d'affiliation tracés. Si vous vous inscrivez par "
+                f"l'un d'eux, nous pouvons percevoir une commission. Cela ne vous coûte rien.")
+
+    if tracked:
+        items = "".join(f"<li>{reward_line(s)}</li>" for s in tracked)
+        rest = ("<p>Les liens vers tous les autres hébergeurs sont de simples liens, sans rien attaché.</p>"
+                if len(tracked) < len(aff.get("providers", {})) else "")
+        state = (
+            "<p><strong>Des liens de parrainage sont actuellement actifs sur ce site.</strong></p>"
+            f"<ul>{items}</ul>{rest}"
+        )
+    else:
+        state = (
+            "<p><strong>Il n'y a actuellement aucun lien d'affiliation sur ce site.</strong> Chaque lien "
+            "d'hébergement ici est un simple lien vers la page de l'hébergeur. Si cela change, cette page change "
+            "avec, et la mention apparaît sur chaque page qui contient un tel lien.</p>"
+        )
 
     body = f"""
 <h1>Transparence sur l'affiliation</h1>

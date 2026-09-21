@@ -31,7 +31,9 @@
   "lead.headline": "Recibe la lista de verificación de migración para esta herramienta",
   "lead.subhead": "Una lista de una página para antes de empezar: exportación de datos, dimensionamiento, plan de copias de seguridad y el paso de vuelta atrás que casi todo el mundo olvida.",
   "lead.cta": "Quiero recibir la lista",
-  "affiliate.disclosure": "El enlace de DigitalOcean de arriba es un enlace de referido: si te registras a través de él y pagas tus primeros 25 $, recibimos 25 $ de crédito en nuestra cuenta de DigitalOcean. Eso nunca cambia los costes calculados, el servidor elegido ni la conclusión de esta página. El modelo de dimensionamiento y todas las fuentes de precios están publicados íntegramente.",
+  "affiliate.disclosure.digitalocean": "El enlace de DigitalOcean de arriba es un enlace de referido: si te registras a través de él y pagas tus primeros 25 $, recibimos 25 $ de crédito en nuestra cuenta de DigitalOcean. Eso nunca cambia los costes calculados, el servidor elegido ni la conclusión de esta página. El modelo de dimensionamiento y todas las fuentes de precios están publicados íntegramente.",
+  "affiliate.disclosure.kamatera": "El enlace de Kamatera de arriba es un enlace de afiliado: si abres una cuenta de pago a través de él, Kamatera nos paga una comisión única de 75 $ (en la mayoría de los países). Eso nunca cambia los costes calculados, el servidor elegido ni la conclusión de esta página. El modelo de dimensionamiento y todas las fuentes de precios están publicados íntegramente.",
+  "affiliate.disclosure.other": "El enlace de {provider} de arriba es un enlace de afiliado con seguimiento: si te registras a través de él, podemos recibir una comisión. Eso nunca cambia los costes calculados, el servidor elegido ni la conclusión de esta página. El modelo de dimensionamiento y todas las fuentes de precios están publicados íntegramente.",
 
   "list.sep": ", ",
   "size.1": "una persona",

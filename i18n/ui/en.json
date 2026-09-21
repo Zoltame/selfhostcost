@@ -31,7 +31,9 @@
   "lead.headline": "Get the migration checklist for this tool",
   "lead.subhead": "A one-page pre-flight list: data export path, sizing, backup plan, and the rollback step most people skip.",
   "lead.cta": "Send me the checklist",
-  "affiliate.disclosure": "The DigitalOcean link above is a referral link: if you sign up through it and pay your first $25, we receive $25 of DigitalOcean account credit. That never changes the computed costs, which server is chosen, or the conclusion of this page. The sizing model and every price source are published in full.",
+  "affiliate.disclosure.digitalocean": "The DigitalOcean link above is a referral link: if you sign up through it and pay your first $25, we receive $25 of DigitalOcean account credit. That never changes the computed costs, which server is chosen, or the conclusion of this page. The sizing model and every price source are published in full.",
+  "affiliate.disclosure.kamatera": "The Kamatera link above is an affiliate link: if you open a paying account through it, Kamatera pays us a one-time commission of $75 (in most countries). That never changes the computed costs, which server is chosen, or the conclusion of this page. The sizing model and every price source are published in full.",
+  "affiliate.disclosure.other": "The {provider} link above is a tracked affiliate link: if you sign up through it, we may earn a commission. That never changes the computed costs, which server is chosen, or the conclusion of this page. The sizing model and every price source are published in full.",
 
   "list.sep": ", ",
   "size.1": "solo",

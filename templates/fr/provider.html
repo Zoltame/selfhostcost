@@ -66,8 +66,8 @@
 <div class="cta">
   <h3>Les prix directement chez {{ provider.name }}</h3>
   <p>Vérifiez toujours le prix actuel sur la page de l'hébergeur avant de vous engager. Le nôtre est un relevé daté, pas un flux en direct.</p>
-  <p><a class="btn" href="{{ hosting_link(provider.slug) }}" rel="{{ 'sponsored nofollow noopener' if affiliate_on else 'nofollow noopener' }}">Ouvrir {{ provider.name }}</a></p>
-  {% if affiliate_on %}<p class="disclosure">{{ t('affiliate.disclosure') }}</p>{% endif %}
+  <p><a class="btn" href="{{ hosting_link(provider.slug) }}" rel="{{ 'sponsored nofollow noopener' if tracked(provider.slug) else 'nofollow noopener' }}">Ouvrir {{ provider.name }}</a></p>
+  {% if tracked(provider.slug) %}<p class="disclosure">{{ disclosure_for(provider.slug) }}</p>{% endif %}
 </div>
 
 <h2>Autres hébergeurs</h2>
