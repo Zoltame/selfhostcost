@@ -6,15 +6,15 @@
 
 <p class="lead">
   {{ tool.description_gh | default(tool.sizing_note, true) }}
-  A continuación verás el servidor que necesita para cada tamaño de equipo, lo que cuesta y a partir de cuándo
+  A continuación verás el servidor que necesita para {{ u('every') }}, lo que cuesta y a partir de cuándo
   {% if replaced %}{{ 'el producto comercial al que sustituye pasaría' if replaced | length == 1 else 'los ' ~ (replaced | length) ~ ' productos comerciales a los que sustituye pasarían' }} a costar más{% else %}una alternativa de pago pasaría a costar más{% endif %}.
 </p>
 
 <div class="tablewrap">
 <table>
-  <caption>Dimensionamiento y coste mensual de {{ tool.name }} según el tamaño del equipo. La memoria incluye un {{ (headroom * 100) | round | int }} % de margen.</caption>
+  <caption>Dimensionamiento y coste mensual de {{ tool.name }} {{ u('by') }}. La memoria incluye un {{ (headroom * 100) | round | int }} % de margen.</caption>
   <thead>
-    <tr><th>Tamaño del equipo</th><th class="num">Memoria</th><th class="num">Disco</th><th>Plan más barato que encaja</th><th class="num">Servidor</th><th class="num">Con copias y tu tiempo</th></tr>
+    <tr><th>{{ u('col') }}</th><th class="num">Memoria</th><th class="num">Disco</th><th>Plan más barato que encaja</th><th class="num">Servidor</th><th class="num">Con copias y tu tiempo</th></tr>
   </thead>
   <tbody>
   {% for r in rows %}
@@ -35,9 +35,9 @@
 <p>{{ tool.sizing_note }}</p>
 <ul>
   <li><strong>{{ gb(tool.base_ram_gb) }} de memoria</strong> para todo el stack en reposo, con todos los contenedores que incluye el proyecto.</li>
-  <li><strong>{{ number(tool.ram_per_user_mb) }} MB más por usuario activo</strong>, y después un {{ (headroom * 100) | round | int }} % extra para que la máquina no trabaje al límite.</li>
-  <li><strong>{{ gb(tool.base_disk_gb) }} de disco</strong> para empezar, y {{ loc.compact(tool.disk_per_user_gb) }} GB más por usuario.</li>
-  <li><strong>{{ tool.base_vcpu }} vCPU.</strong> Se toma de la base del proyecto y no se escala con el tamaño del equipo, porque con esta carga lo primero que se agota es la memoria.</li>
+  <li><strong>{{ number(tool.ram_per_user_mb) }} MB más {{ u('per') }}</strong>, y después un {{ (headroom * 100) | round | int }} % extra para que la máquina no trabaje al límite.</li>
+  <li><strong>{{ gb(tool.base_disk_gb) }} de disco</strong> para empezar, y {{ loc.compact(tool.disk_per_user_gb) }} GB más {{ u('per_short') }}.</li>
+  <li><strong>{{ tool.base_vcpu }} vCPU.</strong> Se toma de la base del proyecto y no se escala con {{ u('the_size') }}, porque con esta carga lo primero que se agota es la memoria.</li>
 </ul>
 <p>
   {% if tool.sizing_basis == 'vendor_docs' %}
@@ -46,7 +46,7 @@
   <strong>Estos valores base son nuestra estimación</strong>, deducida de los servicios del archivo Docker Compose de
   referencia del proyecto, ya que no publica unos requisitos mínimos que podamos citar.
   {% endif %}
-  Los incrementos por usuario son siempre nuestros. Son deliberadamente generosos, no optimistas: una comparativa que
+  {{ u('increments') }} son siempre nuestros. Son deliberadamente generosos, no optimistas: una comparativa que
   infradimensiona el servidor favorece al autoalojamiento.
 </p>
 

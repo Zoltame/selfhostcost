@@ -29,6 +29,28 @@ vendor price was read from the vendor's own page and recorded in
    `apply_verified_prices.py` with the date, then rebuild.
 3. **Wave 2** (`publish_wave: 2`): only after the day-30 gate says SCALE.
 
+## Counting units and the monitoring category
+
+Most categories are priced per person (`team_sizes`, reference 10 people). A category can name another
+`unit` in `data/categories.json`; `site.config.json > units` holds its size ladder and reference size.
+`infra-monitoring` uses `hosts` (5 to 500 monitored servers, reference 25), because Datadog and PRTG
+charge per server or device, not per user. For a `hosts` tool, the `*_per_user` sizing keys mean per
+monitored server. A comparison is only built when the tool and the product share a unit.
+
+Unit wording lives in `i18n/ui/<lang>.json` under `unit.<unit>.*`, and unit-specific variants of page
+titles and price labels end in `.<unit>` (for example `cost.title.many.hosts`).
+
+`infra-monitoring` is prepared but unpublished (wave 2): Datadog and PRTG prices read 2026-09-21, Prometheus +
+Grafana, Zabbix and Checkmk Community sized from their own documentation where it exists. New Relic is
+withheld because it bills by user and data volume (see `ops/backlog-saas.md`). To look at it privately:
+
+```bash
+python scripts/build.py --out ../preview --include-category infra-monitoring
+```
+
+This never touches `docs/` or the date ledger. To publish it, set its category, tools and products to the
+current wave (or publish wave 2), rebuild, and re-read the two vendor prices if they are over 45 days old.
+
 ## Languages
 
 The site is published in English (site root), French (`/fr/`), German (`/de/`) and Spanish (`/es/`),

@@ -142,5 +142,20 @@
     "provider": "none",
     "site_id": "",
     "script_url": ""
+  },
+  "units": {
+    "hosts": {
+      "note": "Monitoring is priced per server watched, not per person. A category with unit 'hosts' is sized and compared on this ladder.",
+      "reference": 25,
+      "sizes": [
+        5,
+        10,
+        25,
+        50,
+        100,
+        250,
+        500
+      ]
+    }
   }
 }

@@ -6,16 +6,16 @@
 
 <p class="lead">
   {{ tool.description_gh | default(tool.sizing_note, true) }}
-  Below is the server it needs at each team size, what that costs, and how long
+  Below is the server it needs at {{ u('each') }}, what that costs, and how long
   {% if replaced %}the {{ replaced | length }} commercial {{ 'product' if replaced | length == 1 else 'products' }} it replaces{% else %}a paid alternative{% endif %}
   would take to cost more.
 </p>
 
 <div class="tablewrap">
 <table>
-  <caption>Sizing and monthly cost for {{ tool.name }} by team size. Memory includes {{ (headroom * 100) | round | int }}% headroom.</caption>
+  <caption>Sizing and monthly cost for {{ tool.name }} {{ u('by') }}. Memory includes {{ (headroom * 100) | round | int }}% headroom.</caption>
   <thead>
-    <tr><th>Team size</th><th class="num">Memory</th><th class="num">Disk</th><th>Cheapest plan that fits</th><th class="num">Server</th><th class="num">With backups and your time</th></tr>
+    <tr><th>{{ u('col') }}</th><th class="num">Memory</th><th class="num">Disk</th><th>Cheapest plan that fits</th><th class="num">Server</th><th class="num">With backups and your time</th></tr>
   </thead>
   <tbody>
   {% for r in rows %}
@@ -36,9 +36,9 @@
 <p>{{ tool.sizing_note }}</p>
 <ul>
   <li><strong>{{ gb(tool.base_ram_gb) }} of memory</strong> for the whole stack at rest, every container the project ships included.</li>
-  <li><strong>{{ tool.ram_per_user_mb }} MB more per active user</strong>, then {{ (headroom * 100) | round | int }}% on top so the box is not running at its ceiling.</li>
-  <li><strong>{{ gb(tool.base_disk_gb) }} of disk</strong> to begin with, growing {{ tool.disk_per_user_gb }} GB per user.</li>
-  <li><strong>{{ tool.base_vcpu }} vCPU.</strong> Carried through from the project's baseline and not scaled with team size, because for this workload memory is what runs out first.</li>
+  <li><strong>{{ tool.ram_per_user_mb }} MB more {{ u('per') }}</strong>, then {{ (headroom * 100) | round | int }}% on top so the box is not running at its ceiling.</li>
+  <li><strong>{{ gb(tool.base_disk_gb) }} of disk</strong> to begin with, growing {{ tool.disk_per_user_gb }} GB {{ u('per_short') }}.</li>
+  <li><strong>{{ tool.base_vcpu }} vCPU.</strong> Carried through from the project's baseline and not scaled with {{ u('size_noun') }}, because for this workload memory is what runs out first.</li>
 </ul>
 <p>
   {% if tool.sizing_basis == 'vendor_docs' %}
@@ -47,7 +47,7 @@
   <strong>The base figures are our estimate</strong>, derived from the services in the project's reference
   Docker Compose file, because it does not publish a minimum specification we could cite.
   {% endif %}
-  The per-user increments are ours in every case. They are deliberately generous rather than optimistic:
+  {{ u('increments') }} are ours in every case. They are deliberately generous rather than optimistic:
   a comparison that undersizes the server flatters self-hosting.
 </p>
 

@@ -12,9 +12,9 @@
 
 {% include "partials/verdict.html" %}
 
-<h2>La même comparaison pour chaque taille d'équipe</h2>
+<h2>La même comparaison pour {{ u('every') }}</h2>
 <p>
-  L'auto-hébergement a un coût plancher et presque pas de pente, alors qu'un logiciel facturé au siège n'a pas de
+  L'auto-hébergement a un coût plancher et presque pas de pente, alors qu'{{ u('metered') }} n'a pas de
   plancher mais une pente raide. Tout est là, et c'est pourquoi la réponse bascule quelque part dans ce tableau au
   lieu d'être la même pour tout le monde.
 </p>
@@ -24,7 +24,7 @@
   <caption>{{ saas.name }} {{ ref.saas_tier.name }} face à {{ tool.name }} auto-hébergé, par mois, sur {{ cfg.tco_model.horizon_months }} mois. L'auto-hébergement inclut le serveur, les sauvegardes et le temps de maintenance à {{ money(cfg.tco_model.engineer_hourly_usd) }} de l'heure.</caption>
   <thead>
     <tr>
-      <th>Taille de l'équipe</th>
+      <th>{{ u('col') }}</th>
       <th class="num">{{ saas.name }}</th>
       <th class="num">Auto-hébergé</th>
       <th class="num">Sans compter votre temps</th>
@@ -49,8 +49,8 @@
 
 <p class="srcline">
   {% if flip_at %}L'auto-hébergement devient avantageux à partir d'environ <strong>{{ flip_at }}</strong>.
-  {% elif never_flips %}Une fois votre temps compté, l'auto-hébergement n'est jamais gagnant, quelle que soit la taille d'équipe de cette page.
-  {% else %}L'auto-hébergement est gagnant pour toutes les tailles d'équipe présentées.{% endif %}
+  {% elif never_flips %}Une fois votre temps compté, l'auto-hébergement n'est jamais gagnant, quelle que soit la {{ u('size_noun') }} de cette page.
+  {% else %}L'auto-hébergement est gagnant pour toutes les {{ u('sizes_noun') }} présentées.{% endif %}
 </p>
 
 <h2>Où part vraiment l'argent de l'auto-hébergement pour {{ ref.label }}</h2>
@@ -82,11 +82,12 @@
 
 {% set f = ref.saas_facts %}
 <p>
-  Pour cette taille d'équipe, {{ saas.name }} coûte <strong>{{ money(ref.saas_usd_month) }}</strong> par mois.
+  Pour {{ u('this_size') }}, {{ saas.name }} coûte <strong>{{ money(ref.saas_usd_month) }}</strong> par mois.
   {% if f.kind == 'free' %}Aucune licence à payer à l'offre standard.
   {% elif f.kind == 'free_cap' %}L'offre gratuite de {{ saas.name }} couvre les équipes jusqu'à {{ f.free_cap }} utilisateurs : une équipe de {{ f.users }} ne paie donc rien pour la licence.
+  {% elif f.kind == 'flat' and f.banded %}La licence {{ f.band_name }} coûte {{ money(f.usd) }} par mois : c'est la plus petite licence {{ saas.name }} qui couvre cette taille, prévue par l'éditeur pour {{ f.band_cap }} appareils au plus.
   {% elif f.kind == 'flat' %}{{ saas.name }} {{ f.tier }} est un forfait de {{ money(f.usd) }} par mois à cette offre, quel que soit le nombre de sièges.
-  {% else %}{{ f.seats }} sièges à {{ money(f.per_usd) }} chacun{% if f.min_seats %}, car l'offre {{ f.tier }} impose un minimum de {{ f.min_seats }} sièges{% endif %}{% if f.floor_usd is not none %}, relevé à {{ money(f.floor_usd) }} par mois car {{ saas.name }} exige un contrat minimum de ce montant{% endif %}.{% if f.banded %} {{ saas.name }} baisse le prix par utilisateur quand l'équipe grandit ; c'est le tarif affiché pour une équipe de cette taille.{% endif %}
+  {% else %}{{ u('seats', n=f.seats) }} à {{ money(f.per_usd) }} chacun{% if f.min_seats %}, car l'offre {{ f.tier }} impose un minimum de {{ f.min_seats }} sièges{% endif %}{% if f.floor_usd is not none %}, relevé à {{ money(f.floor_usd) }} par mois car {{ saas.name }} exige un contrat minimum de ce montant{% endif %}.{% if f.banded %} {{ saas.name }} baisse le prix par utilisateur quand l'équipe grandit ; c'est le tarif affiché pour une équipe de cette taille.{% endif %}
   {% endif %}
   {% if f.kind in ('flat', 'per_seat') %}{% if f.basis == 'annual' %}C'est le tarif en facturation annuelle, celui qu'affichait la page de l'éditeur ; payer au mois coûte plus cher.{% elif f.basis == 'unstated' %}La page de l'éditeur ne précisait pas s'il s'agit du tarif mensuel ou annuel.{% endif %}
   {% if f.currency != 'USD' %}L'éditeur affichait ses prix en {{ f.currency }}, convertis au taux daté indiqué dans la méthodologie.{% endif %}{% endif %}
@@ -108,9 +109,9 @@
   <thead><tr><th>Ressource</th><th class="num">Nécessaire</th><th>Comment c'est calculé</th></tr></thead>
   <tbody>
     <tr><th scope="row">Mémoire</th><td class="num">{{ gb(ref.sizing.ram_gb) }}</td>
-      <td>{{ gb(tool.base_ram_gb) }} pour la pile au repos, plus {{ number(tool.ram_per_user_mb) }} Mo par utilisateur actif, plus {{ (ref.sizing.headroom_ratio * 100) | round | int }} % de marge</td></tr>
+      <td>{{ gb(tool.base_ram_gb) }} pour la pile au repos, plus {{ number(tool.ram_per_user_mb) }} Mo {{ u('per') }}, plus {{ (ref.sizing.headroom_ratio * 100) | round | int }} % de marge</td></tr>
     <tr><th scope="row">Disque</th><td class="num">{{ gb(ref.sizing.disk_gb) }}</td>
-      <td>{{ gb(tool.base_disk_gb) }} de base, plus {{ loc.compact(tool.disk_per_user_gb) }} Go par utilisateur</td></tr>
+      <td>{{ gb(tool.base_disk_gb) }} de base, plus {{ loc.compact(tool.disk_per_user_gb) }} Go {{ u('per_short') }}</td></tr>
     <tr><th scope="row">vCPU</th><td class="num">{{ ref.sizing.vcpu }}</td>
       <td>La base recommandée par le projet. Pour cette charge, la mémoire s'épuise avant le processeur.</td></tr>
   </tbody>
@@ -197,7 +198,7 @@
     </tr>
     <tr>
       <td>Dimensionnement de {{ tool.name }}</td>
-      <td>{{ gb(tool.base_ram_gb) }} de base, {{ number(tool.ram_per_user_mb) }} Mo par utilisateur</td>
+      <td>{{ gb(tool.base_ram_gb) }} de base, {{ number(tool.ram_per_user_mb) }} Mo {{ u('per_short') }}</td>
       <td>{% if tool.sizing_basis == 'vendor_docs' %}documentation du projet{% else %}déduit de sa pile Compose de référence{% endif %}</td>
       <td>&mdash;</td>
     </tr>
@@ -211,7 +212,7 @@
 
 <h2>À voir aussi</h2>
 <ul class="linkgrid">
-  <li><a href="{{ base }}/self-host/{{ tool.slug }}/">Auto-héberger {{ tool.name }} : toutes les tailles d'équipe</a></li>
+  <li><a href="{{ base }}/self-host/{{ tool.slug }}/">Auto-héberger {{ tool.name }} : {{ u('all') }}</a></li>
   <li><a href="{{ base }}/alternatives/{{ saas.slug }}/">Toutes les alternatives auto-hébergées à {{ saas.name }}</a></li>
   {% for sib in siblings %}<li><a href="{{ base }}{{ sib.url }}">{{ sib.name }}</a></li>{% endfor %}
   <li><a href="{{ base }}/category/{{ category.slug }}/">{{ category.name }} : comparatif</a></li>

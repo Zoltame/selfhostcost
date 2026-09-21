@@ -2,10 +2,10 @@
 {% block content %}
 
 <p class="kicker">{{ tool.name }} &middot; {{ category.name }}</p>
-<h1>Self-hosting {{ tool.name }} for {{ size.users }} {{ 'person' if size.users == 1 else 'people' }}: the cost</h1>
+<h1>Self-hosting {{ tool.name }} for {{ u('n_one' if size.users == 1 else 'n_many', n=size.users) }}: the cost</h1>
 
 <p class="lead">
-  At {{ size.users }} {{ 'user' if size.users == 1 else 'users' }}, {{ tool.name }} needs
+  At {{ u('who_one' if size.users == 1 else 'who_many', n=size.users) }}, {{ tool.name }} needs
   {{ gb(sizing.ram_gb) }} of memory and {{ gb(sizing.disk_gb) }} of disk. That fits the
   {{ plan.plan.name }} at {{ plan.provider_name }} for {{ money(plan.price_usd_month) }} a month.
   Add backups and the time it takes to look after and the real figure is
@@ -29,7 +29,7 @@
 <h2>How {{ gb(sizing.ram_gb) }} was arrived at</h2>
 <p>
   {{ gb(tool.base_ram_gb) }} covers the stack at rest, every container the project ships included.
-  {{ size.users }} {{ 'user' if size.users == 1 else 'users' }} at {{ tool.ram_per_user_mb }} MB each adds
+  {{ u('who_one' if size.users == 1 else 'who_many', n=size.users) }} at {{ tool.ram_per_user_mb }} MB each adds
   {{ gb(per_user_ram_gb) }}, giving {{ gb(sizing.raw_ram_gb) }}. Adding
   {{ (sizing.headroom_ratio * 100) | round | int }}% headroom so the machine is not run at its ceiling
   gives <strong>{{ gb(sizing.ram_gb) }}</strong>, and the smallest plan at or above that is the
@@ -37,10 +37,10 @@
 </p>
 <p>
   Disk works the same way: {{ gb(tool.base_disk_gb) }} to begin with, plus
-  {{ tool.disk_per_user_gb }} GB per user, so <strong>{{ gb(sizing.disk_gb) }}</strong> against the
+  {{ tool.disk_per_user_gb }} GB {{ u('per_short') }}, so <strong>{{ gb(sizing.disk_gb) }}</strong> against the
   {{ gb(plan.plan.disk_gb) }} the plan includes.
   {% if tool.disk_per_user_gb >= 5 %}
-  This tool is storage-hungry per user, so disk rather than memory is what will force your next upgrade.
+  This tool is storage-hungry {{ u('per_short') }}, so disk rather than memory is what will force your next upgrade.
   {% endif %}
 </p>
 <p>{{ tool.sizing_note }}</p>
@@ -96,7 +96,7 @@
 <ul class="linkgrid">
   {% if prev_size %}<li><a href="{{ base }}/cost/{{ tool.slug }}/{{ prev_size.slug }}/">{{ tool.name }} for {{ prev_size.label }}</a></li>{% endif %}
   {% if next_size %}<li><a href="{{ base }}/cost/{{ tool.slug }}/{{ next_size.slug }}/">{{ tool.name }} for {{ next_size.label }}</a></li>{% endif %}
-  <li><a href="{{ base }}/self-host/{{ tool.slug }}/">{{ tool.name }}: all team sizes at once</a></li>
+  <li><a href="{{ base }}/self-host/{{ tool.slug }}/">{{ tool.name }}: {{ u('all') }}</a></li>
   <li><a href="{{ base }}/category/{{ category.slug }}/">{{ category.name }} compared</a></li>
   <li><a href="{{ base }}/methodology/">How these figures are calculated</a></li>
 </ul>

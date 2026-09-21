@@ -2,10 +2,10 @@
 {% block content %}
 
 <p class="kicker">{{ tool.name }} &middot; {{ category.name }}</p>
-<h1>{{ tool.name }} für {{ size.users }} {{ 'Person' if size.users == 1 else 'Personen' }} selbst hosten: die Kosten</h1>
+<h1>{{ tool.name }} für {{ u('n_one' if size.users == 1 else 'n_many', n=size.users) }} selbst hosten: die Kosten</h1>
 
 <p class="lead">
-  Für {{ size.users }} Nutzer braucht {{ tool.name }} {{ gb(sizing.ram_gb) }} Arbeitsspeicher und
+  Für {{ u('who', n=size.users) }} braucht {{ tool.name }} {{ gb(sizing.ram_gb) }} Arbeitsspeicher und
   {{ gb(sizing.disk_gb) }} Speicherplatz. Das passt auf den Tarif {{ plan.plan.name }} bei {{ plan.provider_name }}
   für {{ money(plan.price_usd_month) }} pro Monat. Mit Backups und der Zeit für die Betreuung liegt die echte Zahl bei
   <strong>{{ money(total_month) }} pro Monat</strong>.
@@ -29,17 +29,17 @@
 <h2>Wie die {{ gb(sizing.ram_gb) }} zustande kommen</h2>
 <p>
   {{ gb(tool.base_ram_gb) }} decken den Stack im Ruhezustand ab, inklusive aller Container des Projekts.
-  {{ size.users }} Nutzer zu je {{ number(tool.ram_per_user_mb) }} MB ergeben zusätzlich {{ gb(per_user_ram_gb) }},
+  {{ u('who', n=size.users) }} zu je {{ number(tool.ram_per_user_mb) }} MB ergeben zusätzlich {{ gb(per_user_ram_gb) }},
   zusammen {{ gb(sizing.raw_ram_gb) }}. Mit {{ (sizing.headroom_ratio * 100) | round | int }} % Reserve, damit die
   Maschine nicht am Limit läuft, ergibt das <strong>{{ gb(sizing.ram_gb) }}</strong>; der kleinste Tarif, der das
   erreicht, ist {{ plan.plan.name }} mit {{ gb(plan.plan.ram_gb) }}.
 </p>
 <p>
   Beim Speicherplatz gilt dasselbe: {{ gb(tool.base_disk_gb) }} zu Beginn plus
-  {{ loc.compact(tool.disk_per_user_gb) }} GB pro Nutzer, also <strong>{{ gb(sizing.disk_gb) }}</strong> gegenüber den
+  {{ loc.compact(tool.disk_per_user_gb) }} GB {{ u('per_short') }}, also <strong>{{ gb(sizing.disk_gb) }}</strong> gegenüber den
   {{ gb(plan.plan.disk_gb) }}, die der Tarif enthält.
   {% if tool.disk_per_user_gb >= 5 %}
-  Dieses Tool braucht pro Nutzer viel Speicherplatz: Das nächste Upgrade erzwingt eher der Speicher als der Arbeitsspeicher.
+  Dieses Tool braucht {{ u('per_short') }} viel Speicherplatz: Das nächste Upgrade erzwingt eher der Speicher als der Arbeitsspeicher.
   {% endif %}
 </p>
 <p>{{ tool.sizing_note }}</p>
@@ -95,7 +95,7 @@
 <ul class="linkgrid">
   {% if prev_size %}<li><a href="{{ base }}/cost/{{ tool.slug }}/{{ prev_size.slug }}/">{{ tool.name }} für {{ prev_size.label }}</a></li>{% endif %}
   {% if next_size %}<li><a href="{{ base }}/cost/{{ tool.slug }}/{{ next_size.slug }}/">{{ tool.name }} für {{ next_size.label }}</a></li>{% endif %}
-  <li><a href="{{ base }}/self-host/{{ tool.slug }}/">{{ tool.name }}: alle Teamgrößen auf einen Blick</a></li>
+  <li><a href="{{ base }}/self-host/{{ tool.slug }}/">{{ tool.name }}: {{ u('all') }} auf einen Blick</a></li>
   <li><a href="{{ base }}/category/{{ category.slug }}/">{{ category.name }} im Vergleich</a></li>
   <li><a href="{{ base }}/methodology/">Wie diese Zahlen berechnet werden</a></li>
 </ul>

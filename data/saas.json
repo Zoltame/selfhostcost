@@ -1188,22 +1188,32 @@
     {
       "slug": "datadog",
       "name": "Datadog",
-      "category": "error-monitoring",
+      "category": "infra-monitoring",
       "vendor": "Datadog",
       "site": "https://www.datadoghq.com",
       "pricing_url": "https://www.datadoghq.com/pricing/",
-      "billing_model": "flat_month",
-      "compare_tier": "Pro per host",
+      "billing_model": "per_seat_month",
+      "compare_tier": "Infrastructure Pro",
       "tiers": [
         {
-          "name": "Pro",
-          "usd_month": 15.0,
-          "note": "Per host per month. Log ingestion and APM are billed separately and usually dominate the bill."
+          "name": "Infrastructure Pro",
+          "currency": "USD",
+          "billing_basis": "annual",
+          "usd_per_seat_month": 15.0,
+          "note": "Per host per month billed annually, $18 on demand. 15-month metric retention, 5 containers and 100 custom metrics allotted per host. Logs, APM and extra custom metrics are billed separately and are not included here."
+        },
+        {
+          "name": "Infrastructure Enterprise",
+          "currency": "USD",
+          "billing_basis": "annual",
+          "usd_per_seat_month": 23.0,
+          "note": "Per host per month billed annually, $27 on demand."
         }
       ],
-      "price_status": "seed",
-      "verified_on": null,
-      "wave": 2
+      "price_status": "verified",
+      "verified_on": "2026-09-21",
+      "wave": 2,
+      "free_tier_note": "Datadog has a free plan for up to 5 hosts, but it keeps metrics for one day only, against 15 months on Pro. That is not a like-for-like replacement for monitoring you rely on, so the comparison uses Pro even at 5 servers."
     },
     {
       "slug": "calendly",
@@ -1246,6 +1256,55 @@
       "price_status": "seed",
       "verified_on": null,
       "wave": 2
+    },
+    {
+      "slug": "prtg",
+      "name": "PRTG Network Monitor",
+      "category": "infra-monitoring",
+      "vendor": "Paessler",
+      "site": "https://www.paessler.com/prtg",
+      "pricing_url": "https://www.paessler.com/prtg/pricing",
+      "billing_model": "flat_month",
+      "compare_tier": "Subscription",
+      "tiers": [
+        {
+          "name": "Subscription",
+          "currency": "EUR",
+          "billing_basis": "annual",
+          "seat_bands": [
+            {
+              "name": "PRTG 500",
+              "max_seats": 50,
+              "eur_month": 150.0
+            },
+            {
+              "name": "PRTG 1000",
+              "max_seats": 100,
+              "eur_month": 267.0
+            },
+            {
+              "name": "PRTG 2500",
+              "max_seats": 250,
+              "eur_month": 558.0
+            },
+            {
+              "name": "PRTG 5000",
+              "max_seats": 500,
+              "eur_month": 1000.0
+            },
+            {
+              "name": "PRTG 10000",
+              "max_seats": 1000,
+              "eur_month": 1350.0
+            }
+          ],
+          "note": "Licences are sold by sensor count. The pricing page rates each licence for a number of devices (PRTG 500 is enough to monitor multiple aspects of 50 devices), and that device rating is the band used here. Monthly price when paid annually."
+        }
+      ],
+      "price_status": "verified",
+      "verified_on": "2026-09-21",
+      "wave": 2,
+      "free_tier_note": "PRTG is not a hosted service: you install it on your own Windows server. Its figure here is the licence alone, so the server and the time to run PRTG itself are left out, which makes PRTG look cheaper than it is."
     }
   ]
 }

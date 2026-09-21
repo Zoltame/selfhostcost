@@ -25,7 +25,8 @@
     "search": { "name": "Motores de búsqueda", "intent": "Impulsar la búsqueda del sitio sin tarifas de indexación por registro." },
     "paas": { "name": "Plataformas de despliegue", "intent": "Desplegar aplicaciones en tu propio servidor con la comodidad de una plataforma." },
     "video-meetings": { "name": "Videollamadas", "intent": "Organizar reuniones sin licencias por anfitrión." },
-    "headless-cms": { "name": "CMS headless", "intent": "Ser dueño de la API de contenidos en lugar de alquilar registros e idiomas." }
+    "headless-cms": { "name": "CMS headless", "intent": "Ser dueño de la API de contenidos en lugar de alquilar registros e idiomas." },
+    "infra-monitoring": {"name": "Supervisión de infraestructura", "intent": "Vigilar servidores y servicios sin una factura de supervisión por servidor."}
   },
 
   "tools": {
@@ -150,7 +151,10 @@
     "limesurvey": {
       "sizing_note": "Dos décadas de lógica de encuestas, incluidas cuotas y ramificaciones complejas que las herramientas más nuevas ni intentan. La interfaz acusa el paso del tiempo.",
       "description_gh": "LimeSurvey es una potente plataforma de encuestas de código abierto, alternativa gratuita a SurveyMonkey, Typeform, Qualtrics y Google Forms, que facilita crear encuestas y formularios en línea."
-    }
+    },
+    "prometheus-grafana": {"sizing_note": "Prometheus recoge las métricas y Grafana muestra los paneles, con Alertmanager para las alertas y node_exporter en cada servidor. El disco sigue la fórmula de capacidad de Prometheus con su retención por defecto de 15 días: unas 1.000 series por servidor, consultadas cada 15 segundos a 2 bytes por muestra, son aproximadamente 0,2 GB por servidor. La memoria por servidor es nuestra estimación para ese mismo número de series.", "licence_caveat": "Prometheus tiene licencia Apache-2.0, pero Grafana, usado aquí para los paneles, tiene licencia AGPL-3.0. Solo importa si modificas Grafana y lo ofreces a otros a través de una red.", "description_gh": "El sistema de supervisión Prometheus y su base de datos de series temporales."},
+    "zabbix": {"sizing_note": "Servidor de Zabbix, base de datos e interfaz web. La memoria se ajusta a la tabla de hardware de Zabbix, que pide 8 GB para 1.000 métricas supervisadas y 16 GB para 10.000, contando unas 100 métricas por servidor; por encima de 100 servidores, este cálculo supera las cifras de Zabbix. El disco aplica la fórmula de base de datos de Zabbix: 90 bytes por valor, 100 elementos por servidor consultados cada minuto, 31 días de historial y un año de tendencias, es decir, unos 0,5 GB por servidor.", "licence_caveat": "Zabbix tiene licencia AGPL-3.0. Solo importa si modificas el propio Zabbix y lo ofreces a otros a través de una red.", "description_gh": "Supervisión en tiempo real de componentes y servicios de TI: redes, servidores, máquinas virtuales, aplicaciones y nube."},
+    "checkmk": {"sizing_note": "La edición libre y gratuita de Checkmk, con el núcleo de Nagios y archivos de métricas circulares que no crecen una vez creados. Se instala como un único paquete que incluye todos sus componentes. Las cifras son nuestra estimación: Checkmk no publica una tabla de requisitos que podamos citar.", "licence_caveat": "Checkmk Community tiene licencia GPL-2.0. Varias funciones, entre ellas el núcleo de supervisión más rápido, solo están en las ediciones de pago.", "description_gh": "Checkmk: supervisión de infraestructura y aplicaciones."}
   },
 
   "saas": {
@@ -164,7 +168,9 @@
     "statuspage": { "free_tier_note": "Un plan gratuito cubre 100 suscriptores, 25 componentes y dos miembros del equipo. Por debajo de ese límite no hay nada que ahorrar." },
     "betteruptime": { "free_tier_note": "El plan gratuito de Better Stack incluye 10 monitores y heartbeats y 1 página de estado. Si con eso te basta, no hay nada que ahorrar." },
     "mixpanel": { "free_tier_note": "El plan gratuito de Mixpanel cubre hasta 1 millón de eventos al mes, sin coste por puesto. Por debajo de ese volumen no hay licencia que ahorrar, así que esta comparativa trata de quién controla los datos, no de lo que cuestan." },
-    "amplitude": { "free_tier_note": "El plan gratuito de Amplitude cubre hasta 2 millones de eventos al mes con puestos ilimitados. Por debajo de ese volumen no hay licencia que ahorrar." }
+    "amplitude": { "free_tier_note": "El plan gratuito de Amplitude cubre hasta 2 millones de eventos al mes con puestos ilimitados. Por debajo de ese volumen no hay licencia que ahorrar." },
+    "datadog": {"free_tier_note": "Datadog tiene un plan gratuito para hasta 5 servidores, pero solo conserva las métricas un día, frente a 15 meses en Pro. No es un sustituto equivalente para una supervisión de la que dependes, así que la comparativa usa Pro incluso con 5 servidores."},
+    "prtg": {"free_tier_note": "PRTG no es un servicio alojado: lo instalas en tu propio servidor Windows. Su importe aquí es solo la licencia; el servidor y el tiempo para mantener el propio PRTG no se incluyen, lo que hace que PRTG parezca más barato de lo que es."}
   },
 
   "providers": {

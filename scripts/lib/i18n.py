@@ -153,7 +153,9 @@ class Locale:
     def hours(self, v: float) -> str:
         return self.compact(v)
 
-    def size_label(self, users: int) -> str:
+    def size_label(self, users: int, unit: str = "users") -> str:
+        if unit != "users":
+            return self.t(f"size.{unit}.1" if users == 1 else f"size.{unit}.n", n=users)
         return self.t("size.1") if users == 1 else self.t("size.n", n=users)
 
     # ---- urls -----------------------------------------------------------

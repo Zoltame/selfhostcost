@@ -25,7 +25,8 @@
     "search": { "name": "Moteurs de recherche", "intent": "Alimenter la recherche du site sans frais d'indexation par enregistrement." },
     "paas": { "name": "Plateformes de déploiement", "intent": "Déployer des applications sur votre propre serveur avec un confort de plateforme." },
     "video-meetings": { "name": "Visioconférence", "intent": "Organiser des appels sans licence par organisateur." },
-    "headless-cms": { "name": "CMS headless", "intent": "Posséder l'API de contenu au lieu de louer des enregistrements et des langues." }
+    "headless-cms": { "name": "CMS headless", "intent": "Posséder l'API de contenu au lieu de louer des enregistrements et des langues." },
+    "infra-monitoring": {"name": "Supervision d'infrastructure", "intent": "Surveiller serveurs et services sans facture de supervision par serveur."}
   },
 
   "tools": {
@@ -150,7 +151,10 @@
     "limesurvey": {
       "sizing_note": "Vingt ans de logique d'enquête, dont les quotas et les embranchements complexes que les outils récents ne tentent pas. L'interface accuse son âge.",
       "description_gh": "LimeSurvey est une plateforme d'enquêtes open source puissante, alternative gratuite à SurveyMonkey, Typeform, Qualtrics et Google Forms, pour créer facilement des sondages et formulaires en ligne."
-    }
+    },
+    "prometheus-grafana": {"sizing_note": "Prometheus collecte les métriques et Grafana affiche les tableaux de bord, avec Alertmanager pour les alertes et node_exporter sur chaque serveur. Le disque suit la formule de capacité de Prometheus avec sa rétention par défaut de 15 jours : environ 1 000 séries par serveur, relevées toutes les 15 secondes à 2 octets par échantillon, soit à peu près 0,2 Go par serveur. La mémoire par serveur est notre estimation pour ce même nombre de séries.", "licence_caveat": "Prometheus est sous licence Apache-2.0, mais Grafana, utilisé ici pour les tableaux de bord, est sous AGPL-3.0. Cela ne compte que si vous modifiez Grafana et le proposez à d'autres via un réseau.", "description_gh": "Le système de supervision Prometheus et sa base de données de séries temporelles."},
+    "zabbix": {"sizing_note": "Serveur Zabbix, base de données et interface web. La mémoire est calée sur le tableau matériel de Zabbix, qui demande 8 Go pour 1 000 métriques surveillées et 16 Go pour 10 000, en comptant environ 100 métriques par serveur ; au-delà de 100 serveurs, ce calcul dépasse les chiffres de Zabbix. Le disque applique la formule de base de données de Zabbix : 90 octets par valeur, 100 éléments par serveur relevés chaque minute, 31 jours d'historique et un an de tendances, soit environ 0,5 Go par serveur.", "licence_caveat": "Zabbix est sous licence AGPL-3.0. Cela ne compte que si vous modifiez Zabbix lui-même et le proposez à d'autres via un réseau.", "description_gh": "Supervision en temps réel des composants et services informatiques : réseaux, serveurs, machines virtuelles, applications et cloud."},
+    "checkmk": {"sizing_note": "L'édition libre et gratuite de Checkmk, avec le cœur Nagios et des fichiers de métriques circulaires qui ne grossissent plus une fois créés. Elle s'installe en un seul paquet qui contient tous ses composants. Les chiffres sont notre estimation : Checkmk ne publie pas de tableau de configuration requise que nous pourrions citer.", "licence_caveat": "Checkmk Community est sous licence GPL-2.0. Plusieurs fonctions, dont le cœur de supervision plus rapide, sont réservées aux éditions payantes.", "description_gh": "Checkmk : supervision d'infrastructure et d'applications."}
   },
 
   "saas": {
@@ -164,7 +168,9 @@
     "statuspage": { "free_tier_note": "Une offre gratuite couvre 100 abonnés, 25 composants et deux membres d'équipe. Sous ce plafond, il n'y a rien à économiser." },
     "betteruptime": { "free_tier_note": "L'offre gratuite de Better Stack inclut 10 sondes et heartbeats et 1 page de statut. Si cela vous suffit, il n'y a rien à économiser." },
     "mixpanel": { "free_tier_note": "L'offre gratuite de Mixpanel couvre jusqu'à 1 million d'événements par mois, sans frais par siège. Sous ce volume, il n'y a aucune licence à économiser : cette comparaison porte sur qui détient les données, pas sur ce qu'elles coûtent." },
-    "amplitude": { "free_tier_note": "L'offre gratuite d'Amplitude couvre jusqu'à 2 millions d'événements par mois avec des sièges illimités. Sous ce volume, il n'y a aucune licence à économiser." }
+    "amplitude": { "free_tier_note": "L'offre gratuite d'Amplitude couvre jusqu'à 2 millions d'événements par mois avec des sièges illimités. Sous ce volume, il n'y a aucune licence à économiser." },
+    "datadog": {"free_tier_note": "Datadog propose une offre gratuite jusqu'à 5 serveurs, mais elle ne conserve les métriques qu'un jour, contre 15 mois avec Pro. Ce n'est pas un équivalent pour une supervision dont vous dépendez, donc la comparaison utilise Pro même à 5 serveurs."},
+    "prtg": {"free_tier_note": "PRTG n'est pas un service hébergé : vous l'installez sur votre propre serveur Windows. Son montant ici correspond à la seule licence ; le serveur et le temps nécessaires pour faire tourner PRTG lui-même ne sont pas comptés, ce qui fait paraître PRTG moins cher qu'il ne l'est."}
   },
 
   "providers": {

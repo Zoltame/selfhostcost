@@ -7,16 +7,16 @@
 
 <p class="lead">
   {{ tool.description_gh | default(tool.sizing_note, true) }}
-  Unten stehen der benötigte Server für jede Teamgröße, seine Kosten und ab wann sich das gegenüber
+  Unten stehen der benötigte Server für {{ u('every') }}, seine Kosten und ab wann sich das gegenüber
   {% if replaced %}{{ 'dem kommerziellen Produkt, das' if replaced | length == 1 else 'den ' ~ (replaced | length) ~ ' kommerziellen Produkten, die' }} es ersetzt{% else %}einer kostenpflichtigen Alternative{% endif %},
   rechnet.
 </p>
 
 <div class="tablewrap">
 <table>
-  <caption>Dimensionierung und monatliche Kosten von {{ tool.name }} nach Teamgröße. Der Arbeitsspeicher enthält {{ (headroom * 100) | round | int }} % Reserve. Beträge in Euro.</caption>
+  <caption>Dimensionierung und monatliche Kosten von {{ tool.name }} {{ u('by') }}. Der Arbeitsspeicher enthält {{ (headroom * 100) | round | int }} % Reserve. Beträge in Euro.</caption>
   <thead>
-    <tr><th>Teamgröße</th><th class="num">Arbeitsspeicher</th><th class="num">Speicherplatz</th><th>Günstigster passender Tarif</th><th class="num">Server</th><th class="num">Mit Backups und Ihrer Zeit</th></tr>
+    <tr><th>{{ u('col') }}</th><th class="num">Arbeitsspeicher</th><th class="num">Speicherplatz</th><th>Günstigster passender Tarif</th><th class="num">Server</th><th class="num">Mit Backups und Ihrer Zeit</th></tr>
   </thead>
   <tbody>
   {% for r in rows %}
@@ -37,9 +37,9 @@
 <p>{{ tool.sizing_note }}</p>
 <ul>
   <li><strong>{{ gb(tool.base_ram_gb) }} Arbeitsspeicher</strong> für den gesamten Stack im Ruhezustand, inklusive aller Container, die das Projekt mitliefert.</li>
-  <li><strong>{{ number(tool.ram_per_user_mb) }} MB mehr pro aktivem Nutzer</strong>, dann {{ (headroom * 100) | round | int }} % obendrauf, damit die Maschine nicht am Limit läuft.</li>
-  <li><strong>{{ gb(tool.base_disk_gb) }} Speicherplatz</strong> zu Beginn, wachsend um {{ loc.compact(tool.disk_per_user_gb) }} GB pro Nutzer.</li>
-  <li><strong>{{ tool.base_vcpu }} vCPU.</strong> Aus der Vorgabe des Projekts übernommen und nicht mit der Teamgröße skaliert, weil bei dieser Last zuerst der Arbeitsspeicher knapp wird.</li>
+  <li><strong>{{ number(tool.ram_per_user_mb) }} MB mehr {{ u('per') }}</strong>, dann {{ (headroom * 100) | round | int }} % obendrauf, damit die Maschine nicht am Limit läuft.</li>
+  <li><strong>{{ gb(tool.base_disk_gb) }} Speicherplatz</strong> zu Beginn, wachsend um {{ loc.compact(tool.disk_per_user_gb) }} GB {{ u('per_short') }}.</li>
+  <li><strong>{{ tool.base_vcpu }} vCPU.</strong> Aus der Vorgabe des Projekts übernommen und nicht mit {{ u('the_size') }} skaliert, weil bei dieser Last zuerst der Arbeitsspeicher knapp wird.</li>
 </ul>
 <p>
   {% if tool.sizing_basis == 'vendor_docs' %}
@@ -48,7 +48,7 @@
   <strong>Diese Grundwerte sind unsere Schätzung</strong>, abgeleitet aus den Diensten der Docker-Compose-Referenzdatei
   des Projekts, da es keine zitierbaren Mindestanforderungen veröffentlicht.
   {% endif %}
-  Die Zuschläge pro Nutzer stammen in jedem Fall von uns. Sie sind bewusst großzügig statt optimistisch gewählt:
+  {{ u('increments') }} stammen in jedem Fall von uns. Sie sind bewusst großzügig statt optimistisch gewählt:
   Ein Vergleich, der den Server zu klein ansetzt, lässt Self-Hosting besser aussehen, als es ist.
 </p>
 

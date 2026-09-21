@@ -2,10 +2,10 @@
 {% block content %}
 
 <p class="kicker">{{ tool.name }} &middot; {{ category.name }}</p>
-<h1>Auto-héberger {{ tool.name }} pour {{ size.users }} {{ 'personne' if size.users == 1 else 'personnes' }} : le coût</h1>
+<h1>Auto-héberger {{ tool.name }} pour {{ u('n_one' if size.users == 1 else 'n_many', n=size.users) }} : le coût</h1>
 
 <p class="lead">
-  Pour {{ size.users }} {{ 'utilisateur' if size.users == 1 else 'utilisateurs' }}, {{ tool.name }} demande
+  Pour {{ u('who_one' if size.users == 1 else 'who_many', n=size.users) }}, {{ tool.name }} demande
   {{ gb(sizing.ram_gb) }} de mémoire et {{ gb(sizing.disk_gb) }} de disque. Cela tient sur l'offre
   {{ plan.plan.name }} chez {{ plan.provider_name }} pour {{ money(plan.price_usd_month) }} par mois.
   Ajoutez les sauvegardes et le temps d'entretien, et le vrai chiffre est de
@@ -30,7 +30,7 @@
 <h2>Comment on arrive à {{ gb(sizing.ram_gb) }}</h2>
 <p>
   {{ gb(tool.base_ram_gb) }} couvrent la pile au repos, avec chaque conteneur fourni par le projet.
-  {{ size.users }} {{ 'utilisateur' if size.users == 1 else 'utilisateurs' }} à {{ number(tool.ram_per_user_mb) }} Mo
+  {{ u('who_one' if size.users == 1 else 'who_many', n=size.users) }} à {{ number(tool.ram_per_user_mb) }} Mo
   chacun ajoutent {{ gb(per_user_ram_gb) }}, soit {{ gb(sizing.raw_ram_gb) }}. En ajoutant
   {{ (sizing.headroom_ratio * 100) | round | int }} % de marge pour que la machine ne tourne pas à sa limite, on obtient
   <strong>{{ gb(sizing.ram_gb) }}</strong>, et la plus petite offre qui atteint ce niveau est
@@ -38,10 +38,10 @@
 </p>
 <p>
   Le disque suit la même logique : {{ gb(tool.base_disk_gb) }} au départ, plus
-  {{ loc.compact(tool.disk_per_user_gb) }} Go par utilisateur, soit <strong>{{ gb(sizing.disk_gb) }}</strong> pour les
+  {{ loc.compact(tool.disk_per_user_gb) }} Go {{ u('per_short') }}, soit <strong>{{ gb(sizing.disk_gb) }}</strong> pour les
   {{ gb(plan.plan.disk_gb) }} inclus dans l'offre.
   {% if tool.disk_per_user_gb >= 5 %}
-  Cet outil consomme beaucoup de stockage par utilisateur : c'est le disque, plus que la mémoire, qui imposera votre prochaine montée en gamme.
+  Cet outil consomme beaucoup de stockage {{ u('per_short') }} : c'est le disque, plus que la mémoire, qui imposera votre prochaine montée en gamme.
   {% endif %}
 </p>
 <p>{{ tool.sizing_note }}</p>
@@ -97,7 +97,7 @@
 <ul class="linkgrid">
   {% if prev_size %}<li><a href="{{ base }}/cost/{{ tool.slug }}/{{ prev_size.slug }}/">{{ tool.name }} pour {{ prev_size.label }}</a></li>{% endif %}
   {% if next_size %}<li><a href="{{ base }}/cost/{{ tool.slug }}/{{ next_size.slug }}/">{{ tool.name }} pour {{ next_size.label }}</a></li>{% endif %}
-  <li><a href="{{ base }}/self-host/{{ tool.slug }}/">{{ tool.name }} : toutes les tailles d'équipe</a></li>
+  <li><a href="{{ base }}/self-host/{{ tool.slug }}/">{{ tool.name }} : {{ u('all') }}</a></li>
   <li><a href="{{ base }}/category/{{ category.slug }}/">{{ category.name }} : comparatif</a></li>
   <li><a href="{{ base }}/methodology/">Comment ces chiffres sont calculés</a></li>
 </ul>

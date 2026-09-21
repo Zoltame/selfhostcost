@@ -226,7 +226,8 @@ def saas_facts(product: dict, users: int, config: dict) -> dict:
     f = {
         "product": product["name"], "tier": tier["name"], "users": users, "kind": None,
         "usd": 0.0, "seats": users, "per_usd": None, "min_seats": None, "floor_usd": None,
-        "banded": False, "basis": tier.get("billing_basis"), "currency": "USD", "free_cap": None,
+        "banded": False, "band_name": None, "band_cap": None,
+        "basis": tier.get("billing_basis"), "currency": "USD", "free_cap": None,
     }
 
     if model == "free":
@@ -245,7 +246,7 @@ def saas_facts(product: dict, users: int, config: dict) -> dict:
             (b for b in bands if b.get("max_seats") is None or users <= int(b["max_seats"])),
             bands[-1],
         )
-        f["banded"] = True
+        f.update(banded=True, band_name=source.get("name"), band_cap=source.get("max_seats"))
 
     per_native, flat_native, cur = tier_native(source)
     f["currency"] = cur
@@ -276,7 +277,7 @@ def saas_facts(product: dict, users: int, config: dict) -> dict:
     return f
 
 
-def explain_en(f: dict) -> str:
+def explain_en(f: dict, unit: str = "users") -> str:
     """English phrasing of saas_facts. Other languages phrase it in their templates."""
     name, tier = f["product"], f["tier"]
     if f["kind"] == "free":
@@ -296,13 +297,19 @@ def explain_en(f: dict) -> str:
     if f["currency"] != "USD":
         fx_note = f" The vendor quoted {f['currency']}, converted at the dated rate on the methodology page."
 
+    if f["kind"] == "flat" and f["banded"]:
+        return (
+            f"{f['band_name'] or tier} is {money(f['usd'])} a month: the smallest {name} licence that "
+            f"covers this size, rated by the vendor for up to {f['band_cap']} devices.{basis_note}{fx_note}"
+        )
     if f["kind"] == "flat":
         return (
             f"{name} {tier} is a flat {money(f['usd'])} a month at this tier, "
             f"independent of seat count.{basis_note}{fx_note}"
         )
 
-    note = f"{f['seats']} seats at {money(f['per_usd'])} each"
+    counted = "monitored servers" if unit == "hosts" else "seats"
+    note = f"{f['seats']} {counted} at {money(f['per_usd'])} each"
     if f["min_seats"]:
         note += f", because the {tier} tier has a {f['min_seats']}-seat minimum"
     if f["floor_usd"] is not None:

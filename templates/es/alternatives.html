@@ -7,7 +7,7 @@
 <p class="lead">
   {{ alts | length }} {{ 'herramienta de código abierto que puede' if alts | length == 1 else 'herramientas de código abierto que pueden' }}
   sustituir a {{ saas.name }}, cada una con lo que costaría de verdad para {{ ref_label }}. En el plan
-  {{ saas_tier.name }}, {{ saas.name }} cuesta {{ money(saas_month) }} al mes con ese tamaño de equipo.
+  {{ saas_tier.name }}, {{ saas.name }} cuesta {{ money(saas_month) }} al mes con {{ u('that_size') }}.
 </p>
 
 {% if saas.free_tier_note %}
@@ -60,7 +60,7 @@
   {% if a.tool.licence_caveat %}<strong>Nota sobre la licencia:</strong> {{ a.tool.licence_caveat }}{% endif %}
 </p>
 <p><a href="{{ base }}/vs/{{ saas.slug }}-vs-{{ a.tool.slug }}/">Comparativa completa de {{ saas.name }} frente a {{ a.tool.name }}</a>
-   &middot; <a href="{{ base }}/self-host/{{ a.tool.slug }}/">{{ a.tool.name }} para cada tamaño de equipo</a></p>
+   &middot; <a href="{{ base }}/self-host/{{ a.tool.slug }}/">{{ a.tool.name }} para {{ u('every') }}</a></p>
 {% endfor %}
 
 <h2>Cómo se establecieron los precios</h2>

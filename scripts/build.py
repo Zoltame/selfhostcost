@@ -4,6 +4,8 @@ Static site generator for SelfHostCost.
     python scripts/build.py
     python scripts/build.py --wave 2          # publish a later wave
     python scripts/build.py --no-strict       # allow unverified prices (never for production)
+    python scripts/build.py --out ../preview --include-category infra-monitoring
+                                              # private preview of an unpublished category
 
 Writes to docs/, which is what GitHub Pages serves. No build step beyond this
 script and no JavaScript is required for any page to work.
@@ -39,7 +41,7 @@ from markupsafe import Markup
 
 from lib.i18n import DEFAULT_LANG, LANGUAGES, Locale, localize_dataset
 from lib.model import (
-    Dataset, cheapest_plan, compute_tco, load_dataset, price_trust, priced_providers,
+    Dataset, cheapest_plan, compute_tco, explain_en, load_dataset, price_trust, priced_providers,
     saas_monthly, saas_tier, size_for, tier_native,
 )
 import lib.content as content
@@ -105,9 +107,9 @@ class Builder:
         self.base = self.root + prefix
         self.out = OUT / prefix.lstrip("/") if prefix else OUT
 
-        self.ref_users = int(self.cfg.get("reference_users", 10))
-        self.sizes = [dict(s, label=self.loc.size_label(s["users"])) for s in self.cfg["team_sizes"]]
-        self.ref_size = next(s for s in self.sizes if s["users"] == self.ref_users)
+        self.units = self._units()
+        people = self.units["users"]
+        self.ref_users, self.sizes, self.ref_size = people["ref_n"], people["sizes"], people["ref_size"]
         self.urls: list[tuple[str, str]] = []          # (language-neutral url, priority)
         self.skipped: list[dict] = []
         self.affiliate_on = self._affiliate_on()
@@ -127,6 +129,43 @@ class Builder:
             affiliate_on=self.affiliate_on, lead_form_id=self._lead_form_id(),
             tracked=self.tracked, disclosure_for=self.disclosure_for,
         )
+
+    # ---- counting units -------------------------------------------------
+
+    def _units(self) -> dict[str, dict]:
+        """Size ladders per counting unit.
+
+        Most tools are priced by the people using them; infrastructure monitoring
+        is priced by the servers it watches. A category names its unit, and the
+        tool and the product on a comparison page must share it, so both sides of
+        every figure count the same thing.
+        """
+        out = {}
+        specs = {"users": {"reference": int(self.cfg.get("reference_users", 10))}, **self.cfg.get("units", {})}
+        for name, spec in specs.items():
+            if name == "users":
+                sizes = [dict(s, label=self.loc.size_label(s["users"])) for s in self.cfg["team_sizes"]]
+            else:
+                sizes = [{"slug": f"{n}-{name}", "users": n, "label": self.loc.size_label(n, name)}
+                         for n in spec["sizes"]]
+            ref = next(s for s in sizes if s["users"] == int(spec["reference"]))
+            out[name] = {"name": name, "sizes": sizes, "ref_n": ref["users"], "ref_size": ref}
+        return out
+
+    def unit_of(self, category_slug: str) -> dict:
+        return self.units[self.ds.categories[category_slug].get("unit", "users")]
+
+    def u(self, unit: dict):
+        """Template helper: the unit's wording, e.g. u('per') -> 'per active user'."""
+        # Our own interface strings, so they are not HTML-escaped (French apostrophes stay as typed).
+        return lambda key, **kw: Markup(self.loc.t(f"unit.{unit['name']}.{key}", **kw))
+
+    def ut(self, key: str, unit: dict, **kw) -> str:
+        """An interface string, in its unit-specific variant when one exists."""
+        variant = f"{key}.{unit['name']}"
+        if unit["name"] != "users" and (variant in self.loc.ui or variant in self.loc.fallback):
+            key = variant
+        return self.loc.t(key, **kw)
 
     # ---- config-driven links -------------------------------------------
 
@@ -249,12 +288,16 @@ class Builder:
                 if product.get("wave", 1) > self.wave:
                     self.skip("comparison", f"{saas_slug}-vs-{tool['slug']}", f"product is wave {product.get('wave')}")
                     continue
+                unit = self.unit_of(tool["category"])
+                if self.unit_of(product["category"]) is not unit:
+                    self.skip("comparison", f"{saas_slug}-vs-{tool['slug']}", "tool and product are counted in different units")
+                    continue
                 trust = price_trust(self.ds, product)
                 if self.strict and not trust["publishable"]:
                     why = "price not read from vendor page" if not trust["saas_verified"] else "no hosting provider with a verified price"
                     self.skip("comparison", f"{saas_slug}-vs-{tool['slug']}", why)
                     continue
-                if compute_tco(self.ds, tool, product, self.ref_users) is None:
+                if compute_tco(self.ds, tool, product, unit["ref_n"]) is None:
                     self.skip("comparison", f"{saas_slug}-vs-{tool['slug']}", "no server plan fits the sizing")
                     continue
                 pairs.append((tool, product))
@@ -277,19 +320,26 @@ class Builder:
 
     def price_label(self, product: dict, tier: dict) -> str:
         L = self.loc
+        U = self.unit_of(product["category"])
         per, flat, cur = tier_native(tier)
         if product["billing_model"] == "free":
             label = L.t("price_label.free")
         elif tier.get("seat_bands"):
             parts = []
             for band in tier["seat_bands"]:
-                b_per, _, b_cur = tier_native(band)
-                price = L.native(b_per, b_cur)
+                b_per, b_flat, b_cur = tier_native(band)
                 cap = band.get("max_seats")
-                parts.append(L.t("price_label.band", price=price, cap=cap) if cap else L.t("price_label.band_last", price=price))
+                if b_per is None:
+                    # A flat price per size band, such as a licence pack.
+                    parts.append(self.ut("price_label.flat_band", U, name=band.get("name", ""),
+                                         price=L.native(b_flat, b_cur), cap=cap))
+                elif cap:
+                    parts.append(self.ut("price_label.band", U, price=L.native(b_per, b_cur), cap=cap))
+                else:
+                    parts.append(self.ut("price_label.band_last", U, price=L.native(b_per, b_cur)))
             label = L.t("price_label.bands", bands=L.join(parts))
         elif per is not None:
-            label = L.t("price_label.per_seat", price=L.native(per, cur))
+            label = self.ut("price_label.per_seat", U, price=L.native(per, cur))
         elif flat is not None:
             label = L.t("price_label.flat", price=L.native(flat, cur))
         else:
@@ -297,7 +347,7 @@ class Builder:
         if tier.get("min_month") is not None:
             label += L.t("price_label.min", price=L.native(float(tier["min_month"]), cur))
         if product.get("free_up_to_seats"):
-            label += L.t("price_label.free_cap", n=product["free_up_to_seats"])
+            label += self.ut("price_label.free_cap", U, n=product["free_up_to_seats"])
         return label
 
     # ---- page builders --------------------------------------------------
@@ -314,13 +364,15 @@ class Builder:
 
         for tool, product in pairs:
             cat = self.ds.categories[tool["category"]]
+            U = self.unit_of(tool["category"])
             slug = f"{product['slug']}-vs-{tool['slug']}"
             url = f"/vs/{slug}/"
-            ref = compute_tco(self.ds, tool, product, self.ref_users)
-            ref.label = self.ref_size["label"]
+            ref = compute_tco(self.ds, tool, product, U["ref_n"])
+            ref.label = U["ref_size"]["label"]
+            ref.saas_explain = explain_en(ref.saas_facts, U["name"])
 
             rows, flip_at = [], None
-            for s in self.sizes:
+            for s in U["sizes"]:
                 r = compute_tco(self.ds, tool, product, s["users"])
                 if r is None:
                     continue
@@ -336,9 +388,9 @@ class Builder:
                 })
 
             page = {
-                "title": L.t("vs.title", saas=product["name"], tool=tool["name"], size=self.ref_size["label"], year=YEAR),
-                "description": L.t(
-                    "vs.description", saas=product["name"], tool=tool["name"], size=self.ref_size["label"],
+                "title": L.t("vs.title", saas=product["name"], tool=tool["name"], size=U["ref_size"]["label"], year=YEAR),
+                "description": self.ut(
+                    "vs.description", U, saas=product["name"], tool=tool["name"], size=U["ref_size"]["label"],
                     saas_cost=L.money(ref.saas_usd_month), sh_cost=L.money(ref.selfhost_usd_month),
                 )[:300],
                 "og_type": "article",
@@ -356,7 +408,8 @@ class Builder:
                 "saas_price_label": self.price_label(product, ref.saas_tier),
                 "fx_used": self.fx_used(product),
                 "siblings": [s for s in by_cat.get(tool["category"], []) if s["url"] != url][:6],
-                **self.hosting_ctx(tool, self.ref_users, self.ref_size["label"]),
+                "u": self.u(U),
+                **self.hosting_ctx(tool, U["ref_n"], U["ref_size"]["label"]),
             }
             self.write(url, "vs.html", ctx, "0.9")
             built.append({"tool": tool, "saas": product, "tco": ref, "url": url})
@@ -370,6 +423,7 @@ class Builder:
 
         for saas_slug, tools in by_saas.items():
             product = self.ds.saas[saas_slug]
+            U = self.unit_of(product["category"])
             cat = self.ds.categories[product["category"]]
             if cat["wave"] > self.wave:
                 # The product's own category is not published yet; file the page
@@ -378,16 +432,16 @@ class Builder:
             url = f"/alternatives/{saas_slug}/"
             alts = []
             for tool in tools:
-                t = compute_tco(self.ds, tool, product, self.ref_users)
+                t = compute_tco(self.ds, tool, product, U["ref_n"])
                 if t:
                     alts.append({"tool": tool, "tco": t})
             alts.sort(key=lambda a: a["tco"].selfhost_usd_month)
-            saas_month, tier, _ = saas_monthly(product, self.ref_users, self.cfg)
+            saas_month, tier, _ = saas_monthly(product, U["ref_n"], self.cfg)
 
             page = {
                 "title": L.t("alt.title", saas=product["name"], year=YEAR),
                 "description": L.t(
-                    "alt.description", n=len(alts), saas=product["name"], size=self.ref_size["label"],
+                    "alt.description", n=len(alts), saas=product["name"], size=U["ref_size"]["label"],
                     cost=L.money(saas_month),
                 )[:300],
                 "og_type": "article",
@@ -398,8 +452,8 @@ class Builder:
                 ],
             }
             self.write(url, "alternatives.html", {
-                "page": page, "saas": product, "category": cat, "alts": alts,
-                "ref_label": self.ref_size["label"], "saas_month": saas_month,
+                "page": page, "saas": product, "category": cat, "alts": alts, "u": self.u(U),
+                "ref_label": U["ref_size"]["label"], "saas_month": saas_month,
                 "saas_tier": tier, "saas_fx": self.fx_used(product),
                 "sibling_saas": [s for s in self.ds.saas_in_category(cat["slug"])
                                  if s["slug"] != saas_slug and s["slug"] in by_saas][:5],
@@ -414,10 +468,11 @@ class Builder:
         m = self.cfg["tco_model"]
         for tool in self.live_tools():
             cat = self.ds.categories[tool["category"]]
+            U = self.unit_of(tool["category"])
             url = f"/self-host/{tool['slug']}/"
 
             rows = []
-            for s in self.sizes:
+            for s in U["sizes"]:
                 sizing = size_for(tool, s["users"], self.cfg)
                 plan = cheapest_plan(self.ds, sizing)
                 if plan is None:
@@ -435,14 +490,14 @@ class Builder:
 
             replaced = []
             for product in pairs_by_tool.get(tool["slug"], []):
-                t = compute_tco(self.ds, tool, product, self.ref_users)
+                t = compute_tco(self.ds, tool, product, U["ref_n"])
                 if t:
                     replaced.append({"saas": product, "tco": t})
             replaced.sort(key=lambda r: -r["tco"].saas_usd_month)
 
             page = {
-                "title": L.t("sh.title", tool=tool["name"], year=YEAR),
-                "description": L.t("sh.description", tool=tool["name"])[:300],
+                "title": self.ut("sh.title", U, tool=tool["name"], year=YEAR),
+                "description": self.ut("sh.description", U, tool=tool["name"])[:300],
                 "og_type": "article",
                 "crumbs": [
                     self.crumb_home(),
@@ -452,13 +507,13 @@ class Builder:
             }
             self.write(url, "selfhost.html", {
                 "page": page, "tool": tool, "category": cat, "rows": rows,
-                "replaced": replaced, "ref_label": self.ref_size["label"],
+                "replaced": replaced, "ref_label": U["ref_size"]["label"], "u": self.u(U),
                 "headroom": m["ram_headroom_ratio"],
                 "setup_hours": m["setup_hours_by_difficulty"][tool["difficulty"]],
                 "maint_hours": m["maintenance_hours_per_month_by_difficulty"][tool["difficulty"]],
                 "siblings": [t for t in self.ds.tools_in_category(cat["slug"])
                              if t["slug"] != tool["slug"] and t.get("wave", 1) <= self.wave][:5],
-                **self.hosting_ctx(tool, self.ref_users, self.ref_size["label"]),
+                **self.hosting_ctx(tool, U["ref_n"], U["ref_size"]["label"]),
             }, "0.8")
 
             self.build_cost_pages(tool, cat, pairs_by_tool.get(tool["slug"], []))
@@ -466,11 +521,18 @@ class Builder:
     def build_cost_pages(self, tool: dict, cat: dict, products: list[dict]) -> None:
         L = self.loc
         m = self.cfg["tco_model"]
+        U = self.unit_of(tool["category"])
+        # Only sizes a server plan can host get a page, so the size menu and the
+        # previous/next links never point at a page that was not built.
+        sizes = [s for s in U["sizes"] if cheapest_plan(self.ds, size_for(tool, s["users"], self.cfg))]
+        for s in U["sizes"]:
+            if s not in sizes:
+                self.skip("cost", f"{tool['slug']}/{s['slug']}", "no server plan fits the sizing")
         setup_hours = m["setup_hours_by_difficulty"][tool["difficulty"]]
         maint_hours = m["maintenance_hours_per_month_by_difficulty"][tool["difficulty"]]
         rate = m["engineer_hourly_usd"]
 
-        for i, s in enumerate(self.sizes):
+        for i, s in enumerate(sizes):
             sizing = size_for(tool, s["users"], self.cfg)
             plan = cheapest_plan(self.ds, sizing)
             if plan is None:
@@ -491,19 +553,19 @@ class Builder:
             total = round(plan.price_usd_month + backup + labour, 2)
             title_key = "cost.title.one" if s["users"] == 1 else "cost.title.many"
             page = {
-                "title": L.t(title_key, tool=tool["name"], n=s["users"]),
-                "description": L.t(
-                    "cost.description", tool=tool["name"], n=s["users"],
+                "title": self.ut(title_key, U, tool=tool["name"], n=s["users"]),
+                "description": self.ut(
+                    "cost.description", U, tool=tool["name"], n=s["users"],
                     ram=L.gb(sizing.ram_gb), disk=L.gb(sizing.disk_gb),
                     server=L.money(plan.price_usd_month), total=L.money(total),
                 )[:300],
                 "og_type": "article",
-                "prev_url": f"/cost/{tool['slug']}/{self.sizes[i-1]['slug']}/" if i else None,
-                "next_url": f"/cost/{tool['slug']}/{self.sizes[i+1]['slug']}/" if i + 1 < len(self.sizes) else None,
+                "prev_url": f"/cost/{tool['slug']}/{sizes[i-1]['slug']}/" if i else None,
+                "next_url": f"/cost/{tool['slug']}/{sizes[i+1]['slug']}/" if i + 1 < len(sizes) else None,
                 "crumbs": [
                     self.crumb_home(),
                     {"name": tool["name"], "url": f"/self-host/{tool['slug']}/"},
-                    {"name": L.t("cost.crumb", n=s["users"]), "url": url},
+                    {"name": self.ut("cost.crumb", U, n=s["users"]), "url": url},
                 ],
             }
             self.write(url, "cost.html", {
@@ -513,9 +575,9 @@ class Builder:
                 "setup_once": round(setup_hours * rate, 2),
                 "setup_hours": setup_hours, "maint_hours": maint_hours,
                 "per_user_ram_gb": round(tool["ram_per_user_mb"] * s["users"] / 1024.0, 2),
-                "comparisons": comparisons, "all_sizes": self.sizes,
-                "prev_size": self.sizes[i-1] if i else None,
-                "next_size": self.sizes[i+1] if i + 1 < len(self.sizes) else None,
+                "comparisons": comparisons, "all_sizes": sizes, "u": self.u(U),
+                "prev_size": sizes[i-1] if i else None,
+                "next_size": sizes[i+1] if i + 1 < len(sizes) else None,
                 **self.hosting_ctx(tool, s["users"], s["label"]),
             }, "0.6")
 
@@ -531,11 +593,12 @@ class Builder:
         live_cats = [c for c in self.ds.categories.values() if c["wave"] <= self.wave]
         for cat in live_cats:
             url = f"/category/{cat['slug']}/"
+            U = self.unit_of(cat["slug"])
             tools = []
             for tool in self.ds.tools_in_category(cat["slug"]):
                 if tool.get("wave", 1) > self.wave:
                     continue
-                sizing = size_for(tool, self.ref_users, self.cfg)
+                sizing = size_for(tool, U["ref_n"], self.cfg)
                 plan = cheapest_plan(self.ds, sizing)
                 if plan is None:
                     continue
@@ -554,19 +617,19 @@ class Builder:
                     continue
                 if product.get("wave", 1) > self.wave:
                     continue
-                amount, tier, _ = saas_monthly(product, self.ref_users, self.cfg)
+                amount, tier, _ = saas_monthly(product, U["ref_n"], self.cfg)
                 paid.append({"saas": product, "tier": tier, "month": amount})
             paid.sort(key=lambda p: -p["month"])
 
             page = {
                 "title": L.t("cat.title", name=cat["name"], name_lower=cat["name"].lower(), year=YEAR),
-                "description": L.t("cat.description", intent=cat["intent"], n=len(tools), size=self.ref_size["label"])[:300],
+                "description": L.t("cat.description", intent=cat["intent"], n=len(tools), size=U["ref_size"]["label"])[:300],
                 "crumbs": [self.crumb_home(), {"name": cat["name"], "url": url}],
             }
             self.write(url, "category.html", {
                 "page": page, "category": cat, "tools": tools, "paid": paid,
                 "comparisons": sorted(comps_by_cat.get(cat["slug"], []), key=lambda x: x["name"]),
-                "ref_label": self.ref_size["label"],
+                "ref_label": U["ref_size"]["label"], "u": self.u(U),
                 "siblings": [c for c in live_cats if c["slug"] != cat["slug"]],
             }, "0.7")
 
@@ -580,7 +643,7 @@ class Builder:
                 fits = []
                 if prov["price_status"] == "verified":
                     for tool in self.live_tools():
-                        if tool["slug"] in claimed:
+                        if tool["slug"] in claimed or self.unit_of(tool["category"])["name"] != "users":
                             continue
                         sizing = size_for(tool, self.ref_users, self.cfg)
                         if sizing.ram_gb <= plan["ram_gb"] and sizing.disk_gb <= plan["disk_gb"]:
@@ -690,7 +753,8 @@ class Builder:
                       key=lambda c: -c["tco"].savings_total)
         losses = sorted([c for c in built_comparisons if c["tco"].savings_total <= 0],
                         key=lambda c: c["tco"].savings_total)
-        verified = [s for s in self.ds.saas.values() if s.get("price_status") == "verified"]
+        verified = [s for s in self.ds.saas.values()
+                    if s.get("price_status") == "verified" and s.get("wave", 1) <= self.wave]
 
         cats = []
         for cat in self.ds.categories.values():
@@ -834,9 +898,19 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--wave", type=int, default=None)
     ap.add_argument("--no-strict", action="store_true", help="publish pages built on unverified prices")
+    ap.add_argument("--out", help="write the site here instead of docs/, for a private preview")
+    ap.add_argument("--include-category", action="append", default=[],
+                    help="preview an unpublished category as if it were in the current wave (requires --out)")
     args = ap.parse_args()
+    if args.include_category and not args.out:
+        ap.error("--include-category only builds a preview; pass --out as well")
 
     ds = load_dataset()
+    for slug in args.include_category:
+        ds.categories[slug]["wave"] = 1
+        for item in [*ds.tools.values(), *ds.saas.values()]:
+            if item["category"] == slug:
+                item["wave"] = 1
     if ds.warnings:
         print("  data warnings:")
         for w in ds.warnings:
@@ -849,8 +923,16 @@ def main() -> int:
     if DEFAULT_LANG not in languages:
         languages.insert(0, DEFAULT_LANG)
 
+    global OUT
+    ops = ROOT / "ops"
+    if args.out:
+        OUT = Path(args.out).resolve()
+        ops = OUT / "_preview-ops"
+        if OUT == (ROOT / "docs").resolve():
+            ap.error("--out must not be docs/")
     clean_out()
-    ledger = DateLedger(ROOT / "ops" / "page-dates.json", TODAY, cfg.get("launched_on", TODAY))
+    ops.mkdir(parents=True, exist_ok=True)
+    ledger = DateLedger(ops / "page-dates.json", TODAY, cfg.get("launched_on", TODAY))
     builders, per_lang = [], []
     for lang in languages:
         b = Builder(ds, strict=strict, wave=wave, lang=lang, languages=languages, ledger=ledger)
@@ -878,11 +960,11 @@ def main() -> int:
         "skipped": default.skipped,
         "urls": sorted(b.loc.path(u) for b in builders for u, _ in set(b.urls)),
     }
-    (ROOT / "ops" / "build-report.json").write_text(
+    (ops / "build-report.json").write_text(
         json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
     print(f"\n  wave {report['wave']}  strict={report['strict_prices']}  reference={report['reference_users']} users")
-    print(f"  {report['pages']} pages written to docs/ across {len(languages)} language(s)")
+    print(f"  {report['pages']} pages written to {OUT} across {len(languages)} language(s)")
     print(f"  {report['comparisons']} comparison pages, {report['tools_live']} tools live")
     print(f"  hosting prices trusted: {', '.join(report['priced_providers']) or 'NONE'}")
     print(f"  vendor prices confirmed: {len(report['verified_saas'])} of "
@@ -906,7 +988,7 @@ def main() -> int:
         print(f"\n  {len(report['skipped'])} pages withheld:")
         for reason, n in sorted(by_reason.items(), key=lambda kv: -kv[1]):
             print(f"    {n:>4}  {reason}")
-    print("\n  report: ops/build-report.json")
+    print(f"\n  report: {ops / 'build-report.json'}")
     return 0
 
 

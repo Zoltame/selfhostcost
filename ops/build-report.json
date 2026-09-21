@@ -27,6 +27,7 @@
     "bitwarden",
     "clerk",
     "confluence",
+    "datadog",
     "fathom",
     "freshdesk",
     "google-analytics",
@@ -41,6 +42,7 @@
     "notion",
     "okta",
     "pingdom",
+    "prtg",
     "retool",
     "statuspage",
     "surveymonkey",
@@ -52,7 +54,6 @@
   ],
   "unverified_saas": [
     "calendly",
-    "datadog",
     "docusign",
     "dropbox",
     "google-photos",

@@ -153,7 +153,8 @@ def _about(ds: Dataset, built, base: str) -> tuple[str, str, str, str]:
     repo = f"https://github.com/{cfg['github_owner']}/{cfg['repo']}"
     aff = cfg.get("affiliate", {})
     referral_on = bool(aff.get("enabled")) and any(p.get("id") for p in aff.get("providers", {}).values())
-    verified = [s for s in ds.saas.values() if s.get("price_status") == "verified"]
+    verified = [s for s in ds.saas.values() if s.get("price_status") == "verified"
+                and s.get("wave", 1) <= int(cfg.get("publish_wave", 1))]
 
     money_line = (
         "The only financial relationship this site has with anyone it mentions is DigitalOcean's standard "
@@ -237,7 +238,7 @@ def _methodology(ds: Dataset, wave: int, strict: bool, built, base: str) -> tupl
     ref = cfg.get("reference_users", 10)
 
     verified = sorted(
-        (s for s in ds.saas.values() if s.get("price_status") == "verified"),
+        (s for s in ds.saas.values() if s.get("price_status") == "verified" and s.get("wave", 1) <= wave),
         key=lambda s: s["name"].lower(),
     )
     unverified = sorted(

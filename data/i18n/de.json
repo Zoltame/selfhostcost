@@ -25,7 +25,8 @@
     "search": { "name": "Suchmaschinen", "intent": "Die Website-Suche betreiben, ohne Indexierungsgebühren pro Datensatz." },
     "paas": { "name": "Deployment-Plattformen", "intent": "Apps auf dem eigenen Server bereitstellen, mit dem Komfort einer Plattform." },
     "video-meetings": { "name": "Videokonferenzen", "intent": "Anrufe veranstalten, ohne Lizenz pro Gastgeber." },
-    "headless-cms": { "name": "Headless CMS", "intent": "Die Content-API selbst besitzen, statt Datensätze und Sprachen zu mieten." }
+    "headless-cms": { "name": "Headless CMS", "intent": "Die Content-API selbst besitzen, statt Datensätze und Sprachen zu mieten." },
+    "infra-monitoring": {"name": "Infrastruktur-Monitoring", "intent": "Server und Dienste überwachen, ohne Monitoring-Rechnung pro Server."}
   },
 
   "tools": {
@@ -150,7 +151,10 @@
     "limesurvey": {
       "sizing_note": "Zwei Jahrzehnte Umfragelogik, einschließlich Quoten und komplexer Verzweigungen, die neuere Tools gar nicht erst versuchen. Die Oberfläche ist sichtbar in die Jahre gekommen.",
       "description_gh": "LimeSurvey ist eine leistungsfähige Open-Source-Umfrageplattform und eine kostenlose Alternative zu SurveyMonkey, Typeform, Qualtrics und Google Forms, mit der sich Online-Umfragen und Formulare einfach erstellen lassen."
-    }
+    },
+    "prometheus-grafana": {"sizing_note": "Prometheus sammelt die Metriken und Grafana zeigt die Dashboards, dazu Alertmanager für Alarme und node_exporter auf jedem Server. Der Speicherplatz folgt der Kapazitätsformel von Prometheus bei der Standardaufbewahrung von 15 Tagen: rund 1.000 Zeitreihen pro Server, alle 15 Sekunden abgefragt, bei 2 Byte pro Messwert ergeben etwa 0,2 GB pro Server. Der Arbeitsspeicher pro Server ist unsere Schätzung für dieselbe Zahl an Zeitreihen.", "licence_caveat": "Prometheus steht unter Apache-2.0, Grafana, hier für die Dashboards verwendet, jedoch unter AGPL-3.0. Das spielt nur eine Rolle, wenn Sie Grafana verändern und anderen über ein Netzwerk anbieten.", "description_gh": "Das Monitoring-System Prometheus und seine Zeitreihendatenbank."},
+    "zabbix": {"sizing_note": "Zabbix-Server, Datenbank und Weboberfläche. Der Arbeitsspeicher ist an die Hardwaretabelle von Zabbix angepasst, die 8 GB für 1.000 überwachte Metriken und 16 GB für 10.000 verlangt, bei etwa 100 Metriken pro Server; über 100 Server liegt diese Rechnung über den Zahlen von Zabbix. Der Speicherplatz folgt der Datenbankformel von Zabbix: 90 Byte pro Wert, 100 Items pro Server, jede Minute abgefragt, 31 Tage Verlauf und ein Jahr Trends, also etwa 0,5 GB pro Server.", "licence_caveat": "Zabbix steht unter AGPL-3.0. Das spielt nur eine Rolle, wenn Sie Zabbix selbst verändern und anderen über ein Netzwerk anbieten.", "description_gh": "Echtzeit-Monitoring von IT-Komponenten und -Diensten wie Netzwerken, Servern, VMs, Anwendungen und Cloud."},
+    "checkmk": {"sizing_note": "Die freie Open-Source-Edition von Checkmk mit dem Nagios-Kern und Round-Robin-Metrikdateien, die nach dem Anlegen nicht weiter wachsen. Sie wird als ein Paket installiert, das alle Komponenten enthält. Die Werte sind unsere Schätzung: Checkmk veröffentlicht keine Anforderungstabelle, die wir zitieren könnten.", "licence_caveat": "Checkmk Community steht unter GPL-2.0. Mehrere Funktionen, darunter der schnellere Monitoring-Kern, gibt es nur in den kostenpflichtigen Editionen.", "description_gh": "Checkmk: Monitoring für Infrastruktur und Anwendungen."}
   },
 
   "saas": {
@@ -164,7 +168,9 @@
     "statuspage": { "free_tier_note": "Ein kostenloser Tarif deckt 100 Abonnenten, 25 Komponenten und zwei Teammitglieder ab. Unterhalb dieser Grenze gibt es nichts zu sparen." },
     "betteruptime": { "free_tier_note": "Der kostenlose Tarif von Better Stack umfasst 10 Monitore und Heartbeats sowie 1 Statusseite. Wenn das reicht, gibt es nichts zu sparen." },
     "mixpanel": { "free_tier_note": "Der kostenlose Tarif von Mixpanel deckt bis zu 1 Million Ereignisse pro Monat ab, ohne Gebühr pro Platz. Unterhalb dieses Volumens gibt es keine Lizenzkosten zu sparen, daher geht es bei diesem Vergleich darum, wer die Daten besitzt, nicht was sie kosten." },
-    "amplitude": { "free_tier_note": "Der kostenlose Tarif von Amplitude deckt bis zu 2 Millionen Ereignisse pro Monat mit unbegrenzten Plätzen ab. Unterhalb dieses Volumens gibt es keine Lizenzkosten zu sparen." }
+    "amplitude": { "free_tier_note": "Der kostenlose Tarif von Amplitude deckt bis zu 2 Millionen Ereignisse pro Monat mit unbegrenzten Plätzen ab. Unterhalb dieses Volumens gibt es keine Lizenzkosten zu sparen." },
+    "datadog": {"free_tier_note": "Datadog hat einen kostenlosen Tarif für bis zu 5 Server, der Metriken aber nur einen Tag aufbewahrt, gegenüber 15 Monaten bei Pro. Für ein Monitoring, auf das Sie sich verlassen, ist das kein gleichwertiger Ersatz, daher nutzt der Vergleich auch bei 5 Servern Pro."},
+    "prtg": {"free_tier_note": "PRTG ist kein gehosteter Dienst: Sie installieren es auf Ihrem eigenen Windows-Server. Der Betrag hier ist nur die Lizenz; der Server und die Zeit für den Betrieb von PRTG selbst sind nicht enthalten, wodurch PRTG günstiger wirkt, als es ist."}
   },
 
   "providers": {

@@ -22,6 +22,14 @@ is read from the vendor's page and recorded. Ordered by how many tools want it.
 - **pandadoc** — wanted by: docuseal
 - **bugsnag** — wanted by: glitchtip
 - **rollbar** — wanted by: glitchtip
-- **newrelic** — wanted by: signoz
 - **acuity** — wanted by: cal-com
 - **savvycal** — wanted by: cal-com
+
+## Not modelled
+
+- **newrelic** (New Relic), read 2026-09-21: it does not charge per host. It charges per full-platform
+  user ($349 a month on Pro, annual) plus $0.40 per GB of data beyond 100 GB a month. Its cost depends on data
+  volume, not on the server count the monitoring category is priced by, so it would need an assumed
+  GB-per-server figure. Withheld rather than guessed. Wanted by the infra-monitoring category.
+- **datadog** is no longer a SigNoz target: Datadog is priced per monitored host and SigNoz per user in
+  this dataset, and a comparison page needs both sides counted in the same unit.

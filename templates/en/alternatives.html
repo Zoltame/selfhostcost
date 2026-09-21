@@ -6,7 +6,7 @@
 
 <p class="lead">
   {{ alts | length }} open-source {{ 'tool' if alts | length == 1 else 'tools' }} that can replace
-  {{ saas.name }}, each shown with what it would actually cost to run for a team of
+  {{ saas.name }}, each shown with what it would actually cost to run {{ u('for_ref_pre') }}
   {{ ref_label }}. {{ saas.name }} on the {{ saas_tier.name }} tier costs
   {{ money(saas_month) }} a month at that size.
 </p>
@@ -61,7 +61,7 @@
   {% if a.tool.licence_caveat %}<strong>Licence note:</strong> {{ a.tool.licence_caveat }}{% endif %}
 </p>
 <p><a href="{{ base }}/vs/{{ saas.slug }}-vs-{{ a.tool.slug }}/">Full {{ saas.name }} versus {{ a.tool.name }} breakdown</a>
-   &middot; <a href="{{ base }}/self-host/{{ a.tool.slug }}/">{{ a.tool.name }} at every team size</a></p>
+   &middot; <a href="{{ base }}/self-host/{{ a.tool.slug }}/">{{ a.tool.name }} at {{ u('every') }}</a></p>
 {% endfor %}
 
 <h2>How the pricing was established</h2>

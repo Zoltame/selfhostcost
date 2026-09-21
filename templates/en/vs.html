@@ -12,9 +12,9 @@
 
 {% include "partials/verdict.html" %}
 
-<h2>The same comparison at every team size</h2>
+<h2>The same comparison at {{ u('every') }}</h2>
 <p>
-  Self-hosting has a floor and almost no slope, while per-seat software has no floor and a steep slope.
+  Self-hosting has a floor and almost no slope, while {{ u('metered') }} has no floor and a steep slope.
   That is the whole story, and it is why the answer flips somewhere in this table rather than being
   the same for everyone.
 </p>
@@ -24,7 +24,7 @@
   <caption>{{ saas.name }} {{ ref.saas_tier.name }} against {{ tool.name }} self-hosted, per month, over {{ cfg.tco_model.horizon_months }} months. Self-hosted includes server, backups and maintenance time at ${{ cfg.tco_model.engineer_hourly_usd }} an hour.</caption>
   <thead>
     <tr>
-      <th>Team size</th>
+      <th>{{ u('col') }}</th>
       <th class="num">{{ saas.name }}</th>
       <th class="num">Self-hosted</th>
       <th class="num">Without valuing your time</th>
@@ -49,8 +49,8 @@
 
 <p class="srcline">
   {% if flip_at %}The balance tips in favour of self-hosting at around <strong>{{ flip_at }}</strong>.
-  {% elif never_flips %}Self-hosting never comes out ahead at any team size on this page, once your time is priced in.
-  {% else %}Self-hosting is ahead at every team size shown.{% endif %}
+  {% elif never_flips %}Self-hosting never comes out ahead at any {{ u('size_noun') }} on this page, once your time is priced in.
+  {% else %}Self-hosting is ahead at every {{ u('size_noun') }} shown.{% endif %}
 </p>
 
 <h2>Where the self-hosted money actually goes at {{ ref.label }}</h2>
@@ -100,9 +100,9 @@
   <thead><tr><th>Resource</th><th class="num">Required</th><th>How it is derived</th></tr></thead>
   <tbody>
     <tr><th scope="row">Memory</th><td class="num">{{ gb(ref.sizing.ram_gb) }}</td>
-      <td>{{ gb(tool.base_ram_gb) }} for the stack at rest, plus {{ tool.ram_per_user_mb }} MB per active user, plus {{ (ref.sizing.headroom_ratio * 100) | round | int }}% headroom</td></tr>
+      <td>{{ gb(tool.base_ram_gb) }} for the stack at rest, plus {{ tool.ram_per_user_mb }} MB {{ u('per') }}, plus {{ (ref.sizing.headroom_ratio * 100) | round | int }}% headroom</td></tr>
     <tr><th scope="row">Disk</th><td class="num">{{ gb(ref.sizing.disk_gb) }}</td>
-      <td>{{ gb(tool.base_disk_gb) }} base, plus {{ tool.disk_per_user_gb }} GB per user</td></tr>
+      <td>{{ gb(tool.base_disk_gb) }} base, plus {{ tool.disk_per_user_gb }} GB {{ u('per_short') }}</td></tr>
     <tr><th scope="row">vCPU</th><td class="num">{{ ref.sizing.vcpu }}</td>
       <td>The project's own baseline. For this workload memory runs out before the processor does.</td></tr>
   </tbody>
@@ -190,7 +190,7 @@
     </tr>
     <tr>
       <td>{{ tool.name }} sizing</td>
-      <td>{{ gb(tool.base_ram_gb) }} base, {{ tool.ram_per_user_mb }} MB per user</td>
+      <td>{{ gb(tool.base_ram_gb) }} base, {{ tool.ram_per_user_mb }} MB {{ u('per_short') }}</td>
       <td>{% if tool.sizing_basis == 'vendor_docs' %}project documentation{% else %}derived from its reference Compose stack{% endif %}</td>
       <td>&mdash;</td>
     </tr>
@@ -204,7 +204,7 @@
 
 <h2>Related</h2>
 <ul class="linkgrid">
-  <li><a href="{{ base }}/self-host/{{ tool.slug }}/">Self-hosting {{ tool.name }}: every team size</a></li>
+  <li><a href="{{ base }}/self-host/{{ tool.slug }}/">Self-hosting {{ tool.name }}: {{ u('every') }}</a></li>
   <li><a href="{{ base }}/alternatives/{{ saas.slug }}/">All self-hosted {{ saas.name }} alternatives</a></li>
   {% for sib in siblings %}<li><a href="{{ base }}{{ sib.url }}">{{ sib.name }}</a></li>{% endfor %}
   <li><a href="{{ base }}/category/{{ category.slug }}/">{{ category.name }} compared</a></li>

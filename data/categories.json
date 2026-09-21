@@ -15,6 +15,7 @@
     { "slug": "email-marketing",  "name": "Email marketing",    "intent": "Send campaigns paying only for delivery, not for list size.", "wave": 2 },
     { "slug": "crm",              "name": "CRM",                "intent": "Track deals without per-seat CRM licensing.", "wave": 2 },
     { "slug": "e-signature",      "name": "E-signature",        "intent": "Sign documents without a per-envelope charge.", "wave": 2 },
+    { "slug": "infra-monitoring", "name": "Infrastructure monitoring", "intent": "Watch servers and services without a per-host monitoring bill.", "wave": 2, "unit": "hosts" },
     { "slug": "error-monitoring", "name": "Error monitoring",   "intent": "Capture exceptions without event-volume billing.", "wave": 2 },
     { "slug": "scheduling",       "name": "Scheduling and booking", "intent": "Share availability without a per-seat booking tool.", "wave": 2 },
     { "slug": "photos",           "name": "Photo libraries",    "intent": "Keep a family or team photo archive off metered cloud storage.", "wave": 2 },
