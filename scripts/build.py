@@ -853,8 +853,12 @@ def write_plumbing(cfg: dict, builders: list[Builder]) -> None:
             f"{entries}\n</urlset>\n"
         )
     else:
-        lines = []
+        # One sitemap per language behind an index. Four files of a few hundred
+        # URLs are easier for a crawler to accept than a single megabyte, and a
+        # problem with one language does not hold up the other three.
+        sitemap_files = []
         for b in builders:
+            lines = []
             for u, p in sorted(set(b.urls)):
                 alts = "".join(
                     f'<xhtml:link rel="alternate" hreflang="{l}" href="{base_url}{LANGUAGES[l]["prefix"]}{u}"/>'
@@ -865,16 +869,28 @@ def write_plumbing(cfg: dict, builders: list[Builder]) -> None:
                     f"  <url><loc>{base_url}{b.loc.path(u)}</loc><lastmod>{b.ledger.modified(b.loc.path(u))}</lastmod>"
                     f"<priority>{p}</priority>{alts}</url>"
                 )
+            name = f"sitemap-{b.lang}.xml"
+            (OUT / name).write_text(
+                '<?xml version="1.0" encoding="UTF-8"?>\n'
+                '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+                'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
+                + "\n".join(lines) + "\n</urlset>\n", encoding="utf-8")
+            sitemap_files.append((name, max(b.ledger.modified(b.loc.path(u)) for u, _ in b.urls)))
+
         sitemap = (
             '<?xml version="1.0" encoding="UTF-8"?>\n'
-            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
-            'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
-            + "\n".join(lines) + "\n</urlset>\n"
+            '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+            + "\n".join(f"  <sitemap><loc>{base_url}/{name}</loc><lastmod>{mod}</lastmod></sitemap>"
+                        for name, mod in sitemap_files)
+            + "\n</sitemapindex>\n"
         )
     (OUT / "sitemap.xml").write_text(sitemap, encoding="utf-8")
 
+    listed = [f"{base_url}/sitemap.xml"]
+    if len(languages) > 1:
+        listed += [f"{base_url}/sitemap-{b.lang}.xml" for b in builders]
     (OUT / "robots.txt").write_text(
-        f"User-agent: *\nAllow: /\n\nSitemap: {base_url}/sitemap.xml\n", encoding="utf-8")
+        "User-agent: *\nAllow: /\n\n" + "".join(f"Sitemap: {s}\n" for s in listed), encoding="utf-8")
 
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
 

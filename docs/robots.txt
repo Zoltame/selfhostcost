@@ -2,3 +2,7 @@ User-agent: *
 Allow: /
 
 Sitemap: https://zoltame.github.io/selfhostcost/sitemap.xml
+Sitemap: https://zoltame.github.io/selfhostcost/sitemap-en.xml
+Sitemap: https://zoltame.github.io/selfhostcost/sitemap-fr.xml
+Sitemap: https://zoltame.github.io/selfhostcost/sitemap-de.xml
+Sitemap: https://zoltame.github.io/selfhostcost/sitemap-es.xml
