@@ -44,11 +44,18 @@ def launch_day() -> date | None:
 def parse_gsc(path: Path) -> dict:
     clicks = impressions = pages = 0
     weighted_pos = 0.0
+    # Search Console exports in the account's language; accept the French headers too.
+    def cell(row, *names):
+        for n in names:
+            if row.get(n) not in (None, ""):
+                return row[n]
+        return 0
+
     with open(path, newline="", encoding="utf-8-sig") as fh:
         for row in csv.DictReader(fh):
-            c = int(float(row.get("Clicks", 0) or 0))
-            i = int(float(row.get("Impressions", 0) or 0))
-            pos = float(row.get("Position", 0) or 0)
+            c = int(float(cell(row, "Clicks", "Clics") or 0))
+            i = int(float(cell(row, "Impressions") or 0))
+            pos = float(str(cell(row, "Position") or 0).replace(",", "."))
             clicks += c
             impressions += i
             weighted_pos += pos * i
