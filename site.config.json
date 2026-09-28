@@ -4,8 +4,8 @@
   "description": "Transparent cost comparisons between commercial SaaS and their self-hosted open-source alternatives. Every number is computed from a published sizing model and dated price sources.",
   "repo": "selfhostcost",
   "github_owner": "Zoltame",
-  "base_url": "https://zoltame.github.io/selfhostcost",
-  "base_path": "/selfhostcost",
+  "base_url": "https://selfhostcost.com",
+  "base_path": "",
   "locale": "en",
   "languages": [
     "en",
@@ -165,5 +165,6 @@
         500
       ]
     }
-  }
+  },
+  "custom_domain_on": "2026-09-28"
 }
