@@ -29,7 +29,7 @@ REPORT = ROOT / "ops" / "build-report.json"
 LAUNCH_FILE = ROOT / "ops" / "launch-date.txt"
 
 FIELDS = [
-    "date", "day", "pages_built", "comparisons", "indexed",
+    "date", "day", "pages_built", "comparisons", "indexed", "not_indexed",
     "impressions", "clicks", "ctr", "avg_position", "pages_with_impressions",
     "affiliate_clicks", "leads", "revenue_usd", "notes",
 ]
@@ -79,6 +79,7 @@ def append(args) -> None:
         "pages_built": rep.get("pages", ""),
         "comparisons": rep.get("comparisons", ""),
         "indexed": args.indexed if args.indexed is not None else "",
+        "not_indexed": args.not_indexed if args.not_indexed is not None else "",
         "affiliate_clicks": args.affiliate_clicks if args.affiliate_clicks is not None else "",
         "leads": args.leads if args.leads is not None else "",
         "revenue_usd": args.revenue if args.revenue is not None else "",
@@ -108,6 +109,7 @@ def report() -> None:
     rows = list(csv.DictReader(open(LOG, encoding="utf-8")))
     for r in rows:
         print(f"  {r['date']}  day {r['day']:>3}  indexed {r['indexed'] or '-':>4}  "
+              f"refused {r['not_indexed'] or '-':>4}  "
               f"impr {r['impressions'] or '-':>6}  clicks {r['clicks'] or '-':>4}  "
               f"pos {r['avg_position'] or '-':>5}  aff {r['affiliate_clicks'] or '-':>3}  leads {r['leads'] or '-':>3}")
 
@@ -120,6 +122,7 @@ def report() -> None:
             return None
 
     day, built, indexed, impr, clicks = num("day"), num("pages_built"), num("indexed"), num("impressions"), num("clicks")
+    refused = num("not_indexed")
     print()
     if day is None:
         print("  verdict: set ops/launch-date.txt to get a verdict")
@@ -129,8 +132,13 @@ def report() -> None:
         print(f"  verdict (day {int(day)}): too early. Watch the indexed ratio, target 30% by day 30"
               + (f", currently {ratio:.0%}" if ratio is not None else ""))
     elif day < 60:
-        if ratio is not None and ratio < 0.15:
-            print("  verdict (day 30 gate): KILL SIGNAL. Under 15% indexed; Google is not accepting the pages.")
+        if ratio is not None and ratio < 0.15 and (refused or 0) < 0.15 * (built or 0):
+            print("  verdict (day 30 gate): NOT A CONTENT VERDICT. Under 15% indexed, but Google has barely")
+            print("  refused anything either, so most pages were never discovered. Fix discovery first:")
+            print("  check the sitemaps in Search Console, then buy a domain, and extend by 30 days.")
+        elif ratio is not None and ratio < 0.15:
+            print("  verdict (day 30 gate): KILL SIGNAL. Under 15% indexed and Google crawled the pages")
+            print("  and refused them; the pages themselves are the problem.")
         elif (impr or 0) >= 1000:
             print("  verdict (day 30 gate): SCALE. Publish wave 2 now.")
         else:
@@ -146,6 +154,8 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--gsc")
     ap.add_argument("--indexed", type=int)
+    ap.add_argument("--not-indexed", type=int,
+                    help="Indexing > Pages: how many pages Google crawled and did not index")
     ap.add_argument("--impressions", type=int)
     ap.add_argument("--clicks", type=int)
     ap.add_argument("--affiliate-clicks", type=int)

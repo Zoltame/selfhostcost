@@ -86,7 +86,7 @@ otherwise the translated pages show the English text for that field.
 | When | Action |
 |------|--------|
 | Day 0 | Push, write the date to `ops/launch-date.txt`, add the property in Google Search Console, submit `sitemap.xml` |
-| Every Monday | Export GSC "Pages" CSV, then `python scripts/velocity.py --gsc Pages.csv --indexed N --affiliate-clicks N --leads N` |
+| Every Monday | Export both GSC CSVs (Performance > Pages, and Indexing > Pages), then `python scripts/velocity.py --gsc Pages.csv --indexed N --not-indexed N --affiliate-clicks N --leads N`. `--not-indexed` is what separates "never discovered" from "refused" at the day-30 gate. |
 | Day 30 | `python scripts/velocity.py --report` and apply the gate |
 | Day 60 | Same, final gate |
 
@@ -94,11 +94,18 @@ otherwise the translated pages show the English text for that field.
 
 | Gate | Condition | Decision |
 |------|-----------|----------|
-| Day 30 | Under 15% of pages indexed | Kill signal. Google is rejecting the pages. |
+| Day 30 | Under 15% indexed **and** Google refused almost nothing | Not a verdict on the content: the pages were never discovered. Fix discovery (sitemaps, then a custom domain) and extend by 30 days. |
+| Day 30 | Under 15% indexed **and** Google crawled and refused the pages | Kill signal. The pages themselves are the problem. |
 | Day 30 | 1,000+ impressions | Scale: publish wave 2. |
 | Day 30 | Otherwise | Hold. Improve the ten pages with the most impressions. |
 | Day 60 | 300+ clicks, or any revenue, or 10+ leads | Continue: buy a domain, activate affiliates, wave 3. |
 | Day 60 | Otherwise | Stop. Archive and test the next niche. |
+
+The first two rows are the amendment agreed with the owner on 2026-09-28. The original rule read any
+low indexed ratio as Google rejecting the pages. In this run Search Console has never fetched a sitemap
+(no read date since launch, 0 pages discovered) and reports **0 not-indexed** pages, so 7 pages of 1,440
+are indexed while nothing has been refused. A kill decision needs evidence that Google looked and said
+no, which is why `--not-indexed` is recorded every week and `--report` separates the two cases.
 
 ## Known limitations
 
