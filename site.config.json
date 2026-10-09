@@ -167,5 +167,25 @@
     }
   },
   "custom_domain_on": "2026-09-28",
-  "wave2_published_on": "2026-10-09"
+  "wave2_published_on": "2026-10-09",
+  "cost_page_sizes": {
+    "_note": "Sizes that get a cost page of their own. Every size keeps its figures in the tables; this only keeps near-identical pages out of the crawl queue. Chosen from the sizes that actually drew impressions in the first three weeks.",
+    "users": [
+      1,
+      25,
+      100
+    ],
+    "hosts": [
+      5,
+      25,
+      100
+    ]
+  },
+  "internal_links": {
+    "vs_siblings": 10,
+    "tool_siblings": 8,
+    "saas_siblings": 8,
+    "cost_siblings": 6
+  },
+  "cost_pages_reduced_on": "2026-10-09"
 }
