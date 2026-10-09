@@ -97,6 +97,7 @@
   {% if next_size %}<li><a href="{{ base }}/cost/{{ tool.slug }}/{{ next_size.slug }}/">{{ tool.name }} für {{ next_size.label }}</a></li>{% endif %}
   <li><a href="{{ base }}/self-host/{{ tool.slug }}/">{{ tool.name }}: {{ u('all') }} auf einen Blick</a></li>
   <li><a href="{{ base }}/category/{{ category.slug }}/">{{ category.name }} im Vergleich</a></li>
+  {% for r in related_costs %}<li><a href="{{ base }}{{ r.url }}">{{ t("cost.related", tool=r.name, size=r.label) }}</a></li>{% endfor %}
   <li><a href="{{ base }}/methodology/">Wie diese Zahlen berechnet werden</a></li>
 </ul>
 

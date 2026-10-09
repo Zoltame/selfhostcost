@@ -114,6 +114,7 @@
   "404.all_tools": "Alle Tools",
   "404.home": "Startseite",
 
+  "cost.related": "{tool} für {size}",
   "unit.users.every": "jede Teamgröße",
   "unit.users.metered": "Software mit Preis pro Platz",
   "unit.users.col": "Teamgröße",

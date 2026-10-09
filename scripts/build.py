@@ -107,6 +107,8 @@ class Builder:
         self.base = self.root + prefix
         self.out = OUT / prefix.lstrip("/") if prefix else OUT
 
+        self.links = {"vs_siblings": 6, "tool_siblings": 5, "saas_siblings": 5, "cost_siblings": 0,
+                      **(self.cfg.get("internal_links") or {})}
         self.units = self._units()
         people = self.units["users"]
         self.ref_users, self.sizes, self.ref_size = people["ref_n"], people["sizes"], people["ref_size"]
@@ -423,7 +425,7 @@ class Builder:
                 "never_flips": flip_at is None,
                 "saas_price_label": self.price_label(product, ref.saas_tier),
                 "fx_used": self.fx_used(product),
-                "siblings": [s for s in by_cat.get(tool["category"], []) if s["url"] != url][:6],
+                "siblings": [s for s in by_cat.get(tool["category"], []) if s["url"] != url][:self.links["vs_siblings"]],
                 "u": self.u(U),
                 **self.hosting_ctx(tool, U["ref_n"], U["ref_size"]["label"]),
             }
@@ -472,7 +474,7 @@ class Builder:
                 "ref_label": U["ref_size"]["label"], "saas_month": saas_month,
                 "saas_tier": tier, "saas_fx": self.fx_used(product),
                 "sibling_saas": [s for s in self.ds.saas_in_category(cat["slug"])
-                                 if s["slug"] != saas_slug and s["slug"] in by_saas][:5],
+                                 if s["slug"] != saas_slug and s["slug"] in by_saas][:self.links["saas_siblings"]],
             }, "0.8")
 
     def build_tool_pages(self, pairs) -> None:
@@ -530,7 +532,7 @@ class Builder:
                 "setup_hours": m["setup_hours_by_difficulty"][tool["difficulty"]],
                 "maint_hours": m["maintenance_hours_per_month_by_difficulty"][tool["difficulty"]],
                 "siblings": [t for t in self.ds.tools_in_category(cat["slug"])
-                             if t["slug"] != tool["slug"] and t.get("wave", 1) <= self.wave][:5],
+                             if t["slug"] != tool["slug"] and t.get("wave", 1) <= self.wave][:self.links["tool_siblings"]],
                 **self.hosting_ctx(tool, U["ref_n"], U["ref_size"]["label"]),
             }, "0.8")
 
@@ -588,6 +590,16 @@ class Builder:
                     {"name": self.ut("cost.crumb", U, n=s["users"]), "url": url},
                 ],
             }
+            related = []
+            for sib in self.ds.tools_in_category(cat["slug"]):
+                if len(related) >= self.links["cost_siblings"]:
+                    break
+                if sib["slug"] == tool["slug"] or sib.get("wave", 1) > self.wave:
+                    continue
+                if any(x["slug"] == s["slug"] for x in self.cost_page_sizes(U, sib)):
+                    related.append({"name": sib["name"], "label": s["label"],
+                                    "url": f"/cost/{sib['slug']}/{s['slug']}/"})
+
             self.write(url, "cost.html", {
                 "page": page, "tool": tool, "category": cat, "size": s, "sizing": sizing, "plan": plan,
                 "backup_month": backup, "labour_month": labour, "total_month": total,
@@ -595,7 +607,7 @@ class Builder:
                 "setup_once": round(setup_hours * rate, 2),
                 "setup_hours": setup_hours, "maint_hours": maint_hours,
                 "per_user_ram_gb": round(tool["ram_per_user_mb"] * s["users"] / 1024.0, 2),
-                "comparisons": comparisons, "all_sizes": sizes, "u": self.u(U),
+                "comparisons": comparisons, "all_sizes": sizes, "u": self.u(U), "related_costs": related,
                 "prev_size": sizes[i-1] if i else None,
                 "next_size": sizes[i+1] if i + 1 < len(sizes) else None,
                 **self.hosting_ctx(tool, s["users"], s["label"]),
@@ -939,13 +951,20 @@ def main() -> int:
                     help="preview an unpublished category as if it were in the current wave (requires --out)")
     ap.add_argument("--cost-sizes",
                     help="preview a shorter list of cost pages, e.g. users=1,25,100 (requires --out)")
+    ap.add_argument("--links-v2", action="store_true",
+                    help="preview the wider internal linking (requires --out)")
     args = ap.parse_args()
     if args.include_category and not args.out:
         ap.error("--include-category only builds a preview; pass --out as well")
     if args.cost_sizes and not args.out:
         ap.error("--cost-sizes only builds a preview; pass --out as well")
+    if args.links_v2 and not args.out:
+        ap.error("--links-v2 only builds a preview; pass --out as well")
 
     ds = load_dataset()
+    if args.links_v2:
+        ds.config["internal_links"] = {"vs_siblings": 10, "tool_siblings": 8,
+                                       "saas_siblings": 8, "cost_siblings": 6}
     if args.cost_sizes:
         unit, _, values = args.cost_sizes.partition("=")
         ds.config.setdefault("cost_page_sizes", {})[unit] = [int(v) for v in values.split(",")]

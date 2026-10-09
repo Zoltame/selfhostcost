@@ -114,6 +114,7 @@
   "404.all_tools": "Tous les outils",
   "404.home": "Accueil",
 
+  "cost.related": "{tool} pour {size}",
   "unit.users.every": "chaque taille d'équipe",
   "unit.users.metered": "un logiciel facturé au siège",
   "unit.users.col": "Taille de l'équipe",

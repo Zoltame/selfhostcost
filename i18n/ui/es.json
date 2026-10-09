@@ -114,6 +114,7 @@
   "404.all_tools": "Todas las herramientas",
   "404.home": "Inicio",
 
+  "cost.related": "{tool} para {size}",
   "unit.users.every": "cada tamaño de equipo",
   "unit.users.metered": "el software por puesto",
   "unit.users.col": "Tamaño del equipo",
