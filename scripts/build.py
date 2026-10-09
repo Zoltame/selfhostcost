@@ -152,6 +152,20 @@ class Builder:
             out[name] = {"name": name, "sizes": sizes, "ref_n": ref["users"], "ref_size": ref}
         return out
 
+    def cost_page_sizes(self, unit: dict, tool: dict) -> list[dict]:
+        """Sizes that get their own cost page, among those a server plan can host.
+
+        Every size stays in the computed tables; this only decides which ones are
+        worth a page of their own. Seven near-identical cost pages per tool fill
+        the crawl queue of a new site faster than Google empties it.
+        """
+        keep = (self.cfg.get("cost_page_sizes") or {}).get(unit["name"])
+        sizes = [s for s in unit["sizes"] if keep is None or s["users"] in keep]
+        return [s for s in sizes if cheapest_plan(self.ds, size_for(tool, s["users"], self.cfg))]
+
+    def cost_url(self, tool: dict, size: dict, built: list[dict]) -> str | None:
+        return f"/cost/{tool['slug']}/{size['slug']}/" if any(b["slug"] == size["slug"] for b in built) else None
+
     def unit_of(self, category_slug: str) -> dict:
         return self.units[self.ds.categories[category_slug].get("unit", "users")]
 
@@ -372,6 +386,7 @@ class Builder:
             ref.saas_explain = explain_en(ref.saas_facts, U["name"])
 
             rows, flip_at = [], None
+            cost_pages = self.cost_page_sizes(U, tool)
             for s in U["sizes"]:
                 r = compute_tco(self.ds, tool, product, s["users"])
                 if r is None:
@@ -380,6 +395,7 @@ class Builder:
                     flip_at = s["label"]
                 rows.append({
                     "users": s["users"], "slug": s["slug"], "label": s["label"],
+                    "url": self.cost_url(tool, s, cost_pages),
                     "saas": L.money(r.saas_usd_month), "sh": L.money(r.selfhost_usd_month),
                     "sh_nl": L.money(r.selfhost_usd_month_no_labour),
                     "plan": L.t("vs.plan_cell", plan=r.plan.plan["name"], ram=L.gb(r.plan.plan["ram_gb"])),
@@ -472,6 +488,7 @@ class Builder:
             url = f"/self-host/{tool['slug']}/"
 
             rows = []
+            cost_pages = self.cost_page_sizes(U, tool)
             for s in U["sizes"]:
                 sizing = size_for(tool, s["users"], self.cfg)
                 plan = cheapest_plan(self.ds, sizing)
@@ -481,6 +498,7 @@ class Builder:
                 total = plan.price_usd_month * (1 + m["backup_cost_ratio"]) + maint * m["engineer_hourly_usd"]
                 rows.append({
                     "slug": s["slug"], "label": s["label"], "ram": sizing.ram_gb, "disk": sizing.disk_gb,
+                    "url": self.cost_url(tool, s, cost_pages),
                     "plan_name": plan.plan["name"], "provider": plan.provider_name,
                     "server": plan.price_usd_month, "total": round(total, 2),
                 })
@@ -524,10 +542,12 @@ class Builder:
         U = self.unit_of(tool["category"])
         # Only sizes a server plan can host get a page, so the size menu and the
         # previous/next links never point at a page that was not built.
-        sizes = [s for s in U["sizes"] if cheapest_plan(self.ds, size_for(tool, s["users"], self.cfg))]
+        sizes = self.cost_page_sizes(U, tool)
         for s in U["sizes"]:
             if s not in sizes:
-                self.skip("cost", f"{tool['slug']}/{s['slug']}", "no server plan fits the sizing")
+                fits = cheapest_plan(self.ds, size_for(tool, s["users"], self.cfg)) is not None
+                self.skip("cost", f"{tool['slug']}/{s['slug']}",
+                          "size has no cost page of its own" if fits else "no server plan fits the sizing")
         setup_hours = m["setup_hours_by_difficulty"][tool["difficulty"]]
         maint_hours = m["maintenance_hours_per_month_by_difficulty"][tool["difficulty"]]
         rate = m["engineer_hourly_usd"]
@@ -917,11 +937,18 @@ def main() -> int:
     ap.add_argument("--out", help="write the site here instead of docs/, for a private preview")
     ap.add_argument("--include-category", action="append", default=[],
                     help="preview an unpublished category as if it were in the current wave (requires --out)")
+    ap.add_argument("--cost-sizes",
+                    help="preview a shorter list of cost pages, e.g. users=1,25,100 (requires --out)")
     args = ap.parse_args()
     if args.include_category and not args.out:
         ap.error("--include-category only builds a preview; pass --out as well")
+    if args.cost_sizes and not args.out:
+        ap.error("--cost-sizes only builds a preview; pass --out as well")
 
     ds = load_dataset()
+    if args.cost_sizes:
+        unit, _, values = args.cost_sizes.partition("=")
+        ds.config.setdefault("cost_page_sizes", {})[unit] = [int(v) for v in values.split(",")]
     for slug in args.include_category:
         ds.categories[slug]["wave"] = 1
         for item in [*ds.tools.values(), *ds.saas.values()]:
