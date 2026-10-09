@@ -1306,7 +1306,9 @@
       "repo_url": "https://gitlab.com/glitchtip/glitchtip-backend",
       "source_host": "gitlab",
       "license": "MIT License",
-      "license_spdx": "MIT"
+      "license_spdx": "MIT",
+      "open_issues": null,
+      "stars": null
     },
     {
       "slug": "signoz",

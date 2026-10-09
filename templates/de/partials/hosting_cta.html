@@ -1,4 +1,5 @@
 {# Hosting-Empfehlung. Einfache Links, solange keine Partner-ID konfiguriert ist. #}
+{% if cta_plan %}
 <div class="cta">
   <h3>Wo Sie {{ tool.name }} betreiben</h3>
   <p>
@@ -25,4 +26,4 @@
   {% endif %}
 
   {% if tracked(cta_plan.provider_slug) %}<p class="disclosure">{{ disclosure_for(cta_plan.provider_slug) }}</p>{% endif %}
-</div>
+</div>{% endif %}

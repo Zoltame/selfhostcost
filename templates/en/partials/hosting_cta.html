@@ -1,5 +1,6 @@
 {# Hosting recommendation. Renders plain vendor links until affiliate IDs are configured,
    so the site is never broken by missing credentials and never fakes a tracked link. #}
+{% if cta_plan %}
 <div class="cta">
   <h3>Where to put {{ tool.name }}</h3>
   <p>
@@ -26,4 +27,4 @@
   {% endif %}
 
   {% if tracked(cta_plan.provider_slug) %}<p class="disclosure">{{ disclosure_for(cta_plan.provider_slug) }}</p>{% endif %}
-</div>
+</div>{% endif %}

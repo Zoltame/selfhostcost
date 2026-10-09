@@ -343,11 +343,140 @@ UNPRICEABLE_0914 = {
 }
 
 
+ON_1009 = "2026-10-09"
+
+# Wave 2. Read from each vendor's own pricing page on 2026-10-09. Several pages
+# served euros and a French locale from here; the currency each page served is
+# recorded as-is and converted once, at the dated rate on the methodology page.
+# Four of these products had moved on from the seed figures: Dropbox dropped its
+# three-seat minimum, HubSpot Starter fell from $20 to $7, and Pipedrive and
+# Salesforce renamed every tier.
+VERIFIED_1009 = {
+    "slack": {
+        "pricing_url": "https://slack.com/pricing",
+        "compare_tier": "Pro", "billing_model": "per_seat_month",
+        "tiers": [
+            {"name": "Pro", "eur_per_seat_month": 8.25, "currency": "EUR", "billing_basis": "monthly",
+             "note": "The page also ran a promotion of 50% off for three months, which is not used here."},
+            {"name": "Business+", "eur_per_seat_month": 18.0, "currency": "EUR", "billing_basis": "monthly"},
+        ],
+    },
+    "dropbox": {
+        "pricing_url": "https://www.dropbox.com/plans",
+        "compare_tier": "Standard", "billing_model": "per_seat_month",
+        "tiers": [
+            {"name": "Standard", "eur_per_seat_month": 12.0, "currency": "EUR", "billing_basis": "annual",
+             "note": "EUR 14.50 per user per month on monthly billing. The page now reads 'for 1 person or more': the old three-seat minimum is gone."},
+            {"name": "Advanced", "eur_per_seat_month": 18.0, "currency": "EUR", "billing_basis": "annual",
+             "note": "EUR 21.50 per user per month on monthly billing."},
+        ],
+    },
+    "google-workspace": {
+        "pricing_url": "https://workspace.google.com/pricing",
+        "compare_tier": "Standard", "billing_model": "per_seat_month",
+        "tiers": [
+            {"name": "Starter", "eur_per_seat_month": 6.8, "currency": "EUR", "billing_basis": "annual",
+             "note": "Annual commitment, billed monthly; the page says the yearly plan saves 16%."},
+            {"name": "Standard", "eur_per_seat_month": 13.6, "currency": "EUR", "billing_basis": "annual"},
+        ],
+        "note": "The pricing page now labels the plans Starter, Standard and Plus rather than Business Starter and Business Standard.",
+    },
+    "hubspot": {
+        "pricing_url": "https://www.hubspot.com/pricing/sales",
+        "compare_tier": "Starter", "billing_model": "per_seat_month",
+        "tiers": [
+            {"name": "Starter", "usd_per_seat_month": 7.0, "currency": "USD", "billing_basis": "unstated",
+             "note": "The page reads 'Starts at $7/mo/seat' without naming the billing term."},
+            {"name": "Professional", "usd_per_seat_month": 90.0, "currency": "USD", "billing_basis": "unstated"},
+            {"name": "Enterprise", "usd_per_seat_month": 150.0, "currency": "USD", "billing_basis": "unstated"},
+        ],
+    },
+    "salesforce": {
+        "pricing_url": "https://www.salesforce.com/sales/pricing/",
+        "compare_tier": "Pro Suite", "billing_model": "per_seat_month",
+        "tiers": [
+            {"name": "Starter Suite", "usd_per_seat_month": 25.0, "currency": "USD", "billing_basis": "monthly",
+             "note": "The page says billed monthly or annually at the same rate."},
+            {"name": "Pro Suite", "usd_per_seat_month": 100.0, "currency": "USD", "billing_basis": "annual"},
+            {"name": "Core", "usd_per_seat_month": 195.0, "currency": "USD", "billing_basis": "annual"},
+        ],
+        "note": "The tier named Professional in our seed data no longer exists; the suites are now Starter, Pro, Core, Advanced and Max.",
+    },
+    "pipedrive": {
+        "pricing_url": "https://www.pipedrive.com/en/pricing",
+        "compare_tier": "Growth", "billing_model": "per_seat_month",
+        "tiers": [
+            {"name": "Lite", "eur_per_seat_month": 14.0, "currency": "EUR", "billing_basis": "annual"},
+            {"name": "Growth", "eur_per_seat_month": 39.0, "currency": "EUR", "billing_basis": "annual"},
+            {"name": "Premium", "eur_per_seat_month": 59.0, "currency": "EUR", "billing_basis": "annual"},
+            {"name": "Ultimate", "eur_per_seat_month": 79.0, "currency": "EUR", "billing_basis": "annual"},
+        ],
+        "note": "Every tier was renamed since the seed data: Essential and Advanced are now Lite, Growth, Premium and Ultimate.",
+    },
+    "docusign": {
+        "pricing_url": "https://www.docusign.com/products-and-pricing",
+        "compare_tier": "Standard", "billing_model": "per_seat_month",
+        "tiers": [
+            {"name": "Personal", "eur_month": 9.0, "currency": "EUR", "billing_basis": "annual",
+             "note": "EUR 108 a year, one user, 5 envelopes a month."},
+            {"name": "Standard", "eur_per_seat_month": 23.0, "currency": "EUR", "billing_basis": "annual",
+             "note": "EUR 276 per user per year, with an allowance of 100 envelopes per user per year."},
+            {"name": "Business Pro", "eur_per_seat_month": 38.0, "currency": "EUR", "billing_basis": "annual"},
+        ],
+    },
+    "sentry": {
+        "pricing_url": "https://sentry.io/pricing/",
+        "compare_tier": "Team", "billing_model": "flat_month",
+        "tiers": [
+            {"name": "Team", "usd_month": 26.0, "currency": "USD", "billing_basis": "annual",
+             "note": "Base plan including 50,000 errors a month; usage above the quota is billed per event, from $0.00036 each."},
+            {"name": "Business", "usd_month": 80.0, "currency": "USD", "billing_basis": "annual"},
+        ],
+        "note": "Sentry prices by event volume, not seats, so team size does not change the base figure used here.",
+    },
+    "calendly": {
+        "pricing_url": "https://calendly.com/pricing",
+        "compare_tier": "Teams", "billing_model": "per_seat_month",
+        "tiers": [
+            {"name": "Standard", "usd_per_seat_month": 10.0, "currency": "USD", "billing_basis": "annual",
+             "note": "$12 per seat per month on monthly billing."},
+            {"name": "Teams", "usd_per_seat_month": 16.0, "currency": "USD", "billing_basis": "annual",
+             "note": "$20 per seat per month on monthly billing."},
+        ],
+    },
+    "google-photos": {
+        "pricing_url": "https://one.google.com/about/plans",
+        "compare_tier": "Google AI Plus (2 TB)", "billing_model": "flat_month",
+        "tiers": [
+            {"name": "Basic (100 GB)", "eur_month": 1.99, "currency": "EUR", "billing_basis": "monthly"},
+            {"name": "Standard (200 GB)", "eur_month": 2.99, "currency": "EUR", "billing_basis": "monthly"},
+            {"name": "Google AI Plus (2 TB)", "eur_month": 9.99, "currency": "EUR", "billing_basis": "monthly",
+             "note": "Google now sells the 2 TB tier bundled with its AI features. Storage is shared with up to five people."},
+        ],
+        "note": "Priced by storage, not by seats, and shareable with five people, so the figure does not grow with team size.",
+    },
+    "mailchimp": {
+        "pricing_url": "https://mailchimp.com/pricing/marketing/",
+        "compare_tier": "Standard", "billing_model": "flat_month",
+        "tiers": [
+            {"name": "Standard", "eur_month": 18.0, "currency": "EUR", "billing_basis": "monthly",
+             "note": "Entry price for up to 500 contacts. Read on the same page at other contact counts: EUR 90.02 at 5,000 contacts, EUR 207.05 at 15,000, EUR 279.07 at 25,000."},
+        ],
+        "note": "Mailchimp prices by contact count, not by seats or by team size. The entry figure above is real but would understate the cost of any team with a real mailing list, so this product is held out of the publishable wave until the dataset can count contacts.",
+    },
+}
+
+# Priced by something other than people, so a team-size comparison would mislead.
+# Moved out of wave 2 rather than published against a seat count.
+UNIT_MISMATCH_1009 = {
+    "mailchimp": "priced per contact; needs a contacts unit before any page is built",
+}
+
 def main() -> None:
     doc = json.loads(TARGET.read_text(encoding="utf-8"))
     by_slug = {p["slug"]: p for p in doc["products"]}
 
-    for on, batch in ((ON, VERIFIED), (ON_0914, VERIFIED_0914)):
+    for on, batch in ((ON, VERIFIED), (ON_0914, VERIFIED_0914), (ON_1009, VERIFIED_1009)):
         for slug, patch in batch.items():
             product = by_slug.get(slug)
             if product is None:
@@ -366,6 +495,14 @@ def main() -> None:
         product["verified_on"] = None
         product["price_note"] = note
         print(f"  {status:<14} {slug}")
+
+    for slug, why in UNIT_MISMATCH_1009.items():
+        product = by_slug.get(slug)
+        if product is None:
+            continue
+        product["wave"] = 3
+        product["unit_mismatch"] = why
+        print(f"  held back    {slug}: {why}")
 
     still_seed = [p["slug"] for p in doc["products"] if p.get("price_status") != "verified"]
     print(f"\n  verified: {len(doc['products']) - len(still_seed)} / {len(doc['products'])}")

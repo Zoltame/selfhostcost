@@ -95,7 +95,7 @@
     {% if tool.licence_caveat %}<tr><th scope="row">Salvedad sobre la licencia</th><td>{{ tool.licence_caveat }}</td></tr>{% endif %}
     <tr><th scope="row">Lenguaje</th><td>{{ tool.language }}</td></tr>
     {% if tool.stars %}<tr><th scope="row">Estrellas en GitHub</th><td>{{ number(tool.stars) }}</td></tr>{% endif %}
-    {% if tool.open_issues is not none %}<tr><th scope="row">Incidencias abiertas</th><td>{{ number(tool.open_issues) }}</td></tr>{% endif %}
+    {% if tool.get('open_issues') is not none %}<tr><th scope="row">Incidencias abiertas</th><td>{{ number(tool.open_issues) }}</td></tr>{% endif %}
     {% if tool.latest_release %}<tr><th scope="row">Última versión</th><td>{{ tool.latest_release }}</td></tr>{% endif %}
     {% if tool.last_push %}<tr><th scope="row">Último commit</th><td>{{ tool.last_push }}</td></tr>{% endif %}
     {% if tool.github_checked_on %}<tr><th scope="row">Repositorio comprobado el</th><td>{{ tool.github_checked_on }}</td></tr>{% endif %}

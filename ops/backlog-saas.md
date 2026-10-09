@@ -27,6 +27,10 @@ is read from the vendor's page and recorded. Ordered by how many tools want it.
 
 ## Not modelled
 
+- **mailchimp** (Intuit), read 2026-10-09: EUR 18 a month at 500 contacts, EUR 90.02 at 5,000, EUR 207.05 at
+  15,000, EUR 279.07 at 25,000. Priced per contact, so a per-seat page would quote EUR 18 to a team whose real
+  bill is ten times that. Moved to wave 3 until the dataset can count contacts, the way infra-monitoring counts
+  hosts. The prices are recorded in scripts/apply_verified_prices.py.
 - **newrelic** (New Relic), read 2026-09-21: it does not charge per host. It charges per full-platform
   user ($349 a month on Pro, annual) plus $0.40 per GB of data beyond 100 GB a month. Its cost depends on data
   volume, not on the server count the monitoring category is priced by, so it would need an assumed

@@ -985,15 +985,20 @@
       "tiers": [
         {
           "name": "Pro",
-          "usd_per_seat_month": 8.75
+          "eur_per_seat_month": 8.25,
+          "currency": "EUR",
+          "billing_basis": "monthly",
+          "note": "The page also ran a promotion of 50% off for three months, which is not used here."
         },
         {
           "name": "Business+",
-          "usd_per_seat_month": 15.0
+          "eur_per_seat_month": 18.0,
+          "currency": "EUR",
+          "billing_basis": "monthly"
         }
       ],
-      "price_status": "seed",
-      "verified_on": null,
+      "price_status": "verified",
+      "verified_on": "2026-10-09",
       "wave": 2
     },
     {
@@ -1008,17 +1013,21 @@
       "tiers": [
         {
           "name": "Standard",
-          "usd_per_seat_month": 18.0,
-          "min_seats": 3
+          "eur_per_seat_month": 12.0,
+          "currency": "EUR",
+          "billing_basis": "annual",
+          "note": "EUR 14.50 per user per month on monthly billing. The page now reads 'for 1 person or more': the old three-seat minimum is gone."
         },
         {
           "name": "Advanced",
-          "usd_per_seat_month": 30.0,
-          "min_seats": 3
+          "eur_per_seat_month": 18.0,
+          "currency": "EUR",
+          "billing_basis": "annual",
+          "note": "EUR 21.50 per user per month on monthly billing."
         }
       ],
-      "price_status": "seed",
-      "verified_on": null,
+      "price_status": "verified",
+      "verified_on": "2026-10-09",
       "wave": 2
     },
     {
@@ -1029,20 +1038,26 @@
       "site": "https://workspace.google.com",
       "pricing_url": "https://workspace.google.com/pricing",
       "billing_model": "per_seat_month",
-      "compare_tier": "Business Standard",
+      "compare_tier": "Standard",
       "tiers": [
         {
-          "name": "Business Starter",
-          "usd_per_seat_month": 8.4
+          "name": "Starter",
+          "eur_per_seat_month": 6.8,
+          "currency": "EUR",
+          "billing_basis": "annual",
+          "note": "Annual commitment, billed monthly; the page says the yearly plan saves 16%."
         },
         {
-          "name": "Business Standard",
-          "usd_per_seat_month": 16.8
+          "name": "Standard",
+          "eur_per_seat_month": 13.6,
+          "currency": "EUR",
+          "billing_basis": "annual"
         }
       ],
-      "price_status": "seed",
-      "verified_on": null,
-      "wave": 2
+      "price_status": "verified",
+      "verified_on": "2026-10-09",
+      "wave": 2,
+      "note": "The pricing page now labels the plans Starter, Standard and Plus rather than Business Starter and Business Standard."
     },
     {
       "slug": "mailchimp",
@@ -1055,18 +1070,18 @@
       "compare_tier": "Standard",
       "tiers": [
         {
-          "name": "Essentials",
-          "usd_month": 13.0,
-          "note": "Priced by contact count."
-        },
-        {
           "name": "Standard",
-          "usd_month": 20.0
+          "eur_month": 18.0,
+          "currency": "EUR",
+          "billing_basis": "monthly",
+          "note": "Entry price for up to 500 contacts. Read on the same page at other contact counts: EUR 90.02 at 5,000 contacts, EUR 207.05 at 15,000, EUR 279.07 at 25,000."
         }
       ],
-      "price_status": "seed",
-      "verified_on": null,
-      "wave": 2
+      "price_status": "verified",
+      "verified_on": "2026-10-09",
+      "wave": 3,
+      "note": "Mailchimp prices by contact count, not by seats or by team size. The entry figure above is real but would understate the cost of any team with a real mailing list, so this product is held out of the publishable wave until the dataset can count contacts.",
+      "unit_mismatch": "priced per contact; needs a contacts unit before any page is built"
     },
     {
       "slug": "hubspot",
@@ -1080,15 +1095,26 @@
       "tiers": [
         {
           "name": "Starter",
-          "usd_per_seat_month": 20.0
+          "usd_per_seat_month": 7.0,
+          "currency": "USD",
+          "billing_basis": "unstated",
+          "note": "The page reads 'Starts at $7/mo/seat' without naming the billing term."
         },
         {
           "name": "Professional",
-          "usd_per_seat_month": 100.0
+          "usd_per_seat_month": 90.0,
+          "currency": "USD",
+          "billing_basis": "unstated"
+        },
+        {
+          "name": "Enterprise",
+          "usd_per_seat_month": 150.0,
+          "currency": "USD",
+          "billing_basis": "unstated"
         }
       ],
-      "price_status": "seed",
-      "verified_on": null,
+      "price_status": "verified",
+      "verified_on": "2026-10-09",
       "wave": 2
     },
     {
@@ -1099,20 +1125,32 @@
       "site": "https://www.salesforce.com",
       "pricing_url": "https://www.salesforce.com/sales/pricing/",
       "billing_model": "per_seat_month",
-      "compare_tier": "Professional",
+      "compare_tier": "Pro Suite",
       "tiers": [
         {
           "name": "Starter Suite",
-          "usd_per_seat_month": 25.0
+          "usd_per_seat_month": 25.0,
+          "currency": "USD",
+          "billing_basis": "monthly",
+          "note": "The page says billed monthly or annually at the same rate."
         },
         {
-          "name": "Professional",
-          "usd_per_seat_month": 100.0
+          "name": "Pro Suite",
+          "usd_per_seat_month": 100.0,
+          "currency": "USD",
+          "billing_basis": "annual"
+        },
+        {
+          "name": "Core",
+          "usd_per_seat_month": 195.0,
+          "currency": "USD",
+          "billing_basis": "annual"
         }
       ],
-      "price_status": "seed",
-      "verified_on": null,
-      "wave": 2
+      "price_status": "verified",
+      "verified_on": "2026-10-09",
+      "wave": 2,
+      "note": "The tier named Professional in our seed data no longer exists; the suites are now Starter, Pro, Core, Advanced and Max."
     },
     {
       "slug": "pipedrive",
@@ -1122,20 +1160,37 @@
       "site": "https://www.pipedrive.com",
       "pricing_url": "https://www.pipedrive.com/en/pricing",
       "billing_model": "per_seat_month",
-      "compare_tier": "Advanced",
+      "compare_tier": "Growth",
       "tiers": [
         {
-          "name": "Essential",
-          "usd_per_seat_month": 24.0
+          "name": "Lite",
+          "eur_per_seat_month": 14.0,
+          "currency": "EUR",
+          "billing_basis": "annual"
         },
         {
-          "name": "Advanced",
-          "usd_per_seat_month": 44.0
+          "name": "Growth",
+          "eur_per_seat_month": 39.0,
+          "currency": "EUR",
+          "billing_basis": "annual"
+        },
+        {
+          "name": "Premium",
+          "eur_per_seat_month": 59.0,
+          "currency": "EUR",
+          "billing_basis": "annual"
+        },
+        {
+          "name": "Ultimate",
+          "eur_per_seat_month": 79.0,
+          "currency": "EUR",
+          "billing_basis": "annual"
         }
       ],
-      "price_status": "seed",
-      "verified_on": null,
-      "wave": 2
+      "price_status": "verified",
+      "verified_on": "2026-10-09",
+      "wave": 2,
+      "note": "Every tier was renamed since the seed data: Essential and Advanced are now Lite, Growth, Premium and Ultimate."
     },
     {
       "slug": "docusign",
@@ -1149,16 +1204,27 @@
       "tiers": [
         {
           "name": "Personal",
-          "usd_per_seat_month": 15.0,
-          "note": "Capped at 5 envelopes a month."
+          "eur_month": 9.0,
+          "currency": "EUR",
+          "billing_basis": "annual",
+          "note": "EUR 108 a year, one user, 5 envelopes a month."
         },
         {
           "name": "Standard",
-          "usd_per_seat_month": 45.0
+          "eur_per_seat_month": 23.0,
+          "currency": "EUR",
+          "billing_basis": "annual",
+          "note": "EUR 276 per user per year, with an allowance of 100 envelopes per user per year."
+        },
+        {
+          "name": "Business Pro",
+          "eur_per_seat_month": 38.0,
+          "currency": "EUR",
+          "billing_basis": "annual"
         }
       ],
-      "price_status": "seed",
-      "verified_on": null,
+      "price_status": "verified",
+      "verified_on": "2026-10-09",
       "wave": 2
     },
     {
@@ -1173,17 +1239,22 @@
       "tiers": [
         {
           "name": "Team",
-          "usd_month": 29.0,
-          "note": "Priced by event volume, with overage charges."
+          "usd_month": 26.0,
+          "currency": "USD",
+          "billing_basis": "annual",
+          "note": "Base plan including 50,000 errors a month; usage above the quota is billed per event, from $0.00036 each."
         },
         {
           "name": "Business",
-          "usd_month": 89.0
+          "usd_month": 80.0,
+          "currency": "USD",
+          "billing_basis": "annual"
         }
       ],
-      "price_status": "seed",
-      "verified_on": null,
-      "wave": 2
+      "price_status": "verified",
+      "verified_on": "2026-10-09",
+      "wave": 2,
+      "note": "Sentry prices by event volume, not seats, so team size does not change the base figure used here."
     },
     {
       "slug": "datadog",
@@ -1227,15 +1298,21 @@
       "tiers": [
         {
           "name": "Standard",
-          "usd_per_seat_month": 12.0
+          "usd_per_seat_month": 10.0,
+          "currency": "USD",
+          "billing_basis": "annual",
+          "note": "$12 per seat per month on monthly billing."
         },
         {
           "name": "Teams",
-          "usd_per_seat_month": 20.0
+          "usd_per_seat_month": 16.0,
+          "currency": "USD",
+          "billing_basis": "annual",
+          "note": "$20 per seat per month on monthly billing."
         }
       ],
-      "price_status": "seed",
-      "verified_on": null,
+      "price_status": "verified",
+      "verified_on": "2026-10-09",
       "wave": 2
     },
     {
@@ -1246,16 +1323,32 @@
       "site": "https://one.google.com",
       "pricing_url": "https://one.google.com/about/plans",
       "billing_model": "flat_month",
-      "compare_tier": "2 TB",
+      "compare_tier": "Google AI Plus (2 TB)",
       "tiers": [
         {
-          "name": "2 TB",
-          "usd_month": 9.99
+          "name": "Basic (100 GB)",
+          "eur_month": 1.99,
+          "currency": "EUR",
+          "billing_basis": "monthly"
+        },
+        {
+          "name": "Standard (200 GB)",
+          "eur_month": 2.99,
+          "currency": "EUR",
+          "billing_basis": "monthly"
+        },
+        {
+          "name": "Google AI Plus (2 TB)",
+          "eur_month": 9.99,
+          "currency": "EUR",
+          "billing_basis": "monthly",
+          "note": "Google now sells the 2 TB tier bundled with its AI features. Storage is shared with up to five people."
         }
       ],
-      "price_status": "seed",
-      "verified_on": null,
-      "wave": 2
+      "price_status": "verified",
+      "verified_on": "2026-10-09",
+      "wave": 2,
+      "note": "Priced by storage, not by seats, and shareable with five people, so the figure does not grow with team size."
     },
     {
       "slug": "prtg",
