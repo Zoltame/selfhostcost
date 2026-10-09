@@ -40,16 +40,25 @@ monitored server. A comparison is only built when the tool and the product share
 Unit wording lives in `i18n/ui/<lang>.json` under `unit.<unit>.*`, and unit-specific variants of page
 titles and price labels end in `.<unit>` (for example `cost.title.many.hosts`).
 
-`infra-monitoring` is prepared but unpublished (wave 2): Datadog and PRTG prices read 2026-09-21, Prometheus +
-Grafana, Zabbix and Checkmk Community sized from their own documentation where it exists. New Relic is
-withheld because it bills by user and data volume (see `ops/backlog-saas.md`). To look at it privately:
+`infra-monitoring` went live with wave 2 on 2026-10-09: Datadog and PRTG prices read 2026-09-21,
+Prometheus + Grafana, Zabbix and Checkmk Community sized from their own documentation where it exists.
+New Relic is withheld because it bills by user and data volume, and Mailchimp waits for a `contacts` unit
+of the same kind (see `ops/backlog-saas.md`).
+
+To look at an unpublished category privately, without touching `docs/` or the date ledger:
 
 ```bash
-python scripts/build.py --out ../preview --include-category infra-monitoring
+python scripts/build.py --out ../preview --include-category <slug>
 ```
 
-This never touches `docs/` or the date ledger. To publish it, set its category, tools and products to the
-current wave (or publish wave 2), rebuild, and re-read the two vendor prices if they are over 45 days old.
+## Page count and crawl budget
+
+`cost_page_sizes` in `site.config.json` decides which team sizes get a cost page of their own; every size
+keeps its figures in the tables either way. It was set to 1, 25 and 100 on 2026-10-09, cutting the site
+from 2,232 to 1,448 pages, because Google had 1,384 pages discovered but not crawled at roughly 5 a day
+and the near-identical cost pages were spending the budget the comparison pages need. The sizes kept are
+the ones that had drawn impressions. `internal_links` was widened at the same time. Preview either with
+`--cost-sizes users=1,25,100` and `--links-v2` alongside `--out`.
 
 ## Languages
 
