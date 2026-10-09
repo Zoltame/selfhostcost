@@ -14,7 +14,7 @@
     "es"
   ],
   "author": "SelfHostCost",
-  "publish_wave": 1,
+  "publish_wave": 2,
   "reference_users": 10,
   "strict_prices": true,
   "currency": "USD",
@@ -166,5 +166,6 @@
       ]
     }
   },
-  "custom_domain_on": "2026-09-28"
+  "custom_domain_on": "2026-09-28",
+  "wave2_published_on": "2026-10-09"
 }

@@ -51,10 +51,10 @@
 </p>
 
 <dl class="figures">
-  <div class="fig"><dt>Comparisons</dt><dd>65<small>paid product against self-hosted tool</small></dd></div>
-  <div class="fig"><dt>Tools priced</dt><dd>30<small>with a published sizing model</small></dd></div>
-  <div class="fig"><dt>Prices read from vendors</dt><dd>30<small>on 2026-09-14</small></dd></div>
-  <div class="fig"><dt>Where self-hosting loses</dt><dd>46<small>of those comparisons, at 10 people</small></dd></div>
+  <div class="fig"><dt>Comparisons</dt><dd>90<small>paid product against self-hosted tool</small></dd></div>
+  <div class="fig"><dt>Tools priced</dt><dd>49<small>with a published sizing model</small></dd></div>
+  <div class="fig"><dt>Prices read from vendors</dt><dd>42<small>on 2026-10-09</small></dd></div>
+  <div class="fig"><dt>Where self-hosting loses</dt><dd>59<small>of those comparisons, at 10 people</small></dd></div>
 </dl>
 
 <h2>Where the gap is widest</h2>
@@ -64,11 +64,32 @@
   <thead><tr><th>Instead of</th><th>Run</th><th class="num">Their price</th><th class="num">Yours</th><th class="num">Saved over 36 months</th></tr></thead>
   <tbody>
     <tr>
+      <th scope="row">Salesforce Sales Cloud</th>
+      <td><a href="/vs/salesforce-vs-espocrm/">EspoCRM</a></td>
+      <td class="num">$1,000</td>
+      <td class="num">$49.50</td>
+      <td class="num pos">$34,068</td>
+    </tr>
+    <tr>
+      <th scope="row">Salesforce Sales Cloud</th>
+      <td><a href="/vs/salesforce-vs-twenty/">Twenty</a></td>
+      <td class="num">$1,000</td>
+      <td class="num">$272</td>
+      <td class="num pos">$25,015</td>
+    </tr>
+    <tr>
       <th scope="row">Zendesk</th>
       <td><a href="/vs/zendesk-vs-freescout/">FreeScout</a></td>
       <td class="num">$638</td>
       <td class="num">$49.50</td>
       <td class="num pos">$21,020</td>
+    </tr>
+    <tr>
+      <th scope="row">Pipedrive</th>
+      <td><a href="/vs/pipedrive-vs-espocrm/">EspoCRM</a></td>
+      <td class="num">$452</td>
+      <td class="num">$49.50</td>
+      <td class="num pos">$14,343</td>
     </tr>
     <tr>
       <th scope="row">Zendesk</th>
@@ -97,27 +118,6 @@
       <td class="num">$300</td>
       <td class="num">$49.50</td>
       <td class="num pos">$8,868</td>
-    </tr>
-    <tr>
-      <th scope="row">SurveyMonkey</th>
-      <td><a href="/vs/surveymonkey-vs-formbricks/">Formbricks</a></td>
-      <td class="num">$348</td>
-      <td class="num">$139</td>
-      <td class="num pos">$7,069</td>
-    </tr>
-    <tr>
-      <th scope="row">Notion</th>
-      <td><a href="/vs/notion-vs-bookstack/">BookStack</a></td>
-      <td class="num">$226</td>
-      <td class="num">$49.50</td>
-      <td class="num pos">$6,206</td>
-    </tr>
-    <tr>
-      <th scope="row">Freshdesk</th>
-      <td><a href="/vs/freshdesk-vs-freescout/">FreeScout</a></td>
-      <td class="num">$190</td>
-      <td class="num">$49.50</td>
-      <td class="num pos">$4,908</td>
     </tr>
   </tbody>
 </table>
@@ -154,6 +154,13 @@
       <td><a href="/vs/google-analytics-vs-posthog/">why</a></td>
     </tr>
     <tr>
+      <th scope="row">Google One storage</th>
+      <td>Immich</td>
+      <td class="num">$11.58</td>
+      <td class="num neg">$328</td>
+      <td><a href="/vs/google-photos-vs-immich/">why</a></td>
+    </tr>
+    <tr>
       <th scope="row">Jira</th>
       <td>Plane</td>
       <td class="num">$0.00</td>
@@ -168,25 +175,18 @@
       <td><a href="/vs/jira-vs-openproject/">why</a></td>
     </tr>
     <tr>
-      <th scope="row">Linear</th>
-      <td>Plane</td>
-      <td class="num">$100</td>
+      <th scope="row">Sentry</th>
+      <td>SigNoz</td>
+      <td class="num">$26.00</td>
       <td class="num neg">$272</td>
-      <td><a href="/vs/linear-vs-plane/">why</a></td>
+      <td><a href="/vs/sentry-vs-signoz/">why</a></td>
     </tr>
     <tr>
-      <th scope="row">Asana</th>
-      <td>Plane</td>
-      <td class="num">$135</td>
+      <th scope="row">HubSpot Sales Hub</th>
+      <td>Twenty</td>
+      <td class="num">$70.00</td>
       <td class="num neg">$272</td>
-      <td><a href="/vs/asana-vs-plane/">why</a></td>
-    </tr>
-    <tr>
-      <th scope="row">monday.com</th>
-      <td>Plane</td>
-      <td class="num">$139</td>
-      <td class="num neg">$272</td>
-      <td><a href="/vs/monday-vs-plane/">why</a></td>
+      <td><a href="/vs/hubspot-vs-twenty/">why</a></td>
     </tr>
   </tbody>
 </table>
@@ -243,6 +243,51 @@
     <h3><a href="/category/forms/">Forms and surveys</a></h3>
     <p>Collect responses without a per-response cap.</p>
     <p class="meta">3 self-hosted tools &middot; 5 priced comparisons</p>
+  </li>
+  <li class="card">
+    <h3><a href="/category/file-storage/">File sync and storage</a></h3>
+    <p>Replace per-seat cloud drives with your own storage.</p>
+    <p class="meta">2 self-hosted tools &middot; 3 priced comparisons</p>
+  </li>
+  <li class="card">
+    <h3><a href="/category/team-chat/">Team chat</a></h3>
+    <p>Keep message history without paying to unlock the archive.</p>
+    <p class="meta">3 self-hosted tools &middot; 3 priced comparisons</p>
+  </li>
+  <li class="card">
+    <h3><a href="/category/email-marketing/">Email marketing</a></h3>
+    <p>Send campaigns paying only for delivery, not for list size.</p>
+    <p class="meta">2 self-hosted tools</p>
+  </li>
+  <li class="card">
+    <h3><a href="/category/crm/">CRM</a></h3>
+    <p>Track deals without per-seat CRM licensing.</p>
+    <p class="meta">2 self-hosted tools &middot; 6 priced comparisons</p>
+  </li>
+  <li class="card">
+    <h3><a href="/category/e-signature/">E-signature</a></h3>
+    <p>Sign documents without a per-envelope charge.</p>
+    <p class="meta">2 self-hosted tools &middot; 2 priced comparisons</p>
+  </li>
+  <li class="card">
+    <h3><a href="/category/infra-monitoring/">Infrastructure monitoring</a></h3>
+    <p>Watch servers and services without a per-host monitoring bill.</p>
+    <p class="meta">3 self-hosted tools &middot; 5 priced comparisons</p>
+  </li>
+  <li class="card">
+    <h3><a href="/category/error-monitoring/">Error monitoring</a></h3>
+    <p>Capture exceptions without event-volume billing.</p>
+    <p class="meta">2 self-hosted tools &middot; 2 priced comparisons</p>
+  </li>
+  <li class="card">
+    <h3><a href="/category/scheduling/">Scheduling and booking</a></h3>
+    <p>Share availability without a per-seat booking tool.</p>
+    <p class="meta">1 self-hosted tool &middot; 1 priced comparison</p>
+  </li>
+  <li class="card">
+    <h3><a href="/category/photos/">Photo libraries</a></h3>
+    <p>Keep a family or team photo archive off metered cloud storage.</p>
+    <p class="meta">2 self-hosted tools &middot; 3 priced comparisons</p>
   </li>
 </ul>
 

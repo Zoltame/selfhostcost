@@ -1,12 +1,12 @@
 {
  "/": {
-  "hash": "ed2253210f3e803b",
-  "modified": "2026-09-28",
+  "hash": "89107f0eee352942",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/about/": {
-  "hash": "c40aa4b3dcc76f5e",
-  "modified": "2026-09-28",
+  "hash": "3216773554925ab3",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/alternatives/1password/": {
@@ -39,6 +39,11 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/alternatives/calendly/": {
+  "hash": "303ec45cb0b3b294",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/alternatives/clerk/": {
   "hash": "a56dbc313f735543",
   "modified": "2026-09-28",
@@ -48,6 +53,21 @@
   "hash": "0900f66917dda77e",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/alternatives/datadog/": {
+  "hash": "1ae3aea3cc4c2f37",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/alternatives/docusign/": {
+  "hash": "87c354756b9fb4dc",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/alternatives/dropbox/": {
+  "hash": "829b600e112ef762",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/alternatives/fathom/": {
   "hash": "42709bac7fb4e6ba",
@@ -64,10 +84,25 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/alternatives/google-photos/": {
+  "hash": "32bd70e97519a217",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/alternatives/google-workspace/": {
+  "hash": "2755327ffc68c38e",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/alternatives/helpscout/": {
   "hash": "a350f7336a5e0306",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/alternatives/hubspot/": {
+  "hash": "1bb29e47d74ae07c",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/alternatives/intercom/": {
   "hash": "2232d95933540def",
@@ -119,10 +154,35 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/alternatives/pipedrive/": {
+  "hash": "d8fec20f9741cd36",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/alternatives/prtg/": {
+  "hash": "8ad10b30a9872b4b",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/alternatives/retool/": {
   "hash": "a0047b04b9f7f8dd",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/alternatives/salesforce/": {
+  "hash": "96fff2abf6f18fc8",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/alternatives/sentry/": {
+  "hash": "0f5f343578a6a3b9",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/alternatives/slack/": {
+  "hash": "7a519ac5da419bf5",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/alternatives/statuspage/": {
   "hash": "bc45a390ad53575a",
@@ -160,58 +220,103 @@
   "published": "2026-09-14"
  },
  "/category/analytics/": {
-  "hash": "0df86c7cf8abe4ea",
-  "modified": "2026-09-28",
+  "hash": "1516081f2e43ef28",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/category/auth/": {
-  "hash": "c6144ce56803d07e",
-  "modified": "2026-09-28",
+  "hash": "d2cfdf2da3f5ad45",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/category/automation/": {
-  "hash": "82a1a0c9f6c4b2da",
-  "modified": "2026-09-28",
+  "hash": "91b8f3d836ab263d",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/category/bi/": {
-  "hash": "fc17817a34fa641e",
-  "modified": "2026-09-28",
+  "hash": "1627605b60523b28",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
+ },
+ "/category/crm/": {
+  "hash": "be1a9f8c4cad5223",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/category/docs-wiki/": {
-  "hash": "dc93d2eb5168c5f1",
-  "modified": "2026-09-28",
+  "hash": "c601fcfc00fe396f",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
+ "/category/e-signature/": {
+  "hash": "5946bda17a1a2c70",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/category/email-marketing/": {
+  "hash": "a2ef3285e2c52096",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/category/error-monitoring/": {
+  "hash": "025990246ea40b09",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/category/file-storage/": {
+  "hash": "592c73bfd3ba382a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/category/forms/": {
-  "hash": "b44e1f32767be7e5",
-  "modified": "2026-09-28",
+  "hash": "d4957a192d856194",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/category/helpdesk/": {
-  "hash": "cee362d2b33fb3d1",
-  "modified": "2026-09-28",
+  "hash": "43c1e522ad5d1461",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
+ },
+ "/category/infra-monitoring/": {
+  "hash": "6135aed1359bfa6c",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/category/password-manager/": {
-  "hash": "34e45e092e1b9a8d",
-  "modified": "2026-09-28",
+  "hash": "14f8ab527a0a2a93",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
+ },
+ "/category/photos/": {
+  "hash": "36661f093b2f55ed",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/category/project-management/": {
-  "hash": "ad5e4fe1e2e25193",
-  "modified": "2026-09-28",
+  "hash": "423d1efe7aa29e63",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
+ },
+ "/category/scheduling/": {
+  "hash": "7329cdcae4062e90",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/category/status-page/": {
-  "hash": "37b732051bee1b4e",
-  "modified": "2026-09-28",
+  "hash": "60992f139287970c",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
+ "/category/team-chat/": {
+  "hash": "9421d3ea19e5e68a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/compare/": {
-  "hash": "940f1c80b1507213",
-  "modified": "2026-09-28",
+  "hash": "00cf84dad9e2c736",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/cost/activepieces/1-user/": {
@@ -354,6 +459,41 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/cost/cal-com/1-user/": {
+  "hash": "669fa3767fb289b2",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/cal-com/10-users/": {
+  "hash": "d2fee67bcec68635",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/cal-com/100-users/": {
+  "hash": "9243e3a822f6332d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/cal-com/25-users/": {
+  "hash": "645abb01a10cd6f8",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/cal-com/250-users/": {
+  "hash": "241eec9bec97cd0a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/cal-com/5-users/": {
+  "hash": "355228546c6fd3e1",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/cal-com/50-users/": {
+  "hash": "6050c0cbb66783ef",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/cost/chatwoot/1-user/": {
   "hash": "d7a0677d9be7219b",
   "modified": "2026-09-28",
@@ -389,6 +529,41 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/cost/checkmk/10-hosts/": {
+  "hash": "da9e5f3a3b48163d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/checkmk/100-hosts/": {
+  "hash": "1dc3fb52645771b6",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/checkmk/25-hosts/": {
+  "hash": "871599a31415ad16",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/checkmk/250-hosts/": {
+  "hash": "bc58cb08a21398fc",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/checkmk/5-hosts/": {
+  "hash": "a5387dc6a709670f",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/checkmk/50-hosts/": {
+  "hash": "95db09cbbaffb457",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/checkmk/500-hosts/": {
+  "hash": "8cddbd876b9c11db",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/cost/docmost/1-user/": {
   "hash": "12111b324b22854e",
   "modified": "2026-09-28",
@@ -423,6 +598,111 @@
   "hash": "b23bab0763e7c81f",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/cost/documenso/1-user/": {
+  "hash": "4a58c4fe0d664238",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/documenso/10-users/": {
+  "hash": "7b4727fc6792342c",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/documenso/100-users/": {
+  "hash": "842f5f80eb9313f6",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/documenso/25-users/": {
+  "hash": "4bd024fea36fffe1",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/documenso/250-users/": {
+  "hash": "3b98c695f3c1f8b7",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/documenso/5-users/": {
+  "hash": "8938857c742ce85d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/documenso/50-users/": {
+  "hash": "161a7acb5e380158",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/docuseal/1-user/": {
+  "hash": "7c14a26a3c4ca2cf",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/docuseal/10-users/": {
+  "hash": "ecc09b9a66e3412d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/docuseal/100-users/": {
+  "hash": "05668d40b396b106",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/docuseal/25-users/": {
+  "hash": "cb4a87bfcd728d09",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/docuseal/250-users/": {
+  "hash": "8930f6068667435a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/docuseal/5-users/": {
+  "hash": "27dcfdeab0b5592b",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/docuseal/50-users/": {
+  "hash": "cb8a1befa7d6d853",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/espocrm/1-user/": {
+  "hash": "6c8d1f0ec4666a2b",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/espocrm/10-users/": {
+  "hash": "c7fda9d04171611f",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/espocrm/100-users/": {
+  "hash": "2facef21b595dc3a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/espocrm/25-users/": {
+  "hash": "01b398457abe9693",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/espocrm/250-users/": {
+  "hash": "f77763b4c8545b76",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/espocrm/5-users/": {
+  "hash": "3c43165d186f1e85",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/espocrm/50-users/": {
+  "hash": "6d6ff0777febbac4",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/cost/formbricks/1-user/": {
   "hash": "6530ca52ad37038f",
@@ -529,6 +809,76 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/cost/glitchtip/1-user/": {
+  "hash": "6650d6d36d3e8581",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/glitchtip/10-users/": {
+  "hash": "0baa9916aaa73c1c",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/glitchtip/100-users/": {
+  "hash": "b60a3886aef0d437",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/glitchtip/25-users/": {
+  "hash": "ed96299ac4c2f664",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/glitchtip/250-users/": {
+  "hash": "212df07f74c045db",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/glitchtip/5-users/": {
+  "hash": "f4ed0efe457690e1",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/glitchtip/50-users/": {
+  "hash": "df027623073f03c1",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/immich/1-user/": {
+  "hash": "6f0b8f236a384181",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/immich/10-users/": {
+  "hash": "ced5addb709951e5",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/immich/100-users/": {
+  "hash": "bd39f192065780fb",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/immich/25-users/": {
+  "hash": "cf9faa5a504b77fb",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/immich/250-users/": {
+  "hash": "f8cdffa316b68eab",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/immich/5-users/": {
+  "hash": "75ac9a18b4794829",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/immich/50-users/": {
+  "hash": "2d0189430a5482ba",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/cost/keycloak/1-user/": {
   "hash": "82b176a945885713",
   "modified": "2026-09-28",
@@ -634,6 +984,41 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/cost/listmonk/1-user/": {
+  "hash": "a2dd8d8d6b15f18e",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/listmonk/10-users/": {
+  "hash": "82ee9cce41a62f7e",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/listmonk/100-users/": {
+  "hash": "fc98ca95cc289d3f",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/listmonk/25-users/": {
+  "hash": "71bafa428c444c73",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/listmonk/250-users/": {
+  "hash": "c2d09e0366e2ece0",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/listmonk/5-users/": {
+  "hash": "07626980bb21bde7",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/listmonk/50-users/": {
+  "hash": "723324c2212ad6c7",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/cost/matomo/1-user/": {
   "hash": "560522db63ef62ad",
   "modified": "2026-09-28",
@@ -668,6 +1053,76 @@
   "hash": "621a136b4069f925",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/cost/mattermost/1-user/": {
+  "hash": "784dde4395964123",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/mattermost/10-users/": {
+  "hash": "4aeb09579e42365c",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/mattermost/100-users/": {
+  "hash": "e50223f8c17b673a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/mattermost/25-users/": {
+  "hash": "4921d868a54a3086",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/mattermost/250-users/": {
+  "hash": "9a264e6834cb9887",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/mattermost/5-users/": {
+  "hash": "c53ba3c33984a110",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/mattermost/50-users/": {
+  "hash": "9b512b16ba8983a4",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/mautic/1-user/": {
+  "hash": "47c2e1fedab27168",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/mautic/10-users/": {
+  "hash": "99fc66ef8c26c512",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/mautic/100-users/": {
+  "hash": "dae3e7895b6efed6",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/mautic/25-users/": {
+  "hash": "458e0cafb3567f49",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/mautic/250-users/": {
+  "hash": "fee6cbaa4bc8b25a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/mautic/5-users/": {
+  "hash": "c66dfd9e748f1cac",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/mautic/50-users/": {
+  "hash": "9fe4cc659cc20091",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/cost/metabase/1-user/": {
   "hash": "f1199dc5cfcdb8f2",
@@ -738,6 +1193,41 @@
   "hash": "f2b151983dea88b8",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/cost/nextcloud/1-user/": {
+  "hash": "349eb467d3517dcb",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/nextcloud/10-users/": {
+  "hash": "6e3c572e871fbfbf",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/nextcloud/100-users/": {
+  "hash": "296506c423728f80",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/nextcloud/25-users/": {
+  "hash": "d72f8f248994b92f",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/nextcloud/250-users/": {
+  "hash": "4a8922442f150a53",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/nextcloud/5-users/": {
+  "hash": "cac82b5471295829",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/nextcloud/50-users/": {
+  "hash": "c38f2d131222cfc6",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/cost/openproject/1-user/": {
   "hash": "cb937d55d5ab019d",
@@ -879,6 +1369,41 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/cost/photoprism/1-user/": {
+  "hash": "233e00c2a0024514",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/photoprism/10-users/": {
+  "hash": "6fcf125d582542d1",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/photoprism/100-users/": {
+  "hash": "d527a01b28fc3076",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/photoprism/25-users/": {
+  "hash": "96edd0d20c3ba00d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/photoprism/250-users/": {
+  "hash": "d56c88afca01ad3e",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/photoprism/5-users/": {
+  "hash": "d6ee86fa16617754",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/photoprism/50-users/": {
+  "hash": "b850479f5f6f599f",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/cost/plane/1-user/": {
   "hash": "7c939836f1ed9fe4",
   "modified": "2026-09-28",
@@ -984,6 +1509,146 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/cost/prometheus-grafana/10-hosts/": {
+  "hash": "1b7d0324a0661b37",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/prometheus-grafana/100-hosts/": {
+  "hash": "ad8d0fc5b2d86a9d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/prometheus-grafana/25-hosts/": {
+  "hash": "5f16893ae31e63d3",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/prometheus-grafana/250-hosts/": {
+  "hash": "6c9f1c930894cf7b",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/prometheus-grafana/5-hosts/": {
+  "hash": "7a344633d583bc50",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/prometheus-grafana/50-hosts/": {
+  "hash": "0bc8084c607fdda7",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/prometheus-grafana/500-hosts/": {
+  "hash": "ec81fa2b203b4cc0",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/rocketchat/1-user/": {
+  "hash": "1e704e1b9bf8a57b",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/rocketchat/10-users/": {
+  "hash": "ec5dc9c12d3193d1",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/rocketchat/100-users/": {
+  "hash": "8c29b354d384de33",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/rocketchat/25-users/": {
+  "hash": "085fccbe9c993855",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/rocketchat/250-users/": {
+  "hash": "c14f8f5ebcb60b49",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/rocketchat/5-users/": {
+  "hash": "71fb53162c093dbe",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/rocketchat/50-users/": {
+  "hash": "6325b8c5f9f19d5a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/seafile/1-user/": {
+  "hash": "e4f768d95e7d3c6c",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/seafile/10-users/": {
+  "hash": "4ab137de1d16fe8a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/seafile/100-users/": {
+  "hash": "56f61b37c5a2e7a7",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/seafile/25-users/": {
+  "hash": "c19a2498943e7b1a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/seafile/250-users/": {
+  "hash": "6874ee3fa8175773",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/seafile/5-users/": {
+  "hash": "946f2e11da66e2ca",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/seafile/50-users/": {
+  "hash": "2c1d3db10f74edd3",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/signoz/1-user/": {
+  "hash": "4b137a50a6982703",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/signoz/10-users/": {
+  "hash": "a14ccdeb95a6dad8",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/signoz/100-users/": {
+  "hash": "c95a6779ab47b075",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/signoz/25-users/": {
+  "hash": "d7df5fe8ade75f1d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/signoz/250-users/": {
+  "hash": "b53ea1865d231135",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/signoz/5-users/": {
+  "hash": "2b2b85b932e99ab8",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/signoz/50-users/": {
+  "hash": "c18caba880b4b502",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/cost/superset/1-user/": {
   "hash": "1591541faee7fc45",
   "modified": "2026-09-28",
@@ -1018,6 +1683,41 @@
   "hash": "8e5f12751495127c",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/cost/twenty/1-user/": {
+  "hash": "59d2e95479ba60c8",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/twenty/10-users/": {
+  "hash": "f6947a8914e9c2b6",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/twenty/100-users/": {
+  "hash": "b7f9d0cc7491c805",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/twenty/25-users/": {
+  "hash": "070607bf405f1c8e",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/twenty/250-users/": {
+  "hash": "1ba9ab16471642f2",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/twenty/5-users/": {
+  "hash": "def2fbb5a9169fb8",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/twenty/50-users/": {
+  "hash": "82ca326ca3fece41",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/cost/umami/1-user/": {
   "hash": "05f85c17f5894f40",
@@ -1194,6 +1894,41 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/cost/zabbix/10-hosts/": {
+  "hash": "097bf29a26fa8594",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/zabbix/100-hosts/": {
+  "hash": "047be5a2de9135e0",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/zabbix/25-hosts/": {
+  "hash": "480c5c4b51c3cbe9",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/zabbix/250-hosts/": {
+  "hash": "1fe9b0a4153bd25b",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/zabbix/5-hosts/": {
+  "hash": "2aa27a1c63624e55",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/zabbix/50-hosts/": {
+  "hash": "f7fbf110b791b4e4",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/zabbix/500-hosts/": {
+  "hash": "fb4c89e67cd22144",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/cost/zammad/1-user/": {
   "hash": "4a879b040c2e0697",
   "modified": "2026-09-28",
@@ -1264,14 +1999,49 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/cost/zulip/1-user/": {
+  "hash": "b892817cc272f465",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/zulip/10-users/": {
+  "hash": "b3b220efad026964",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/zulip/100-users/": {
+  "hash": "415ade4eb28c173c",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/zulip/25-users/": {
+  "hash": "64786d5a814c89eb",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/zulip/250-users/": {
+  "hash": "defcb8071470a76a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/zulip/5-users/": {
+  "hash": "b298f8b1b444ee49",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/cost/zulip/50-users/": {
+  "hash": "77a274f53dcd772a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/de/": {
-  "hash": "678a4e81bea966ee",
-  "modified": "2026-09-28",
+  "hash": "2577c5fc873c8a06",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/de/about/": {
-  "hash": "4d75185a5155d80b",
-  "modified": "2026-09-28",
+  "hash": "1e7db58083cbdc52",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/de/alternatives/1password/": {
@@ -1304,6 +2074,11 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/de/alternatives/calendly/": {
+  "hash": "3587f7ef84d0b191",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/de/alternatives/clerk/": {
   "hash": "1c4a9336f903baa5",
   "modified": "2026-09-28",
@@ -1313,6 +2088,21 @@
   "hash": "cda67edf794b5883",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/de/alternatives/datadog/": {
+  "hash": "05e288d36f4da3a7",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/alternatives/docusign/": {
+  "hash": "f8f98f7d69be231c",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/alternatives/dropbox/": {
+  "hash": "bfdba62f6c44373c",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/de/alternatives/fathom/": {
   "hash": "61a6aa1808a0567c",
@@ -1329,10 +2119,25 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/de/alternatives/google-photos/": {
+  "hash": "43d457938d4e4055",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/alternatives/google-workspace/": {
+  "hash": "7b791f1a3a933c1b",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/de/alternatives/helpscout/": {
   "hash": "2b1abae47a1a5398",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/de/alternatives/hubspot/": {
+  "hash": "8449ad85cf12ff73",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/de/alternatives/intercom/": {
   "hash": "c0890cbc7855700c",
@@ -1384,10 +2189,35 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/de/alternatives/pipedrive/": {
+  "hash": "341d1e998ced88fb",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/alternatives/prtg/": {
+  "hash": "88c6c5257774ce7f",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/de/alternatives/retool/": {
   "hash": "fce074dda5ec3769",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/de/alternatives/salesforce/": {
+  "hash": "a692a8c039f6f10a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/alternatives/sentry/": {
+  "hash": "51d56a79bbef854f",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/alternatives/slack/": {
+  "hash": "b4ac0b13dea0905d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/de/alternatives/statuspage/": {
   "hash": "7c2e57c704a70616",
@@ -1425,58 +2255,103 @@
   "published": "2026-09-14"
  },
  "/de/category/analytics/": {
-  "hash": "a5b0820276a09419",
-  "modified": "2026-09-28",
+  "hash": "ad605005c53a3f90",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/de/category/auth/": {
-  "hash": "952db749e3a2c10f",
-  "modified": "2026-09-28",
+  "hash": "dff65ec19690cce8",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/de/category/automation/": {
-  "hash": "87c8b99336c4da70",
-  "modified": "2026-09-28",
+  "hash": "44a0fe3e9f7405ed",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/de/category/bi/": {
-  "hash": "e5494b1a9b0f08ed",
-  "modified": "2026-09-28",
+  "hash": "54c70601d9f09d37",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
+ },
+ "/de/category/crm/": {
+  "hash": "5d4f86707f046816",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/de/category/docs-wiki/": {
-  "hash": "7c7ef957cadb9494",
-  "modified": "2026-09-28",
+  "hash": "f8e4b3fcd1b869ff",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
+ "/de/category/e-signature/": {
+  "hash": "3e86a3205e998232",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/category/email-marketing/": {
+  "hash": "dda93db285c50096",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/category/error-monitoring/": {
+  "hash": "45e5eb25db9285aa",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/category/file-storage/": {
+  "hash": "38f5db4826b3e887",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/de/category/forms/": {
-  "hash": "850c023d00a4629c",
-  "modified": "2026-09-28",
+  "hash": "3a05dcfc369ddd64",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/de/category/helpdesk/": {
-  "hash": "073feee5a30d0c8d",
-  "modified": "2026-09-28",
+  "hash": "eeb179b2a1e2ddd5",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
+ },
+ "/de/category/infra-monitoring/": {
+  "hash": "a1b6d22f732e2f7a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/de/category/password-manager/": {
-  "hash": "4687a94b8ba47f1a",
-  "modified": "2026-09-28",
+  "hash": "bb70efa2bee2c510",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
+ },
+ "/de/category/photos/": {
+  "hash": "4f40fdf9a6eb2f3e",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/de/category/project-management/": {
-  "hash": "5f53ccf2af82f776",
-  "modified": "2026-09-28",
+  "hash": "d0dd5e1e837d1bb2",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
+ },
+ "/de/category/scheduling/": {
+  "hash": "2b66b374fbc11230",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/de/category/status-page/": {
-  "hash": "5518ab7451d959d9",
-  "modified": "2026-09-28",
+  "hash": "915b695fe72a26a4",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
+ "/de/category/team-chat/": {
+  "hash": "4fd57a528995d63d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/de/compare/": {
-  "hash": "3ee0b8daa950013e",
-  "modified": "2026-09-28",
+  "hash": "6fd0840c68beed21",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/de/cost/activepieces/1-user/": {
@@ -1619,6 +2494,41 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/de/cost/cal-com/1-user/": {
+  "hash": "8f1237e71bba3c25",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/cal-com/10-users/": {
+  "hash": "0baf24e4a4ea6c81",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/cal-com/100-users/": {
+  "hash": "7157a9a814deef25",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/cal-com/25-users/": {
+  "hash": "d7ddd3d22c4d9f61",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/cal-com/250-users/": {
+  "hash": "200fe4fd648163ef",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/cal-com/5-users/": {
+  "hash": "84e675e729d238fc",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/cal-com/50-users/": {
+  "hash": "510e152d79de59cf",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/de/cost/chatwoot/1-user/": {
   "hash": "5de2335a076dee52",
   "modified": "2026-09-28",
@@ -1654,6 +2564,41 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/de/cost/checkmk/10-hosts/": {
+  "hash": "ea185b65e04d3479",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/checkmk/100-hosts/": {
+  "hash": "df0d763b1d0fdbe4",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/checkmk/25-hosts/": {
+  "hash": "48a51da0266b70fc",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/checkmk/250-hosts/": {
+  "hash": "5e664bf49cac2426",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/checkmk/5-hosts/": {
+  "hash": "fece1f2555bb4602",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/checkmk/50-hosts/": {
+  "hash": "a1f5ea0f5755113f",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/checkmk/500-hosts/": {
+  "hash": "cf499181c1de5b24",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/de/cost/docmost/1-user/": {
   "hash": "07546d6a998aa3e3",
   "modified": "2026-09-28",
@@ -1688,6 +2633,111 @@
   "hash": "c3e69beb93c1938c",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/de/cost/documenso/1-user/": {
+  "hash": "a379c760467dfc30",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/documenso/10-users/": {
+  "hash": "43ccc4bb7b7638a2",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/documenso/100-users/": {
+  "hash": "edf3fa2174cc4a60",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/documenso/25-users/": {
+  "hash": "f41c2855642d714e",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/documenso/250-users/": {
+  "hash": "bd5c92d01e62f2f8",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/documenso/5-users/": {
+  "hash": "1e3ee7eb0b73e5e9",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/documenso/50-users/": {
+  "hash": "d6ad2f60393ad3ba",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/docuseal/1-user/": {
+  "hash": "19fa8ed830845f77",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/docuseal/10-users/": {
+  "hash": "3e3e822a07fd035c",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/docuseal/100-users/": {
+  "hash": "854b3221efdaf2ee",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/docuseal/25-users/": {
+  "hash": "4b0fb1de5be6e0bb",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/docuseal/250-users/": {
+  "hash": "cace928ebc6270c2",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/docuseal/5-users/": {
+  "hash": "ac7d3553490c7e52",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/docuseal/50-users/": {
+  "hash": "77559d3eea823f99",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/espocrm/1-user/": {
+  "hash": "a3060ec543ec7e43",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/espocrm/10-users/": {
+  "hash": "a733798ce27d3480",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/espocrm/100-users/": {
+  "hash": "208f7945b0740d37",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/espocrm/25-users/": {
+  "hash": "f3b19bb7d0698385",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/espocrm/250-users/": {
+  "hash": "8798756c4c193acd",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/espocrm/5-users/": {
+  "hash": "cfc77c96d35d88c7",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/espocrm/50-users/": {
+  "hash": "5b08bf9e17ba9da0",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/de/cost/formbricks/1-user/": {
   "hash": "cee8e16d410b584c",
@@ -1794,6 +2844,76 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/de/cost/glitchtip/1-user/": {
+  "hash": "f50fbd93369af7eb",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/glitchtip/10-users/": {
+  "hash": "2c9df326a48b3baa",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/glitchtip/100-users/": {
+  "hash": "8e281e1995f2a055",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/glitchtip/25-users/": {
+  "hash": "75a34a7b4ccce43f",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/glitchtip/250-users/": {
+  "hash": "ddfeb85d0c8a752a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/glitchtip/5-users/": {
+  "hash": "9179e09823b6d54b",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/glitchtip/50-users/": {
+  "hash": "3976abfc91dfa347",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/immich/1-user/": {
+  "hash": "ef086b59252f0d26",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/immich/10-users/": {
+  "hash": "fcf21bf43a0f537a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/immich/100-users/": {
+  "hash": "b770fcd70b1d2c23",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/immich/25-users/": {
+  "hash": "23bf74fc8c363d62",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/immich/250-users/": {
+  "hash": "88df574c8e398220",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/immich/5-users/": {
+  "hash": "48a801fc50152d94",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/immich/50-users/": {
+  "hash": "81c4cf125e032d45",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/de/cost/keycloak/1-user/": {
   "hash": "85a20f880827adb4",
   "modified": "2026-09-28",
@@ -1899,6 +3019,41 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/de/cost/listmonk/1-user/": {
+  "hash": "5d5656bdc1d52510",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/listmonk/10-users/": {
+  "hash": "65acae3ee724dc30",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/listmonk/100-users/": {
+  "hash": "fd4ccfe76783a558",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/listmonk/25-users/": {
+  "hash": "c68d510319cc4c8d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/listmonk/250-users/": {
+  "hash": "4b3e8d8dfd25b60c",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/listmonk/5-users/": {
+  "hash": "914da73aa3a73eaf",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/listmonk/50-users/": {
+  "hash": "09ee6758186f65e8",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/de/cost/matomo/1-user/": {
   "hash": "4d537de17a0e8c34",
   "modified": "2026-09-28",
@@ -1933,6 +3088,76 @@
   "hash": "39f21b869f84cce1",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/de/cost/mattermost/1-user/": {
+  "hash": "cacaaf62137d906e",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/mattermost/10-users/": {
+  "hash": "3e40691d3e16c4f7",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/mattermost/100-users/": {
+  "hash": "3c9e595e3d7d2040",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/mattermost/25-users/": {
+  "hash": "3e7d203b7fa6c423",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/mattermost/250-users/": {
+  "hash": "6719a1ac7b1deeb4",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/mattermost/5-users/": {
+  "hash": "b7a678f32475fb93",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/mattermost/50-users/": {
+  "hash": "78cdce54169abbe9",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/mautic/1-user/": {
+  "hash": "2a182b278da6db6f",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/mautic/10-users/": {
+  "hash": "5f176d33eb2bdcc7",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/mautic/100-users/": {
+  "hash": "afdb381a7e056051",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/mautic/25-users/": {
+  "hash": "b1bfb2756f11ab15",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/mautic/250-users/": {
+  "hash": "9cc63ad60c99ba75",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/mautic/5-users/": {
+  "hash": "3458946b2856024c",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/mautic/50-users/": {
+  "hash": "47ae3c7d41cebff8",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/de/cost/metabase/1-user/": {
   "hash": "9e658d2b4207492b",
@@ -2003,6 +3228,41 @@
   "hash": "2341cc9f18499ee9",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/de/cost/nextcloud/1-user/": {
+  "hash": "dd8b9598cd850856",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/nextcloud/10-users/": {
+  "hash": "0cef8096768408c5",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/nextcloud/100-users/": {
+  "hash": "36b07f628049cb36",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/nextcloud/25-users/": {
+  "hash": "e47d4038c24059ef",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/nextcloud/250-users/": {
+  "hash": "6caabc0dd082925b",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/nextcloud/5-users/": {
+  "hash": "74b1f43c4872a922",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/nextcloud/50-users/": {
+  "hash": "4374bb8bc491a716",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/de/cost/openproject/1-user/": {
   "hash": "f7db3412e159b103",
@@ -2144,6 +3404,41 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/de/cost/photoprism/1-user/": {
+  "hash": "8b103cb7c4069f25",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/photoprism/10-users/": {
+  "hash": "b0b69036e2675923",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/photoprism/100-users/": {
+  "hash": "b84f059a385808c2",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/photoprism/25-users/": {
+  "hash": "78d413d59a3f8e69",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/photoprism/250-users/": {
+  "hash": "cbd28546cc4fb910",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/photoprism/5-users/": {
+  "hash": "f13be11801cfa551",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/photoprism/50-users/": {
+  "hash": "487ca995df28873b",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/de/cost/plane/1-user/": {
   "hash": "863361be19686c96",
   "modified": "2026-09-28",
@@ -2249,6 +3544,146 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/de/cost/prometheus-grafana/10-hosts/": {
+  "hash": "688a73238984f9c1",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/prometheus-grafana/100-hosts/": {
+  "hash": "92746c54bd6e43f0",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/prometheus-grafana/25-hosts/": {
+  "hash": "295fa065e811e8e2",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/prometheus-grafana/250-hosts/": {
+  "hash": "062f3b754fcf81ac",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/prometheus-grafana/5-hosts/": {
+  "hash": "0e0af57e9f6d6d36",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/prometheus-grafana/50-hosts/": {
+  "hash": "34e1bdfea04799aa",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/prometheus-grafana/500-hosts/": {
+  "hash": "c23c28fd0f8f6cf2",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/rocketchat/1-user/": {
+  "hash": "55b63f500b15033c",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/rocketchat/10-users/": {
+  "hash": "05f3a27d702984e2",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/rocketchat/100-users/": {
+  "hash": "31b5c8170dd95a83",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/rocketchat/25-users/": {
+  "hash": "f16ca6dcd5b0c91f",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/rocketchat/250-users/": {
+  "hash": "14902ca46baa0b6b",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/rocketchat/5-users/": {
+  "hash": "f3633247f140beed",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/rocketchat/50-users/": {
+  "hash": "425bc4082e63d808",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/seafile/1-user/": {
+  "hash": "8765b8378395f411",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/seafile/10-users/": {
+  "hash": "1e7ae4b0b6249d7a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/seafile/100-users/": {
+  "hash": "53ae10ffcfe50fd8",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/seafile/25-users/": {
+  "hash": "9a2831d763a0dc62",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/seafile/250-users/": {
+  "hash": "3b541623733b0907",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/seafile/5-users/": {
+  "hash": "4c7ed6b259346c88",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/seafile/50-users/": {
+  "hash": "4b3dbba6d8bc63ee",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/signoz/1-user/": {
+  "hash": "306404823791e7f7",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/signoz/10-users/": {
+  "hash": "3b0bb7c35ff2682f",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/signoz/100-users/": {
+  "hash": "dbe94fe7642b36fa",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/signoz/25-users/": {
+  "hash": "4cdc752348d00f57",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/signoz/250-users/": {
+  "hash": "5806b3813981cf15",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/signoz/5-users/": {
+  "hash": "cd8a8afe04f30631",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/signoz/50-users/": {
+  "hash": "6d8e64fefd09859c",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/de/cost/superset/1-user/": {
   "hash": "e11d424185a9cd99",
   "modified": "2026-09-28",
@@ -2283,6 +3718,41 @@
   "hash": "64930269e715c91a",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/de/cost/twenty/1-user/": {
+  "hash": "4474caaa30551efd",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/twenty/10-users/": {
+  "hash": "0223d6f4343d7c63",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/twenty/100-users/": {
+  "hash": "2627b31fcbe1cd55",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/twenty/25-users/": {
+  "hash": "1676373781b347f3",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/twenty/250-users/": {
+  "hash": "24b28f972d89a31a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/twenty/5-users/": {
+  "hash": "a5617a466a999cc6",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/twenty/50-users/": {
+  "hash": "17fa407e095fe279",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/de/cost/umami/1-user/": {
   "hash": "cf475ecc4061ae9f",
@@ -2459,6 +3929,41 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/de/cost/zabbix/10-hosts/": {
+  "hash": "aea99ab64cfdfeea",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/zabbix/100-hosts/": {
+  "hash": "34fa2b69bc0a1685",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/zabbix/25-hosts/": {
+  "hash": "1b04b0bff7bed5db",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/zabbix/250-hosts/": {
+  "hash": "e902a09aea2daf98",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/zabbix/5-hosts/": {
+  "hash": "4ee379bfb6c1b3aa",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/zabbix/50-hosts/": {
+  "hash": "6e8bc31a1e0eec88",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/zabbix/500-hosts/": {
+  "hash": "dfc07dfd19d9374f",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/de/cost/zammad/1-user/": {
   "hash": "65ea27ee7367796a",
   "modified": "2026-09-28",
@@ -2529,6 +4034,41 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/de/cost/zulip/1-user/": {
+  "hash": "fb4cdb5b21dec515",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/zulip/10-users/": {
+  "hash": "c5d0bb5baa6c6b8c",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/zulip/100-users/": {
+  "hash": "7cc751ee742d68a5",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/zulip/25-users/": {
+  "hash": "24cb5370efb367e7",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/zulip/250-users/": {
+  "hash": "78c99f6e8de7f5be",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/zulip/5-users/": {
+  "hash": "67eca5ea0cb0db0a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/cost/zulip/50-users/": {
+  "hash": "875d532d73ee665a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/de/disclosure/": {
   "hash": "9ee79d341eb117bb",
   "modified": "2026-09-28",
@@ -2540,8 +4080,8 @@
   "published": "2026-09-14"
  },
  "/de/hosting/digitalocean/": {
-  "hash": "3aa7feac014f7d6e",
-  "modified": "2026-09-28",
+  "hash": "131233f7785f6fd0",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/de/hosting/hetzner/": {
@@ -2550,8 +4090,8 @@
   "published": "2026-09-14"
  },
  "/de/hosting/kamatera/": {
-  "hash": "2b582d904586c70a",
-  "modified": "2026-09-28",
+  "hash": "1a4263aa0b339075",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/de/hosting/pikapods/": {
@@ -2560,8 +4100,8 @@
   "published": "2026-09-14"
  },
  "/de/hosting/vpsserver/": {
-  "hash": "de44c7148f33d891",
-  "modified": "2026-09-28",
+  "hash": "993889670eef9fb9",
+  "modified": "2026-10-09",
   "published": "2026-09-21"
  },
  "/de/hosting/vultr/": {
@@ -2570,7 +4110,7 @@
   "published": "2026-09-14"
  },
  "/de/methodology/": {
-  "hash": "6c35951c0ca93b55",
+  "hash": "9c825830c2904664",
   "modified": "2026-10-09",
   "published": "2026-09-14"
  },
@@ -2585,8 +4125,8 @@
   "published": "2026-09-14"
  },
  "/de/self-host/": {
-  "hash": "9b31219e4da57a27",
-  "modified": "2026-09-28",
+  "hash": "288f3716fea3f334",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/de/self-host/activepieces/": {
@@ -2609,15 +4149,40 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/de/self-host/cal-com/": {
+  "hash": "ee11138327191542",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/de/self-host/chatwoot/": {
   "hash": "e5df490e857a8ce5",
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/de/self-host/checkmk/": {
+  "hash": "91b1fb01240205d7",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/de/self-host/docmost/": {
   "hash": "cde0bdeef85d1ba9",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/de/self-host/documenso/": {
+  "hash": "cac91685e30c1069",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/self-host/docuseal/": {
+  "hash": "02be34eb6f49c238",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/self-host/espocrm/": {
+  "hash": "09eea254daf489bd",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/de/self-host/formbricks/": {
   "hash": "4877d5c05932a430",
@@ -2634,6 +4199,16 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/de/self-host/glitchtip/": {
+  "hash": "b71792df43cbbca8",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/self-host/immich/": {
+  "hash": "331b01d7d1408d5d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/de/self-host/keycloak/": {
   "hash": "59e8001410aea2eb",
   "modified": "2026-09-28",
@@ -2649,10 +4224,25 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/de/self-host/listmonk/": {
+  "hash": "30f784a5e683e3b9",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/de/self-host/matomo/": {
   "hash": "1d9b610be9a9baa9",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/de/self-host/mattermost/": {
+  "hash": "7627a57ee8c13f2c",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/self-host/mautic/": {
+  "hash": "d4ac0e2218f18a14",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/de/self-host/metabase/": {
   "hash": "27664766a8caf115",
@@ -2663,6 +4253,11 @@
   "hash": "46f43a9baf807ac9",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/de/self-host/nextcloud/": {
+  "hash": "88addc117c8810c7",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/de/self-host/openproject/": {
   "hash": "9889502a6804c365",
@@ -2684,6 +4279,11 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/de/self-host/photoprism/": {
+  "hash": "420cbc5af7975315",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/de/self-host/plane/": {
   "hash": "6c55f10dbc879353",
   "modified": "2026-09-28",
@@ -2699,10 +4299,35 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/de/self-host/prometheus-grafana/": {
+  "hash": "903bc43cbfab6fcc",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/self-host/rocketchat/": {
+  "hash": "c34968a5617ed71d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/self-host/seafile/": {
+  "hash": "ed65491cca4b74e7",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/self-host/signoz/": {
+  "hash": "aad3a28ddb8289b7",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/de/self-host/superset/": {
   "hash": "773c945e0255afb0",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/de/self-host/twenty/": {
+  "hash": "90e253080531790b",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/de/self-host/umami/": {
   "hash": "c0fb1ad8e41430fa",
@@ -2729,6 +4354,11 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/de/self-host/zabbix/": {
+  "hash": "5a107fbdb62ca702",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/de/self-host/zammad/": {
   "hash": "8e89d2544eec038d",
   "modified": "2026-09-28",
@@ -2738,6 +4368,11 @@
   "hash": "30cd52c26b368e1c",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/de/self-host/zulip/": {
+  "hash": "0e966dd973ece6c8",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/de/vs/1password-vs-passbolt/": {
   "hash": "47a818778afc77f5",
@@ -2789,6 +4424,11 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/de/vs/calendly-vs-cal-com/": {
+  "hash": "a0966f4ac26b87ad",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/de/vs/clerk-vs-authentik/": {
   "hash": "0861a6e54ee04235",
   "modified": "2026-09-28",
@@ -2818,6 +4458,46 @@
   "hash": "3841b2d3c410de01",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/de/vs/datadog-vs-checkmk/": {
+  "hash": "c63c6a102b3475a4",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/vs/datadog-vs-prometheus-grafana/": {
+  "hash": "1ef451c27959e09e",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/vs/datadog-vs-zabbix/": {
+  "hash": "ba37840449e760b2",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/vs/docusign-vs-documenso/": {
+  "hash": "1ed2e2b889beb4c0",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/vs/docusign-vs-docuseal/": {
+  "hash": "bf2c7fac27273521",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/vs/dropbox-vs-immich/": {
+  "hash": "21df19990222dff8",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/vs/dropbox-vs-nextcloud/": {
+  "hash": "ce8c637e06ad772d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/vs/dropbox-vs-seafile/": {
+  "hash": "1fa079fa64dd6f22",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/de/vs/fathom-vs-plausible/": {
   "hash": "9da8841a0d2c6c58",
@@ -2864,10 +4544,35 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/de/vs/google-photos-vs-immich/": {
+  "hash": "e3800ee6b30d28f0",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/vs/google-photos-vs-photoprism/": {
+  "hash": "c299378f81acb83e",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/vs/google-workspace-vs-nextcloud/": {
+  "hash": "a86b9768c31b200e",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/de/vs/helpscout-vs-freescout/": {
   "hash": "48511374169714d9",
   "modified": "2026-10-09",
   "published": "2026-09-14"
+ },
+ "/de/vs/hubspot-vs-espocrm/": {
+  "hash": "2baa99da690c3857",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/vs/hubspot-vs-twenty/": {
+  "hash": "d220567be5d4bb98",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/de/vs/intercom-vs-chatwoot/": {
   "hash": "ec93ded806fff705",
@@ -2979,10 +4684,65 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/de/vs/pipedrive-vs-espocrm/": {
+  "hash": "45756e0f16abe8c3",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/vs/pipedrive-vs-twenty/": {
+  "hash": "5dfc747747bb155b",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/vs/prtg-vs-checkmk/": {
+  "hash": "7d61636bc8c3dc92",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/vs/prtg-vs-zabbix/": {
+  "hash": "e4a84fee5eb82da6",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/de/vs/retool-vs-windmill/": {
   "hash": "c3ff791ebe6b79ec",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/de/vs/salesforce-vs-espocrm/": {
+  "hash": "9a348a9c6be88830",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/vs/salesforce-vs-twenty/": {
+  "hash": "8a89aa27c8ba918d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/vs/sentry-vs-glitchtip/": {
+  "hash": "59f32fd01753a8b0",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/vs/sentry-vs-signoz/": {
+  "hash": "4ec2c784cdd4e82c",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/vs/slack-vs-mattermost/": {
+  "hash": "509bca46adaf8b8a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/vs/slack-vs-rocketchat/": {
+  "hash": "e2cc64be4f75e73a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/de/vs/slack-vs-zulip/": {
+  "hash": "a44ebc562e00579b",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/de/vs/statuspage-vs-gatus/": {
   "hash": "2728158156a0c05a",
@@ -3070,13 +4830,13 @@
   "published": "2026-09-14"
  },
  "/es/": {
-  "hash": "a16378324e841c53",
-  "modified": "2026-09-28",
+  "hash": "c73c247b55c1e7c9",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/es/about/": {
-  "hash": "42affe061f7a24ee",
-  "modified": "2026-09-28",
+  "hash": "5ef9406f5ab5e352",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/es/alternatives/1password/": {
@@ -3109,6 +4869,11 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/es/alternatives/calendly/": {
+  "hash": "1b559c57a5f4967a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/es/alternatives/clerk/": {
   "hash": "3bfdffd671b7c250",
   "modified": "2026-09-28",
@@ -3118,6 +4883,21 @@
   "hash": "02c9d680a86dea60",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/es/alternatives/datadog/": {
+  "hash": "de0c1c2afa9b9e52",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/alternatives/docusign/": {
+  "hash": "5a25193fb4435f14",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/alternatives/dropbox/": {
+  "hash": "eddf508ebf51dbec",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/es/alternatives/fathom/": {
   "hash": "65a509196b30b6f9",
@@ -3134,10 +4914,25 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/es/alternatives/google-photos/": {
+  "hash": "2c93d1765e90cbf3",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/alternatives/google-workspace/": {
+  "hash": "b389802930ee8d6c",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/es/alternatives/helpscout/": {
   "hash": "befec2dd5f4ab13e",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/es/alternatives/hubspot/": {
+  "hash": "13da87f8807b79f9",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/es/alternatives/intercom/": {
   "hash": "bcded954d8eff3d5",
@@ -3189,10 +4984,35 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/es/alternatives/pipedrive/": {
+  "hash": "ad53ea6f43627b31",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/alternatives/prtg/": {
+  "hash": "2fa9a9bdff28cefa",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/es/alternatives/retool/": {
   "hash": "30c45f526b6049e1",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/es/alternatives/salesforce/": {
+  "hash": "bbadf47ba65fa777",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/alternatives/sentry/": {
+  "hash": "cd3bd00efd4057e6",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/alternatives/slack/": {
+  "hash": "04521fb2be08f120",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/es/alternatives/statuspage/": {
   "hash": "ccc566e1b81e6679",
@@ -3230,58 +5050,103 @@
   "published": "2026-09-14"
  },
  "/es/category/analytics/": {
-  "hash": "6b5b3ee9f6eeea50",
-  "modified": "2026-09-28",
+  "hash": "9fded42503b47ea8",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/es/category/auth/": {
-  "hash": "618ed4cb5eee54f6",
-  "modified": "2026-09-28",
+  "hash": "26ce27a0bf749fa4",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/es/category/automation/": {
-  "hash": "e41d4d2ccbd46a0d",
-  "modified": "2026-09-28",
+  "hash": "cf84498804c77b94",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/es/category/bi/": {
-  "hash": "6937b5dcad58ac35",
-  "modified": "2026-09-28",
+  "hash": "581f50a8e4640d5e",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
+ },
+ "/es/category/crm/": {
+  "hash": "f2e269cd7de26254",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/es/category/docs-wiki/": {
-  "hash": "e55522ac0a95f4d8",
-  "modified": "2026-09-28",
+  "hash": "53a71345a17b151b",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
+ "/es/category/e-signature/": {
+  "hash": "53d3c9a35eea6c68",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/category/email-marketing/": {
+  "hash": "d750003e150a869c",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/category/error-monitoring/": {
+  "hash": "ba13e4c9fefe9352",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/category/file-storage/": {
+  "hash": "c8976945e475ca38",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/es/category/forms/": {
-  "hash": "d3cf1cdc19d71721",
-  "modified": "2026-09-28",
+  "hash": "313326177ea33946",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/es/category/helpdesk/": {
-  "hash": "0b2bc95f348477ae",
-  "modified": "2026-09-28",
+  "hash": "9476c0972539efe9",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
+ },
+ "/es/category/infra-monitoring/": {
+  "hash": "1eda6e582235ce5d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/es/category/password-manager/": {
-  "hash": "ceb5799b52e6a4dd",
-  "modified": "2026-09-28",
+  "hash": "8dfa0542eac05992",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
+ },
+ "/es/category/photos/": {
+  "hash": "cb5d0049cae9756b",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/es/category/project-management/": {
-  "hash": "fe6807e81a8563c5",
-  "modified": "2026-09-28",
+  "hash": "e450d7701c301756",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
+ },
+ "/es/category/scheduling/": {
+  "hash": "20b1533e064ae298",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/es/category/status-page/": {
-  "hash": "a6cf4820bfe8bc82",
-  "modified": "2026-09-28",
+  "hash": "74922767d2a616bb",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
+ "/es/category/team-chat/": {
+  "hash": "2e2d65e4edc7d847",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/es/compare/": {
-  "hash": "1fe0fb2cf77bd841",
-  "modified": "2026-09-28",
+  "hash": "3f6652efc0400b28",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/es/cost/activepieces/1-user/": {
@@ -3424,6 +5289,41 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/es/cost/cal-com/1-user/": {
+  "hash": "aa4c6edbb3b07f31",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/cal-com/10-users/": {
+  "hash": "bb15406c7c321ac8",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/cal-com/100-users/": {
+  "hash": "8000a46a4013f677",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/cal-com/25-users/": {
+  "hash": "b2428e8a49c34580",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/cal-com/250-users/": {
+  "hash": "cb1af9b0bfeeb579",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/cal-com/5-users/": {
+  "hash": "10080dac0aded413",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/cal-com/50-users/": {
+  "hash": "c66b5c42dab4e8aa",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/es/cost/chatwoot/1-user/": {
   "hash": "f3d304a809d17c64",
   "modified": "2026-09-28",
@@ -3459,6 +5359,41 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/es/cost/checkmk/10-hosts/": {
+  "hash": "e613d3a6bb65e3fd",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/checkmk/100-hosts/": {
+  "hash": "32b3bbbdaa3230c1",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/checkmk/25-hosts/": {
+  "hash": "05ab46370e1ec227",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/checkmk/250-hosts/": {
+  "hash": "7b75b4308afcbb28",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/checkmk/5-hosts/": {
+  "hash": "8560a632ff55d1e2",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/checkmk/50-hosts/": {
+  "hash": "3f2937ac4bf91b22",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/checkmk/500-hosts/": {
+  "hash": "5635740711b3420d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/es/cost/docmost/1-user/": {
   "hash": "4060cc09225aa65a",
   "modified": "2026-09-28",
@@ -3493,6 +5428,111 @@
   "hash": "b9be4d15018be536",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/es/cost/documenso/1-user/": {
+  "hash": "9d8e86236a13ec91",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/documenso/10-users/": {
+  "hash": "26c3e46fd9a55260",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/documenso/100-users/": {
+  "hash": "3b86098a087ec695",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/documenso/25-users/": {
+  "hash": "7b9ddc8bde2a1d8f",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/documenso/250-users/": {
+  "hash": "3257b91f688e7272",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/documenso/5-users/": {
+  "hash": "e341b9310aaab40d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/documenso/50-users/": {
+  "hash": "ae32b5aede730dea",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/docuseal/1-user/": {
+  "hash": "d884e47a064f322d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/docuseal/10-users/": {
+  "hash": "84b79dc88b2b40a3",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/docuseal/100-users/": {
+  "hash": "b4126b17f32992ea",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/docuseal/25-users/": {
+  "hash": "235911dc97fab663",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/docuseal/250-users/": {
+  "hash": "a6585b9e4a6e71b9",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/docuseal/5-users/": {
+  "hash": "7ec747d9fce59bf9",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/docuseal/50-users/": {
+  "hash": "f72c103d13698612",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/espocrm/1-user/": {
+  "hash": "d02bce61b46e38a6",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/espocrm/10-users/": {
+  "hash": "0476943d5612551c",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/espocrm/100-users/": {
+  "hash": "6daaed765a30cc5f",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/espocrm/25-users/": {
+  "hash": "975f292559264572",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/espocrm/250-users/": {
+  "hash": "6e788a708b7d9335",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/espocrm/5-users/": {
+  "hash": "8febd4ea433b4c28",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/espocrm/50-users/": {
+  "hash": "d5965c2e326977bc",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/es/cost/formbricks/1-user/": {
   "hash": "ce24834bf6e9fb8e",
@@ -3599,6 +5639,76 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/es/cost/glitchtip/1-user/": {
+  "hash": "f87ee248a1ae2b27",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/glitchtip/10-users/": {
+  "hash": "283208214167d6b3",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/glitchtip/100-users/": {
+  "hash": "368bd124e361cefa",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/glitchtip/25-users/": {
+  "hash": "8b9425818c3b2553",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/glitchtip/250-users/": {
+  "hash": "8d129e923d676965",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/glitchtip/5-users/": {
+  "hash": "b72c749509c578c0",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/glitchtip/50-users/": {
+  "hash": "d164c7bd3740a634",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/immich/1-user/": {
+  "hash": "2a7720bb3db28cf7",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/immich/10-users/": {
+  "hash": "e57a9e02ba5a1523",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/immich/100-users/": {
+  "hash": "d90beef1e01af10d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/immich/25-users/": {
+  "hash": "35a6720b15ee6360",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/immich/250-users/": {
+  "hash": "9bcb60c8619f423b",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/immich/5-users/": {
+  "hash": "4db68dc554de2d7a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/immich/50-users/": {
+  "hash": "b68e4ccfd1e7377b",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/es/cost/keycloak/1-user/": {
   "hash": "bbb11d7f8f6a3cbe",
   "modified": "2026-09-28",
@@ -3704,6 +5814,41 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/es/cost/listmonk/1-user/": {
+  "hash": "78963b2a736b38be",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/listmonk/10-users/": {
+  "hash": "37836d4224a5677d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/listmonk/100-users/": {
+  "hash": "95689d25d1d1a1a1",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/listmonk/25-users/": {
+  "hash": "58cbb550021ed1ad",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/listmonk/250-users/": {
+  "hash": "3e769db09ed39131",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/listmonk/5-users/": {
+  "hash": "9b3a39ee5d32e9b6",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/listmonk/50-users/": {
+  "hash": "765f4d8c299dea6f",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/es/cost/matomo/1-user/": {
   "hash": "44a25b709525b493",
   "modified": "2026-09-28",
@@ -3738,6 +5883,76 @@
   "hash": "7f3234db1a07b556",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/es/cost/mattermost/1-user/": {
+  "hash": "9e0e0ac6558f6c6c",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/mattermost/10-users/": {
+  "hash": "25856fc2ebf8f057",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/mattermost/100-users/": {
+  "hash": "905af55524274419",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/mattermost/25-users/": {
+  "hash": "4ad9c6e468c88c03",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/mattermost/250-users/": {
+  "hash": "855a9c49dffa59f5",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/mattermost/5-users/": {
+  "hash": "599b10efb288229a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/mattermost/50-users/": {
+  "hash": "40fde2a0a3eca023",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/mautic/1-user/": {
+  "hash": "916b6e8331e60bbd",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/mautic/10-users/": {
+  "hash": "d23e505edf6f02ac",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/mautic/100-users/": {
+  "hash": "0a6c32ae0067ea2d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/mautic/25-users/": {
+  "hash": "6f8baf3041ff615f",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/mautic/250-users/": {
+  "hash": "f282670bf62b9129",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/mautic/5-users/": {
+  "hash": "85ab5a0737cd2705",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/mautic/50-users/": {
+  "hash": "10d51e16c1b49886",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/es/cost/metabase/1-user/": {
   "hash": "3892c589c5de3000",
@@ -3808,6 +6023,41 @@
   "hash": "458dffb73cc48ece",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/es/cost/nextcloud/1-user/": {
+  "hash": "55917256db1b594d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/nextcloud/10-users/": {
+  "hash": "56f7ea8d7b36b886",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/nextcloud/100-users/": {
+  "hash": "ec67038d2af09202",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/nextcloud/25-users/": {
+  "hash": "884cf3c3591976c6",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/nextcloud/250-users/": {
+  "hash": "e448494eee2ddc8b",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/nextcloud/5-users/": {
+  "hash": "15b43ef793ca63a0",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/nextcloud/50-users/": {
+  "hash": "19785205014a28f0",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/es/cost/openproject/1-user/": {
   "hash": "6979a3330bfd34c1",
@@ -3949,6 +6199,41 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/es/cost/photoprism/1-user/": {
+  "hash": "c51d981866554ee8",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/photoprism/10-users/": {
+  "hash": "3a3081d0d359756d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/photoprism/100-users/": {
+  "hash": "dc2d57ae348b85b1",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/photoprism/25-users/": {
+  "hash": "f90dfb3ed6da43ef",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/photoprism/250-users/": {
+  "hash": "8629530577ce751f",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/photoprism/5-users/": {
+  "hash": "c41e07a135692618",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/photoprism/50-users/": {
+  "hash": "8b208eeadb101bb9",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/es/cost/plane/1-user/": {
   "hash": "436fb836319e4e4a",
   "modified": "2026-09-28",
@@ -4054,6 +6339,146 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/es/cost/prometheus-grafana/10-hosts/": {
+  "hash": "7486ff5ae4a322dc",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/prometheus-grafana/100-hosts/": {
+  "hash": "84cde0b01d682124",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/prometheus-grafana/25-hosts/": {
+  "hash": "e2fe7ef8e61292f5",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/prometheus-grafana/250-hosts/": {
+  "hash": "aa1737872053571d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/prometheus-grafana/5-hosts/": {
+  "hash": "3750c959ed6dc1da",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/prometheus-grafana/50-hosts/": {
+  "hash": "5223899eef76c4cc",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/prometheus-grafana/500-hosts/": {
+  "hash": "27fbb96564b5d0b3",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/rocketchat/1-user/": {
+  "hash": "c576998f795423b8",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/rocketchat/10-users/": {
+  "hash": "fcaa36868e02cf04",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/rocketchat/100-users/": {
+  "hash": "58278683fabbe7a4",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/rocketchat/25-users/": {
+  "hash": "e4ac1b3d7cb8ef88",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/rocketchat/250-users/": {
+  "hash": "f12694846ee620fb",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/rocketchat/5-users/": {
+  "hash": "8acbbb3a8521289f",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/rocketchat/50-users/": {
+  "hash": "b1d47afb834a7777",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/seafile/1-user/": {
+  "hash": "fd88a694bcbf5b76",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/seafile/10-users/": {
+  "hash": "3808180930246846",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/seafile/100-users/": {
+  "hash": "4acb58d18e39b28a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/seafile/25-users/": {
+  "hash": "e7741e97f56ca995",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/seafile/250-users/": {
+  "hash": "7947ec8440278103",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/seafile/5-users/": {
+  "hash": "afc47387de03501f",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/seafile/50-users/": {
+  "hash": "2bc49f314601bc6d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/signoz/1-user/": {
+  "hash": "a4161fe4a481f18e",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/signoz/10-users/": {
+  "hash": "e33bbfadc897c1b8",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/signoz/100-users/": {
+  "hash": "d20f1178706b4b49",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/signoz/25-users/": {
+  "hash": "8d9a57f0efe8cf03",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/signoz/250-users/": {
+  "hash": "047ce66d62ecb78b",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/signoz/5-users/": {
+  "hash": "7514f6f4f0521c17",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/signoz/50-users/": {
+  "hash": "b83d11182a8fb742",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/es/cost/superset/1-user/": {
   "hash": "ecac18c0630425e3",
   "modified": "2026-09-28",
@@ -4088,6 +6513,41 @@
   "hash": "96e2af0c47b6f02d",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/es/cost/twenty/1-user/": {
+  "hash": "00b1fbd8c1aebf39",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/twenty/10-users/": {
+  "hash": "b1ea6a116a1567fe",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/twenty/100-users/": {
+  "hash": "74febbd66f9a81c4",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/twenty/25-users/": {
+  "hash": "d672146f3e03f56c",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/twenty/250-users/": {
+  "hash": "a37cfae51ac3a0ab",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/twenty/5-users/": {
+  "hash": "b00f51983f4a479a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/twenty/50-users/": {
+  "hash": "7840eeab33c56432",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/es/cost/umami/1-user/": {
   "hash": "d5b492779f61713d",
@@ -4264,6 +6724,41 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/es/cost/zabbix/10-hosts/": {
+  "hash": "cead350bfe190529",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/zabbix/100-hosts/": {
+  "hash": "595b49b2b09b01f8",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/zabbix/25-hosts/": {
+  "hash": "4a2e4dcc4c9d492a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/zabbix/250-hosts/": {
+  "hash": "748b40cb19b3ff18",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/zabbix/5-hosts/": {
+  "hash": "a4937e66c2004da9",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/zabbix/50-hosts/": {
+  "hash": "df9299244ad977ac",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/zabbix/500-hosts/": {
+  "hash": "9b93fbcef110c6a1",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/es/cost/zammad/1-user/": {
   "hash": "84ebc03616b00ea9",
   "modified": "2026-09-28",
@@ -4334,6 +6829,41 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/es/cost/zulip/1-user/": {
+  "hash": "67ae2d284e1339d2",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/zulip/10-users/": {
+  "hash": "7b5988c06f676655",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/zulip/100-users/": {
+  "hash": "59f60d03afad43d1",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/zulip/25-users/": {
+  "hash": "7534406887b46799",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/zulip/250-users/": {
+  "hash": "ab7d3fcf0e18ef48",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/zulip/5-users/": {
+  "hash": "22df2cdf3cfa7622",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/cost/zulip/50-users/": {
+  "hash": "69e3cff16cc7a607",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/es/disclosure/": {
   "hash": "ab4571f0f1993800",
   "modified": "2026-09-28",
@@ -4345,8 +6875,8 @@
   "published": "2026-09-14"
  },
  "/es/hosting/digitalocean/": {
-  "hash": "974e1a55dce150bc",
-  "modified": "2026-09-28",
+  "hash": "accc7c11eebcdffb",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/es/hosting/hetzner/": {
@@ -4355,8 +6885,8 @@
   "published": "2026-09-14"
  },
  "/es/hosting/kamatera/": {
-  "hash": "05d13f270628a02f",
-  "modified": "2026-09-28",
+  "hash": "38a3bf7170bc910e",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/es/hosting/pikapods/": {
@@ -4365,8 +6895,8 @@
   "published": "2026-09-14"
  },
  "/es/hosting/vpsserver/": {
-  "hash": "18ec45373026f629",
-  "modified": "2026-09-28",
+  "hash": "e4df9c5244f9255b",
+  "modified": "2026-10-09",
   "published": "2026-09-21"
  },
  "/es/hosting/vultr/": {
@@ -4375,7 +6905,7 @@
   "published": "2026-09-14"
  },
  "/es/methodology/": {
-  "hash": "1f0498e6dfeba614",
+  "hash": "ccfa272a45cac79a",
   "modified": "2026-10-09",
   "published": "2026-09-14"
  },
@@ -4390,8 +6920,8 @@
   "published": "2026-09-14"
  },
  "/es/self-host/": {
-  "hash": "a69c323745b3548d",
-  "modified": "2026-09-28",
+  "hash": "d34cf3c1a751bb76",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/es/self-host/activepieces/": {
@@ -4414,15 +6944,40 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/es/self-host/cal-com/": {
+  "hash": "2ff9505fecc34d2a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/es/self-host/chatwoot/": {
   "hash": "a7316a9d1ec1278e",
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/es/self-host/checkmk/": {
+  "hash": "7fdaf8dcba3fde64",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/es/self-host/docmost/": {
   "hash": "eeee8d03d688f468",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/es/self-host/documenso/": {
+  "hash": "95d402319a4e2b6e",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/self-host/docuseal/": {
+  "hash": "606250e9ff559d88",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/self-host/espocrm/": {
+  "hash": "1b44936eff942659",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/es/self-host/formbricks/": {
   "hash": "cb1160cb803f1bcd",
@@ -4439,6 +6994,16 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/es/self-host/glitchtip/": {
+  "hash": "d137df50c30fb305",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/self-host/immich/": {
+  "hash": "e03ef4ab5f3abcd6",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/es/self-host/keycloak/": {
   "hash": "f1a0e54cb9fc28eb",
   "modified": "2026-09-28",
@@ -4454,10 +7019,25 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/es/self-host/listmonk/": {
+  "hash": "902588cf911fafc4",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/es/self-host/matomo/": {
   "hash": "e964b96694f1d4fc",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/es/self-host/mattermost/": {
+  "hash": "dfb75721955754b7",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/self-host/mautic/": {
+  "hash": "d3957c2f6e27531f",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/es/self-host/metabase/": {
   "hash": "be9fe7160bebe05f",
@@ -4468,6 +7048,11 @@
   "hash": "4cc0649b68dbd186",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/es/self-host/nextcloud/": {
+  "hash": "80029c47043a06c1",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/es/self-host/openproject/": {
   "hash": "cb97e3f013a7156a",
@@ -4489,6 +7074,11 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/es/self-host/photoprism/": {
+  "hash": "e4c26b3e5280d588",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/es/self-host/plane/": {
   "hash": "785189d00d34c3d3",
   "modified": "2026-09-28",
@@ -4504,10 +7094,35 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/es/self-host/prometheus-grafana/": {
+  "hash": "dbfd991b21ac6375",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/self-host/rocketchat/": {
+  "hash": "e88eca0485b26432",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/self-host/seafile/": {
+  "hash": "58df171aad4f2510",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/self-host/signoz/": {
+  "hash": "9818c0dde6a4a0b8",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/es/self-host/superset/": {
   "hash": "cae6b655e7846bdf",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/es/self-host/twenty/": {
+  "hash": "c94f24630fdf9204",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/es/self-host/umami/": {
   "hash": "16556a304a8a5c00",
@@ -4534,6 +7149,11 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/es/self-host/zabbix/": {
+  "hash": "341ca9f97d141010",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/es/self-host/zammad/": {
   "hash": "3665bf1d0c22b283",
   "modified": "2026-09-28",
@@ -4543,6 +7163,11 @@
   "hash": "f5bcc91cd2743c15",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/es/self-host/zulip/": {
+  "hash": "d872f3ec9c563393",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/es/vs/1password-vs-passbolt/": {
   "hash": "3d705455e502fa25",
@@ -4594,6 +7219,11 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/es/vs/calendly-vs-cal-com/": {
+  "hash": "d9014bb9edee22a7",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/es/vs/clerk-vs-authentik/": {
   "hash": "3dac45d326d22c17",
   "modified": "2026-09-28",
@@ -4623,6 +7253,46 @@
   "hash": "ca13bd5df01c83f9",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/es/vs/datadog-vs-checkmk/": {
+  "hash": "9e7a957545de81cb",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/vs/datadog-vs-prometheus-grafana/": {
+  "hash": "ac1b40b08d217e62",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/vs/datadog-vs-zabbix/": {
+  "hash": "da83d3085f8ae1f4",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/vs/docusign-vs-documenso/": {
+  "hash": "6c2296d171ea919e",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/vs/docusign-vs-docuseal/": {
+  "hash": "1f0c42a9a7b5eebd",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/vs/dropbox-vs-immich/": {
+  "hash": "0777f87bdb533aba",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/vs/dropbox-vs-nextcloud/": {
+  "hash": "eca7bcf254b41408",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/vs/dropbox-vs-seafile/": {
+  "hash": "90a70a212e6965ec",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/es/vs/fathom-vs-plausible/": {
   "hash": "f42d2853338d71fd",
@@ -4669,10 +7339,35 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/es/vs/google-photos-vs-immich/": {
+  "hash": "820aeb36b943e944",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/vs/google-photos-vs-photoprism/": {
+  "hash": "65b1955557291a09",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/vs/google-workspace-vs-nextcloud/": {
+  "hash": "c184955c2004239a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/es/vs/helpscout-vs-freescout/": {
   "hash": "3ab9c762f49ddf5e",
   "modified": "2026-10-09",
   "published": "2026-09-14"
+ },
+ "/es/vs/hubspot-vs-espocrm/": {
+  "hash": "af47eb8a0c89c0c1",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/vs/hubspot-vs-twenty/": {
+  "hash": "6d4051b53a172597",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/es/vs/intercom-vs-chatwoot/": {
   "hash": "dfd0e7998177726f",
@@ -4784,10 +7479,65 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/es/vs/pipedrive-vs-espocrm/": {
+  "hash": "abcf20aad3077f49",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/vs/pipedrive-vs-twenty/": {
+  "hash": "d648ad695211663a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/vs/prtg-vs-checkmk/": {
+  "hash": "075cdd91f5cc7eeb",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/vs/prtg-vs-zabbix/": {
+  "hash": "4eb7fb9f7f7ffc7b",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/es/vs/retool-vs-windmill/": {
   "hash": "07e501dcdd7ad2d7",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/es/vs/salesforce-vs-espocrm/": {
+  "hash": "2d428a88de452679",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/vs/salesforce-vs-twenty/": {
+  "hash": "499c9c08d26006b9",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/vs/sentry-vs-glitchtip/": {
+  "hash": "e2cc80f947ca071f",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/vs/sentry-vs-signoz/": {
+  "hash": "d6aab7e8af1be54d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/vs/slack-vs-mattermost/": {
+  "hash": "eb63aabc370cb056",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/vs/slack-vs-rocketchat/": {
+  "hash": "f49a618388c6aa53",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/es/vs/slack-vs-zulip/": {
+  "hash": "6dcb7d6bed04d859",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/es/vs/statuspage-vs-gatus/": {
   "hash": "6bbe1af2bf23d7fc",
@@ -4870,13 +7620,13 @@
   "published": "2026-09-14"
  },
  "/fr/": {
-  "hash": "4e76e0795089c17d",
-  "modified": "2026-09-28",
+  "hash": "8067268b2f4745cb",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/fr/about/": {
-  "hash": "33171117b70e0224",
-  "modified": "2026-09-28",
+  "hash": "2360c2fa1dbcc877",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/fr/alternatives/1password/": {
@@ -4909,6 +7659,11 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/fr/alternatives/calendly/": {
+  "hash": "91f0d4ecf86d86fe",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/fr/alternatives/clerk/": {
   "hash": "a041e09b22d5320c",
   "modified": "2026-09-28",
@@ -4918,6 +7673,21 @@
   "hash": "00518fbb1bf18ce5",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/fr/alternatives/datadog/": {
+  "hash": "64dfe3e8424bad32",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/alternatives/docusign/": {
+  "hash": "dcd3e5c196baaa6f",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/alternatives/dropbox/": {
+  "hash": "df0a2f5ed245ade9",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/fr/alternatives/fathom/": {
   "hash": "c64498b334a61613",
@@ -4934,10 +7704,25 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/fr/alternatives/google-photos/": {
+  "hash": "8dc5481a28721189",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/alternatives/google-workspace/": {
+  "hash": "a01c08d6c9f3382a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/fr/alternatives/helpscout/": {
   "hash": "1ed96990c583b75e",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/fr/alternatives/hubspot/": {
+  "hash": "7dbad7c289e68bd1",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/fr/alternatives/intercom/": {
   "hash": "bdafac9b0b01934f",
@@ -4989,10 +7774,35 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/fr/alternatives/pipedrive/": {
+  "hash": "8ba2dee0a28b8ce9",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/alternatives/prtg/": {
+  "hash": "175e0f9fcd1c4377",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/fr/alternatives/retool/": {
   "hash": "e673b3ec4abe92c4",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/fr/alternatives/salesforce/": {
+  "hash": "06990452ef67a0f3",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/alternatives/sentry/": {
+  "hash": "6a57f44cf1b9831e",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/alternatives/slack/": {
+  "hash": "97e9b43b33a8bcd6",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/fr/alternatives/statuspage/": {
   "hash": "03dc2409a02651d0",
@@ -5030,58 +7840,103 @@
   "published": "2026-09-14"
  },
  "/fr/category/analytics/": {
-  "hash": "50f76855f699cbb6",
-  "modified": "2026-09-28",
+  "hash": "b53d68443b4914c7",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/fr/category/auth/": {
-  "hash": "f3a1e6dba12bc8d6",
-  "modified": "2026-09-28",
+  "hash": "39743f217fa2f4dc",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/fr/category/automation/": {
-  "hash": "3b3e39646f1536c7",
-  "modified": "2026-09-28",
+  "hash": "a9aa532e6cc5c983",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/fr/category/bi/": {
-  "hash": "0dc69808c271f29a",
-  "modified": "2026-09-28",
+  "hash": "27c7fbb248cd8924",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
+ },
+ "/fr/category/crm/": {
+  "hash": "a08e5ffbb824d996",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/fr/category/docs-wiki/": {
-  "hash": "b55e4818564db4fc",
-  "modified": "2026-09-28",
+  "hash": "716321e870a14c64",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
+ "/fr/category/e-signature/": {
+  "hash": "ea01c8c55c359ce4",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/category/email-marketing/": {
+  "hash": "80d1c4d829dfc074",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/category/error-monitoring/": {
+  "hash": "baff54d9841bc38b",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/category/file-storage/": {
+  "hash": "5d2ced40961f9ea4",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/fr/category/forms/": {
-  "hash": "69454d740ce41205",
-  "modified": "2026-09-28",
+  "hash": "85270ccd84c2a3f9",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/fr/category/helpdesk/": {
-  "hash": "1ca701bd1a338a38",
-  "modified": "2026-09-28",
+  "hash": "7cea7971b0b6bcb6",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
+ },
+ "/fr/category/infra-monitoring/": {
+  "hash": "60558789da249c77",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/fr/category/password-manager/": {
-  "hash": "4a67d2655feffab3",
-  "modified": "2026-09-28",
+  "hash": "0cbb18d450405730",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
+ },
+ "/fr/category/photos/": {
+  "hash": "ed3f826b3279b23b",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/fr/category/project-management/": {
-  "hash": "bbbe9acc498fc038",
-  "modified": "2026-09-28",
+  "hash": "9cdc368e984c1db6",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
+ },
+ "/fr/category/scheduling/": {
+  "hash": "827c1584baf7f511",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/fr/category/status-page/": {
-  "hash": "fd075f90053da636",
-  "modified": "2026-09-28",
+  "hash": "8b3e082dd559a57a",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
+ "/fr/category/team-chat/": {
+  "hash": "38c1f0a88211d3f8",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/fr/compare/": {
-  "hash": "65e7161ed92f8ac1",
-  "modified": "2026-09-28",
+  "hash": "6c37d7941361c6a5",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/fr/cost/activepieces/1-user/": {
@@ -5224,6 +8079,41 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/fr/cost/cal-com/1-user/": {
+  "hash": "8affba5476cc51f0",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/cal-com/10-users/": {
+  "hash": "00757af716c9c8a0",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/cal-com/100-users/": {
+  "hash": "6b2fc0fa9e374abc",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/cal-com/25-users/": {
+  "hash": "887db2f2efdd4b88",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/cal-com/250-users/": {
+  "hash": "b6f543441124bcea",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/cal-com/5-users/": {
+  "hash": "02ded6c8a6d5d340",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/cal-com/50-users/": {
+  "hash": "24fc253dc7772c5e",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/fr/cost/chatwoot/1-user/": {
   "hash": "45dd6db4450eef53",
   "modified": "2026-09-28",
@@ -5259,6 +8149,41 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/fr/cost/checkmk/10-hosts/": {
+  "hash": "1beef60b5a446ce3",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/checkmk/100-hosts/": {
+  "hash": "d872432b8332c5c4",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/checkmk/25-hosts/": {
+  "hash": "6d6432e54e8ee3a9",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/checkmk/250-hosts/": {
+  "hash": "0088d723ab080d86",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/checkmk/5-hosts/": {
+  "hash": "e8c120d661c8cd68",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/checkmk/50-hosts/": {
+  "hash": "53dabb900663370b",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/checkmk/500-hosts/": {
+  "hash": "e25fd884f32f58d5",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/fr/cost/docmost/1-user/": {
   "hash": "4c150efd130173aa",
   "modified": "2026-09-28",
@@ -5293,6 +8218,111 @@
   "hash": "ad2fca6d7ec492bf",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/fr/cost/documenso/1-user/": {
+  "hash": "d0252bca49284084",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/documenso/10-users/": {
+  "hash": "343d00c3afc77253",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/documenso/100-users/": {
+  "hash": "b9b42c16e8342a09",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/documenso/25-users/": {
+  "hash": "8924bb18d1781227",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/documenso/250-users/": {
+  "hash": "83c2e075878f9fa9",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/documenso/5-users/": {
+  "hash": "327316151c18ee9b",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/documenso/50-users/": {
+  "hash": "9669fae37cfd36c7",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/docuseal/1-user/": {
+  "hash": "8d9814cc16f97448",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/docuseal/10-users/": {
+  "hash": "47350602afe09a55",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/docuseal/100-users/": {
+  "hash": "5ef1d65e100e8e18",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/docuseal/25-users/": {
+  "hash": "3cd5ba7e2c12f32f",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/docuseal/250-users/": {
+  "hash": "78beff5a42f525ec",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/docuseal/5-users/": {
+  "hash": "b88a9076f0146acf",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/docuseal/50-users/": {
+  "hash": "9d159f50d658e568",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/espocrm/1-user/": {
+  "hash": "eeaf5df34333052b",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/espocrm/10-users/": {
+  "hash": "75c8645af568b46f",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/espocrm/100-users/": {
+  "hash": "0c406ca6db878d0d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/espocrm/25-users/": {
+  "hash": "c11f425490278511",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/espocrm/250-users/": {
+  "hash": "84faac04b7ce6ee7",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/espocrm/5-users/": {
+  "hash": "ba6c3d9a6744b2be",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/espocrm/50-users/": {
+  "hash": "cb049ac399b1cb8f",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/fr/cost/formbricks/1-user/": {
   "hash": "a2b85f4d80d159b8",
@@ -5399,6 +8429,76 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/fr/cost/glitchtip/1-user/": {
+  "hash": "07bfd8e88942813c",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/glitchtip/10-users/": {
+  "hash": "d142d0ec2ea1e020",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/glitchtip/100-users/": {
+  "hash": "db11ceb40c29eb77",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/glitchtip/25-users/": {
+  "hash": "dfd4d65063545cd1",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/glitchtip/250-users/": {
+  "hash": "d09c35caa4cac426",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/glitchtip/5-users/": {
+  "hash": "994c8f6c90a7be8f",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/glitchtip/50-users/": {
+  "hash": "19711de4f8bc279a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/immich/1-user/": {
+  "hash": "1777c12fe1b3645c",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/immich/10-users/": {
+  "hash": "af53264fabc20db5",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/immich/100-users/": {
+  "hash": "3bffbcf98b41a444",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/immich/25-users/": {
+  "hash": "8ed90383ae5342db",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/immich/250-users/": {
+  "hash": "e104f4d8e44d75bb",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/immich/5-users/": {
+  "hash": "3b22dca8f12bbefe",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/immich/50-users/": {
+  "hash": "d48fd442b8c47346",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/fr/cost/keycloak/1-user/": {
   "hash": "f0308df9c44f7a9e",
   "modified": "2026-09-28",
@@ -5504,6 +8604,41 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/fr/cost/listmonk/1-user/": {
+  "hash": "f9701bb80538e28f",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/listmonk/10-users/": {
+  "hash": "58d30d9a74e25727",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/listmonk/100-users/": {
+  "hash": "64d80a5b411e2385",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/listmonk/25-users/": {
+  "hash": "61f7a2cea3a39482",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/listmonk/250-users/": {
+  "hash": "fb9ff0125292ff6a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/listmonk/5-users/": {
+  "hash": "ee926110eb5a1ec6",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/listmonk/50-users/": {
+  "hash": "20b80a01d8c19061",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/fr/cost/matomo/1-user/": {
   "hash": "1c9f40a7cbc74818",
   "modified": "2026-09-28",
@@ -5538,6 +8673,76 @@
   "hash": "34219a6320392dda",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/fr/cost/mattermost/1-user/": {
+  "hash": "932c7d37137c06f8",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/mattermost/10-users/": {
+  "hash": "b2d0587905f71abf",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/mattermost/100-users/": {
+  "hash": "2ff1093823c01fea",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/mattermost/25-users/": {
+  "hash": "af5280aaa5fb861d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/mattermost/250-users/": {
+  "hash": "d4995159ae2adad0",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/mattermost/5-users/": {
+  "hash": "7aa17abcca03bd75",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/mattermost/50-users/": {
+  "hash": "25980b7610628c49",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/mautic/1-user/": {
+  "hash": "e037c6f2e78fd48a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/mautic/10-users/": {
+  "hash": "8db40104a34f9c34",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/mautic/100-users/": {
+  "hash": "e4a33854ca0e2fb9",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/mautic/25-users/": {
+  "hash": "6696a83c12b06848",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/mautic/250-users/": {
+  "hash": "4ed0e2ca0434b39a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/mautic/5-users/": {
+  "hash": "d9cbeed6895f370a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/mautic/50-users/": {
+  "hash": "5deda94cb8545e38",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/fr/cost/metabase/1-user/": {
   "hash": "35dba44596d46fe8",
@@ -5608,6 +8813,41 @@
   "hash": "17789e88d26e55d2",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/fr/cost/nextcloud/1-user/": {
+  "hash": "c1f7a39dd611db01",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/nextcloud/10-users/": {
+  "hash": "dad7be1f0356de5b",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/nextcloud/100-users/": {
+  "hash": "fc7c36f6729581ff",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/nextcloud/25-users/": {
+  "hash": "2dc402bf91f6d425",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/nextcloud/250-users/": {
+  "hash": "2599851c55ea9436",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/nextcloud/5-users/": {
+  "hash": "f7b293cf96f197c0",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/nextcloud/50-users/": {
+  "hash": "b09634d45afec671",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/fr/cost/openproject/1-user/": {
   "hash": "43f7a595d9f07922",
@@ -5749,6 +8989,41 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/fr/cost/photoprism/1-user/": {
+  "hash": "4afdb46421c454f0",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/photoprism/10-users/": {
+  "hash": "8a1ebc500192dbae",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/photoprism/100-users/": {
+  "hash": "9695bc8edd9721cc",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/photoprism/25-users/": {
+  "hash": "8621e81a22d38747",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/photoprism/250-users/": {
+  "hash": "9f75d039293cbcd7",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/photoprism/5-users/": {
+  "hash": "92e9b8c32ef5ca26",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/photoprism/50-users/": {
+  "hash": "c833a1d27ea4cfc4",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/fr/cost/plane/1-user/": {
   "hash": "fa01fedbe952575a",
   "modified": "2026-09-28",
@@ -5854,6 +9129,146 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/fr/cost/prometheus-grafana/10-hosts/": {
+  "hash": "a265628d6c3c5886",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/prometheus-grafana/100-hosts/": {
+  "hash": "e1aba7dae08edb6b",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/prometheus-grafana/25-hosts/": {
+  "hash": "1982d323d44cc891",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/prometheus-grafana/250-hosts/": {
+  "hash": "875efc3ab191558e",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/prometheus-grafana/5-hosts/": {
+  "hash": "14431372746b7fde",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/prometheus-grafana/50-hosts/": {
+  "hash": "6126829d0454199d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/prometheus-grafana/500-hosts/": {
+  "hash": "c7eda5341ebb2198",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/rocketchat/1-user/": {
+  "hash": "17e9a0123a759327",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/rocketchat/10-users/": {
+  "hash": "851d4f2831c8cd0d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/rocketchat/100-users/": {
+  "hash": "9480f966712d8605",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/rocketchat/25-users/": {
+  "hash": "4cb55570c895328f",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/rocketchat/250-users/": {
+  "hash": "13db779ce1c6e3d1",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/rocketchat/5-users/": {
+  "hash": "05a7e9e781b47478",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/rocketchat/50-users/": {
+  "hash": "4fea9643cb5c91dc",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/seafile/1-user/": {
+  "hash": "f09dba6b1715af33",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/seafile/10-users/": {
+  "hash": "b75887140622e971",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/seafile/100-users/": {
+  "hash": "df0d255868fd6931",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/seafile/25-users/": {
+  "hash": "f5f2e04c0c394214",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/seafile/250-users/": {
+  "hash": "9024ca3a3753770f",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/seafile/5-users/": {
+  "hash": "752ec0f0e843d46e",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/seafile/50-users/": {
+  "hash": "af7e21543fe58866",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/signoz/1-user/": {
+  "hash": "747b1c63c6591f94",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/signoz/10-users/": {
+  "hash": "d0ea0f860c06fd3e",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/signoz/100-users/": {
+  "hash": "8f8322753a5aa4a3",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/signoz/25-users/": {
+  "hash": "b1b8cfcc71f6c855",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/signoz/250-users/": {
+  "hash": "cd52fe02b954394b",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/signoz/5-users/": {
+  "hash": "16fc1f8601b403f4",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/signoz/50-users/": {
+  "hash": "b781b3eb82fee0ee",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/fr/cost/superset/1-user/": {
   "hash": "0d2af4f5eb7f3b35",
   "modified": "2026-09-28",
@@ -5888,6 +9303,41 @@
   "hash": "393f9bb3d74cc1a0",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/fr/cost/twenty/1-user/": {
+  "hash": "28502ef89d6da589",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/twenty/10-users/": {
+  "hash": "c6de687b1ef6011d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/twenty/100-users/": {
+  "hash": "aea1342c2b16c076",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/twenty/25-users/": {
+  "hash": "23f3289469d3a903",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/twenty/250-users/": {
+  "hash": "cf90e5eef7c7c9b6",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/twenty/5-users/": {
+  "hash": "c24336acd75b267a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/twenty/50-users/": {
+  "hash": "50cae0444287e5da",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/fr/cost/umami/1-user/": {
   "hash": "f36636a3856f25e9",
@@ -6064,6 +9514,41 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/fr/cost/zabbix/10-hosts/": {
+  "hash": "eba7f237f5d51f93",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/zabbix/100-hosts/": {
+  "hash": "a1e0851a969dd279",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/zabbix/25-hosts/": {
+  "hash": "e97b66cb1bb9d2f2",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/zabbix/250-hosts/": {
+  "hash": "d0aaeb3d14d11486",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/zabbix/5-hosts/": {
+  "hash": "3b6feecb073f2eca",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/zabbix/50-hosts/": {
+  "hash": "e1925bff567bf548",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/zabbix/500-hosts/": {
+  "hash": "f153ff9cf960f4a9",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/fr/cost/zammad/1-user/": {
   "hash": "ed4dbea0c3e7d96b",
   "modified": "2026-09-28",
@@ -6134,6 +9619,41 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/fr/cost/zulip/1-user/": {
+  "hash": "3f1342a084d43d90",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/zulip/10-users/": {
+  "hash": "dad9aa7b9c52dc5d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/zulip/100-users/": {
+  "hash": "42517e407cedacae",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/zulip/25-users/": {
+  "hash": "54b277f76db220c2",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/zulip/250-users/": {
+  "hash": "e0884395906cec89",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/zulip/5-users/": {
+  "hash": "5151484973f78f4b",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/cost/zulip/50-users/": {
+  "hash": "ebfb10b60a44f124",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/fr/disclosure/": {
   "hash": "5c636f03cb53c42f",
   "modified": "2026-09-28",
@@ -6145,8 +9665,8 @@
   "published": "2026-09-14"
  },
  "/fr/hosting/digitalocean/": {
-  "hash": "3fa9f79332f4dfee",
-  "modified": "2026-09-28",
+  "hash": "ce0561f6559a3077",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/fr/hosting/hetzner/": {
@@ -6155,8 +9675,8 @@
   "published": "2026-09-14"
  },
  "/fr/hosting/kamatera/": {
-  "hash": "ff69ef3f088bdf64",
-  "modified": "2026-09-28",
+  "hash": "09b4f0d067767d56",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/fr/hosting/pikapods/": {
@@ -6165,8 +9685,8 @@
   "published": "2026-09-14"
  },
  "/fr/hosting/vpsserver/": {
-  "hash": "7ddb09f1d1366711",
-  "modified": "2026-09-28",
+  "hash": "465e1e969ac0829d",
+  "modified": "2026-10-09",
   "published": "2026-09-21"
  },
  "/fr/hosting/vultr/": {
@@ -6175,7 +9695,7 @@
   "published": "2026-09-14"
  },
  "/fr/methodology/": {
-  "hash": "b334f92ae6bf5991",
+  "hash": "d25802ad1e07bb27",
   "modified": "2026-10-09",
   "published": "2026-09-14"
  },
@@ -6190,8 +9710,8 @@
   "published": "2026-09-14"
  },
  "/fr/self-host/": {
-  "hash": "5c34d637b8d5bdf6",
-  "modified": "2026-09-28",
+  "hash": "f53dca5e6710ecdd",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/fr/self-host/activepieces/": {
@@ -6214,15 +9734,40 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/fr/self-host/cal-com/": {
+  "hash": "8a87b3fb9360e80d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/fr/self-host/chatwoot/": {
   "hash": "5b1fa2255ff3bd7b",
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/fr/self-host/checkmk/": {
+  "hash": "99087f2b3f28b328",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/fr/self-host/docmost/": {
   "hash": "7def967333dc48f5",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/fr/self-host/documenso/": {
+  "hash": "990b67f2d45bb67e",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/self-host/docuseal/": {
+  "hash": "0c4afd0c6dd241bb",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/self-host/espocrm/": {
+  "hash": "652a57382248efbc",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/fr/self-host/formbricks/": {
   "hash": "4b58cb75cd9ab4cd",
@@ -6239,6 +9784,16 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/fr/self-host/glitchtip/": {
+  "hash": "0b551aee064aebb4",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/self-host/immich/": {
+  "hash": "0533b095715d5cd7",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/fr/self-host/keycloak/": {
   "hash": "3a25561257a20feb",
   "modified": "2026-09-28",
@@ -6254,10 +9809,25 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/fr/self-host/listmonk/": {
+  "hash": "d85176a56ca06234",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/fr/self-host/matomo/": {
   "hash": "a99111f0f288db1a",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/fr/self-host/mattermost/": {
+  "hash": "79d9e6517780ea79",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/self-host/mautic/": {
+  "hash": "38e6e3d7a99f58e5",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/fr/self-host/metabase/": {
   "hash": "8caf46fe8287a61b",
@@ -6268,6 +9838,11 @@
   "hash": "c09a4adce1b2f595",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/fr/self-host/nextcloud/": {
+  "hash": "f7d44ca321c7bef7",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/fr/self-host/openproject/": {
   "hash": "3e0fd80f2671afae",
@@ -6289,6 +9864,11 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/fr/self-host/photoprism/": {
+  "hash": "2add687fa583fc3f",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/fr/self-host/plane/": {
   "hash": "6d2ef437f68ab527",
   "modified": "2026-09-28",
@@ -6304,10 +9884,35 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/fr/self-host/prometheus-grafana/": {
+  "hash": "5a4b9c205f9f191b",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/self-host/rocketchat/": {
+  "hash": "96eb0f1cbb911a19",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/self-host/seafile/": {
+  "hash": "b7d386ecb14e29cc",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/self-host/signoz/": {
+  "hash": "a9c797dd60fd3744",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/fr/self-host/superset/": {
   "hash": "38190b000c957a42",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/fr/self-host/twenty/": {
+  "hash": "4a7b5609382e120c",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/fr/self-host/umami/": {
   "hash": "eeab3a5808ac59fd",
@@ -6334,6 +9939,11 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/fr/self-host/zabbix/": {
+  "hash": "3b06076ed5255233",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/fr/self-host/zammad/": {
   "hash": "eec61ce33077c8e2",
   "modified": "2026-09-28",
@@ -6343,6 +9953,11 @@
   "hash": "2bdde701d33838f3",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/fr/self-host/zulip/": {
+  "hash": "9a265df0fb78ab10",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/fr/vs/1password-vs-passbolt/": {
   "hash": "8acbdf07ce5fcba2",
@@ -6394,6 +10009,11 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/fr/vs/calendly-vs-cal-com/": {
+  "hash": "64f3dd7ab0ca7449",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/fr/vs/clerk-vs-authentik/": {
   "hash": "c386952526edd464",
   "modified": "2026-09-28",
@@ -6423,6 +10043,46 @@
   "hash": "e8c737737e25b56d",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/fr/vs/datadog-vs-checkmk/": {
+  "hash": "ff57813e817971c4",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/vs/datadog-vs-prometheus-grafana/": {
+  "hash": "604d6fc4a2d12a68",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/vs/datadog-vs-zabbix/": {
+  "hash": "d0799bca9baa56db",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/vs/docusign-vs-documenso/": {
+  "hash": "84521e0afd4c404c",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/vs/docusign-vs-docuseal/": {
+  "hash": "bfe2f7b79c84f9c1",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/vs/dropbox-vs-immich/": {
+  "hash": "88822b727d2110d2",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/vs/dropbox-vs-nextcloud/": {
+  "hash": "7b0d0be3c033940c",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/vs/dropbox-vs-seafile/": {
+  "hash": "0e5a619d4edba35a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/fr/vs/fathom-vs-plausible/": {
   "hash": "8287ee5ae16f14bd",
@@ -6469,10 +10129,35 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/fr/vs/google-photos-vs-immich/": {
+  "hash": "103e1f49843a228c",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/vs/google-photos-vs-photoprism/": {
+  "hash": "6d0fbf34b3393bf5",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/vs/google-workspace-vs-nextcloud/": {
+  "hash": "2ea06c54f3e41436",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/fr/vs/helpscout-vs-freescout/": {
   "hash": "3f8b1c24f5fdc327",
   "modified": "2026-10-09",
   "published": "2026-09-14"
+ },
+ "/fr/vs/hubspot-vs-espocrm/": {
+  "hash": "94b7a3ad9f1cc797",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/vs/hubspot-vs-twenty/": {
+  "hash": "376a6690c67cbb1d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/fr/vs/intercom-vs-chatwoot/": {
   "hash": "025ce1f08697e0c1",
@@ -6584,10 +10269,65 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/fr/vs/pipedrive-vs-espocrm/": {
+  "hash": "d3156d07e2b9fdf0",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/vs/pipedrive-vs-twenty/": {
+  "hash": "68d15eb00adcaeef",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/vs/prtg-vs-checkmk/": {
+  "hash": "6dbe9dd434d01acb",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/vs/prtg-vs-zabbix/": {
+  "hash": "3f1c7af0b1c91ab4",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/fr/vs/retool-vs-windmill/": {
   "hash": "e737b3d8df244bf6",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/fr/vs/salesforce-vs-espocrm/": {
+  "hash": "e8cd39de9552ea74",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/vs/salesforce-vs-twenty/": {
+  "hash": "808f82ae83478367",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/vs/sentry-vs-glitchtip/": {
+  "hash": "4663b22b1b4c6791",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/vs/sentry-vs-signoz/": {
+  "hash": "e40440be55095411",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/vs/slack-vs-mattermost/": {
+  "hash": "97ad24c4707aaf30",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/vs/slack-vs-rocketchat/": {
+  "hash": "8772333cab3a611d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/fr/vs/slack-vs-zulip/": {
+  "hash": "eaff8882915f3194",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/fr/vs/statuspage-vs-gatus/": {
   "hash": "213686bceac19c87",
@@ -6675,8 +10415,8 @@
   "published": "2026-09-14"
  },
  "/hosting/digitalocean/": {
-  "hash": "5047454596b40238",
-  "modified": "2026-09-28",
+  "hash": "9f03961a62b2a17d",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/hosting/hetzner/": {
@@ -6685,8 +10425,8 @@
   "published": "2026-09-14"
  },
  "/hosting/kamatera/": {
-  "hash": "c8166839968183b7",
-  "modified": "2026-09-28",
+  "hash": "c6df945190d58f31",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/hosting/pikapods/": {
@@ -6695,8 +10435,8 @@
   "published": "2026-09-14"
  },
  "/hosting/vpsserver/": {
-  "hash": "fd764934c1363fbd",
-  "modified": "2026-09-28",
+  "hash": "39c31960b929482f",
+  "modified": "2026-10-09",
   "published": "2026-09-21"
  },
  "/hosting/vultr/": {
@@ -6705,7 +10445,7 @@
   "published": "2026-09-14"
  },
  "/methodology/": {
-  "hash": "8a8dd11445227555",
+  "hash": "11428d6a4321d1d7",
   "modified": "2026-10-09",
   "published": "2026-09-14"
  },
@@ -6720,8 +10460,8 @@
   "published": "2026-09-14"
  },
  "/self-host/": {
-  "hash": "2c27502426ec1399",
-  "modified": "2026-09-28",
+  "hash": "103b9efa0cfd91f7",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/self-host/activepieces/": {
@@ -6744,15 +10484,40 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/self-host/cal-com/": {
+  "hash": "cf556c72a2e971fd",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/self-host/chatwoot/": {
   "hash": "67646adfa3aeda91",
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/self-host/checkmk/": {
+  "hash": "c1cc0722a78e45f7",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/self-host/docmost/": {
   "hash": "35bf2b95043432da",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/self-host/documenso/": {
+  "hash": "db623058222fa2b0",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/self-host/docuseal/": {
+  "hash": "571c76bb3681b862",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/self-host/espocrm/": {
+  "hash": "32ad9e6a0120eb91",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/self-host/formbricks/": {
   "hash": "508ec663ae5c596c",
@@ -6769,6 +10534,16 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/self-host/glitchtip/": {
+  "hash": "68a252cc72fc25c7",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/self-host/immich/": {
+  "hash": "e5b5001f41881e9b",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/self-host/keycloak/": {
   "hash": "8828c33591b6c20b",
   "modified": "2026-09-28",
@@ -6784,10 +10559,25 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/self-host/listmonk/": {
+  "hash": "0ee165a2b79b7942",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/self-host/matomo/": {
   "hash": "017586540081b8bd",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/self-host/mattermost/": {
+  "hash": "d4c54fbaa142122b",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/self-host/mautic/": {
+  "hash": "78866eeab315b298",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/self-host/metabase/": {
   "hash": "89455352fb969328",
@@ -6798,6 +10588,11 @@
   "hash": "2fb6c7a0c2ac516f",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/self-host/nextcloud/": {
+  "hash": "87fee03c5e7e18e3",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/self-host/openproject/": {
   "hash": "e3b8c7b50b6e5ac1",
@@ -6819,6 +10614,11 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/self-host/photoprism/": {
+  "hash": "c926b69d60430d77",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/self-host/plane/": {
   "hash": "cd18ca7d2f1bbf91",
   "modified": "2026-09-28",
@@ -6834,10 +10634,35 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/self-host/prometheus-grafana/": {
+  "hash": "3e85e754852c981c",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/self-host/rocketchat/": {
+  "hash": "f009bfb24320192f",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/self-host/seafile/": {
+  "hash": "2d51fd950289f6ac",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/self-host/signoz/": {
+  "hash": "3ea19af77b708f85",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/self-host/superset/": {
   "hash": "323fd72231d53d9e",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/self-host/twenty/": {
+  "hash": "266f64ce1912ee52",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/self-host/umami/": {
   "hash": "c4186a8d67c07abe",
@@ -6864,6 +10689,11 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/self-host/zabbix/": {
+  "hash": "dda85419968edecb",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/self-host/zammad/": {
   "hash": "631825195d4b2dd6",
   "modified": "2026-09-28",
@@ -6873,6 +10703,11 @@
   "hash": "c0e0297d23cc1550",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/self-host/zulip/": {
+  "hash": "50717f2803c402eb",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/vs/1password-vs-passbolt/": {
   "hash": "5cc01ca7fa54d2d8",
@@ -6924,6 +10759,11 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/vs/calendly-vs-cal-com/": {
+  "hash": "49bf5db2280cfe0c",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/vs/clerk-vs-authentik/": {
   "hash": "fee62bf3b1dbb057",
   "modified": "2026-09-28",
@@ -6953,6 +10793,46 @@
   "hash": "ad704af044094959",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/vs/datadog-vs-checkmk/": {
+  "hash": "faf9122cc28a6aa6",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/vs/datadog-vs-prometheus-grafana/": {
+  "hash": "5cf3734c8683b65f",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/vs/datadog-vs-zabbix/": {
+  "hash": "581dd32eade33832",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/vs/docusign-vs-documenso/": {
+  "hash": "325fff1cd423a95a",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/vs/docusign-vs-docuseal/": {
+  "hash": "84e0d509bf16e341",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/vs/dropbox-vs-immich/": {
+  "hash": "da37c00cbb0572c6",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/vs/dropbox-vs-nextcloud/": {
+  "hash": "6282c8b99041c827",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/vs/dropbox-vs-seafile/": {
+  "hash": "90f80d27d8de923b",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/vs/fathom-vs-plausible/": {
   "hash": "22cf1f6417bdd004",
@@ -6999,10 +10879,35 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/vs/google-photos-vs-immich/": {
+  "hash": "71b99da42c100685",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/vs/google-photos-vs-photoprism/": {
+  "hash": "8a0980e5d598e5d4",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/vs/google-workspace-vs-nextcloud/": {
+  "hash": "826fac9fbd8245df",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/vs/helpscout-vs-freescout/": {
   "hash": "d013caeba2e4d5df",
   "modified": "2026-10-09",
   "published": "2026-09-14"
+ },
+ "/vs/hubspot-vs-espocrm/": {
+  "hash": "519fde8e3aa93528",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/vs/hubspot-vs-twenty/": {
+  "hash": "f09875f641bcd6ab",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/vs/intercom-vs-chatwoot/": {
   "hash": "1878069ed8cb349e",
@@ -7114,10 +11019,65 @@
   "modified": "2026-09-28",
   "published": "2026-09-14"
  },
+ "/vs/pipedrive-vs-espocrm/": {
+  "hash": "39c87b42b926a27c",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/vs/pipedrive-vs-twenty/": {
+  "hash": "33a8731f0c1bdd20",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/vs/prtg-vs-checkmk/": {
+  "hash": "6c8627b39d80f7d3",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/vs/prtg-vs-zabbix/": {
+  "hash": "56018ad21415b26d",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
  "/vs/retool-vs-windmill/": {
   "hash": "4fa49aad5ea1a52a",
   "modified": "2026-09-28",
   "published": "2026-09-14"
+ },
+ "/vs/salesforce-vs-espocrm/": {
+  "hash": "8bf943d01616f312",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/vs/salesforce-vs-twenty/": {
+  "hash": "a8acd03e9e53403e",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/vs/sentry-vs-glitchtip/": {
+  "hash": "a1fee497829f6b35",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/vs/sentry-vs-signoz/": {
+  "hash": "5e9d554054366be2",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/vs/slack-vs-mattermost/": {
+  "hash": "5eb229c2364797d9",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/vs/slack-vs-rocketchat/": {
+  "hash": "c361fa3e669d15aa",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
+ },
+ "/vs/slack-vs-zulip/": {
+  "hash": "a70c2cc79b5737f3",
+  "modified": "2026-10-09",
+  "published": "2026-10-09"
  },
  "/vs/statuspage-vs-gatus/": {
   "hash": "faaf32cf3add20ee",
