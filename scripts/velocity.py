@@ -134,8 +134,9 @@ def report() -> None:
     elif day < 60:
         if ratio is not None and ratio < 0.15 and (refused or 0) < 0.15 * (built or 0):
             print("  verdict (day 30 gate): NOT A CONTENT VERDICT. Under 15% indexed, but Google has barely")
-            print("  refused anything either, so most pages were never discovered. Fix discovery first:")
-            print("  check the sitemaps in Search Console, then buy a domain, and extend by 30 days.")
+            print("  refused anything either: the rest is queued, not rejected. Work on getting the pages")
+            print("  crawled (sitemaps, a domain property, internal links, fewer near-duplicate pages),")
+            print("  and extend by 30 days.")
         elif ratio is not None and ratio < 0.15:
             print("  verdict (day 30 gate): KILL SIGNAL. Under 15% indexed and Google crawled the pages")
             print("  and refused them; the pages themselves are the problem.")
@@ -155,7 +156,9 @@ def main() -> int:
     ap.add_argument("--gsc")
     ap.add_argument("--indexed", type=int)
     ap.add_argument("--not-indexed", type=int,
-                    help="Indexing > Pages: how many pages Google crawled and did not index")
+                    help="Indexing > Pages, reason 'Crawled - currently not indexed': pages Google read and "
+                         "refused. Pages under 'Discovered - currently not indexed' are queued, not refused, "
+                         "and must not be counted here.")
     ap.add_argument("--impressions", type=int)
     ap.add_argument("--clicks", type=int)
     ap.add_argument("--affiliate-clicks", type=int)
