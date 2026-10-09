@@ -2,4 +2,4 @@ date,day,pages_built,comparisons,indexed,not_indexed,impressions,clicks,ctr,avg_
 2026-09-14,0,293,24,0,,,,,,,0,0,0.0,launch baseline
 2026-09-21,7,1436,65,7,,42,,,,,,,,"GSC Indexing export to 2026-09-18: 7 indexed, 0 reported not-indexed; impressions summed from chart; clicks not in this export"
 2026-09-28,14,1440,65,7,0,70,0,0.0,57.6,6,0,0,,sitemaps split and resubmitted 2026-09-26; coverage export still 7 indexed and 0 not-indexed
-2026-10-09,25,1440,65,55,1,147,1,1.35,39.2,18,0,0,,"custom domain live 2026-09-28; impressions cumulative across both properties; indexing from the domain property on 2026-10-04: 55 indexed, 1384 discovered but not yet crawled, 1 crawled and not indexed, 3 redirects"
+2026-10-09,25,1440,65,55,1,147,1,1.35,39.2,18,0,0,,"custom domain live 2026-09-28; impressions cumulative across both properties; indexing from the domain property on 2026-10-04: 55 indexed, 1384 discovered but not yet crawled, 1 crawled and not indexed, 3 redirects; wave 2 published 2026-10-09, site goes from 1,440 to 2,232 pages"
