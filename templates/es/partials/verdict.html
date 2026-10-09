@@ -34,7 +34,7 @@
     </div>
     <div class="fig">
       <dt>Servidor y copias</dt>
-      <dd>{{ money(ref.selfhost_usd_month_no_labour) }}<small>{{ ref.plan.plan.name }}, {{ gb(ref.plan.plan.ram_gb) }} de RAM</small></dd>
+      <dd>{{ money(ref.selfhost_usd_month_no_labour) }}<small>{{ plan_label(ref.plan) }}, {{ gb(ref.plan.plan.ram_gb) }} de RAM</small></dd>
     </div>
     <div class="fig">
       <dt>Diferencia en {{ cfg.tco_model.horizon_months }} meses</dt>

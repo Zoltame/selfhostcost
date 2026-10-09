@@ -55,7 +55,7 @@
 <p>{{ a.tool.sizing_note }}</p>
 <p>
   Für {{ ref_label }} braucht es {{ gb(a.tco.sizing.ram_gb) }} Arbeitsspeicher und {{ gb(a.tco.sizing.disk_gb) }}
-  Speicherplatz; das passt auf den Tarif {{ a.tco.plan.plan.name }} bei {{ a.tco.plan.provider_name }} für
+  Speicherplatz; das passt auf den Tarif {{ plan_label(a.tco.plan) }} bei {{ a.tco.plan.provider_name }} für
   {{ money(a.tco.plan.price_usd_month) }} pro Monat. Die Einrichtung dauert etwa {{ hours(a.tco.setup_hours) }} Stunden,
   danach {{ hours(a.tco.maintenance_hours_month) }} Stunden pro Monat für den laufenden Betrieb.
   {% if a.tool.licence_caveat %}<strong>Lizenzhinweis:</strong> {{ a.tool.licence_caveat }}{% endif %}

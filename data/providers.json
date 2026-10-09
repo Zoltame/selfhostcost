@@ -1,7 +1,8 @@
 {
   "_schema": {
     "price_status": "verified = the price was read directly from the provider's public pricing page on verified_on. unverified = specs are confirmed but the price could not be read (JS-rendered or region-gated) and must be filled in by a human before it is allowed into a published calculation.",
-    "policy": "Only plans with price_status = verified and a non-null price_usd_month are allowed to feed a published TCO figure. Everything else renders as a spec-only listing. scripts/check_staleness.py enforces the review window."
+    "policy": "Only plans with price_status = verified and a non-null price_usd_month are allowed to feed a published TCO figure. Everything else renders as a spec-only listing. scripts/check_staleness.py enforces the review window.",
+    "extra_storage": "extra_storage_usd_gb_month is the published price of block storage added to a server, per GB per month. When a tool needs more disk than any affordable plan includes, the cheapest option is often a small server plus a volume, and the model prices that."
   },
   "providers": [
     {
@@ -105,7 +106,10 @@
           "transfer_gb": 7000,
           "price_usd_month": 336.0
         }
-      ]
+      ],
+      "extra_storage_usd_gb_month": 0.1,
+      "extra_storage_note": "Volumes block storage: 100 GiB for $10, 500 GiB for $50, 1,000 GiB for $100, read on 2026-10-09 from the Volumes pricing page. Volume snapshots cost $0.06 per GiB a month and are not included here.",
+      "extra_storage_verified_on": "2026-10-09"
     },
     {
       "slug": "hetzner",
@@ -269,7 +273,10 @@
           "transfer_gb": 5000,
           "price_usd_month": 39.0
         }
-      ]
+      ],
+      "extra_storage_usd_gb_month": 0.05,
+      "extra_storage_note": "The pricing page states additional storage is $0.05 per GB a month, read on 2026-10-09.",
+      "extra_storage_verified_on": "2026-10-09"
     },
     {
       "slug": "vultr",
@@ -399,7 +406,10 @@
           "price_usd_month": 276.0,
           "transfer_gb": 1000
         }
-      ]
+      ],
+      "extra_storage_usd_gb_month": 0.1,
+      "extra_storage_note": "The configurator prices NVMe disk at about $0.10 per GB a month: with 4 GB of memory, 80 GB costs $22 a month, 500 GB costs $60 and 1,000 GB costs $110, read on 2026-10-09.",
+      "extra_storage_verified_on": "2026-10-09"
     }
   ]
 }

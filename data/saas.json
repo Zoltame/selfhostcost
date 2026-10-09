@@ -1348,7 +1348,8 @@
       "price_status": "verified",
       "verified_on": "2026-10-09",
       "wave": 2,
-      "note": "Priced by storage, not by seats, and shareable with five people, so the figure does not grow with team size."
+      "note": "Priced by storage, not by seats, and shareable with five people, so the figure does not grow with team size.",
+      "free_tier_note": "The plan compared here is the largest one Google's public plans page listed on 2026-10-09: 2 TB, shareable with up to five people. Above that, this comparison stops being like for like, because the self-hosted figures size storage to whatever the team actually stores while the Google plan stays capped at 2 TB. Google sells larger plans, but their prices were not published on that page."
     },
     {
       "slug": "prtg",

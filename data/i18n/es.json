@@ -186,7 +186,8 @@
     "mixpanel": { "free_tier_note": "El plan gratuito de Mixpanel cubre hasta 1 millón de eventos al mes, sin coste por puesto. Por debajo de ese volumen no hay licencia que ahorrar, así que esta comparativa trata de quién controla los datos, no de lo que cuestan." },
     "amplitude": { "free_tier_note": "El plan gratuito de Amplitude cubre hasta 2 millones de eventos al mes con puestos ilimitados. Por debajo de ese volumen no hay licencia que ahorrar." },
     "datadog": {"free_tier_note": "Datadog tiene un plan gratuito para hasta 5 servidores, pero solo conserva las métricas un día, frente a 15 meses en Pro. No es un sustituto equivalente para una supervisión de la que dependes, así que la comparativa usa Pro incluso con 5 servidores."},
-    "prtg": {"free_tier_note": "PRTG no es un servicio alojado: lo instalas en tu propio servidor Windows. Su importe aquí es solo la licencia; el servidor y el tiempo para mantener el propio PRTG no se incluyen, lo que hace que PRTG parezca más barato de lo que es."}
+    "prtg": {"free_tier_note": "PRTG no es un servicio alojado: lo instalas en tu propio servidor Windows. Su importe aquí es solo la licencia; el servidor y el tiempo para mantener el propio PRTG no se incluyen, lo que hace que PRTG parezca más barato de lo que es."},
+    "google-photos": {"free_tier_note": "El plan que se compara aquí es el mayor que la página pública de Google mostraba el 2026-10-09: 2 TB, compartibles con hasta cinco personas. Por encima de eso la comparativa deja de ser equivalente, porque las cifras de autoalojamiento dimensionan el almacenamiento según lo que el equipo guarda de verdad, mientras el plan de Google se queda en 2 TB. Google vende planes mayores, pero sus precios no estaban publicados en esa página."}
   },
 
   "providers": {

@@ -186,7 +186,8 @@
     "mixpanel": { "free_tier_note": "Der kostenlose Tarif von Mixpanel deckt bis zu 1 Million Ereignisse pro Monat ab, ohne Gebühr pro Platz. Unterhalb dieses Volumens gibt es keine Lizenzkosten zu sparen, daher geht es bei diesem Vergleich darum, wer die Daten besitzt, nicht was sie kosten." },
     "amplitude": { "free_tier_note": "Der kostenlose Tarif von Amplitude deckt bis zu 2 Millionen Ereignisse pro Monat mit unbegrenzten Plätzen ab. Unterhalb dieses Volumens gibt es keine Lizenzkosten zu sparen." },
     "datadog": {"free_tier_note": "Datadog hat einen kostenlosen Tarif für bis zu 5 Server, der Metriken aber nur einen Tag aufbewahrt, gegenüber 15 Monaten bei Pro. Für ein Monitoring, auf das Sie sich verlassen, ist das kein gleichwertiger Ersatz, daher nutzt der Vergleich auch bei 5 Servern Pro."},
-    "prtg": {"free_tier_note": "PRTG ist kein gehosteter Dienst: Sie installieren es auf Ihrem eigenen Windows-Server. Der Betrag hier ist nur die Lizenz; der Server und die Zeit für den Betrieb von PRTG selbst sind nicht enthalten, wodurch PRTG günstiger wirkt, als es ist."}
+    "prtg": {"free_tier_note": "PRTG ist kein gehosteter Dienst: Sie installieren es auf Ihrem eigenen Windows-Server. Der Betrag hier ist nur die Lizenz; der Server und die Zeit für den Betrieb von PRTG selbst sind nicht enthalten, wodurch PRTG günstiger wirkt, als es ist."},
+    "google-photos": {"free_tier_note": "Der hier verglichene Tarif ist der größte, den Googles öffentliche Tarifseite am 2026-10-09 auflistete: 2 TB, teilbar mit bis zu fünf Personen. Darüber hinaus ist der Vergleich nicht mehr gleichwertig, denn die Self-Hosting-Zahlen bemessen den Speicher an dem, was das Team tatsächlich ablegt, während der Google-Tarif bei 2 TB endet. Google verkauft größere Tarife, deren Preise auf dieser Seite aber nicht veröffentlicht waren."}
   },
 
   "providers": {

@@ -7,7 +7,7 @@
 <p class="lead">
   At {{ u('who_one' if size.users == 1 else 'who_many', n=size.users) }}, {{ tool.name }} needs
   {{ gb(sizing.ram_gb) }} of memory and {{ gb(sizing.disk_gb) }} of disk. That fits the
-  {{ plan.plan.name }} at {{ plan.provider_name }} for {{ money(plan.price_usd_month) }} a month.
+  {{ plan_label(plan) }} at {{ plan.provider_name }} for {{ money(plan.price_usd_month) }} a month.
   Add backups and the time it takes to look after and the real figure is
   <strong>{{ money(total_month) }} a month</strong>.
 </p>
@@ -19,7 +19,7 @@
 </ul>
 
 <dl class="figures">
-  <div class="fig"><dt>Server</dt><dd>{{ money(plan.price_usd_month) }}<small>{{ plan.plan.name }}, {{ plan.plan.vcpu }} vCPU</small></dd></div>
+  <div class="fig"><dt>Server</dt><dd>{{ money(plan.price_usd_month) }}<small>{{ plan_label(plan) }}, {{ plan.plan.vcpu }} vCPU</small></dd></div>
   <div class="fig"><dt>Backups</dt><dd>{{ money(backup_month) }}<small>provider snapshots</small></dd></div>
   <div class="fig"><dt>Your time</dt><dd>{{ money(labour_month) }}<small>{{ maint_hours }} h a month at ${{ cfg.tco_model.engineer_hourly_usd }}</small></dd></div>
   <div class="fig"><dt>All in</dt><dd>{{ money(total_month) }}<small>per month</small></dd></div>
@@ -33,12 +33,13 @@
   {{ gb(per_user_ram_gb) }}, giving {{ gb(sizing.raw_ram_gb) }}. Adding
   {{ (sizing.headroom_ratio * 100) | round | int }}% headroom so the machine is not run at its ceiling
   gives <strong>{{ gb(sizing.ram_gb) }}</strong>, and the smallest plan at or above that is the
-  {{ plan.plan.name }} with {{ gb(plan.plan.ram_gb) }}.
+  {{ plan_label(plan) }} with {{ gb(plan.plan.ram_gb) }}.
 </p>
 <p>
   Disk works the same way: {{ gb(tool.base_disk_gb) }} to begin with, plus
   {{ tool.disk_per_user_gb }} GB {{ u('per_short') }}, so <strong>{{ gb(sizing.disk_gb) }}</strong> against the
   {{ gb(plan.plan.disk_gb) }} the plan includes.
+  {% if plan.extra_disk_gb %}The shortfall is bought as a {{ gb(plan.extra_disk_gb) }} volume at {{ money(plan.extra_disk_usd_month) }} a month, which costs less than the next plan up.{% endif %}
   {% if tool.disk_per_user_gb >= 5 %}
   This tool is storage-hungry {{ u('per_short') }}, so disk rather than memory is what will force your next upgrade.
   {% endif %}

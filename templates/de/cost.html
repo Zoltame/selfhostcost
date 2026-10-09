@@ -6,7 +6,7 @@
 
 <p class="lead">
   Für {{ u('who', n=size.users) }} braucht {{ tool.name }} {{ gb(sizing.ram_gb) }} Arbeitsspeicher und
-  {{ gb(sizing.disk_gb) }} Speicherplatz. Das passt auf den Tarif {{ plan.plan.name }} bei {{ plan.provider_name }}
+  {{ gb(sizing.disk_gb) }} Speicherplatz. Das passt auf den Tarif {{ plan_label(plan) }} bei {{ plan.provider_name }}
   für {{ money(plan.price_usd_month) }} pro Monat. Mit Backups und der Zeit für die Betreuung liegt die echte Zahl bei
   <strong>{{ money(total_month) }} pro Monat</strong>.
 </p>
@@ -18,7 +18,7 @@
 </ul>
 
 <dl class="figures">
-  <div class="fig"><dt>Server</dt><dd>{{ money(plan.price_usd_month) }}<small>{{ plan.plan.name }}, {{ plan.plan.vcpu }} vCPU</small></dd></div>
+  <div class="fig"><dt>Server</dt><dd>{{ money(plan.price_usd_month) }}<small>{{ plan_label(plan) }}, {{ plan.plan.vcpu }} vCPU</small></dd></div>
   <div class="fig"><dt>Backups</dt><dd>{{ money(backup_month) }}<small>Snapshots des Anbieters</small></dd></div>
   <div class="fig"><dt>Ihre Zeit</dt><dd>{{ money(labour_month) }}<small>{{ hours(maint_hours) }} Std. pro Monat zu {{ money(cfg.tco_model.engineer_hourly_usd) }}</small></dd></div>
   <div class="fig"><dt>Alles inklusive</dt><dd>{{ money(total_month) }}<small>pro Monat</small></dd></div>
@@ -32,12 +32,13 @@
   {{ u('who', n=size.users) }} zu je {{ number(tool.ram_per_user_mb) }} MB ergeben zusätzlich {{ gb(per_user_ram_gb) }},
   zusammen {{ gb(sizing.raw_ram_gb) }}. Mit {{ (sizing.headroom_ratio * 100) | round | int }} % Reserve, damit die
   Maschine nicht am Limit läuft, ergibt das <strong>{{ gb(sizing.ram_gb) }}</strong>; der kleinste Tarif, der das
-  erreicht, ist {{ plan.plan.name }} mit {{ gb(plan.plan.ram_gb) }}.
+  erreicht, ist {{ plan_label(plan) }} mit {{ gb(plan.plan.ram_gb) }}.
 </p>
 <p>
   Beim Speicherplatz gilt dasselbe: {{ gb(tool.base_disk_gb) }} zu Beginn plus
   {{ loc.compact(tool.disk_per_user_gb) }} GB {{ u('per_short') }}, also <strong>{{ gb(sizing.disk_gb) }}</strong> gegenüber den
   {{ gb(plan.plan.disk_gb) }}, die der Tarif enthält.
+  {% if plan.extra_disk_gb %}Die Differenz wird als Volume mit {{ gb(plan.extra_disk_gb) }} für {{ money(plan.extra_disk_usd_month) }} pro Monat dazugekauft, was weniger kostet als der nächstgrößere Tarif.{% endif %}
   {% if tool.disk_per_user_gb >= 5 %}
   Dieses Tool braucht {{ u('per_short') }} viel Speicherplatz: Das nächste Upgrade erzwingt eher der Speicher als der Arbeitsspeicher.
   {% endif %}

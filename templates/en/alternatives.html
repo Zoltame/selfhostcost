@@ -55,7 +55,7 @@
 <p>{{ a.tool.sizing_note }}</p>
 <p>
   At {{ ref_label }} it needs {{ gb(a.tco.sizing.ram_gb) }} of memory and {{ gb(a.tco.sizing.disk_gb) }} of disk,
-  which fits the {{ a.tco.plan.plan.name }} at {{ a.tco.plan.provider_name }} for
+  which fits the {{ plan_label(a.tco.plan) }} at {{ a.tco.plan.provider_name }} for
   {{ money(a.tco.plan.price_usd_month) }} a month. Setting it up is roughly {{ a.tco.setup_hours }} hours of work,
   then {{ a.tco.maintenance_hours_month }} hours a month to keep it healthy.
   {% if a.tool.licence_caveat %}<strong>Licence note:</strong> {{ a.tool.licence_caveat }}{% endif %}

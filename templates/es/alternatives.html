@@ -54,7 +54,7 @@
 <p>{{ a.tool.sizing_note }}</p>
 <p>
   Para {{ ref_label }} necesita {{ gb(a.tco.sizing.ram_gb) }} de memoria y {{ gb(a.tco.sizing.disk_gb) }} de disco,
-  lo que cabe en el plan {{ a.tco.plan.plan.name }} de {{ a.tco.plan.provider_name }} por
+  lo que cabe en el plan {{ plan_label(a.tco.plan) }} de {{ a.tco.plan.provider_name }} por
   {{ money(a.tco.plan.price_usd_month) }} al mes. Ponerla en marcha lleva unas {{ hours(a.tco.setup_hours) }} horas,
   y después {{ hours(a.tco.maintenance_hours_month) }} horas al mes de mantenimiento.
   {% if a.tool.licence_caveat %}<strong>Nota sobre la licencia:</strong> {{ a.tool.licence_caveat }}{% endif %}

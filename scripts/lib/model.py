@@ -143,8 +143,11 @@ class PlanChoice:
     provider_slug: str
     provider_name: str
     plan: dict
-    price_usd_month: float
+    price_usd_month: float          # server plus any added volume
     fits_disk: bool
+    extra_disk_gb: float = 0.0      # block storage added on top of the plan's own disk
+    extra_disk_usd_month: float = 0.0
+    server_usd_month: float = 0.0   # the plan alone
 
 
 def priced_providers(ds: Dataset) -> list[dict]:
@@ -159,18 +162,27 @@ def priced_providers(ds: Dataset) -> list[dict]:
 
 
 def cheapest_plan(ds: Dataset, sizing: Sizing) -> PlanChoice | None:
-    """Smallest verified-price plan that satisfies both RAM and disk."""
+    """Cheapest verified-price way to meet both the memory and the disk requirement.
+
+    A plan qualifies on its own when its disk is large enough. Otherwise, when the
+    provider publishes a per-GB price for block storage, the shortfall is bought as
+    a volume and priced in. For storage-heavy tools that is usually far cheaper
+    than the next plan up, and without it those tools have no server at all.
+    """
     best: PlanChoice | None = None
     for prov in priced_providers(ds):
+        per_gb = prov.get("extra_storage_usd_gb_month")
         for plan in prov["plans"]:
             price = plan.get("price_usd_month")
-            if price is None:
+            if price is None or plan["ram_gb"] < sizing.ram_gb:
                 continue
-            if plan["ram_gb"] < sizing.ram_gb:
+            extra_gb = max(0.0, sizing.disk_gb - plan["disk_gb"])
+            if extra_gb and per_gb is None:
                 continue
-            if plan["disk_gb"] < sizing.disk_gb:
-                continue
-            cand = PlanChoice(prov["slug"], prov["name"], plan, float(price), True)
+            extra_usd = round(extra_gb * float(per_gb), 2) if extra_gb else 0.0
+            cand = PlanChoice(prov["slug"], prov["name"], plan, round(float(price) + extra_usd, 2), True,
+                              extra_disk_gb=extra_gb, extra_disk_usd_month=extra_usd,
+                              server_usd_month=float(price))
             if best is None or cand.price_usd_month < best.price_usd_month:
                 best = cand
     return best

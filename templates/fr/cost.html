@@ -7,7 +7,7 @@
 <p class="lead">
   Pour {{ u('who_one' if size.users == 1 else 'who_many', n=size.users) }}, {{ tool.name }} demande
   {{ gb(sizing.ram_gb) }} de mémoire et {{ gb(sizing.disk_gb) }} de disque. Cela tient sur l'offre
-  {{ plan.plan.name }} chez {{ plan.provider_name }} pour {{ money(plan.price_usd_month) }} par mois.
+  {{ plan_label(plan) }} chez {{ plan.provider_name }} pour {{ money(plan.price_usd_month) }} par mois.
   Ajoutez les sauvegardes et le temps d'entretien, et le vrai chiffre est de
   <strong>{{ money(total_month) }} par mois</strong>.
 </p>
@@ -19,7 +19,7 @@
 </ul>
 
 <dl class="figures">
-  <div class="fig"><dt>Serveur</dt><dd>{{ money(plan.price_usd_month) }}<small>{{ plan.plan.name }}, {{ plan.plan.vcpu }} vCPU</small></dd></div>
+  <div class="fig"><dt>Serveur</dt><dd>{{ money(plan.price_usd_month) }}<small>{{ plan_label(plan) }}, {{ plan.plan.vcpu }} vCPU</small></dd></div>
   <div class="fig"><dt>Sauvegardes</dt><dd>{{ money(backup_month) }}<small>snapshots de l'hébergeur</small></dd></div>
   <div class="fig"><dt>Votre temps</dt><dd>{{ money(labour_month) }}<small>{{ hours(maint_hours) }} h par mois à {{ money(cfg.tco_model.engineer_hourly_usd) }}</small></dd></div>
   <div class="fig"><dt>Tout compris</dt><dd>{{ money(total_month) }}<small>par mois</small></dd></div>
@@ -34,12 +34,13 @@
   chacun ajoutent {{ gb(per_user_ram_gb) }}, soit {{ gb(sizing.raw_ram_gb) }}. En ajoutant
   {{ (sizing.headroom_ratio * 100) | round | int }} % de marge pour que la machine ne tourne pas à sa limite, on obtient
   <strong>{{ gb(sizing.ram_gb) }}</strong>, et la plus petite offre qui atteint ce niveau est
-  {{ plan.plan.name }}, avec {{ gb(plan.plan.ram_gb) }}.
+  {{ plan_label(plan) }}, avec {{ gb(plan.plan.ram_gb) }}.
 </p>
 <p>
   Le disque suit la même logique : {{ gb(tool.base_disk_gb) }} au départ, plus
   {{ loc.compact(tool.disk_per_user_gb) }} Go {{ u('per_short') }}, soit <strong>{{ gb(sizing.disk_gb) }}</strong> pour les
   {{ gb(plan.plan.disk_gb) }} inclus dans l'offre.
+  {% if plan.extra_disk_gb %}Le manque est comblé par un volume de {{ gb(plan.extra_disk_gb) }} à {{ money(plan.extra_disk_usd_month) }} par mois, ce qui coûte moins cher que l'offre supérieure.{% endif %}
   {% if tool.disk_per_user_gb >= 5 %}
   Cet outil consomme beaucoup de stockage {{ u('per_short') }} : c'est le disque, plus que la mémoire, qui imposera votre prochaine montée en gamme.
   {% endif %}

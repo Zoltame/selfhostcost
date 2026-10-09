@@ -61,7 +61,7 @@
     <tr>
       <th scope="row">Serveur</th>
       <td class="num">{{ money(ref.server_usd_month) }}</td>
-      <td>{{ ref.plan.plan.name }} chez {{ ref.plan.provider_name }} : {{ ref.plan.plan.vcpu }} vCPU, {{ gb(ref.plan.plan.ram_gb) }} de RAM, {{ gb(ref.plan.plan.disk_gb) }} de disque</td>
+      <td>{{ plan_label(ref.plan) }} chez {{ ref.plan.provider_name }} : {{ ref.plan.plan.vcpu }} vCPU, {{ gb(ref.plan.plan.ram_gb) }} de RAM, {{ gb(ref.plan.plan.disk_gb) }} de disque</td>
     </tr>
     <tr>
       <th scope="row">Sauvegardes</th>
@@ -179,7 +179,7 @@
       <td>{{ saas.verified_on }}</td>
     </tr>
     <tr>
-      <td>{{ ref.plan.provider_name }} {{ ref.plan.plan.name }}</td>
+      <td>{{ ref.plan.provider_name }} {{ plan_label(ref.plan) }}</td>
       <td>{{ money(ref.server_usd_month) }} par mois</td>
       <td><a href="{{ providers[ref.plan.provider_slug].pricing_url }}" rel="nofollow noopener">page tarifaire de l'hébergeur</a></td>
       <td>{{ providers[ref.plan.provider_slug].verified_on }}</td>

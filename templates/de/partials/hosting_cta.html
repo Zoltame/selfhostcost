@@ -5,7 +5,7 @@
   <p>
     Für {{ cta_label }} braucht es {{ gb(sizing_ram) }} Arbeitsspeicher und {{ gb(sizing_disk) }} Speicherplatz.
     Der günstigste passende Tarif unter den Anbietern, deren Preise wir selbst abgelesen haben, ist
-    <strong>{{ cta_plan.plan.name }}</strong> bei {{ cta_plan.provider_name }} für
+    <strong>{{ plan_label(cta_plan) }}</strong> bei {{ cta_plan.provider_name }} für
     {{ money(cta_plan.price_usd_month) }} pro Monat.
   </p>
   <p>

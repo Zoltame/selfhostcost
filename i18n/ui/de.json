@@ -114,6 +114,7 @@
   "404.all_tools": "Alle Tools",
   "404.home": "Startseite",
 
+  "plan.with_volume": "{plan} plus ein Volume mit {gb}",
   "cost.related": "{tool} für {size}",
   "unit.users.every": "jede Teamgröße",
   "unit.users.metered": "Software mit Preis pro Platz",

@@ -5,7 +5,7 @@
   <p>
     Para {{ cta_label }} hacen falta {{ gb(sizing_ram) }} de memoria y {{ gb(sizing_disk) }} de disco. Entre los
     proveedores cuyos precios hemos leído nosotros mismos, el plan más barato que encaja es
-    <strong>{{ cta_plan.plan.name }}</strong> en {{ cta_plan.provider_name }}, por
+    <strong>{{ plan_label(cta_plan) }}</strong> en {{ cta_plan.provider_name }}, por
     {{ money(cta_plan.price_usd_month) }} al mes.
   </p>
   <p>

@@ -129,7 +129,7 @@ class Builder:
             nav_categories=[c for c in self.ds.categories.values() if c["wave"] <= self.wave],
             providers=self.ds.providers, hosting_link=self.hosting_link,
             affiliate_on=self.affiliate_on, lead_form_id=self._lead_form_id(),
-            tracked=self.tracked, disclosure_for=self.disclosure_for,
+            tracked=self.tracked, disclosure_for=self.disclosure_for, plan_label=self.plan_label,
         )
 
     # ---- counting units -------------------------------------------------
@@ -170,6 +170,13 @@ class Builder:
 
     def unit_of(self, category_slug: str) -> dict:
         return self.units[self.ds.categories[category_slug].get("unit", "users")]
+
+    def plan_label(self, choice) -> str:
+        """The plan's name, naming the added volume when the price includes one."""
+        name = choice.plan["name"]
+        if not getattr(choice, "extra_disk_gb", 0):
+            return name
+        return self.loc.t("plan.with_volume", plan=name, gb=self.loc.gb(choice.extra_disk_gb))
 
     def u(self, unit: dict):
         """Template helper: the unit's wording, e.g. u('per') -> 'per active user'."""

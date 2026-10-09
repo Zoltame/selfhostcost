@@ -6,7 +6,7 @@
   <p>
     {{ gb(sizing_ram) }} of memory and {{ gb(sizing_disk) }} of disk is what this needs at
     {{ cta_label }}. The cheapest plan that fits, among the providers whose prices we have read
-    ourselves, is the <strong>{{ cta_plan.plan.name }}</strong> at {{ cta_plan.provider_name }} for
+    ourselves, is the <strong>{{ plan_label(cta_plan) }}</strong> at {{ cta_plan.provider_name }} for
     {{ money(cta_plan.price_usd_month) }} a month.
   </p>
   <p>

@@ -480,8 +480,8 @@
   "published": "2026-09-14"
  },
  "/cost/freescout/250-users/": {
-  "hash": "dfd97e658fdb21a5",
-  "modified": "2026-09-28",
+  "hash": "f0be101641d3c694",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/cost/freescout/5-users/": {
@@ -1745,8 +1745,8 @@
   "published": "2026-09-14"
  },
  "/de/cost/freescout/250-users/": {
-  "hash": "9a42af2a32d4307e",
-  "modified": "2026-09-28",
+  "hash": "61c52b4e429917c1",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/de/cost/freescout/5-users/": {
@@ -2625,8 +2625,8 @@
   "published": "2026-09-14"
  },
  "/de/self-host/freescout/": {
-  "hash": "3680e6c53ce8d658",
-  "modified": "2026-09-28",
+  "hash": "cac0f7a2f993a6af",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/de/self-host/gatus/": {
@@ -2835,8 +2835,8 @@
   "published": "2026-09-14"
  },
  "/de/vs/freshdesk-vs-freescout/": {
-  "hash": "d99a1f6a89d591e9",
-  "modified": "2026-09-28",
+  "hash": "c8c0bf2e20e479f8",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/de/vs/freshdesk-vs-zammad/": {
@@ -2865,8 +2865,8 @@
   "published": "2026-09-14"
  },
  "/de/vs/helpscout-vs-freescout/": {
-  "hash": "e5c9bd3bd22f7199",
-  "modified": "2026-09-28",
+  "hash": "48511374169714d9",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/de/vs/intercom-vs-chatwoot/": {
@@ -3055,8 +3055,8 @@
   "published": "2026-09-14"
  },
  "/de/vs/zendesk-vs-freescout/": {
-  "hash": "7481a7146f9b06e9",
-  "modified": "2026-09-28",
+  "hash": "c0ce7bfa72110c11",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/de/vs/zendesk-vs-zammad/": {
@@ -3550,8 +3550,8 @@
   "published": "2026-09-14"
  },
  "/es/cost/freescout/250-users/": {
-  "hash": "ee6cf57678dea6a5",
-  "modified": "2026-09-28",
+  "hash": "7a0d3d2c7a9b907b",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/es/cost/freescout/5-users/": {
@@ -4430,8 +4430,8 @@
   "published": "2026-09-14"
  },
  "/es/self-host/freescout/": {
-  "hash": "d865fda8e535d055",
-  "modified": "2026-09-28",
+  "hash": "bdaadcdef09ca3c8",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/es/self-host/gatus/": {
@@ -4640,8 +4640,8 @@
   "published": "2026-09-14"
  },
  "/es/vs/freshdesk-vs-freescout/": {
-  "hash": "7da693338845f673",
-  "modified": "2026-09-28",
+  "hash": "9c24bb7a5b11bc74",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/es/vs/freshdesk-vs-zammad/": {
@@ -4670,8 +4670,8 @@
   "published": "2026-09-14"
  },
  "/es/vs/helpscout-vs-freescout/": {
-  "hash": "b6d09ff2c0f9dd2d",
-  "modified": "2026-09-28",
+  "hash": "3ab9c762f49ddf5e",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/es/vs/intercom-vs-chatwoot/": {
@@ -4860,8 +4860,8 @@
   "published": "2026-09-14"
  },
  "/es/vs/zendesk-vs-freescout/": {
-  "hash": "aff0038eb29fa690",
-  "modified": "2026-09-28",
+  "hash": "c581f1f5d57e448f",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/es/vs/zendesk-vs-zammad/": {
@@ -5350,8 +5350,8 @@
   "published": "2026-09-14"
  },
  "/fr/cost/freescout/250-users/": {
-  "hash": "ee29f596ea2231e9",
-  "modified": "2026-09-28",
+  "hash": "46de39d14a115d40",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/fr/cost/freescout/5-users/": {
@@ -6230,8 +6230,8 @@
   "published": "2026-09-14"
  },
  "/fr/self-host/freescout/": {
-  "hash": "d1f85873e2662a20",
-  "modified": "2026-09-28",
+  "hash": "adf5c3d7b9632bf6",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/fr/self-host/gatus/": {
@@ -6440,8 +6440,8 @@
   "published": "2026-09-14"
  },
  "/fr/vs/freshdesk-vs-freescout/": {
-  "hash": "c4d83f532d714ee3",
-  "modified": "2026-09-28",
+  "hash": "5a1082a8299c2e67",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/fr/vs/freshdesk-vs-zammad/": {
@@ -6470,8 +6470,8 @@
   "published": "2026-09-14"
  },
  "/fr/vs/helpscout-vs-freescout/": {
-  "hash": "1f6b249e815bc1bd",
-  "modified": "2026-09-28",
+  "hash": "3f8b1c24f5fdc327",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/fr/vs/intercom-vs-chatwoot/": {
@@ -6660,8 +6660,8 @@
   "published": "2026-09-14"
  },
  "/fr/vs/zendesk-vs-freescout/": {
-  "hash": "e520e69a5d93ba1b",
-  "modified": "2026-09-28",
+  "hash": "e9f3918e0c16e8a6",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/fr/vs/zendesk-vs-zammad/": {
@@ -6760,8 +6760,8 @@
   "published": "2026-09-14"
  },
  "/self-host/freescout/": {
-  "hash": "7515ecdb26e149d4",
-  "modified": "2026-09-28",
+  "hash": "67d0bc443185a7ce",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/self-host/gatus/": {
@@ -6970,8 +6970,8 @@
   "published": "2026-09-14"
  },
  "/vs/freshdesk-vs-freescout/": {
-  "hash": "7a064c51e395eb06",
-  "modified": "2026-09-28",
+  "hash": "8057b4b220e73217",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/vs/freshdesk-vs-zammad/": {
@@ -7000,8 +7000,8 @@
   "published": "2026-09-14"
  },
  "/vs/helpscout-vs-freescout/": {
-  "hash": "30d125181b319f24",
-  "modified": "2026-09-28",
+  "hash": "d013caeba2e4d5df",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/vs/intercom-vs-chatwoot/": {
@@ -7190,8 +7190,8 @@
   "published": "2026-09-14"
  },
  "/vs/zendesk-vs-freescout/": {
-  "hash": "1801a7e94eb4c994",
-  "modified": "2026-09-28",
+  "hash": "15d57c8ff9492da3",
+  "modified": "2026-10-09",
   "published": "2026-09-14"
  },
  "/vs/zendesk-vs-zammad/": {

@@ -114,6 +114,7 @@
   "404.all_tools": "All tools",
   "404.home": "Home",
 
+  "plan.with_volume": "{plan} plus a {gb} volume",
   "cost.related": "{tool} for {size}",
   "unit.users.every": "every team size",
   "unit.users.metered": "per-seat software",

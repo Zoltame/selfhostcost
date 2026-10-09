@@ -61,7 +61,7 @@
     <tr>
       <th scope="row">Server</th>
       <td class="num">{{ money(ref.server_usd_month) }}</td>
-      <td>{{ ref.plan.plan.name }} at {{ ref.plan.provider_name }}: {{ ref.plan.plan.vcpu }} vCPU, {{ gb(ref.plan.plan.ram_gb) }} RAM, {{ gb(ref.plan.plan.disk_gb) }} disk</td>
+      <td>{{ plan_label(ref.plan) }} at {{ ref.plan.provider_name }}: {{ ref.plan.plan.vcpu }} vCPU, {{ gb(ref.plan.plan.ram_gb) }} RAM, {{ gb(ref.plan.plan.disk_gb) }} disk</td>
     </tr>
     <tr>
       <th scope="row">Backups</th>
@@ -169,7 +169,7 @@
       <td>{{ saas.verified_on }}</td>
     </tr>
     <tr>
-      <td>{{ ref.plan.provider_name }} {{ ref.plan.plan.name }}</td>
+      <td>{{ ref.plan.provider_name }} {{ plan_label(ref.plan) }}</td>
       <td>{{ money(ref.server_usd_month) }} per month</td>
       <td><a href="{{ providers[ref.plan.provider_slug].pricing_url }}" rel="nofollow noopener">provider pricing page</a></td>
       <td>{{ providers[ref.plan.provider_slug].verified_on }}</td>

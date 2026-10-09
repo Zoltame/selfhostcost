@@ -186,7 +186,8 @@
     "mixpanel": { "free_tier_note": "L'offre gratuite de Mixpanel couvre jusqu'à 1 million d'événements par mois, sans frais par siège. Sous ce volume, il n'y a aucune licence à économiser : cette comparaison porte sur qui détient les données, pas sur ce qu'elles coûtent." },
     "amplitude": { "free_tier_note": "L'offre gratuite d'Amplitude couvre jusqu'à 2 millions d'événements par mois avec des sièges illimités. Sous ce volume, il n'y a aucune licence à économiser." },
     "datadog": {"free_tier_note": "Datadog propose une offre gratuite jusqu'à 5 serveurs, mais elle ne conserve les métriques qu'un jour, contre 15 mois avec Pro. Ce n'est pas un équivalent pour une supervision dont vous dépendez, donc la comparaison utilise Pro même à 5 serveurs."},
-    "prtg": {"free_tier_note": "PRTG n'est pas un service hébergé : vous l'installez sur votre propre serveur Windows. Son montant ici correspond à la seule licence ; le serveur et le temps nécessaires pour faire tourner PRTG lui-même ne sont pas comptés, ce qui fait paraître PRTG moins cher qu'il ne l'est."}
+    "prtg": {"free_tier_note": "PRTG n'est pas un service hébergé : vous l'installez sur votre propre serveur Windows. Son montant ici correspond à la seule licence ; le serveur et le temps nécessaires pour faire tourner PRTG lui-même ne sont pas comptés, ce qui fait paraître PRTG moins cher qu'il ne l'est."},
+    "google-photos": {"free_tier_note": "L'offre comparée ici est la plus grande que la page publique de Google affichait le 2026-10-09 : 2 To, partageables avec cinq personnes au maximum. Au-delà, la comparaison n'est plus équivalente, car les chiffres d'auto-hébergement dimensionnent le stockage selon ce que l'équipe stocke réellement, alors que l'offre Google reste plafonnée à 2 To. Google vend des offres plus grandes, mais leurs prix n'étaient pas publiés sur cette page."}
   },
 
   "providers": {
