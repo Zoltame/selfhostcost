@@ -58,6 +58,17 @@ YEAR = date.today().year
 # helpers
 # --------------------------------------------------------------------------
 
+def jsonld_faq(faq: list[dict]) -> dict:
+    return {
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": q["q"],
+             "acceptedAnswer": {"@type": "Answer", "text": q["a"]}}
+            for q in faq
+        ],
+    }
+
+
 def jsonld_article(cfg: dict, page: dict, crumbs: list[dict], loc: Locale, multilingual: bool) -> str:
     base_url = cfg["base_url"]
     article = {
@@ -84,6 +95,8 @@ def jsonld_article(cfg: dict, page: dict, crumbs: list[dict], loc: Locale, multi
         },
         article,
     ]
+    if page.get("faq"):
+        graph.append(jsonld_faq(page["faq"]))
     return json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False)
 
 
@@ -463,7 +476,50 @@ class Builder:
             alts.sort(key=lambda a: a["tco"].selfhost_usd_month)
             saas_month, tier, _ = saas_monthly(product, U["ref_n"], self.cfg)
 
+            cheapest = alts[0] if alts else None
+            lightest = min(alts, key=lambda a: (a["tco"].setup_hours, a["tco"].selfhost_usd_month)) if alts else None
+            size_label = U["ref_size"]["label"]
+            faq = []
+            if cheapest:
+                open_spdx = sorted({a["tool"].get("license_spdx") for a in alts
+                                    if a["tool"].get("license_spdx") not in (None, "", "NOASSERTION")})
+                restricted = [a["tool"]["name"] for a in alts
+                              if a["tool"].get("license_spdx") in (None, "", "NOASSERTION")]
+                licences = L.join(open_spdx)
+                faq = [
+                    {"q": L.t("alt.faq.free.q", saas=product["name"]),
+                     "a": L.t("alt.faq.free.a" if not restricted else "alt.faq.free.a_mixed",
+                              n=len(alts), n_open=len(alts) - len(restricted), saas=product["name"],
+                              licences=licences or L.t("alt.faq.licence_unknown"),
+                              restricted=L.join(restricted), n_restricted=len(restricted),
+                              tool=cheapest["tool"]["name"], cost=L.money(cheapest["tco"].selfhost_usd_month),
+                              size=size_label)},
+                    {"q": L.t("alt.faq.cost.q", saas=product["name"]),
+                     "a": L.t("alt.faq.cost.a", saas=product["name"], tier=tier["name"],
+                              cost=L.money(saas_month), size=size_label,
+                              label=self.price_label(product, tier), on=product.get("verified_on") or "")},
+                    {"q": L.t("alt.faq.selfhost.q", tool=cheapest["tool"]["name"]),
+                     "a": L.t("alt.faq.selfhost.a", tool=cheapest["tool"]["name"],
+                              cost=L.money(cheapest["tco"].selfhost_usd_month), size=size_label,
+                              plan=self.plan_label(cheapest["tco"].plan),
+                              provider=cheapest["tco"].plan.provider_name,
+                              server=L.money(cheapest["tco"].server_usd_month),
+                              hours=L.hours(cheapest["tco"].maintenance_hours_month))},
+                    {"q": L.t("alt.faq.breakeven.q", tool=cheapest["tool"]["name"], saas=product["name"]),
+                     "a": L.t("alt.faq.breakeven.a", tool=cheapest["tool"]["name"], saas=product["name"],
+                              months=L.months(cheapest["tco"].breakeven_months),
+                              setup=L.money(cheapest["tco"].setup_usd_once),
+                              total=L.money(abs(cheapest["tco"].savings_total)),
+                              horizon=self.cfg["tco_model"]["horizon_months"])},
+                    {"q": L.t("alt.faq.easiest.q", saas=product["name"]),
+                     "a": L.t("alt.faq.easiest.a", tool=lightest["tool"]["name"],
+                              setup=L.hours(lightest["tco"].setup_hours),
+                              maint=L.hours(lightest["tco"].maintenance_hours_month),
+                              difficulty=L.t("difficulty." + lightest["tool"]["difficulty"]))},
+                ]
+
             page = {
+                "faq": faq,
                 "title": L.t("alt.title", saas=product["name"], year=YEAR),
                 "description": L.t(
                     "alt.description", n=len(alts), saas=product["name"], size=U["ref_size"]["label"],
@@ -478,6 +534,8 @@ class Builder:
             }
             self.write(url, "alternatives.html", {
                 "page": page, "saas": product, "category": cat, "alts": alts, "u": self.u(U),
+                "faq": faq, "cheapest": cheapest, "lightest": lightest,
+                "saas_price_label": self.price_label(product, tier),
                 "ref_label": U["ref_size"]["label"], "saas_month": saas_month,
                 "saas_tier": tier, "saas_fx": self.fx_used(product),
                 "sibling_saas": [s for s in self.ds.saas_in_category(cat["slug"])

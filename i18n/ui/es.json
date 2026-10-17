@@ -64,7 +64,7 @@
   "vs.crumb": "{saas} vs. {tool}",
   "vs.plan_cell": "{plan} ({ram})",
 
-  "alt.title": "Alternativas autoalojadas a {saas}, con su coste real ({year})",
+  "alt.title": "Alternativas de código abierto a {saas}, con costes reales ({year})",
   "alt.description": "{n} alternativas de código abierto a {saas}, cada una calculada para {size} con servidor, copias de seguridad y tiempo de mantenimiento. {saas} cuesta {cost} al mes con ese tamaño de equipo.",
   "alt.crumb": "Alternativas a {saas}",
 
@@ -166,5 +166,30 @@
   "price_label.band_last.hosts": "{price} por servidor a partir de ahí",
   "price_label.free_cap.hosts": "; gratis hasta {n} servidores",
   "price_label.flat_band": "{name}: {price} hasta {cap} usuarios",
-  "price_label.flat_band.hosts": "{name}: {price}, previsto para un máximo de {cap} dispositivos"
+  "price_label.flat_band.hosts": "{name}: {price}, previsto para un máximo de {cap} dispositivos",
+
+  "alt.h1": "Alternativas de código abierto a {saas}, con precios",
+  "alt.faq.heading": "Las preguntas que se hace todo el mundo",
+  "alt.faq.licence_unknown": "sin licencia de código abierto estándar",
+  "alt.faq.free.q": "¿Existe una alternativa de código abierto gratuita a {saas}?",
+  "alt.faq.free.a": "Esta página recoge {n}, y ninguna cuesta licencia: se publican bajo {licences}. Mantenerlas en marcha, en cambio, no es gratis. La más barata, {tool}, cuesta {cost} al mes con {size}, contando el servidor, las copias de seguridad y el tiempo de administración.",
+  "alt.faq.free.a_mixed": "Esta página recoge {n}. {n_open} son de código abierto, publicadas bajo {licences}, sin licencia que pagar. {restricted} publica su código con una licencia propia y no con una de código abierto estándar, así que revisa sus condiciones antes de un uso comercial. Ninguna es gratis de mantener: la más barata, {tool}, cuesta {cost} al mes con {size}, contando el servidor, las copias de seguridad y el tiempo de administración.",
+  "alt.faq.cost.q": "¿Cuánto cuesta {saas}?",
+  "alt.faq.cost.a": "{saas} {tier} cuesta {cost} al mes con {size}: {label}. Esa cifra se leyó en la página de precios del proveedor el {on}.",
+  "alt.faq.selfhost.q": "¿Cuánto cuesta autoalojar {tool}?",
+  "alt.faq.selfhost.a": "{cost} al mes con {size}. Eso incluye {server} del plan {plan} en {provider}, más copias de seguridad y {hours} horas al mes de tu tiempo, valoradas según la tarifa horaria publicada.",
+  "alt.faq.breakeven.q": "¿Cuánto tarda {tool} en salir más barato que {saas}?",
+  "alt.faq.breakeven.a": "{months}, contando {setup} de puesta en marcha inicial. En {horizon} meses la diferencia es de {total}.",
+  "alt.faq.easiest.q": "¿Qué alternativa a {saas} es la más fácil de mantener?",
+  "alt.faq.easiest.a": "{tool}, calificada como {difficulty}: unas {setup} horas de instalación y {maint} horas al mes después.",
+  "alt.verdict": "La forma más barata de sustituir {saas} aquí es {tool}, a {cost} al mes frente a {saas_cost}, con tu tiempo ya contado.",
+  "alt.facts.heading": "Lo que tendrías funcionando",
+  "alt.facts.tool": "Herramienta",
+  "alt.facts.licence": "Licencia",
+  "alt.facts.language": "Escrito en",
+  "alt.facts.setup": "Instalación",
+  "alt.facts.maint": "Mantenimiento",
+  "alt.facts.hours": "{n} h",
+  "alt.facts.hours_month": "{n} h al mes",
+  "alt.facts.stars": "Estrellas en GitHub"
 }

@@ -2,7 +2,7 @@
 {% block content %}
 
 <p class="kicker">{{ category.name }}</p>
-<h1>Selbst gehostete Alternativen zu {{ saas.name }}, mit Preisen</h1>
+<h1>{{ t('alt.h1', saas=saas.name) }}</h1>
 
 <p class="lead">
   {{ alts | length }} {{ 'Open-Source-Tool, das' if alts | length == 1 else 'Open-Source-Tools, die' }}
@@ -10,6 +10,10 @@
   für {{ ref_label }}. Im Tarif {{ saas_tier.name }} kostet {{ saas.name }} bei {{ u('this_size') }}
   {{ money(saas_month) }} pro Monat.
 </p>
+{% if cheapest %}
+<p class="verdict-line"><strong>{{ t('alt.verdict', saas=saas.name, tool=cheapest.tool.name, cost=money(cheapest.tco.selfhost_usd_month), saas_cost=money(saas_month)) }}</strong></p>
+{% endif %}
+
 
 {% if saas.free_tier_note %}
 <div class="note caution">
@@ -79,6 +83,40 @@
 <ul class="linkgrid">
   <li><a href="{{ base }}/category/{{ category.slug }}/">{{ category.name }}: alle Vergleiche</a></li>
   {% for s in sibling_saas %}<li><a href="{{ base }}/alternatives/{{ s.slug }}/">Alternativen zu {{ s.name }}</a></li>{% endfor %}
+
+<h2>{{ t('alt.facts.heading') }}</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr>
+    <th>{{ t('alt.facts.tool') }}</th>
+    <th>{{ t('alt.facts.licence') }}</th>
+    <th>{{ t('alt.facts.language') }}</th>
+    <th class="num">{{ t('alt.facts.setup') }}</th>
+    <th class="num">{{ t('alt.facts.maint') }}</th>
+    <th class="num">{{ t('alt.facts.stars') }}</th>
+  </tr></thead>
+  <tbody>
+  {% for a in alts %}
+    <tr>
+      <th scope="row"><a href="{{ base }}/self-host/{{ a.tool.slug }}/">{{ a.tool.name }}</a></th>
+      <td>{{ a.tool.license | default('see project', true) }}</td>
+      <td>{{ a.tool.language }}</td>
+      <td class="num">{{ t('alt.facts.hours', n=hours(a.tco.setup_hours)) }}</td>
+      <td class="num">{{ t('alt.facts.hours_month', n=hours(a.tco.maintenance_hours_month)) }}</td>
+      <td class="num">{% if a.tool.stars %}{{ number(a.tool.stars) }}{% else %}&mdash;{% endif %}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+
+{% if faq %}
+<h2>{{ t('alt.faq.heading') }}</h2>
+{% for item in faq %}
+<h3>{{ item.q }}</h3>
+<p>{{ item.a }}</p>
+{% endfor %}
+{% endif %}
   <li><a href="{{ base }}/hosting/">Wo Sie es hosten</a></li>
 </ul>
 

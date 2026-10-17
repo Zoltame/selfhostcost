@@ -10,213 +10,213 @@
   "published": "2026-09-14"
  },
  "/alternatives/1password/": {
-  "hash": "ad2e5d97b4d765e6",
-  "modified": "2026-09-28",
+  "hash": "cf6df8081e365dbc",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/alternatives/amplitude/": {
-  "hash": "502119add9a81bdf",
-  "modified": "2026-09-28",
+  "hash": "da9303f798157c31",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/alternatives/asana/": {
-  "hash": "d8cf9c4daff879bb",
-  "modified": "2026-09-28",
+  "hash": "150596f0edacba48",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/alternatives/auth0/": {
-  "hash": "018393dfae3b4d66",
-  "modified": "2026-09-28",
+  "hash": "f304d3bb65da3b5c",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/alternatives/betteruptime/": {
-  "hash": "10fed6fc5a77d5a9",
-  "modified": "2026-09-28",
+  "hash": "df5228ad0247c138",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/alternatives/bitwarden/": {
-  "hash": "efeb3f1dc0b6b250",
-  "modified": "2026-09-28",
+  "hash": "09694b302074bd33",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/alternatives/calendly/": {
-  "hash": "303ec45cb0b3b294",
-  "modified": "2026-10-09",
+  "hash": "e7b0fff2838b280b",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/alternatives/clerk/": {
-  "hash": "a56dbc313f735543",
-  "modified": "2026-09-28",
+  "hash": "bb635669b6068bde",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/alternatives/confluence/": {
-  "hash": "0900f66917dda77e",
-  "modified": "2026-09-28",
+  "hash": "2f31677d2b8b1507",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/alternatives/datadog/": {
-  "hash": "1ae3aea3cc4c2f37",
-  "modified": "2026-10-09",
+  "hash": "b3939fc760bef779",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/alternatives/docusign/": {
-  "hash": "87c354756b9fb4dc",
-  "modified": "2026-10-09",
+  "hash": "942322da21511ada",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/alternatives/dropbox/": {
-  "hash": "829b600e112ef762",
-  "modified": "2026-10-09",
+  "hash": "3fee816a4c95643c",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/alternatives/fathom/": {
-  "hash": "42709bac7fb4e6ba",
-  "modified": "2026-09-28",
+  "hash": "6d9cdba59975db0b",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/alternatives/freshdesk/": {
-  "hash": "e811f002780fb096",
-  "modified": "2026-09-28",
+  "hash": "8306e53f6962c83d",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/alternatives/google-analytics/": {
-  "hash": "2149450ecc16908f",
-  "modified": "2026-09-28",
+  "hash": "470e0f37ae1aea40",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/alternatives/google-photos/": {
-  "hash": "32bd70e97519a217",
-  "modified": "2026-10-09",
+  "hash": "a6d2d538141d6417",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/alternatives/google-workspace/": {
-  "hash": "2755327ffc68c38e",
-  "modified": "2026-10-09",
+  "hash": "d9e8ef8c823da5ab",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/alternatives/helpscout/": {
-  "hash": "a350f7336a5e0306",
-  "modified": "2026-09-28",
+  "hash": "23b138a1726f241a",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/alternatives/hubspot/": {
-  "hash": "1bb29e47d74ae07c",
-  "modified": "2026-10-09",
+  "hash": "f95bf1197bc3d6ae",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/alternatives/intercom/": {
-  "hash": "2232d95933540def",
-  "modified": "2026-09-28",
+  "hash": "408b08f65a69e3c2",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/alternatives/jira/": {
-  "hash": "4d7078f5ec70e825",
-  "modified": "2026-09-28",
+  "hash": "1035bb10e5645f62",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/alternatives/lastpass/": {
-  "hash": "e08a27a503fa60cb",
-  "modified": "2026-09-28",
+  "hash": "8d83756058df4952",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/alternatives/linear/": {
-  "hash": "7d22522a7bc29635",
-  "modified": "2026-09-28",
+  "hash": "a8643dfd61a91ffb",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/alternatives/make/": {
-  "hash": "72739ebc4704d6b3",
-  "modified": "2026-09-28",
+  "hash": "906bdd958939bbba",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/alternatives/mixpanel/": {
-  "hash": "aa0095232e58265e",
-  "modified": "2026-09-28",
+  "hash": "833fba6441ce0d7c",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/alternatives/monday/": {
-  "hash": "1bf5497bdc1455fd",
-  "modified": "2026-09-28",
+  "hash": "e47b305990e58d4a",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/alternatives/notion/": {
-  "hash": "894e46d8c81e0928",
-  "modified": "2026-09-28",
+  "hash": "696dd7c7d440522e",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/alternatives/okta/": {
-  "hash": "b72fb7133f5f188f",
-  "modified": "2026-09-28",
+  "hash": "18effb5b3cfea454",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/alternatives/pingdom/": {
-  "hash": "77eee32a93911d07",
-  "modified": "2026-09-28",
+  "hash": "91a070ea7b1c6cbc",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/alternatives/pipedrive/": {
-  "hash": "d8fec20f9741cd36",
-  "modified": "2026-10-09",
+  "hash": "dc9c76c9a5849751",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/alternatives/prtg/": {
-  "hash": "8ad10b30a9872b4b",
-  "modified": "2026-10-09",
+  "hash": "931d385b72b3f616",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/alternatives/retool/": {
-  "hash": "a0047b04b9f7f8dd",
-  "modified": "2026-09-28",
+  "hash": "f45ad7a899ad069f",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/alternatives/salesforce/": {
-  "hash": "96fff2abf6f18fc8",
-  "modified": "2026-10-09",
+  "hash": "122a0c78e74041cc",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/alternatives/sentry/": {
-  "hash": "0f5f343578a6a3b9",
-  "modified": "2026-10-09",
+  "hash": "20c781dfe60a9610",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/alternatives/slack/": {
-  "hash": "7a519ac5da419bf5",
-  "modified": "2026-10-09",
+  "hash": "97cf0ccedeb687bf",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/alternatives/statuspage/": {
-  "hash": "bc45a390ad53575a",
-  "modified": "2026-09-28",
+  "hash": "ef435d5318aa499f",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/alternatives/surveymonkey/": {
-  "hash": "e80cd692aa170cfd",
-  "modified": "2026-09-28",
+  "hash": "f2591d3dda6c1c3c",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/alternatives/tableau/": {
-  "hash": "440e4247b8b8dcd5",
-  "modified": "2026-09-28",
+  "hash": "3aea53b7fbbf710a",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/alternatives/trello/": {
-  "hash": "139cfb5d9e4012c9",
-  "modified": "2026-09-28",
+  "hash": "5a18c143dcd8b2f4",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/alternatives/typeform/": {
-  "hash": "23cfbc943a05804a",
-  "modified": "2026-09-28",
+  "hash": "6ce7f1fb7747f23c",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/alternatives/zapier/": {
-  "hash": "350e8bfaf78b1a56",
-  "modified": "2026-09-28",
+  "hash": "7ce93cf08aa30a53",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/alternatives/zendesk/": {
-  "hash": "f5a915557d9b1af5",
-  "modified": "2026-09-28",
+  "hash": "0e99cfec8bf8da4f",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/category/analytics/": {
@@ -1065,213 +1065,213 @@
   "published": "2026-09-14"
  },
  "/de/alternatives/1password/": {
-  "hash": "95c28bbfab9671e0",
-  "modified": "2026-09-28",
+  "hash": "482a7d385f9817aa",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/de/alternatives/amplitude/": {
-  "hash": "6d4c8093ccc3867c",
-  "modified": "2026-09-28",
+  "hash": "63df5c282e5040cf",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/de/alternatives/asana/": {
-  "hash": "745aa2c123f34cee",
-  "modified": "2026-09-28",
+  "hash": "0ee4d3497b243e25",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/de/alternatives/auth0/": {
-  "hash": "d2ad882a0d4a73d9",
-  "modified": "2026-09-28",
+  "hash": "147a36d06ed0ad59",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/de/alternatives/betteruptime/": {
-  "hash": "b30cdde9f1b0a17f",
-  "modified": "2026-09-28",
+  "hash": "02e88fa0a1257d17",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/de/alternatives/bitwarden/": {
-  "hash": "b4ab81aa1538b88a",
-  "modified": "2026-09-28",
+  "hash": "8d66e1b470226cc9",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/de/alternatives/calendly/": {
-  "hash": "3587f7ef84d0b191",
-  "modified": "2026-10-09",
+  "hash": "7b65ec9503cb183b",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/de/alternatives/clerk/": {
-  "hash": "1c4a9336f903baa5",
-  "modified": "2026-09-28",
+  "hash": "65bc95646f851c0c",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/de/alternatives/confluence/": {
-  "hash": "cda67edf794b5883",
-  "modified": "2026-09-28",
+  "hash": "9bcd157882c52455",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/de/alternatives/datadog/": {
-  "hash": "05e288d36f4da3a7",
-  "modified": "2026-10-09",
+  "hash": "4a98c8b50e8a5ce9",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/de/alternatives/docusign/": {
-  "hash": "f8f98f7d69be231c",
-  "modified": "2026-10-09",
+  "hash": "a5812b7d38133247",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/de/alternatives/dropbox/": {
-  "hash": "bfdba62f6c44373c",
-  "modified": "2026-10-09",
+  "hash": "de90c8692e33e3eb",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/de/alternatives/fathom/": {
-  "hash": "61a6aa1808a0567c",
-  "modified": "2026-09-28",
+  "hash": "afb9379d509a96be",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/de/alternatives/freshdesk/": {
-  "hash": "1ebb431ba954970f",
-  "modified": "2026-09-28",
+  "hash": "86d204d028966422",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/de/alternatives/google-analytics/": {
-  "hash": "701c1dbba48fb192",
-  "modified": "2026-09-28",
+  "hash": "859925d6ba0b19d1",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/de/alternatives/google-photos/": {
-  "hash": "43d457938d4e4055",
-  "modified": "2026-10-09",
+  "hash": "0ad397b8188c81d7",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/de/alternatives/google-workspace/": {
-  "hash": "7b791f1a3a933c1b",
-  "modified": "2026-10-09",
+  "hash": "dbcf60838d6789b9",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/de/alternatives/helpscout/": {
-  "hash": "2b1abae47a1a5398",
-  "modified": "2026-09-28",
+  "hash": "26e12c6a4d016675",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/de/alternatives/hubspot/": {
-  "hash": "8449ad85cf12ff73",
-  "modified": "2026-10-09",
+  "hash": "7d4848a2d05f79f6",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/de/alternatives/intercom/": {
-  "hash": "c0890cbc7855700c",
-  "modified": "2026-09-28",
+  "hash": "e8804ddb53a39930",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/de/alternatives/jira/": {
-  "hash": "9c4d7d6b0ae49abe",
-  "modified": "2026-09-28",
+  "hash": "e6af94e1be20aad5",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/de/alternatives/lastpass/": {
-  "hash": "f6643c19f2ada16b",
-  "modified": "2026-09-28",
+  "hash": "9af6988c05f300c9",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/de/alternatives/linear/": {
-  "hash": "2f2963c3258d8b93",
-  "modified": "2026-09-28",
+  "hash": "6bb46ac7fc3fdf0a",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/de/alternatives/make/": {
-  "hash": "2cecaad6b6b35e84",
-  "modified": "2026-09-28",
+  "hash": "7e1c741643fe7d98",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/de/alternatives/mixpanel/": {
-  "hash": "6ae266724c115e2b",
-  "modified": "2026-09-28",
+  "hash": "4382341081cb6bf6",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/de/alternatives/monday/": {
-  "hash": "fd29bebd278cbc55",
-  "modified": "2026-09-28",
+  "hash": "fc188c27cbcd06fc",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/de/alternatives/notion/": {
-  "hash": "f415748f477a1d7e",
-  "modified": "2026-09-28",
+  "hash": "f751157256603d9d",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/de/alternatives/okta/": {
-  "hash": "ec43a6cc178eedf8",
-  "modified": "2026-09-28",
+  "hash": "3fe714e983eaf6df",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/de/alternatives/pingdom/": {
-  "hash": "fffdb9201d3b7c08",
-  "modified": "2026-09-28",
+  "hash": "0f0f2404f8cb297b",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/de/alternatives/pipedrive/": {
-  "hash": "341d1e998ced88fb",
-  "modified": "2026-10-09",
+  "hash": "cddfb42e0f4c3b50",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/de/alternatives/prtg/": {
-  "hash": "88c6c5257774ce7f",
-  "modified": "2026-10-09",
+  "hash": "0f5f0bf8614bdd5e",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/de/alternatives/retool/": {
-  "hash": "fce074dda5ec3769",
-  "modified": "2026-09-28",
+  "hash": "b612049156b8604a",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/de/alternatives/salesforce/": {
-  "hash": "a692a8c039f6f10a",
-  "modified": "2026-10-09",
+  "hash": "4f61d020a32c5396",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/de/alternatives/sentry/": {
-  "hash": "51d56a79bbef854f",
-  "modified": "2026-10-09",
+  "hash": "37d1df8ec1f574d3",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/de/alternatives/slack/": {
-  "hash": "b4ac0b13dea0905d",
-  "modified": "2026-10-09",
+  "hash": "5461300f50118a88",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/de/alternatives/statuspage/": {
-  "hash": "7c2e57c704a70616",
-  "modified": "2026-09-28",
+  "hash": "4329199350b96578",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/de/alternatives/surveymonkey/": {
-  "hash": "6f597461da9267ea",
-  "modified": "2026-09-28",
+  "hash": "aec84021ed71ea01",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/de/alternatives/tableau/": {
-  "hash": "afb438ee53cab07c",
-  "modified": "2026-09-28",
+  "hash": "e2091bf1e78e40c2",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/de/alternatives/trello/": {
-  "hash": "d56867b7baa26d4b",
-  "modified": "2026-09-28",
+  "hash": "4b509b3e4ec0a61f",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/de/alternatives/typeform/": {
-  "hash": "13d804749189c58e",
-  "modified": "2026-09-28",
+  "hash": "c8711431de94f89e",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/de/alternatives/zapier/": {
-  "hash": "697042228d2772b4",
-  "modified": "2026-09-28",
+  "hash": "979e02ed4a750d54",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/de/alternatives/zendesk/": {
-  "hash": "358482f176d113bf",
-  "modified": "2026-09-28",
+  "hash": "7827117339033f08",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/de/category/analytics/": {
@@ -2880,213 +2880,213 @@
   "published": "2026-09-14"
  },
  "/es/alternatives/1password/": {
-  "hash": "4e9cdf5649118ba6",
-  "modified": "2026-09-28",
+  "hash": "c331b99302489912",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/es/alternatives/amplitude/": {
-  "hash": "c8c4e55e19993b96",
-  "modified": "2026-09-28",
+  "hash": "2da065bb19ae6898",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/es/alternatives/asana/": {
-  "hash": "d25639fbfb454545",
-  "modified": "2026-09-28",
+  "hash": "eb7f5d0981c634a7",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/es/alternatives/auth0/": {
-  "hash": "b4fd9d390e62bdde",
-  "modified": "2026-09-28",
+  "hash": "8d5face991e2dd14",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/es/alternatives/betteruptime/": {
-  "hash": "2552be5be2fb6e22",
-  "modified": "2026-09-28",
+  "hash": "061a38137dd60561",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/es/alternatives/bitwarden/": {
-  "hash": "92a3efe1391a1ebb",
-  "modified": "2026-09-28",
+  "hash": "1fe523ba3255d08d",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/es/alternatives/calendly/": {
-  "hash": "1b559c57a5f4967a",
-  "modified": "2026-10-09",
+  "hash": "ed3b25d356e5721a",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/es/alternatives/clerk/": {
-  "hash": "3bfdffd671b7c250",
-  "modified": "2026-09-28",
+  "hash": "5899ba26d10cd026",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/es/alternatives/confluence/": {
-  "hash": "02c9d680a86dea60",
-  "modified": "2026-09-28",
+  "hash": "25a389322a1f7091",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/es/alternatives/datadog/": {
-  "hash": "de0c1c2afa9b9e52",
-  "modified": "2026-10-09",
+  "hash": "76c9131f3b7b2e4b",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/es/alternatives/docusign/": {
-  "hash": "5a25193fb4435f14",
-  "modified": "2026-10-09",
+  "hash": "29504e71ae7393ed",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/es/alternatives/dropbox/": {
-  "hash": "eddf508ebf51dbec",
-  "modified": "2026-10-09",
+  "hash": "770d01ef08064291",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/es/alternatives/fathom/": {
-  "hash": "65a509196b30b6f9",
-  "modified": "2026-09-28",
+  "hash": "069f4a1678370243",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/es/alternatives/freshdesk/": {
-  "hash": "3d14a83a958f6df3",
-  "modified": "2026-09-28",
+  "hash": "1ed21ffbead4c6f5",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/es/alternatives/google-analytics/": {
-  "hash": "a530458f840ff465",
-  "modified": "2026-09-28",
+  "hash": "a36626540b24557f",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/es/alternatives/google-photos/": {
-  "hash": "2c93d1765e90cbf3",
-  "modified": "2026-10-09",
+  "hash": "7ba38c5b2ef3de67",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/es/alternatives/google-workspace/": {
-  "hash": "b389802930ee8d6c",
-  "modified": "2026-10-09",
+  "hash": "99e4bfa55b8065e6",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/es/alternatives/helpscout/": {
-  "hash": "befec2dd5f4ab13e",
-  "modified": "2026-09-28",
+  "hash": "114671ef7b3a0138",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/es/alternatives/hubspot/": {
-  "hash": "13da87f8807b79f9",
-  "modified": "2026-10-09",
+  "hash": "3d100fc64585e8ab",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/es/alternatives/intercom/": {
-  "hash": "bcded954d8eff3d5",
-  "modified": "2026-09-28",
+  "hash": "df8c10fdf8a6b702",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/es/alternatives/jira/": {
-  "hash": "7a51ee057b45d3ee",
-  "modified": "2026-09-28",
+  "hash": "72e718e2399ff12a",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/es/alternatives/lastpass/": {
-  "hash": "33c397b9d36575a7",
-  "modified": "2026-09-28",
+  "hash": "7e76d975a8e4b07a",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/es/alternatives/linear/": {
-  "hash": "533fa4ff8af1335b",
-  "modified": "2026-09-28",
+  "hash": "5622f11953f604bd",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/es/alternatives/make/": {
-  "hash": "085982853ac266bf",
-  "modified": "2026-09-28",
+  "hash": "a919d08d385fd519",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/es/alternatives/mixpanel/": {
-  "hash": "a8762bcfbbea807d",
-  "modified": "2026-09-28",
+  "hash": "2957f72bcd0ea43e",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/es/alternatives/monday/": {
-  "hash": "ac2a2aad5b3146de",
-  "modified": "2026-09-28",
+  "hash": "9256f3a8824bd8a1",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/es/alternatives/notion/": {
-  "hash": "93cd686f9fb8caa0",
-  "modified": "2026-09-28",
+  "hash": "d4b4d3d749ccc8e6",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/es/alternatives/okta/": {
-  "hash": "93f184713fdc3674",
-  "modified": "2026-09-28",
+  "hash": "00dd1d9e5a112c77",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/es/alternatives/pingdom/": {
-  "hash": "1ad84e8f99a63a0f",
-  "modified": "2026-09-28",
+  "hash": "0e8c4491964d26a1",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/es/alternatives/pipedrive/": {
-  "hash": "ad53ea6f43627b31",
-  "modified": "2026-10-09",
+  "hash": "ecd1918bd8ba52eb",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/es/alternatives/prtg/": {
-  "hash": "2fa9a9bdff28cefa",
-  "modified": "2026-10-09",
+  "hash": "d7ed5aeaa665b2e6",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/es/alternatives/retool/": {
-  "hash": "30c45f526b6049e1",
-  "modified": "2026-09-28",
+  "hash": "9f39c7bd0ac854e6",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/es/alternatives/salesforce/": {
-  "hash": "bbadf47ba65fa777",
-  "modified": "2026-10-09",
+  "hash": "2771720a603cbfb3",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/es/alternatives/sentry/": {
-  "hash": "cd3bd00efd4057e6",
-  "modified": "2026-10-09",
+  "hash": "ccd14e3a6e226fac",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/es/alternatives/slack/": {
-  "hash": "04521fb2be08f120",
-  "modified": "2026-10-09",
+  "hash": "02557ef2875bcf67",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/es/alternatives/statuspage/": {
-  "hash": "ccc566e1b81e6679",
-  "modified": "2026-09-28",
+  "hash": "4b124d28ce6944e5",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/es/alternatives/surveymonkey/": {
-  "hash": "def4a7ca731a6c32",
-  "modified": "2026-09-28",
+  "hash": "e984e2b8856c6ef4",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/es/alternatives/tableau/": {
-  "hash": "e391dbd0940c522d",
-  "modified": "2026-09-28",
+  "hash": "fb9f99b7a846d2aa",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/es/alternatives/trello/": {
-  "hash": "a806a17d21792dc5",
-  "modified": "2026-09-28",
+  "hash": "03e505fb5ef77212",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/es/alternatives/typeform/": {
-  "hash": "c110ab376eb9e350",
-  "modified": "2026-09-28",
+  "hash": "303a602423875cec",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/es/alternatives/zapier/": {
-  "hash": "bcc33bdf9f01a563",
-  "modified": "2026-09-28",
+  "hash": "19f5d570bab82cd9",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/es/alternatives/zendesk/": {
-  "hash": "2a48cf658146570e",
-  "modified": "2026-09-28",
+  "hash": "c0a68004267f4495",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/es/category/analytics/": {
@@ -4690,213 +4690,213 @@
   "published": "2026-09-14"
  },
  "/fr/alternatives/1password/": {
-  "hash": "aa2659abebb515b0",
-  "modified": "2026-09-28",
+  "hash": "832596b640a477d6",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/fr/alternatives/amplitude/": {
-  "hash": "5921d842a44cc0e0",
-  "modified": "2026-09-28",
+  "hash": "86a4bd495c2392fc",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/fr/alternatives/asana/": {
-  "hash": "609aa2c705ec7a84",
-  "modified": "2026-09-28",
+  "hash": "85bb53978adf4d09",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/fr/alternatives/auth0/": {
-  "hash": "1bc74d076197eb12",
-  "modified": "2026-09-28",
+  "hash": "26147f7c59cee25a",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/fr/alternatives/betteruptime/": {
-  "hash": "c128f71d893bdb55",
-  "modified": "2026-09-28",
+  "hash": "f3700ea902d291f5",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/fr/alternatives/bitwarden/": {
-  "hash": "846f184e1c98698d",
-  "modified": "2026-09-28",
+  "hash": "b7fa4382a95ec531",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/fr/alternatives/calendly/": {
-  "hash": "91f0d4ecf86d86fe",
-  "modified": "2026-10-09",
+  "hash": "248d83a67cea08fc",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/fr/alternatives/clerk/": {
-  "hash": "a041e09b22d5320c",
-  "modified": "2026-09-28",
+  "hash": "4a531bf2a63a1338",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/fr/alternatives/confluence/": {
-  "hash": "00518fbb1bf18ce5",
-  "modified": "2026-09-28",
+  "hash": "e417aae793661095",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/fr/alternatives/datadog/": {
-  "hash": "64dfe3e8424bad32",
-  "modified": "2026-10-09",
+  "hash": "9fe6d416529baa2d",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/fr/alternatives/docusign/": {
-  "hash": "dcd3e5c196baaa6f",
-  "modified": "2026-10-09",
+  "hash": "161a560b37e820e9",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/fr/alternatives/dropbox/": {
-  "hash": "df0a2f5ed245ade9",
-  "modified": "2026-10-09",
+  "hash": "1e36306b955030cc",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/fr/alternatives/fathom/": {
-  "hash": "c64498b334a61613",
-  "modified": "2026-09-28",
+  "hash": "17167a319cae67e4",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/fr/alternatives/freshdesk/": {
-  "hash": "8bc7b03b94b717cc",
-  "modified": "2026-09-28",
+  "hash": "e1fb1a197f7e6b58",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/fr/alternatives/google-analytics/": {
-  "hash": "ff3354cfa139e085",
-  "modified": "2026-09-28",
+  "hash": "f74578623e6073e1",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/fr/alternatives/google-photos/": {
-  "hash": "8dc5481a28721189",
-  "modified": "2026-10-09",
+  "hash": "daea923eafc5d07a",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/fr/alternatives/google-workspace/": {
-  "hash": "a01c08d6c9f3382a",
-  "modified": "2026-10-09",
+  "hash": "9cba8ad6b781dde9",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/fr/alternatives/helpscout/": {
-  "hash": "1ed96990c583b75e",
-  "modified": "2026-09-28",
+  "hash": "64ac38789e5dfa08",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/fr/alternatives/hubspot/": {
-  "hash": "7dbad7c289e68bd1",
-  "modified": "2026-10-09",
+  "hash": "43ba718fd4d7cd96",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/fr/alternatives/intercom/": {
-  "hash": "bdafac9b0b01934f",
-  "modified": "2026-09-28",
+  "hash": "d2b5063af98db62f",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/fr/alternatives/jira/": {
-  "hash": "ec57826ef1a96972",
-  "modified": "2026-09-28",
+  "hash": "2685cea6444b1bf0",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/fr/alternatives/lastpass/": {
-  "hash": "987bb063e1d5273f",
-  "modified": "2026-09-28",
+  "hash": "c714666351577be8",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/fr/alternatives/linear/": {
-  "hash": "910453f633671931",
-  "modified": "2026-09-28",
+  "hash": "247c16c68cce8f69",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/fr/alternatives/make/": {
-  "hash": "af462ea662df5308",
-  "modified": "2026-09-28",
+  "hash": "3481cfe3397557b8",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/fr/alternatives/mixpanel/": {
-  "hash": "01c1a1d77ab26c5b",
-  "modified": "2026-09-28",
+  "hash": "e53b274d1ffa1b66",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/fr/alternatives/monday/": {
-  "hash": "c6d5439966b712b9",
-  "modified": "2026-09-28",
+  "hash": "cb05d4da95ef9e48",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/fr/alternatives/notion/": {
-  "hash": "4b4716f9ad80b6bb",
-  "modified": "2026-09-28",
+  "hash": "8c645d3e6d9add1b",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/fr/alternatives/okta/": {
-  "hash": "6b09189d9b7e64ae",
-  "modified": "2026-09-28",
+  "hash": "822308f0cc1b87fa",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/fr/alternatives/pingdom/": {
-  "hash": "6507e7548ed2ca85",
-  "modified": "2026-09-28",
+  "hash": "028803412a87855b",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/fr/alternatives/pipedrive/": {
-  "hash": "8ba2dee0a28b8ce9",
-  "modified": "2026-10-09",
+  "hash": "01a9afcf69e51037",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/fr/alternatives/prtg/": {
-  "hash": "175e0f9fcd1c4377",
-  "modified": "2026-10-09",
+  "hash": "5309d10cd832b5ea",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/fr/alternatives/retool/": {
-  "hash": "e673b3ec4abe92c4",
-  "modified": "2026-09-28",
+  "hash": "a05d456fab1c30cc",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/fr/alternatives/salesforce/": {
-  "hash": "06990452ef67a0f3",
-  "modified": "2026-10-09",
+  "hash": "fce1fe6ef43d435a",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/fr/alternatives/sentry/": {
-  "hash": "6a57f44cf1b9831e",
-  "modified": "2026-10-09",
+  "hash": "b4fc2cfad21878af",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/fr/alternatives/slack/": {
-  "hash": "97e9b43b33a8bcd6",
-  "modified": "2026-10-09",
+  "hash": "f2b3509c18117e11",
+  "modified": "2026-10-17",
   "published": "2026-10-09"
  },
  "/fr/alternatives/statuspage/": {
-  "hash": "03dc2409a02651d0",
-  "modified": "2026-09-28",
+  "hash": "95c96092e7759c8b",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/fr/alternatives/surveymonkey/": {
-  "hash": "d8f3d7d713813d2b",
-  "modified": "2026-09-28",
+  "hash": "1d57217a0ed60873",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/fr/alternatives/tableau/": {
-  "hash": "da3a3757725fb8c8",
-  "modified": "2026-09-28",
+  "hash": "90cfe36d8414c50e",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/fr/alternatives/trello/": {
-  "hash": "a877cf3822a6a657",
-  "modified": "2026-09-28",
+  "hash": "f8fa66dde772b605",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/fr/alternatives/typeform/": {
-  "hash": "47c2c4d82b1091e6",
-  "modified": "2026-09-28",
+  "hash": "6dbb3d6f115b5cdf",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/fr/alternatives/zapier/": {
-  "hash": "e2b22fdc0ef6248b",
-  "modified": "2026-09-28",
+  "hash": "8821687d504c491d",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/fr/alternatives/zendesk/": {
-  "hash": "0668cd3af62b7eae",
-  "modified": "2026-09-28",
+  "hash": "c4fc6eeaf7e8a18c",
+  "modified": "2026-10-17",
   "published": "2026-09-14"
  },
  "/fr/category/analytics/": {

@@ -64,7 +64,7 @@
   "vs.crumb": "{saas} vs. {tool}",
   "vs.plan_cell": "{plan} ({ram})",
 
-  "alt.title": "Selbst gehostete Alternativen zu {saas} mit echten Kosten ({year})",
+  "alt.title": "Open-Source-Alternativen zu {saas}, mit echten Kosten ({year})",
   "alt.description": "{n} Open-Source-Alternativen zu {saas}, jeweils für {size} berechnet, inklusive Server, Backups und Wartungszeit. {saas} kostet bei dieser Teamgröße {cost} pro Monat.",
   "alt.crumb": "Alternativen zu {saas}",
 
@@ -160,5 +160,30 @@
   "price_label.band_last.hosts": "{price} pro Server darüber",
   "price_label.free_cap.hosts": "; kostenlos für bis zu {n} Server",
   "price_label.flat_band": "{name}: {price} für bis zu {cap} Nutzer",
-  "price_label.flat_band.hosts": "{name}: {price}, ausgelegt für bis zu {cap} Geräte"
+  "price_label.flat_band.hosts": "{name}: {price}, ausgelegt für bis zu {cap} Geräte",
+
+  "alt.h1": "Open-Source-Alternativen zu {saas}, durchgerechnet",
+  "alt.faq.heading": "Fragen, die wirklich gestellt werden",
+  "alt.faq.licence_unknown": "keine gängige Open-Source-Lizenz",
+  "alt.faq.free.q": "Gibt es eine kostenlose Open-Source-Alternative zu {saas}?",
+  "alt.faq.free.a": "Diese Seite zeigt {n} davon, und keine kostet Lizenzgebühren: Sie stehen unter {licences}. Der Betrieb ist deshalb aber nicht kostenlos. Die günstigste, {tool}, kostet {cost} pro Monat bei {size}, wenn Server, Backups und die Zeit für die Betreuung eingerechnet sind.",
+  "alt.faq.free.a_mixed": "Diese Seite zeigt {n} davon. {n_open} sind Open Source, veröffentlicht unter {licences}, ohne Lizenzkosten. {restricted} liefert den Quellcode unter einer eigenen statt einer gängigen Open-Source-Lizenz aus; prüfen Sie die Bedingungen vor kommerzieller Nutzung. Kostenlos im Betrieb ist keine davon: Die günstigste, {tool}, kostet {cost} pro Monat bei {size}, wenn Server, Backups und die Zeit für die Betreuung eingerechnet sind.",
+  "alt.faq.cost.q": "Was kostet {saas}?",
+  "alt.faq.cost.a": "{saas} {tier} kostet {cost} pro Monat bei {size}: {label}. Diese Zahl wurde am {on} von der Preisseite des Anbieters abgelesen.",
+  "alt.faq.selfhost.q": "Was kostet es, {tool} selbst zu hosten?",
+  "alt.faq.selfhost.a": "{cost} pro Monat bei {size}. Darin stecken {server} für den Tarif {plan} bei {provider}, dazu Backups und {hours} Stunden Ihrer eigenen Zeit pro Monat, bewertet zum veröffentlichten Stundensatz.",
+  "alt.faq.breakeven.q": "Ab wann ist {tool} günstiger als {saas}?",
+  "alt.faq.breakeven.a": "{months}, inklusive {setup} für die Ersteinrichtung. Über {horizon} Monate beträgt der Unterschied {total}.",
+  "alt.faq.easiest.q": "Welche {saas}-Alternative lässt sich am einfachsten betreiben?",
+  "alt.faq.easiest.a": "{tool}, eingestuft als {difficulty}: etwa {setup} Stunden Einrichtung und danach {maint} Stunden pro Monat.",
+  "alt.verdict": "Am günstigsten ersetzen Sie {saas} hier durch {tool}: {cost} pro Monat gegenüber {saas_cost}, Ihre eigene Zeit bereits eingerechnet.",
+  "alt.facts.heading": "Was Sie betreiben würden",
+  "alt.facts.tool": "Tool",
+  "alt.facts.licence": "Lizenz",
+  "alt.facts.language": "Geschrieben in",
+  "alt.facts.setup": "Einrichtung",
+  "alt.facts.maint": "Pflege",
+  "alt.facts.hours": "{n} Std.",
+  "alt.facts.hours_month": "{n} Std. pro Monat",
+  "alt.facts.stars": "GitHub-Sterne"
 }
