@@ -89,6 +89,16 @@ class Locale:
             raise MissingTranslation(f"no string for key '{key}' in any language")
         return text.format(**kw) if kw else text
 
+    def hours_phrase(self, v: float) -> str:
+        """e.g. 1.5 hours, 1,5 heure, 1,5 Stunden. French takes the singular below two."""
+        return self.t("hours.one" if self.lang == "fr" and float(v) < 2 else "hours.n", n=self.compact(v))
+
+    def of(self, name: str) -> str:
+        """French needs "d'Outline" but "de Nextcloud"; other languages take the name as is."""
+        if self.lang != "fr":
+            return name
+        return ("d'" if name[:1].lower() in "aeiouyh" else "de ") + name
+
     def join(self, items: list[str]) -> str:
         return self.t("list.sep").join(items)
 

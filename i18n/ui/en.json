@@ -171,11 +171,11 @@
   "alt.faq.cost.q": "How much does {saas} cost?",
   "alt.faq.cost.a": "{saas} {tier} costs {cost} a month at {size}: {label}. That figure was read from the vendor's own pricing page on {on}.",
   "alt.faq.selfhost.q": "What does it cost to self-host {tool}?",
-  "alt.faq.selfhost.a": "{cost} a month at {size}. That is {server} for the {plan} at {provider}, plus backups, plus {hours} hours a month of your own time priced at the published hourly rate.",
+  "alt.faq.selfhost.a": "{cost} a month at {size}. That is {server} for the {plan} at {provider}, plus backups, plus {hours} a month of your own time priced at the published hourly rate.",
   "alt.faq.breakeven.q": "How long before {tool} is cheaper than {saas}?",
   "alt.faq.breakeven.a": "{months}, counting {setup} of first-time setup. Over {horizon} months the difference is {total}.",
   "alt.faq.easiest.q": "Which {saas} alternative is the easiest to run?",
-  "alt.faq.easiest.a": "{tool}, rated {difficulty}: about {setup} hours to set up and {maint} hours a month afterwards.",
+  "alt.faq.easiest.a": "{tool}, rated {difficulty}: about {setup} to set up and {maint} afterwards.",
   "alt.verdict": "The cheapest way to replace {saas} here is {tool}, at {cost} a month against {saas_cost}, with your own time already counted.",
   "alt.facts.heading": "What you would be running",
   "alt.facts.tool": "Tool",
@@ -185,5 +185,22 @@
   "alt.facts.maint": "Upkeep",
   "alt.facts.hours": "{n} h",
   "alt.facts.hours_month": "{n} h a month",
-  "alt.facts.stars": "GitHub stars"
+  "alt.facts.stars": "GitHub stars",
+
+  "vs.faq.heading": "Questions people actually ask",
+  "vs.faq.saas.q": "How much does {saas} cost?",
+  "vs.faq.saas.a": "{saas} {tier} costs {cost} a month at {size}: {label}. That figure was read from the vendor's own pricing page on {on}.",
+  "vs.faq.selfhost.q": "What does it cost to self-host {tool}?",
+  "vs.faq.selfhost.a": "{cost} a month at {size}: {server} for the {plan} at {provider}, {backups} of backups, and {labour} for the {hours} a month it takes to look after.",
+  "vs.faq.cheaper.q": "Is {tool} cheaper than {saas}?",
+  "vs.faq.cheaper.a_yes": "Yes, after {months}, once {setup} of first-time setup is counted. Over {horizon} months the difference is {total} in favour of self-hosting.",
+  "vs.faq.cheaper.a_no": "No. At every team size on this page, {saas} costs less than running {tool} yourself once your time is priced in; over {horizon} months self-hosting costs {total} more. Self-hosting it buys control over the data, not savings.",
+  "vs.faq.cheaper.a_from": "Not at {size}, where self-hosting costs {total} more over three years, but it becomes cheaper from {flip} upwards.",
+  "vs.faq.server.q": "What server does {tool} need?",
+  "vs.faq.server.a": "At {size}, {ram} of memory and {disk} of disk. The cheapest plan that fits, among the providers whose prices we have read, is the {plan} at {provider} for {server} a month.",
+  "vs.faq.effort.q": "How much work is {tool} to run?",
+  "vs.faq.effort.a": "It is rated {difficulty}: about {setup} to set up and {maint} a month afterwards, priced at {rate} an hour in the figures above.",
+
+  "hours.one": "{n} hour",
+  "hours.n": "{n} hours"
 }

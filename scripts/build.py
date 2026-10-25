@@ -425,7 +425,50 @@ class Builder:
                     "delta_pos": r.savings_total > 0,
                 })
 
+            flips = next((r for r in rows if r["delta_pos"]), None)
+            faq = [
+                {"q": L.t("vs.faq.saas.q", saas=product["name"]),
+                 "a": L.t("vs.faq.saas.a", saas=product["name"], tier=ref.saas_tier["name"],
+                          cost=L.money(ref.saas_usd_month), size=U["ref_size"]["label"],
+                          label=self.price_label(product, ref.saas_tier),
+                          on=product.get("verified_on") or "")},
+                {"q": L.t("vs.faq.selfhost.q", tool=tool["name"], of_tool=L.of(tool["name"])),
+                 "a": L.t("vs.faq.selfhost.a", tool=tool["name"], cost=L.money(ref.selfhost_usd_month),
+                          size=U["ref_size"]["label"], server=L.money(ref.server_usd_month),
+                          plan=self.plan_label(ref.plan), provider=ref.plan.provider_name,
+                          backups=L.money(ref.backup_usd_month), labour=L.money(ref.labour_usd_month),
+                          hours=L.hours_phrase(ref.maintenance_hours_month))},
+                {"q": L.t("vs.faq.cheaper.q", tool=tool["name"], saas=product["name"]),
+                 "a": (L.t("vs.faq.cheaper.a_yes", tool=tool["name"], saas=product["name"],
+                           months=L.months(ref.breakeven_months), setup=L.money(ref.setup_usd_once),
+                           total=L.money(abs(ref.savings_total)),
+                           horizon=self.cfg["tco_model"]["horizon_months"])
+                       if ref.savings_total > 0 else
+                       L.t("vs.faq.cheaper.a_no", tool=tool["name"], saas=product["name"],
+                           size=U["ref_size"]["label"], total=L.money(abs(ref.savings_total)),
+                           horizon=self.cfg["tco_model"]["horizon_months"],
+                           flip=flips["label"] if flips else None)
+                       if not flips else
+                       L.t("vs.faq.cheaper.a_from", tool=tool["name"], saas=product["name"],
+                           flip=flips["label"], size=U["ref_size"]["label"],
+                           total=L.money(abs(ref.savings_total))))},
+                {"q": L.t("vs.faq.server.q", tool=tool["name"]),
+                 "a": L.t("vs.faq.server.a", tool=tool["name"], size=U["ref_size"]["label"],
+                          ram=L.gb(ref.sizing.ram_gb), disk=L.gb(ref.sizing.disk_gb),
+                          plan=self.plan_label(ref.plan), provider=ref.plan.provider_name,
+                          server=L.money(ref.server_usd_month))},
+                {"q": L.t("vs.faq.effort.q", tool=tool["name"]),
+                 "a": L.t("vs.faq.effort.a", tool=tool["name"],
+                          difficulty=L.t("difficulty." + tool["difficulty"]),
+                          setup=L.hours_phrase(ref.setup_hours), maint=L.hours_phrase(ref.maintenance_hours_month),
+                          rate=L.money(self.cfg["tco_model"]["engineer_hourly_usd"]))},
+            ]
+
+            for item in faq:
+                item["a"] = item["a"][:1].upper() + item["a"][1:]
+
             page = {
+                "faq": faq,
                 "title": L.t("vs.title", saas=product["name"], tool=tool["name"], size=U["ref_size"]["label"], year=YEAR),
                 "description": self.ut(
                     "vs.description", U, saas=product["name"], tool=tool["name"], size=U["ref_size"]["label"],
@@ -446,7 +489,7 @@ class Builder:
                 "saas_price_label": self.price_label(product, ref.saas_tier),
                 "fx_used": self.fx_used(product),
                 "siblings": [s for s in by_cat.get(tool["category"], []) if s["url"] != url][:self.links["vs_siblings"]],
-                "u": self.u(U),
+                "u": self.u(U), "faq": faq,
                 **self.hosting_ctx(tool, U["ref_n"], U["ref_size"]["label"]),
             }
             self.write(url, "vs.html", ctx, "0.9")
@@ -498,13 +541,14 @@ class Builder:
                      "a": L.t("alt.faq.cost.a", saas=product["name"], tier=tier["name"],
                               cost=L.money(saas_month), size=size_label,
                               label=self.price_label(product, tier), on=product.get("verified_on") or "")},
-                    {"q": L.t("alt.faq.selfhost.q", tool=cheapest["tool"]["name"]),
+                    {"q": L.t("alt.faq.selfhost.q", tool=cheapest["tool"]["name"],
+                              of_tool=L.of(cheapest["tool"]["name"])),
                      "a": L.t("alt.faq.selfhost.a", tool=cheapest["tool"]["name"],
                               cost=L.money(cheapest["tco"].selfhost_usd_month), size=size_label,
                               plan=self.plan_label(cheapest["tco"].plan),
                               provider=cheapest["tco"].plan.provider_name,
                               server=L.money(cheapest["tco"].server_usd_month),
-                              hours=L.hours(cheapest["tco"].maintenance_hours_month))},
+                              hours=L.hours_phrase(cheapest["tco"].maintenance_hours_month))},
                     {"q": L.t("alt.faq.breakeven.q", tool=cheapest["tool"]["name"], saas=product["name"]),
                      "a": L.t("alt.faq.breakeven.a", tool=cheapest["tool"]["name"], saas=product["name"],
                               months=L.months(cheapest["tco"].breakeven_months),
@@ -513,10 +557,13 @@ class Builder:
                               horizon=self.cfg["tco_model"]["horizon_months"])},
                     {"q": L.t("alt.faq.easiest.q", saas=product["name"]),
                      "a": L.t("alt.faq.easiest.a", tool=lightest["tool"]["name"],
-                              setup=L.hours(lightest["tco"].setup_hours),
-                              maint=L.hours(lightest["tco"].maintenance_hours_month),
+                              setup=L.hours_phrase(lightest["tco"].setup_hours),
+                              maint=L.hours_phrase(lightest["tco"].maintenance_hours_month),
                               difficulty=L.t("difficulty." + lightest["tool"]["difficulty"]))},
                 ]
+
+            for item in faq:
+                item["a"] = item["a"][:1].upper() + item["a"][1:]
 
             page = {
                 "faq": faq,

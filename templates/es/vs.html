@@ -166,6 +166,14 @@
 
 {% include "partials/lead_capture.html" %}
 
+{% if faq %}
+<h2>{{ t('vs.faq.heading') }}</h2>
+{% for item in faq %}
+<h3>{{ item.q }}</h3>
+<p>{{ item.a }}</p>
+{% endfor %}
+{% endif %}
+
 <h2>Cada cifra de esta página y su origen</h2>
 <div class="tablewrap">
 <table>

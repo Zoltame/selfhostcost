@@ -177,11 +177,11 @@
   "alt.faq.cost.q": "¿Cuánto cuesta {saas}?",
   "alt.faq.cost.a": "{saas} {tier} cuesta {cost} al mes con {size}: {label}. Esa cifra se leyó en la página de precios del proveedor el {on}.",
   "alt.faq.selfhost.q": "¿Cuánto cuesta autoalojar {tool}?",
-  "alt.faq.selfhost.a": "{cost} al mes con {size}. Eso incluye {server} del plan {plan} en {provider}, más copias de seguridad y {hours} horas al mes de tu tiempo, valoradas según la tarifa horaria publicada.",
+  "alt.faq.selfhost.a": "{cost} al mes con {size}. Eso incluye {server} del plan {plan} en {provider}, más copias de seguridad y {hours} al mes de tu tiempo, valoradas según la tarifa horaria publicada.",
   "alt.faq.breakeven.q": "¿Cuánto tarda {tool} en salir más barato que {saas}?",
   "alt.faq.breakeven.a": "{months}, contando {setup} de puesta en marcha inicial. En {horizon} meses la diferencia es de {total}.",
   "alt.faq.easiest.q": "¿Qué alternativa a {saas} es la más fácil de mantener?",
-  "alt.faq.easiest.a": "{tool}, calificada como {difficulty}: unas {setup} horas de instalación y {maint} horas al mes después.",
+  "alt.faq.easiest.a": "{tool}, calificada como {difficulty}: unas {setup} de instalación y {maint} al mes después.",
   "alt.verdict": "La forma más barata de sustituir {saas} aquí es {tool}, a {cost} al mes frente a {saas_cost}, con tu tiempo ya contado.",
   "alt.facts.heading": "Lo que tendrías funcionando",
   "alt.facts.tool": "Herramienta",
@@ -191,5 +191,22 @@
   "alt.facts.maint": "Mantenimiento",
   "alt.facts.hours": "{n} h",
   "alt.facts.hours_month": "{n} h al mes",
-  "alt.facts.stars": "Estrellas en GitHub"
+  "alt.facts.stars": "Estrellas en GitHub",
+
+  "vs.faq.heading": "Las preguntas que se hace todo el mundo",
+  "vs.faq.saas.q": "¿Cuánto cuesta {saas}?",
+  "vs.faq.saas.a": "{saas} {tier} cuesta {cost} al mes con {size}: {label}. Esa cifra se leyó en la página de precios del proveedor el {on}.",
+  "vs.faq.selfhost.q": "¿Cuánto cuesta autoalojar {tool}?",
+  "vs.faq.selfhost.a": "{cost} al mes con {size}: {server} del plan {plan} en {provider}, {backups} de copias de seguridad y {labour} por las {hours} al mes que exige mantenerlo.",
+  "vs.faq.cheaper.q": "¿Sale más barato {tool} que {saas}?",
+  "vs.faq.cheaper.a_yes": "Sí, a partir de {months}, contando {setup} de puesta en marcha inicial. En {horizon} meses la diferencia es de {total} a favor del autoalojamiento.",
+  "vs.faq.cheaper.a_no": "No. Con cualquier tamaño de equipo de esta página, {saas} cuesta menos que mantener {tool} por tu cuenta una vez contado tu tiempo; en {horizon} meses el autoalojamiento cuesta {total} más. Lo que aporta es control sobre los datos, no ahorro.",
+  "vs.faq.cheaper.a_from": "Con {size} no: el autoalojamiento cuesta {total} más en tres años, pero sale más barato a partir de {flip}.",
+  "vs.faq.server.q": "¿Qué servidor necesita {tool}?",
+  "vs.faq.server.a": "Con {size}, {ram} de memoria y {disk} de disco. El plan más barato que encaja, entre los proveedores cuyos precios hemos leído, es {plan} en {provider}, por {server} al mes.",
+  "vs.faq.effort.q": "¿Cuánto trabajo da mantener {tool}?",
+  "vs.faq.effort.a": "Está calificado como {difficulty}: unas {setup} de instalación y {maint} al mes después, valoradas a {rate} la hora en las cifras de arriba.",
+
+  "hours.one": "{n} hora",
+  "hours.n": "{n} horas"
 }
