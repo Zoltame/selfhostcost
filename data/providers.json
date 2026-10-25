@@ -118,21 +118,119 @@
       "site": "https://www.hetzner.com",
       "pricing_url": "https://www.hetzner.com/cloud/regular-performance/",
       "hq": "Germany",
-      "billing_note": "Priced in EUR. Hourly billing capped at a monthly maximum. IPv4 is charged separately on some plans.",
+      "billing_note": "Hourly billing capped at the monthly price shown. Prices are quoted in euros excluding VAT and converted once at the dated rate on the methodology page. Every plan includes 20 TB of traffic.",
       "strengths": [
-        "Best price per GB of RAM among mainstream hosts",
-        "20 TB of included traffic on EU plans",
-        "Arm64 plans cut costs further"
+        "The cheapest memory of any provider we have priced: 8 GB for EUR 8.99 a month on the Cost-Optimized line",
+        "20 TB of traffic included on every plan",
+        "German company with European data centres, which settles most data-residency questions"
       ],
       "weaknesses": [
-        "EU, US and Singapore regions only",
-        "EUR billing adds currency risk for USD budgets",
-        "Popular plans go out of stock"
+        "Hetzner sells the Cost-Optimized line for test and development environments, with variable CPU performance, so the cheapest rows here are not a like-for-like swap for a dedicated-thread server",
+        "Prices exclude VAT and are quoted in euros, so a non-European buyer carries the exchange-rate risk",
+        "No block storage price is recorded here yet, so storage-heavy tools do not pick Hetzner"
       ],
-      "verified_on": "2026-09-12",
-      "price_status": "unverified",
-      "price_note": "Specs below were read from the Hetzner pricing pages on 2026-09-12. The prices are injected client-side per region and every plan was reported as temporarily unavailable at the time of reading, so no price could be captured.",
+      "verified_on": "2026-10-25",
+      "price_status": "verified",
+      "price_note": "Read on 2026-10-25 from the Regular Performance and Cost-Optimized pages. Two earlier attempts failed: the figures are injected by a web component and each row carries a hidden 'currently unavailable' tooltip that reads as if the plan could not be ordered. Both lines are orderable, and the prices below are the lowest shown, which apply to the German, Finnish and Singapore locations; other locations cost more.",
       "plans": [
+        {
+          "id": "cx23",
+          "name": "CX23 (cost-optimized)",
+          "vcpu": 2,
+          "ram_gb": 4,
+          "disk_gb": 40,
+          "transfer_gb": 20000,
+          "price_usd_month": 6.7,
+          "price_eur_month": 5.99,
+          "note": "Hetzner sells its Cost-Optimized line for test and development environments, with low to medium CPU usage and variable CPU performance."
+        },
+        {
+          "id": "cax11",
+          "name": "CAX11 (cost-optimized)",
+          "vcpu": 2,
+          "ram_gb": 4,
+          "disk_gb": 40,
+          "transfer_gb": 20000,
+          "price_usd_month": 7.26,
+          "price_eur_month": 6.49,
+          "note": "Hetzner sells its Cost-Optimized line for test and development environments, with low to medium CPU usage and variable CPU performance."
+        },
+        {
+          "id": "cx33",
+          "name": "CX33 (cost-optimized)",
+          "vcpu": 4,
+          "ram_gb": 8,
+          "disk_gb": 80,
+          "transfer_gb": 20000,
+          "price_usd_month": 10.06,
+          "price_eur_month": 8.99,
+          "note": "Hetzner sells its Cost-Optimized line for test and development environments, with low to medium CPU usage and variable CPU performance."
+        },
+        {
+          "id": "cax21",
+          "name": "CAX21 (cost-optimized)",
+          "vcpu": 4,
+          "ram_gb": 8,
+          "disk_gb": 80,
+          "transfer_gb": 20000,
+          "price_usd_month": 12.3,
+          "price_eur_month": 10.99,
+          "note": "Hetzner sells its Cost-Optimized line for test and development environments, with low to medium CPU usage and variable CPU performance."
+        },
+        {
+          "id": "cx43",
+          "name": "CX43 (cost-optimized)",
+          "vcpu": 8,
+          "ram_gb": 16,
+          "disk_gb": 160,
+          "transfer_gb": 20000,
+          "price_usd_month": 18.46,
+          "price_eur_month": 16.49,
+          "note": "Hetzner sells its Cost-Optimized line for test and development environments, with low to medium CPU usage and variable CPU performance."
+        },
+        {
+          "id": "cax31",
+          "name": "CAX31 (cost-optimized)",
+          "vcpu": 8,
+          "ram_gb": 16,
+          "disk_gb": 160,
+          "transfer_gb": 20000,
+          "price_usd_month": 24.05,
+          "price_eur_month": 21.49,
+          "note": "Hetzner sells its Cost-Optimized line for test and development environments, with low to medium CPU usage and variable CPU performance."
+        },
+        {
+          "id": "cx53",
+          "name": "CX53 (cost-optimized)",
+          "vcpu": 16,
+          "ram_gb": 32,
+          "disk_gb": 320,
+          "transfer_gb": 20000,
+          "price_usd_month": 33.57,
+          "price_eur_month": 29.99,
+          "note": "Hetzner sells its Cost-Optimized line for test and development environments, with low to medium CPU usage and variable CPU performance."
+        },
+        {
+          "id": "cax41",
+          "name": "CAX41 (cost-optimized)",
+          "vcpu": 16,
+          "ram_gb": 32,
+          "disk_gb": 320,
+          "transfer_gb": 20000,
+          "price_usd_month": 46.44,
+          "price_eur_month": 41.49,
+          "note": "Hetzner sells its Cost-Optimized line for test and development environments, with low to medium CPU usage and variable CPU performance."
+        },
+        {
+          "id": "cpx02",
+          "name": "CPX02",
+          "vcpu": 1,
+          "ram_gb": 1,
+          "disk_gb": 20,
+          "transfer_gb": 20000,
+          "price_usd_month": 7.26,
+          "price_eur_month": 6.49
+        },
         {
           "id": "cpx12",
           "name": "CPX12",
@@ -140,7 +238,8 @@
           "ram_gb": 2,
           "disk_gb": 40,
           "transfer_gb": 20000,
-          "price_usd_month": null
+          "price_usd_month": 13.42,
+          "price_eur_month": 11.99
         },
         {
           "id": "cpx22",
@@ -149,7 +248,8 @@
           "ram_gb": 4,
           "disk_gb": 80,
           "transfer_gb": 20000,
-          "price_usd_month": null
+          "price_usd_month": 22.37,
+          "price_eur_month": 19.99
         },
         {
           "id": "cpx32",
@@ -158,7 +258,8 @@
           "ram_gb": 8,
           "disk_gb": 160,
           "transfer_gb": 20000,
-          "price_usd_month": null
+          "price_usd_month": 40.28,
+          "price_eur_month": 35.99
         },
         {
           "id": "cpx42",
@@ -167,7 +268,8 @@
           "ram_gb": 16,
           "disk_gb": 320,
           "transfer_gb": 20000,
-          "price_usd_month": null
+          "price_usd_month": 78.34,
+          "price_eur_month": 69.99
         },
         {
           "id": "cpx52",
@@ -176,7 +278,8 @@
           "ram_gb": 24,
           "disk_gb": 480,
           "transfer_gb": 20000,
-          "price_usd_month": null
+          "price_usd_month": 113.04,
+          "price_eur_month": 100.99
         },
         {
           "id": "cpx62",
@@ -185,43 +288,8 @@
           "ram_gb": 32,
           "disk_gb": 640,
           "transfer_gb": 20000,
-          "price_usd_month": null
-        },
-        {
-          "id": "cax11",
-          "name": "CAX11 (Arm64)",
-          "vcpu": 2,
-          "ram_gb": 4,
-          "disk_gb": 40,
-          "transfer_gb": 20000,
-          "price_usd_month": null
-        },
-        {
-          "id": "cax21",
-          "name": "CAX21 (Arm64)",
-          "vcpu": 4,
-          "ram_gb": 8,
-          "disk_gb": 80,
-          "transfer_gb": 20000,
-          "price_usd_month": null
-        },
-        {
-          "id": "cax31",
-          "name": "CAX31 (Arm64)",
-          "vcpu": 8,
-          "ram_gb": 16,
-          "disk_gb": 160,
-          "transfer_gb": 20000,
-          "price_usd_month": null
-        },
-        {
-          "id": "cax41",
-          "name": "CAX41 (Arm64)",
-          "vcpu": 16,
-          "ram_gb": 32,
-          "disk_gb": 320,
-          "transfer_gb": 20000,
-          "price_usd_month": null
+          "price_usd_month": 146.06,
+          "price_eur_month": 130.49
         }
       ]
     },

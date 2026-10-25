@@ -1,5 +1,5 @@
 {
-  "built_on": "2026-10-17",
+  "built_on": "2026-10-25",
   "wave": 2,
   "strict_prices": true,
   "reference_users": 10,
@@ -16,6 +16,7 @@
   "lead_capture_active": true,
   "priced_providers": [
     "digitalocean",
+    "hetzner",
     "kamatera",
     "vpsserver"
   ],

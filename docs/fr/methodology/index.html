@@ -22,7 +22,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/css/main.css">
 
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://selfhostcost.com/fr/"}, {"@type": "ListItem", "position": 2, "name": "Méthodologie ", "item": "https://selfhostcost.com/fr/methodology/"}]}, {"@type": "Article", "headline": "Méthodologie : comment chaque coût de ce site est calculé", "description": "Le modèle de dimensionnement, les hypothèses sur le temps passé, les sources de prix exactes et datées, et tout ce que ce modèle de coûts laisse délibérément de côté.", "url": "https://selfhostcost.com/fr/methodology/", "datePublished": "2026-09-14", "dateModified": "2026-10-09", "isAccessibleForFree": true, "author": {"@type": "Organization", "name": "SelfHostCost", "url": "https://selfhostcost.com/"}, "publisher": {"@type": "Organization", "name": "SelfHostCost", "url": "https://selfhostcost.com/"}, "inLanguage": "fr"}]}</script></head>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://selfhostcost.com/fr/"}, {"@type": "ListItem", "position": 2, "name": "Méthodologie ", "item": "https://selfhostcost.com/fr/methodology/"}]}, {"@type": "Article", "headline": "Méthodologie : comment chaque coût de ce site est calculé", "description": "Le modèle de dimensionnement, les hypothèses sur le temps passé, les sources de prix exactes et datées, et tout ce que ce modèle de coûts laisse délibérément de côté.", "url": "https://selfhostcost.com/fr/methodology/", "datePublished": "2026-09-14", "dateModified": "2026-10-25", "isAccessibleForFree": true, "author": {"@type": "Organization", "name": "SelfHostCost", "url": "https://selfhostcost.com/"}, "publisher": {"@type": "Organization", "name": "SelfHostCost", "url": "https://selfhostcost.com/"}, "inLanguage": "fr"}]}</script></head>
 <body>
 
 <header class="masthead">
@@ -91,14 +91,15 @@
   prétendre qu'un outil tiendra sur une offre à laquelle il manque un gigaoctet.
 </p>
 <p>
-  <strong>Nous ne nous fions aujourd'hui qu'à 3 hébergeurs.</strong>
+  <strong>Nous ne nous fions aujourd'hui qu'à 4 hébergeurs.</strong>
   C'est une vraie limite. Plusieurs hébergeurs affichent leurs prix via le navigateur ou derrière un sélecteur de
-  région, et nous ne publions pas un prix que nous n'avons pas pu lire. Conséquence la plus importante : Hetzner Cloud, Vultr, PikaPods sont absents de tous les calculs, et Hetzner en particulier est généralement moins cher par gigaoctet de mémoire que ce que nous citons. Considérez nos coûts de serveur comme un plafond.
+  région, et nous ne publions pas un prix que nous n'avons pas pu lire. Conséquence la plus importante : Vultr, PikaPods sont absents de tous les calculs, et Hetzner en particulier est généralement moins cher par gigaoctet de mémoire que ce que nous citons. Considérez nos coûts de serveur comme un plafond.
 </p>
 <div class="tablewrap"><table>
 <thead><tr><th>Hébergeur</th><th>Offres chiffrées</th><th>Source</th><th>Relevé le</th></tr></thead>
 <tbody>
 <tr><td>DigitalOcean</td><td>9 offres</td><td><a href="https://www.digitalocean.com/pricing/droplets" rel="nofollow noopener">page de l'hébergeur</a></td><td>2026-09-12</td></tr>
+<tr><td>Hetzner Cloud</td><td>15 offres</td><td><a href="https://www.hetzner.com/cloud/regular-performance/" rel="nofollow noopener">page de l'hébergeur</a></td><td>2026-10-25</td></tr>
 <tr><td>Kamatera</td><td>3 offres</td><td><a href="https://www.kamatera.com/pricing/" rel="nofollow noopener">page de l'hébergeur</a></td><td>2026-09-14</td></tr>
 <tr><td>VPSServer</td><td>7 offres</td><td><a href="https://www.vpsserver.com/plans/" rel="nofollow noopener">page de l'hébergeur</a></td><td>2026-09-21</td></tr>
 </tbody></table></div>
@@ -111,10 +112,10 @@
 <tr><td>Sauvegardes</td><td>20 % du prix du serveur</td>
     <td>À peu près le coût des snapshots de l'hébergeur. Traiter les sauvegardes comme optionnelles rendrait tous les chiffres de ce site vides de sens.</td></tr>
 <tr><td>Votre temps</td>
-    <td>De 0,5 à 3 heures par mois selon la difficulté, à 64,70 € de l'heure</td>
+    <td>De 0,5 à 3 heures par mois selon la difficulté, à 67,01 € de l'heure</td>
     <td>C'est en général la ligne la plus lourde, et l'oublier est la façon la plus courante dont ces comparatifs induisent en erreur.</td></tr>
 <tr><td>Mise en place, une fois</td>
-    <td>De 2 à 16 heures selon la difficulté, à 64,70 € de l'heure</td>
+    <td>De 2 à 16 heures selon la difficulté, à 67,01 € de l'heure</td>
     <td>Amortie sur l'économie mensuelle pour donner le seuil de rentabilité.</td></tr>
 </tbody></table></div>
 
@@ -211,8 +212,8 @@
 <h3>Devises</h3>
 <p>
   Tous les calculs sont faits en dollars américains. Sur cette version française, les montants sont ensuite affichés
-  en euros au taux unique et daté de <strong>1 EUR = 1,1592 USD</strong>, le taux
-  <a href="https://api.frankfurter.dev/v1/latest?from=EUR&to=USD" rel="nofollow noopener">Frankfurter, European Central Bank reference rates</a> du 2026-09-11. Certains éditeurs
+  en euros au taux unique et daté de <strong>1 EUR = 1,1193 USD</strong>, le taux
+  <a href="https://api.frankfurter.dev/v1/latest?from=EUR&to=USD" rel="nofollow noopener">Frankfurter, European Central Bank reference rates</a> du 2026-10-23. Certains éditeurs
   affichaient déjà leurs prix en euros : ces prix sont convertis en dollars au même taux pour le calcul, puis
   reconvertis pour l'affichage. Les tableaux de sources indiquent toujours le prix dans la devise d'origine.
 </p>

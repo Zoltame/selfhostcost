@@ -22,7 +22,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/css/main.css">
 
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://selfhostcost.com/"}, {"@type": "ListItem", "position": 2, "name": "Methodology", "item": "https://selfhostcost.com/methodology/"}]}, {"@type": "Article", "headline": "Methodology: how every cost figure here is calculated", "description": "The sizing model, the labour assumptions, the exact price sources with dates, and everything this cost model deliberately leaves out.", "url": "https://selfhostcost.com/methodology/", "datePublished": "2026-09-14", "dateModified": "2026-10-09", "isAccessibleForFree": true, "author": {"@type": "Organization", "name": "SelfHostCost", "url": "https://selfhostcost.com/"}, "publisher": {"@type": "Organization", "name": "SelfHostCost", "url": "https://selfhostcost.com/"}, "inLanguage": "en"}]}</script></head>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://selfhostcost.com/"}, {"@type": "ListItem", "position": 2, "name": "Methodology", "item": "https://selfhostcost.com/methodology/"}]}, {"@type": "Article", "headline": "Methodology: how every cost figure here is calculated", "description": "The sizing model, the labour assumptions, the exact price sources with dates, and everything this cost model deliberately leaves out.", "url": "https://selfhostcost.com/methodology/", "datePublished": "2026-09-14", "dateModified": "2026-10-25", "isAccessibleForFree": true, "author": {"@type": "Organization", "name": "SelfHostCost", "url": "https://selfhostcost.com/"}, "publisher": {"@type": "Organization", "name": "SelfHostCost", "url": "https://selfhostcost.com/"}, "inLanguage": "en"}]}</script></head>
 <body>
 
 <header class="masthead">
@@ -91,15 +91,16 @@
   a gigabyte short.
 </p>
 <p>
-  <strong>We only trust 3 providers today.</strong>
+  <strong>We only trust 4 providers today.</strong>
   That is a real limitation. Several hosts render their prices client-side or gate them behind a region
   selector, and we do not publish a price we could not read.
-  The most important consequence: Hetzner Cloud, Vultr, PikaPods are absent from every calculation, and Hetzner in particular is usually cheaper per gigabyte of memory than what we quote. Treat our server costs as an upper bound.
+  The most important consequence: Vultr, PikaPods are absent from every calculation, and Hetzner in particular is usually cheaper per gigabyte of memory than what we quote. Treat our server costs as an upper bound.
 </p>
 <div class="tablewrap"><table>
 <thead><tr><th>Provider</th><th>Plans priced</th><th>Source</th><th>Read on</th></tr></thead>
 <tbody>
 <tr><td>DigitalOcean</td><td>9 plans</td><td><a href="https://www.digitalocean.com/pricing/droplets" rel="nofollow noopener">vendor page</a></td><td>2026-09-12</td></tr>
+<tr><td>Hetzner Cloud</td><td>15 plans</td><td><a href="https://www.hetzner.com/cloud/regular-performance/" rel="nofollow noopener">vendor page</a></td><td>2026-10-25</td></tr>
 <tr><td>Kamatera</td><td>3 plans</td><td><a href="https://www.kamatera.com/pricing/" rel="nofollow noopener">vendor page</a></td><td>2026-09-14</td></tr>
 <tr><td>VPSServer</td><td>7 plans</td><td><a href="https://www.vpsserver.com/plans/" rel="nofollow noopener">vendor page</a></td><td>2026-09-21</td></tr>
 </tbody></table></div>
@@ -211,9 +212,9 @@
 <h3>Currency</h3>
 <p>
   Some vendors served their pricing page in euros. Those figures are converted at a single dated rate,
-  <strong>1 EUR = 1.1592 USD</strong>, the
+  <strong>1 EUR = 1.1193 USD</strong>, the
   <a href="https://api.frankfurter.dev/v1/latest?from=EUR&to=USD" rel="nofollow noopener">Frankfurter, European Central Bank reference rates</a> rate for
-  2026-09-11. Any page using it says so and links here.
+  2026-10-23. Any page using it says so and links here.
 </p>
 
 <h2>The horizon and the break-even</h2>

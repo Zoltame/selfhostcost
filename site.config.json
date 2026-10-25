@@ -22,9 +22,9 @@
     "note": "Vendors that served a pricing page in euros are converted to US dollars at this single dated rate, which is published on the methodology page so any figure can be reproduced.",
     "rates_to_usd": {
       "USD": 1.0,
-      "EUR": 1.1592
+      "EUR": 1.1193
     },
-    "on": "2026-09-11",
+    "on": "2026-10-23",
     "source_name": "Frankfurter, European Central Bank reference rates",
     "source_url": "https://api.frankfurter.dev/v1/latest?from=EUR&to=USD"
   },
